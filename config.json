@@ -9,13 +9,13 @@
     },
     "job_search": {
         "keywords": ["Data Engineer", "Python Developer", "ETL Developer", "SQL Developer"],
-        "location": "Bengaluru, Karnataka, India",
+        "location": "bengaluru",
         "max_applications": 50,
         "pages_per_keyword": 3
     },
     "webdriver": {
         "edge_driver_path": "C:\\WebDrivers\\msedgedriver.exe",
-        "implicit_wait": 10,
-        "page_load_timeout": 30
+        "implicit_wait": 15,
+        "page_load_timeout": 45
     }
 }

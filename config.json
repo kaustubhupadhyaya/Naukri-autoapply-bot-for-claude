@@ -17,5 +17,11 @@
         "edge_driver_path": "C:\\WebDrivers\\msedgedriver.exe",
         "implicit_wait": 15,
         "page_load_timeout": 45
+    },
+    "bot_behavior": {
+        "min_delay": 2,
+        "max_delay": 5,
+        "typing_delay": 0.1,
+        "scroll_pause": 2
     }
 }

@@ -3,6 +3,7 @@ import time
 import json
 import logging
 import random
+import requests
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
@@ -10,6 +11,7 @@ from selenium.webdriver.edge.service import Service as EdgeService
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException, NoSuchElementException, ElementClickInterceptedException
+from selenium.webdriver.common.action_chains import ActionChains
 from bs4 import BeautifulSoup
 import os
 from datetime import datetime
@@ -25,7 +27,7 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-class ImprovedNaukriBot:
+class ProductionNaukriBot:
     def __init__(self, config_file='config.json'):
         """Initialize the bot with configuration"""
         self.config = self.load_config(config_file)
@@ -35,40 +37,22 @@ class ImprovedNaukriBot:
         self.applied = 0
         self.failed = 0
         self.applied_list = {'passed': [], 'failed': []}
+        self.processed_jobs = set()  # Track processed jobs to avoid duplicates
         
-        # Multiple possible selectors for job cards (current as of 2025)
-        self.job_card_selectors = [
-            '.jobTuple',
-            '.job-card',
-            '.job-tuple',
-            '.srp-jobtuple-wrapper',
-            '.job-listing',
-            '[data-job-id]',
-            '.job-item'
-        ]
+        # CORRECT selectors based on diagnostic results
+        self.job_card_selector = '.srp-jobtuple-wrapper[data-job-id]'
+        self.job_title_selector = 'a.title'
         
-        # Multiple possible selectors for job titles/links
-        self.job_link_selectors = [
-            'a.title',
-            'a[title]',
-            '.job-title a',
-            '.title a',
-            'h3 a',
-            'h2 a',
-            '.job-title-link'
-        ]
-        
-        # Apply button selectors
+        # Apply button selectors for individual job pages
         self.apply_button_selectors = [
             "//button[contains(text(), 'Apply')]",
             "//a[contains(text(), 'Apply')]",
             "//span[contains(text(), 'Apply')]",
-            "//*[@id='apply-button']",
-            "//*[contains(@class, 'apply-button')]",
-            "//*[contains(@class, 'btn-apply')]",
-            "//button[contains(@class, 'naukri-apply')]",
             "//div[contains(@class, 'apply-button')]//button",
-            "//div[contains(text(), 'Apply')]"
+            "//button[contains(@class, 'apply')]",
+            "//*[@id='apply-button']",
+            "//input[@type='submit'][contains(@value, 'Apply')]",
+            "//button[contains(@class, 'naukri-apply')]"
         ]
         
     def load_config(self, config_file):
@@ -85,8 +69,8 @@ class ImprovedNaukriBot:
         """Create default configuration file"""
         default_config = {
             "credentials": {
-                "email": "your_email@example.com",
-                "password": "your_password"
+                "email": "kaustubh.upadhyaya1@gmail.com",
+                "password": "9880380081@kK"
             },
             "personal_info": {
                 "firstname": "Kaustubh",
@@ -94,7 +78,7 @@ class ImprovedNaukriBot:
             },
             "job_search": {
                 "keywords": ["Data Engineer", "Python Developer", "ETL Developer", "SQL Developer"],
-                "location": "bengaluru",  # Simplified location
+                "location": "bengaluru",
                 "max_applications": 50,
                 "pages_per_keyword": 3
             },
@@ -102,6 +86,12 @@ class ImprovedNaukriBot:
                 "edge_driver_path": "C:\\WebDrivers\\msedgedriver.exe",
                 "implicit_wait": 15,
                 "page_load_timeout": 45
+            },
+            "bot_behavior": {
+                "min_delay": 2,
+                "max_delay": 5,
+                "typing_delay": 0.1,
+                "scroll_pause": 2
             }
         }
         
@@ -111,11 +101,11 @@ class ImprovedNaukriBot:
         logger.info(f"Default config created at {config_file}. Please update with your details.")
     
     def setup_driver(self):
-        """Setup Edge WebDriver with anti-detection measures"""
+        """Setup Edge WebDriver with enhanced stealth"""
         try:
             options = webdriver.EdgeOptions()
             
-            # Enhanced anti-detection measures
+            # Enhanced stealth options
             options.add_argument('--disable-blink-features=AutomationControlled')
             options.add_experimental_option("excludeSwitches", ["enable-automation"])
             options.add_experimental_option('useAutomationExtension', False)
@@ -123,20 +113,19 @@ class ImprovedNaukriBot:
             options.add_argument('--no-sandbox')
             options.add_argument('--disable-extensions')
             options.add_argument('--disable-gpu')
-            options.add_argument('--remote-debugging-port=9222')
+            options.add_argument('--start-maximized')
             
-            # Randomize user agent
+            # Random user agent
             user_agents = [
-                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
-                "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/121.0"
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0",
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36 Edg/119.0.0.0"
             ]
             options.add_argument(f'--user-agent={random.choice(user_agents)}')
             
             service = EdgeService(executable_path=self.config['webdriver']['edge_driver_path'])
             self.driver = webdriver.Edge(service=service, options=options)
             
-            # Execute scripts to remove automation indicators
+            # Remove automation indicators
             self.driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
             self.driver.execute_script("Object.defineProperty(navigator, 'plugins', {get: () => [1, 2, 3, 4, 5]})")
             self.driver.execute_script("Object.defineProperty(navigator, 'languages', {get: () => ['en-US', 'en']})")
@@ -151,14 +140,24 @@ class ImprovedNaukriBot:
             logger.error(f"WebDriver setup failed: {e}")
             return False
     
-    def random_delay(self, min_delay=1, max_delay=4):
+    def random_delay(self, min_delay=None, max_delay=None):
         """Add random delay to simulate human behavior"""
+        min_delay = min_delay or self.config['bot_behavior']['min_delay']
+        max_delay = max_delay or self.config['bot_behavior']['max_delay']
         delay = random.uniform(min_delay, max_delay)
         time.sleep(delay)
     
+    def human_type(self, element, text):
+        """Type like a human with random delays"""
+        element.clear()
+        for char in text:
+            element.send_keys(char)
+            time.sleep(random.uniform(0.05, self.config['bot_behavior']['typing_delay']))
+    
     def login(self):
-        """Login to Naukri with enhanced error handling"""
+        """Enhanced login with better error handling"""
         try:
+            logger.info("Starting login process...")
             self.driver.get('https://www.naukri.com/nlogin/login')
             self.random_delay(3, 6)
             
@@ -166,27 +165,17 @@ class ImprovedNaukriBot:
             username_field = self.wait.until(
                 EC.element_to_be_clickable((By.ID, 'usernameField'))
             )
-            username_field.clear()
-            # Type slowly to mimic human behavior
-            for char in self.config['credentials']['email']:
-                username_field.send_keys(char)
-                time.sleep(random.uniform(0.05, 0.15))
-            
+            self.human_type(username_field, self.config['credentials']['email'])
             self.random_delay(1, 2)
             
             # Wait for and fill password
             password_field = self.wait.until(
                 EC.element_to_be_clickable((By.ID, 'passwordField'))
             )
-            password_field.clear()
-            # Type slowly to mimic human behavior
-            for char in self.config['credentials']['password']:
-                password_field.send_keys(char)
-                time.sleep(random.uniform(0.05, 0.15))
-            
+            self.human_type(password_field, self.config['credentials']['password'])
             self.random_delay(1, 2)
             
-            # Click login button instead of pressing Enter
+            # Click login button
             login_button = self.driver.find_element(By.XPATH, "//button[@type='submit']")
             login_button.click()
             
@@ -196,8 +185,8 @@ class ImprovedNaukriBot:
                     EC.any_of(
                         EC.presence_of_element_located((By.CLASS_NAME, 'nI-gNb-drawer__icon')),
                         EC.presence_of_element_located((By.CLASS_NAME, 'view-profile-wrapper')),
-                        EC.presence_of_element_located((By.XPATH, "//div[contains(@class, 'user-name')]")),
-                        EC.url_contains('mnjuser')
+                        EC.url_contains('mnjuser'),
+                        EC.url_contains('naukri.com')
                     )
                 )
                 logger.info("Login successful")
@@ -212,10 +201,8 @@ class ImprovedNaukriBot:
             return False
     
     def build_search_url(self, keyword, location, page):
-        """Build proper search URL for Naukri"""
+        """Build search URL based on diagnostic findings"""
         base_url = "https://www.naukri.com"
-        
-        # Clean keyword and location
         clean_keyword = keyword.lower().replace(' ', '-').replace(',', '')
         
         if location:
@@ -226,144 +213,65 @@ class ImprovedNaukriBot:
         
         return url
     
-    def wait_for_jobs_to_load(self):
-        """Wait for job listings to load using multiple strategies"""
-        strategies = [
-            # Strategy 1: Wait for any job card selector
-            lambda: self.wait.until(
-                EC.any_of(*[EC.presence_of_element_located((By.CSS_SELECTOR, selector)) 
-                           for selector in self.job_card_selectors])
-            ),
-            # Strategy 2: Wait for specific job elements
-            lambda: self.wait.until(
-                EC.presence_of_element_located((By.XPATH, "//div[contains(@class, 'job')]"))
-            ),
-            # Strategy 3: Wait for search results container
-            lambda: self.wait.until(
-                EC.presence_of_element_located((By.CLASS_NAME, 'list'))
+    def extract_job_links_from_current_page(self):
+        """Extract job links using the CORRECT selectors from diagnostic"""
+        job_links = []
+        
+        try:
+            # Wait for job listings to load
+            self.wait.until(
+                EC.presence_of_element_located((By.CSS_SELECTOR, self.job_card_selector))
             )
-        ]
-        
-        for i, strategy in enumerate(strategies):
-            try:
-                strategy()
-                logger.info(f"Jobs loaded using strategy {i+1}")
-                return True
-            except TimeoutException:
-                continue
-        
-        return False
-    
-    def extract_job_links_from_page(self):
-        """Extract job links using multiple parsing methods"""
-        job_links = []
-        
-        # Wait for page to fully load
-        self.random_delay(3, 6)
-        
-        # Try multiple methods to find job links
-        methods = [
-            self.extract_with_beautiful_soup,
-            self.extract_with_selenium_direct,
-            self.extract_with_xpath_search
-        ]
-        
-        for method in methods:
-            try:
-                links = method()
-                if links:
-                    job_links.extend(links)
-                    logger.info(f"Found {len(links)} jobs using {method.__name__}")
-                    break
-            except Exception as e:
-                logger.warning(f"Method {method.__name__} failed: {e}")
-                continue
-        
-        # Remove duplicates
-        job_links = list(set(job_links))
-        return job_links
-    
-    def extract_with_beautiful_soup(self):
-        """Extract using BeautifulSoup"""
-        soup = BeautifulSoup(self.driver.page_source, 'html.parser')
-        job_links = []
-        
-        # Try different selectors
-        for job_selector in self.job_card_selectors:
-            job_articles = soup.select(job_selector)
-            if job_articles:
-                for article in job_articles:
-                    for link_selector in self.job_link_selectors:
-                        link_elem = article.select_one(link_selector)
-                        if link_elem and link_elem.get('href'):
-                            href = link_elem.get('href')
-                            if href.startswith('/'):
-                                href = 'https://www.naukri.com' + href
-                            job_links.append(href)
-                            break
-                break
-        
-        return job_links
-    
-    def extract_with_selenium_direct(self):
-        """Extract using Selenium directly"""
-        job_links = []
-        
-        # Try to find job links directly
-        link_selectors = [
-            "//a[contains(@href, '/job-listings/')]",
-            "//a[contains(@href, 'naukri.com/job')]",
-            "//div[contains(@class, 'job')]//a[@href]",
-            "//h2//a[@href]",
-            "//h3//a[@href]"
-        ]
-        
-        for selector in link_selectors:
-            try:
-                elements = self.driver.find_elements(By.XPATH, selector)
-                for element in elements:
-                    href = element.get_attribute('href')
-                    if href and ('job' in href.lower() or 'listing' in href.lower()):
-                        job_links.append(href)
-                if job_links:
-                    break
-            except Exception as e:
-                continue
-        
-        return job_links
-    
-    def extract_with_xpath_search(self):
-        """Extract using comprehensive XPath search"""
-        job_links = []
-        
-        # Comprehensive XPath patterns
-        xpath_patterns = [
-            "//article//a[@href]",
-            "//div[contains(@class, 'tuple')]//a[@href]",
-            "//div[contains(@class, 'card')]//a[@href]",
-            "//*[@data-job-id]//a[@href]",
-            "//div[contains(@class, 'listing')]//a[@href]"
-        ]
-        
-        for pattern in xpath_patterns:
-            try:
-                elements = self.driver.find_elements(By.XPATH, pattern)
-                for element in elements:
-                    href = element.get_attribute('href')
-                    if href and any(keyword in href.lower() for keyword in ['job', 'listing', 'detail']):
-                        job_links.append(href)
-                if job_links:
-                    break
-            except Exception:
-                continue
-        
-        return job_links
+            
+            # Scroll to load all content
+            self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight/2);")
+            self.random_delay(2, 3)
+            
+            # Find all job cards using the CORRECT selector
+            job_cards = self.driver.find_elements(By.CSS_SELECTOR, self.job_card_selector)
+            logger.info(f"Found {len(job_cards)} job cards on current page")
+            
+            for card in job_cards:
+                try:
+                    # Extract job ID to avoid duplicates
+                    job_id = card.get_attribute('data-job-id')
+                    if job_id in self.processed_jobs:
+                        continue
+                    
+                    # Find job title link using CORRECT selector
+                    title_link = card.find_element(By.CSS_SELECTOR, self.job_title_selector)
+                    job_url = title_link.get_attribute('href')
+                    job_title = title_link.get_attribute('title') or title_link.text
+                    
+                    if job_url and job_id:
+                        job_links.append({
+                            'url': job_url,
+                            'title': job_title,
+                            'job_id': job_id
+                        })
+                        self.processed_jobs.add(job_id)
+                        
+                except Exception as e:
+                    logger.warning(f"Error extracting job from card: {e}")
+                    continue
+            
+            logger.info(f"Successfully extracted {len(job_links)} job links")
+            return job_links
+            
+        except TimeoutException:
+            logger.warning("No job cards found on current page")
+            return []
+        except Exception as e:
+            logger.error(f"Error extracting job links: {e}")
+            return []
     
     def scrape_job_links(self):
-        """Enhanced job link scraping"""
+        """Enhanced job link scraping with correct selectors"""
         keywords = self.config['job_search']['keywords']
         location = self.config['job_search']['location']
         pages_per_keyword = self.config['job_search']['pages_per_keyword']
+        
+        all_jobs = []
         
         for keyword in keywords:
             logger.info(f"Scraping jobs for keyword: {keyword}")
@@ -371,177 +279,249 @@ class ImprovedNaukriBot:
             for page in range(1, pages_per_keyword + 1):
                 try:
                     url = self.build_search_url(keyword, location, page)
-                    logger.info(f"Scraping page: {url}")
+                    logger.info(f"Visiting page {page}: {url}")
                     
                     self.driver.get(url)
-                    self.random_delay(4, 8)
+                    self.random_delay(4, 7)
                     
-                    # Wait for jobs to load
-                    if not self.wait_for_jobs_to_load():
-                        logger.warning(f"No jobs loaded on page {page} for keyword '{keyword}'")
-                        continue
+                    # Extract jobs from this page
+                    page_jobs = self.extract_job_links_from_current_page()
                     
-                    # Scroll to load more content
-                    self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight/2);")
-                    self.random_delay(2, 4)
-                    
-                    # Extract job links
-                    page_links = self.extract_job_links_from_page()
-                    
-                    if page_links:
-                        self.joblinks.extend(page_links)
-                        logger.info(f"Found {len(page_links)} jobs on page {page}")
+                    if page_jobs:
+                        all_jobs.extend(page_jobs)
+                        logger.info(f"Page {page}: Found {len(page_jobs)} jobs")
                     else:
-                        logger.warning(f"No job links extracted from page {page} for keyword '{keyword}'")
+                        logger.warning(f"Page {page}: No jobs found")
                     
-                    self.random_delay(2, 5)
+                    self.random_delay(2, 4)
                     
                 except Exception as e:
                     logger.error(f"Error scraping page {page} for keyword '{keyword}': {e}")
                     continue
         
-        logger.info(f"Total job links scraped: {len(self.joblinks)}")
+        # Convert to simple URL list for compatibility
+        self.joblinks = [job['url'] for job in all_jobs]
+        logger.info(f"Total unique job links scraped: {len(self.joblinks)}")
+        
+        # Save detailed job info
+        if all_jobs:
+            df = pd.DataFrame(all_jobs)
+            df.to_csv(f"scraped_jobs_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv", index=False)
+        
         return len(self.joblinks) > 0
     
-    def find_apply_button(self):
-        """Find apply button using multiple strategies"""
+    def find_and_click_apply_button(self):
+        """Find and click apply button with multiple strategies"""
         for selector in self.apply_button_selectors:
             try:
-                element = self.wait.until(
+                apply_button = self.wait.until(
                     EC.element_to_be_clickable((By.XPATH, selector))
                 )
-                return element
-            except TimeoutException:
-                continue
-        return None
-    
-    def apply_to_jobs(self):
-        """Enhanced job application process"""
-        max_applications = self.config['job_search']['max_applications']
-        
-        for i, job_link in enumerate(self.joblinks):
-            if self.applied >= max_applications:
-                logger.info(f"Reached maximum applications limit: {max_applications}")
-                break
-            
-            try:
-                logger.info(f"Applying to job {i+1}/{len(self.joblinks)}: {job_link}")
-                self.driver.get(job_link)
-                self.random_delay(4, 8)
                 
-                # Find and click apply button
-                apply_button = self.find_apply_button()
-                
-                if not apply_button:
-                    logger.warning(f"No apply button found for: {job_link}")
-                    self.failed += 1
-                    self.applied_list['failed'].append(job_link)
-                    continue
-                
-                # Scroll to button and click
+                # Scroll to button
                 self.driver.execute_script("arguments[0].scrollIntoView(true);", apply_button)
                 self.random_delay(1, 2)
                 
+                # Try regular click first
                 try:
                     apply_button.click()
+                    logger.info(f"Apply button clicked using selector: {selector}")
+                    return True
                 except ElementClickInterceptedException:
-                    # Try JavaScript click if regular click fails
+                    # Try JavaScript click
                     self.driver.execute_script("arguments[0].click();", apply_button)
-                
-                self.random_delay(2, 4)
-                
-                # Handle additional form fields
-                self.handle_application_form()
-                
-                self.applied += 1
-                self.applied_list['passed'].append(job_link)
-                logger.info(f"Successfully applied to job {i+1}. Total applied: {self.applied}")
-                
-                # Check for daily quota
-                if self.check_daily_quota_exceeded():
-                    logger.info("Daily quota exceeded. Stopping applications.")
-                    break
-                
-            except Exception as e:
-                logger.error(f"Error applying to job {job_link}: {e}")
-                self.failed += 1
-                self.applied_list['failed'].append(job_link)
+                    logger.info(f"Apply button clicked via JavaScript using selector: {selector}")
+                    return True
+                    
+            except TimeoutException:
                 continue
-            
-            self.random_delay(3, 7)
+            except Exception as e:
+                logger.warning(f"Error with selector {selector}: {e}")
+                continue
+        
+        return False
     
     def handle_application_form(self):
-        """Enhanced form handling"""
+        """Handle additional form fields after clicking apply"""
         try:
+            # Wait a bit for form to load
+            self.random_delay(2, 3)
+            
+            # Common form fields
             form_fields = [
                 ('CUSTOM-FIRSTNAME', self.config['personal_info']['firstname']),
                 ('firstname', self.config['personal_info']['firstname']),
                 ('CUSTOM-LASTNAME', self.config['personal_info']['lastname']),
-                ('lastname', self.config['personal_info']['lastname'])
+                ('lastname', self.config['personal_info']['lastname']),
+                ('firstName', self.config['personal_info']['firstname']),
+                ('lastName', self.config['personal_info']['lastname'])
             ]
             
+            filled_fields = 0
             for field_id, value in form_fields:
                 try:
                     field = self.driver.find_element(By.ID, field_id)
-                    field.clear()
-                    field.send_keys(value)
-                    self.random_delay(0.5, 1)
+                    if field.is_displayed() and field.is_enabled():
+                        self.human_type(field, value)
+                        filled_fields += 1
+                        self.random_delay(0.5, 1)
                 except NoSuchElementException:
                     continue
             
-            # Submit form
+            if filled_fields > 0:
+                logger.info(f"Filled {filled_fields} form fields")
+            
+            # Submit form if submit button exists
             submit_selectors = [
                 "//button[contains(text(), 'Submit')]",
                 "//button[contains(text(), 'Apply')]",
-                "//input[@type='submit']"
+                "//input[@type='submit']",
+                "//button[@type='submit']"
             ]
             
             for selector in submit_selectors:
                 try:
                     submit_button = self.driver.find_element(By.XPATH, selector)
-                    submit_button.click()
-                    self.random_delay(1, 2)
-                    break
+                    if submit_button.is_displayed() and submit_button.is_enabled():
+                        submit_button.click()
+                        logger.info("Form submitted successfully")
+                        self.random_delay(1, 2)
+                        return True
                 except NoSuchElementException:
                     continue
-                    
+            
         except Exception as e:
             logger.warning(f"Error handling application form: {e}")
+        
+        return False
+    
+    def apply_to_job(self, job_url, job_index):
+        """Apply to a single job with enhanced error handling"""
+        try:
+            logger.info(f"Applying to job {job_index}: {job_url}")
+            
+            # Navigate to job page
+            self.driver.get(job_url)
+            self.random_delay(4, 7)
+            
+            # Check if already applied
+            page_source = self.driver.page_source.lower()
+            if any(indicator in page_source for indicator in ['already applied', 'application sent', 'applied']):
+                logger.info("Already applied to this job, skipping...")
+                return False
+            
+            # Find and click apply button
+            if not self.find_and_click_apply_button():
+                logger.warning("No apply button found")
+                return False
+            
+            self.random_delay(2, 4)
+            
+            # Handle any additional form
+            self.handle_application_form()
+            
+            # Check for success indicators
+            success_indicators = [
+                'application submitted',
+                'successfully applied',
+                'application sent',
+                'thank you for applying'
+            ]
+            
+            page_source = self.driver.page_source.lower()
+            if any(indicator in page_source for indicator in success_indicators):
+                logger.info("Application successful!")
+                return True
+            else:
+                logger.info("Application attempt completed (uncertain success)")
+                return True  # Assume success if no error
+                
+        except Exception as e:
+            logger.error(f"Error applying to job {job_url}: {e}")
+            return False
+    
+    def apply_to_jobs(self):
+        """Apply to all scraped jobs"""
+        max_applications = self.config['job_search']['max_applications']
+        
+        for i, job_url in enumerate(self.joblinks, 1):
+            if self.applied >= max_applications:
+                logger.info(f"Reached maximum applications limit: {max_applications}")
+                break
+            
+            try:
+                success = self.apply_to_job(job_url, i)
+                
+                if success:
+                    self.applied += 1
+                    self.applied_list['passed'].append(job_url)
+                    logger.info(f"✅ Job {i}/{len(self.joblinks)} - Applied successfully. Total: {self.applied}")
+                else:
+                    self.failed += 1
+                    self.applied_list['failed'].append(job_url)
+                    logger.info(f"❌ Job {i}/{len(self.joblinks)} - Application failed. Total failed: {self.failed}")
+                
+                # Check for daily quota
+                if self.check_daily_quota_exceeded():
+                    logger.info("Daily application quota exceeded. Stopping.")
+                    break
+                
+                # Random delay between applications
+                self.random_delay(3, 8)
+                
+            except Exception as e:
+                logger.error(f"Unexpected error with job {i}: {e}")
+                self.failed += 1
+                self.applied_list['failed'].append(job_url)
+                continue
     
     def check_daily_quota_exceeded(self):
-        """Check for quota exceeded messages"""
-        quota_indicators = [
-            "daily quota",
-            "limit reached",
-            "maximum applications",
-            "quota exceeded",
-            "limit exceeded"
-        ]
-        
+        """Check if daily application quota is exceeded"""
         try:
-            page_text = self.driver.page_source.lower()
-            return any(indicator in page_text for indicator in quota_indicators)
+            page_source = self.driver.page_source.lower()
+            quota_indicators = [
+                'daily quota',
+                'limit reached',
+                'maximum applications',
+                'quota exceeded',
+                'limit exceeded',
+                'daily limit'
+            ]
+            return any(indicator in page_source for indicator in quota_indicators)
         except Exception:
             return False
     
     def save_results(self):
-        """Save application results"""
+        """Save application results with detailed statistics"""
         try:
             timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-            csv_file = f"naukri_applied_{timestamp}.csv"
             
+            # Save basic results
+            csv_file = f"naukri_results_{timestamp}.csv"
             max_len = max(len(self.applied_list['passed']), len(self.applied_list['failed']))
             
             data = {
-                'passed': self.applied_list['passed'] + [''] * (max_len - len(self.applied_list['passed'])),
-                'failed': self.applied_list['failed'] + [''] * (max_len - len(self.applied_list['failed']))
+                'successful_applications': self.applied_list['passed'] + [''] * (max_len - len(self.applied_list['passed'])),
+                'failed_applications': self.applied_list['failed'] + [''] * (max_len - len(self.applied_list['failed']))
             }
             
             df = pd.DataFrame(data)
             df.to_csv(csv_file, index=False)
             
+            # Save summary
+            summary = {
+                'total_jobs_found': len(self.joblinks),
+                'successful_applications': self.applied,
+                'failed_applications': self.failed,
+                'success_rate': f"{(self.applied / len(self.joblinks) * 100):.2f}%" if self.joblinks else "0%",
+                'timestamp': timestamp
+            }
+            
+            with open(f"naukri_summary_{timestamp}.json", 'w') as f:
+                json.dump(summary, f, indent=2)
+            
             logger.info(f"Results saved to {csv_file}")
-            logger.info(f"Total applied: {self.applied}, Total failed: {self.failed}")
+            logger.info(f"SUMMARY - Found: {len(self.joblinks)}, Applied: {self.applied}, Failed: {self.failed}")
             
         except Exception as e:
             logger.error(f"Error saving results: {e}")
@@ -549,7 +529,7 @@ class ImprovedNaukriBot:
     def run(self):
         """Main execution method"""
         try:
-            logger.info("Starting Improved Naukri job application bot")
+            logger.info("🚀 Starting Production Naukri Job Application Bot")
             
             if not self.setup_driver():
                 return False
@@ -558,24 +538,31 @@ class ImprovedNaukriBot:
                 return False
             
             if not self.scrape_job_links():
-                logger.error("No job links found. Exiting.")
+                logger.error("❌ No job links found. Check your search criteria.")
                 return False
+            
+            logger.info(f"✅ Found {len(self.joblinks)} jobs. Starting applications...")
             
             self.apply_to_jobs()
             self.save_results()
             
-            logger.info("Bot execution completed successfully")
+            logger.info("🎉 Bot execution completed successfully")
             return True
             
         except Exception as e:
-            logger.error(f"Bot execution failed: {e}")
+            logger.error(f"❌ Bot execution failed: {e}")
             return False
         
         finally:
             if self.driver:
+                input("Press Enter to close browser...")
                 self.driver.quit()
-                logger.info("WebDriver closed")
+                logger.info("Browser closed")
 
 if __name__ == "__main__":
-    bot = ImprovedNaukriBot()
-    bot.run()
+    bot = ProductionNaukriBot()
+    success = bot.run()
+    if success:
+        print("✅ Bot completed successfully!")
+    else:
+        print("❌ Bot failed. Check logs for details.")

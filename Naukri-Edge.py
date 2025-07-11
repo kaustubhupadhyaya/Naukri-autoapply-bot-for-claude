@@ -17,12 +17,12 @@ import os
 from datetime import datetime, timedelta
 import sqlite3
 
-# Configure logging
+# Configure logging WITHOUT emojis to avoid Unicode errors
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler('naukri_bot.log'),
+        logging.FileHandler('naukri_bot.log', encoding='utf-8'),
         logging.StreamHandler()
     ]
 )
@@ -213,47 +213,37 @@ class IntelligentNaukriBot:
             logger.error(f"WebDriver setup failed: {e}")
             return False
     
-    def smart_delay(self, base_min=None, base_max=None, factor=1.0):
-        """Intelligent delay based on time of day and activity"""
-        base_min = base_min or self.config['bot_behavior']['min_delay']
-        base_max = base_max or self.config['bot_behavior']['max_delay']
+def smart_delay(self, base_min=None, base_max=None, factor=1.0):
+    """Intelligent delay with fallbacks for missing config"""
+    try:
+        base_min = base_min or self.config.get('bot_behavior', {}).get('min_delay', 3)
+        base_max = base_max or self.config.get('bot_behavior', {}).get('max_delay', 7)
         
-        if self.config['bot_behavior']['smart_delays']:
+        # Check if smart_delays is enabled (with fallback)
+        smart_delays_enabled = self.config.get('bot_behavior', {}).get('smart_delays', False)
+        
+        if smart_delays_enabled:
             # Adjust delays based on time of day
             current_hour = datetime.now().hour
             if 9 <= current_hour <= 17:  # Business hours
-                factor *= 1.5  # Slower during business hours
+                factor *= 1.5
             elif current_hour >= 22 or current_hour <= 6:  # Night time
-                factor *= 0.7  # Faster at night
+                factor *= 0.7
         
         min_delay = base_min * factor
         max_delay = base_max * factor
         delay = random.uniform(min_delay, max_delay)
         time.sleep(delay)
-    
-    def human_type(self, element, text, clear_first=True):
-        """Enhanced human-like typing"""
-        if clear_first:
-            element.clear()
-            
-        typing_delay = self.config['bot_behavior']['typing_delay']
+    except Exception as e:
+        # Fallback to simple delay
+        time.sleep(random.uniform(2, 5))
+
+def random_scroll(self):
+    """Random scrolling with fallback"""
+    try:
+        random_scrolling_enabled = self.config.get('bot_behavior', {}).get('random_scrolling', True)
         
-        for i, char in enumerate(text):
-            element.send_keys(char)
-            
-            # Variable delay - faster for common words, slower for complex text
-            if char in ' .@':
-                time.sleep(random.uniform(typing_delay * 2, typing_delay * 4))
-            else:
-                time.sleep(random.uniform(typing_delay * 0.5, typing_delay * 2))
-            
-            # Occasional pause like human would do
-            if i > 0 and i % random.randint(5, 15) == 0:
-                time.sleep(random.uniform(0.5, 1.5))
-    
-    def random_scroll(self):
-        """Random scrolling to mimic human behavior"""
-        if self.config['bot_behavior']['random_scrolling']:
+        if random_scrolling_enabled:
             scroll_actions = [
                 "window.scrollBy(0, 300)",
                 "window.scrollBy(0, -200)",
@@ -263,70 +253,100 @@ class IntelligentNaukriBot:
             
             self.driver.execute_script(random.choice(scroll_actions))
             self.smart_delay(1, 3)
-    
-    def enhanced_login(self):
-        """Enhanced login with better error handling and retry logic"""
-        max_retries = 3
-        for attempt in range(max_retries):
-            try:
-                logger.info(f"Login attempt {attempt + 1}")
-                self.driver.get('https://www.naukri.com/nlogin/login')
-                self.smart_delay(3, 6)
-                
-                # Wait for and fill username
-                username_field = self.wait.until(
-                    EC.element_to_be_clickable((By.ID, 'usernameField'))
-                )
-                self.human_type(username_field, self.config['credentials']['email'])
-                self.smart_delay(1, 2)
-                
-                # Wait for and fill password
-                password_field = self.wait.until(
-                    EC.element_to_be_clickable((By.ID, 'passwordField'))
-                )
-                self.human_type(password_field, self.config['credentials']['password'])
-                self.smart_delay(1, 2)
-                
-                # Click login button
-                login_button = self.driver.find_element(By.XPATH, "//button[@type='submit']")
-                self.driver.execute_script("arguments[0].click();", login_button)
-                
-                # Wait for successful login with multiple indicators
-                success_indicators = [
-                    (By.CLASS_NAME, 'nI-gNb-drawer__icon'),
-                    (By.CLASS_NAME, 'view-profile-wrapper'),
-                    (By.XPATH, "//div[contains(@class, 'user-name')]")
-                ]
-                
-                try:
-                    for indicator in success_indicators:
-                        try:
-                            self.wait.until(EC.presence_of_element_located(indicator))
-                            logger.info("Login successful!")
-                            self.smart_delay(2, 4)
-                            return True
-                        except TimeoutException:
-                            continue
-                            
-                    # Check URL change as fallback
-                    if 'naukri.com' in self.driver.current_url and 'login' not in self.driver.current_url:
-                        logger.info("Login successful (URL check)")
-                        return True
-                        
-                except TimeoutException:
-                    logger.warning(f"Login attempt {attempt + 1} failed")
-                    if attempt < max_retries - 1:
-                        self.smart_delay(5, 10)
-                        continue
-                    
-            except Exception as e:
-                logger.error(f"Login attempt {attempt + 1} error: {e}")
-                if attempt < max_retries - 1:
-                    self.smart_delay(5, 10)
-                    continue
+    except Exception as e:
+        # Fallback scroll
+        self.driver.execute_script("window.scrollBy(0, 300)")
+        time.sleep(2)
+
+def human_type(self, element, text, clear_first=True):
+    """Enhanced human-like typing with fallbacks"""
+    try:
+        if clear_first:
+            element.clear()
+            
+        typing_delay = self.config.get('bot_behavior', {}).get('typing_delay', 0.1)
         
-        logger.error("All login attempts failed")
-        return False
+        for i, char in enumerate(text):
+            element.send_keys(char)
+            
+            if char in ' .@':
+                time.sleep(random.uniform(typing_delay * 2, typing_delay * 4))
+            else:
+                time.sleep(random.uniform(typing_delay * 0.5, typing_delay * 2))
+            
+            # Occasional pause
+            if i > 0 and i % random.randint(5, 15) == 0:
+                time.sleep(random.uniform(0.5, 1.5))
+    except Exception as e:
+        # Fallback to simple typing
+        if clear_first:
+            element.clear()
+        element.send_keys(text)
+        time.sleep(1)
+
+def enhanced_login(self):
+    """Enhanced login with better error handling and config fallbacks"""
+    max_retries = 3
+    for attempt in range(max_retries):
+        try:
+            logger.info(f"Login attempt {attempt + 1}")
+            self.driver.get('https://www.naukri.com/nlogin/login')
+            self.smart_delay(3, 6)
+            
+            # Wait for and fill username
+            username_field = self.wait.until(
+                EC.element_to_be_clickable((By.ID, 'usernameField'))
+            )
+            self.human_type(username_field, self.config['credentials']['email'])
+            self.smart_delay(1, 2)
+            
+            # Wait for and fill password
+            password_field = self.wait.until(
+                EC.element_to_be_clickable((By.ID, 'passwordField'))
+            )
+            self.human_type(password_field, self.config['credentials']['password'])
+            self.smart_delay(1, 2)
+            
+            # Click login button
+            login_button = self.driver.find_element(By.XPATH, "//button[@type='submit']")
+            self.driver.execute_script("arguments[0].click();", login_button)
+            
+            # Wait for successful login
+            success_indicators = [
+                (By.CLASS_NAME, 'nI-gNb-drawer__icon'),
+                (By.CLASS_NAME, 'view-profile-wrapper'),
+                (By.XPATH, "//div[contains(@class, 'user-name')]")
+            ]
+            
+            try:
+                for indicator in success_indicators:
+                    try:
+                        self.wait.until(EC.presence_of_element_located(indicator))
+                        logger.info("Login successful!")
+                        self.smart_delay(2, 4)
+                        return True
+                    except TimeoutException:
+                        continue
+                        
+                # Check URL change as fallback
+                if 'naukri.com' in self.driver.current_url and 'login' not in self.driver.current_url:
+                    logger.info("Login successful (URL check)")
+                    return True
+                    
+            except TimeoutException:
+                logger.warning(f"Login attempt {attempt + 1} failed")
+                if attempt < max_retries - 1:
+                    time.sleep(random.uniform(5, 10))
+                    continue
+                
+        except Exception as e:
+            logger.error(f"Login attempt {attempt + 1} error: {e}")
+            if attempt < max_retries - 1:
+                time.sleep(random.uniform(5, 10))
+                continue
+    
+    logger.error("All login attempts failed")
+    return False
     
     def is_job_already_applied(self, job_id):
         """Check if job was already applied to"""

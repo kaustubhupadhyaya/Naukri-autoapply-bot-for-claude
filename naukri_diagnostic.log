@@ -1,0 +1,104 @@
+2025-07-11 15:34:44,943 - INFO - Starting Naukri website structure diagnosis
+2025-07-11 15:34:47,427 - INFO - WebDriver setup successful
+2025-07-11 15:35:09,472 - INFO - Login completed
+2025-07-11 15:35:09,472 - INFO - 
+=== Analyzing URL: https://www.naukri.com/data-engineer-jobs-in-bengaluru-1 ===
+2025-07-11 15:35:19,406 - INFO - Page title: Data Engineer Jobs In Bengaluru - 12316 Data Engineer Job Vacancies In Bengaluru - Naukri.com
+2025-07-11 15:35:19,415 - INFO - No elements found with selector: article
+2025-07-11 15:35:19,434 - INFO - Found 109 elements with selector: div[class*="job"]
+2025-07-11 15:35:19,434 - INFO - First element HTML (first 500 chars): <div class="styles_job-list-header-container__I1rGR" id="jobs-list-header"><div class="styles_h1-wrapper__mHVA1"><span class="styles_count-string__DlPaZ" title="1 - 20 of 12316 ">1 - 20 of 12316 </span><h1 class="styles_h1-content__MdLE_" title="Data Engineer Jobs In Bengaluru">Data Engineer Jobs In Bengaluru</h1></div><div class="styles_jlh__sort-cont__xtRva"><a class="styles_jlh__save-alert-btn__874Eg">Send me jobs like these</a><span class="styles_sort-by-container__ATT7x"><span class="styles
+2025-07-11 15:35:19,454 - INFO - Found 51 elements with selector: div[class*="tuple"]
+2025-07-11 15:35:19,461 - INFO - First element HTML (first 500 chars): <div class="srp-jobtuple-wrapper" data-job-id="100725501522"><div class="cust-job-tuple layout-wrapper lay-2 sjw__tuple"><div class="row1"><h2><a class="title" href="https://www.naukri.com/job-listings-data-engineer-stack-digital-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-2-to-5-years-100725501522" rel="noopener noreferrer" target="_blank" title="Data Engineer">Data Engineer</a></h2><span class="imagewrap"><img class="logoImage" loading="lazy" src="https://img.naukimg.com/logo_ima
+2025-07-11 15:35:19,462 - INFO - Found 2 links in first element
+2025-07-11 15:35:19,465 - INFO - Link 1: https://www.naukri.com/job-listings-data-engineer-stack-digital-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-2-to-5-years-100725501522 - Text: Data Engineer
+2025-07-11 15:35:19,466 - INFO - Link 2: https://www.naukri.com/stack-digital-jobs-careers-124763133 - Text: Stack Digital
+2025-07-11 15:35:19,494 - INFO - No elements found with selector: div[class*="card"]
+2025-07-11 15:35:19,508 - INFO - Found 1 elements with selector: div[class*="listing"]
+2025-07-11 15:35:19,529 - INFO - First element HTML (first 500 chars): <div class="styles_job-listing-container__OCfZC"><div class="styles_jlc__main__VdwtF"><div class="srp-jobtuple-wrapper" data-job-id="100725501522"><div class="cust-job-tuple layout-wrapper lay-2 sjw__tuple"><div class="row1"><h2><a class="title" href="https://www.naukri.com/job-listings-data-engineer-stack-digital-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-2-to-5-years-100725501522" rel="noopener noreferrer" target="_blank" title="Data Engineer">Data Engineer</a></h2><span class="
+2025-07-11 15:35:19,533 - INFO - Found 66 links in first element
+2025-07-11 15:35:19,534 - INFO - Link 1: https://www.naukri.com/job-listings-data-engineer-stack-digital-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-2-to-5-years-100725501522 - Text: Data Engineer
+2025-07-11 15:35:19,534 - INFO - Link 2: https://www.naukri.com/stack-digital-jobs-careers-124763133 - Text: Stack Digital
+2025-07-11 15:35:19,534 - INFO - Link 3: https://www.naukri.com/job-listings-data-engineer-circle-k-stores-inc-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-3-to-8-years-090725500511 - Text: Data Engineer
+2025-07-11 15:35:19,543 - INFO - Found 20 elements with selector: div[data-job-id]
+2025-07-11 15:35:19,545 - INFO - First element HTML (first 500 chars): <div class="srp-jobtuple-wrapper" data-job-id="100725501522"><div class="cust-job-tuple layout-wrapper lay-2 sjw__tuple"><div class="row1"><h2><a class="title" href="https://www.naukri.com/job-listings-data-engineer-stack-digital-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-2-to-5-years-100725501522" rel="noopener noreferrer" target="_blank" title="Data Engineer">Data Engineer</a></h2><span class="imagewrap"><img class="logoImage" loading="lazy" src="https://img.naukimg.com/logo_ima
+2025-07-11 15:35:19,545 - INFO - Found 2 links in first element
+2025-07-11 15:35:19,545 - INFO - Link 1: https://www.naukri.com/job-listings-data-engineer-stack-digital-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-2-to-5-years-100725501522 - Text: Data Engineer
+2025-07-11 15:35:19,545 - INFO - Link 2: https://www.naukri.com/stack-digital-jobs-careers-124763133 - Text: Stack Digital
+2025-07-11 15:35:19,559 - INFO - No elements found with selector: div[data-id]
+2025-07-11 15:35:19,563 - INFO - Found 2 text elements containing 'apply'
+2025-07-11 15:35:19,567 - INFO - Found 96 text elements containing 'job'
+2025-07-11 15:35:19,571 - INFO - Found 35 text elements containing 'position'
+2025-07-11 15:35:19,575 - INFO - Found 2 text elements containing 'role'
+2025-07-11 15:35:19,580 - INFO - Found 7 text elements containing 'company'
+2025-07-11 15:35:19,583 - INFO - Job-related CSS classes found: ['nI-gNb-custom-Jobs', 'ni-job-tuple-icon-srp-rupee', 'ni-job-tuple-icon-srpSaveUnfilled', 'sim-job-tuple', 'sim-jobs-wrap', 'job-rate', 'save-job-tag', 'sjw__tuple', 'srp-jobtuple-wrapper', 'job-desc', 'cust-job-tuple', 'sim-jobs-tuple-cont', 'ni-job-tuple-icon-srp-location', 'ni-job-tuple-icon-srp-description', 'similar-jobs-widget-container', 'job-details', 'nI-gNb-Jobs', 'job-title', 'swiper-similar-jobs-widget', 'job-loc', 'sim-jobs-head', 'sim-jobs-swiper-wrap', 'ni-job-tuple-icon', 'job-details-cont', 'styles_job-list-header-container__I1rGR', 'ni-job-tuple-icon-ot_star', 'ni-job-tuple-icon-srp-experience', 'naukri-similar-jobs-reco-wdgt', 'job-post-day', 'styles_job-listing-container__OCfZC']
+2025-07-11 15:35:19,625 - INFO - ==================================================
+2025-07-11 15:35:19,625 - INFO - 
+=== Analyzing URL: https://www.naukri.com/python-developer-jobs-in-bengaluru-1 ===
+2025-07-11 15:35:29,180 - INFO - Page title: Python Developer Jobs In Bengaluru - 9197 Python Developer Job Vacancies In Bengaluru - Naukri.com
+2025-07-11 15:35:29,190 - INFO - No elements found with selector: article
+2025-07-11 15:35:29,204 - INFO - Found 63 elements with selector: div[class*="job"]
+2025-07-11 15:35:29,208 - INFO - First element HTML (first 500 chars): <div class="styles_job-list-header-container__I1rGR" id="jobs-list-header"><div class="styles_h1-wrapper__mHVA1"><span class="styles_count-string__DlPaZ" title="1 - 20 of 9197 ">1 - 20 of 9197 </span><h1 class="styles_h1-content__MdLE_" title="Python Developer Jobs In Bengaluru">Python Developer Jobs In Bengaluru</h1></div><div class="styles_jlh__sort-cont__xtRva"><a class="styles_jlh__save-alert-btn__874Eg">Send me jobs like these</a><span class="styles_sort-by-container__ATT7x"><span class="st
+2025-07-11 15:35:29,225 - INFO - Found 41 elements with selector: div[class*="tuple"]
+2025-07-11 15:35:29,231 - INFO - First element HTML (first 500 chars): <div class="srp-jobtuple-wrapper" data-job-id="100725503928"><div class="cust-job-tuple layout-wrapper lay-2 sjw__tuple"><div class="row1"><h2><a class="title" href="https://www.naukri.com/job-listings-python-developer-xcel-hires-managment-solutions-pvt-ltd-bengaluru-3-to-7-years-100725503928" rel="noopener noreferrer" target="_blank" title="Python Developer">Python Developer</a></h2><span class="imagewrap"><img class="logoImage" loading="lazy" src="https://img.naukimg.com/logo_images/groups/v1/
+2025-07-11 15:35:29,232 - INFO - Found 2 links in first element
+2025-07-11 15:35:29,232 - INFO - Link 1: https://www.naukri.com/job-listings-python-developer-xcel-hires-managment-solutions-pvt-ltd-bengaluru-3-to-7-years-100725503928 - Text: Python Developer
+2025-07-11 15:35:29,234 - INFO - Link 2: https://www.naukri.com/xcel-hires-management-solutions-jobs-careers-890624 - Text: Xcel Hires Managment Solutions Pvt Ltd
+2025-07-11 15:35:29,255 - INFO - No elements found with selector: div[class*="card"]
+2025-07-11 15:35:29,273 - INFO - Found 1 elements with selector: div[class*="listing"]
+2025-07-11 15:35:29,294 - INFO - First element HTML (first 500 chars): <div class="styles_job-listing-container__OCfZC"><div class="styles_jlc__main__VdwtF"><div class="srp-jobtuple-wrapper" data-job-id="100725503928"><div class="cust-job-tuple layout-wrapper lay-2 sjw__tuple"><div class="row1"><h2><a class="title" href="https://www.naukri.com/job-listings-python-developer-xcel-hires-managment-solutions-pvt-ltd-bengaluru-3-to-7-years-100725503928" rel="noopener noreferrer" target="_blank" title="Python Developer">Python Developer</a></h2><span class="imagewrap"><im
+2025-07-11 15:35:29,294 - INFO - Found 68 links in first element
+2025-07-11 15:35:29,294 - INFO - Link 1: https://www.naukri.com/job-listings-python-developer-xcel-hires-managment-solutions-pvt-ltd-bengaluru-3-to-7-years-100725503928 - Text: Python Developer
+2025-07-11 15:35:29,294 - INFO - Link 2: https://www.naukri.com/xcel-hires-management-solutions-jobs-careers-890624 - Text: Xcel Hires Managment Solutions Pvt Ltd
+2025-07-11 15:35:29,294 - INFO - Link 3: https://www.naukri.com/job-listings-python-developer-iqvia-biotech-bengaluru-3-to-8-years-100725501869 - Text: Python Developer
+2025-07-11 15:35:29,305 - INFO - Found 20 elements with selector: div[data-job-id]
+2025-07-11 15:35:29,305 - INFO - First element HTML (first 500 chars): <div class="srp-jobtuple-wrapper" data-job-id="100725503928"><div class="cust-job-tuple layout-wrapper lay-2 sjw__tuple"><div class="row1"><h2><a class="title" href="https://www.naukri.com/job-listings-python-developer-xcel-hires-managment-solutions-pvt-ltd-bengaluru-3-to-7-years-100725503928" rel="noopener noreferrer" target="_blank" title="Python Developer">Python Developer</a></h2><span class="imagewrap"><img class="logoImage" loading="lazy" src="https://img.naukimg.com/logo_images/groups/v1/
+2025-07-11 15:35:29,310 - INFO - Found 2 links in first element
+2025-07-11 15:35:29,310 - INFO - Link 1: https://www.naukri.com/job-listings-python-developer-xcel-hires-managment-solutions-pvt-ltd-bengaluru-3-to-7-years-100725503928 - Text: Python Developer
+2025-07-11 15:35:29,311 - INFO - Link 2: https://www.naukri.com/xcel-hires-management-solutions-jobs-careers-890624 - Text: Xcel Hires Managment Solutions Pvt Ltd
+2025-07-11 15:35:29,329 - INFO - No elements found with selector: div[data-id]
+2025-07-11 15:35:29,340 - INFO - Found 2 text elements containing 'apply'
+2025-07-11 15:35:29,357 - INFO - Found 99 text elements containing 'job'
+2025-07-11 15:35:29,366 - INFO - Found 35 text elements containing 'position'
+2025-07-11 15:35:29,372 - INFO - Found 2 text elements containing 'role'
+2025-07-11 15:35:29,382 - INFO - Found 6 text elements containing 'company'
+2025-07-11 15:35:29,393 - INFO - Job-related CSS classes found: ['job-details', 'save-job-tag', 'nI-gNb-custom-Jobs', 'ni-job-tuple-icon', 'sjw__tuple', 'nI-gNb-Jobs', 'srp-jobtuple-wrapper', 'styles_job-list-header-container__I1rGR', 'job-desc', 'ni-job-tuple-icon-ot_star', 'cust-job-tuple', 'ni-job-tuple-icon-srp-experience', 'ni-job-tuple-icon-srpSaveUnfilled', 'naukri-similar-jobs-reco-wdgt', 'job-post-day', 'ni-job-tuple-icon-srp-location', 'ni-job-tuple-icon-srp-description', 'tuple-tags-container', 'styles_job-listing-container__OCfZC']
+2025-07-11 15:35:29,450 - INFO - ==================================================
+2025-07-11 15:35:29,450 - INFO - 
+=== Analyzing URL: https://www.naukri.com/etl-developer-jobs-in-bengaluru-1 ===
+2025-07-11 15:35:38,792 - INFO - Page title: Etl Developer Jobs In Bengaluru - 8575 Etl Developer Job Vacancies In Bengaluru - Naukri.com
+2025-07-11 15:35:38,821 - INFO - No elements found with selector: article
+2025-07-11 15:35:38,880 - INFO - Found 115 elements with selector: div[class*="job"]
+2025-07-11 15:35:38,886 - INFO - First element HTML (first 500 chars): <div class="styles_job-list-header-container__I1rGR" id="jobs-list-header"><div class="styles_h1-wrapper__mHVA1"><span class="styles_count-string__DlPaZ" title="1 - 20 of 8575 ">1 - 20 of 8575 </span><h1 class="styles_h1-content__MdLE_" title="Etl Developer Jobs In Bengaluru">Etl Developer Jobs In Bengaluru</h1></div><div class="styles_jlh__sort-cont__xtRva"><a class="styles_jlh__save-alert-btn__874Eg">Send me jobs like these</a><span class="styles_sort-by-container__ATT7x"><span class="styles_s
+2025-07-11 15:35:38,929 - INFO - Found 53 elements with selector: div[class*="tuple"]
+2025-07-11 15:35:38,935 - INFO - First element HTML (first 500 chars): <div class="srp-jobtuple-wrapper" data-job-id="030325503491"><div class="cust-job-tuple layout-wrapper lay-2 sjw__tuple"><div class="row1"><h2><a class="title" href="https://www.naukri.com/job-listings-it-etl-developer-systechcorp-inc-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-3-to-6-years-030325503491" rel="noopener noreferrer" target="_blank" title="IT - ETL Developer">IT - ETL Developer</a></h2><span class="imagewrap"><img class="logoImage" loading="lazy" src="https://img.nauki
+2025-07-11 15:35:38,939 - INFO - Found 4 links in first element
+2025-07-11 15:35:38,940 - INFO - Link 1: https://www.naukri.com/job-listings-it-etl-developer-systechcorp-inc-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-3-to-6-years-030325503491 - Text: IT - ETL Developer
+2025-07-11 15:35:38,940 - INFO - Link 2: https://www.naukri.com/systechcorp-jobs-careers-5045118 - Text: Systechcorp Inc
+2025-07-11 15:35:38,940 - INFO - Link 3: https://www.ambitionbox.com/reviews/systechcorp-reviews?utm_campaign=srp_ratings&utm_medium=desktop&utm_source=naukri&cvid=31f01e4adca041028f2285cd3c034a14 - Text: 4.3
+2025-07-11 15:35:39,000 - INFO - No elements found with selector: div[class*="card"]
+2025-07-11 15:35:39,036 - INFO - Found 1 elements with selector: div[class*="listing"]
+2025-07-11 15:35:39,101 - INFO - First element HTML (first 500 chars): <div class="styles_job-listing-container__OCfZC"><div class="styles_jlc__main__VdwtF"><div class="srp-jobtuple-wrapper" data-job-id="030325503491"><div class="cust-job-tuple layout-wrapper lay-2 sjw__tuple"><div class="row1"><h2><a class="title" href="https://www.naukri.com/job-listings-it-etl-developer-systechcorp-inc-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-3-to-6-years-030325503491" rel="noopener noreferrer" target="_blank" title="IT - ETL Developer">IT - ETL Developer</a></h
+2025-07-11 15:35:39,101 - INFO - Found 66 links in first element
+2025-07-11 15:35:39,101 - INFO - Link 1: https://www.naukri.com/job-listings-it-etl-developer-systechcorp-inc-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-3-to-6-years-030325503491 - Text: IT - ETL Developer
+2025-07-11 15:35:39,110 - INFO - Link 2: https://www.naukri.com/systechcorp-jobs-careers-5045118 - Text: Systechcorp Inc
+2025-07-11 15:35:39,112 - INFO - Link 3: https://www.ambitionbox.com/reviews/systechcorp-reviews?utm_campaign=srp_ratings&utm_medium=desktop&utm_source=naukri&cvid=31f01e4adca041028f2285cd3c034a14 - Text: 4.3
+2025-07-11 15:35:39,156 - INFO - Found 20 elements with selector: div[data-job-id]
+2025-07-11 15:35:39,158 - INFO - First element HTML (first 500 chars): <div class="srp-jobtuple-wrapper" data-job-id="030325503491"><div class="cust-job-tuple layout-wrapper lay-2 sjw__tuple"><div class="row1"><h2><a class="title" href="https://www.naukri.com/job-listings-it-etl-developer-systechcorp-inc-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-3-to-6-years-030325503491" rel="noopener noreferrer" target="_blank" title="IT - ETL Developer">IT - ETL Developer</a></h2><span class="imagewrap"><img class="logoImage" loading="lazy" src="https://img.nauki
+2025-07-11 15:35:39,160 - INFO - Found 4 links in first element
+2025-07-11 15:35:39,160 - INFO - Link 1: https://www.naukri.com/job-listings-it-etl-developer-systechcorp-inc-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-3-to-6-years-030325503491 - Text: IT - ETL Developer
+2025-07-11 15:35:39,162 - INFO - Link 2: https://www.naukri.com/systechcorp-jobs-careers-5045118 - Text: Systechcorp Inc
+2025-07-11 15:35:39,164 - INFO - Link 3: https://www.ambitionbox.com/reviews/systechcorp-reviews?utm_campaign=srp_ratings&utm_medium=desktop&utm_source=naukri&cvid=31f01e4adca041028f2285cd3c034a14 - Text: 4.3
+2025-07-11 15:35:39,192 - INFO - No elements found with selector: div[data-id]
+2025-07-11 15:35:39,203 - INFO - Found 2 text elements containing 'apply'
+2025-07-11 15:35:39,211 - INFO - Found 106 text elements containing 'job'
+2025-07-11 15:35:39,218 - INFO - Found 37 text elements containing 'position'
+2025-07-11 15:35:39,242 - INFO - Found 7 text elements containing 'role'
+2025-07-11 15:35:39,253 - INFO - Found 2 text elements containing 'hiring'
+2025-07-11 15:35:39,275 - INFO - Found 9 text elements containing 'company'
+2025-07-11 15:35:39,284 - INFO - Job-related CSS classes found: ['job-promotion-vanilla-default-wdgt', 'nI-gNb-custom-Jobs', 'ni-job-tuple-icon-srp-rupee', 'ni-job-tuple-icon-srpSaveUnfilled', 'sim-job-tuple', 'sim-jobs-wrap', 'job-rate', 'srp-job-details', 'save-job-tag', 'sjw__tuple', 'srp-jobtuple-wrapper', 'job-desc', 'cust-job-tuple', 'sim-jobs-tuple-cont', 'ni-job-tuple-icon-srp-location', 'ni-job-tuple-icon-srp-description', 'similar-jobs-widget-container', 'job-details', 'nI-gNb-Jobs', 'job-title', 'swiper-similar-jobs-widget', 'srp-job-desc', 'job-loc', 'srp-tuple', 'sim-jobs-head', 'sim-jobs-swiper-wrap', 'ni-job-tuple-icon', 'job-details-cont', 'styles_job-list-header-container__I1rGR', 'ni-job-tuple-icon-ot_star', 'ni-job-tuple-icon-srp-experience', 'naukri-similar-jobs-reco-wdgt', 'job-post-day', 'styles_job-listing-container__OCfZC']
+2025-07-11 15:35:39,405 - INFO - ==================================================
+2025-07-11 15:35:39,405 - INFO - 
+=== Testing Direct Search ===
+2025-07-11 15:35:46,485 - INFO - Found search box with selector: input[placeholder*="keyword"]
+2025-07-11 15:35:46,606 - INFO - Found search box with selector: input[placeholder*="designation"]
+2025-07-11 15:35:46,662 - INFO - Diagnosis completed. Check the log file and saved HTML files.

@@ -32,3 +32,12 @@
 2025-07-11 15:10:06,547 - INFO - Total job links scraped: 0
 2025-07-11 15:10:06,547 - ERROR - No job links found. Exiting.
 2025-07-11 15:10:08,907 - INFO - WebDriver closed
+2025-07-11 16:23:15,705 - INFO - Job database initialized
+2025-07-11 16:23:17,565 - INFO - Enhanced WebDriver setup successful
+2025-07-11 16:23:17,580 - INFO - Login attempt 1
+2025-07-11 16:23:26,572 - ERROR - Login attempt 1 error: 'smart_delays'
+2025-07-11 16:24:47,417 - INFO - Browser closed
+2025-07-11 16:25:01,940 - INFO - Job database initialized
+2025-07-11 16:25:04,737 - INFO - Enhanced WebDriver setup successful
+2025-07-11 16:25:04,739 - INFO - Login attempt 1
+2025-07-11 16:25:09,424 - ERROR - Login attempt 1 error: 'smart_delays'

@@ -126,7 +126,7 @@ class IntelligentJobProcessor:
         """Initialize Gemini API."""
         try:
             genai.configure(api_key=self.config['gemini_api_key'])
-            self.gemini_model = genai.GenerativeModel('gemini-pro')
+            self.gemini_model = genai.GenerativeModel('gemini-1.5-flash')  # Updated model name
             logger.info("Gemini API initialized successfully")
         except Exception as e:
             logger.error(f"Failed to initialize Gemini API: {e}")

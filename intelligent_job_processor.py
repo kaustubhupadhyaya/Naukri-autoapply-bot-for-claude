@@ -109,7 +109,7 @@ class IntelligentJobProcessor:
                 "random_scrolling": True
             },
             "gemini_settings": {
-                "model": "gemini-pro",
+                "model": "gemini-1.5-flash",  # Updated model name
                 "temperature": 0.1,
                 "max_tokens": 1000,
                 "rate_limit_delay": 4

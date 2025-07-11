@@ -1,0 +1,21 @@
+{
+    "credentials": {
+        "email": "kaustubh.upadhyaya1@gmail.com",
+        "password": "9880380081@kK"
+    },
+    "personal_info": {
+        "firstname": "Kaustubh",
+        "lastname": "Upadhyaya"
+    },
+    "job_search": {
+        "keywords": ["Data Engineer", "Python Developer", "ETL Developer", "SQL Developer"],
+        "location": "Bengaluru, Karnataka, India",
+        "max_applications": 50,
+        "pages_per_keyword": 3
+    },
+    "webdriver": {
+        "edge_driver_path": "C:\\WebDrivers\\msedgedriver.exe",
+        "implicit_wait": 10,
+        "page_load_timeout": 30
+    }
+}

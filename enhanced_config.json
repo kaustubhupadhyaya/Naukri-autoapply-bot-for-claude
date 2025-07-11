@@ -1,0 +1,113 @@
+{
+    "credentials": {
+        "email": "kaustubh.upadhyaya1@gmail.com",
+        "password": "9880380081@kK"
+    },
+    "gemini_api_key": "AIzaSyBGXNcTgcjYjY34fvXaAnmulRbiCIAvvXI",
+    "personal_info": {
+        "firstname": "Kaustubh",
+        "lastname": "Upadhyaya",
+        "phone": "9880380081",
+        "current_ctc": "13 LPA",
+        "expected_ctc": "18 LPA",
+        "notice_period": "Immediate"
+    },
+    "user_profile": {
+        "name": "Kaustubh Upadhyaya",
+        "experience_years": 2,
+        "current_role": "Data Engineer at Eli Lilly",
+        "core_skills": [
+            "Python",
+            "SQL",
+            "Bash",
+            "Apache Airflow",
+            "Jenkins",
+            "Great Expectations",
+            "PostgreSQL",
+            "MySQL",
+            "Oracle DB",
+            "RDBMS",
+            "AWS S3",
+            "AWS EC2",
+            "AWS Lambda",
+            "AWS CloudWatch",
+            "AWS Secrets Manager",
+            "GCP",
+            "REST APIs",
+            "JSON",
+            "XML",
+            "CI/CD Pipelines",
+            "Kubernetes",
+            "Unit Testing",
+            "Data Validation",
+            "ETL Development",
+            "Schema Design",
+            "Data Lakes",
+            "Monitoring & Alerting"
+        ],
+        "learning_skills": [
+            "DBT",
+            "Databricks",
+            "Spark",
+            "Kafka",
+            "Snowflake"
+        ],
+        "preferred_roles": [
+            "Data Engineer",
+            "ETL Developer",
+            "Analytics Engineer",
+            "Python Developer"
+        ],
+        "location_preference": [
+            "Bangalore",
+            "Remote",
+            "Hybrid"
+        ],
+        "target_company_types": [
+            "Product",
+            "Startup",
+            "Mid-size",
+            "Healthcare",
+            "Fintech"
+        ],
+        "avoid_companies": [
+            "TCS",
+            "Infosys",
+            "Wipro",
+            "Accenture",
+            "Cognizant"
+        ]
+    },
+    "job_search": {
+        "keywords": [
+            "Data Engineer",
+            "Python Developer",
+            "ETL Developer",
+            "Analytics Engineer"
+        ],
+        "location": "bengaluru",
+        "max_applications_per_session": 50,
+        "min_job_score": 50,
+        "pages_per_keyword": 3
+    },
+    "webdriver": {
+        "edge_driver_path": "C:\\WebDrivers\\msedgedriver.exe",
+        "implicit_wait": 15,
+        "page_load_timeout": 45,
+        "headless": false
+    },
+    "bot_behavior": {
+        "min_delay": 3,
+        "max_delay": 7,
+        "typing_delay": 0.15,
+        "scroll_pause": 3,
+        "smart_delays": true,
+        "random_scrolling": true
+    },
+    "gemini_settings": {
+        "model": "gemini-pro",
+        "temperature": 0.1,
+        "max_tokens": 1000,
+        "rate_limit_delay": 4
+    }
+}

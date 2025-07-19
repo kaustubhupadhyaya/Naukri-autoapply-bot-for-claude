@@ -11479,3 +11479,393 @@ Stacktrace:
 2025-07-11 17:07:47,100 - INFO - SUMMARY - Found: 231, Applied: 18, Failed: 427, Skipped: 4
 2025-07-11 17:07:47,111 - INFO - Bot execution completed successfully
 2025-07-11 17:07:50,596 - INFO - Browser closed
+2025-07-11 22:43:05,099 - INFO - Configuration loaded successfully
+2025-07-11 22:43:05,115 - INFO - Job database initialized
+2025-07-11 22:43:05,115 - INFO - Bot initialized successfully
+2025-07-11 22:43:05,116 - INFO - Setting up browser...
+2025-07-11 22:43:08,562 - INFO - WebDriver setup successful
+2025-07-11 22:43:08,581 - INFO - Logging into Naukri...
+2025-07-11 22:43:08,585 - INFO - Login attempt 1/3
+2025-07-11 22:43:32,943 - INFO - Login successful!
+2025-07-11 22:43:32,943 - INFO - Starting intelligent job search...
+2025-07-11 22:43:32,943 - INFO - Scraping keyword 1/4: Data Engineer
+2025-07-11 22:43:32,943 - INFO - Page 1/3: https://www.naukri.com/data-engineer-jobs-in-bengaluru-1
+2025-07-11 22:43:45,524 - INFO - Found 20 job cards on page
+2025-07-11 22:43:45,589 - INFO - Job 1: Data Engineer (Score: 0)
+2025-07-11 22:43:45,634 - INFO - Job 2: Data Engineer (Score: 0)
+2025-07-11 22:43:45,675 - INFO - Job 3: Python Data Engineer (Score: 0)
+2025-07-11 22:43:45,712 - INFO - Job 4: Data Engineer (Score: 0)
+2025-07-11 22:43:45,750 - INFO - Job 5: Data Engineer – Databricks (Score: 0)
+2025-07-11 22:43:45,787 - INFO - Job 6: Data Engineer (Score: 0)
+2025-07-11 22:43:45,831 - INFO - Job 7: Data Engineer (Score: 0)
+2025-07-11 22:43:45,877 - INFO - Job 8: Data Engineer (Score: 0)
+2025-07-11 22:43:45,923 - INFO - Job 9: Data Engineer (Score: 0)
+2025-07-11 22:43:45,964 - INFO - Job 10: Data Engineer - Databricks (Score: 0)
+2025-07-11 22:43:46,010 - INFO - Job 11: Data Engineer (Score: 0)
+2025-07-11 22:43:46,056 - INFO - Job 12: Data Engineer (Score: 0)
+2025-07-11 22:43:46,100 - INFO - Job 13: Data Engineer (Score: 0)
+2025-07-11 22:43:46,149 - INFO - Job 14: Data Engineer - SSIS and Tableau (Score: 0)
+2025-07-11 22:43:46,198 - INFO - Job 15: Data Engineer (ETL, Go, Databricks) (Score: 0)
+2025-07-11 22:43:46,245 - INFO - Job 16: Data Engineer (Score: 0)
+2025-07-11 22:43:46,289 - INFO - Job 17: Data Engineer (Score: 0)
+2025-07-11 22:43:46,339 - INFO - Job 18: Data Engineer (Score: 0)
+2025-07-11 22:43:46,386 - INFO - Job 19: Data Engineer (Score: 0)
+2025-07-11 22:43:46,432 - INFO - Job 20: Data engineer (Score: 0)
+2025-07-11 22:43:46,432 - INFO - Extracted 20 quality jobs from page
+2025-07-11 22:43:46,432 - INFO - Page 1: Found 20 quality jobs
+2025-07-11 22:43:49,943 - INFO - Page 2/3: https://www.naukri.com/data-engineer-jobs-in-bengaluru-2
+2025-07-11 22:43:57,744 - INFO - Found 20 job cards on page
+2025-07-11 22:43:57,804 - INFO - Job 3: Data Engineer (Score: 0)
+2025-07-11 22:43:57,839 - INFO - Job 4: Data Engineers (Score: 0)
+2025-07-11 22:43:57,879 - INFO - Job 5: Data Engineer (Score: 0)
+2025-07-11 22:43:57,909 - INFO - Job 6: Data Engineer (Score: 0)
+2025-07-11 22:43:57,949 - INFO - Job 7: Data Engineer - Introlligent (Score: 0)
+2025-07-11 22:43:57,996 - INFO - Job 8: Data Engineer (Score: 0)
+2025-07-11 22:43:58,039 - INFO - Job 9: Data Engineer TPC (Score: 0)
+2025-07-11 22:43:58,089 - INFO - Job 10: Data Engineer (Score: 0)
+2025-07-11 22:43:58,134 - INFO - Job 11: Data Engineer (Score: 0)
+2025-07-11 22:43:58,179 - INFO - Job 12: SQL Developer / Data Engineer (Score: 0)
+2025-07-11 22:43:58,224 - INFO - Job 13: Data Engineer - Dataiku / Python (Score: 0)
+2025-07-11 22:43:58,269 - INFO - Job 14: Data Engineer (Score: 0)
+2025-07-11 22:43:58,314 - INFO - Job 15: Data Engineer (Score: 0)
+2025-07-11 22:43:58,364 - INFO - Job 16: Data Engineer (Score: 0)
+2025-07-11 22:43:58,409 - INFO - Job 17: Junior Data Engineer (Score: 0)
+2025-07-11 22:43:58,454 - INFO - Job 18: Lead Data Engineer (Score: 5)
+2025-07-11 22:43:58,509 - INFO - Job 20: Data Engineer (Score: 0)
+2025-07-11 22:43:58,509 - INFO - Extracted 17 quality jobs from page
+2025-07-11 22:43:58,509 - INFO - Page 2: Found 17 quality jobs
+2025-07-11 22:44:02,349 - INFO - Page 3/3: https://www.naukri.com/data-engineer-jobs-in-bengaluru-3
+2025-07-11 22:44:12,189 - INFO - Found 20 job cards on page
+2025-07-11 22:44:12,229 - INFO - Job 1: Data Engineer (Score: 0)
+2025-07-11 22:44:12,279 - INFO - Job 2: Data Engineer (Score: 0)
+2025-07-11 22:44:12,324 - INFO - Job 3: Data Engineer (Score: 0)
+2025-07-11 22:44:12,399 - INFO - Job 4: Data Engineer (Score: 0)
+2025-07-11 22:44:12,434 - INFO - Job 5: Data Engineer (Score: 0)
+2025-07-11 22:44:12,473 - INFO - Job 6: Data Engineer (Score: 0)
+2025-07-11 22:44:12,509 - INFO - Job 7: Data Engineer (Score: 0)
+2025-07-11 22:44:12,549 - INFO - Job 8: Data Engineer- Databricks (Score: 0)
+2025-07-11 22:44:12,585 - INFO - Job 9: Data Engineer (Score: 0)
+2025-07-11 22:44:12,619 - INFO - Job 10: Data Engineer (Score: 0)
+2025-07-11 22:44:12,659 - INFO - Job 11: Modern Data Engineer (Score: -10)
+2025-07-11 22:44:12,694 - INFO - Job 12: Data Engineer (Score: 0)
+2025-07-11 22:44:12,729 - INFO - Job 13: Data Engineer (Score: -10)
+2025-07-11 22:44:12,769 - INFO - Job 14: Data Engineer - ETL (Score: 10)
+2025-07-11 22:44:12,834 - INFO - Job 15: Data Engineer (Score: 5)
+2025-07-11 22:44:12,874 - INFO - Job 16: DCT Data Engineer (Score: 5)
+2025-07-11 22:44:12,923 - INFO - Job 17: Data Engineer (Score: 0)
+2025-07-11 22:44:12,976 - INFO - Job 18: Data Engineer (Score: 0)
+2025-07-11 22:44:13,024 - INFO - Job 19: Data Engineer (Score: 0)
+2025-07-11 22:44:13,073 - INFO - Job 20: Data Engineer (Score: 0)
+2025-07-11 22:44:13,079 - INFO - Extracted 20 quality jobs from page
+2025-07-11 22:44:13,079 - INFO - Page 3: Found 20 quality jobs
+2025-07-11 22:44:22,610 - INFO - Scraping keyword 2/4: Python Developer
+2025-07-11 22:44:22,610 - INFO - Page 1/3: https://www.naukri.com/python-developer-jobs-in-bengaluru-1
+2025-07-11 22:44:33,165 - INFO - Found 20 job cards on page
+2025-07-11 22:44:33,224 - INFO - Job 1: Python Developer (Score: 0)
+2025-07-11 22:44:33,268 - INFO - Job 2: Python Developer (Score: 0)
+2025-07-11 22:44:33,315 - INFO - Job 3: Python Developer (Score: 0)
+2025-07-11 22:44:33,359 - INFO - Job 4: Python Developer (Score: 0)
+2025-07-11 22:44:33,402 - INFO - Job 5: Software Developer C++ and Python (Score: 0)
+2025-07-11 22:44:33,454 - INFO - Job 6: Python Developer (Score: 0)
+2025-07-11 22:44:33,504 - INFO - Job 7: Python developer (Score: 0)
+2025-07-11 22:44:33,549 - INFO - Job 8: PYTHON DEVELOPER (Score: 0)
+2025-07-11 22:44:33,592 - INFO - Job 9: Python Developer (Score: 0)
+2025-07-11 22:44:33,629 - INFO - Job 10: Python Developer (Score: 0)
+2025-07-11 22:44:33,671 - INFO - Job 11: Python Developer (Score: 0)
+2025-07-11 22:44:33,720 - INFO - Job 12: Python Developer (Score: 0)
+2025-07-11 22:44:33,764 - INFO - Job 13: Python Developer rejected (Score: -20)
+2025-07-11 22:44:33,804 - INFO - Job 14: PYTHON DEVELOPER (Score: 0)
+2025-07-11 22:44:33,845 - INFO - Job 15: Python Developer (Score: 0)
+2025-07-11 22:44:33,874 - INFO - Job 16: Python Developer (Score: 0)
+2025-07-11 22:44:33,916 - INFO - Job 17: Python Developer (Score: 0)
+2025-07-11 22:44:33,952 - INFO - Job 18: Python Developer (Score: 0)
+2025-07-11 22:44:33,989 - INFO - Job 19: Python Developer (Score: 0)
+2025-07-11 22:44:34,044 - INFO - Job 20: Python Developer (Score: 0)
+2025-07-11 22:44:34,044 - INFO - Extracted 19 quality jobs from page
+2025-07-11 22:44:34,044 - INFO - Page 1: Found 19 quality jobs
+2025-07-11 22:44:37,913 - INFO - Page 2/3: https://www.naukri.com/python-developer-jobs-in-bengaluru-2
+2025-07-11 22:44:45,519 - INFO - Found 20 job cards on page
+2025-07-11 22:44:45,559 - INFO - Job 1: Python-Developer- Bangalore (Score: 0)
+2025-07-11 22:44:45,621 - INFO - Job 2: Python Developer (Score: 0)
+2025-07-11 22:44:45,664 - INFO - Job 3: Python Developer (Score: 0)
+2025-07-11 22:44:45,704 - INFO - Job 4: Python Developer (Score: 0)
+2025-07-11 22:44:45,739 - INFO - Job 5: Python Developer (Score: 0)
+2025-07-11 22:44:45,769 - INFO - Job 6: Python Developer (Score: 0)
+2025-07-11 22:44:45,809 - INFO - Job 7: Python Developer (Score: 0)
+2025-07-11 22:44:45,839 - INFO - Job 8: Python Developer (Score: 0)
+2025-07-11 22:44:45,879 - INFO - Job 9: Python Developer (Score: 0)
+2025-07-11 22:44:45,919 - INFO - Job 10: Python Developer (Score: 0)
+2025-07-11 22:44:45,964 - INFO - Job 11: Python Developer (Score: 0)
+2025-07-11 22:44:46,009 - INFO - Job 12: Python Developer- Iti (Score: 0)
+2025-07-11 22:44:46,053 - INFO - Job 13: Python Developer (Score: 0)
+2025-07-11 22:44:46,100 - INFO - Job 14: Python Developer (Score: 0)
+2025-07-11 22:44:46,144 - INFO - Job 15: Python Developer (Score: 0)
+2025-07-11 22:44:46,184 - INFO - Job 16: Python Developer (Score: 0)
+2025-07-11 22:44:46,234 - INFO - Job 17: Python Developer (Score: 0)
+2025-07-11 22:44:46,303 - INFO - Job 18: Software Developer - C++ and Python (Score: 0)
+2025-07-11 22:44:46,349 - INFO - Job 19: Software Developer - C++ and Python (Score: 0)
+2025-07-11 22:44:46,399 - INFO - Job 20: Python / ML Developer (Score: 0)
+2025-07-11 22:44:46,400 - INFO - Extracted 20 quality jobs from page
+2025-07-11 22:44:46,401 - INFO - Page 2: Found 20 quality jobs
+2025-07-11 22:44:49,364 - INFO - Page 3/3: https://www.naukri.com/python-developer-jobs-in-bengaluru-3
+2025-07-11 22:44:57,619 - INFO - Found 20 job cards on page
+2025-07-11 22:44:57,665 - INFO - Job 1: Python Developer (Score: 0)
+2025-07-11 22:44:57,704 - INFO - Job 2: Python Developer (Score: 0)
+2025-07-11 22:44:57,749 - INFO - Job 3: Python Developer (Score: 0)
+2025-07-11 22:44:57,799 - INFO - Job 4: Python Developer (Score: 0)
+2025-07-11 22:44:57,839 - INFO - Job 5: Python Developer (Score: 0)
+2025-07-11 22:44:57,885 - INFO - Job 6: Python Developer (Score: 0)
+2025-07-11 22:44:57,930 - INFO - Job 7: Python Developer (Score: 0)
+2025-07-11 22:44:57,972 - INFO - Job 8: Python Developer (Score: 0)
+2025-07-11 22:44:58,016 - INFO - Job 9: Python Developer (Score: 0)
+2025-07-11 22:44:58,113 - INFO - Job 10: Python Developer (Score: 0)
+2025-07-11 22:44:58,166 - INFO - Job 11: Python Developer (Score: 0)
+2025-07-11 22:44:58,216 - INFO - Job 12: Python Developer (Score: 0)
+2025-07-11 22:44:58,259 - INFO - Job 13: Python Developer (Score: 0)
+2025-07-11 22:44:58,312 - INFO - Job 14: Software Engineer (Python Developer) (Score: 0)
+2025-07-11 22:44:58,352 - INFO - Job 15: Python with JavaScript (Visualization Developer) (Score: 0)
+2025-07-11 22:44:58,399 - INFO - Job 16: Python Developer (Score: 5)
+2025-07-11 22:44:58,449 - INFO - Job 17: Python Developer (Score: 0)
+2025-07-11 22:44:58,491 - INFO - Job 18: Python Developer (Score: 0)
+2025-07-11 22:44:58,544 - INFO - Job 19: PYTHON DEVELOPER (Score: 0)
+2025-07-11 22:44:58,589 - INFO - Job 20: Python Developer (Score: 5)
+2025-07-11 22:44:58,589 - INFO - Extracted 20 quality jobs from page
+2025-07-11 22:44:58,589 - INFO - Page 3: Found 20 quality jobs
+2025-07-11 22:45:07,861 - INFO - Scraping keyword 3/4: ETL Developer
+2025-07-11 22:45:07,861 - INFO - Page 1/3: https://www.naukri.com/etl-developer-jobs-in-bengaluru-1
+2025-07-11 22:45:15,969 - INFO - Found 20 job cards on page
+2025-07-11 22:45:16,019 - INFO - Job 1: IT - ETL Developer (Score: 5)
+2025-07-11 22:45:16,059 - INFO - Job 2: ETL Developer (Score: 0)
+2025-07-11 22:45:16,104 - INFO - Job 3: Database/ETL Developer (Score: 0)
+2025-07-11 22:45:16,179 - INFO - Job 4: Data Engineer - ETL and Azure developer (Score: 0)
+2025-07-11 22:45:16,219 - INFO - Job 5: Matillion ETL Developer (Score: 0)
+2025-07-11 22:45:16,263 - INFO - Job 6: Azure ETL Developer (Score: 0)
+2025-07-11 22:45:16,304 - INFO - Job 7: ETL Developer (Score: 0)
+2025-07-11 22:45:16,342 - INFO - Job 8: ETL Developer and ETL Testing (Score: 0)
+2025-07-11 22:45:16,390 - INFO - Job 9: Data Engineer OR ETL Developer (Score: 5)
+2025-07-11 22:45:16,434 - INFO - Job 10: ETL Developer (IICS ) (Score: 5)
+2025-07-11 22:45:16,479 - INFO - Job 11: Etl Developer (Score: 5)
+2025-07-11 22:45:16,521 - INFO - Job 12: ETL Developer (Score: 0)
+2025-07-11 22:45:16,566 - INFO - Job 13: ETL Developer (Score: 0)
+2025-07-11 22:45:16,610 - INFO - Job 14: Data Engineer/ETL Developer - Talend/Power BI (Score: 5)
+2025-07-11 22:45:16,653 - INFO - Job 15: ETL Developer (Score: 0)
+2025-07-11 22:45:16,697 - INFO - Job 16: ETL Developer (Score: 0)
+2025-07-11 22:45:16,735 - INFO - Job 17: ETL Developer (Score: 0)
+2025-07-11 22:45:16,772 - INFO - Job 18: ETL Developer (Score: 0)
+2025-07-11 22:45:16,816 - INFO - Job 19: ETL Developer (Score: 0)
+2025-07-11 22:45:16,859 - INFO - Job 20: Databricks ETL Developer (Score: 0)
+2025-07-11 22:45:16,860 - INFO - Extracted 20 quality jobs from page
+2025-07-11 22:45:16,860 - INFO - Page 1: Found 20 quality jobs
+2025-07-11 22:45:20,735 - INFO - Page 2/3: https://www.naukri.com/etl-developer-jobs-in-bengaluru-2
+2025-07-11 22:45:29,779 - INFO - Found 20 job cards on page
+2025-07-11 22:45:29,823 - INFO - Job 1: Databricks ETL Developer (Score: 0)
+2025-07-11 22:45:29,859 - INFO - Job 2: Data Engineer/ETL Developer - Talend/Power BI (Score: 5)
+2025-07-11 22:45:29,902 - INFO - Job 3: Etl Developer (Score: 0)
+2025-07-11 22:45:29,939 - INFO - Job 4: Data Engineer (Score: 0)
+2025-07-11 22:45:29,979 - INFO - Job 5: ETL Developer (Score: 0)
+2025-07-11 22:45:30,014 - INFO - Job 6: Etl Developer with ODI, sal max up To 20 lpa, (Score: 0)
+2025-07-11 22:45:30,054 - INFO - Job 7: ETL Developer (Score: -10)
+2025-07-11 22:45:30,089 - INFO - Job 8: ETL Developer (Score: 0)
+2025-07-11 22:45:30,125 - INFO - Job 9: ETL Developer (Score: 5)
+2025-07-11 22:45:30,159 - INFO - Job 10: ETL Developer (ODI) (Score: 0)
+2025-07-11 22:45:30,194 - INFO - Job 11: ETL Developer (Score: 5)
+2025-07-11 22:45:30,234 - INFO - Job 12: ETL Developer (Score: 0)
+2025-07-11 22:45:30,269 - INFO - Job 13: ETL Developer (Score: 0)
+2025-07-11 22:45:30,307 - INFO - Job 14: ETL Developer (Score: 0)
+2025-07-11 22:45:30,339 - INFO - Job 15: ETL developer (Score: 0)
+2025-07-11 22:45:30,381 - INFO - Job 16: ETL Developer - Python (Score: 0)
+2025-07-11 22:45:30,419 - INFO - Job 17: Hiring For  ODI - ETL Developer For MNC - Permanent role (Score: 0)
+2025-07-11 22:45:30,454 - INFO - Job 18: Stream sets ETL Developer, Associate (Score: 0)
+2025-07-11 22:45:30,489 - INFO - Job 19: Junior Semantic Web ETL Developer rejected (Score: -20)
+2025-07-11 22:45:30,524 - INFO - Job 20: ETL Developer - SSIS / Informatica (Score: 5)
+2025-07-11 22:45:30,524 - INFO - Extracted 19 quality jobs from page
+2025-07-11 22:45:30,524 - INFO - Page 2: Found 19 quality jobs
+2025-07-11 22:45:34,205 - INFO - Page 3/3: https://www.naukri.com/etl-developer-jobs-in-bengaluru-3
+2025-07-11 22:45:46,249 - INFO - Found 20 job cards on page
+2025-07-11 22:45:46,309 - INFO - Job 1: Coding and Robotics Teacher (Score: 0)
+2025-07-11 22:45:46,363 - INFO - Job 2: ETL Developer cum Java Support Engineer (Score: 5)
+2025-07-11 22:45:46,464 - INFO - Job 3: Streamsets ETL Developer, Associate (Score: 0)
+2025-07-11 22:45:46,519 - INFO - Job 4: ETL and BDX developer (Score: 0)
+2025-07-11 22:45:46,572 - INFO - Job 5: ETL SSIS Developer (Score: 0)
+2025-07-11 22:45:46,614 - INFO - Job 6: Senior Mobile Developer (Score: 5)
+2025-07-11 22:45:46,649 - INFO - Job 7: ETL Developer (Informatica Power Centre, SQL, Cloud IICS) (Score: 0)
+2025-07-11 22:45:46,686 - INFO - Job 8: ETL Developer with Talend (Score: 0)
+2025-07-11 22:45:46,714 - INFO - Job 9: Senior ETL developer (Score: 5)
+2025-07-11 22:45:46,760 - INFO - Job 10: Senior ETL Developer ( IICS, Kafka, Snowflake) (Score: 5)
+2025-07-11 22:45:46,797 - INFO - Job 11: Talend ETL Developer (Score: 0)
+2025-07-11 22:45:46,831 - INFO - Job 12: ETL Developer(Talend) (Score: 0)
+2025-07-11 22:45:46,869 - INFO - Job 13: Semantic Web ETL Developer (Score: 0)
+2025-07-11 22:45:46,903 - INFO - Job 14: Python, ETL and DevOps - Developer (Score: 0)
+2025-07-11 22:45:46,960 - INFO - Job 15: ETL - Python/Pyspark Developer (Score: 5)
+2025-07-11 22:45:47,004 - INFO - Job 17: ETL Teradata Developer, Bangalore location only (Score: 0)
+2025-07-11 22:45:47,039 - INFO - Job 18: Senior ETL Developer (Talend) (Score: 5)
+2025-07-11 22:45:47,074 - INFO - Job 19: Semantic Web ETL Developer (Score: 0)
+2025-07-11 22:45:47,112 - INFO - Job 20: ETL and BDX developer (Score: 10)
+2025-07-11 22:45:47,112 - INFO - Extracted 19 quality jobs from page
+2025-07-11 22:45:47,112 - INFO - Page 3: Found 19 quality jobs
+2025-07-11 22:45:53,325 - INFO - Scraping keyword 4/4: SQL Developer
+2025-07-11 22:45:53,325 - INFO - Page 1/3: https://www.naukri.com/sql-developer-jobs-in-bengaluru-1
+2025-07-11 22:46:04,369 - INFO - Found 20 job cards on page
+2025-07-11 22:46:04,409 - INFO - Job 1: SQL Developer (Score: 0)
+2025-07-11 22:46:04,459 - INFO - Job 3: SQL Developer (Score: 5)
+2025-07-11 22:46:04,499 - INFO - Job 4: Sql Developer (Score: 0)
+2025-07-11 22:46:04,539 - INFO - Job 5: SQL Developer (Score: 0)
+2025-07-11 22:46:04,579 - INFO - Job 6: Sql Developer (Score: 5)
+2025-07-11 22:46:04,615 - INFO - Job 7: SQL Developer (Score: 0)
+2025-07-11 22:46:04,651 - INFO - Job 8: Sql Developer (Score: 0)
+2025-07-11 22:46:04,689 - INFO - Job 9: Hadoop , SQL Developer (Score: 5)
+2025-07-11 22:46:04,729 - INFO - Job 10: SQL Developer (Score: 0)
+2025-07-11 22:46:04,759 - INFO - Job 11: SQL developer (Score: 0)
+2025-07-11 22:46:04,799 - INFO - Job 12: SQL Developer (Score: 5)
+2025-07-11 22:46:04,834 - INFO - Job 13: KDB Developer rejected (Score: -20)
+2025-07-11 22:46:04,864 - INFO - Job 14: SQL Developer (Score: 5)
+2025-07-11 22:46:04,903 - INFO - Job 15: SQL Developer (Score: 0)
+2025-07-11 22:46:04,929 - INFO - Job 16: Sql Developer (Score: 0)
+2025-07-11 22:46:04,989 - INFO - Job 17: SQL Developer rejected (Score: -15)
+2025-07-11 22:46:05,024 - INFO - Job 18: SQL Developer (SSAS and AWS Exp) (Score: 0)
+2025-07-11 22:46:05,063 - INFO - Job 19: SQL Developer (Score: 0)
+2025-07-11 22:46:05,099 - INFO - Job 20: Sql Developer (Score: 0)
+2025-07-11 22:46:05,099 - INFO - Extracted 17 quality jobs from page
+2025-07-11 22:46:05,099 - INFO - Page 1: Found 17 quality jobs
+2025-07-11 22:46:07,362 - INFO - Page 2/3: https://www.naukri.com/sql-developer-jobs-in-bengaluru-2
+2025-07-11 22:46:17,209 - INFO - Found 20 job cards on page
+2025-07-11 22:46:17,259 - INFO - Job 1: JS/SQL Developer (Score: 0)
+2025-07-11 22:46:17,291 - INFO - Job 2: SQL Developer (Score: 0)
+2025-07-11 22:46:17,329 - INFO - Job 3: SQL Developer (Score: 0)
+2025-07-11 22:46:17,371 - INFO - Job 4: sql developer (Score: 0)
+2025-07-11 22:46:17,409 - INFO - Job 5: SQL Developer (Score: 0)
+2025-07-11 22:46:17,444 - INFO - Job 6: SQL Developer (Score: -10)
+2025-07-11 22:46:17,484 - INFO - Job 7: PowerBI SQL Developer (Score: 0)
+2025-07-11 22:46:17,519 - INFO - Job 8: SQL Developer (Score: 0)
+2025-07-11 22:46:17,554 - INFO - Job 9: SQL Developer (Score: 0)
+2025-07-11 22:46:17,594 - INFO - Job 10: SQL Developer (Score: 0)
+2025-07-11 22:46:17,629 - INFO - Job 11: SQL Developer - Technology (Score: 0)
+2025-07-11 22:46:17,671 - INFO - Job 12: Aras Developer (Score: 0)
+2025-07-11 22:46:17,710 - INFO - Job 13: Java SQL Developer (Score: 0)
+2025-07-11 22:46:17,744 - INFO - Job 14: HANA / SQL Developer (Score: 0)
+2025-07-11 22:46:17,776 - INFO - Job 15: Oracle Forms developer (PL/SQL, and Oracle Database) (Score: 0)
+2025-07-11 22:46:17,816 - INFO - Job 16: Postgres SQL Developer (Score: 0)
+2025-07-11 22:46:17,850 - INFO - Job 17: SQL Developer with PowerBI (Experience in writing SQL Queries) (Score: 0)
+2025-07-11 22:46:17,884 - INFO - Job 18: SQL Developer (Score: 0)
+2025-07-11 22:46:18,045 - INFO - Job 19: Postgres SQL Developer (Score: 0)
+2025-07-11 22:46:18,091 - INFO - Job 20: IBM ACE Developer | 5 To 12 year | Bangalore (Score: 0)
+2025-07-11 22:46:18,091 - INFO - Extracted 20 quality jobs from page
+2025-07-11 22:46:18,091 - INFO - Page 2: Found 20 quality jobs
+2025-07-11 22:46:21,763 - INFO - Page 3/3: https://www.naukri.com/sql-developer-jobs-in-bengaluru-3
+2025-07-11 22:46:31,009 - INFO - Found 20 job cards on page
+2025-07-11 22:46:31,059 - INFO - Job 1: Saviynt Developers (Score: 0)
+2025-07-11 22:46:31,111 - INFO - Job 2: Developer - SQL (Score: 0)
+2025-07-11 22:46:31,161 - INFO - Job 3: Sql Developer (Score: 5)
+2025-07-11 22:46:31,208 - INFO - Job 4: SQL Developer (Score: 5)
+2025-07-11 22:46:31,256 - INFO - Job 5: SQL Developer (Score: 0)
+2025-07-11 22:46:31,307 - INFO - Job 6: Snowflake + Python + SQL Developer (Score: 0)
+2025-07-11 22:46:31,355 - INFO - Job 7: Hadoop, Hive, Pyspark, SQL Developer (Score: 0)
+2025-07-11 22:46:31,409 - INFO - Job 8: Python SQL Developer (Score: 0)
+2025-07-11 22:46:31,454 - INFO - Job 9: Data Management Reporting Programmer (SQL Developer) (Score: 0)
+2025-07-11 22:46:31,504 - INFO - Job 10: WHMCS Developer (Score: 0)
+2025-07-11 22:46:31,554 - INFO - Job 11: Oracle Pl / sql Developer - Database (Score: 0)
+2025-07-11 22:46:31,592 - INFO - Job 12: Sr. My SQL Developer (Score: 0)
+2025-07-11 22:46:31,634 - INFO - Job 13: PL/SQL Developer (Score: 0)
+2025-07-11 22:46:31,704 - INFO - Job 14: Oracle PL/SQL Developer (Score: 0)
+2025-07-11 22:46:31,744 - INFO - Job 15: Java/ PL/SQL Developer - Core Banking (Score: 0)
+2025-07-11 22:46:31,779 - INFO - Job 16: PL/SQL Developer (Score: 0)
+2025-07-11 22:46:31,809 - INFO - Job 17: DotNet/.net Developer with SQL - Freshers Bulk Hiring (Score: 0)
+2025-07-11 22:46:31,844 - INFO - Job 18: Hyper Ledger Developer - CashOS (Score: 0)
+2025-07-11 22:46:31,880 - INFO - Job 19: Reltio Developer (Score: 0)
+2025-07-11 22:46:31,912 - INFO - Job 20: SQL Developer (Score: 0)
+2025-07-11 22:46:31,912 - INFO - Extracted 20 quality jobs from page
+2025-07-11 22:46:31,912 - INFO - Page 3: Found 20 quality jobs
+2025-07-11 22:46:40,704 - INFO - Total quality jobs found: 231
+2025-07-11 22:46:40,709 - INFO - Starting job applications...
+2025-07-11 22:46:40,709 - INFO - Starting job applications (max: 20)
+2025-07-11 22:46:40,709 - INFO - Applying to job 1: https://www.naukri.com/job-listings-data-engineer-etl-maimsd-technology-bengaluru-3-to-8-years-090725901291
+2025-07-11 22:46:51,204 - INFO - Apply button clicked via JS using: //button[contains(translate(text(), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'apply')]
+2025-07-11 22:46:59,279 - INFO - Application completed successfully
+2025-07-11 22:46:59,279 - INFO - SUCCESS: 1/20 applications sent
+2025-07-11 22:47:08,167 - INFO - Applying to job 2: https://www.naukri.com/job-listings-etl-and-bdx-developer-ntt-data-information-processing-services-private-l-imited-bengaluru-10-to-15-years-100625921783
+2025-07-11 22:47:17,849 - INFO - Apply button clicked via JS using: //button[contains(translate(text(), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'apply')]
+2025-07-11 22:47:23,554 - INFO - Application completed successfully
+2025-07-11 22:47:23,554 - INFO - SUCCESS: 2/20 applications sent
+2025-07-11 22:47:29,792 - INFO - Applying to job 3: https://www.naukri.com/job-listings-lead-data-engineer-expian-technologies-bengaluru-8-to-12-years-080725004475
+2025-07-11 22:47:39,771 - INFO - Apply button clicked via JS using: //button[contains(translate(text(), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'apply')]
+2025-07-11 22:47:45,623 - INFO - Form submitted
+2025-07-11 22:47:47,875 - INFO - Application completed successfully
+2025-07-11 22:47:47,875 - INFO - SUCCESS: 3/20 applications sent
+2025-07-11 22:47:54,211 - INFO - Applying to job 4: https://www.naukri.com/job-listings-data-engineer-vipany-global-solutions-bengaluru-3-to-8-years-090725008709
+2025-07-11 22:48:07,409 - INFO - Apply button clicked via JS using: //button[contains(translate(text(), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'apply')]
+2025-07-11 22:48:14,718 - INFO - Form submitted
+2025-07-11 22:48:16,930 - INFO - Application completed successfully
+2025-07-11 22:48:16,930 - INFO - SUCCESS: 4/20 applications sent
+2025-07-11 22:48:26,355 - INFO - Applying to job 5: https://www.naukri.com/job-listings-dct-data-engineer-geetha-technology-solutions-private-limited-indore-pune-bengaluru-1-to-3-years-090625912412
+2025-07-11 22:48:37,869 - INFO - Apply button clicked via JS using: //button[contains(translate(text(), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'apply')]
+2025-07-11 22:48:45,120 - INFO - Application completed successfully
+2025-07-11 22:48:45,120 - INFO - SUCCESS: 5/20 applications sent
+2025-07-11 22:48:52,464 - INFO - Applying to job 6: https://www.naukri.com/job-listings-python-developer-total-shape-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-1-to-4-years-280525501795
+2025-07-11 22:49:04,159 - INFO - Apply button clicked via JS using: //button[contains(translate(text(), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'apply')]
+2025-07-11 22:49:11,619 - INFO - Application completed successfully
+2025-07-11 22:49:11,619 - INFO - SUCCESS: 6/20 applications sent
+2025-07-11 22:49:17,257 - INFO - Applying to job 7: https://www.naukri.com/job-listings-python-developer-prolegion-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-2-to-5-years-200525503689
+2025-07-11 22:49:29,492 - INFO - Apply button clicked via JS using: //button[contains(translate(text(), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'apply')]
+2025-07-11 22:49:36,122 - INFO - Application completed successfully
+2025-07-11 22:49:36,129 - INFO - SUCCESS: 7/20 applications sent
+2025-07-11 22:49:42,299 - INFO - Applying to job 8: https://www.naukri.com/job-listings-it-etl-developer-systechcorp-inc-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-3-to-6-years-030325503491
+2025-07-11 22:49:58,501 - INFO - Apply button clicked via JS using: //button[contains(translate(text(), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'apply')]
+2025-07-11 22:50:04,454 - INFO - Application completed successfully
+2025-07-11 22:50:04,454 - INFO - SUCCESS: 8/20 applications sent
+2025-07-11 22:50:12,320 - INFO - Applying to job 9: https://www.naukri.com/job-listings-data-engineer-or-etl-developer-acesoft-labs-bengaluru-3-to-6-years-080725004126
+2025-07-11 22:50:23,759 - INFO - Apply button clicked via JS using: //button[contains(translate(text(), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'apply')]
+2025-07-11 22:50:30,779 - INFO - Form submitted
+2025-07-11 22:50:33,116 - INFO - Application completed successfully
+2025-07-11 22:50:33,117 - INFO - SUCCESS: 9/20 applications sent
+2025-07-11 22:50:42,892 - INFO - Applying to job 10: https://www.naukri.com/job-listings-etl-developer-iics-epam-systems-hyderabad-pune-bengaluru-6-to-11-years-250625010202
+2025-07-11 22:50:52,129 - INFO - Apply button clicked via JS using: //button[contains(translate(text(), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'apply')]
+2025-07-11 22:50:57,580 - INFO - Form submitted
+2025-07-11 22:51:00,110 - INFO - Application completed successfully
+2025-07-11 22:51:00,110 - INFO - SUCCESS: 10/20 applications sent
+2025-07-11 22:51:06,486 - INFO - Applying to job 11: https://www.naukri.com/job-listings-etl-developer-acesoft-labs-bengaluru-3-to-6-years-300625019535
+2025-07-11 22:51:18,159 - INFO - Apply button clicked via JS using: //button[contains(translate(text(), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'apply')]
+2025-07-11 22:51:25,460 - INFO - Application completed successfully
+2025-07-11 22:51:25,460 - INFO - SUCCESS: 11/20 applications sent
+2025-07-11 22:51:30,837 - INFO - Applying to job 12: https://www.naukri.com/job-listings-data-engineer-etl-developer-talend-power-bi-acesoft-labs-bengaluru-3-to-6-years-080725022542
+2025-07-11 22:51:40,969 - INFO - Apply button clicked via JS using: //button[contains(translate(text(), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'apply')]
+2025-07-11 22:51:48,669 - INFO - Application completed successfully
+2025-07-11 22:51:48,669 - INFO - SUCCESS: 12/20 applications sent
+2025-07-11 22:51:56,294 - INFO - Applying to job 13: https://www.naukri.com/job-listings-data-engineer-etl-developer-talend-power-bi-acesoft-labs-bengaluru-3-to-6-years-010725020227
+2025-07-11 22:52:08,639 - INFO - Apply button clicked via JS using: //button[contains(translate(text(), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'apply')]
+2025-07-11 22:52:15,029 - INFO - Application completed successfully
+2025-07-11 22:52:15,029 - INFO - SUCCESS: 13/20 applications sent
+2025-07-11 22:52:22,786 - INFO - Applying to job 14: https://www.naukri.com/job-listings-etl-developer-celeros-flow-technology-bengaluru-7-to-10-years-130325503834
+2025-07-11 22:52:33,737 - INFO - Apply button clicked via JS using: //button[contains(translate(text(), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'apply')]
+2025-07-11 22:52:39,809 - INFO - Application completed successfully
+2025-07-11 22:52:39,818 - INFO - SUCCESS: 14/20 applications sent
+2025-07-11 22:52:45,753 - INFO - Applying to job 15: https://www.naukri.com/job-listings-etl-developer-gforce-consulting-solutions-bengaluru-5-to-8-years-101222500190
+2025-07-11 22:52:54,289 - INFO - Apply button clicked via JS using: //button[contains(translate(text(), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'apply')]
+2025-07-11 22:53:00,429 - INFO - Application completed successfully
+2025-07-11 22:53:00,429 - INFO - SUCCESS: 15/20 applications sent
+2025-07-11 22:53:06,611 - INFO - Applying to job 16: https://www.naukri.com/job-listings-etl-developer-ssis-informatica-kumaran-systems-chennai-bengaluru-3-to-8-years-110725005108
+2025-07-11 22:53:19,059 - INFO - Apply button clicked via JS using: //button[contains(translate(text(), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'apply')]
+2025-07-11 22:53:25,039 - INFO - Application completed successfully
+2025-07-11 22:53:25,039 - INFO - SUCCESS: 16/20 applications sent
+2025-07-11 22:53:33,741 - INFO - Applying to job 17: https://www.naukri.com/job-listings-etl-developer-java-support-engineer-acesoft-labs-bengaluru-3-to-6-years-300625021780
+2025-07-11 22:53:45,349 - INFO - Apply button clicked via JS using: //button[contains(translate(text(), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'apply')]
+2025-07-11 22:53:51,679 - INFO - Application completed successfully
+2025-07-11 22:53:51,679 - INFO - SUCCESS: 17/20 applications sent
+2025-07-11 22:53:58,902 - INFO - Applying to job 18: https://www.naukri.com/job-listings-senior-mobile-developer-cashfree-payments-bengaluru-2-to-5-years-170625029376
+2025-07-11 22:54:12,989 - INFO - Apply button clicked via JS using: //button[contains(translate(text(), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'apply')]
+2025-07-11 22:54:18,759 - INFO - Form submitted
+2025-07-11 22:54:21,689 - INFO - Application completed successfully
+2025-07-11 22:54:21,689 - INFO - SUCCESS: 18/20 applications sent
+2025-07-11 22:54:30,447 - INFO - Applying to job 19: https://www.naukri.com/job-listings-senior-etl-developer-diverse-lynx-bengaluru-3-to-8-years-250221501112
+2025-07-11 22:54:40,852 - INFO - Apply button clicked via JS using: //button[contains(translate(text(), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'apply')]
+2025-07-11 22:54:47,339 - INFO - Application completed successfully
+2025-07-11 22:54:47,339 - INFO - SUCCESS: 19/20 applications sent
+2025-07-11 22:54:55,261 - INFO - Applying to job 20: https://www.naukri.com/job-listings-senior-etl-developer-iics-kafka-snowflake-evnek-mumbai-new-delhi-bengaluru-4-to-6-years-230625918485
+2025-07-11 22:55:06,175 - INFO - Apply button clicked via JS using: //button[contains(translate(text(), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'apply')]
+2025-07-11 22:55:12,779 - INFO - Application completed successfully
+2025-07-11 22:55:12,779 - INFO - SUCCESS: 20/20 applications sent
+2025-07-11 22:55:22,780 - INFO - Reached session limit: 20
+2025-07-11 22:55:22,780 - INFO - Saving results...
+2025-07-11 22:55:22,780 - INFO - Results saved with timestamp: 20250711_225522
+2025-07-11 22:55:22,780 - INFO - SUMMARY - Found: 231, Applied: 20, Failed: 0, Skipped: 4
+2025-07-11 22:55:22,780 - INFO - Bot execution completed successfully
+2025-07-11 23:52:42,136 - INFO - Browser closed

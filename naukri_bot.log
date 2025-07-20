@@ -12268,3 +12268,162 @@ selenium.common.exceptions.NoSuchDriverException: Message: Unable to obtain driv
 2025-07-20 19:27:44,501 - INFO - ✅ Browser setup successful
 2025-07-20 19:27:44,501 - ERROR - Failed to setup browser
 2025-07-20 19:28:06,558 - INFO - Browser closed
+2025-07-20 21:26:57,844 - INFO - Configuration loaded successfully
+2025-07-20 21:26:57,847 - INFO - Job database initialized
+2025-07-20 21:26:57,848 - INFO - Bot initialized successfully
+2025-07-20 21:26:57,849 - INFO - Setting up browser...
+2025-07-20 21:26:57,850 - INFO - Setting up browser...
+2025-07-20 21:26:57,850 - INFO - Operating System: Windows 10
+2025-07-20 21:26:57,850 - INFO - ✅ webdriver-manager imported successfully
+2025-07-20 21:26:57,852 - WARNING - ⚠️ Could not verify Edge installation
+2025-07-20 21:26:57,853 - INFO - 🔄 Attempting to auto-download Edge WebDriver...
+2025-07-20 21:26:57,853 - INFO - ====== WebDriver manager ======
+2025-07-20 21:26:59,659 - INFO - Get LATEST edgedriver version for Edge 138.0.3351
+2025-07-20 21:26:59,775 - ERROR - ❌ Auto-download failed: Could not reach host. Are you offline?
+2025-07-20 21:26:59,775 - INFO - 🔄 Trying manual path: C:\WebDrivers\msedgedriver.exe
+2025-07-20 21:27:02,302 - INFO - ✅ Browser setup successful
+2025-07-20 21:27:02,303 - INFO - Logging into Naukri...
+2025-07-20 21:27:02,303 - INFO - Login attempt 1/3
+2025-07-20 21:27:25,638 - INFO - Login successful!
+2025-07-20 21:27:25,643 - INFO - Starting intelligent job search...
+2025-07-20 21:27:25,644 - INFO - Scraping keyword 1/4: Data Engineer
+2025-07-20 21:27:25,644 - INFO - Page 1/3: https://www.naukri.com/data-engineer-jobs-in-bengaluru-1
+2025-07-20 21:27:35,926 - INFO - Found 20 job cards on page
+2025-07-20 21:27:36,000 - INFO - Job 1: Data Engineer (Score: 0)
+2025-07-20 21:27:36,039 - INFO - Job 2: Data Engineer (Score: 0)
+2025-07-20 21:27:36,076 - INFO - Job 3: Data Engineer (Score: 0)
+2025-07-20 21:27:36,116 - INFO - Job 4: SQL Developer / Data Engineer (Score: 0)
+2025-07-20 21:27:36,156 - INFO - Job 5: Python Data Engineer (Score: 0)
+2025-07-20 21:27:36,201 - INFO - Job 6: Data Engineer (Score: 0)
+2025-07-20 21:27:36,239 - INFO - Job 7: Data Engineer (Score: 0)
+2025-07-20 21:27:36,277 - INFO - Job 8: Data Engineer (Score: 0)
+2025-07-20 21:27:36,322 - INFO - Job 9: Data Engineer (Score: 0)
+2025-07-20 21:27:36,390 - INFO - Job 10: Data Engineer - Dataiku / Python (Score: 0)
+2025-07-20 21:27:36,422 - INFO - Job 11: Data Engineer (Score: 0)
+2025-07-20 21:27:36,451 - INFO - Job 12: Data Engineer (Score: 0)
+2025-07-20 21:27:36,475 - INFO - Job 13: Data Engineer (Score: 0)
+2025-07-20 21:27:36,504 - INFO - Job 14: Data Engineer (Score: 0)
+2025-07-20 21:27:36,533 - INFO - Job 15: Data Engineer (Score: 0)
+2025-07-20 21:27:36,562 - INFO - Job 16: Data Engineer (Score: 0)
+2025-07-20 21:27:36,591 - INFO - Job 17: Data Engineer (Score: 0)
+2025-07-20 21:27:36,616 - INFO - Job 18: Data Engineer - Introlligent (Score: 0)
+2025-07-20 21:27:36,648 - INFO - Job 19: Data Engineer (Score: 0)
+2025-07-20 21:27:36,678 - INFO - Job 20: Data Engineer (Score: 0)
+2025-07-20 21:27:36,678 - INFO - Extracted 20 quality jobs from page
+2025-07-20 21:27:36,679 - INFO - Page 1: Found 20 quality jobs
+2025-07-20 21:27:39,042 - INFO - Page 2/3: https://www.naukri.com/data-engineer-jobs-in-bengaluru-2
+2025-07-20 21:27:48,206 - INFO - Found 20 job cards on page
+2025-07-20 21:27:48,247 - INFO - Job 3: Data Engineer (Score: 0)
+2025-07-20 21:27:48,296 - INFO - Job 4: Cognite Data Engineer (Score: 5)
+2025-07-20 21:27:48,337 - INFO - Job 5: Data Engineer (Score: 10)
+2025-07-20 21:27:48,368 - INFO - Job 6: Data Engineer (Score: 5)
+2025-07-20 21:27:48,399 - INFO - Job 7: Data Engineer (ETL, Go, Databricks) (Score: 0)
+2025-07-20 21:27:48,428 - INFO - Job 8: Data Engineer (Score: 0)
+2025-07-20 21:27:48,455 - INFO - Job 9: Data Engineer (Score: 0)
+2025-07-20 21:27:48,486 - INFO - Job 10: Data Engineer (Score: 0)
+2025-07-20 21:27:48,512 - INFO - Job 11: Data Engineer - Automotive Research rejected (Score: -15)
+2025-07-20 21:27:48,540 - INFO - Job 12: Data Engineer (Score: 0)
+2025-07-20 21:27:48,568 - INFO - Job 13: Data Engineer - Databricks (Score: 0)
+2025-07-20 21:27:48,599 - INFO - Job 14: Data Engineer – Databricks (Score: 0)
+2025-07-20 21:27:48,629 - INFO - Job 15: Data Engineer (Score: 0)
+2025-07-20 21:27:48,661 - INFO - Job 16: Data Engineer rejected (Score: -20)
+2025-07-20 21:27:48,688 - INFO - Job 17: Data Engineer (Score: 5)
+2025-07-20 21:27:48,718 - INFO - Job 18: Data Engineer (Score: 5)
+2025-07-20 21:27:48,746 - INFO - Job 19: Data Engineer – Python (Score: 15)
+2025-07-20 21:27:48,749 - INFO - Extracted 15 quality jobs from page
+2025-07-20 21:27:48,749 - INFO - Page 2: Found 15 quality jobs
+2025-07-20 21:27:51,106 - INFO - Page 3/3: https://www.naukri.com/data-engineer-jobs-in-bengaluru-3
+2025-07-20 21:28:01,087 - INFO - Found 20 job cards on page
+2025-07-20 21:28:01,529 - INFO - Job 1: Data Engineers (Score: 0)
+2025-07-20 21:28:01,598 - INFO - Job 2: Data Engineer (Score: 0)
+2025-07-20 21:28:01,679 - INFO - Job 3: Data Engineer (Score: 0)
+2025-07-20 21:28:01,744 - INFO - Job 4: Microsoft Fabric Data Engineer (Score: 10)
+2025-07-20 21:28:01,810 - INFO - Job 5: Data Engineer (Score: 5)
+2025-07-20 21:28:01,894 - INFO - Job 6: Data Engineer (Score: 5)
+2025-07-20 21:28:01,952 - INFO - Job 7: Data Engineer (Score: 0)
+2025-07-20 21:28:02,005 - INFO - Job 8: Data Engineer (Score: 0)
+2025-07-20 21:28:02,152 - INFO - Job 9: Databricks Data Engineer (Score: 0)
+2025-07-20 21:28:02,378 - INFO - Job 10: Data Engineer (Score: 5)
+2025-07-20 21:28:02,488 - INFO - Job 11: Data Engineer - DBT (Data Build Tool) (Score: 5)
+2025-07-20 21:28:02,610 - INFO - Job 12: Backend Data Engineer (Score: 0)
+2025-07-20 21:28:02,664 - INFO - Job 13: Data Engineer (Score: 0)
+2025-07-20 21:28:02,733 - INFO - Job 15: Data Engineer (Score: 0)
+2025-07-20 21:28:02,792 - INFO - Job 16: Data Engineer (Score: 20)
+2025-07-20 21:28:02,844 - INFO - Job 17: Data Engineer (Score: 0)
+2025-07-20 21:28:02,884 - INFO - Job 18: Data Engineer (Score: 0)
+2025-07-20 21:28:02,928 - INFO - Job 19: Data Engineer (Score: 0)
+2025-07-20 21:28:03,014 - INFO - Job 20: Data Engineer (Score: 0)
+2025-07-20 21:28:03,016 - INFO - Extracted 19 quality jobs from page
+2025-07-20 21:28:03,016 - INFO - Page 3: Found 19 quality jobs
+2025-07-20 21:28:11,514 - INFO - Scraping keyword 2/4: Python Developer
+2025-07-20 21:28:11,514 - INFO - Page 1/3: https://www.naukri.com/python-developer-jobs-in-bengaluru-1
+2025-07-20 21:28:11,516 - ERROR - Error on page 1 for keyword 'Python Developer': Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: MicrosoftEdge=138.0.3351.83); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	GetHandleVerifier [0x0x7ff743c50bb8+2611928]
+	(No symbol) [0x0x7ff7436ece20]
+	(No symbol) [0x0x7ff74370b61a]
+	(No symbol) [0x0x7ff74376fd1b]
+	(No symbol) [0x0x7ff743786e5a]
+	(No symbol) [0x0x7ff74376a423]
+	(No symbol) [0x0x7ff74373ea86]
+	(No symbol) [0x0x7ff74373dd11]
+	(No symbol) [0x0x7ff74373e8b3]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff743933344]
+	(No symbol) [0x0x7ff743933493]
+	(No symbol) [0x0x7ff743924f36]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 21:28:11,521 - INFO - Page 2/3: https://www.naukri.com/python-developer-jobs-in-bengaluru-2
+2025-07-20 21:28:11,676 - ERROR - Error on page 2 for keyword 'Python Developer': Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 21:28:11,676 - INFO - Page 3/3: https://www.naukri.com/python-developer-jobs-in-bengaluru-3
+2025-07-20 21:28:11,679 - ERROR - Error on page 3 for keyword 'Python Developer': Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+

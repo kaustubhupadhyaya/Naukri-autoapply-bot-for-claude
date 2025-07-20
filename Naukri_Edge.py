@@ -197,12 +197,13 @@ class IntelligentNaukriBot:
             
             self.wait = WebDriverWait(self.driver, 20)
             logger.info("✅ Browser setup successful")
+            return True  # Explicitly return True on success
             
         except Exception as e:
             logger.error(f"WebDriver setup failed: {e}")
             import traceback
             logger.error(f"Full traceback: {traceback.format_exc()}")
-            raise
+            return False  # Return False on failure instead of raising
 
     def smart_delay(self, min_delay=None, max_delay=None):
         """Smart delay with random variation"""

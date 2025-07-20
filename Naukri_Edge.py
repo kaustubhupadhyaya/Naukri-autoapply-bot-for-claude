@@ -8,7 +8,8 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.edge.service import Service as EdgeService
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import TimeoutException, NoSuchElementException, ElementClickInterceptedException
+from selenium.webdriver.edge.service import Service
+from webdriver_manager.microsoft import EdgeChromiumDriverManager
 from bs4 import BeautifulSoup
 from datetime import datetime
 import sqlite3
@@ -122,41 +123,39 @@ class IntelligentNaukriBot:
             self.db_conn = None
     
     def setup_driver(self):
-        """Setup Edge WebDriver with stealth options"""
+        """Setup Edge WebDriver with auto-download"""
         try:
+            logger.info("Setting up browser...")
+            
             options = webdriver.EdgeOptions()
             
-            # Stealth options to avoid detection
+            # Browser options
+            options.add_argument('--no-sandbox')
+            options.add_argument('--disable-dev-shm-usage')
             options.add_argument('--disable-blink-features=AutomationControlled')
             options.add_experimental_option("excludeSwitches", ["enable-automation"])
             options.add_experimental_option('useAutomationExtension', False)
-            options.add_argument('--disable-dev-shm-usage')
-            options.add_argument('--no-sandbox')
-            options.add_argument('--start-maximized')
             
-            # Random user agent
-            user_agents = [
-                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0",
-                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36 Edg/119.0.0.0"
-            ]
-            options.add_argument(f'--user-agent={random.choice(user_agents)}')
+            if self.config.get('webdriver', {}).get('headless', False):
+                options.add_argument('--headless')
             
-            service = EdgeService(executable_path=self.config['webdriver']['edge_driver_path'])
+            # Auto-download and setup WebDriver
+            service = Service(EdgeChromiumDriverManager().install())
             self.driver = webdriver.Edge(service=service, options=options)
             
-            # Remove automation indicators
-            self.driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
-            self.driver.execute_script("Object.defineProperty(navigator, 'plugins', {get: () => [1, 2, 3, 4, 5]})")
-            
-            self.wait = WebDriverWait(self.driver, self.config['webdriver']['implicit_wait'])
+            # Configure driver
+            self.driver.implicitly_wait(self.config['webdriver']['implicit_wait'])
             self.driver.set_page_load_timeout(self.config['webdriver']['page_load_timeout'])
             
-            logger.info("WebDriver setup successful")
-            return True
+            # Anti-detection
+            self.driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
+            
+            self.wait = WebDriverWait(self.driver, 20)
+            logger.info("✅ Browser setup successful")
             
         except Exception as e:
             logger.error(f"WebDriver setup failed: {e}")
-            return False
+            raise
     
     def smart_delay(self, min_delay=None, max_delay=None):
         """Smart delay with random variation"""

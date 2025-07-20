@@ -7,14 +7,14 @@ import pandas as pd
 from datetime import datetime
 
 # Import the original NaukriBot
-from Naukri-Edge import NaukriBot
+from Naukri_Edge import IntelligentNaukriBot
 from intelligent_job_processor import IntelligentJobProcessor
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
-class EnhancedNaukriBot(NaukriBot):
+class EnhancedNaukriBot(IntelligentNaukriBot):
     """
     Enhanced NaukriBot with Gemini-powered intelligent job processing.
     Inherits all functionality from original NaukriBot and adds AI intelligence.

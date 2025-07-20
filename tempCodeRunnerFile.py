@@ -1,1 +1,1 @@
-from Naukri-Edge import NaukriBot
+    from Naukri-Edge import NaukriBot

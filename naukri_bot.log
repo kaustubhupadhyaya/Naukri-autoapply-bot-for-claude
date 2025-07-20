@@ -11869,3 +11869,122 @@ Stacktrace:
 2025-07-11 22:55:22,780 - INFO - SUMMARY - Found: 231, Applied: 20, Failed: 0, Skipped: 4
 2025-07-11 22:55:22,780 - INFO - Bot execution completed successfully
 2025-07-11 23:52:42,136 - INFO - Browser closed
+2025-07-20 17:48:01,669 - INFO - 🚀 Starting Enhanced Naukri Bot with AI Intelligence...
+2025-07-20 17:48:01,669 - INFO - 🚀 Initializing Enhanced Naukri Bot with AI Intelligence...
+2025-07-20 17:48:01,690 - INFO - Configuration loaded successfully
+2025-07-20 17:48:01,704 - INFO - Job database initialized
+2025-07-20 17:48:01,705 - INFO - Bot initialized successfully
+2025-07-20 17:48:01,705 - INFO - Gemini API initialized successfully
+2025-07-20 17:48:01,706 - INFO - ✅ Enhanced Naukri Bot initialized successfully!
+2025-07-20 17:48:01,707 - INFO - 📡 Phase 1: Scraping jobs with intelligent analysis...
+2025-07-20 17:48:01,708 - INFO - Scraping keyword 1/4: Data Engineer
+2025-07-20 17:48:01,709 - INFO - Page 1/3: https://www.naukri.com/data-engineer-jobs-in-bengaluru-1
+2025-07-20 17:48:01,711 - ERROR - Error on page 1 for keyword 'Data Engineer': 'NoneType' object has no attribute 'get'
+2025-07-20 17:48:01,711 - INFO - Page 2/3: https://www.naukri.com/data-engineer-jobs-in-bengaluru-2
+2025-07-20 17:48:01,712 - ERROR - Error on page 2 for keyword 'Data Engineer': 'NoneType' object has no attribute 'get'
+2025-07-20 17:48:01,715 - INFO - Page 3/3: https://www.naukri.com/data-engineer-jobs-in-bengaluru-3
+2025-07-20 17:48:01,716 - ERROR - Error on page 3 for keyword 'Data Engineer': 'NoneType' object has no attribute 'get'
+2025-07-20 17:48:07,177 - INFO - Scraping keyword 2/4: Python Developer
+2025-07-20 17:48:07,177 - INFO - Page 1/3: https://www.naukri.com/python-developer-jobs-in-bengaluru-1
+2025-07-20 17:48:07,177 - ERROR - Error on page 1 for keyword 'Python Developer': 'NoneType' object has no attribute 'get'
+2025-07-20 17:48:07,177 - INFO - Page 2/3: https://www.naukri.com/python-developer-jobs-in-bengaluru-2
+2025-07-20 17:48:07,177 - ERROR - Error on page 2 for keyword 'Python Developer': 'NoneType' object has no attribute 'get'
+2025-07-20 17:48:07,177 - INFO - Page 3/3: https://www.naukri.com/python-developer-jobs-in-bengaluru-3
+2025-07-20 17:48:07,177 - ERROR - Error on page 3 for keyword 'Python Developer': 'NoneType' object has no attribute 'get'
+2025-07-20 17:48:12,251 - INFO - Scraping keyword 3/4: ETL Developer
+2025-07-20 17:48:12,251 - INFO - Page 1/3: https://www.naukri.com/etl-developer-jobs-in-bengaluru-1
+2025-07-20 17:48:12,251 - ERROR - Error on page 1 for keyword 'ETL Developer': 'NoneType' object has no attribute 'get'
+2025-07-20 17:48:12,251 - INFO - Page 2/3: https://www.naukri.com/etl-developer-jobs-in-bengaluru-2
+2025-07-20 17:48:12,251 - ERROR - Error on page 2 for keyword 'ETL Developer': 'NoneType' object has no attribute 'get'
+2025-07-20 17:48:12,251 - INFO - Page 3/3: https://www.naukri.com/etl-developer-jobs-in-bengaluru-3
+2025-07-20 17:48:12,251 - ERROR - Error on page 3 for keyword 'ETL Developer': 'NoneType' object has no attribute 'get'
+2025-07-20 17:48:15,685 - INFO - Scraping keyword 4/4: Analytics Engineer
+2025-07-20 17:48:15,685 - INFO - Page 1/3: https://www.naukri.com/analytics-engineer-jobs-in-bengaluru-1
+2025-07-20 17:48:15,685 - ERROR - Error on page 1 for keyword 'Analytics Engineer': 'NoneType' object has no attribute 'get'
+2025-07-20 17:48:15,685 - INFO - Page 2/3: https://www.naukri.com/analytics-engineer-jobs-in-bengaluru-2
+2025-07-20 17:48:15,685 - ERROR - Error on page 2 for keyword 'Analytics Engineer': 'NoneType' object has no attribute 'get'
+2025-07-20 17:48:15,685 - INFO - Page 3/3: https://www.naukri.com/analytics-engineer-jobs-in-bengaluru-3
+2025-07-20 17:48:15,685 - ERROR - Error on page 3 for keyword 'Analytics Engineer': 'NoneType' object has no attribute 'get'
+2025-07-20 17:48:18,968 - INFO - Total quality jobs found: 0
+2025-07-20 17:48:18,968 - INFO - 🎯 Phase 2: Applying to qualified jobs...
+2025-07-20 17:48:18,968 - INFO - 🎯 Starting intelligent job application process...
+2025-07-20 17:48:18,969 - INFO - 🔍 Found 0 qualified jobs to apply to
+2025-07-20 17:48:18,969 - INFO - 🏁 Application session completed: 0 successful, 0 failed
+2025-07-20 17:48:18,970 - INFO - 
+        ╔═══ ENHANCED NAUKRI BOT SESSION SUMMARY ═══
+        ║ 🔍 Total Jobs Analyzed: 0
+        ║ 🧠 Gemini API Calls: 0
+        ║ ⭐ High Score Jobs (70+): 0
+        ║ ✅ Applications Sent: 0
+        ║ ❌ Skipped (Low Score): 0
+        ║ 🔄 Fallback Scores Used: 0
+        ║ 📈 Success Rate: 0.0%
+        ╚═══════════════════════════════════════════
+        
+2025-07-20 17:48:18,972 - INFO - 💾 Phase 3: Saving results...
+2025-07-20 17:48:18,982 - INFO - Results saved with timestamp: 20250720_174818
+2025-07-20 17:48:18,982 - INFO - SUMMARY - Found: 0, Applied: 0, Failed: 0, Skipped: 0
+2025-07-20 17:48:18,983 - INFO - 🎉 Enhanced Naukri Bot session completed successfully!
+2025-07-20 18:36:51,242 - INFO - Configuration loaded successfully
+2025-07-20 18:36:51,246 - INFO - Job database initialized
+2025-07-20 18:36:51,246 - INFO - Bot initialized successfully
+2025-07-20 18:36:51,246 - INFO - Setting up browser...
+2025-07-20 18:36:51,247 - ERROR - WebDriver setup failed: Message: Unable to obtain driver for MicrosoftEdge; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+
+2025-07-20 18:36:51,252 - ERROR - Failed to setup browser
+2025-07-20 18:37:08,778 - INFO - 🚀 Starting Enhanced Naukri Bot with AI Intelligence...
+2025-07-20 18:37:08,778 - INFO - 🚀 Initializing Enhanced Naukri Bot with AI Intelligence...
+2025-07-20 18:37:08,778 - INFO - Configuration loaded successfully
+2025-07-20 18:37:08,778 - INFO - Job database initialized
+2025-07-20 18:37:08,778 - INFO - Bot initialized successfully
+2025-07-20 18:37:08,778 - INFO - Gemini API initialized successfully
+2025-07-20 18:37:08,778 - INFO - ✅ Enhanced Naukri Bot initialized successfully!
+2025-07-20 18:37:08,778 - INFO - 📡 Phase 1: Scraping jobs with intelligent analysis...
+2025-07-20 18:37:08,778 - INFO - Scraping keyword 1/4: Data Engineer
+2025-07-20 18:37:08,778 - INFO - Page 1/3: https://www.naukri.com/data-engineer-jobs-in-bengaluru-1
+2025-07-20 18:37:08,778 - ERROR - Error on page 1 for keyword 'Data Engineer': 'NoneType' object has no attribute 'get'
+2025-07-20 18:37:08,778 - INFO - Page 2/3: https://www.naukri.com/data-engineer-jobs-in-bengaluru-2
+2025-07-20 18:37:08,778 - ERROR - Error on page 2 for keyword 'Data Engineer': 'NoneType' object has no attribute 'get'
+2025-07-20 18:37:08,778 - INFO - Page 3/3: https://www.naukri.com/data-engineer-jobs-in-bengaluru-3
+2025-07-20 18:37:08,778 - ERROR - Error on page 3 for keyword 'Data Engineer': 'NoneType' object has no attribute 'get'
+2025-07-20 18:37:11,912 - INFO - Scraping keyword 2/4: Python Developer
+2025-07-20 18:37:11,913 - INFO - Page 1/3: https://www.naukri.com/python-developer-jobs-in-bengaluru-1
+2025-07-20 18:37:11,913 - ERROR - Error on page 1 for keyword 'Python Developer': 'NoneType' object has no attribute 'get'
+2025-07-20 18:37:11,913 - INFO - Page 2/3: https://www.naukri.com/python-developer-jobs-in-bengaluru-2
+2025-07-20 18:37:11,914 - ERROR - Error on page 2 for keyword 'Python Developer': 'NoneType' object has no attribute 'get'
+2025-07-20 18:37:11,914 - INFO - Page 3/3: https://www.naukri.com/python-developer-jobs-in-bengaluru-3
+2025-07-20 18:37:11,914 - ERROR - Error on page 3 for keyword 'Python Developer': 'NoneType' object has no attribute 'get'
+2025-07-20 18:37:15,152 - INFO - Scraping keyword 3/4: ETL Developer
+2025-07-20 18:37:15,152 - INFO - Page 1/3: https://www.naukri.com/etl-developer-jobs-in-bengaluru-1
+2025-07-20 18:37:15,152 - ERROR - Error on page 1 for keyword 'ETL Developer': 'NoneType' object has no attribute 'get'
+2025-07-20 18:37:15,152 - INFO - Page 2/3: https://www.naukri.com/etl-developer-jobs-in-bengaluru-2
+2025-07-20 18:37:15,152 - ERROR - Error on page 2 for keyword 'ETL Developer': 'NoneType' object has no attribute 'get'
+2025-07-20 18:37:15,152 - INFO - Page 3/3: https://www.naukri.com/etl-developer-jobs-in-bengaluru-3
+2025-07-20 18:37:15,152 - ERROR - Error on page 3 for keyword 'ETL Developer': 'NoneType' object has no attribute 'get'
+2025-07-20 18:37:20,907 - INFO - Scraping keyword 4/4: Analytics Engineer
+2025-07-20 18:37:20,907 - INFO - Page 1/3: https://www.naukri.com/analytics-engineer-jobs-in-bengaluru-1
+2025-07-20 18:37:20,907 - ERROR - Error on page 1 for keyword 'Analytics Engineer': 'NoneType' object has no attribute 'get'
+2025-07-20 18:37:20,907 - INFO - Page 2/3: https://www.naukri.com/analytics-engineer-jobs-in-bengaluru-2
+2025-07-20 18:37:20,908 - ERROR - Error on page 2 for keyword 'Analytics Engineer': 'NoneType' object has no attribute 'get'
+2025-07-20 18:37:20,908 - INFO - Page 3/3: https://www.naukri.com/analytics-engineer-jobs-in-bengaluru-3
+2025-07-20 18:37:20,908 - ERROR - Error on page 3 for keyword 'Analytics Engineer': 'NoneType' object has no attribute 'get'
+2025-07-20 18:37:26,133 - INFO - Total quality jobs found: 0
+2025-07-20 18:37:26,133 - INFO - 🎯 Phase 2: Applying to qualified jobs...
+2025-07-20 18:37:26,133 - INFO - 🎯 Starting intelligent job application process...
+2025-07-20 18:37:26,133 - INFO - 🔍 Found 0 qualified jobs to apply to
+2025-07-20 18:37:26,133 - INFO - 🏁 Application session completed: 0 successful, 0 failed
+2025-07-20 18:37:26,133 - INFO - 
+        ╔═══ ENHANCED NAUKRI BOT SESSION SUMMARY ═══
+        ║ 🔍 Total Jobs Analyzed: 0
+        ║ 🧠 Gemini API Calls: 0
+        ║ ⭐ High Score Jobs (70+): 0
+        ║ ✅ Applications Sent: 0
+        ║ ❌ Skipped (Low Score): 0
+        ║ 🔄 Fallback Scores Used: 0
+        ║ 📈 Success Rate: 0.0%
+        ╚═══════════════════════════════════════════
+        
+2025-07-20 18:37:26,133 - INFO - 💾 Phase 3: Saving results...
+2025-07-20 18:37:26,141 - INFO - Results saved with timestamp: 20250720_183726
+2025-07-20 18:37:26,141 - INFO - SUMMARY - Found: 0, Applied: 0, Failed: 0, Skipped: 0
+2025-07-20 18:37:26,141 - INFO - 🎉 Enhanced Naukri Bot session completed successfully!

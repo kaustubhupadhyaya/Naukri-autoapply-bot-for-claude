@@ -11988,3 +11988,12 @@ Stacktrace:
 2025-07-20 18:37:26,141 - INFO - Results saved with timestamp: 20250720_183726
 2025-07-20 18:37:26,141 - INFO - SUMMARY - Found: 0, Applied: 0, Failed: 0, Skipped: 0
 2025-07-20 18:37:26,141 - INFO - 🎉 Enhanced Naukri Bot session completed successfully!
+2025-07-20 18:42:42,418 - INFO - Configuration loaded successfully
+2025-07-20 18:42:42,418 - INFO - Job database initialized
+2025-07-20 18:42:42,418 - INFO - Bot initialized successfully
+2025-07-20 18:42:42,418 - INFO - Setting up browser...
+2025-07-20 18:42:42,418 - INFO - Setting up browser...
+2025-07-20 18:42:42,418 - INFO - ====== WebDriver manager ======
+2025-07-20 18:42:52,936 - INFO - Get LATEST edgedriver version for Edge 138.0.3351
+2025-07-20 18:42:52,957 - ERROR - WebDriver setup failed: Could not reach host. Are you offline?
+2025-07-20 18:42:52,958 - ERROR - Bot execution failed: Could not reach host. Are you offline?

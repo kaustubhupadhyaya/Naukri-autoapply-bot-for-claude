@@ -1,1 +1,1 @@
-    from Naukri-Edge import NaukriBot
+setup_driver

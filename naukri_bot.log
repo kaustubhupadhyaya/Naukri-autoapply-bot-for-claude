@@ -11997,3 +11997,274 @@ Stacktrace:
 2025-07-20 18:42:52,936 - INFO - Get LATEST edgedriver version for Edge 138.0.3351
 2025-07-20 18:42:52,957 - ERROR - WebDriver setup failed: Could not reach host. Are you offline?
 2025-07-20 18:42:52,958 - ERROR - Bot execution failed: Could not reach host. Are you offline?
+2025-07-20 18:51:25,326 - INFO - Configuration loaded successfully
+2025-07-20 18:51:25,334 - INFO - Job database initialized
+2025-07-20 18:51:25,335 - INFO - Bot initialized successfully
+2025-07-20 18:51:25,335 - INFO - Setting up browser...
+2025-07-20 18:51:25,335 - INFO - Setting up browser...
+2025-07-20 18:51:25,336 - INFO - Operating System: Windows 10
+2025-07-20 18:51:25,336 - INFO - ✅ webdriver-manager imported successfully
+2025-07-20 18:51:25,346 - WARNING - ⚠️ Could not verify Edge installation
+2025-07-20 18:51:25,423 - INFO - 🔄 Attempting to auto-download Edge WebDriver...
+2025-07-20 18:51:25,518 - INFO - ====== WebDriver manager ======
+2025-07-20 18:51:34,091 - INFO - Get LATEST edgedriver version for Edge 138.0.3351
+2025-07-20 18:51:34,108 - ERROR - ❌ Auto-download failed: Could not reach host. Are you offline?
+2025-07-20 18:51:34,109 - ERROR - WebDriver setup failed: name 'os' is not defined
+2025-07-20 18:51:34,247 - ERROR - Full traceback: Traceback (most recent call last):
+  File "C:\Users\kaust\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kaust\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kaust\AppData\Local\Programs\Python\Python311\Lib\socket.py", line 962, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\kaust\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kaust\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "C:\Users\kaust\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\kaust\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "C:\Users\kaust\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connection.py", line 753, in connect
+    self.sock = sock = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "C:\Users\kaust\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connection.py", line 205, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: <urllib3.connection.HTTPSConnection object at 0x0000018BC0EDD490>: Failed to resolve 'msedgedriver.azureedge.net' ([Errno 11001] getaddrinfo failed)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\kaust\AppData\Local\Programs\Python\Python311\Lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\kaust\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kaust\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='msedgedriver.azureedge.net', port=443): Max retries exceeded with url: /LATEST_RELEASE_138_WINDOWS (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000018BC0EDD490>: Failed to resolve 'msedgedriver.azureedge.net' ([Errno 11001] getaddrinfo failed)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\kaust\AppData\Local\Programs\Python\Python311\Lib\site-packages\webdriver_manager\core\http.py", line 32, in get
+    resp = requests.get(
+           ^^^^^^^^^^^^^
+  File "C:\Users\kaust\AppData\Local\Programs\Python\Python311\Lib\site-packages\requests\api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kaust\AppData\Local\Programs\Python\Python311\Lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kaust\AppData\Local\Programs\Python\Python311\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kaust\AppData\Local\Programs\Python\Python311\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kaust\AppData\Local\Programs\Python\Python311\Lib\site-packages\requests\adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='msedgedriver.azureedge.net', port=443): Max retries exceeded with url: /LATEST_RELEASE_138_WINDOWS (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000018BC0EDD490>: Failed to resolve 'msedgedriver.azureedge.net' ([Errno 11001] getaddrinfo failed)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\kaust\Documents\GitHub\Naukri-autoapply-bot\Naukri_Edge.py", line 171, in setup_driver
+    driver_path = EdgeChromiumDriverManager().install()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kaust\AppData\Local\Programs\Python\Python311\Lib\site-packages\webdriver_manager\microsoft.py", line 73, in install
+    driver_path = self._get_driver_binary_path(self.driver)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kaust\AppData\Local\Programs\Python\Python311\Lib\site-packages\webdriver_manager\core\manager.py", line 35, in _get_driver_binary_path
+    binary_path = self._cache_manager.find_driver(driver)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kaust\AppData\Local\Programs\Python\Python311\Lib\site-packages\webdriver_manager\core\driver_cache.py", line 107, in find_driver
+    driver_version = self.get_cache_key_driver_version(driver)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kaust\AppData\Local\Programs\Python\Python311\Lib\site-packages\webdriver_manager\core\driver_cache.py", line 154, in get_cache_key_driver_version
+    return driver.get_driver_version_to_download()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kaust\AppData\Local\Programs\Python\Python311\Lib\site-packages\webdriver_manager\core\driver.py", line 48, in get_driver_version_to_download
+    return self.get_latest_release_version()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kaust\AppData\Local\Programs\Python\Python311\Lib\site-packages\webdriver_manager\drivers\edge.py", line 51, in get_latest_release_version
+    resp = self._http_client.get(url=latest_release_url)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kaust\AppData\Local\Programs\Python\Python311\Lib\site-packages\webdriver_manager\core\http.py", line 35, in get
+    raise exceptions.ConnectionError(f"Could not reach host. Are you offline?")
+requests.exceptions.ConnectionError: Could not reach host. Are you offline?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\kaust\Documents\GitHub\Naukri-autoapply-bot\Naukri_Edge.py", line 182, in setup_driver
+    if manual_path and os.path.exists(manual_path):
+                       ^^
+NameError: name 'os' is not defined
+
+2025-07-20 18:51:34,283 - ERROR - Bot execution failed: name 'os' is not defined
+2025-07-20 18:53:14,471 - INFO - Configuration loaded successfully
+2025-07-20 18:53:14,473 - INFO - Job database initialized
+2025-07-20 18:53:14,473 - INFO - Bot initialized successfully
+2025-07-20 18:53:14,474 - INFO - Setting up browser...
+2025-07-20 18:53:14,474 - INFO - Setting up browser...
+2025-07-20 18:53:14,474 - INFO - Operating System: Windows 10
+2025-07-20 18:53:14,474 - INFO - ✅ webdriver-manager imported successfully
+2025-07-20 18:53:14,476 - WARNING - ⚠️ Could not verify Edge installation
+2025-07-20 18:53:14,483 - INFO - 🔄 Attempting to auto-download Edge WebDriver...
+2025-07-20 18:53:14,485 - INFO - ====== WebDriver manager ======
+2025-07-20 18:53:16,363 - INFO - Get LATEST edgedriver version for Edge 138.0.3351
+2025-07-20 18:53:16,380 - ERROR - ❌ Auto-download failed: Could not reach host. Are you offline?
+2025-07-20 18:53:16,381 - INFO - 🔄 Trying manual path: C:\WebDrivers\msedgedriver.exe
+2025-07-20 18:53:16,385 - ERROR - WebDriver setup failed: Message: Unable to obtain driver for MicrosoftEdge; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+
+2025-07-20 18:53:16,395 - ERROR - Full traceback: Traceback (most recent call last):
+  File "C:\Users\kaust\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kaust\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kaust\AppData\Local\Programs\Python\Python311\Lib\socket.py", line 962, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\kaust\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kaust\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "C:\Users\kaust\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\kaust\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "C:\Users\kaust\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connection.py", line 753, in connect
+    self.sock = sock = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "C:\Users\kaust\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connection.py", line 205, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: <urllib3.connection.HTTPSConnection object at 0x0000029C9320D450>: Failed to resolve 'msedgedriver.azureedge.net' ([Errno 11001] getaddrinfo failed)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\kaust\AppData\Local\Programs\Python\Python311\Lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\kaust\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kaust\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='msedgedriver.azureedge.net', port=443): Max retries exceeded with url: /LATEST_RELEASE_138_WINDOWS (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000029C9320D450>: Failed to resolve 'msedgedriver.azureedge.net' ([Errno 11001] getaddrinfo failed)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\kaust\AppData\Local\Programs\Python\Python311\Lib\site-packages\webdriver_manager\core\http.py", line 32, in get
+    resp = requests.get(
+           ^^^^^^^^^^^^^
+  File "C:\Users\kaust\AppData\Local\Programs\Python\Python311\Lib\site-packages\requests\api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kaust\AppData\Local\Programs\Python\Python311\Lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kaust\AppData\Local\Programs\Python\Python311\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kaust\AppData\Local\Programs\Python\Python311\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kaust\AppData\Local\Programs\Python\Python311\Lib\site-packages\requests\adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='msedgedriver.azureedge.net', port=443): Max retries exceeded with url: /LATEST_RELEASE_138_WINDOWS (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000029C9320D450>: Failed to resolve 'msedgedriver.azureedge.net' ([Errno 11001] getaddrinfo failed)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\kaust\Documents\GitHub\Naukri-autoapply-bot\Naukri_Edge.py", line 172, in setup_driver
+    driver_path = EdgeChromiumDriverManager().install()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kaust\AppData\Local\Programs\Python\Python311\Lib\site-packages\webdriver_manager\microsoft.py", line 73, in install
+    driver_path = self._get_driver_binary_path(self.driver)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kaust\AppData\Local\Programs\Python\Python311\Lib\site-packages\webdriver_manager\core\manager.py", line 35, in _get_driver_binary_path
+    binary_path = self._cache_manager.find_driver(driver)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kaust\AppData\Local\Programs\Python\Python311\Lib\site-packages\webdriver_manager\core\driver_cache.py", line 107, in find_driver
+    driver_version = self.get_cache_key_driver_version(driver)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kaust\AppData\Local\Programs\Python\Python311\Lib\site-packages\webdriver_manager\core\driver_cache.py", line 154, in get_cache_key_driver_version
+    return driver.get_driver_version_to_download()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kaust\AppData\Local\Programs\Python\Python311\Lib\site-packages\webdriver_manager\core\driver.py", line 48, in get_driver_version_to_download
+    return self.get_latest_release_version()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kaust\AppData\Local\Programs\Python\Python311\Lib\site-packages\webdriver_manager\drivers\edge.py", line 51, in get_latest_release_version
+    resp = self._http_client.get(url=latest_release_url)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kaust\AppData\Local\Programs\Python\Python311\Lib\site-packages\webdriver_manager\core\http.py", line 35, in get
+    raise exceptions.ConnectionError(f"Could not reach host. Are you offline?")
+requests.exceptions.ConnectionError: Could not reach host. Are you offline?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\kaust\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\common\driver_finder.py", line 64, in _binary_paths
+    raise ValueError(f"The path is not a valid file: {path}")
+ValueError: The path is not a valid file: C:\WebDrivers\msedgedriver.exe
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\kaust\Documents\GitHub\Naukri-autoapply-bot\Naukri_Edge.py", line 186, in setup_driver
+    self.driver = webdriver.Edge(service=service, options=options)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kaust\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\edge\webdriver.py", line 47, in __init__
+    super().__init__(
+  File "C:\Users\kaust\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\chromium\webdriver.py", line 53, in __init__
+    if finder.get_browser_path():
+       ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kaust\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\common\driver_finder.py", line 47, in get_browser_path
+    return self._binary_paths()["browser_path"]
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kaust\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\common\driver_finder.py", line 78, in _binary_paths
+    raise NoSuchDriverException(msg) from err
+selenium.common.exceptions.NoSuchDriverException: Message: Unable to obtain driver for MicrosoftEdge; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+
+
+2025-07-20 18:53:16,432 - ERROR - Bot execution failed: Message: Unable to obtain driver for MicrosoftEdge; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+
+2025-07-20 19:27:41,277 - INFO - Configuration loaded successfully
+2025-07-20 19:27:41,278 - INFO - Job database initialized
+2025-07-20 19:27:41,278 - INFO - Bot initialized successfully
+2025-07-20 19:27:41,278 - INFO - Setting up browser...
+2025-07-20 19:27:41,278 - INFO - Setting up browser...
+2025-07-20 19:27:41,278 - INFO - Operating System: Windows 10
+2025-07-20 19:27:41,278 - INFO - ✅ webdriver-manager imported successfully
+2025-07-20 19:27:41,278 - WARNING - ⚠️ Could not verify Edge installation
+2025-07-20 19:27:41,278 - INFO - 🔄 Attempting to auto-download Edge WebDriver...
+2025-07-20 19:27:41,278 - INFO - ====== WebDriver manager ======
+2025-07-20 19:27:42,223 - INFO - Get LATEST edgedriver version for Edge 138.0.3351
+2025-07-20 19:27:42,232 - ERROR - ❌ Auto-download failed: Could not reach host. Are you offline?
+2025-07-20 19:27:42,232 - INFO - 🔄 Trying manual path: C:\WebDrivers\msedgedriver.exe
+2025-07-20 19:27:44,501 - INFO - ✅ Browser setup successful
+2025-07-20 19:27:44,501 - ERROR - Failed to setup browser
+2025-07-20 19:28:06,558 - INFO - Browser closed

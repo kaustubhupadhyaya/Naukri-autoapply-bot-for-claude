@@ -1,4 +1,5 @@
 import pandas as pd
+import os
 import time
 import json
 import logging
@@ -123,9 +124,34 @@ class IntelligentNaukriBot:
             self.db_conn = None
     
     def setup_driver(self):
-        """Setup Edge WebDriver with auto-download"""
+        """Setup Edge WebDriver with auto-download and debugging"""
         try:
             logger.info("Setting up browser...")
+            
+            # Add debugging
+            import platform
+            logger.info(f"Operating System: {platform.system()} {platform.release()}")
+            
+            # Check if webdriver-manager is installed
+            try:
+                from webdriver_manager.microsoft import EdgeChromiumDriverManager
+                from selenium.webdriver.edge.service import Service
+                logger.info("✅ webdriver-manager imported successfully")
+            except ImportError as e:
+                logger.error(f"❌ webdriver-manager not found: {e}")
+                logger.info("Please run: pip install webdriver-manager")
+                raise
+            
+            # Check Edge installation
+            try:
+                import subprocess
+                result = subprocess.run(['msedge', '--version'], capture_output=True, text=True, timeout=5)
+                if result.returncode == 0:
+                    logger.info(f"✅ Microsoft Edge found: {result.stdout.strip()}")
+                else:
+                    logger.warning("⚠️ Edge version check failed")
+            except:
+                logger.warning("⚠️ Could not verify Edge installation")
             
             options = webdriver.EdgeOptions()
             
@@ -138,10 +164,29 @@ class IntelligentNaukriBot:
             
             if self.config.get('webdriver', {}).get('headless', False):
                 options.add_argument('--headless')
+                logger.info("Running in headless mode")
             
-            # Auto-download and setup WebDriver
-            service = Service(EdgeChromiumDriverManager().install())
-            self.driver = webdriver.Edge(service=service, options=options)
+            # Try auto-download first
+            logger.info("🔄 Attempting to auto-download Edge WebDriver...")
+            try:
+                driver_path = EdgeChromiumDriverManager().install()
+                logger.info(f"✅ WebDriver downloaded to: {driver_path}")
+                
+                service = Service(driver_path)
+                self.driver = webdriver.Edge(service=service, options=options)
+                
+            except Exception as auto_error:
+                logger.error(f"❌ Auto-download failed: {auto_error}")
+                
+                # Fallback to manual path
+                manual_path = self.config.get('webdriver', {}).get('edge_driver_path', '')
+                if manual_path and os.path.exists(manual_path):
+                    logger.info(f"🔄 Trying manual path: {manual_path}")
+                    service = Service(manual_path)
+                    self.driver = webdriver.Edge(service=service, options=options)
+                else:
+                    logger.error(f"❌ Manual path not found: {manual_path}")
+                    raise auto_error
             
             # Configure driver
             self.driver.implicitly_wait(self.config['webdriver']['implicit_wait'])
@@ -155,8 +200,10 @@ class IntelligentNaukriBot:
             
         except Exception as e:
             logger.error(f"WebDriver setup failed: {e}")
+            import traceback
+            logger.error(f"Full traceback: {traceback.format_exc()}")
             raise
-    
+
     def smart_delay(self, min_delay=None, max_delay=None):
         """Smart delay with random variation"""
         try:

@@ -334,6 +334,84 @@ class EnhancedNaukriBot(IntelligentNaukriBot):
         ║ 📈 Success Rate: {(stats['applied_jobs'] / max(stats['total_jobs_analyzed'], 1)) * 100:.1f}%
         ╚═══════════════════════════════════════════
         """)
+        
+    def scrape_job_links(self):
+        """
+        Enhanced method to scrape job links with intelligent analysis.
+        Overrides the parent class method to add AI-powered job analysis.
+        """
+        logger.info("🔍 Starting enhanced job scraping with AI analysis...")
+        
+        try:
+            # Use parent class method to get base job links
+            super().scrape_job_links()
+            
+            if not self.joblinks:
+                logger.warning("⚠️ No jobs found in initial scrape!")
+                return
+            
+            logger.info(f"📊 Found {len(self.joblinks)} jobs for analysis")
+            
+            # Create a list to store analyzed jobs
+            analyzed_jobs = []
+            
+            # Process each job with AI analysis
+            for index, job_url in enumerate(self.joblinks, 1):
+                try:
+                    logger.info(f"🔍 Analyzing job {index}/{len(self.joblinks)}: {job_url}")
+                    
+                    # Open job in new tab
+                    self.driver.execute_script("window.open('');")
+                    self.driver.switch_to.window(self.driver.window_handles[-1])
+                    self.driver.get(job_url)
+                    time.sleep(2)  # Wait for page load
+                    
+                    # Extract job details
+                    job_title = self.driver.find_element("css selector", ".jd-header-title").text.strip()
+                    job_description = self.driver.find_element("css selector", ".job-desc").text.strip()
+                    company_name = self.driver.find_element("css selector", ".jd-header-comp-name").text.strip()
+                    
+                    # Use AI to analyze job
+                    job_result = self.job_processor.process_job(
+                        job_title=job_title,
+                        job_description=job_description,
+                        company_name=company_name
+                    )
+                    
+                    # Add URL to result
+                    job_result['job_url'] = job_url
+                    
+                    # Store analysis results
+                    self.job_analysis_results.append(job_result)
+                    
+                    # Update stats
+                    self._update_analysis_stats(job_result)
+                    
+                    # Log decision
+                    self._log_job_decision(job_result)
+                    
+                    # Close tab and switch back
+                    self.driver.close()
+                    self.driver.switch_to.window(self.driver.window_handles[0])
+                    
+                    # Smart delay between jobs
+                    self.smart_delay(1, 3)
+                    
+                except Exception as e:
+                    logger.error(f"Error analyzing job {job_url}: {e}")
+                    continue
+            
+            # Update joblinks with analyzed jobs that meet criteria
+            self.joblinks = [
+                job['job_url'] for job in self.job_analysis_results
+                if job.get('should_apply', False)
+            ]
+            
+            logger.info(f"✅ Job analysis complete. {len(self.joblinks)} jobs qualified for application")
+            
+        except Exception as e:
+            logger.error(f"💥 Error in job scraping: {e}")
+            raise
 
 # Main execution
 def main():

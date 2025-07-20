@@ -20200,3 +20200,3581 @@ Stacktrace:
         ╚═══════════════════════════════════════════
         
 2025-07-20 21:48:31,077 - INFO - 🎉 Enhanced Naukri Bot session completed successfully!
+2025-07-20 23:05:04,502 - INFO - 🚀 Starting Enhanced Naukri Bot with AI Intelligence...
+2025-07-20 23:05:04,502 - INFO - 🚀 Initializing Enhanced Naukri Bot with AI Intelligence...
+2025-07-20 23:05:04,502 - INFO - Configuration loaded successfully
+2025-07-20 23:05:04,502 - INFO - Job database initialized
+2025-07-20 23:05:04,502 - INFO - Bot initialized successfully
+2025-07-20 23:05:04,502 - INFO - Gemini API initialized successfully
+2025-07-20 23:05:04,502 - INFO - ✅ Enhanced Naukri Bot initialized successfully!
+2025-07-20 23:05:04,502 - INFO - 📡 Phase 1: Setting up browser and logging in...
+2025-07-20 23:05:04,502 - INFO - Setting up browser...
+2025-07-20 23:05:04,502 - INFO - Operating System: Windows 10
+2025-07-20 23:05:04,502 - INFO - ✅ webdriver-manager imported successfully
+2025-07-20 23:05:04,502 - WARNING - ⚠️ Could not verify Edge installation
+2025-07-20 23:05:04,502 - INFO - 🔄 Attempting to auto-download Edge WebDriver...
+2025-07-20 23:05:04,502 - INFO - ====== WebDriver manager ======
+2025-07-20 23:05:05,983 - INFO - Get LATEST edgedriver version for Edge 138.0.3351
+2025-07-20 23:05:06,067 - ERROR - ❌ Auto-download failed: Could not reach host. Are you offline?
+2025-07-20 23:05:06,067 - INFO - 🔄 Trying manual path: C:\WebDrivers\msedgedriver.exe
+2025-07-20 23:05:08,866 - INFO - ✅ Browser setup successful
+2025-07-20 23:05:08,866 - INFO - 🔐 Phase 2: Logging into Naukri...
+2025-07-20 23:05:08,866 - INFO - Login attempt 1/3
+2025-07-20 23:05:29,797 - INFO - Login successful!
+2025-07-20 23:05:29,798 - INFO - 📡 Phase 3: Scraping jobs with AI analysis...
+2025-07-20 23:05:29,799 - INFO - Scraping keyword 1/4: Data Engineer
+2025-07-20 23:05:29,799 - INFO - Page 1/3: https://www.naukri.com/data-engineer-jobs-in-bengaluru-1
+2025-07-20 23:05:38,718 - INFO - Found 20 job cards on page
+2025-07-20 23:05:44,423 - INFO - Processed: Data Engineer | Score: 72/100 | Match: good
+2025-07-20 23:05:44,423 - INFO - ✅ WILL APPLY: Data Engineer | Score: 72/100
+2025-07-20 23:05:44,423 - INFO - Job 1: Data Engineer (Score: 72)
+2025-07-20 23:05:51,482 - INFO - Processed: Data Engineer | Score: 72/100 | Match: good
+2025-07-20 23:05:51,492 - INFO - ✅ WILL APPLY: Data Engineer | Score: 72/100
+2025-07-20 23:05:51,492 - INFO - Job 2: Data Engineer (Score: 72)
+2025-07-20 23:05:51,895 - ERROR - Error processing job Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 7
+}
+]
+2025-07-20 23:05:51,895 - INFO - ❌ WILL SKIP: Data Engineer | Score: 30/100 (Below threshold)
+2025-07-20 23:05:51,895 - INFO - Job 3: Data Engineer (Score: 30)
+2025-07-20 23:05:55,832 - ERROR - Error processing job SQL Developer / Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 3
+}
+]
+2025-07-20 23:05:55,832 - INFO - ❌ WILL SKIP: SQL Developer / Data Engineer | Score: 35/100 (Below threshold)
+2025-07-20 23:05:55,832 - INFO - Job 4: SQL Developer / Data Engineer (Score: 35)
+2025-07-20 23:05:59,826 - ERROR - Error processing job Python Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 59
+}
+]
+2025-07-20 23:05:59,828 - INFO - ❌ WILL SKIP: Python Data Engineer | Score: 35/100 (Below threshold)
+2025-07-20 23:05:59,828 - INFO - Job 5: Python Data Engineer (Score: 35)
+2025-07-20 23:06:03,924 - ERROR - Error processing job Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 55
+}
+]
+2025-07-20 23:06:03,924 - INFO - ❌ WILL SKIP: Data Engineer | Score: 30/100 (Below threshold)
+2025-07-20 23:06:03,924 - INFO - Job 6: Data Engineer (Score: 30)
+2025-07-20 23:06:07,863 - ERROR - Error processing job Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 51
+}
+]
+2025-07-20 23:06:07,863 - INFO - ❌ WILL SKIP: Data Engineer | Score: 30/100 (Below threshold)
+2025-07-20 23:06:07,863 - INFO - Job 7: Data Engineer (Score: 30)
+2025-07-20 23:06:11,852 - ERROR - Error processing job Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 47
+}
+]
+2025-07-20 23:06:11,852 - INFO - ❌ WILL SKIP: Data Engineer | Score: 30/100 (Below threshold)
+2025-07-20 23:06:11,852 - INFO - Job 8: Data Engineer (Score: 30)
+2025-07-20 23:06:15,852 - ERROR - Error processing job Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 43
+}
+]
+2025-07-20 23:06:15,852 - INFO - ❌ WILL SKIP: Data Engineer | Score: 30/100 (Below threshold)
+2025-07-20 23:06:15,852 - INFO - Job 9: Data Engineer (Score: 30)
+2025-07-20 23:06:19,896 - ERROR - Error processing job Data Engineer - Dataiku / Python: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 39
+}
+]
+2025-07-20 23:06:19,896 - INFO - ❌ WILL SKIP: Data Engineer - Dataiku / Python | Score: 35/100 (Below threshold)
+2025-07-20 23:06:19,902 - INFO - Job 10: Data Engineer - Dataiku / Python (Score: 35)
+2025-07-20 23:06:23,802 - ERROR - Error processing job Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 35
+}
+]
+2025-07-20 23:06:23,802 - INFO - ❌ WILL SKIP: Data Engineer | Score: 30/100 (Below threshold)
+2025-07-20 23:06:23,802 - INFO - Job 11: Data Engineer (Score: 30)
+2025-07-20 23:06:27,882 - ERROR - Error processing job Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 31
+}
+]
+2025-07-20 23:06:27,882 - INFO - ❌ WILL SKIP: Data Engineer | Score: 30/100 (Below threshold)
+2025-07-20 23:06:27,882 - INFO - Job 12: Data Engineer (Score: 30)
+2025-07-20 23:06:31,924 - ERROR - Error processing job Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 27
+}
+]
+2025-07-20 23:06:31,924 - INFO - ❌ WILL SKIP: Data Engineer | Score: 30/100 (Below threshold)
+2025-07-20 23:06:31,924 - INFO - Job 13: Data Engineer (Score: 30)
+2025-07-20 23:06:35,921 - ERROR - Error processing job Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 23
+}
+]
+2025-07-20 23:06:35,921 - INFO - ❌ WILL SKIP: Data Engineer | Score: 30/100 (Below threshold)
+2025-07-20 23:06:35,922 - INFO - Job 14: Data Engineer (Score: 30)
+2025-07-20 23:06:39,827 - ERROR - Error processing job Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 19
+}
+]
+2025-07-20 23:06:39,828 - INFO - ❌ WILL SKIP: Data Engineer | Score: 30/100 (Below threshold)
+2025-07-20 23:06:39,829 - INFO - Job 15: Data Engineer (Score: 30)
+2025-07-20 23:06:43,922 - ERROR - Error processing job Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 15
+}
+]
+2025-07-20 23:06:43,922 - INFO - ❌ WILL SKIP: Data Engineer | Score: 30/100 (Below threshold)
+2025-07-20 23:06:43,922 - INFO - Job 16: Data Engineer (Score: 30)
+2025-07-20 23:06:47,842 - ERROR - Error processing job Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 11
+}
+]
+2025-07-20 23:06:47,852 - INFO - ❌ WILL SKIP: Data Engineer | Score: 30/100 (Below threshold)
+2025-07-20 23:06:47,852 - INFO - Job 17: Data Engineer (Score: 30)
+2025-07-20 23:06:51,843 - ERROR - Error processing job Data Engineer - Introlligent: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 7
+}
+]
+2025-07-20 23:06:51,843 - INFO - ❌ WILL SKIP: Data Engineer - Introlligent | Score: 30/100 (Below threshold)
+2025-07-20 23:06:51,843 - INFO - Job 18: Data Engineer - Introlligent (Score: 30)
+2025-07-20 23:06:55,842 - ERROR - Error processing job Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 3
+}
+]
+2025-07-20 23:06:55,842 - INFO - ❌ WILL SKIP: Data Engineer | Score: 30/100 (Below threshold)
+2025-07-20 23:06:55,842 - INFO - Job 19: Data Engineer (Score: 30)
+2025-07-20 23:06:59,883 - ERROR - Error processing job Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 59
+}
+]
+2025-07-20 23:06:59,883 - INFO - ❌ WILL SKIP: Data Engineer | Score: 30/100 (Below threshold)
+2025-07-20 23:06:59,883 - INFO - Job 20: Data Engineer (Score: 30)
+2025-07-20 23:06:59,883 - INFO - Extracted 20 quality jobs from page
+2025-07-20 23:06:59,883 - INFO - Page 1: Found 20 quality jobs
+2025-07-20 23:07:03,616 - INFO - Page 2/3: https://www.naukri.com/data-engineer-jobs-in-bengaluru-2
+2025-07-20 23:07:11,752 - INFO - Found 20 job cards on page
+2025-07-20 23:07:12,112 - ERROR - Error processing job Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 47
+}
+]
+2025-07-20 23:07:12,112 - INFO - ❌ WILL SKIP: Data Engineer | Score: 30/100 (Below threshold)
+2025-07-20 23:07:12,112 - INFO - Job 3: Data Engineer (Score: 30)
+2025-07-20 23:07:16,112 - ERROR - Error processing job Cognite Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 43
+}
+]
+2025-07-20 23:07:16,112 - INFO - ❌ WILL SKIP: Cognite Data Engineer | Score: 30/100 (Below threshold)
+2025-07-20 23:07:16,112 - INFO - Job 4: Cognite Data Engineer (Score: 30)
+2025-07-20 23:07:20,112 - ERROR - Error processing job Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 39
+}
+]
+2025-07-20 23:07:20,112 - INFO - ❌ WILL SKIP: Data Engineer | Score: 30/100 (Below threshold)
+2025-07-20 23:07:20,112 - INFO - Job 5: Data Engineer (Score: 30)
+2025-07-20 23:07:24,143 - ERROR - Error processing job Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 35
+}
+]
+2025-07-20 23:07:24,152 - INFO - ❌ WILL SKIP: Data Engineer | Score: 30/100 (Below threshold)
+2025-07-20 23:07:24,152 - INFO - Job 6: Data Engineer (Score: 30)
+2025-07-20 23:07:28,147 - ERROR - Error processing job Data Engineer (ETL, Go, Databricks): 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 31
+}
+]
+2025-07-20 23:07:28,147 - INFO - ❌ WILL SKIP: Data Engineer (ETL, Go, Databricks) | Score: 30/100 (Below threshold)
+2025-07-20 23:07:28,147 - INFO - Job 7: Data Engineer (ETL, Go, Databricks) (Score: 30)
+2025-07-20 23:07:32,142 - ERROR - Error processing job Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 27
+}
+]
+2025-07-20 23:07:32,142 - INFO - ❌ WILL SKIP: Data Engineer | Score: 30/100 (Below threshold)
+2025-07-20 23:07:32,142 - INFO - Job 8: Data Engineer (Score: 30)
+2025-07-20 23:07:36,087 - ERROR - Error processing job Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 23
+}
+]
+2025-07-20 23:07:36,087 - INFO - ❌ WILL SKIP: Data Engineer | Score: 30/100 (Below threshold)
+2025-07-20 23:07:36,092 - INFO - Job 9: Data Engineer (Score: 30)
+2025-07-20 23:07:40,087 - ERROR - Error processing job Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 19
+}
+]
+2025-07-20 23:07:40,087 - INFO - ❌ WILL SKIP: Data Engineer | Score: 30/100 (Below threshold)
+2025-07-20 23:07:40,087 - INFO - Job 10: Data Engineer (Score: 30)
+2025-07-20 23:07:44,072 - ERROR - Error processing job Data Engineer - Automotive Research: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 15
+}
+]
+2025-07-20 23:07:44,072 - INFO - ❌ WILL SKIP: Data Engineer - Automotive Research | Score: 30/100 (Below threshold)
+2025-07-20 23:07:44,072 - INFO - Job 11: Data Engineer - Automotive Research (Score: 30)
+2025-07-20 23:07:48,212 - ERROR - Error processing job Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 11
+}
+]
+2025-07-20 23:07:48,212 - INFO - ❌ WILL SKIP: Data Engineer | Score: 30/100 (Below threshold)
+2025-07-20 23:07:48,212 - INFO - Job 12: Data Engineer (Score: 30)
+2025-07-20 23:07:52,103 - ERROR - Error processing job Data Engineer - Databricks: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 7
+}
+]
+2025-07-20 23:07:52,103 - INFO - ❌ WILL SKIP: Data Engineer - Databricks | Score: 30/100 (Below threshold)
+2025-07-20 23:07:52,103 - INFO - Job 13: Data Engineer - Databricks (Score: 30)
+2025-07-20 23:07:56,102 - ERROR - Error processing job Data Engineer – Databricks: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 3
+}
+]
+2025-07-20 23:07:56,102 - INFO - ❌ WILL SKIP: Data Engineer – Databricks | Score: 30/100 (Below threshold)
+2025-07-20 23:07:56,102 - INFO - Job 14: Data Engineer – Databricks (Score: 30)
+2025-07-20 23:08:00,110 - ERROR - Error processing job Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 59
+}
+]
+2025-07-20 23:08:00,111 - INFO - ❌ WILL SKIP: Data Engineer | Score: 30/100 (Below threshold)
+2025-07-20 23:08:00,111 - INFO - Job 15: Data Engineer (Score: 30)
+2025-07-20 23:08:04,137 - ERROR - Error processing job Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 55
+}
+]
+2025-07-20 23:08:04,137 - INFO - ❌ WILL SKIP: Data Engineer | Score: 30/100 (Below threshold)
+2025-07-20 23:08:04,137 - INFO - Job 16: Data Engineer (Score: 30)
+2025-07-20 23:08:08,132 - ERROR - Error processing job Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 51
+}
+]
+2025-07-20 23:08:08,132 - INFO - ❌ WILL SKIP: Data Engineer | Score: 30/100 (Below threshold)
+2025-07-20 23:08:08,132 - INFO - Job 17: Data Engineer (Score: 30)
+2025-07-20 23:08:12,133 - ERROR - Error processing job Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 47
+}
+]
+2025-07-20 23:08:12,133 - INFO - ❌ WILL SKIP: Data Engineer | Score: 30/100 (Below threshold)
+2025-07-20 23:08:12,133 - INFO - Job 18: Data Engineer (Score: 30)
+2025-07-20 23:08:16,167 - ERROR - Error processing job Data Engineer – Python: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 43
+}
+]
+2025-07-20 23:08:16,172 - INFO - ❌ WILL SKIP: Data Engineer – Python | Score: 35/100 (Below threshold)
+2025-07-20 23:08:16,172 - INFO - Job 19: Data Engineer – Python (Score: 35)
+2025-07-20 23:08:16,178 - INFO - Extracted 17 quality jobs from page
+2025-07-20 23:08:16,181 - INFO - Page 2: Found 17 quality jobs
+2025-07-20 23:08:18,223 - INFO - Page 3/3: https://www.naukri.com/data-engineer-jobs-in-bengaluru-3
+2025-07-20 23:08:27,303 - INFO - Found 20 job cards on page
+2025-07-20 23:08:27,752 - ERROR - Error processing job Data Engineers: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 32
+}
+]
+2025-07-20 23:08:27,752 - INFO - ❌ WILL SKIP: Data Engineers | Score: 30/100 (Below threshold)
+2025-07-20 23:08:27,752 - INFO - Job 1: Data Engineers (Score: 30)
+2025-07-20 23:08:31,686 - ERROR - Error processing job Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 28
+}
+]
+2025-07-20 23:08:31,687 - INFO - ❌ WILL SKIP: Data Engineer | Score: 30/100 (Below threshold)
+2025-07-20 23:08:31,687 - INFO - Job 2: Data Engineer (Score: 30)
+2025-07-20 23:08:35,782 - ERROR - Error processing job Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 24
+}
+]
+2025-07-20 23:08:35,783 - INFO - ❌ WILL SKIP: Data Engineer | Score: 30/100 (Below threshold)
+2025-07-20 23:08:35,784 - INFO - Job 3: Data Engineer (Score: 30)
+2025-07-20 23:08:39,681 - ERROR - Error processing job Microsoft Fabric Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 20
+}
+]
+2025-07-20 23:08:39,682 - INFO - ❌ WILL SKIP: Microsoft Fabric Data Engineer | Score: 30/100 (Below threshold)
+2025-07-20 23:08:39,682 - INFO - Job 4: Microsoft Fabric Data Engineer (Score: 30)
+2025-07-20 23:08:43,822 - ERROR - Error processing job Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 16
+}
+]
+2025-07-20 23:08:43,844 - INFO - ❌ WILL SKIP: Data Engineer | Score: 30/100 (Below threshold)
+2025-07-20 23:08:43,866 - INFO - Job 5: Data Engineer (Score: 30)
+2025-07-20 23:08:47,712 - ERROR - Error processing job Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 12
+}
+]
+2025-07-20 23:08:47,712 - INFO - ❌ WILL SKIP: Data Engineer | Score: 30/100 (Below threshold)
+2025-07-20 23:08:47,712 - INFO - Job 6: Data Engineer (Score: 30)
+2025-07-20 23:08:51,709 - ERROR - Error processing job Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 8
+}
+]
+2025-07-20 23:08:51,709 - INFO - ❌ WILL SKIP: Data Engineer | Score: 30/100 (Below threshold)
+2025-07-20 23:08:51,710 - INFO - Job 7: Data Engineer (Score: 30)
+2025-07-20 23:08:55,747 - ERROR - Error processing job Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 4
+}
+]
+2025-07-20 23:08:55,747 - INFO - ❌ WILL SKIP: Data Engineer | Score: 30/100 (Below threshold)
+2025-07-20 23:08:55,747 - INFO - Job 8: Data Engineer (Score: 30)
+2025-07-20 23:08:59,745 - ERROR - Error processing job Databricks Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+}
+]
+2025-07-20 23:08:59,747 - INFO - ❌ WILL SKIP: Databricks Data Engineer | Score: 30/100 (Below threshold)
+2025-07-20 23:08:59,747 - INFO - Job 9: Databricks Data Engineer (Score: 30)
+2025-07-20 23:09:03,732 - ERROR - Error processing job Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 56
+}
+]
+2025-07-20 23:09:03,732 - INFO - ❌ WILL SKIP: Data Engineer | Score: 30/100 (Below threshold)
+2025-07-20 23:09:03,732 - INFO - Job 10: Data Engineer (Score: 30)
+2025-07-20 23:09:03,739 - WARNING - Error extracting job 11: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: MicrosoftEdge=138.0.3351.83); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	GetHandleVerifier [0x0x7ff743c50bb8+2611928]
+	(No symbol) [0x0x7ff7436ece20]
+	(No symbol) [0x0x7ff74370b61a]
+	(No symbol) [0x0x7ff74376fd1b]
+	(No symbol) [0x0x7ff743786e5a]
+	(No symbol) [0x0x7ff74376a423]
+	(No symbol) [0x0x7ff74373ea86]
+	(No symbol) [0x0x7ff74373dd11]
+	(No symbol) [0x0x7ff74373e8b3]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff743933344]
+	(No symbol) [0x0x7ff743933493]
+	(No symbol) [0x0x7ff743924f36]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:03,826 - WARNING - Error extracting job 12: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:03,828 - WARNING - Error extracting job 13: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:03,829 - WARNING - Error extracting job 14: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:03,830 - WARNING - Error extracting job 15: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:03,831 - WARNING - Error extracting job 16: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:03,833 - WARNING - Error extracting job 17: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:03,839 - WARNING - Error extracting job 18: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:03,841 - WARNING - Error extracting job 19: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:03,845 - WARNING - Error extracting job 20: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:03,846 - INFO - Extracted 10 quality jobs from page
+2025-07-20 23:09:03,846 - INFO - Page 3: Found 10 quality jobs
+2025-07-20 23:09:10,742 - INFO - Scraping keyword 2/4: Python Developer
+2025-07-20 23:09:10,742 - INFO - Page 1/3: https://www.naukri.com/python-developer-jobs-in-bengaluru-1
+2025-07-20 23:09:10,742 - ERROR - Error on page 1 for keyword 'Python Developer': Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:10,742 - INFO - Page 2/3: https://www.naukri.com/python-developer-jobs-in-bengaluru-2
+2025-07-20 23:09:10,742 - ERROR - Error on page 2 for keyword 'Python Developer': Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:10,742 - INFO - Page 3/3: https://www.naukri.com/python-developer-jobs-in-bengaluru-3
+2025-07-20 23:09:10,745 - ERROR - Error on page 3 for keyword 'Python Developer': Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:13,905 - INFO - Scraping keyword 3/4: ETL Developer
+2025-07-20 23:09:13,905 - INFO - Page 1/3: https://www.naukri.com/etl-developer-jobs-in-bengaluru-1
+2025-07-20 23:09:13,905 - ERROR - Error on page 1 for keyword 'ETL Developer': Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:13,905 - INFO - Page 2/3: https://www.naukri.com/etl-developer-jobs-in-bengaluru-2
+2025-07-20 23:09:13,905 - ERROR - Error on page 2 for keyword 'ETL Developer': Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:13,908 - INFO - Page 3/3: https://www.naukri.com/etl-developer-jobs-in-bengaluru-3
+2025-07-20 23:09:13,908 - ERROR - Error on page 3 for keyword 'ETL Developer': Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:17,961 - INFO - Scraping keyword 4/4: Analytics Engineer
+2025-07-20 23:09:17,961 - INFO - Page 1/3: https://www.naukri.com/analytics-engineer-jobs-in-bengaluru-1
+2025-07-20 23:09:17,962 - ERROR - Error on page 1 for keyword 'Analytics Engineer': Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:17,962 - INFO - Page 2/3: https://www.naukri.com/analytics-engineer-jobs-in-bengaluru-2
+2025-07-20 23:09:17,962 - ERROR - Error on page 2 for keyword 'Analytics Engineer': Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:17,962 - INFO - Page 3/3: https://www.naukri.com/analytics-engineer-jobs-in-bengaluru-3
+2025-07-20 23:09:17,962 - ERROR - Error on page 3 for keyword 'Analytics Engineer': Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:22,962 - INFO - Total quality jobs found: 47
+2025-07-20 23:09:22,969 - INFO - 🎯 Phase 4: Applying to qualified jobs...
+2025-07-20 23:09:22,970 - INFO - Starting job applications (max: 50)
+2025-07-20 23:09:22,970 - INFO - Applying to job 1: https://www.naukri.com/job-listings-data-engineer-netlink-software-group-america-inc-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-1-to-4-years-150125501602
+2025-07-20 23:09:22,974 - ERROR - Error applying to job https://www.naukri.com/job-listings-data-engineer-netlink-software-group-america-inc-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-1-to-4-years-150125501602: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:22,977 - INFO - FAILED: 1 failures
+2025-07-20 23:09:22,979 - ERROR - Unexpected error with job 1: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:22,979 - INFO - Applying to job 2: https://www.naukri.com/job-listings-data-engineer-edgematics-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-1-to-4-years-140525503526
+2025-07-20 23:09:22,980 - ERROR - Error applying to job https://www.naukri.com/job-listings-data-engineer-edgematics-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-1-to-4-years-140525503526: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:22,984 - INFO - FAILED: 3 failures
+2025-07-20 23:09:22,985 - ERROR - Unexpected error with job 2: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:22,989 - INFO - Applying to job 3: https://www.naukri.com/job-listings-sql-developer-data-engineer-itfirst-consultants-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-3-to-7-years-041024501752
+2025-07-20 23:09:22,992 - ERROR - Error applying to job https://www.naukri.com/job-listings-sql-developer-data-engineer-itfirst-consultants-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-3-to-7-years-041024501752: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:22,994 - INFO - FAILED: 5 failures
+2025-07-20 23:09:22,999 - ERROR - Unexpected error with job 3: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,003 - INFO - Applying to job 4: https://www.naukri.com/job-listings-python-data-engineer-helios-placement-solution-mumbai-pune-bengaluru-3-to-8-years-080725021884
+2025-07-20 23:09:23,005 - ERROR - Error applying to job https://www.naukri.com/job-listings-python-data-engineer-helios-placement-solution-mumbai-pune-bengaluru-3-to-8-years-080725021884: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,012 - INFO - FAILED: 7 failures
+2025-07-20 23:09:23,017 - ERROR - Unexpected error with job 4: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,025 - INFO - Applying to job 5: https://www.naukri.com/job-listings-data-engineer-dataiku-python-infocepts-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-3-to-8-years-040425502173
+2025-07-20 23:09:23,025 - ERROR - Error applying to job https://www.naukri.com/job-listings-data-engineer-dataiku-python-infocepts-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-3-to-8-years-040425502173: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,030 - INFO - FAILED: 9 failures
+2025-07-20 23:09:23,035 - ERROR - Unexpected error with job 5: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,038 - INFO - Applying to job 6: https://www.naukri.com/job-listings-data-engineer-python-soul-ai-bengaluru-2-to-4-years-170725922819
+2025-07-20 23:09:23,039 - ERROR - Error applying to job https://www.naukri.com/job-listings-data-engineer-python-soul-ai-bengaluru-2-to-4-years-170725922819: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,040 - INFO - FAILED: 11 failures
+2025-07-20 23:09:23,042 - ERROR - Unexpected error with job 6: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,044 - INFO - Applying to job 7: https://www.naukri.com/job-listings-data-engineer-circle-k-stores-inc-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-3-to-8-years-090725500511
+2025-07-20 23:09:23,045 - ERROR - Error applying to job https://www.naukri.com/job-listings-data-engineer-circle-k-stores-inc-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-3-to-8-years-090725500511: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,045 - INFO - FAILED: 13 failures
+2025-07-20 23:09:23,046 - ERROR - Unexpected error with job 7: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,052 - INFO - Applying to job 8: https://www.naukri.com/job-listings-data-engineer-uplers-solutions-private-limited-mumbai-new-delhi-bengaluru-3-to-5-years-020725922143
+2025-07-20 23:09:23,058 - ERROR - Error applying to job https://www.naukri.com/job-listings-data-engineer-uplers-solutions-private-limited-mumbai-new-delhi-bengaluru-3-to-5-years-020725922143: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,059 - INFO - FAILED: 15 failures
+2025-07-20 23:09:23,062 - ERROR - Unexpected error with job 8: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,065 - INFO - Applying to job 9: https://www.naukri.com/job-listings-data-engineer-arsr-technologies-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-1-to-3-years-301020500936
+2025-07-20 23:09:23,072 - ERROR - Error applying to job https://www.naukri.com/job-listings-data-engineer-arsr-technologies-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-1-to-3-years-301020500936: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,077 - INFO - FAILED: 17 failures
+2025-07-20 23:09:23,082 - ERROR - Unexpected error with job 9: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,082 - INFO - Applying to job 10: https://www.naukri.com/job-listings-data-engineer-fractal-analytics-ltd-mumbai-pune-chennai-gurugram-bengaluru-3-to-7-years-210125501878
+2025-07-20 23:09:23,085 - ERROR - Error applying to job https://www.naukri.com/job-listings-data-engineer-fractal-analytics-ltd-mumbai-pune-chennai-gurugram-bengaluru-3-to-7-years-210125501878: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,086 - INFO - FAILED: 19 failures
+2025-07-20 23:09:23,092 - ERROR - Unexpected error with job 10: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,092 - INFO - Applying to job 11: https://www.naukri.com/job-listings-data-engineer-retailcloud-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-1-to-4-years-050525501999
+2025-07-20 23:09:23,096 - ERROR - Error applying to job https://www.naukri.com/job-listings-data-engineer-retailcloud-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-1-to-4-years-050525501999: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,101 - INFO - FAILED: 21 failures
+2025-07-20 23:09:23,102 - ERROR - Unexpected error with job 11: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,102 - INFO - Applying to job 12: https://www.naukri.com/job-listings-data-engineer-the-lifetime-value-co-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-1-to-2-years-020725505762
+2025-07-20 23:09:23,108 - ERROR - Error applying to job https://www.naukri.com/job-listings-data-engineer-the-lifetime-value-co-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-1-to-2-years-020725505762: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,112 - INFO - FAILED: 23 failures
+2025-07-20 23:09:23,114 - ERROR - Unexpected error with job 12: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,115 - INFO - Applying to job 13: https://www.naukri.com/job-listings-data-engineer-atlassian-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-3-to-6-years-160725503185
+2025-07-20 23:09:23,119 - ERROR - Error applying to job https://www.naukri.com/job-listings-data-engineer-atlassian-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-3-to-6-years-160725503185: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,123 - INFO - FAILED: 25 failures
+2025-07-20 23:09:23,127 - ERROR - Unexpected error with job 13: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,130 - INFO - Applying to job 14: https://www.naukri.com/job-listings-data-engineer-nps-prism-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-3-to-6-years-280625500828?src=directSearch&sid=17530329321927912&xp=13&px=1
+2025-07-20 23:09:23,131 - ERROR - Error applying to job https://www.naukri.com/job-listings-data-engineer-nps-prism-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-3-to-6-years-280625500828?src=directSearch&sid=17530329321927912&xp=13&px=1: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,134 - INFO - FAILED: 27 failures
+2025-07-20 23:09:23,136 - ERROR - Unexpected error with job 14: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,137 - INFO - Applying to job 15: https://www.naukri.com/job-listings-data-engineer-investcloud-inc-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-1-to-4-years-270325506594
+2025-07-20 23:09:23,138 - ERROR - Error applying to job https://www.naukri.com/job-listings-data-engineer-investcloud-inc-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-1-to-4-years-270325506594: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,142 - INFO - FAILED: 29 failures
+2025-07-20 23:09:23,142 - ERROR - Unexpected error with job 15: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,145 - INFO - Applying to job 16: https://www.naukri.com/job-listings-data-engineer-sapaad-software-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-2-to-7-years-260624500498
+2025-07-20 23:09:23,145 - ERROR - Error applying to job https://www.naukri.com/job-listings-data-engineer-sapaad-software-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-2-to-7-years-260624500498: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,145 - INFO - FAILED: 31 failures
+2025-07-20 23:09:23,145 - ERROR - Unexpected error with job 16: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,145 - INFO - Applying to job 17: https://www.naukri.com/job-listings-data-engineer-photon-infotech-p-ltd-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-3-to-7-years-200125502764
+2025-07-20 23:09:23,151 - ERROR - Error applying to job https://www.naukri.com/job-listings-data-engineer-photon-infotech-p-ltd-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-3-to-7-years-200125502764: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,152 - INFO - FAILED: 33 failures
+2025-07-20 23:09:23,154 - ERROR - Unexpected error with job 17: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,155 - INFO - Applying to job 18: https://www.naukri.com/job-listings-data-engineer-photon-infotech-p-ltd-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-2-to-5-years-101123500226
+2025-07-20 23:09:23,156 - ERROR - Error applying to job https://www.naukri.com/job-listings-data-engineer-photon-infotech-p-ltd-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-2-to-5-years-101123500226: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,157 - INFO - FAILED: 35 failures
+2025-07-20 23:09:23,157 - ERROR - Unexpected error with job 18: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,157 - INFO - Applying to job 19: https://www.naukri.com/job-listings-data-engineer-introlligent-introlligent-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-2-to-4-years-090824501377
+2025-07-20 23:09:23,168 - ERROR - Error applying to job https://www.naukri.com/job-listings-data-engineer-introlligent-introlligent-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-2-to-4-years-090824501377: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,169 - INFO - FAILED: 37 failures
+2025-07-20 23:09:23,173 - ERROR - Unexpected error with job 19: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,173 - INFO - Applying to job 20: https://www.naukri.com/job-listings-data-engineer-photon-infotech-p-ltd-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-2-to-5-years-060225502140
+2025-07-20 23:09:23,175 - ERROR - Error applying to job https://www.naukri.com/job-listings-data-engineer-photon-infotech-p-ltd-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-2-to-5-years-060225502140: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,176 - INFO - FAILED: 39 failures
+2025-07-20 23:09:23,177 - ERROR - Unexpected error with job 20: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,180 - INFO - Applying to job 21: https://www.naukri.com/job-listings-data-engineer-nityo-infotech-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-3-to-5-years-010525501092
+2025-07-20 23:09:23,184 - ERROR - Error applying to job https://www.naukri.com/job-listings-data-engineer-nityo-infotech-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-3-to-5-years-010525501092: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,184 - INFO - FAILED: 41 failures
+2025-07-20 23:09:23,187 - ERROR - Unexpected error with job 21: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,187 - INFO - Applying to job 22: https://www.naukri.com/job-listings-data-engineer-puresoftware-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-6-to-11-years-220525502673
+2025-07-20 23:09:23,190 - ERROR - Error applying to job https://www.naukri.com/job-listings-data-engineer-puresoftware-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-6-to-11-years-220525502673: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,191 - INFO - FAILED: 43 failures
+2025-07-20 23:09:23,192 - ERROR - Unexpected error with job 22: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,193 - INFO - Applying to job 23: https://www.naukri.com/job-listings-cognite-data-engineer-ey-kolkata-pune-bengaluru-3-to-7-years-150725012336
+2025-07-20 23:09:23,193 - ERROR - Error applying to job https://www.naukri.com/job-listings-cognite-data-engineer-ey-kolkata-pune-bengaluru-3-to-7-years-150725012336: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,193 - INFO - FAILED: 45 failures
+2025-07-20 23:09:23,193 - ERROR - Unexpected error with job 23: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,200 - INFO - Applying to job 24: https://www.naukri.com/job-listings-data-engineer-tredence-pune-chennai-bengaluru-1-to-2-years-140725009564
+2025-07-20 23:09:23,202 - ERROR - Error applying to job https://www.naukri.com/job-listings-data-engineer-tredence-pune-chennai-bengaluru-1-to-2-years-140725009564: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,206 - INFO - FAILED: 47 failures
+2025-07-20 23:09:23,210 - ERROR - Unexpected error with job 24: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,215 - INFO - Applying to job 25: https://www.naukri.com/job-listings-data-engineer-live-connections-pune-bengaluru-mumbai-all-areas-4-to-6-years-170725039468
+2025-07-20 23:09:23,217 - ERROR - Error applying to job https://www.naukri.com/job-listings-data-engineer-live-connections-pune-bengaluru-mumbai-all-areas-4-to-6-years-170725039468: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,220 - INFO - FAILED: 49 failures
+2025-07-20 23:09:23,221 - ERROR - Unexpected error with job 25: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,222 - INFO - Applying to job 26: https://www.naukri.com/job-listings-data-engineer-etl-go-databricks-instinctools-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-2-to-6-years-230425503776
+2025-07-20 23:09:23,223 - ERROR - Error applying to job https://www.naukri.com/job-listings-data-engineer-etl-go-databricks-instinctools-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-2-to-6-years-230425503776: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,223 - INFO - FAILED: 51 failures
+2025-07-20 23:09:23,223 - ERROR - Unexpected error with job 26: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,223 - INFO - Applying to job 27: https://www.naukri.com/job-listings-data-engineer-star4rall-it-solutions-private-limited-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-1-to-5-years-170323502153
+2025-07-20 23:09:23,223 - ERROR - Error applying to job https://www.naukri.com/job-listings-data-engineer-star4rall-it-solutions-private-limited-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-1-to-5-years-170323502153: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,234 - INFO - FAILED: 53 failures
+2025-07-20 23:09:23,235 - ERROR - Unexpected error with job 27: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,236 - INFO - Applying to job 28: https://www.naukri.com/job-listings-data-engineer-drivetrain-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-1-to-5-years-070624501928
+2025-07-20 23:09:23,239 - ERROR - Error applying to job https://www.naukri.com/job-listings-data-engineer-drivetrain-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-1-to-5-years-070624501928: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,240 - INFO - FAILED: 55 failures
+2025-07-20 23:09:23,241 - ERROR - Unexpected error with job 28: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,242 - INFO - Applying to job 29: https://www.naukri.com/job-listings-data-engineer-open-insights-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-2-to-5-years-010523501678
+2025-07-20 23:09:23,247 - ERROR - Error applying to job https://www.naukri.com/job-listings-data-engineer-open-insights-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-2-to-5-years-010523501678: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,251 - INFO - FAILED: 57 failures
+2025-07-20 23:09:23,252 - ERROR - Unexpected error with job 29: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,254 - INFO - Applying to job 30: https://www.naukri.com/job-listings-data-engineer-automotive-research-sp-capital-iq-india-pvt-ltd-gurugram-bengaluru-1-to-2-years-180725923053
+2025-07-20 23:09:23,259 - ERROR - Error applying to job https://www.naukri.com/job-listings-data-engineer-automotive-research-sp-capital-iq-india-pvt-ltd-gurugram-bengaluru-1-to-2-years-180725923053: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,264 - INFO - FAILED: 59 failures
+2025-07-20 23:09:23,264 - ERROR - Unexpected error with job 30: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,268 - INFO - Applying to job 31: https://www.naukri.com/job-listings-data-engineer-miracle-software-solutions-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-5-to-10-years-140525503519
+2025-07-20 23:09:23,269 - ERROR - Error applying to job https://www.naukri.com/job-listings-data-engineer-miracle-software-solutions-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-5-to-10-years-140525503519: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,270 - INFO - FAILED: 61 failures
+2025-07-20 23:09:23,271 - ERROR - Unexpected error with job 31: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,272 - INFO - Applying to job 32: https://www.naukri.com/job-listings-data-engineer-databricks-inorg-global-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-2-to-5-years-110625501715
+2025-07-20 23:09:23,272 - ERROR - Error applying to job https://www.naukri.com/job-listings-data-engineer-databricks-inorg-global-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-2-to-5-years-110625501715: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,272 - INFO - FAILED: 63 failures
+2025-07-20 23:09:23,277 - ERROR - Unexpected error with job 32: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,282 - INFO - Applying to job 33: https://www.naukri.com/job-listings-data-engineer-databricks-inorg-global-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-3-to-8-years-020725504644
+2025-07-20 23:09:23,283 - ERROR - Error applying to job https://www.naukri.com/job-listings-data-engineer-databricks-inorg-global-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-3-to-8-years-020725504644: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,284 - INFO - FAILED: 65 failures
+2025-07-20 23:09:23,284 - ERROR - Unexpected error with job 33: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,284 - INFO - Applying to job 34: https://www.naukri.com/job-listings-data-engineer-beinex-consulting-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-0-to-1-years-140324500140
+2025-07-20 23:09:23,290 - ERROR - Error applying to job https://www.naukri.com/job-listings-data-engineer-beinex-consulting-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-0-to-1-years-140324500140: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,294 - INFO - FAILED: 67 failures
+2025-07-20 23:09:23,296 - ERROR - Unexpected error with job 34: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,296 - INFO - Applying to job 35: https://www.naukri.com/job-listings-data-engineer-wipro-limited-bengaluru-1-to-5-years-180725927258
+2025-07-20 23:09:23,296 - ERROR - Error applying to job https://www.naukri.com/job-listings-data-engineer-wipro-limited-bengaluru-1-to-5-years-180725927258: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,302 - INFO - FAILED: 69 failures
+2025-07-20 23:09:23,307 - ERROR - Unexpected error with job 35: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,312 - INFO - Applying to job 36: https://www.naukri.com/job-listings-data-engineer-amakshar-technology-mumbai-pune-chennai-bengaluru-4-to-7-years-110625501398
+2025-07-20 23:09:23,313 - ERROR - Error applying to job https://www.naukri.com/job-listings-data-engineer-amakshar-technology-mumbai-pune-chennai-bengaluru-4-to-7-years-110625501398: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,316 - INFO - FAILED: 71 failures
+2025-07-20 23:09:23,317 - ERROR - Unexpected error with job 36: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,324 - INFO - Applying to job 37: https://www.naukri.com/job-listings-data-engineer-accenture-solutions-pvt-ltd-bengaluru-3-to-8-years-170725928380
+2025-07-20 23:09:23,326 - ERROR - Error applying to job https://www.naukri.com/job-listings-data-engineer-accenture-solutions-pvt-ltd-bengaluru-3-to-8-years-170725928380: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,327 - INFO - FAILED: 73 failures
+2025-07-20 23:09:23,327 - ERROR - Unexpected error with job 37: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,327 - INFO - Applying to job 38: https://www.naukri.com/job-listings-data-engineers-rearc-pune-bengaluru-vadodara-2-to-7-years-110725509163
+2025-07-20 23:09:23,327 - ERROR - Error applying to job https://www.naukri.com/job-listings-data-engineers-rearc-pune-bengaluru-vadodara-2-to-7-years-110725509163: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,332 - INFO - FAILED: 75 failures
+2025-07-20 23:09:23,332 - ERROR - Unexpected error with job 38: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,332 - INFO - Applying to job 39: https://www.naukri.com/job-listings-data-engineer-henson-group-pune-chennai-bengaluru-0-to-1-years-260625938054
+2025-07-20 23:09:23,337 - ERROR - Error applying to job https://www.naukri.com/job-listings-data-engineer-henson-group-pune-chennai-bengaluru-0-to-1-years-260625938054: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,342 - INFO - FAILED: 77 failures
+2025-07-20 23:09:23,344 - ERROR - Unexpected error with job 39: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,347 - INFO - Applying to job 40: https://www.naukri.com/job-listings-data-engineer-apex-group-kolkata-mumbai-hyderabad-pune-bengaluru-5-to-7-years-240625936383
+2025-07-20 23:09:23,348 - ERROR - Error applying to job https://www.naukri.com/job-listings-data-engineer-apex-group-kolkata-mumbai-hyderabad-pune-bengaluru-5-to-7-years-240625936383: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,349 - INFO - FAILED: 79 failures
+2025-07-20 23:09:23,355 - ERROR - Unexpected error with job 40: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,356 - INFO - Applying to job 41: https://www.naukri.com/job-listings-microsoft-fabric-data-engineer-avisoft-hyderabad-bengaluru-delhi-ncr-3-to-7-years-180725912848
+2025-07-20 23:09:23,358 - ERROR - Error applying to job https://www.naukri.com/job-listings-microsoft-fabric-data-engineer-avisoft-hyderabad-bengaluru-delhi-ncr-3-to-7-years-180725912848: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,359 - INFO - FAILED: 81 failures
+2025-07-20 23:09:23,361 - ERROR - Unexpected error with job 41: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,361 - INFO - Applying to job 42: https://www.naukri.com/job-listings-data-engineer-accenture-solutions-pvt-ltd-bengaluru-3-to-8-years-270625918560
+2025-07-20 23:09:23,365 - ERROR - Error applying to job https://www.naukri.com/job-listings-data-engineer-accenture-solutions-pvt-ltd-bengaluru-3-to-8-years-270625918560: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,368 - INFO - FAILED: 83 failures
+2025-07-20 23:09:23,372 - ERROR - Unexpected error with job 42: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,372 - INFO - Applying to job 43: https://www.naukri.com/job-listings-data-engineer-accenture-solutions-pvt-ltd-bengaluru-3-to-8-years-270625918462
+2025-07-20 23:09:23,375 - ERROR - Error applying to job https://www.naukri.com/job-listings-data-engineer-accenture-solutions-pvt-ltd-bengaluru-3-to-8-years-270625918462: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,378 - INFO - FAILED: 85 failures
+2025-07-20 23:09:23,381 - ERROR - Unexpected error with job 43: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,382 - INFO - Applying to job 44: https://www.naukri.com/job-listings-data-engineer-virtualware-innovations-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-5-to-10-years-300723500787
+2025-07-20 23:09:23,385 - ERROR - Error applying to job https://www.naukri.com/job-listings-data-engineer-virtualware-innovations-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-5-to-10-years-300723500787: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,386 - INFO - FAILED: 87 failures
+2025-07-20 23:09:23,387 - ERROR - Unexpected error with job 44: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,389 - INFO - Applying to job 45: https://www.naukri.com/job-listings-data-engineer-ccs-technologies-p-ltd-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-5-to-6-years-191124504795
+2025-07-20 23:09:23,392 - ERROR - Error applying to job https://www.naukri.com/job-listings-data-engineer-ccs-technologies-p-ltd-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-5-to-6-years-191124504795: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,393 - INFO - FAILED: 89 failures
+2025-07-20 23:09:23,393 - ERROR - Unexpected error with job 45: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,403 - INFO - Applying to job 46: https://www.naukri.com/job-listings-databricks-data-engineer-upteam-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-5-to-7-years-190624500850
+2025-07-20 23:09:23,405 - ERROR - Error applying to job https://www.naukri.com/job-listings-databricks-data-engineer-upteam-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-5-to-7-years-190624500850: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,409 - INFO - FAILED: 91 failures
+2025-07-20 23:09:23,412 - ERROR - Unexpected error with job 46: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,422 - INFO - Applying to job 47: https://www.naukri.com/job-listings-data-engineer-accenture-solutions-pvt-ltd-bengaluru-3-to-8-years-170725926152
+2025-07-20 23:09:23,424 - ERROR - Error applying to job https://www.naukri.com/job-listings-data-engineer-accenture-solutions-pvt-ltd-bengaluru-3-to-8-years-170725926152: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,424 - INFO - FAILED: 93 failures
+2025-07-20 23:09:23,424 - ERROR - Unexpected error with job 47: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7439d8c85+23461]
+	(No symbol) [0x0x7ff74392cd70]
+	(No symbol) [0x0x7ff7436fce40]
+	(No symbol) [0x0x7ff74373d473]
+	(No symbol) [0x0x7ff74376a582]
+	(No symbol) [0x0x7ff743715c7b]
+	(No symbol) [0x0x7ff743767195]
+	(No symbol) [0x0x7ff7437668aa]
+	(No symbol) [0x0x7ff7436d2c75]
+	(No symbol) [0x0x7ff74383e6fd]
+	(No symbol) [0x0x7ff74384ba88]
+	GetHandleVerifier [0x0x7ff743ab8acb+940523]
+	GetHandleVerifier [0x0x7ff743ac1821+976705]
+	(No symbol) [0x0x7ff74393a961]
+	(No symbol) [0x0x7ff7436d17a7]
+	GetHandleVerifier [0x0x7ff743c062d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-20 23:09:23,436 - INFO - 💾 Phase 5: Saving results...
+2025-07-20 23:09:23,439 - INFO - Results saved with timestamp: 20250720_230923
+2025-07-20 23:09:23,449 - INFO - SUMMARY - Found: 47, Applied: 0, Failed: 94, Skipped: 0
+2025-07-20 23:09:23,490 - INFO - 📊 Detailed analysis saved to intelligent_job_analysis_20250720_230923.csv
+2025-07-20 23:09:23,504 - INFO - 
+        ╔═══ ENHANCED NAUKRI BOT SESSION SUMMARY ═══
+        ║ 🔍 Total Jobs Analyzed: 47
+        ║ 🧠 Gemini API Calls: 47
+        ║ ⭐ High Score Jobs (70+): 2
+        ║ ✅ Applications Sent: 0
+        ║ ❌ Skipped (Low Score): 45
+        ║ 🔄 Fallback Scores Used: 45
+        ║ 📈 Success Rate: 0.0%
+        ╚═══════════════════════════════════════════
+        
+2025-07-20 23:09:23,507 - INFO - 🎉 Enhanced Naukri Bot session completed successfully!

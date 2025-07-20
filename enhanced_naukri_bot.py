@@ -338,32 +338,50 @@ class EnhancedNaukriBot(IntelligentNaukriBot):
 # Main execution
 def main():
     """Main function to run the enhanced Naukri bot."""
+    bot = None
     try:
         logger.info("🚀 Starting Enhanced Naukri Bot with AI Intelligence...")
         
         # Initialize enhanced bot
         bot = EnhancedNaukriBot()
         
-        # Run the complete process
-        logger.info("📡 Phase 1: Scraping jobs with intelligent analysis...")
-        bot.scrape_job_links()  # This will use intelligent analysis for each job
+        # Step 1: Setup browser (this was missing!)
+        logger.info("📡 Phase 1: Setting up browser and logging in...")
+        bot.setup_driver()
         
-        logger.info("🎯 Phase 2: Applying to qualified jobs...")
-        bot.apply_to_jobs_intelligently()  # Enhanced application process
+        # Step 2: Login to Naukri (this was missing!)
+        bot.login()
         
-        logger.info("💾 Phase 3: Saving results...")
-        bot.save_results()  # Parent class method + our enhancements
+        # Step 3: Scrape with AI analysis
+        logger.info("📡 Phase 2: Scraping jobs with intelligent analysis...")
+        bot.scrape_job_links()
+        
+        if len(bot.joblinks) == 0:
+            logger.warning("⚠️ No jobs found! Check if login was successful.")
+            return
+        
+        # Step 4: Apply to jobs
+        logger.info("🎯 Phase 3: Applying to qualified jobs...")
+        bot.apply_to_jobs()
+        
+        # Step 5: Save results
+        logger.info("💾 Phase 4: Saving results...")
+        bot.save_results()
+        bot._save_intelligent_results()
         
         logger.info("🎉 Enhanced Naukri Bot session completed successfully!")
         
     except KeyboardInterrupt:
-        logger.info("⏹️  Bot stopped by user")
+        logger.info("⏹️ Bot stopped by user")
     except Exception as e:
         logger.error(f"💥 Fatal error: {e}")
+        import traceback
+        traceback.print_exc()
     finally:
         # Cleanup
         try:
-            if 'bot' in locals() and hasattr(bot, 'driver'):
+            if bot and hasattr(bot, 'driver') and bot.driver:
+                input("Press Enter to close browser...")
                 bot.driver.quit()
         except:
             pass

@@ -345,27 +345,24 @@ def main():
         # Initialize enhanced bot
         bot = EnhancedNaukriBot()
         
-        # Step 1: Setup browser (this was missing!)
+        # CRITICAL: Use the original bot's proven workflow
         logger.info("📡 Phase 1: Setting up browser and logging in...")
-        bot.setup_driver()
+        bot.setup_driver()  # ← This was missing!
         
-        # Step 2: Login to Naukri (this was missing!)
-        bot.login()
+        logger.info("🔐 Phase 2: Logging into Naukri...")  
+        bot.login()         # ← This was missing!
         
-        # Step 3: Scrape with AI analysis
-        logger.info("📡 Phase 2: Scraping jobs with intelligent analysis...")
-        bot.scrape_job_links()
+        logger.info("📡 Phase 3: Scraping jobs with AI analysis...")
+        bot.scrape_job_links()  # Now this will work with AI analysis
         
         if len(bot.joblinks) == 0:
             logger.warning("⚠️ No jobs found! Check if login was successful.")
             return
         
-        # Step 4: Apply to jobs
-        logger.info("🎯 Phase 3: Applying to qualified jobs...")
-        bot.apply_to_jobs()
+        logger.info("🎯 Phase 4: Applying to qualified jobs...")
+        bot.apply_to_jobs()  # Use original method for now
         
-        # Step 5: Save results
-        logger.info("💾 Phase 4: Saving results...")
+        logger.info("💾 Phase 5: Saving results...")
         bot.save_results()
         bot._save_intelligent_results()
         

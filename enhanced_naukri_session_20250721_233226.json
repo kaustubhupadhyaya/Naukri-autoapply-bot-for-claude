@@ -1,0 +1,25 @@
+{
+  "session_info": {
+    "timestamp": "2025-07-21T23:32:26.774394",
+    "session_type": "AI-Enhanced",
+    "config_file": "enhanced_config.json"
+  },
+  "job_analysis": {
+    "total_jobs_analyzed": 80,
+    "ai_analysis_attempts": 80,
+    "ai_analysis_success": 0,
+    "fallback_scores_used": 80,
+    "ai_failures": 0,
+    "extraction_failures": 0
+  },
+  "application_results": {
+    "high_score_jobs": 0,
+    "applications_sent": 0,
+    "jobs_skipped": 80,
+    "success_rate": "0.0%"
+  },
+  "ai_performance": {
+    "ai_success_rate": "0.0%",
+    "application_rate": "0.0%"
+  }
+}

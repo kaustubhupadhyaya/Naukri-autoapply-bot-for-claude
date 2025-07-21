@@ -37545,3 +37545,2853 @@ Stacktrace:
 2025-07-21 22:29:32,569 - INFO - 🤖 AI Analysis: python developer scored 38/100
 2025-07-21 22:29:32,569 - INFO - ⏭️  SKIPPED: python developer | Score: 38/100
 2025-07-21 22:29:36,289 - INFO - 🔍 Processing job card 2/20
+2025-07-21 22:29:57,328 - WARNING - ⏰ Company extraction timeout
+2025-07-21 22:29:57,383 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:29:57,453 - INFO - ✅ Extracted: Python Developer at Company Name
+2025-07-21 22:29:57,729 - ERROR - Gemini API error for Python Developer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 1
+}
+]
+2025-07-21 22:29:57,729 - INFO - 🤖 AI Analysis: Python Developer scored 38/100
+2025-07-21 22:29:57,729 - INFO - ⏭️  SKIPPED: Python Developer | Score: 38/100
+2025-07-21 22:30:01,296 - INFO - 🔍 Processing job card 3/20
+2025-07-21 22:30:16,404 - WARNING - ⏰ Company extraction timeout
+2025-07-21 22:30:16,431 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:30:16,499 - INFO - ✅ Extracted: Python Developer at Xcel Hires Managment Solutions Pvt Ltd
+2025-07-21 22:30:17,219 - ERROR - Gemini API error for Python Developer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 42
+}
+]
+2025-07-21 22:30:17,230 - INFO - 🤖 AI Analysis: Python Developer scored 38/100
+2025-07-21 22:30:17,233 - INFO - ⏭️  SKIPPED: Python Developer | Score: 38/100
+2025-07-21 22:30:20,731 - INFO - 🔍 Processing job card 4/20
+2025-07-21 22:30:36,269 - WARNING - ⏰ Company extraction timeout
+2025-07-21 22:30:36,315 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:30:36,355 - INFO - ✅ Extracted: Python Developer at Bottle Lab Technologies
+2025-07-21 22:30:36,770 - ERROR - Gemini API error for Python Developer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 22
+}
+]
+2025-07-21 22:30:36,779 - INFO - 🤖 AI Analysis: Python Developer scored 38/100
+2025-07-21 22:30:36,779 - INFO - ⏭️  SKIPPED: Python Developer | Score: 38/100
+2025-07-21 22:30:39,402 - INFO - 🔍 Processing job card 5/20
+2025-07-21 22:30:54,470 - WARNING - ⏰ Company extraction timeout
+2025-07-21 22:30:54,500 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:30:54,519 - INFO - ✅ Extracted: Software Developer: Python & JavaScript at Company Name
+2025-07-21 22:30:55,005 - ERROR - Gemini API error for Software Developer: Python & JavaScript: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 4
+}
+]
+2025-07-21 22:30:55,006 - INFO - 🤖 AI Analysis: Software Developer: Python & JavaScript scored 8/100
+2025-07-21 22:30:55,007 - INFO - ⏭️  SKIPPED: Software Developer: Python & JavaScript | Score: 8/100
+2025-07-21 22:30:57,137 - INFO - 🔍 Processing job card 6/20
+2025-07-21 22:31:12,369 - WARNING - ⏰ Company extraction timeout
+2025-07-21 22:31:12,489 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:31:12,624 - INFO - ✅ Extracted: Python GITLAB CI CD Jenkins developer at Company Name
+2025-07-21 22:31:12,980 - ERROR - Gemini API error for Python GITLAB CI CD Jenkins developer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 46
+}
+]
+2025-07-21 22:31:12,989 - INFO - 🤖 AI Analysis: Python GITLAB CI CD Jenkins developer scored 8/100
+2025-07-21 22:31:12,991 - INFO - ⏭️  SKIPPED: Python GITLAB CI CD Jenkins developer | Score: 8/100
+2025-07-21 22:31:15,402 - INFO - 🔍 Processing job card 7/20
+2025-07-21 22:31:30,547 - WARNING - ⏰ Company extraction timeout
+2025-07-21 22:31:30,619 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:31:30,655 - INFO - ✅ Extracted: T&T - Customer - CS&D - Consultant - Omniverse Developer (Python) at Company Name
+2025-07-21 22:31:31,052 - ERROR - Gemini API error for T&T - Customer - CS&D - Consultant - Omniverse Developer (Python): 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 28
+}
+]
+2025-07-21 22:31:31,055 - INFO - 🤖 AI Analysis: T&T - Customer - CS&D - Consultant - Omniverse Developer (Python) scored 8/100
+2025-07-21 22:31:31,055 - INFO - ⏭️  SKIPPED: T&T - Customer - CS&D - Consultant - Omniverse Developer (Python) | Score: 8/100
+2025-07-21 22:31:35,053 - INFO - 🔍 Processing job card 8/20
+2025-07-21 22:31:50,099 - WARNING - ⏰ Company extraction timeout
+2025-07-21 22:31:50,189 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:31:50,229 - INFO - ✅ Extracted: Python Software Developer at Company Name
+2025-07-21 22:31:50,599 - ERROR - Gemini API error for Python Software Developer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 8
+}
+]
+2025-07-21 22:31:50,599 - INFO - 🤖 AI Analysis: Python Software Developer scored 8/100
+2025-07-21 22:31:50,599 - INFO - ⏭️  SKIPPED: Python Software Developer | Score: 8/100
+2025-07-21 22:31:54,477 - INFO - 🔍 Processing job card 9/20
+2025-07-21 22:32:09,522 - WARNING - ⏰ Company extraction timeout
+2025-07-21 22:32:09,605 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:32:09,649 - INFO - ✅ Extracted: Python Software Developer at Company Name
+2025-07-21 22:32:10,064 - ERROR - Gemini API error for Python Software Developer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 49
+}
+]
+2025-07-21 22:32:10,064 - INFO - 🤖 AI Analysis: Python Software Developer scored 8/100
+2025-07-21 22:32:10,065 - INFO - ⏭️  SKIPPED: Python Software Developer | Score: 8/100
+2025-07-21 22:32:12,151 - INFO - 🔍 Processing job card 10/20
+2025-07-21 22:32:27,915 - WARNING - ⏰ Company extraction timeout
+2025-07-21 22:32:28,725 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:32:29,554 - INFO - ✅ Extracted: Python ML developer at Company Name
+2025-07-21 22:32:29,926 - ERROR - Gemini API error for Python ML developer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 29
+}
+]
+2025-07-21 22:32:29,948 - INFO - 🤖 AI Analysis: Python ML developer scored 8/100
+2025-07-21 22:32:29,968 - INFO - ⏭️  SKIPPED: Python ML developer | Score: 8/100
+2025-07-21 22:32:33,713 - INFO - 🔍 Processing job card 11/20
+2025-07-21 22:32:48,909 - WARNING - ⏰ Company extraction timeout
+2025-07-21 22:32:48,996 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:32:49,033 - INFO - ✅ Extracted: Python Developer at MWB Technologies
+2025-07-21 22:32:49,329 - ERROR - Gemini API error for Python Developer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 9
+}
+]
+2025-07-21 22:32:49,330 - INFO - 🤖 AI Analysis: Python Developer scored 38/100
+2025-07-21 22:32:49,330 - INFO - ⏭️  SKIPPED: Python Developer | Score: 38/100
+2025-07-21 22:32:51,505 - INFO - 🔍 Processing job card 12/20
+2025-07-21 22:33:06,619 - WARNING - ⏰ Company extraction timeout
+2025-07-21 22:33:06,674 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:33:06,694 - INFO - ✅ Extracted: Python Developer at Company Name
+2025-07-21 22:33:07,099 - ERROR - Gemini API error for Python Developer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 52
+}
+]
+2025-07-21 22:33:07,099 - INFO - 🤖 AI Analysis: Python Developer scored 38/100
+2025-07-21 22:33:07,104 - INFO - ⏭️  SKIPPED: Python Developer | Score: 38/100
+2025-07-21 22:33:09,260 - INFO - 🔍 Processing job card 13/20
+2025-07-21 22:33:24,364 - WARNING - ⏰ Company extraction timeout
+2025-07-21 22:33:24,379 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:33:24,401 - INFO - ✅ Extracted: Python Software Developer-AB-Bengaluru,Chennai,Chandigarh at Company Name
+2025-07-21 22:33:24,817 - ERROR - Gemini API error for Python Software Developer-AB-Bengaluru,Chennai,Chandigarh: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 34
+}
+]
+2025-07-21 22:33:24,820 - INFO - 🤖 AI Analysis: Python Software Developer-AB-Bengaluru,Chennai,Chandigarh scored 18/100
+2025-07-21 22:33:24,820 - INFO - ⏭️  SKIPPED: Python Software Developer-AB-Bengaluru,Chennai,Chandigarh | Score: 18/100
+2025-07-21 22:33:27,571 - INFO - 🔍 Processing job card 14/20
+2025-07-21 22:33:42,669 - WARNING - ⏰ Company extraction timeout
+2025-07-21 22:33:42,760 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:33:42,800 - INFO - ✅ Extracted: Python Software Developer at Company Name
+2025-07-21 22:33:43,194 - ERROR - Gemini API error for Python Software Developer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 16
+}
+]
+2025-07-21 22:33:43,199 - INFO - 🤖 AI Analysis: Python Software Developer scored 8/100
+2025-07-21 22:33:43,199 - INFO - ⏭️  SKIPPED: Python Software Developer | Score: 8/100
+2025-07-21 22:33:46,874 - INFO - 🔍 Processing job card 15/20
+2025-07-21 22:34:02,000 - WARNING - ⏰ Company extraction timeout
+2025-07-21 22:34:02,062 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:34:02,108 - INFO - ✅ Extracted: Python Developer at Company Name
+2025-07-21 22:34:02,415 - ERROR - Gemini API error for Python Developer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 56
+}
+]
+2025-07-21 22:34:02,419 - INFO - 🤖 AI Analysis: Python Developer scored 38/100
+2025-07-21 22:34:02,419 - INFO - ⏭️  SKIPPED: Python Developer | Score: 38/100
+2025-07-21 22:34:05,332 - INFO - 🔍 Processing job card 16/20
+2025-07-21 22:34:20,429 - WARNING - ⏰ Company extraction timeout
+2025-07-21 22:34:20,472 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:34:20,507 - INFO - ✅ Extracted: PYTHON DEVELOPER at Company Name
+2025-07-21 22:34:20,789 - ERROR - Gemini API error for PYTHON DEVELOPER: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 38
+}
+]
+2025-07-21 22:34:20,800 - INFO - 🤖 AI Analysis: PYTHON DEVELOPER scored 38/100
+2025-07-21 22:34:20,801 - INFO - ⏭️  SKIPPED: PYTHON DEVELOPER | Score: 38/100
+2025-07-21 22:34:24,795 - INFO - 🔍 Processing job card 17/20
+2025-07-21 22:34:39,894 - WARNING - ⏰ Company extraction timeout
+2025-07-21 22:34:40,052 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:34:40,089 - INFO - ✅ Extracted: Python Developer at Weboccult Technologies
+2025-07-21 22:34:40,369 - ERROR - Gemini API error for Python Developer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 18
+}
+]
+2025-07-21 22:34:40,379 - INFO - 🤖 AI Analysis: Python Developer scored 38/100
+2025-07-21 22:34:40,379 - INFO - ⏭️  SKIPPED: Python Developer | Score: 38/100
+2025-07-21 22:34:43,779 - INFO - 🔍 Processing job card 18/20
+2025-07-21 22:34:58,914 - WARNING - ⏰ Company extraction timeout
+2025-07-21 22:34:58,951 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:34:58,990 - INFO - ✅ Extracted: Python developer at Company Name
+2025-07-21 22:34:59,281 - ERROR - Gemini API error for Python developer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 59
+}
+]
+2025-07-21 22:34:59,283 - INFO - 🤖 AI Analysis: Python developer scored 38/100
+2025-07-21 22:34:59,283 - INFO - ⏭️  SKIPPED: Python developer | Score: 38/100
+2025-07-21 22:35:02,276 - INFO - 🔍 Processing job card 19/20
+2025-07-21 22:35:17,351 - WARNING - ⏰ Company extraction timeout
+2025-07-21 22:35:17,369 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:35:17,390 - INFO - ✅ Extracted: PYTHON DEVELOPER at Intelgic Technologies
+2025-07-21 22:35:17,679 - ERROR - Gemini API error for PYTHON DEVELOPER: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 41
+}
+]
+2025-07-21 22:35:17,679 - INFO - 🤖 AI Analysis: PYTHON DEVELOPER scored 38/100
+2025-07-21 22:35:17,679 - INFO - ⏭️  SKIPPED: PYTHON DEVELOPER | Score: 38/100
+2025-07-21 22:35:19,738 - INFO - 🔍 Processing job card 20/20
+2025-07-21 22:35:33,969 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023785B59810>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/64f282d3f3ed487783ad6177b6334e1e/element/f.401C05D1F892881B0D62ECB3F4A90BA5.d.47437CB06C3A32747B8D000A0F0B86B0.e.522/elements
+2025-07-21 22:35:38,676 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023785B19E90>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/64f282d3f3ed487783ad6177b6334e1e/element/f.401C05D1F892881B0D62ECB3F4A90BA5.d.47437CB06C3A32747B8D000A0F0B86B0.e.522/elements
+2025-07-21 22:35:42,818 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023785B1AE10>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/64f282d3f3ed487783ad6177b6334e1e/element/f.401C05D1F892881B0D62ECB3F4A90BA5.d.47437CB06C3A32747B8D000A0F0B86B0.e.522/elements
+2025-07-21 22:35:46,885 - WARNING - ⏰ Company extraction timeout
+2025-07-21 22:35:50,938 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023785B19650>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/64f282d3f3ed487783ad6177b6334e1e/element/f.401C05D1F892881B0D62ECB3F4A90BA5.d.47437CB06C3A32747B8D000A0F0B86B0.e.522/text
+2025-07-21 22:35:54,967 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023785B6C5D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/64f282d3f3ed487783ad6177b6334e1e/element/f.401C05D1F892881B0D62ECB3F4A90BA5.d.47437CB06C3A32747B8D000A0F0B86B0.e.522/text
+2025-07-21 22:35:59,028 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023785B6CD50>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/64f282d3f3ed487783ad6177b6334e1e/element/f.401C05D1F892881B0D62ECB3F4A90BA5.d.47437CB06C3A32747B8D000A0F0B86B0.e.522/text
+2025-07-21 22:36:03,066 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:36:07,197 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023785A913D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/64f282d3f3ed487783ad6177b6334e1e/element/f.401C05D1F892881B0D62ECB3F4A90BA5.d.47437CB06C3A32747B8D000A0F0B86B0.e.522/text
+2025-07-21 22:36:11,259 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023785AB05D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/64f282d3f3ed487783ad6177b6334e1e/element/f.401C05D1F892881B0D62ECB3F4A90BA5.d.47437CB06C3A32747B8D000A0F0B86B0.e.522/text
+2025-07-21 22:36:15,323 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023785B18A10>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/64f282d3f3ed487783ad6177b6334e1e/element/f.401C05D1F892881B0D62ECB3F4A90BA5.d.47437CB06C3A32747B8D000A0F0B86B0.e.522/text
+2025-07-21 22:36:19,384 - ERROR - ❌ Job data extraction failed after 59.6s: HTTPConnectionPool(host='localhost', port=62730): Max retries exceeded with url: /session/64f282d3f3ed487783ad6177b6334e1e/element/f.401C05D1F892881B0D62ECB3F4A90BA5.d.47437CB06C3A32747B8D000A0F0B86B0.e.522/text (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023785B1BBD0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-07-21 22:36:19,401 - WARNING - ❌ Failed to extract data from card 20
+2025-07-21 22:36:19,401 - INFO - 🔍 Processing keyword 3/4: ETL Developer
+2025-07-21 22:36:19,401 - INFO - Page 1/2: https://www.naukri.com/etl-developer-jobs-in-bengaluru-1
+2025-07-21 22:36:23,931 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023785B1AD10>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/64f282d3f3ed487783ad6177b6334e1e/url
+2025-07-21 22:36:28,624 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023785B1A390>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/64f282d3f3ed487783ad6177b6334e1e/url
+2025-07-21 22:36:33,136 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023785B19210>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/64f282d3f3ed487783ad6177b6334e1e/url
+2025-07-21 22:36:37,824 - ERROR - Error on page 1 for keyword 'ETL Developer': HTTPConnectionPool(host='localhost', port=62730): Max retries exceeded with url: /session/64f282d3f3ed487783ad6177b6334e1e/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023785B08B50>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-07-21 22:36:37,824 - INFO - Page 2/2: https://www.naukri.com/etl-developer-jobs-in-bengaluru-2
+2025-07-21 22:36:42,425 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023785B637D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/64f282d3f3ed487783ad6177b6334e1e/url
+2025-07-21 22:36:47,124 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023785B6DE10>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/64f282d3f3ed487783ad6177b6334e1e/url
+2025-07-21 22:36:51,189 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023785B6E7D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/64f282d3f3ed487783ad6177b6334e1e/url
+2025-07-21 22:36:55,350 - ERROR - Error on page 2 for keyword 'ETL Developer': HTTPConnectionPool(host='localhost', port=62730): Max retries exceeded with url: /session/64f282d3f3ed487783ad6177b6334e1e/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023785B6F190>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-07-21 22:36:55,350 - INFO - 🔍 Processing keyword 4/4: Analytics Engineer
+2025-07-21 22:36:55,354 - INFO - Page 1/2: https://www.naukri.com/analytics-engineer-jobs-in-bengaluru-1
+2025-07-21 22:37:00,139 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023785B6FCD0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/64f282d3f3ed487783ad6177b6334e1e/url
+2025-07-21 22:37:04,939 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023785B78910>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/64f282d3f3ed487783ad6177b6334e1e/url
+2025-07-21 22:37:08,977 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023785B79490>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/64f282d3f3ed487783ad6177b6334e1e/url
+2025-07-21 22:37:13,037 - ERROR - Error on page 1 for keyword 'Analytics Engineer': HTTPConnectionPool(host='localhost', port=62730): Max retries exceeded with url: /session/64f282d3f3ed487783ad6177b6334e1e/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023785B79FD0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-07-21 22:37:13,037 - INFO - Page 2/2: https://www.naukri.com/analytics-engineer-jobs-in-bengaluru-2
+2025-07-21 22:37:17,089 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023785B6EF90>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/64f282d3f3ed487783ad6177b6334e1e/url
+2025-07-21 22:37:21,130 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023785B6E390>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/64f282d3f3ed487783ad6177b6334e1e/url
+2025-07-21 22:37:25,177 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023785B6D310>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/64f282d3f3ed487783ad6177b6334e1e/url
+2025-07-21 22:37:29,507 - ERROR - Error on page 2 for keyword 'Analytics Engineer': HTTPConnectionPool(host='localhost', port=62730): Max retries exceeded with url: /session/64f282d3f3ed487783ad6177b6334e1e/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023785B6CED0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-07-21 22:37:29,507 - INFO - 🏁 AI session completed: 1 applications sent, 60 jobs analyzed
+2025-07-21 22:37:29,507 - INFO - 
+        ╔═══ ENHANCED NAUKRI BOT SESSION SUMMARY ═══
+        ║ 🔍 Total Jobs Analyzed: 60
+        ║ 🧠 AI Analysis Success: 1/60 (1.7%)
+        ║ ⭐ High Score Jobs (70+): 1
+        ║ ✅ Applications Sent: 1
+        ║ ❌ Skipped (Low Score): 59
+        ║ 🔄 Fallback Scores Used: 59
+        ║ 🚫 AI Failures: 0
+        ║ 📊 Extraction Failures: 20
+        ║ 📈 Application Rate: 1.7%
+        ╚═══════════════════════════════════════════
+        
+2025-07-21 22:37:29,509 - INFO - 💾 Phase 4: Saving enhanced results...
+2025-07-21 22:37:29,510 - INFO - Enhanced results saved with timestamp: 20250721_223729
+2025-07-21 22:37:29,519 - INFO - 🎉 Enhanced Naukri Bot session completed successfully!
+2025-07-21 22:59:39,324 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023785B6C910>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/64f282d3f3ed487783ad6177b6334e1e
+2025-07-21 22:59:43,370 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023785B19950>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/64f282d3f3ed487783ad6177b6334e1e
+2025-07-21 22:59:47,449 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023785B19890>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/64f282d3f3ed487783ad6177b6334e1e
+2025-07-21 23:05:20,778 - INFO - 🚀 Starting Enhanced Naukri Bot with AI Intelligence...
+2025-07-21 23:05:20,778 - INFO - Configuration loaded successfully
+2025-07-21 23:05:20,778 - INFO - Job database initialized
+2025-07-21 23:05:20,778 - INFO - Bot initialized successfully
+2025-07-21 23:05:20,778 - INFO - Enhanced configuration loaded successfully
+2025-07-21 23:05:20,778 - INFO - Gemini API initialized successfully
+2025-07-21 23:05:21,755 - WARNING - ⚠️ Gemini API test failed: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 37
+}
+]
+2025-07-21 23:05:21,764 - INFO - AI processor initialized successfully
+2025-07-21 23:05:21,764 - INFO - Enhanced Naukri Bot initialized successfully!
+2025-07-21 23:05:21,770 - INFO - 📡 Phase 1: Setting up browser...
+2025-07-21 23:05:21,772 - INFO - Setting up browser...
+2025-07-21 23:05:21,815 - INFO - Operating System: Windows-10-10.0.22000-SP0
+2025-07-21 23:05:21,849 - INFO - 🔄 Attempting automatic driver download...
+2025-07-21 23:05:21,849 - INFO - ====== WebDriver manager ======
+2025-07-21 23:05:22,899 - INFO - Get LATEST edgedriver version for Edge 138.0.3351
+2025-07-21 23:05:22,916 - WARNING - Webdriver manager failed: Could not reach host. Are you offline?
+2025-07-21 23:05:22,916 - WARNING - Driver setup method failed: Could not reach host. Are you offline?
+2025-07-21 23:05:22,916 - INFO - 🔄 Trying manual path: C:\WebDrivers\msedgedriver.exe
+2025-07-21 23:05:25,769 - INFO - ✅ Browser setup successful
+2025-07-21 23:05:25,776 - INFO - 🔐 Phase 2: Logging into Naukri...
+2025-07-21 23:05:25,787 - INFO - Login attempt 1/3
+2025-07-21 23:05:33,308 - INFO - ✅ Found email field with selector: #usernameField
+2025-07-21 23:05:43,022 - INFO - ✅ Found password field with selector: #passwordField
+2025-07-21 23:05:48,331 - INFO - ✅ Found login button with selector: //button[@type='submit']
+2025-07-21 23:05:55,683 - INFO - ✅ Login verified using: .nI-gNb-drawer__icon
+2025-07-21 23:05:55,683 - INFO - ✅ Login successful!
+2025-07-21 23:05:55,700 - INFO - ✅ Authentication verified using: Profile menu icon
+2025-07-21 23:05:55,700 - INFO - ✅ Authentication successful!
+2025-07-21 23:05:55,700 - INFO - 🧠 Phase 3: Starting AI-powered job processing...
+2025-07-21 23:05:55,716 - INFO - ✅ Authentication verified using: Profile menu icon
+2025-07-21 23:05:55,716 - INFO - 🎯 Starting AI-powered job processing (max 15 applications)
+2025-07-21 23:05:55,716 - INFO - 🔍 Processing keyword 1/4: Data Engineer
+2025-07-21 23:05:55,719 - INFO - Page 1/2: https://www.naukri.com/data-engineer-jobs-in-bengaluru-1
+2025-07-21 23:06:04,433 - INFO - Found 20 job cards on page
+2025-07-21 23:06:04,433 - INFO - 🔍 Processing job card 1/20
+2025-07-21 23:06:19,509 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:06:19,524 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:06:19,541 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-07-21 23:06:21,048 - ERROR - Gemini API error for Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 38
+}
+]
+2025-07-21 23:06:21,053 - INFO - 🤖 AI Analysis: Data Engineer scored 40/100
+2025-07-21 23:06:21,053 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 40/100
+2025-07-21 23:06:23,812 - INFO - 🔍 Processing job card 2/20
+2025-07-21 23:06:38,852 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:06:38,900 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:06:38,921 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-07-21 23:06:39,240 - ERROR - Gemini API error for Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 19
+}
+]
+2025-07-21 23:06:39,246 - INFO - 🤖 AI Analysis: Data Engineer scored 40/100
+2025-07-21 23:06:39,246 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 40/100
+2025-07-21 23:06:42,906 - INFO - 🔍 Processing job card 3/20
+2025-07-21 23:06:58,035 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:06:58,078 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:06:58,109 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-07-21 23:06:58,404 - ERROR - Gemini API error for Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+}
+]
+2025-07-21 23:06:58,404 - INFO - 🤖 AI Analysis: Data Engineer scored 40/100
+2025-07-21 23:06:58,404 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 40/100
+2025-07-21 23:07:01,194 - INFO - 🔍 Processing job card 4/20
+2025-07-21 23:07:16,322 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:07:16,369 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:07:16,380 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-07-21 23:07:16,678 - ERROR - Gemini API error for Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 42
+}
+]
+2025-07-21 23:07:16,678 - INFO - 🤖 AI Analysis: Data Engineer scored 40/100
+2025-07-21 23:07:16,678 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 40/100
+2025-07-21 23:07:19,833 - INFO - 🔍 Processing job card 5/20
+2025-07-21 23:07:34,866 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:07:34,883 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:07:34,906 - INFO - ✅ Extracted: SQL Developer / Data Engineer at Company Name
+2025-07-21 23:07:36,417 - ERROR - Gemini API error for SQL Developer / Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 22
+}
+]
+2025-07-21 23:07:36,418 - INFO - 🤖 AI Analysis: SQL Developer / Data Engineer scored 46/100
+2025-07-21 23:07:36,418 - INFO - ⏭️  SKIPPED: SQL Developer / Data Engineer | Score: 46/100
+2025-07-21 23:07:40,193 - INFO - 🔍 Processing job card 6/20
+2025-07-21 23:07:55,259 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:07:55,272 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:07:55,302 - INFO - ✅ Extracted: Python Data Engineer at Company Name
+2025-07-21 23:07:55,666 - ERROR - Gemini API error for Python Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 3
+}
+]
+2025-07-21 23:07:55,668 - INFO - 🤖 AI Analysis: Python Data Engineer scored 48/100
+2025-07-21 23:07:55,668 - INFO - ⏭️  SKIPPED: Python Data Engineer | Score: 48/100
+2025-07-21 23:07:58,442 - INFO - 🔍 Processing job card 7/20
+2025-07-21 23:08:13,492 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:08:13,519 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:08:13,532 - INFO - ✅ Extracted: Data Engineer at Arsr Technologies
+2025-07-21 23:08:13,896 - ERROR - Gemini API error for Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 45
+}
+]
+2025-07-21 23:08:13,902 - INFO - 🤖 AI Analysis: Data Engineer scored 40/100
+2025-07-21 23:08:13,902 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 40/100
+2025-07-21 23:08:17,291 - INFO - 🔍 Processing job card 8/20
+2025-07-21 23:08:32,373 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:08:32,389 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:08:32,411 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-07-21 23:08:33,139 - ERROR - Gemini API error for Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 26
+}
+]
+2025-07-21 23:08:33,143 - INFO - 🤖 AI Analysis: Data Engineer scored 40/100
+2025-07-21 23:08:33,143 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 40/100
+2025-07-21 23:08:35,924 - INFO - 🔍 Processing job card 9/20
+2025-07-21 23:08:50,996 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:08:51,011 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:08:51,027 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-07-21 23:08:51,314 - ERROR - Gemini API error for Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 7
+}
+]
+2025-07-21 23:08:51,318 - INFO - 🤖 AI Analysis: Data Engineer scored 40/100
+2025-07-21 23:08:51,318 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 40/100
+2025-07-21 23:08:54,961 - INFO - 🔍 Processing job card 10/20
+2025-07-21 23:09:10,040 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:09:10,079 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:09:10,109 - INFO - ✅ Extracted: Data Engineer - Dataiku / Python at Company Name
+2025-07-21 23:09:10,488 - ERROR - Gemini API error for Data Engineer - Dataiku / Python: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 48
+}
+]
+2025-07-21 23:09:10,488 - INFO - 🤖 AI Analysis: Data Engineer - Dataiku / Python scored 48/100
+2025-07-21 23:09:10,488 - INFO - ⏭️  SKIPPED: Data Engineer - Dataiku / Python | Score: 48/100
+2025-07-21 23:09:13,793 - INFO - 🔍 Processing job card 11/20
+2025-07-21 23:09:28,908 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:09:28,946 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:09:28,983 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-07-21 23:09:29,403 - ERROR - Gemini API error for Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 29
+}
+]
+2025-07-21 23:09:29,408 - INFO - 🤖 AI Analysis: Data Engineer scored 40/100
+2025-07-21 23:09:29,412 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 40/100
+2025-07-21 23:09:32,691 - INFO - 🔍 Processing job card 12/20
+2025-07-21 23:09:47,799 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:09:47,831 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:09:47,857 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-07-21 23:09:48,203 - ERROR - Gemini API error for Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 11
+}
+]
+2025-07-21 23:09:48,203 - INFO - 🤖 AI Analysis: Data Engineer scored 40/100
+2025-07-21 23:09:48,203 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 40/100
+2025-07-21 23:09:50,731 - INFO - 🔍 Processing job card 13/20
+2025-07-21 23:10:05,828 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:10:05,846 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:10:05,877 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-07-21 23:10:06,169 - ERROR - Gemini API error for Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 53
+}
+]
+2025-07-21 23:10:06,169 - INFO - 🤖 AI Analysis: Data Engineer scored 40/100
+2025-07-21 23:10:06,169 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 40/100
+2025-07-21 23:10:09,715 - INFO - 🔍 Processing job card 14/20
+2025-07-21 23:10:24,778 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:10:24,798 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:10:24,812 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-07-21 23:10:25,460 - ERROR - Gemini API error for Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 34
+}
+]
+2025-07-21 23:10:25,461 - INFO - 🤖 AI Analysis: Data Engineer scored 40/100
+2025-07-21 23:10:25,462 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 40/100
+2025-07-21 23:10:28,680 - INFO - 🔍 Processing job card 15/20
+2025-07-21 23:10:43,778 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:10:43,820 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:10:43,844 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-07-21 23:10:44,229 - ERROR - Gemini API error for Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 15
+}
+]
+2025-07-21 23:10:44,229 - INFO - 🤖 AI Analysis: Data Engineer scored 40/100
+2025-07-21 23:10:44,234 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 40/100
+2025-07-21 23:10:46,804 - INFO - 🔍 Processing job card 16/20
+2025-07-21 23:11:01,908 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:11:01,949 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:11:01,984 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-07-21 23:11:02,284 - ERROR - Gemini API error for Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 56
+}
+]
+2025-07-21 23:11:02,288 - INFO - 🤖 AI Analysis: Data Engineer scored 40/100
+2025-07-21 23:11:02,288 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 40/100
+2025-07-21 23:11:04,426 - INFO - 🔍 Processing job card 17/20
+2025-07-21 23:11:19,484 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:11:19,532 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:11:19,577 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-07-21 23:11:19,950 - ERROR - Gemini API error for Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 39
+}
+]
+2025-07-21 23:11:19,956 - INFO - 🤖 AI Analysis: Data Engineer scored 40/100
+2025-07-21 23:11:19,956 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 40/100
+2025-07-21 23:11:23,366 - INFO - 🔍 Processing job card 18/20
+2025-07-21 23:11:38,449 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:11:38,484 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:11:38,524 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-07-21 23:11:38,890 - ERROR - Gemini API error for Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 20
+}
+]
+2025-07-21 23:11:38,899 - INFO - 🤖 AI Analysis: Data Engineer scored 40/100
+2025-07-21 23:11:38,899 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 40/100
+2025-07-21 23:11:41,868 - INFO - 🔍 Processing job card 19/20
+2025-07-21 23:11:56,959 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:11:57,003 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:11:57,027 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-07-21 23:11:57,438 - ERROR - Gemini API error for Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 1
+}
+]
+2025-07-21 23:11:57,438 - INFO - 🤖 AI Analysis: Data Engineer scored 40/100
+2025-07-21 23:11:57,438 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 40/100
+2025-07-21 23:11:59,521 - INFO - 🔍 Processing job card 20/20
+2025-07-21 23:12:14,618 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:12:14,668 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:12:14,695 - INFO - ✅ Extracted: Data Engineer - Introlligent at Company Name
+2025-07-21 23:12:15,070 - ERROR - Gemini API error for Data Engineer - Introlligent: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 44
+}
+]
+2025-07-21 23:12:15,076 - INFO - 🤖 AI Analysis: Data Engineer - Introlligent scored 40/100
+2025-07-21 23:12:15,076 - INFO - ⏭️  SKIPPED: Data Engineer - Introlligent | Score: 40/100
+2025-07-21 23:12:17,905 - INFO - Page 2/2: https://www.naukri.com/data-engineer-jobs-in-bengaluru-2
+2025-07-21 23:12:26,098 - INFO - Found 20 job cards on page
+2025-07-21 23:12:26,098 - INFO - 🔍 Processing job card 1/20
+2025-07-21 23:12:41,204 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:12:41,240 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:12:41,269 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-07-21 23:12:41,558 - ERROR - Gemini API error for Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 17
+}
+]
+2025-07-21 23:12:41,563 - INFO - 🤖 AI Analysis: Data Engineer scored 40/100
+2025-07-21 23:12:41,563 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 40/100
+2025-07-21 23:12:45,287 - INFO - 🔍 Processing job card 2/20
+2025-07-21 23:13:00,417 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:13:00,484 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:13:00,743 - INFO - ✅ Extracted: Data Engineer - Introlligent at Company Name
+2025-07-21 23:13:01,234 - ERROR - Gemini API error for Data Engineer - Introlligent: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 58
+}
+]
+2025-07-21 23:13:01,234 - INFO - 🤖 AI Analysis: Data Engineer - Introlligent scored 40/100
+2025-07-21 23:13:01,235 - INFO - ⏭️  SKIPPED: Data Engineer - Introlligent | Score: 40/100
+2025-07-21 23:13:04,164 - INFO - 🔍 Processing job card 3/20
+2025-07-21 23:13:19,273 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:13:19,339 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:13:19,364 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-07-21 23:13:19,883 - ERROR - Gemini API error for Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 39
+}
+]
+2025-07-21 23:13:19,889 - INFO - 🤖 AI Analysis: Data Engineer scored 40/100
+2025-07-21 23:13:19,889 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 40/100
+2025-07-21 23:13:22,323 - INFO - 🔍 Processing job card 4/20
+2025-07-21 23:13:37,410 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:13:37,482 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:13:37,531 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-07-21 23:13:37,893 - ERROR - Gemini API error for Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 21
+}
+]
+2025-07-21 23:13:37,893 - INFO - 🤖 AI Analysis: Data Engineer scored 40/100
+2025-07-21 23:13:37,898 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 40/100
+2025-07-21 23:13:41,681 - INFO - 🔍 Processing job card 5/20
+2025-07-21 23:13:56,802 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:13:56,827 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:13:56,872 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-07-21 23:13:57,157 - ERROR - Gemini API error for Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 2
+}
+]
+2025-07-21 23:13:57,159 - INFO - 🤖 AI Analysis: Data Engineer scored 40/100
+2025-07-21 23:13:57,162 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 40/100
+2025-07-21 23:13:59,840 - INFO - 🔍 Processing job card 6/20
+2025-07-21 23:14:14,932 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:14:14,962 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:14:14,993 - INFO - ✅ Extracted: Cognite Data Engineer at Company Name
+2025-07-21 23:14:15,316 - ERROR - Gemini API error for Cognite Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 43
+}
+]
+2025-07-21 23:14:15,318 - INFO - 🤖 AI Analysis: Cognite Data Engineer scored 40/100
+2025-07-21 23:14:15,320 - INFO - ⏭️  SKIPPED: Cognite Data Engineer | Score: 40/100
+2025-07-21 23:14:18,849 - INFO - 🔍 Processing job card 7/20
+2025-07-21 23:14:33,936 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:14:33,959 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:14:33,988 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-07-21 23:14:34,309 - ERROR - Gemini API error for Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 24
+}
+]
+2025-07-21 23:14:34,312 - INFO - 🤖 AI Analysis: Data Engineer scored 40/100
+2025-07-21 23:14:34,313 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 40/100
+2025-07-21 23:14:37,469 - INFO - 🔍 Processing job card 8/20
+2025-07-21 23:14:52,514 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:14:52,536 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:14:52,559 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-07-21 23:14:57,657 - ERROR - Gemini API error for Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 1
+}
+]
+2025-07-21 23:14:57,657 - INFO - 🤖 AI Analysis: Data Engineer scored 40/100
+2025-07-21 23:14:57,658 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 40/100
+2025-07-21 23:15:00,927 - INFO - 🔍 Processing job card 9/20
+2025-07-21 23:15:16,730 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:15:16,745 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:15:16,757 - INFO - ✅ Extracted: Data Engineer (ETL, Go, Databricks) at Instinctools
+2025-07-21 23:15:17,054 - ERROR - Gemini API error for Data Engineer (ETL, Go, Databricks): 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 42
+}
+]
+2025-07-21 23:15:17,054 - INFO - 🤖 AI Analysis: Data Engineer (ETL, Go, Databricks) scored 50/100
+2025-07-21 23:15:17,054 - INFO - ⏭️  SKIPPED: Data Engineer (ETL, Go, Databricks) | Score: 50/100
+2025-07-21 23:15:19,470 - INFO - 🔍 Processing job card 10/20
+2025-07-21 23:15:34,540 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:15:34,582 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:15:34,621 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-07-21 23:15:34,940 - ERROR - Gemini API error for Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 24
+}
+]
+2025-07-21 23:15:34,945 - INFO - 🤖 AI Analysis: Data Engineer scored 40/100
+2025-07-21 23:15:34,948 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 40/100
+2025-07-21 23:15:38,729 - INFO - 🔍 Processing job card 11/20
+2025-07-21 23:15:53,758 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:15:53,800 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:15:53,842 - INFO - ✅ Extracted: Data Engineer at Star4rall It Solutions
+2025-07-21 23:15:54,491 - ERROR - Gemini API error for Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 5
+}
+]
+2025-07-21 23:15:54,491 - INFO - 🤖 AI Analysis: Data Engineer scored 40/100
+2025-07-21 23:15:54,491 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 40/100
+2025-07-21 23:15:56,847 - INFO - 🔍 Processing job card 12/20
+2025-07-21 23:16:11,978 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:16:11,989 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:16:12,003 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-07-21 23:16:12,310 - ERROR - Gemini API error for Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 46
+}
+]
+2025-07-21 23:16:12,310 - INFO - 🤖 AI Analysis: Data Engineer scored 40/100
+2025-07-21 23:16:12,310 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 40/100
+2025-07-21 23:16:16,309 - INFO - 🔍 Processing job card 13/20
+2025-07-21 23:16:31,340 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:16:31,383 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:16:31,425 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-07-21 23:16:31,868 - ERROR - Gemini API error for Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 27
+}
+]
+2025-07-21 23:16:31,868 - INFO - 🤖 AI Analysis: Data Engineer scored 40/100
+2025-07-21 23:16:31,868 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 40/100
+2025-07-21 23:16:34,642 - INFO - 🔍 Processing job card 14/20
+2025-07-21 23:16:49,749 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:16:49,780 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:16:49,811 - INFO - ✅ Extracted: Data Engineer - Python / PySpark at BAY Area Technology Solutions
+2025-07-21 23:16:50,808 - ERROR - Gemini API error for Data Engineer - Python / PySpark: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 9
+}
+]
+2025-07-21 23:16:50,808 - INFO - 🤖 AI Analysis: Data Engineer - Python / PySpark scored 56/100
+2025-07-21 23:16:50,813 - INFO - ⏭️  SKIPPED: Data Engineer - Python / PySpark | Score: 56/100
+2025-07-21 23:16:52,996 - INFO - 🔍 Processing job card 15/20
+2025-07-21 23:17:08,112 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:17:08,138 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:17:08,168 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-07-21 23:17:08,518 - ERROR - Gemini API error for Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 50
+}
+]
+2025-07-21 23:17:08,554 - INFO - 🤖 AI Analysis: Data Engineer scored 40/100
+2025-07-21 23:17:08,559 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 40/100
+2025-07-21 23:17:10,848 - INFO - 🔍 Processing job card 16/20
+2025-07-21 23:17:26,918 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:17:26,939 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:17:26,958 - INFO - ✅ Extracted: Data Engineer - Databricks at Company Name
+2025-07-21 23:17:27,238 - ERROR - Gemini API error for Data Engineer - Databricks: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 31
+}
+]
+2025-07-21 23:17:27,238 - INFO - 🤖 AI Analysis: Data Engineer - Databricks scored 40/100
+2025-07-21 23:17:27,238 - INFO - ⏭️  SKIPPED: Data Engineer - Databricks | Score: 40/100
+2025-07-21 23:17:29,596 - INFO - 🔍 Processing job card 17/20
+2025-07-21 23:17:44,678 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:17:44,718 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:17:44,738 - INFO - ✅ Extracted: Data Engineer – Databricks at Company Name
+2025-07-21 23:17:45,019 - ERROR - Gemini API error for Data Engineer – Databricks: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 14
+}
+]
+2025-07-21 23:17:45,024 - INFO - 🤖 AI Analysis: Data Engineer – Databricks scored 40/100
+2025-07-21 23:17:45,024 - INFO - ⏭️  SKIPPED: Data Engineer – Databricks | Score: 40/100
+2025-07-21 23:17:48,193 - INFO - 🔍 Processing job card 18/20
+2025-07-21 23:18:03,318 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:18:03,383 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:18:03,415 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-07-21 23:18:03,712 - ERROR - Gemini API error for Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 55
+}
+]
+2025-07-21 23:18:03,728 - INFO - 🤖 AI Analysis: Data Engineer scored 40/100
+2025-07-21 23:18:03,728 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 40/100
+2025-07-21 23:18:06,802 - INFO - 🔍 Processing job card 19/20
+2025-07-21 23:18:21,901 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:18:21,933 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:18:22,048 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-07-21 23:18:22,333 - ERROR - Gemini API error for Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 36
+}
+]
+2025-07-21 23:18:22,333 - INFO - 🤖 AI Analysis: Data Engineer scored 40/100
+2025-07-21 23:18:22,333 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 40/100
+2025-07-21 23:18:24,841 - INFO - 🔍 Processing job card 20/20
+2025-07-21 23:18:39,898 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:18:39,921 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:18:40,052 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-07-21 23:18:40,348 - ERROR - Gemini API error for Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 18
+}
+]
+2025-07-21 23:18:40,348 - INFO - 🤖 AI Analysis: Data Engineer scored 40/100
+2025-07-21 23:18:40,348 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 40/100
+2025-07-21 23:18:43,505 - INFO - 🔍 Processing keyword 2/4: Python Developer
+2025-07-21 23:18:43,506 - INFO - Page 1/2: https://www.naukri.com/python-developer-jobs-in-bengaluru-1
+2025-07-21 23:18:53,678 - INFO - Found 20 job cards on page
+2025-07-21 23:18:53,678 - INFO - 🔍 Processing job card 1/20
+2025-07-21 23:19:08,762 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:19:08,793 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:19:08,822 - INFO - ✅ Extracted: Python Developer at Travitons Technologies
+2025-07-21 23:19:09,098 - ERROR - Gemini API error for Python Developer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 50
+}
+]
+2025-07-21 23:19:09,098 - INFO - 🤖 AI Analysis: Python Developer scored 38/100
+2025-07-21 23:19:09,098 - INFO - ⏭️  SKIPPED: Python Developer | Score: 38/100
+2025-07-21 23:19:12,593 - INFO - 🔍 Processing job card 2/20
+2025-07-21 23:19:27,668 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:19:27,764 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:19:27,780 - INFO - ✅ Extracted: PYTHON DEVELOPER at Company Name
+2025-07-21 23:19:28,098 - ERROR - Gemini API error for PYTHON DEVELOPER: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 31
+}
+]
+2025-07-21 23:19:28,106 - INFO - 🤖 AI Analysis: PYTHON DEVELOPER scored 38/100
+2025-07-21 23:19:28,108 - INFO - ⏭️  SKIPPED: PYTHON DEVELOPER | Score: 38/100
+2025-07-21 23:19:30,391 - INFO - 🔍 Processing job card 3/20
+2025-07-21 23:19:45,553 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:19:45,736 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:19:46,036 - INFO - ✅ Extracted: Python Developer at Sunhive Solutions
+2025-07-21 23:19:46,358 - ERROR - Gemini API error for Python Developer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 12
+}
+]
+2025-07-21 23:19:46,361 - INFO - 🤖 AI Analysis: Python Developer scored 38/100
+2025-07-21 23:19:46,361 - INFO - ⏭️  SKIPPED: Python Developer | Score: 38/100
+2025-07-21 23:19:49,319 - INFO - 🔍 Processing job card 4/20
+2025-07-21 23:20:04,368 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:20:04,398 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:20:04,418 - INFO - ✅ Extracted: Python Developer (Mid-Level) at Company Name
+2025-07-21 23:20:05,024 - ERROR - Gemini API error for Python Developer (Mid-Level): 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 54
+}
+]
+2025-07-21 23:20:05,027 - INFO - 🤖 AI Analysis: Python Developer (Mid-Level) scored 38/100
+2025-07-21 23:20:05,027 - INFO - ⏭️  SKIPPED: Python Developer (Mid-Level) | Score: 38/100
+2025-07-21 23:20:08,121 - INFO - 🔍 Processing job card 5/20
+2025-07-21 23:20:23,208 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:20:23,228 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:20:23,241 - INFO - ✅ Extracted: Python Developer at Indian Cyber Security Solutions
+2025-07-21 23:20:23,568 - ERROR - Gemini API error for Python Developer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 35
+}
+]
+2025-07-21 23:20:23,568 - INFO - 🤖 AI Analysis: Python Developer scored 38/100
+2025-07-21 23:20:23,568 - INFO - ⏭️  SKIPPED: Python Developer | Score: 38/100
+2025-07-21 23:20:27,239 - INFO - 🔍 Processing job card 6/20
+2025-07-21 23:20:42,298 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:20:42,324 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:20:42,361 - INFO - ✅ Extracted: Python Developer at Company Name
+2025-07-21 23:20:42,643 - ERROR - Gemini API error for Python Developer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 16
+}
+]
+2025-07-21 23:20:42,648 - INFO - 🤖 AI Analysis: Python Developer scored 38/100
+2025-07-21 23:20:42,648 - INFO - ⏭️  SKIPPED: Python Developer | Score: 38/100
+2025-07-21 23:20:44,960 - INFO - 🔍 Processing job card 7/20
+2025-07-21 23:21:00,048 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:21:00,078 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:21:00,090 - INFO - ✅ Extracted: python developer at Techno Facts Solutions
+2025-07-21 23:21:00,414 - ERROR - Gemini API error for python developer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 58
+}
+]
+2025-07-21 23:21:00,418 - INFO - 🤖 AI Analysis: python developer scored 38/100
+2025-07-21 23:21:00,418 - INFO - ⏭️  SKIPPED: python developer | Score: 38/100
+2025-07-21 23:21:03,226 - INFO - 🔍 Processing job card 8/20
+2025-07-21 23:21:18,311 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:21:18,352 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:21:18,384 - INFO - ✅ Extracted: Python Software Developer at Company Name
+2025-07-21 23:21:18,659 - ERROR - Gemini API error for Python Software Developer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 40
+}
+]
+2025-07-21 23:21:18,659 - INFO - 🤖 AI Analysis: Python Software Developer scored 8/100
+2025-07-21 23:21:18,659 - INFO - ⏭️  SKIPPED: Python Software Developer | Score: 8/100
+2025-07-21 23:21:20,823 - INFO - 🔍 Processing job card 9/20
+2025-07-21 23:21:35,848 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:21:35,868 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:21:35,878 - INFO - ✅ Extracted: Python Developer-PAN INDIA_RA at Company Name
+2025-07-21 23:21:36,258 - ERROR - Gemini API error for Python Developer-PAN INDIA_RA: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 23
+}
+]
+2025-07-21 23:21:36,261 - INFO - 🤖 AI Analysis: Python Developer-PAN INDIA_RA scored 38/100
+2025-07-21 23:21:36,261 - INFO - ⏭️  SKIPPED: Python Developer-PAN INDIA_RA | Score: 38/100
+2025-07-21 23:21:39,821 - INFO - 🔍 Processing job card 10/20
+2025-07-21 23:21:54,904 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:21:54,928 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:21:54,948 - INFO - ✅ Extracted: Python Developer -ENG - Infosys@ PAN India at Company Name
+2025-07-21 23:21:55,518 - ERROR - Gemini API error for Python Developer -ENG - Infosys@ PAN India: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 3
+}
+]
+2025-07-21 23:21:55,538 - INFO - 🤖 AI Analysis: Python Developer -ENG - Infosys@ PAN India scored 18/100
+2025-07-21 23:21:55,538 - INFO - ⏭️  SKIPPED: Python Developer -ENG - Infosys@ PAN India | Score: 18/100
+2025-07-21 23:21:57,823 - INFO - 🔍 Processing job card 11/20
+2025-07-21 23:22:13,418 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:22:13,442 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:22:13,468 - INFO - ✅ Extracted: Python Developer at Company Name
+2025-07-21 23:22:13,883 - ERROR - Gemini API error for Python Developer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 45
+}
+]
+2025-07-21 23:22:13,883 - INFO - 🤖 AI Analysis: Python Developer scored 38/100
+2025-07-21 23:22:13,883 - INFO - ⏭️  SKIPPED: Python Developer | Score: 38/100
+2025-07-21 23:22:17,063 - INFO - 🔍 Processing job card 12/20
+2025-07-21 23:22:32,173 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:22:32,212 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:22:32,252 - INFO - ✅ Extracted: Python Developer@Infosys at Company Name
+2025-07-21 23:22:32,623 - ERROR - Gemini API error for Python Developer@Infosys: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 26
+}
+]
+2025-07-21 23:22:32,625 - INFO - 🤖 AI Analysis: Python Developer@Infosys scored 18/100
+2025-07-21 23:22:32,625 - INFO - ⏭️  SKIPPED: Python Developer@Infosys | Score: 18/100
+2025-07-21 23:22:34,657 - INFO - 🔍 Processing job card 13/20
+2025-07-21 23:22:49,731 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:22:49,761 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:22:49,790 - INFO - ✅ Extracted: Python Developer at Aparajitha Corporate Services
+2025-07-21 23:22:50,212 - ERROR - Gemini API error for Python Developer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 9
+}
+]
+2025-07-21 23:22:50,220 - INFO - 🤖 AI Analysis: Python Developer scored 38/100
+2025-07-21 23:22:50,220 - INFO - ⏭️  SKIPPED: Python Developer | Score: 38/100
+2025-07-21 23:22:53,359 - INFO - 🔍 Processing job card 14/20
+2025-07-21 23:23:15,145 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:23:15,478 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:23:15,550 - INFO - ✅ Extracted: Python Software Developer-AB Pan India at Company Name
+2025-07-21 23:23:15,873 - ERROR - Gemini API error for Python Software Developer-AB Pan India: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 43
+}
+]
+2025-07-21 23:23:15,878 - INFO - 🤖 AI Analysis: Python Software Developer-AB Pan India scored 8/100
+2025-07-21 23:23:15,878 - INFO - ⏭️  SKIPPED: Python Software Developer-AB Pan India | Score: 8/100
+2025-07-21 23:23:17,927 - INFO - 🔍 Processing job card 15/20
+2025-07-21 23:23:32,978 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:23:33,008 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:23:33,025 - INFO - ✅ Extracted: Python Developer at Company Name
+2025-07-21 23:23:33,308 - ERROR - Gemini API error for Python Developer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 25
+}
+]
+2025-07-21 23:23:33,308 - INFO - 🤖 AI Analysis: Python Developer scored 38/100
+2025-07-21 23:23:33,308 - INFO - ⏭️  SKIPPED: Python Developer | Score: 38/100
+2025-07-21 23:23:37,073 - INFO - 🔍 Processing job card 16/20
+2025-07-21 23:23:55,775 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:23:59,634 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:23:59,808 - INFO - ✅ Extracted: Developer - Python at Company Name
+2025-07-21 23:24:00,088 - ERROR - Gemini API error for Developer - Python: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 59
+}
+]
+2025-07-21 23:24:00,108 - INFO - 🤖 AI Analysis: Developer - Python scored 8/100
+2025-07-21 23:24:00,112 - INFO - ⏭️  SKIPPED: Developer - Python | Score: 8/100
+2025-07-21 23:24:02,326 - INFO - 🔍 Processing job card 17/20
+2025-07-21 23:24:19,971 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:24:20,003 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:24:20,018 - INFO - ✅ Extracted: Python Developer at Company Name
+2025-07-21 23:24:20,334 - ERROR - Gemini API error for Python Developer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 38
+}
+]
+2025-07-21 23:24:20,334 - INFO - 🤖 AI Analysis: Python Developer scored 38/100
+2025-07-21 23:24:20,334 - INFO - ⏭️  SKIPPED: Python Developer | Score: 38/100
+2025-07-21 23:24:24,242 - INFO - 🔍 Processing job card 18/20
+2025-07-21 23:24:39,328 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:24:39,349 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:24:39,365 - INFO - ✅ Extracted: Python Developer at Global Information Systems Technology (GIST)
+2025-07-21 23:24:39,683 - ERROR - Gemini API error for Python Developer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 19
+}
+]
+2025-07-21 23:24:39,683 - INFO - 🤖 AI Analysis: Python Developer scored 38/100
+2025-07-21 23:24:39,683 - INFO - ⏭️  SKIPPED: Python Developer | Score: 38/100
+2025-07-21 23:24:43,666 - INFO - 🔍 Processing job card 19/20
+2025-07-21 23:24:59,358 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:24:59,381 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:24:59,404 - INFO - ✅ Extracted: Python Developers at Company Name
+2025-07-21 23:24:59,688 - ERROR - Gemini API error for Python Developers: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 59
+}
+]
+2025-07-21 23:24:59,688 - INFO - 🤖 AI Analysis: Python Developers scored 38/100
+2025-07-21 23:24:59,688 - INFO - ⏭️  SKIPPED: Python Developers | Score: 38/100
+2025-07-21 23:25:02,836 - INFO - 🔍 Processing job card 20/20
+2025-07-21 23:25:18,048 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:25:18,484 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:25:18,540 - INFO - ✅ Extracted: Python Developer -AB-Pan India at Company Name
+2025-07-21 23:25:18,820 - ERROR - Gemini API error for Python Developer -AB-Pan India: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 40
+}
+]
+2025-07-21 23:25:18,820 - INFO - 🤖 AI Analysis: Python Developer -AB-Pan India scored 38/100
+2025-07-21 23:25:18,828 - INFO - ⏭️  SKIPPED: Python Developer -AB-Pan India | Score: 38/100
+2025-07-21 23:25:22,245 - INFO - Page 2/2: https://www.naukri.com/python-developer-jobs-in-bengaluru-2
+2025-07-21 23:25:32,961 - INFO - Found 20 job cards on page
+2025-07-21 23:25:32,961 - INFO - 🔍 Processing job card 1/20
+2025-07-21 23:25:49,318 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:25:50,168 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:25:50,238 - INFO - ✅ Extracted: python developer at Techno Facts Solutions
+2025-07-21 23:25:50,534 - ERROR - Gemini API error for python developer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 8
+}
+]
+2025-07-21 23:25:50,539 - INFO - 🤖 AI Analysis: python developer scored 38/100
+2025-07-21 23:25:50,540 - INFO - ⏭️  SKIPPED: python developer | Score: 38/100
+2025-07-21 23:25:54,368 - INFO - 🔍 Processing job card 2/20
+2025-07-21 23:26:13,438 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:26:13,648 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:26:13,678 - INFO - ✅ Extracted: Python Developer at Company Name
+2025-07-21 23:26:13,998 - ERROR - Gemini API error for Python Developer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 45
+}
+]
+2025-07-21 23:26:13,998 - INFO - 🤖 AI Analysis: Python Developer scored 38/100
+2025-07-21 23:26:13,998 - INFO - ⏭️  SKIPPED: Python Developer | Score: 38/100
+2025-07-21 23:26:17,623 - INFO - 🔍 Processing job card 3/20
+2025-07-21 23:26:33,701 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:26:33,732 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:26:33,757 - INFO - ✅ Extracted: Python Developer at Xcel Hires Managment Solutions Pvt Ltd
+2025-07-21 23:26:34,052 - ERROR - Gemini API error for Python Developer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 25
+}
+]
+2025-07-21 23:26:34,052 - INFO - 🤖 AI Analysis: Python Developer scored 38/100
+2025-07-21 23:26:34,052 - INFO - ⏭️  SKIPPED: Python Developer | Score: 38/100
+2025-07-21 23:26:37,892 - INFO - 🔍 Processing job card 4/20
+2025-07-21 23:26:54,612 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:26:54,933 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:26:56,003 - INFO - ✅ Extracted: Python Developer at Bottle Lab Technologies
+2025-07-21 23:26:56,353 - ERROR - Gemini API error for Python Developer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 2
+}
+]
+2025-07-21 23:26:56,358 - INFO - 🤖 AI Analysis: Python Developer scored 38/100
+2025-07-21 23:26:56,359 - INFO - ⏭️  SKIPPED: Python Developer | Score: 38/100
+2025-07-21 23:26:59,973 - INFO - 🔍 Processing job card 5/20
+2025-07-21 23:27:15,131 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:27:15,193 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:27:15,251 - INFO - ✅ Extracted: Software Developer: Python & JavaScript at Company Name
+2025-07-21 23:27:15,649 - ERROR - Gemini API error for Software Developer: Python & JavaScript: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 43
+}
+]
+2025-07-21 23:27:15,649 - INFO - 🤖 AI Analysis: Software Developer: Python & JavaScript scored 8/100
+2025-07-21 23:27:15,649 - INFO - ⏭️  SKIPPED: Software Developer: Python & JavaScript | Score: 8/100
+2025-07-21 23:27:19,195 - INFO - 🔍 Processing job card 6/20
+2025-07-21 23:27:35,194 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:27:35,400 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:27:35,504 - INFO - ✅ Extracted: Python GITLAB CI CD Jenkins developer at Company Name
+2025-07-21 23:27:36,178 - ERROR - Gemini API error for Python GITLAB CI CD Jenkins developer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 23
+}
+]
+2025-07-21 23:27:36,178 - INFO - 🤖 AI Analysis: Python GITLAB CI CD Jenkins developer scored 8/100
+2025-07-21 23:27:36,178 - INFO - ⏭️  SKIPPED: Python GITLAB CI CD Jenkins developer | Score: 8/100
+2025-07-21 23:27:38,525 - INFO - 🔍 Processing job card 7/20
+2025-07-21 23:27:53,760 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:27:53,818 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:27:53,928 - INFO - ✅ Extracted: T&T - Customer - CS&D - Consultant - Omniverse Developer (Python) at Company Name
+2025-07-21 23:27:54,232 - ERROR - Gemini API error for T&T - Customer - CS&D - Consultant - Omniverse Developer (Python): 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 4
+}
+]
+2025-07-21 23:27:54,248 - INFO - 🤖 AI Analysis: T&T - Customer - CS&D - Consultant - Omniverse Developer (Python) scored 8/100
+2025-07-21 23:27:54,253 - INFO - ⏭️  SKIPPED: T&T - Customer - CS&D - Consultant - Omniverse Developer (Python) | Score: 8/100
+2025-07-21 23:27:58,095 - INFO - 🔍 Processing job card 8/20
+2025-07-21 23:28:14,804 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:28:15,426 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:28:15,618 - INFO - ✅ Extracted: Python Software Developer at Company Name
+2025-07-21 23:28:15,900 - ERROR - Gemini API error for Python Software Developer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 43
+}
+]
+2025-07-21 23:28:15,902 - INFO - 🤖 AI Analysis: Python Software Developer scored 8/100
+2025-07-21 23:28:15,902 - INFO - ⏭️  SKIPPED: Python Software Developer | Score: 8/100
+2025-07-21 23:28:18,502 - INFO - 🔍 Processing job card 9/20
+2025-07-21 23:28:39,742 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:28:39,993 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:28:40,448 - INFO - ✅ Extracted: Python Software Developer at Company Name
+2025-07-21 23:28:41,028 - ERROR - Gemini API error for Python Software Developer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 18
+}
+]
+2025-07-21 23:28:41,028 - INFO - 🤖 AI Analysis: Python Software Developer scored 8/100
+2025-07-21 23:28:41,028 - INFO - ⏭️  SKIPPED: Python Software Developer | Score: 8/100
+2025-07-21 23:28:44,237 - INFO - 🔍 Processing job card 10/20
+2025-07-21 23:28:59,326 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:28:59,380 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:28:59,444 - INFO - ✅ Extracted: Python ML developer at Company Name
+2025-07-21 23:28:59,718 - ERROR - Gemini API error for Python ML developer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 59
+}
+]
+2025-07-21 23:28:59,718 - INFO - 🤖 AI Analysis: Python ML developer scored 8/100
+2025-07-21 23:28:59,718 - INFO - ⏭️  SKIPPED: Python ML developer | Score: 8/100
+2025-07-21 23:29:02,524 - INFO - 🔍 Processing job card 11/20
+2025-07-21 23:29:24,635 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:29:24,682 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:29:24,808 - INFO - ✅ Extracted: Python Developer at MWB Technologies
+2025-07-21 23:29:25,081 - ERROR - Gemini API error for Python Developer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 34
+}
+]
+2025-07-21 23:29:25,081 - INFO - 🤖 AI Analysis: Python Developer scored 38/100
+2025-07-21 23:29:25,081 - INFO - ⏭️  SKIPPED: Python Developer | Score: 38/100
+2025-07-21 23:29:28,300 - INFO - 🔍 Processing job card 12/20
+2025-07-21 23:29:40,748 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:29:40,852 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:29:41,304 - INFO - ✅ Extracted: Python Developer at Company Name
+2025-07-21 23:29:41,980 - ERROR - Gemini API error for Python Developer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 17
+}
+]
+2025-07-21 23:29:41,993 - INFO - 🤖 AI Analysis: Python Developer scored 38/100
+2025-07-21 23:29:41,993 - INFO - ⏭️  SKIPPED: Python Developer | Score: 38/100
+2025-07-21 23:29:45,474 - INFO - 🔍 Processing job card 13/20
+2025-07-21 23:30:01,463 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:30:01,520 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:30:01,571 - INFO - ✅ Extracted: Python Software Developer-AB-Bengaluru,Chennai,Chandigarh at Company Name
+2025-07-21 23:30:01,874 - ERROR - Gemini API error for Python Software Developer-AB-Bengaluru,Chennai,Chandigarh: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 57
+}
+]
+2025-07-21 23:30:01,890 - INFO - 🤖 AI Analysis: Python Software Developer-AB-Bengaluru,Chennai,Chandigarh scored 18/100
+2025-07-21 23:30:01,890 - INFO - ⏭️  SKIPPED: Python Software Developer-AB-Bengaluru,Chennai,Chandigarh | Score: 18/100
+2025-07-21 23:30:04,518 - INFO - 🔍 Processing job card 14/20
+2025-07-21 23:30:22,349 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:30:22,363 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:30:22,379 - INFO - ✅ Extracted: Python Software Developer at Company Name
+2025-07-21 23:30:22,692 - ERROR - Gemini API error for Python Software Developer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 36
+}
+]
+2025-07-21 23:30:22,698 - INFO - 🤖 AI Analysis: Python Software Developer scored 8/100
+2025-07-21 23:30:22,698 - INFO - ⏭️  SKIPPED: Python Software Developer | Score: 8/100
+2025-07-21 23:30:25,006 - INFO - 🔍 Processing job card 15/20
+2025-07-21 23:30:40,059 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:30:40,083 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:30:40,099 - INFO - ✅ Extracted: Python Developer at Company Name
+2025-07-21 23:30:40,398 - ERROR - Gemini API error for Python Developer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 18
+}
+]
+2025-07-21 23:30:40,398 - INFO - 🤖 AI Analysis: Python Developer scored 38/100
+2025-07-21 23:30:40,398 - INFO - ⏭️  SKIPPED: Python Developer | Score: 38/100
+2025-07-21 23:30:43,284 - INFO - 🔍 Processing job card 16/20
+2025-07-21 23:30:58,403 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:30:58,418 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:30:58,443 - INFO - ✅ Extracted: PYTHON DEVELOPER at Company Name
+2025-07-21 23:30:58,737 - ERROR - Gemini API error for PYTHON DEVELOPER: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+}
+]
+2025-07-21 23:30:58,737 - INFO - 🤖 AI Analysis: PYTHON DEVELOPER scored 38/100
+2025-07-21 23:30:58,737 - INFO - ⏭️  SKIPPED: PYTHON DEVELOPER | Score: 38/100
+2025-07-21 23:31:02,641 - INFO - 🔍 Processing job card 17/20
+2025-07-21 23:31:17,678 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:31:17,701 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:31:17,717 - INFO - ✅ Extracted: Python Developer at Weboccult Technologies
+2025-07-21 23:31:18,021 - ERROR - Gemini API error for Python Developer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 41
+}
+]
+2025-07-21 23:31:18,021 - INFO - 🤖 AI Analysis: Python Developer scored 38/100
+2025-07-21 23:31:18,028 - INFO - ⏭️  SKIPPED: Python Developer | Score: 38/100
+2025-07-21 23:31:21,193 - INFO - 🔍 Processing job card 18/20
+2025-07-21 23:31:36,229 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:31:36,253 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:31:36,261 - INFO - ✅ Extracted: Python developer at Company Name
+2025-07-21 23:31:36,553 - ERROR - Gemini API error for Python developer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 22
+}
+]
+2025-07-21 23:31:36,553 - INFO - 🤖 AI Analysis: Python developer scored 38/100
+2025-07-21 23:31:36,553 - INFO - ⏭️  SKIPPED: Python developer | Score: 38/100
+2025-07-21 23:31:39,556 - INFO - 🔍 Processing job card 19/20
+2025-07-21 23:31:54,622 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:31:54,653 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:31:54,678 - INFO - ✅ Extracted: PYTHON DEVELOPER at Intelgic Technologies
+2025-07-21 23:31:54,960 - ERROR - Gemini API error for PYTHON DEVELOPER: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 4
+}
+]
+2025-07-21 23:31:54,960 - INFO - 🤖 AI Analysis: PYTHON DEVELOPER scored 38/100
+2025-07-21 23:31:54,960 - INFO - ⏭️  SKIPPED: PYTHON DEVELOPER | Score: 38/100
+2025-07-21 23:31:57,126 - INFO - 🔍 Processing job card 20/20
+2025-07-21 23:32:12,339 - WARNING - ⏰ Company extraction timeout
+2025-07-21 23:32:12,429 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 23:32:12,516 - INFO - ✅ Extracted: Python Developer at TalentWell Solutions
+2025-07-21 23:32:12,798 - ERROR - Gemini API error for Python Developer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 46
+}
+]
+2025-07-21 23:32:12,798 - INFO - 🤖 AI Analysis: Python Developer scored 38/100
+2025-07-21 23:32:12,798 - INFO - ⏭️  SKIPPED: Python Developer | Score: 38/100
+2025-07-21 23:32:16,608 - INFO - 🔍 Processing keyword 3/4: ETL Developer
+2025-07-21 23:32:16,608 - INFO - Page 1/2: https://www.naukri.com/etl-developer-jobs-in-bengaluru-1
+2025-07-21 23:32:26,736 - WARNING - ❌ No job cards found with any selector
+2025-07-21 23:32:26,737 - INFO - Found 0 job cards on page
+2025-07-21 23:32:26,737 - WARNING - No job cards found on page
+2025-07-21 23:32:26,737 - INFO - Page 2/2: https://www.naukri.com/etl-developer-jobs-in-bengaluru-2
+2025-07-21 23:32:26,745 - ERROR - Error on page 2 for keyword 'ETL Developer': Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff78c6a8c85+23461]
+	(No symbol) [0x0x7ff78c5fcd70]
+	(No symbol) [0x0x7ff78c3cce40]
+	(No symbol) [0x0x7ff78c40d473]
+	(No symbol) [0x0x7ff78c43a582]
+	(No symbol) [0x0x7ff78c3e5c7b]
+	(No symbol) [0x0x7ff78c437195]
+	(No symbol) [0x0x7ff78c4368aa]
+	(No symbol) [0x0x7ff78c3a2c75]
+	(No symbol) [0x0x7ff78c50e6fd]
+	(No symbol) [0x0x7ff78c51ba88]
+	GetHandleVerifier [0x0x7ff78c788acb+940523]
+	GetHandleVerifier [0x0x7ff78c791821+976705]
+	(No symbol) [0x0x7ff78c60a961]
+	(No symbol) [0x0x7ff78c3a17a7]
+	GetHandleVerifier [0x0x7ff78c8d62d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-21 23:32:26,751 - INFO - 🔍 Processing keyword 4/4: Analytics Engineer
+2025-07-21 23:32:26,752 - INFO - Page 1/2: https://www.naukri.com/analytics-engineer-jobs-in-bengaluru-1
+2025-07-21 23:32:26,754 - ERROR - Error on page 1 for keyword 'Analytics Engineer': Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff78c6a8c85+23461]
+	(No symbol) [0x0x7ff78c5fcd70]
+	(No symbol) [0x0x7ff78c3cce40]
+	(No symbol) [0x0x7ff78c40d473]
+	(No symbol) [0x0x7ff78c43a582]
+	(No symbol) [0x0x7ff78c3e5c7b]
+	(No symbol) [0x0x7ff78c437195]
+	(No symbol) [0x0x7ff78c4368aa]
+	(No symbol) [0x0x7ff78c3a2c75]
+	(No symbol) [0x0x7ff78c50e6fd]
+	(No symbol) [0x0x7ff78c51ba88]
+	GetHandleVerifier [0x0x7ff78c788acb+940523]
+	GetHandleVerifier [0x0x7ff78c791821+976705]
+	(No symbol) [0x0x7ff78c60a961]
+	(No symbol) [0x0x7ff78c3a17a7]
+	GetHandleVerifier [0x0x7ff78c8d62d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-21 23:32:26,760 - INFO - Page 2/2: https://www.naukri.com/analytics-engineer-jobs-in-bengaluru-2
+2025-07-21 23:32:26,762 - ERROR - Error on page 2 for keyword 'Analytics Engineer': Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff78c6a8c85+23461]
+	(No symbol) [0x0x7ff78c5fcd70]
+	(No symbol) [0x0x7ff78c3cce40]
+	(No symbol) [0x0x7ff78c40d473]
+	(No symbol) [0x0x7ff78c43a582]
+	(No symbol) [0x0x7ff78c3e5c7b]
+	(No symbol) [0x0x7ff78c437195]
+	(No symbol) [0x0x7ff78c4368aa]
+	(No symbol) [0x0x7ff78c3a2c75]
+	(No symbol) [0x0x7ff78c50e6fd]
+	(No symbol) [0x0x7ff78c51ba88]
+	GetHandleVerifier [0x0x7ff78c788acb+940523]
+	GetHandleVerifier [0x0x7ff78c791821+976705]
+	(No symbol) [0x0x7ff78c60a961]
+	(No symbol) [0x0x7ff78c3a17a7]
+	GetHandleVerifier [0x0x7ff78c8d62d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-21 23:32:26,765 - INFO - 🏁 AI session completed: 0 applications sent, 80 jobs analyzed
+2025-07-21 23:32:26,765 - INFO - 
+        ╔═══ ENHANCED NAUKRI BOT SESSION SUMMARY ═══
+        ║ 🔍 Total Jobs Analyzed: 80
+        ║ 🧠 AI Analysis Success: 0/80 (0.0%)
+        ║ ⭐ High Score Jobs (70+): 0
+        ║ ✅ Applications Sent: 0
+        ║ ❌ Skipped (Low Score): 80
+        ║ 🔄 Fallback Scores Used: 80
+        ║ 🚫 AI Failures: 0
+        ║ 📊 Extraction Failures: 0
+        ║ 📈 Application Rate: 0.0%
+        ╚═══════════════════════════════════════════
+        
+2025-07-21 23:32:26,767 - WARNING - ⚠️ No applications were sent
+2025-07-21 23:32:26,774 - INFO - 💾 Phase 4: Saving enhanced results...
+2025-07-21 23:32:26,779 - INFO - Enhanced results saved with timestamp: 20250721_233226
+2025-07-21 23:32:26,789 - INFO - 🎉 Enhanced Naukri Bot session completed successfully!

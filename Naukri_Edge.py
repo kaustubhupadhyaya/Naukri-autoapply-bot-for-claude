@@ -27,6 +27,47 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 class IntelligentNaukriBot:
+    def verify_login_status(self):
+        """Verify if we're logged in to Naukri"""
+        try:
+            # Look for profile menu or user-specific elements
+            profile_indicators = [
+                "nI-gNb-drawer__icon",
+                "nI-gNb-userMenu",
+                "user-menu",
+                "profile-dropdown"
+            ]
+            
+            for indicator in profile_indicators:
+                try:
+                    self.driver.find_element(By.CLASS_NAME, indicator)
+                    logger.info(f"✅ Login verified using indicator: {indicator}")
+                    return True
+                except:
+                    continue
+            
+            # Check for login forms (indicates we're NOT logged in)
+            login_indicators = [
+                "login-form",
+                "emailId",
+                "pwd"
+            ]
+            
+            for indicator in login_indicators:
+                try:
+                    self.driver.find_element(By.ID, indicator)
+                    logger.warning(f"❌ Login form detected: {indicator}")
+                    return False
+                except:
+                    continue
+            
+            logger.warning("⚠️ Could not determine login status")
+            return False
+            
+        except Exception as e:
+            logger.error(f"Error verifying login status: {e}")
+            return False
+
     def __init__(self, config_file='config.json'):
         """Initialize the bot with configuration"""
         self.config = self.load_config(config_file)
@@ -124,86 +165,79 @@ class IntelligentNaukriBot:
             self.db_conn = None
     
     def setup_driver(self):
-        """Setup Edge WebDriver with auto-download and debugging"""
+        """Enhanced WebDriver setup with better error handling - FIXED VERSION"""
         try:
             logger.info("Setting up browser...")
+            logger.info(f"Operating System: {platform.platform()}")
             
-            # Add debugging
-            import platform
-            logger.info(f"Operating System: {platform.system()} {platform.release()}")
-            
-            # Check if webdriver-manager is installed
+            # Check if webdriver-manager is available
             try:
                 from webdriver_manager.microsoft import EdgeChromiumDriverManager
-                from selenium.webdriver.edge.service import Service
                 logger.info("✅ webdriver-manager imported successfully")
-            except ImportError as e:
-                logger.error(f"❌ webdriver-manager not found: {e}")
-                logger.info("Please run: pip install webdriver-manager")
-                raise
+            except ImportError:
+                logger.error("❌ webdriver-manager not installed. Run: pip install webdriver-manager")
+                return False
             
-            # Check Edge installation
-            try:
-                import subprocess
-                result = subprocess.run(['msedge', '--version'], capture_output=True, text=True, timeout=5)
-                if result.returncode == 0:
-                    logger.info(f"✅ Microsoft Edge found: {result.stdout.strip()}")
-                else:
-                    logger.warning("⚠️ Edge version check failed")
-            except:
-                logger.warning("⚠️ Could not verify Edge installation")
-            
+            # Edge options
             options = webdriver.EdgeOptions()
-            
-            # Browser options
-            options.add_argument('--no-sandbox')
-            options.add_argument('--disable-dev-shm-usage')
-            options.add_argument('--disable-blink-features=AutomationControlled')
+            options.add_argument("--disable-blink-features=AutomationControlled")
             options.add_experimental_option("excludeSwitches", ["enable-automation"])
             options.add_experimental_option('useAutomationExtension', False)
+            options.add_argument("--disable-web-security")
+            options.add_argument("--allow-running-insecure-content")
+            options.add_argument("--disable-extensions")
+            options.add_argument("--no-sandbox")
             
-            if self.config.get('webdriver', {}).get('headless', False):
-                options.add_argument('--headless')
-                logger.info("Running in headless mode")
+            # Try multiple approaches for driver setup
+            driver_setup_methods = [
+                self._try_auto_download_driver,
+                self._try_manual_driver_path,
+                self._try_system_driver
+            ]
             
-            # Try auto-download first
-            logger.info("🔄 Attempting to auto-download Edge WebDriver...")
-            try:
-                driver_path = EdgeChromiumDriverManager().install()
-                logger.info(f"✅ WebDriver downloaded to: {driver_path}")
-                
-                service = Service(driver_path)
-                self.driver = webdriver.Edge(service=service, options=options)
-                
-            except Exception as auto_error:
-                logger.error(f"❌ Auto-download failed: {auto_error}")
-                
-                # Fallback to manual path
-                manual_path = self.config.get('webdriver', {}).get('edge_driver_path', '')
-                if manual_path and os.path.exists(manual_path):
-                    logger.info(f"🔄 Trying manual path: {manual_path}")
-                    service = Service(manual_path)
-                    self.driver = webdriver.Edge(service=service, options=options)
-                else:
-                    logger.error(f"❌ Manual path not found: {manual_path}")
-                    raise auto_error
+            for method in driver_setup_methods:
+                try:
+                    driver = method(options)
+                    if driver:
+                        self.driver = driver
+                        self.driver.implicitly_wait(15)
+                        self.driver.set_page_load_timeout(45)
+                        logger.info("✅ Browser setup successful")
+                        return True
+                except Exception as e:
+                    logger.warning(f"Driver setup method failed: {e}")
+                    continue
             
-            # Configure driver
-            self.driver.implicitly_wait(self.config['webdriver']['implicit_wait'])
-            self.driver.set_page_load_timeout(self.config['webdriver']['page_load_timeout'])
-            
-            # Anti-detection
-            self.driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
-            
-            self.wait = WebDriverWait(self.driver, 20)
-            logger.info("✅ Browser setup successful")
-            return True  # Explicitly return True on success
+            logger.error("❌ All driver setup methods failed")
+            return False
             
         except Exception as e:
             logger.error(f"WebDriver setup failed: {e}")
-            import traceback
-            logger.error(f"Full traceback: {traceback.format_exc()}")
-            return False  # Return False on failure instead of raising
+            return False
+
+    def _try_auto_download_driver(self, options):
+        """Try automatic driver download"""
+        from webdriver_manager.microsoft import EdgeChromiumDriverManager
+        logger.info("🔄 Attempting to auto-download Edge WebDriver...")
+        
+        service = webdriver.EdgeService(EdgeChromiumDriverManager().install())
+        return webdriver.Edge(service=service, options=options)
+
+    def _try_manual_driver_path(self, options):
+        """Try manual driver path"""
+        manual_path = self.config['webdriver']['edge_driver_path']
+        logger.info(f"🔄 Trying manual path: {manual_path}")
+        
+        if os.path.exists(manual_path):
+            service = webdriver.EdgeService(manual_path)
+            return webdriver.Edge(service=service, options=options)
+        else:
+            raise FileNotFoundError(f"Manual driver path not found: {manual_path}")
+
+    def _try_system_driver(self, options):
+        """Try system-installed driver"""
+        logger.info("🔄 Trying system-installed driver...")
+        return webdriver.Edge(options=options)
 
     def smart_delay(self, min_delay=None, max_delay=None):
         """Smart delay with random variation"""

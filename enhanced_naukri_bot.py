@@ -260,42 +260,64 @@ class EnhancedNaukriBot(IntelligentNaukriBot):
         return min(score, 100)
 # Main execution
 def main():
-    """Main function with streaming job processing"""
+    """Main function with proper initialization sequence - FIXED VERSION"""
     bot = None
     try:
-        logger.info("🚀 Starting Enhanced Naukri Bot with Streaming Application...")
+        logger.info("🚀 Starting Enhanced Naukri Bot with AI Intelligence...")
         
+        # Initialize bot
         bot = EnhancedNaukriBot()
+        logger.info("✅ Enhanced Naukri Bot initialized successfully!")
         
-        # Setup and login
+        # CRITICAL FIX: Add missing setup and login sequence
         logger.info("📡 Phase 1: Setting up browser and logging in...")
-        bot.setup_driver()
-        bot.login()
         
-        # Stream processing: analyze and apply immediately
-        logger.info("🎯 Phase 2: Streaming job processing with immediate application...")
+        # Setup browser (was missing!)
+        logger.info("Setting up browser...")
+        if not bot.setup_driver():
+            logger.error("❌ Failed to setup browser")
+            return False
+        
+        # Login to Naukri (was missing!)  
+        logger.info("🔐 Phase 2: Logging into Naukri...")
+        if not bot.login():
+            logger.error("❌ Failed to login to Naukri")
+            return False
+            
+        # Add verification that we're logged in
+        try:
+            bot.driver.find_element(By.CLASS_NAME, "nI-gNb-drawer__icon")
+            logger.info("✅ Login verification successful")
+        except:
+            logger.error("❌ Login verification failed")
+            return False
+        
+        # Now we can safely process jobs
+        logger.info("📡 Phase 3: Scraping jobs with AI analysis...")
         success = bot.process_jobs_with_streaming_application()
         
         if not success:
             logger.warning("⚠️ No applications were sent")
         
         # Save results
-        logger.info("💾 Phase 3: Saving results...")
+        logger.info("💾 Phase 4: Saving results...")
         bot.save_results()
         
-        logger.info("🎉 Enhanced Naukri Bot completed successfully!")
+        logger.info("🎉 Enhanced Naukri Bot session completed successfully!")
+        return True
         
     except KeyboardInterrupt:
         logger.info("⏹️ Bot stopped by user")
+        return False
     except Exception as e:
         logger.error(f"💥 Fatal error: {e}")
         import traceback
         traceback.print_exc()
+        return False
     finally:
         if bot and hasattr(bot, 'driver') and bot.driver:
             input("Press Enter to close browser...")
             bot.driver.quit()
-
 
 if __name__ == "__main__":
     main()

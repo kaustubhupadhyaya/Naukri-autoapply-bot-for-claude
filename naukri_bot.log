@@ -35277,3 +35277,113 @@ Stacktrace:
         ╚═══════════════════════════════════════════
         
 2025-07-21 03:28:59,539 - INFO - 🎉 Enhanced Naukri Bot session completed successfully!
+2025-07-21 20:08:32,130 - INFO - 🚀 Starting Enhanced Naukri Bot with Streaming Application...
+2025-07-21 20:08:32,146 - INFO - Configuration loaded successfully
+2025-07-21 20:08:32,156 - INFO - Job database initialized
+2025-07-21 20:08:32,157 - INFO - Bot initialized successfully
+2025-07-21 20:08:32,158 - INFO - Gemini API initialized successfully
+2025-07-21 20:08:32,158 - INFO - 📡 Phase 1: Setting up browser and logging in...
+2025-07-21 20:08:32,158 - INFO - Setting up browser...
+2025-07-21 20:08:32,158 - INFO - Operating System: Windows 10
+2025-07-21 20:08:32,158 - INFO - ✅ webdriver-manager imported successfully
+2025-07-21 20:08:32,165 - WARNING - ⚠️ Could not verify Edge installation
+2025-07-21 20:08:32,170 - INFO - 🔄 Attempting to auto-download Edge WebDriver...
+2025-07-21 20:08:32,172 - INFO - ====== WebDriver manager ======
+2025-07-21 20:08:33,903 - INFO - Get LATEST edgedriver version for Edge 138.0.3351
+2025-07-21 20:08:33,913 - ERROR - ❌ Auto-download failed: Could not reach host. Are you offline?
+2025-07-21 20:08:33,915 - INFO - 🔄 Trying manual path: C:\WebDrivers\msedgedriver.exe
+2025-07-21 20:08:36,641 - INFO - ✅ Browser setup successful
+2025-07-21 20:08:36,641 - INFO - Login attempt 1/3
+2025-07-21 20:09:15,710 - INFO - Login successful!
+2025-07-21 20:09:15,711 - INFO - 🎯 Phase 2: Streaming job processing with immediate application...
+2025-07-21 20:09:15,711 - INFO - 🎯 Starting streaming job processing (max 50 applications)
+2025-07-21 20:09:15,711 - INFO - 🔍 Processing keyword 1/4: Data Engineer
+2025-07-21 20:09:15,712 - INFO - 📄 Processing page 1/3: https://www.naukri.com/data-engineer-jobs-in-bengaluru-1
+2025-07-21 20:09:29,336 - ERROR - Error processing jobs on page: name 'EC' is not defined
+2025-07-21 20:09:29,336 - WARNING - No jobs found on page 1, might be end of results
+2025-07-21 20:09:37,144 - INFO - 🔍 Processing keyword 2/4: Python Developer
+2025-07-21 20:09:37,144 - INFO - 📄 Processing page 1/3: https://www.naukri.com/python-developer-jobs-in-bengaluru-1
+2025-07-21 20:09:42,192 - ERROR - Error processing jobs on page: name 'EC' is not defined
+2025-07-21 20:09:42,192 - WARNING - No jobs found on page 1, might be end of results
+2025-07-21 20:09:47,500 - INFO - 🔍 Processing keyword 3/4: ETL Developer
+2025-07-21 20:09:47,500 - INFO - 📄 Processing page 1/3: https://www.naukri.com/etl-developer-jobs-in-bengaluru-1
+2025-07-21 20:09:54,639 - ERROR - Error processing jobs on page: name 'EC' is not defined
+2025-07-21 20:09:54,639 - WARNING - No jobs found on page 1, might be end of results
+2025-07-21 20:10:00,026 - INFO - 🔍 Processing keyword 4/4: Analytics Engineer
+2025-07-21 20:10:00,038 - INFO - 📄 Processing page 1/3: https://www.naukri.com/analytics-engineer-jobs-in-bengaluru-1
+2025-07-21 20:10:00,086 - ERROR - Error processing page 1 for 'Analytics Engineer': Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: MicrosoftEdge=138.0.3351.83); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff78c6a8c85+23461]
+	(No symbol) [0x0x7ff78c5fcd70]
+	GetHandleVerifier [0x0x7ff78c920bb8+2611928]
+	(No symbol) [0x0x7ff78c3bce20]
+	(No symbol) [0x0x7ff78c3db61a]
+	(No symbol) [0x0x7ff78c43fd1b]
+	(No symbol) [0x0x7ff78c456e5a]
+	(No symbol) [0x0x7ff78c43a423]
+	(No symbol) [0x0x7ff78c40ea86]
+	(No symbol) [0x0x7ff78c40dd11]
+	(No symbol) [0x0x7ff78c40e8b3]
+	(No symbol) [0x0x7ff78c50e6fd]
+	(No symbol) [0x0x7ff78c51ba88]
+	GetHandleVerifier [0x0x7ff78c788acb+940523]
+	GetHandleVerifier [0x0x7ff78c791821+976705]
+	(No symbol) [0x0x7ff78c60a961]
+	(No symbol) [0x0x7ff78c603344]
+	(No symbol) [0x0x7ff78c603493]
+	(No symbol) [0x0x7ff78c5f4f36]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-21 20:10:00,107 - INFO - 📄 Processing page 2/3: https://www.naukri.com/analytics-engineer-jobs-in-bengaluru-2
+2025-07-21 20:10:00,290 - ERROR - Error processing page 2 for 'Analytics Engineer': Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff78c6a8c85+23461]
+	(No symbol) [0x0x7ff78c5fcd70]
+	(No symbol) [0x0x7ff78c3cce40]
+	(No symbol) [0x0x7ff78c40d473]
+	(No symbol) [0x0x7ff78c43a582]
+	(No symbol) [0x0x7ff78c3e5c7b]
+	(No symbol) [0x0x7ff78c437195]
+	(No symbol) [0x0x7ff78c4368aa]
+	(No symbol) [0x0x7ff78c3a2c75]
+	(No symbol) [0x0x7ff78c50e6fd]
+	(No symbol) [0x0x7ff78c51ba88]
+	GetHandleVerifier [0x0x7ff78c788acb+940523]
+	GetHandleVerifier [0x0x7ff78c791821+976705]
+	(No symbol) [0x0x7ff78c60a961]
+	(No symbol) [0x0x7ff78c3a17a7]
+	GetHandleVerifier [0x0x7ff78c8d62d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-21 20:10:00,291 - INFO - 📄 Processing page 3/3: https://www.naukri.com/analytics-engineer-jobs-in-bengaluru-3
+2025-07-21 20:10:00,293 - ERROR - Error processing page 3 for 'Analytics Engineer': Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff78c6a8c85+23461]
+	(No symbol) [0x0x7ff78c5fcd70]
+	(No symbol) [0x0x7ff78c3cce40]
+	(No symbol) [0x0x7ff78c40d473]
+	(No symbol) [0x0x7ff78c43a582]
+	(No symbol) [0x0x7ff78c3e5c7b]
+	(No symbol) [0x0x7ff78c437195]
+	(No symbol) [0x0x7ff78c4368aa]
+	(No symbol) [0x0x7ff78c3a2c75]
+	(No symbol) [0x0x7ff78c50e6fd]
+	(No symbol) [0x0x7ff78c51ba88]
+	GetHandleVerifier [0x0x7ff78c788acb+940523]
+	GetHandleVerifier [0x0x7ff78c791821+976705]
+	(No symbol) [0x0x7ff78c60a961]
+	(No symbol) [0x0x7ff78c3a17a7]
+	GetHandleVerifier [0x0x7ff78c8d62d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-21 20:10:06,678 - INFO - 🏁 Streaming processing complete: 0 applications sent, 0 jobs analyzed
+2025-07-21 20:10:06,680 - WARNING - ⚠️ No applications were sent
+2025-07-21 20:10:06,681 - INFO - 💾 Phase 3: Saving results...
+2025-07-21 20:10:06,717 - INFO - Results saved with timestamp: 20250721_201006
+2025-07-21 20:10:06,719 - INFO - SUMMARY - Found: 0, Applied: 0, Failed: 0, Skipped: 0
+2025-07-21 20:10:06,726 - INFO - 🎉 Enhanced Naukri Bot completed successfully!

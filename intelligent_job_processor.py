@@ -133,12 +133,15 @@ class IntelligentJobProcessor:
             raise
     
     def _rate_limit(self):
-        """Ensure we don't exceed API rate limits."""
+        """Enhanced rate limiting for free tier - FIXED VERSION"""
         current_time = time.time()
         time_since_last_call = current_time - self.last_api_call
         
-        if time_since_last_call < self.min_delay_between_calls:
-            sleep_time = self.min_delay_between_calls - time_since_last_call
+        # Increased delay for free tier stability
+        min_delay = 8  # Increased from 4 to 8 seconds
+        
+        if time_since_last_call < min_delay:
+            sleep_time = min_delay - time_since_last_call
             logger.debug(f"Rate limiting: sleeping for {sleep_time:.2f} seconds")
             time.sleep(sleep_time)
         

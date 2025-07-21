@@ -35457,3 +35457,118 @@ Stacktrace:
 2025-07-21 21:15:19,776 - ERROR - Login attempt 3 error: 'NoneType' object has no attribute 'until'
 2025-07-21 21:15:19,776 - ERROR - All login attempts failed
 2025-07-21 21:15:19,776 - ERROR - ❌ Failed to login to Naukri
+2025-07-21 21:19:01,771 - INFO - 🚀 Starting Enhanced Naukri Bot with AI Intelligence...
+2025-07-21 21:19:01,771 - INFO - Configuration loaded successfully
+2025-07-21 21:19:01,771 - INFO - Job database initialized
+2025-07-21 21:19:01,776 - INFO - Bot initialized successfully
+2025-07-21 21:19:01,776 - INFO - Gemini API initialized successfully
+2025-07-21 21:19:01,776 - INFO - ✅ Enhanced Naukri Bot initialized successfully!
+2025-07-21 21:19:01,776 - INFO - 📡 Phase 1: Setting up browser and logging in...
+2025-07-21 21:19:01,776 - INFO - Setting up browser...
+2025-07-21 21:19:01,776 - INFO - Setting up browser...
+2025-07-21 21:19:01,789 - INFO - Operating System: Windows-10-10.0.22000-SP0
+2025-07-21 21:19:01,789 - INFO - ✅ webdriver-manager imported successfully
+2025-07-21 21:19:01,789 - INFO - 🔄 Attempting to auto-download Edge WebDriver...
+2025-07-21 21:19:01,790 - INFO - ====== WebDriver manager ======
+2025-07-21 21:19:03,285 - INFO - Get LATEST edgedriver version for Edge 138.0.3351
+2025-07-21 21:19:03,296 - WARNING - Driver setup method failed: Could not reach host. Are you offline?
+2025-07-21 21:19:03,301 - INFO - 🔄 Trying manual path: C:\WebDrivers\msedgedriver.exe
+2025-07-21 21:19:06,291 - INFO - ✅ Browser setup successful
+2025-07-21 21:19:06,319 - INFO - 🔐 Phase 2: Logging into Naukri...
+2025-07-21 21:19:06,321 - INFO - Login attempt 1/3
+2025-07-21 21:19:14,559 - ERROR - Login attempt 1 error: 'NoneType' object has no attribute 'until'
+2025-07-21 21:19:22,056 - INFO - Login attempt 2/3
+2025-07-21 21:19:24,113 - ERROR - Login attempt 2 error: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: MicrosoftEdge=138.0.3351.83); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff78c6a8c85+23461]
+	(No symbol) [0x0x7ff78c5fcd70]
+	GetHandleVerifier [0x0x7ff78c920bb8+2611928]
+	(No symbol) [0x0x7ff78c3bce20]
+	(No symbol) [0x0x7ff78c3db61a]
+	(No symbol) [0x0x7ff78c43fd1b]
+	(No symbol) [0x0x7ff78c456e5a]
+	(No symbol) [0x0x7ff78c43a423]
+	(No symbol) [0x0x7ff78c40ea86]
+	(No symbol) [0x0x7ff78c40dd11]
+	(No symbol) [0x0x7ff78c40e8b3]
+	(No symbol) [0x0x7ff78c50e6fd]
+	(No symbol) [0x0x7ff78c51ba88]
+	GetHandleVerifier [0x0x7ff78c788acb+940523]
+	GetHandleVerifier [0x0x7ff78c791821+976705]
+	(No symbol) [0x0x7ff78c60a961]
+	(No symbol) [0x0x7ff78c603344]
+	(No symbol) [0x0x7ff78c603493]
+	(No symbol) [0x0x7ff78c5f4f36]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-21 21:19:33,587 - INFO - Login attempt 3/3
+2025-07-21 21:19:33,587 - ERROR - Login attempt 3 error: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff78c6a8c85+23461]
+	(No symbol) [0x0x7ff78c5fcd70]
+	(No symbol) [0x0x7ff78c3cce40]
+	(No symbol) [0x0x7ff78c40d473]
+	(No symbol) [0x0x7ff78c43a582]
+	(No symbol) [0x0x7ff78c3e5c7b]
+	(No symbol) [0x0x7ff78c437195]
+	(No symbol) [0x0x7ff78c4368aa]
+	(No symbol) [0x0x7ff78c3a2c75]
+	(No symbol) [0x0x7ff78c50e6fd]
+	(No symbol) [0x0x7ff78c51ba88]
+	GetHandleVerifier [0x0x7ff78c788acb+940523]
+	GetHandleVerifier [0x0x7ff78c791821+976705]
+	(No symbol) [0x0x7ff78c60a961]
+	(No symbol) [0x0x7ff78c3a17a7]
+	GetHandleVerifier [0x0x7ff78c8d62d8+2306552]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-21 21:19:33,591 - ERROR - All login attempts failed
+2025-07-21 21:19:33,591 - ERROR - ❌ Failed to login to Naukri
+2025-07-21 21:42:17,558 - INFO - Configuration loaded successfully
+2025-07-21 21:42:17,560 - INFO - Job database initialized
+2025-07-21 21:42:17,561 - INFO - Bot initialized successfully
+2025-07-21 21:42:17,591 - INFO - Configuration loaded successfully
+2025-07-21 21:42:17,591 - INFO - Job database initialized
+2025-07-21 21:42:17,591 - INFO - Bot initialized successfully
+2025-07-21 21:42:17,591 - INFO - Gemini API initialized successfully
+2025-07-21 21:42:17,591 - INFO - Gemini API initialized successfully
+2025-07-21 21:42:46,871 - INFO - 🚀 Starting Enhanced Naukri Bot with AI Intelligence...
+2025-07-21 21:42:46,872 - INFO - Configuration loaded successfully
+2025-07-21 21:42:46,875 - INFO - Job database initialized
+2025-07-21 21:42:46,875 - INFO - Bot initialized successfully
+2025-07-21 21:42:46,876 - INFO - Enhanced configuration loaded successfully
+2025-07-21 21:42:46,876 - INFO - Gemini API initialized successfully
+2025-07-21 21:42:54,061 - INFO - ✅ Gemini API connection test successful
+2025-07-21 21:42:54,061 - INFO - ✅ Enhanced Naukri Bot initialized successfully!
+2025-07-21 21:42:54,061 - INFO - 📡 Phase 1: Setting up browser and logging in...
+2025-07-21 21:42:54,061 - INFO - Setting up browser...
+2025-07-21 21:42:54,061 - INFO - Setting up browser...
+2025-07-21 21:42:54,071 - INFO - Operating System: Windows-10-10.0.22000-SP0
+2025-07-21 21:42:54,099 - INFO - 🔄 Attempting automatic driver download...
+2025-07-21 21:42:54,100 - INFO - ====== WebDriver manager ======
+2025-07-21 21:42:55,533 - INFO - Get LATEST edgedriver version for Edge 138.0.3351
+2025-07-21 21:42:55,542 - WARNING - Webdriver manager failed: Could not reach host. Are you offline?
+2025-07-21 21:42:55,542 - WARNING - Driver setup method failed: Could not reach host. Are you offline?
+2025-07-21 21:42:55,542 - INFO - 🔄 Trying manual path: C:\WebDrivers\msedgedriver.exe
+2025-07-21 21:43:01,100 - INFO - ✅ Browser setup successful
+2025-07-21 21:43:01,105 - INFO - 🔐 Phase 2: Logging into Naukri...
+2025-07-21 21:43:01,105 - INFO - Login attempt 1/3
+2025-07-21 21:43:04,432 - INFO - ✅ Found email field with selector: #usernameField
+2025-07-21 21:43:12,893 - INFO - ✅ Found password field with selector: #passwordField
+2025-07-21 21:43:17,461 - INFO - ✅ Found login button with selector: //button[@type='submit']
+2025-07-21 21:43:22,852 - INFO - ✅ Login verified using: .nI-gNb-drawer__icon
+2025-07-21 21:43:22,861 - INFO - ✅ Login successful!
+2025-07-21 21:43:23,019 - INFO - ✅ Authentication verified using: nI-gNb-drawer__icon
+2025-07-21 21:43:23,030 - INFO - ✅ Login verification successful
+2025-07-21 21:43:23,031 - INFO - 📡 Phase 3: Scraping jobs with AI analysis...
+2025-07-21 21:43:23,328 - INFO - ✅ Authentication verified using: nI-gNb-drawer__icon
+2025-07-21 21:43:23,330 - INFO - 🎯 Starting streaming job processing (max 15 applications)
+2025-07-21 21:43:23,330 - INFO - 🔍 Processing keyword 1/4: Data Engineer
+2025-07-21 21:43:23,358 - INFO - Page 1/2: https://www.naukri.com/data-engineer-jobs-in-bengaluru-1
+2025-07-21 21:43:34,990 - INFO - Found 20 job cards on page
+2025-07-21 21:46:20,526 - WARNING - Missing title or company in job card
+2025-07-21 21:46:20,526 - WARNING - Could not extract data from card 1

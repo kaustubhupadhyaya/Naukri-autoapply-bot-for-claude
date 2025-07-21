@@ -1,304 +1,43 @@
-# **🤖 AI-Powered Naukri Job Application System - Requirements Sheet**
+# Naukri Auto-Apply Bot - Complete Dependencies
+# Install with: pip install -r requirements.txt
 
-## **📋 Executive Summary**
+# Core Selenium for browser automation
+selenium==4.15.0
+webdriver-manager==4.0.1
 
-**Project**: Transform basic Naukri job application bot into intelligent AI-powered system for Data Engineering career advancement
+# AI and ML libraries
+google-generativeai==0.3.2
 
-**Current State**: Working Selenium-based bot with basic keyword filtering → 30% relevant applications
-**Target State**: Gemini AI-powered system with intelligent job matching → 90%+ relevant applications  
-**User**: Kaustubh Upadhyaya, 2-year Data Engineer at Eli Lilly seeking career growth
+# Data processing and analysis
+pandas==2.1.4
+numpy==1.24.3
 
----
+# Web scraping and parsing
+beautifulsoup4==4.12.2
+lxml==4.9.3
+requests==2.31.0
 
-## **🎯 Business Requirements**
+# Configuration and environment
+python-dotenv==1.0.0
 
-### **Primary Objectives**
-1. **Intelligent Job Targeting**: Apply only to relevant Data Engineering positions (50+ score/100)
-2. **Experience-Level Optimization**: Target mid-level roles perfect for 2-year experience
-3. **Quality over Quantity**: 30-50 high-quality applications vs 100+ random applications
-4. **Success Rate Improvement**: Increase interview callback rate through better job matching
-5. **Automation Efficiency**: Reduce manual effort while improving application relevance
+# Logging and utilities
+colorama==0.4.6
 
-### **Success Metrics**
-- **Application Relevance**: 90%+ applications to Data Engineering/related roles
-- **Score Distribution**: 70%+ applications score 60+/100 on AI analysis
-- **Interview Rate**: Target 5-10% interview callback rate (vs industry 1-2%)
-- **Cost Efficiency**: <$5/month total operating cost (Gemini API + infrastructure)
-- **Time Savings**: Fully automated daily job applications in <30 minutes
+# Database support
+sqlite3
 
----
+# Time and date handling (built-in, but listed for reference)
+# datetime
+# time
+# json
+# logging
+# random
+# os
+# sys
+# platform
+# re
+# typing
 
-## **🏗️ Technical Architecture**
-
-### **Current System Analysis (Naukri_Edge.py)**
-
-**✅ Working Components:**
-```python
-class IntelligentNaukriBot:
-    - WebDriver setup (Edge) with anti-detection
-    - Login automation with credential management  
-    - Job scraping with verified CSS selectors
-    - Form filling and application submission
-    - Database tracking (SQLite) for applied jobs
-    - Error handling and retry logic
-    - CSV reporting and analytics
-```
-
-**❌ Limitations:**
-- Simple keyword scoring (+5 for 'remote', basic patterns)
-- No technology stack intelligence
-- No experience level matching
-- Applies to any job above minimal threshold
-- No company quality assessment
-- Limited error recovery
-
-### **Enhanced System Architecture**
-
-```
-┌─────────────────────────────────────────────────────────────┐
-│                    AI-POWERED JOB APPLICATION SYSTEM        │
-├─────────────────────────────────────────────────────────────┤
-│                                                            │
-│  ┌──────────────┐    ┌──────────────┐    ┌──────────────┐  │
-│  │   Browser    │    │  Job Scraper │    │ AI Processor │  │
-│  │  Automation  │───▶│   (Naukri)   │───▶│   (Gemini)   │  │
-│  │  (Selenium)  │    │              │    │              │  │
-│  └──────────────┘    └──────────────┘    └──────────────┘  │
-│         │                     │                    │       │
-│         ▼                     ▼                    ▼       │
-│  ┌──────────────┐    ┌──────────────┐    ┌──────────────┐  │
-│  │   Application│    │   Database   │    │  Analytics   │  │
-│  │    Engine    │    │   Storage    │    │ & Reporting  │  │
-│  │              │    │   (SQLite)   │    │              │  │
-│  └──────────────┘    └──────────────┘    └──────────────┘  │
-│                                                            │
-└─────────────────────────────────────────────────────────────┘
-```
-
----
-
-## **🧠 AI Intelligence Requirements**
-
-### **Gemini Integration Specifications**
-
-**Model**: `gemini-1.5-flash` (cost-effective, fast)
-**Rate Limiting**: 4-second delays, max 15 requests/minute (free tier)
-**Input**: Job title + description + company name
-**Output**: Structured JSON with 100-point scoring system
-
-### **Scoring Algorithm (100 Points Total)**
-
-**Technology Stack Match (40 points):**
-```yaml
-Big Data Tools: +15 each
-  - Apache Spark, PySpark, Kafka, Airflow, Hadoop
-Cloud Platforms: +12 each  
-  - AWS (S3, Lambda, Glue), Azure, GCP, Databricks
-Databases: +10 each
-  - PostgreSQL, MySQL, MongoDB, Redis, Elasticsearch
-ETL/Pipeline Tools: +12 each
-  - DBT, Great Expectations, Informatica, Talend
-Programming: +12 each
-  - Python, SQL, Scala, Java, Docker, Kubernetes
-```
-
-**Experience Level Fit (30 points):**
-```yaml
-Perfect Match: +20
-  - "2-5 years", "Mid-level", "Associate", "Data Engineer II"
-Good Match: +10  
-  - "1-3 years", "1-4 years", "Intermediate"
-Avoid: -15
-  - "Senior", "Lead", "5+ years required"
-Strongly Avoid: -25
-  - "Fresher only", "Intern", "Campus hire"
-```
-
-**Company & Role Quality (30 points):**
-```yaml
-Remote-Friendly: +10
-  - "Remote", "Hybrid", "WFH"
-Company Type: +8
-  - Product > Service companies
-Location: +5
-  - Bangalore, Remote-friendly
-Role Relevance: +7
-  - "Data Engineer" > "ETL Developer" > "Python Developer"
-```
-
----
-
-## **🔧 Technical Implementation Requirements**
-
-### **File Structure & Components**
-
-```
-naukri-intelligent-bot/
-├── Naukri_Edge.py                    # Base bot (keep as foundation)
-├── enhanced_naukri_bot.py           # Enhanced bot (inherits base)
-├── intelligent_job_processor.py      # Gemini AI analysis
-├── enhanced_config.json             # Configuration management
-├── requirements.txt                  # Python dependencies
-├── naukri_jobs.db                   # SQLite job tracking
-└── logs/                            # Detailed logging
-    ├── naukri_bot.log
-    ├── intelligent_analysis_*.csv
-    └── application_results_*.csv
-```
-
-### **Core Dependencies**
-```python
-selenium==4.15.0           # Browser automation
-webdriver-manager==4.0.1   # Auto WebDriver management  
-google-generativeai==0.3.0 # Gemini AI integration
-pandas==2.1.0              # Data processing
-beautifulsoup4==4.12.0     # HTML parsing
-python-dotenv==1.0.0       # Environment management
-```
-
-### **Configuration Schema**
-```json
-{
-  "credentials": {
-    "email": "user@email.com",
-    "password": "encrypted_password"
-  },
-  "gemini_api_key": "AIza...",
-  "user_profile": {
-    "experience_years": 2,
-    "core_skills": ["Python", "SQL", "Airflow", "AWS"],
-    "target_roles": ["Data Engineer", "ETL Developer"],
-    "location_preference": ["Bangalore", "Remote"]
-  },
-  "job_search": {
-    "keywords": ["Data Engineer", "Python Developer"],
-    "max_applications_per_session": 50,
-    "min_job_score": 50,
-    "pages_per_keyword": 3
-  },
-  "ai_settings": {
-    "model": "gemini-1.5-flash",
-    "rate_limit_delay": 4,
-    "cache_results": true
-  }
-}
-```
-
----
-
-## **🚀 Development Roadmap**
-
-### **Phase 1: Foundation (Week 1) - ✅ COMPLETED**
-- [x] WebDriver setup and browser automation
-- [x] Gemini API integration 
-- [x] Basic enhanced bot structure
-- [x] Configuration system
-
-### **Phase 2: Core Functionality (Week 2) - 🔧 IN PROGRESS**
-**Current Critical Issues:**
-- [ ] **Fix enhanced bot login flow** (browser hangs without login)
-- [ ] **Implement proper setup → login → scrape sequence**
-- [ ] **Test end-to-end AI analysis pipeline**
-- [ ] **Verify job application submission process**
-
-**Implementation Steps:**
-```python
-# Priority 1: Fix enhanced_naukri_bot.py main() function
-def main():
-    bot = EnhancedNaukriBot()
-    bot.setup_driver()      # Missing: Browser setup
-    bot.login()             # Missing: Naukri login  
-    bot.scrape_job_links()  # AI analysis per job
-    bot.apply_to_jobs()     # Smart application
-```
-
-### **Phase 3: Intelligence & Optimization (Week 3)**
-- [ ] **AI Prompt Engineering**: Fine-tune job analysis accuracy
-- [ ] **Smart Prioritization**: Data Engineering jobs first (70% allocation)
-- [ ] **Error Recovery**: Browser crash handling, session restoration
-- [ ] **Performance Optimization**: Reduce API calls, improve speed
-
-### **Phase 4: Advanced Features (Week 4)**
-- [ ] **Success Tracking**: Monitor application → interview conversion
-- [ ] **Dynamic Learning**: Adjust scoring based on callback rates
-- [ ] **Company Intelligence**: Research and score company quality
-- [ ] **Advanced Filtering**: Salary range, remote options, company size
-
----
-
-## **🤝 Agent Development Guidelines**
-
-### **For Building This System**
-
-**🎯 Primary Focus Areas:**
-1. **Fix Critical Flow Issue**: Enhanced bot must call setup_driver() + login() before scraping
-2. **AI Integration**: Ensure Gemini analysis works for each job before application
-3. **Error Handling**: Robust browser recovery, API failure fallbacks
-4. **User Experience**: Clear logging, progress indicators, meaningful feedback
-
-**🔧 Technical Standards:**
-- **Inheritance Model**: Enhanced bot inherits from base bot (reuse 95% of code)
-- **Fail-Safe Design**: System works even if AI fails (fallback to keyword scoring)  
-- **Rate Limiting**: Respect Gemini API limits (4-second delays minimum)
-- **Data Privacy**: Secure credential storage, no hardcoded secrets
-
-**📊 Testing Requirements:**
-- **Unit Tests**: Each component testable independently
-- **Integration Tests**: Full browser → login → AI → apply workflow  
-- **Performance Tests**: Handle 50+ jobs within 30-minute session
-- **Edge Cases**: Network failures, blocked IPs, quota exceeded
-
-### **Code Quality Standards**
-```python
-# Example: Proper error handling with fallbacks
-def analyze_job_quality(self, job_card_text):
-    try:
-        # Try AI analysis first
-        return self.gemini_processor.score_job(job_card_text)
-    except APIError:
-        # Fallback to keyword scoring
-        return self.simple_keyword_score(job_card_text)
-    except Exception as e:
-        logger.error(f"Job analysis failed: {e}")
-        return 0  # Skip job on complete failure
-```
-
----
-
-## **📈 Success Validation**
-
-### **Immediate Success Indicators (Week 1-2)**
-- [ ] Browser launches and logs into Naukri successfully
-- [ ] AI analysis processes 20+ jobs without errors
-- [ ] Applications submitted to relevant Data Engineering roles
-- [ ] Detailed logs show scoring rationale for each job
-
-### **Medium-term Success (Month 1)**
-- [ ] 90%+ applications to Data Engineering/related roles
-- [ ] Average job score >60/100 for applied positions  
-- [ ] Zero applications to clearly irrelevant roles (intern, senior, wrong tech)
-- [ ] First interview callbacks from AI-selected applications
-
-### **Long-term Success (Month 3)**
-- [ ] 5-10% interview callback rate achieved
-- [ ] Cost per relevant application <$0.10 
-- [ ] Zero manual intervention required for daily operations
-- [ ] System adapts and improves based on success feedback
-
----
-
-## **🎯 Critical Next Steps**
-
-**IMMEDIATE (This Session):**
-1. **Fix enhanced_naukri_bot.py main() function** - Add missing setup/login sequence
-2. **Test complete workflow** - Verify browser → login → AI analysis → application
-3. **Debug hanging issue** - Ensure proper authentication before job scraping
-
-**THIS WEEK:**
-1. **Validate AI analysis** - Confirm Gemini scoring works for real job postings
-2. **Optimize application targeting** - Focus on Data Engineering roles
-3. **Add robust error handling** - Handle browser crashes, API failures gracefully
-
-**AGENT PRIORITY**: Focus on fixing the login flow issue first - everything else depends on this working correctly.
-
-This system has the potential to transform job searching from spray-and-pray to intelligent targeting, but the foundation must be solid before adding advanced features.
+# Optional: For advanced features
+# openpyxl==3.1.2  # Excel file support
+# psutil==5.9.6     # System monitoring

@@ -15,6 +15,55 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 logger = logging.getLogger(__name__)
 
 class EnhancedNaukriBot(IntelligentNaukriBot):
+    def _attempt_job_application(self, job_title):
+        """Attempt to apply to a job - NEEDS IMPLEMENTATION"""
+        try:
+            # Look for apply button
+            apply_buttons = [
+                "//button[contains(text(), 'Apply')]",
+                "//a[contains(text(), 'Apply')]",
+                ".apply-button",
+                "#apply-btn"
+            ]
+            
+            for button_selector in apply_buttons:
+                try:
+                    if button_selector.startswith("//"):
+                        button = self.driver.find_element(By.XPATH, button_selector)
+                    else:
+                        button = self.driver.find_element(By.CSS_SELECTOR, button_selector)
+                    
+                    if button and button.is_enabled():
+                        button.click()
+                        time.sleep(3)
+                        
+                        # Handle any application form that appears
+                        self._fill_application_form()
+                        return True
+                except:
+                    continue
+            
+            logger.warning(f"No apply button found for {job_title}")
+            return False
+            
+        except Exception as e:
+            logger.error(f"Application attempt failed: {e}")
+            return False
+
+    def _fill_application_form(self):
+        """Fill application form if it appears"""
+        try:
+            # Look for form fields and fill them
+            # This is a placeholder - needs specific implementation
+            submit_buttons = self.driver.find_elements(By.XPATH, "//button[contains(text(), 'Submit')]")
+            if submit_buttons:
+                submit_buttons[0].click()
+                time.sleep(2)
+                return True
+        except:
+            pass
+        return False
+
     def __init__(self, config_file="enhanced_config.json"):
         super().__init__(config_file)
         self.job_processor = IntelligentJobProcessor(config_file)

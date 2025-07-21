@@ -35387,3 +35387,73 @@ Stacktrace:
 2025-07-21 20:10:06,717 - INFO - Results saved with timestamp: 20250721_201006
 2025-07-21 20:10:06,719 - INFO - SUMMARY - Found: 0, Applied: 0, Failed: 0, Skipped: 0
 2025-07-21 20:10:06,726 - INFO - 🎉 Enhanced Naukri Bot completed successfully!
+2025-07-21 21:09:52,866 - INFO - [START] Starting Enhanced Naukri Bot with AI Intelligence...
+2025-07-21 21:09:52,868 - INFO - Configuration loaded successfully
+2025-07-21 21:09:52,868 - INFO - Job database initialized
+2025-07-21 21:09:52,868 - INFO - Bot initialized successfully
+2025-07-21 21:09:52,868 - INFO - Gemini API initialized successfully
+2025-07-21 21:09:52,868 - INFO - [SUCCESS] Enhanced Naukri Bot initialized successfully!
+2025-07-21 21:09:52,868 - INFO - [PHASE] Phase 1: Setting up browser and logging in...
+2025-07-21 21:09:52,868 - INFO - Setting up browser...
+2025-07-21 21:09:52,868 - INFO - Setting up browser...
+2025-07-21 21:09:52,868 - ERROR - WebDriver setup failed: name 'platform' is not defined
+2025-07-21 21:09:52,868 - ERROR - [ERROR] Failed to setup browser
+2025-07-21 21:10:08,451 - INFO - 🚀 Starting Enhanced Naukri Bot with AI Intelligence...
+2025-07-21 21:10:08,451 - INFO - Configuration loaded successfully
+2025-07-21 21:10:08,451 - INFO - Job database initialized
+2025-07-21 21:10:08,451 - INFO - Bot initialized successfully
+2025-07-21 21:10:08,451 - INFO - Gemini API initialized successfully
+2025-07-21 21:10:08,451 - INFO - ✅ Enhanced Naukri Bot initialized successfully!
+2025-07-21 21:10:08,451 - INFO - 📡 Phase 1: Setting up browser and logging in...
+2025-07-21 21:10:08,451 - INFO - Setting up browser...
+2025-07-21 21:10:08,451 - INFO - Setting up browser...
+2025-07-21 21:10:08,451 - ERROR - WebDriver setup failed: name 'platform' is not defined
+2025-07-21 21:10:08,455 - ERROR - ❌ Failed to setup browser
+2025-07-21 21:10:12,217 - INFO - 🚀 Starting Enhanced Naukri Bot with AI Intelligence...
+2025-07-21 21:10:12,219 - INFO - Configuration loaded successfully
+2025-07-21 21:10:12,221 - INFO - Job database initialized
+2025-07-21 21:10:12,221 - INFO - Bot initialized successfully
+2025-07-21 21:10:12,222 - INFO - Gemini API initialized successfully
+2025-07-21 21:10:12,222 - INFO - ✅ Enhanced Naukri Bot initialized successfully!
+2025-07-21 21:10:12,222 - INFO - 📡 Phase 1: Setting up browser and logging in...
+2025-07-21 21:10:12,222 - INFO - Setting up browser...
+2025-07-21 21:10:12,223 - INFO - Setting up browser...
+2025-07-21 21:10:12,224 - ERROR - WebDriver setup failed: name 'platform' is not defined
+2025-07-21 21:10:12,224 - ERROR - ❌ Failed to setup browser
+2025-07-21 21:10:58,861 - INFO - 🚀 Starting Enhanced Naukri Bot with AI Intelligence...
+2025-07-21 21:10:58,866 - INFO - Configuration loaded successfully
+2025-07-21 21:10:58,866 - INFO - Job database initialized
+2025-07-21 21:10:58,866 - INFO - Bot initialized successfully
+2025-07-21 21:10:58,866 - INFO - Gemini API initialized successfully
+2025-07-21 21:10:58,866 - INFO - ✅ Enhanced Naukri Bot initialized successfully!
+2025-07-21 21:10:58,866 - INFO - 📡 Phase 1: Setting up browser and logging in...
+2025-07-21 21:10:58,866 - INFO - Setting up browser...
+2025-07-21 21:10:58,866 - INFO - Setting up browser...
+2025-07-21 21:10:58,866 - ERROR - WebDriver setup failed: name 'platform' is not defined
+2025-07-21 21:10:58,866 - ERROR - ❌ Failed to setup browser
+2025-07-21 21:14:34,546 - INFO - 🚀 Starting Enhanced Naukri Bot with AI Intelligence...
+2025-07-21 21:14:34,546 - INFO - Configuration loaded successfully
+2025-07-21 21:14:34,546 - INFO - Job database initialized
+2025-07-21 21:14:34,546 - INFO - Bot initialized successfully
+2025-07-21 21:14:34,546 - INFO - Gemini API initialized successfully
+2025-07-21 21:14:34,551 - INFO - ✅ Enhanced Naukri Bot initialized successfully!
+2025-07-21 21:14:34,551 - INFO - 📡 Phase 1: Setting up browser and logging in...
+2025-07-21 21:14:34,551 - INFO - Setting up browser...
+2025-07-21 21:14:34,551 - INFO - Setting up browser...
+2025-07-21 21:14:34,554 - INFO - Operating System: Windows-10-10.0.22000-SP0
+2025-07-21 21:14:34,561 - INFO - ✅ webdriver-manager imported successfully
+2025-07-21 21:14:34,561 - INFO - 🔄 Attempting to auto-download Edge WebDriver...
+2025-07-21 21:14:34,561 - INFO - ====== WebDriver manager ======
+2025-07-21 21:14:35,904 - INFO - Get LATEST edgedriver version for Edge 138.0.3351
+2025-07-21 21:14:35,913 - WARNING - Driver setup method failed: Could not reach host. Are you offline?
+2025-07-21 21:14:35,913 - INFO - 🔄 Trying manual path: C:\WebDrivers\msedgedriver.exe
+2025-07-21 21:14:38,266 - INFO - ✅ Browser setup successful
+2025-07-21 21:14:38,272 - INFO - 🔐 Phase 2: Logging into Naukri...
+2025-07-21 21:14:38,273 - INFO - Login attempt 1/3
+2025-07-21 21:14:53,462 - ERROR - Login attempt 1 error: 'NoneType' object has no attribute 'until'
+2025-07-21 21:15:02,975 - INFO - Login attempt 2/3
+2025-07-21 21:15:06,428 - ERROR - Login attempt 2 error: 'NoneType' object has no attribute 'until'
+2025-07-21 21:15:15,526 - INFO - Login attempt 3/3
+2025-07-21 21:15:19,776 - ERROR - Login attempt 3 error: 'NoneType' object has no attribute 'until'
+2025-07-21 21:15:19,776 - ERROR - All login attempts failed
+2025-07-21 21:15:19,776 - ERROR - ❌ Failed to login to Naukri

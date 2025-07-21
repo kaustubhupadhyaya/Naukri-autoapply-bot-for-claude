@@ -14,6 +14,7 @@ from webdriver_manager.microsoft import EdgeChromiumDriverManager
 from bs4 import BeautifulSoup
 from datetime import datetime
 import sqlite3
+import platform
 
 # Configure logging
 logging.basicConfig(

@@ -260,36 +260,30 @@ class EnhancedNaukriBot(IntelligentNaukriBot):
         return min(score, 100)
 # Main execution
 def main():
-    """Main function to run the enhanced Naukri bot."""
+    """Main function with streaming job processing"""
     bot = None
     try:
-        logger.info("🚀 Starting Enhanced Naukri Bot with AI Intelligence...")
+        logger.info("🚀 Starting Enhanced Naukri Bot with Streaming Application...")
         
-        # Initialize enhanced bot
         bot = EnhancedNaukriBot()
         
-        # CRITICAL: Use the original bot's proven workflow
+        # Setup and login
         logger.info("📡 Phase 1: Setting up browser and logging in...")
-        bot.setup_driver()  # ← This was missing!
+        bot.setup_driver()
+        bot.login()
         
-        logger.info("🔐 Phase 2: Logging into Naukri...")  
-        bot.login()         # ← This was missing!
+        # Stream processing: analyze and apply immediately
+        logger.info("🎯 Phase 2: Streaming job processing with immediate application...")
+        success = bot.process_jobs_with_streaming_application()
         
-        logger.info("📡 Phase 3: Scraping jobs with AI analysis...")
-        bot.scrape_job_links()  # Now this will work with AI analysis
+        if not success:
+            logger.warning("⚠️ No applications were sent")
         
-        if len(bot.joblinks) == 0:
-            logger.warning("⚠️ No jobs found! Check if login was successful.")
-            return
-        
-        logger.info("🎯 Phase 4: Applying to qualified jobs...")
-        bot.apply_to_jobs()  # Use original method for now
-        
-        logger.info("💾 Phase 5: Saving results...")
+        # Save results
+        logger.info("💾 Phase 3: Saving results...")
         bot.save_results()
-        bot._save_intelligent_results()
         
-        logger.info("🎉 Enhanced Naukri Bot session completed successfully!")
+        logger.info("🎉 Enhanced Naukri Bot completed successfully!")
         
     except KeyboardInterrupt:
         logger.info("⏹️ Bot stopped by user")
@@ -298,13 +292,10 @@ def main():
         import traceback
         traceback.print_exc()
     finally:
-        # Cleanup
-        try:
-            if bot and hasattr(bot, 'driver') and bot.driver:
-                input("Press Enter to close browser...")
-                bot.driver.quit()
-        except:
-            pass
+        if bot and hasattr(bot, 'driver') and bot.driver:
+            input("Press Enter to close browser...")
+            bot.driver.quit()
+
 
 if __name__ == "__main__":
     main()

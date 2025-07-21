@@ -35572,3 +35572,1976 @@ Stacktrace:
 2025-07-21 21:43:34,990 - INFO - Found 20 job cards on page
 2025-07-21 21:46:20,526 - WARNING - Missing title or company in job card
 2025-07-21 21:46:20,526 - WARNING - Could not extract data from card 1
+2025-07-21 21:49:06,202 - WARNING - Missing title or company in job card
+2025-07-21 21:49:06,202 - WARNING - Could not extract data from card 2
+2025-07-21 21:51:51,602 - WARNING - Missing title or company in job card
+2025-07-21 21:51:51,602 - WARNING - Could not extract data from card 3
+2025-07-21 21:54:36,975 - WARNING - Missing title or company in job card
+2025-07-21 21:54:36,975 - WARNING - Could not extract data from card 4
+2025-07-21 21:57:22,322 - WARNING - Missing title or company in job card
+2025-07-21 21:57:22,322 - WARNING - Could not extract data from card 5
+2025-07-21 22:00:07,742 - WARNING - Missing title or company in job card
+2025-07-21 22:00:07,742 - WARNING - Could not extract data from card 6
+2025-07-21 22:01:34,557 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E6D8337B10>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/363e243a785dcb03e0d8dd61f44058e6/element/f.927FBF024FF21006E1BACC3BFBD10179.d.4816372F593E8966EED874350F427D15.e.167/element
+2025-07-21 22:01:38,634 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E6D8318C50>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/363e243a785dcb03e0d8dd61f44058e6/element/f.927FBF024FF21006E1BACC3BFBD10179.d.4816372F593E8966EED874350F427D15.e.167/element
+2025-07-21 22:01:42,730 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E6D831B110>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/363e243a785dcb03e0d8dd61f44058e6/element/f.927FBF024FF21006E1BACC3BFBD10179.d.4816372F593E8966EED874350F427D15.e.167/element
+2025-07-21 22:01:50,848 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E6D8336FD0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/363e243a785dcb03e0d8dd61f44058e6/element/f.927FBF024FF21006E1BACC3BFBD10179.d.4816372F593E8966EED874350F427D15.e.167/element
+2025-07-21 22:01:54,933 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E6D833C9D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/363e243a785dcb03e0d8dd61f44058e6/element/f.927FBF024FF21006E1BACC3BFBD10179.d.4816372F593E8966EED874350F427D15.e.167/element
+2025-07-21 22:01:58,971 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E6D833D390>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/363e243a785dcb03e0d8dd61f44058e6/element/f.927FBF024FF21006E1BACC3BFBD10179.d.4816372F593E8966EED874350F427D15.e.167/element
+2025-07-21 22:02:07,120 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E6D833E810>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/363e243a785dcb03e0d8dd61f44058e6/element/f.927FBF024FF21006E1BACC3BFBD10179.d.4816372F593E8966EED874350F427D15.e.167/element
+2025-07-21 22:02:11,173 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E6D833F290>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/363e243a785dcb03e0d8dd61f44058e6/element/f.927FBF024FF21006E1BACC3BFBD10179.d.4816372F593E8966EED874350F427D15.e.167/element
+2025-07-21 22:02:15,281 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E6D833FC90>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/363e243a785dcb03e0d8dd61f44058e6/element/f.927FBF024FF21006E1BACC3BFBD10179.d.4816372F593E8966EED874350F427D15.e.167/element
+2025-07-21 22:02:23,451 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E6D83453D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/363e243a785dcb03e0d8dd61f44058e6/element/f.927FBF024FF21006E1BACC3BFBD10179.d.4816372F593E8966EED874350F427D15.e.167/element
+2025-07-21 22:02:27,492 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E6D8345FD0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/363e243a785dcb03e0d8dd61f44058e6/element/f.927FBF024FF21006E1BACC3BFBD10179.d.4816372F593E8966EED874350F427D15.e.167/element
+2025-07-21 22:02:31,533 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E6D8346B50>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/363e243a785dcb03e0d8dd61f44058e6/element/f.927FBF024FF21006E1BACC3BFBD10179.d.4816372F593E8966EED874350F427D15.e.167/element
+2025-07-21 22:02:39,651 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E6D833F150>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/363e243a785dcb03e0d8dd61f44058e6/element/f.927FBF024FF21006E1BACC3BFBD10179.d.4816372F593E8966EED874350F427D15.e.167/element
+2025-07-21 22:02:43,709 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E6D833DF50>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/363e243a785dcb03e0d8dd61f44058e6/element/f.927FBF024FF21006E1BACC3BFBD10179.d.4816372F593E8966EED874350F427D15.e.167/element
+2025-07-21 22:02:47,746 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E6D833DBD0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/363e243a785dcb03e0d8dd61f44058e6/element/f.927FBF024FF21006E1BACC3BFBD10179.d.4816372F593E8966EED874350F427D15.e.167/element
+2025-07-21 22:02:55,810 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E6D833C490>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/363e243a785dcb03e0d8dd61f44058e6/element/f.927FBF024FF21006E1BACC3BFBD10179.d.4816372F593E8966EED874350F427D15.e.167/element
+2025-07-21 22:02:59,834 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E6D831B110>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/363e243a785dcb03e0d8dd61f44058e6/element/f.927FBF024FF21006E1BACC3BFBD10179.d.4816372F593E8966EED874350F427D15.e.167/element
+2025-07-21 22:03:03,861 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E6D8319E50>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/363e243a785dcb03e0d8dd61f44058e6/element/f.927FBF024FF21006E1BACC3BFBD10179.d.4816372F593E8966EED874350F427D15.e.167/element
+2025-07-21 22:03:11,940 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E6D83379D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/363e243a785dcb03e0d8dd61f44058e6/element/f.927FBF024FF21006E1BACC3BFBD10179.d.4816372F593E8966EED874350F427D15.e.167/element
+2025-07-21 22:03:15,967 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E6D8337C10>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/363e243a785dcb03e0d8dd61f44058e6/element/f.927FBF024FF21006E1BACC3BFBD10179.d.4816372F593E8966EED874350F427D15.e.167/element
+2025-07-21 22:03:20,013 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E6D8344390>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/363e243a785dcb03e0d8dd61f44058e6/element/f.927FBF024FF21006E1BACC3BFBD10179.d.4816372F593E8966EED874350F427D15.e.167/element
+2025-07-21 22:03:28,070 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E6D834C2D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/363e243a785dcb03e0d8dd61f44058e6/element/f.927FBF024FF21006E1BACC3BFBD10179.d.4816372F593E8966EED874350F427D15.e.167/text
+2025-07-21 22:03:32,117 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E6D834C910>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/363e243a785dcb03e0d8dd61f44058e6/element/f.927FBF024FF21006E1BACC3BFBD10179.d.4816372F593E8966EED874350F427D15.e.167/text
+2025-07-21 22:03:36,147 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E6D834D150>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/363e243a785dcb03e0d8dd61f44058e6/element/f.927FBF024FF21006E1BACC3BFBD10179.d.4816372F593E8966EED874350F427D15.e.167/text
+2025-07-21 22:03:40,174 - ERROR - Error extracting job data: HTTPConnectionPool(host='localhost', port=60593): Max retries exceeded with url: /session/363e243a785dcb03e0d8dd61f44058e6/element/f.927FBF024FF21006E1BACC3BFBD10179.d.4816372F593E8966EED874350F427D15.e.167/text (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E6D8337BD0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-07-21 22:03:40,174 - WARNING - Could not extract data from card 7
+2025-07-21 22:03:44,207 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E6D8337790>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/363e243a785dcb03e0d8dd61f44058e6/element/f.927FBF024FF21006E1BACC3BFBD10179.d.4816372F593E8966EED874350F427D15.e.168/element
+2025-07-21 22:03:48,225 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E6D8079C50>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/363e243a785dcb03e0d8dd61f44058e6/element/f.927FBF024FF21006E1BACC3BFBD10179.d.4816372F593E8966EED874350F427D15.e.168/element
+2025-07-21 22:03:52,250 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E6D831AD50>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/363e243a785dcb03e0d8dd61f44058e6/element/f.927FBF024FF21006E1BACC3BFBD10179.d.4816372F593E8966EED874350F427D15.e.168/element
+2025-07-21 22:04:00,299 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E6D8347810>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/363e243a785dcb03e0d8dd61f44058e6/element/f.927FBF024FF21006E1BACC3BFBD10179.d.4816372F593E8966EED874350F427D15.e.168/element
+2025-07-21 22:04:04,332 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E6D8344B50>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/363e243a785dcb03e0d8dd61f44058e6/element/f.927FBF024FF21006E1BACC3BFBD10179.d.4816372F593E8966EED874350F427D15.e.168/element
+2025-07-21 22:04:08,420 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E6D833C490>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/363e243a785dcb03e0d8dd61f44058e6/element/f.927FBF024FF21006E1BACC3BFBD10179.d.4816372F593E8966EED874350F427D15.e.168/element
+2025-07-21 22:04:16,677 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E6D833D750>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/363e243a785dcb03e0d8dd61f44058e6/element/f.927FBF024FF21006E1BACC3BFBD10179.d.4816372F593E8966EED874350F427D15.e.168/element
+2025-07-21 22:04:21,120 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E6D833C750>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/363e243a785dcb03e0d8dd61f44058e6/element/f.927FBF024FF21006E1BACC3BFBD10179.d.4816372F593E8966EED874350F427D15.e.168/element
+2025-07-21 22:04:25,190 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E6D833F090>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/363e243a785dcb03e0d8dd61f44058e6/element/f.927FBF024FF21006E1BACC3BFBD10179.d.4816372F593E8966EED874350F427D15.e.168/element
+2025-07-21 22:04:33,964 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E6D834DE10>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/363e243a785dcb03e0d8dd61f44058e6/element/f.927FBF024FF21006E1BACC3BFBD10179.d.4816372F593E8966EED874350F427D15.e.168/element
+2025-07-21 22:04:38,650 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E6D834E990>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/363e243a785dcb03e0d8dd61f44058e6/element/f.927FBF024FF21006E1BACC3BFBD10179.d.4816372F593E8966EED874350F427D15.e.168/element
+2025-07-21 22:04:43,523 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E6D834F510>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/363e243a785dcb03e0d8dd61f44058e6/element/f.927FBF024FF21006E1BACC3BFBD10179.d.4816372F593E8966EED874350F427D15.e.168/element
+2025-07-21 22:04:52,659 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E6D81B6E50>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/363e243a785dcb03e0d8dd61f44058e6/element/f.927FBF024FF21006E1BACC3BFBD10179.d.4816372F593E8966EED874350F427D15.e.168/element
+2025-07-21 22:04:57,342 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E6D833F210>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/363e243a785dcb03e0d8dd61f44058e6/element/f.927FBF024FF21006E1BACC3BFBD10179.d.4816372F593E8966EED874350F427D15.e.168/element
+2025-07-21 22:05:02,264 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E6D833EE10>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/363e243a785dcb03e0d8dd61f44058e6/element/f.927FBF024FF21006E1BACC3BFBD10179.d.4816372F593E8966EED874350F427D15.e.168/element
+2025-07-21 22:05:11,375 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E6D833CED0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/363e243a785dcb03e0d8dd61f44058e6/element/f.927FBF024FF21006E1BACC3BFBD10179.d.4816372F593E8966EED874350F427D15.e.168/element
+2025-07-21 22:05:16,012 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E6D833EF10>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/363e243a785dcb03e0d8dd61f44058e6/element/f.927FBF024FF21006E1BACC3BFBD10179.d.4816372F593E8966EED874350F427D15.e.168/element
+2025-07-21 22:05:20,627 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E6D8344E50>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/363e243a785dcb03e0d8dd61f44058e6/element/f.927FBF024FF21006E1BACC3BFBD10179.d.4816372F593E8966EED874350F427D15.e.168/element
+2025-07-21 22:05:29,882 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E6D8347C50>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/363e243a785dcb03e0d8dd61f44058e6/element/f.927FBF024FF21006E1BACC3BFBD10179.d.4816372F593E8966EED874350F427D15.e.168/element
+2025-07-21 22:05:34,643 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E6D8337490>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/363e243a785dcb03e0d8dd61f44058e6/element/f.927FBF024FF21006E1BACC3BFBD10179.d.4816372F593E8966EED874350F427D15.e.168/element
+2025-07-21 22:05:38,720 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E6D8337B50>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/363e243a785dcb03e0d8dd61f44058e6/element/f.927FBF024FF21006E1BACC3BFBD10179.d.4816372F593E8966EED874350F427D15.e.168/element
+2025-07-21 22:05:47,239 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E6D835C850>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/363e243a785dcb03e0d8dd61f44058e6/element/f.927FBF024FF21006E1BACC3BFBD10179.d.4816372F593E8966EED874350F427D15.e.168/element
+2025-07-21 22:05:51,670 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E6D835D3D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/363e243a785dcb03e0d8dd61f44058e6/element/f.927FBF024FF21006E1BACC3BFBD10179.d.4816372F593E8966EED874350F427D15.e.168/element
+2025-07-21 22:05:56,125 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E6D835DF50>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/363e243a785dcb03e0d8dd61f44058e6/element/f.927FBF024FF21006E1BACC3BFBD10179.d.4816372F593E8966EED874350F427D15.e.168/element
+2025-07-21 22:06:05,129 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E6D8337590>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/363e243a785dcb03e0d8dd61f44058e6/element/f.927FBF024FF21006E1BACC3BFBD10179.d.4816372F593E8966EED874350F427D15.e.168/element
+2025-07-21 22:06:09,768 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E6D8347210>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/363e243a785dcb03e0d8dd61f44058e6/element/f.927FBF024FF21006E1BACC3BFBD10179.d.4816372F593E8966EED874350F427D15.e.168/element
+2025-07-21 22:06:14,283 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E6D8346F90>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/363e243a785dcb03e0d8dd61f44058e6/element/f.927FBF024FF21006E1BACC3BFBD10179.d.4816372F593E8966EED874350F427D15.e.168/element
+2025-07-21 22:06:22,752 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E6D833C990>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/363e243a785dcb03e0d8dd61f44058e6/element/f.927FBF024FF21006E1BACC3BFBD10179.d.4816372F593E8966EED874350F427D15.e.168/element
+2025-07-21 22:06:27,454 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E6D833C950>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/363e243a785dcb03e0d8dd61f44058e6/element/f.927FBF024FF21006E1BACC3BFBD10179.d.4816372F593E8966EED874350F427D15.e.168/element
+2025-07-21 22:06:31,919 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E6D833EAD0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/363e243a785dcb03e0d8dd61f44058e6/element/f.927FBF024FF21006E1BACC3BFBD10179.d.4816372F593E8966EED874350F427D15.e.168/element
+2025-07-21 22:06:40,029 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E6D834FFD0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/363e243a785dcb03e0d8dd61f44058e6/element/f.927FBF024FF21006E1BACC3BFBD10179.d.4816372F593E8966EED874350F427D15.e.168/element
+2025-07-21 22:06:44,398 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E6D831BF10>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/363e243a785dcb03e0d8dd61f44058e6/element/f.927FBF024FF21006E1BACC3BFBD10179.d.4816372F593E8966EED874350F427D15.e.168/element
+2025-07-21 22:06:49,158 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E6D8079C50>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/363e243a785dcb03e0d8dd61f44058e6/element/f.927FBF024FF21006E1BACC3BFBD10179.d.4816372F593E8966EED874350F427D15.e.168/element
+2025-07-21 22:06:57,288 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E6D835ECD0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/363e243a785dcb03e0d8dd61f44058e6/element/f.927FBF024FF21006E1BACC3BFBD10179.d.4816372F593E8966EED874350F427D15.e.168/text
+2025-07-21 22:07:01,371 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E6D835F2D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/363e243a785dcb03e0d8dd61f44058e6/element/f.927FBF024FF21006E1BACC3BFBD10179.d.4816372F593E8966EED874350F427D15.e.168/text
+2025-07-21 22:07:05,446 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E6D835FB10>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/363e243a785dcb03e0d8dd61f44058e6/element/f.927FBF024FF21006E1BACC3BFBD10179.d.4816372F593E8966EED874350F427D15.e.168/text
+2025-07-21 22:07:09,490 - ERROR - Error extracting job data: HTTPConnectionPool(host='localhost', port=60593): Max retries exceeded with url: /session/363e243a785dcb03e0d8dd61f44058e6/element/f.927FBF024FF21006E1BACC3BFBD10179.d.4816372F593E8966EED874350F427D15.e.168/text (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E6D831A910>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-07-21 22:07:09,490 - WARNING - Could not extract data from card 8
+2025-07-21 22:07:13,556 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E6D8319250>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/363e243a785dcb03e0d8dd61f44058e6/element/f.927FBF024FF21006E1BACC3BFBD10179.d.4816372F593E8966EED874350F427D15.e.169/element
+2025-07-21 22:07:17,603 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E6D8321690>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/363e243a785dcb03e0d8dd61f44058e6/element/f.927FBF024FF21006E1BACC3BFBD10179.d.4816372F593E8966EED874350F427D15.e.169/element
+2025-07-21 22:07:43,947 - INFO - 🚀 Starting Enhanced Naukri Bot with AI Intelligence...
+2025-07-21 22:07:43,947 - INFO - Configuration loaded successfully
+2025-07-21 22:07:43,950 - INFO - Job database initialized
+2025-07-21 22:07:43,950 - INFO - Bot initialized successfully
+2025-07-21 22:07:43,950 - INFO - Enhanced configuration loaded successfully
+2025-07-21 22:07:43,950 - INFO - Gemini API initialized successfully
+2025-07-21 22:08:32,620 - WARNING - ⚠️ Gemini API test failed: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 15
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 26
+}
+]
+2025-07-21 22:08:32,620 - INFO - AI processor initialized successfully
+2025-07-21 22:08:32,620 - INFO - Enhanced Naukri Bot initialized successfully!
+2025-07-21 22:08:32,620 - INFO - 📡 Phase 1: Setting up browser...
+2025-07-21 22:08:32,620 - INFO - Setting up browser...
+2025-07-21 22:08:32,635 - INFO - Operating System: Windows-10-10.0.22000-SP0
+2025-07-21 22:08:32,664 - INFO - 🔄 Attempting automatic driver download...
+2025-07-21 22:08:32,664 - INFO - ====== WebDriver manager ======
+2025-07-21 22:08:33,647 - INFO - Get LATEST edgedriver version for Edge 138.0.3351
+2025-07-21 22:08:33,652 - WARNING - Webdriver manager failed: Could not reach host. Are you offline?
+2025-07-21 22:08:33,652 - WARNING - Driver setup method failed: Could not reach host. Are you offline?
+2025-07-21 22:08:33,652 - INFO - 🔄 Trying manual path: C:\WebDrivers\msedgedriver.exe
+2025-07-21 22:08:42,269 - INFO - ✅ Browser setup successful
+2025-07-21 22:08:42,271 - INFO - 🔐 Phase 2: Logging into Naukri...
+2025-07-21 22:08:42,272 - INFO - Login attempt 1/3
+2025-07-21 22:08:49,672 - INFO - ✅ Found email field with selector: #usernameField
+2025-07-21 22:08:57,320 - INFO - ✅ Found password field with selector: #passwordField
+2025-07-21 22:09:02,254 - INFO - ✅ Found login button with selector: //button[@type='submit']
+2025-07-21 22:09:08,344 - INFO - ✅ Login verified using: .nI-gNb-drawer__icon
+2025-07-21 22:09:08,348 - INFO - ✅ Login successful!
+2025-07-21 22:09:08,460 - INFO - ✅ Authentication verified using: Profile menu icon
+2025-07-21 22:09:08,465 - INFO - ✅ Authentication successful!
+2025-07-21 22:09:08,489 - INFO - 🧠 Phase 3: Starting AI-powered job processing...
+2025-07-21 22:09:08,921 - INFO - ✅ Authentication verified using: Profile menu icon
+2025-07-21 22:09:08,930 - INFO - 🎯 Starting AI-powered job processing (max 15 applications)
+2025-07-21 22:09:08,931 - INFO - 🔍 Processing keyword 1/4: Data Engineer
+2025-07-21 22:09:08,933 - INFO - Page 1/2: https://www.naukri.com/data-engineer-jobs-in-bengaluru-1
+2025-07-21 22:09:19,731 - INFO - Found 20 job cards on page
+2025-07-21 22:09:19,744 - INFO - 🔍 Processing job card 1/20
+2025-07-21 22:09:35,150 - WARNING - ⏰ Company extraction timeout
+2025-07-21 22:09:35,160 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:09:35,192 - INFO - ✅ Extracted: Data Engineer(Freelance | WFH) at Company Name
+2025-07-21 22:11:32,860 - INFO - 🤖 AI Analysis: Data Engineer(Freelance | WFH) scored 70/100
+2025-07-21 22:11:32,860 - INFO - ⭐ HIGH SCORE JOB: Data Engineer(Freelance | WFH) | Score: 70/100
+2025-07-21 22:16:07,193 - INFO - ✅ Successfully applied to: Data Engineer(Freelance | WFH)
+2025-07-21 22:16:07,193 - INFO - ✅ Application #1 sent successfully!
+2025-07-21 22:16:10,401 - INFO - 🔍 Processing job card 2/20
+2025-07-21 22:16:10,443 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:16:10,450 - ERROR - ❌ Job data extraction failed after 0.0s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=138.0.3351.83); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff78c6a8c85+23461]
+	(No symbol) [0x0x7ff78c5fcd70]
+	GetHandleVerifier [0x0x7ff78c920bb8+2611928]
+	(No symbol) [0x0x7ff78c3e04d5]
+	(No symbol) [0x0x7ff78c3df12f]
+	(No symbol) [0x0x7ff78c3e08db]
+	(No symbol) [0x0x7ff78c3d42ca]
+	(No symbol) [0x0x7ff78c3d271d]
+	(No symbol) [0x0x7ff78c3d60ac]
+	(No symbol) [0x0x7ff78c3d617f]
+	(No symbol) [0x0x7ff78c414c96]
+	(No symbol) [0x0x7ff78c43a6ba]
+	(No symbol) [0x0x7ff78c40f58d]
+	(No symbol) [0x0x7ff78c40f44d]
+	(No symbol) [0x0x7ff78c43a980]
+	(No symbol) [0x0x7ff78c40f58d]
+	(No symbol) [0x0x7ff78c45754f]
+	(No symbol) [0x0x7ff78c43a423]
+	(No symbol) [0x0x7ff78c40ea86]
+	(No symbol) [0x0x7ff78c40dd11]
+	(No symbol) [0x0x7ff78c40e8b3]
+	(No symbol) [0x0x7ff78c50e6fd]
+	(No symbol) [0x0x7ff78c51ba88]
+	GetHandleVerifier [0x0x7ff78c788acb+940523]
+	GetHandleVerifier [0x0x7ff78c791821+976705]
+	(No symbol) [0x0x7ff78c60a961]
+	(No symbol) [0x0x7ff78c603344]
+	(No symbol) [0x0x7ff78c603493]
+	(No symbol) [0x0x7ff78c5f4f36]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-21 22:16:10,450 - WARNING - ❌ Failed to extract data from card 2
+2025-07-21 22:16:10,450 - INFO - 🔍 Processing job card 3/20
+2025-07-21 22:16:10,511 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:16:10,516 - ERROR - ❌ Job data extraction failed after 0.1s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=138.0.3351.83); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff78c6a8c85+23461]
+	(No symbol) [0x0x7ff78c5fcd70]
+	GetHandleVerifier [0x0x7ff78c920bb8+2611928]
+	(No symbol) [0x0x7ff78c3e04d5]
+	(No symbol) [0x0x7ff78c3df12f]
+	(No symbol) [0x0x7ff78c3e08db]
+	(No symbol) [0x0x7ff78c3d42ca]
+	(No symbol) [0x0x7ff78c3d271d]
+	(No symbol) [0x0x7ff78c3d60ac]
+	(No symbol) [0x0x7ff78c3d617f]
+	(No symbol) [0x0x7ff78c414c96]
+	(No symbol) [0x0x7ff78c43a6ba]
+	(No symbol) [0x0x7ff78c40f58d]
+	(No symbol) [0x0x7ff78c40f44d]
+	(No symbol) [0x0x7ff78c43a980]
+	(No symbol) [0x0x7ff78c40f58d]
+	(No symbol) [0x0x7ff78c45754f]
+	(No symbol) [0x0x7ff78c43a423]
+	(No symbol) [0x0x7ff78c40ea86]
+	(No symbol) [0x0x7ff78c40dd11]
+	(No symbol) [0x0x7ff78c40e8b3]
+	(No symbol) [0x0x7ff78c50e6fd]
+	(No symbol) [0x0x7ff78c51ba88]
+	GetHandleVerifier [0x0x7ff78c788acb+940523]
+	GetHandleVerifier [0x0x7ff78c791821+976705]
+	(No symbol) [0x0x7ff78c60a961]
+	(No symbol) [0x0x7ff78c603344]
+	(No symbol) [0x0x7ff78c603493]
+	(No symbol) [0x0x7ff78c5f4f36]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-21 22:16:10,519 - WARNING - ❌ Failed to extract data from card 3
+2025-07-21 22:16:10,520 - INFO - 🔍 Processing job card 4/20
+2025-07-21 22:16:10,560 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:16:10,560 - ERROR - ❌ Job data extraction failed after 0.0s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=138.0.3351.83); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff78c6a8c85+23461]
+	(No symbol) [0x0x7ff78c5fcd70]
+	GetHandleVerifier [0x0x7ff78c920bb8+2611928]
+	(No symbol) [0x0x7ff78c3e04d5]
+	(No symbol) [0x0x7ff78c3df12f]
+	(No symbol) [0x0x7ff78c3e08db]
+	(No symbol) [0x0x7ff78c3d42ca]
+	(No symbol) [0x0x7ff78c3d271d]
+	(No symbol) [0x0x7ff78c3d60ac]
+	(No symbol) [0x0x7ff78c3d617f]
+	(No symbol) [0x0x7ff78c414c96]
+	(No symbol) [0x0x7ff78c43a6ba]
+	(No symbol) [0x0x7ff78c40f58d]
+	(No symbol) [0x0x7ff78c40f44d]
+	(No symbol) [0x0x7ff78c43a980]
+	(No symbol) [0x0x7ff78c40f58d]
+	(No symbol) [0x0x7ff78c45754f]
+	(No symbol) [0x0x7ff78c43a423]
+	(No symbol) [0x0x7ff78c40ea86]
+	(No symbol) [0x0x7ff78c40dd11]
+	(No symbol) [0x0x7ff78c40e8b3]
+	(No symbol) [0x0x7ff78c50e6fd]
+	(No symbol) [0x0x7ff78c51ba88]
+	GetHandleVerifier [0x0x7ff78c788acb+940523]
+	GetHandleVerifier [0x0x7ff78c791821+976705]
+	(No symbol) [0x0x7ff78c60a961]
+	(No symbol) [0x0x7ff78c603344]
+	(No symbol) [0x0x7ff78c603493]
+	(No symbol) [0x0x7ff78c5f4f36]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-21 22:16:10,560 - WARNING - ❌ Failed to extract data from card 4
+2025-07-21 22:16:10,560 - INFO - 🔍 Processing job card 5/20
+2025-07-21 22:16:10,597 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:16:10,600 - ERROR - ❌ Job data extraction failed after 0.0s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=138.0.3351.83); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff78c6a8c85+23461]
+	(No symbol) [0x0x7ff78c5fcd70]
+	GetHandleVerifier [0x0x7ff78c920bb8+2611928]
+	(No symbol) [0x0x7ff78c3e04d5]
+	(No symbol) [0x0x7ff78c3df12f]
+	(No symbol) [0x0x7ff78c3e08db]
+	(No symbol) [0x0x7ff78c3d42ca]
+	(No symbol) [0x0x7ff78c3d271d]
+	(No symbol) [0x0x7ff78c3d60ac]
+	(No symbol) [0x0x7ff78c3d617f]
+	(No symbol) [0x0x7ff78c414c96]
+	(No symbol) [0x0x7ff78c43a6ba]
+	(No symbol) [0x0x7ff78c40f58d]
+	(No symbol) [0x0x7ff78c40f44d]
+	(No symbol) [0x0x7ff78c43a980]
+	(No symbol) [0x0x7ff78c40f58d]
+	(No symbol) [0x0x7ff78c45754f]
+	(No symbol) [0x0x7ff78c43a423]
+	(No symbol) [0x0x7ff78c40ea86]
+	(No symbol) [0x0x7ff78c40dd11]
+	(No symbol) [0x0x7ff78c40e8b3]
+	(No symbol) [0x0x7ff78c50e6fd]
+	(No symbol) [0x0x7ff78c51ba88]
+	GetHandleVerifier [0x0x7ff78c788acb+940523]
+	GetHandleVerifier [0x0x7ff78c791821+976705]
+	(No symbol) [0x0x7ff78c60a961]
+	(No symbol) [0x0x7ff78c603344]
+	(No symbol) [0x0x7ff78c603493]
+	(No symbol) [0x0x7ff78c5f4f36]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-21 22:16:10,604 - WARNING - ❌ Failed to extract data from card 5
+2025-07-21 22:16:10,604 - INFO - 🔍 Processing job card 6/20
+2025-07-21 22:16:10,640 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:16:10,640 - ERROR - ❌ Job data extraction failed after 0.0s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=138.0.3351.83); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff78c6a8c85+23461]
+	(No symbol) [0x0x7ff78c5fcd70]
+	GetHandleVerifier [0x0x7ff78c920bb8+2611928]
+	(No symbol) [0x0x7ff78c3e04d5]
+	(No symbol) [0x0x7ff78c3df12f]
+	(No symbol) [0x0x7ff78c3e08db]
+	(No symbol) [0x0x7ff78c3d42ca]
+	(No symbol) [0x0x7ff78c3d271d]
+	(No symbol) [0x0x7ff78c3d60ac]
+	(No symbol) [0x0x7ff78c3d617f]
+	(No symbol) [0x0x7ff78c414c96]
+	(No symbol) [0x0x7ff78c43a6ba]
+	(No symbol) [0x0x7ff78c40f58d]
+	(No symbol) [0x0x7ff78c40f44d]
+	(No symbol) [0x0x7ff78c43a980]
+	(No symbol) [0x0x7ff78c40f58d]
+	(No symbol) [0x0x7ff78c45754f]
+	(No symbol) [0x0x7ff78c43a423]
+	(No symbol) [0x0x7ff78c40ea86]
+	(No symbol) [0x0x7ff78c40dd11]
+	(No symbol) [0x0x7ff78c40e8b3]
+	(No symbol) [0x0x7ff78c50e6fd]
+	(No symbol) [0x0x7ff78c51ba88]
+	GetHandleVerifier [0x0x7ff78c788acb+940523]
+	GetHandleVerifier [0x0x7ff78c791821+976705]
+	(No symbol) [0x0x7ff78c60a961]
+	(No symbol) [0x0x7ff78c603344]
+	(No symbol) [0x0x7ff78c603493]
+	(No symbol) [0x0x7ff78c5f4f36]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-21 22:16:10,644 - WARNING - ❌ Failed to extract data from card 6
+2025-07-21 22:16:10,644 - INFO - 🔍 Processing job card 7/20
+2025-07-21 22:16:10,686 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:16:10,686 - ERROR - ❌ Job data extraction failed after 0.0s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=138.0.3351.83); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff78c6a8c85+23461]
+	(No symbol) [0x0x7ff78c5fcd70]
+	GetHandleVerifier [0x0x7ff78c920bb8+2611928]
+	(No symbol) [0x0x7ff78c3e04d5]
+	(No symbol) [0x0x7ff78c3df12f]
+	(No symbol) [0x0x7ff78c3e08db]
+	(No symbol) [0x0x7ff78c3d42ca]
+	(No symbol) [0x0x7ff78c3d271d]
+	(No symbol) [0x0x7ff78c3d60ac]
+	(No symbol) [0x0x7ff78c3d617f]
+	(No symbol) [0x0x7ff78c414c96]
+	(No symbol) [0x0x7ff78c43a6ba]
+	(No symbol) [0x0x7ff78c40f58d]
+	(No symbol) [0x0x7ff78c40f44d]
+	(No symbol) [0x0x7ff78c43a980]
+	(No symbol) [0x0x7ff78c40f58d]
+	(No symbol) [0x0x7ff78c45754f]
+	(No symbol) [0x0x7ff78c43a423]
+	(No symbol) [0x0x7ff78c40ea86]
+	(No symbol) [0x0x7ff78c40dd11]
+	(No symbol) [0x0x7ff78c40e8b3]
+	(No symbol) [0x0x7ff78c50e6fd]
+	(No symbol) [0x0x7ff78c51ba88]
+	GetHandleVerifier [0x0x7ff78c788acb+940523]
+	GetHandleVerifier [0x0x7ff78c791821+976705]
+	(No symbol) [0x0x7ff78c60a961]
+	(No symbol) [0x0x7ff78c603344]
+	(No symbol) [0x0x7ff78c603493]
+	(No symbol) [0x0x7ff78c5f4f36]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-21 22:16:10,690 - WARNING - ❌ Failed to extract data from card 7
+2025-07-21 22:16:10,690 - INFO - 🔍 Processing job card 8/20
+2025-07-21 22:16:10,733 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:16:10,735 - ERROR - ❌ Job data extraction failed after 0.0s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=138.0.3351.83); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff78c6a8c85+23461]
+	(No symbol) [0x0x7ff78c5fcd70]
+	GetHandleVerifier [0x0x7ff78c920bb8+2611928]
+	(No symbol) [0x0x7ff78c3e04d5]
+	(No symbol) [0x0x7ff78c3df12f]
+	(No symbol) [0x0x7ff78c3e08db]
+	(No symbol) [0x0x7ff78c3d42ca]
+	(No symbol) [0x0x7ff78c3d271d]
+	(No symbol) [0x0x7ff78c3d60ac]
+	(No symbol) [0x0x7ff78c3d617f]
+	(No symbol) [0x0x7ff78c414c96]
+	(No symbol) [0x0x7ff78c43a6ba]
+	(No symbol) [0x0x7ff78c40f58d]
+	(No symbol) [0x0x7ff78c40f44d]
+	(No symbol) [0x0x7ff78c43a980]
+	(No symbol) [0x0x7ff78c40f58d]
+	(No symbol) [0x0x7ff78c45754f]
+	(No symbol) [0x0x7ff78c43a423]
+	(No symbol) [0x0x7ff78c40ea86]
+	(No symbol) [0x0x7ff78c40dd11]
+	(No symbol) [0x0x7ff78c40e8b3]
+	(No symbol) [0x0x7ff78c50e6fd]
+	(No symbol) [0x0x7ff78c51ba88]
+	GetHandleVerifier [0x0x7ff78c788acb+940523]
+	GetHandleVerifier [0x0x7ff78c791821+976705]
+	(No symbol) [0x0x7ff78c60a961]
+	(No symbol) [0x0x7ff78c603344]
+	(No symbol) [0x0x7ff78c603493]
+	(No symbol) [0x0x7ff78c5f4f36]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-21 22:16:10,737 - WARNING - ❌ Failed to extract data from card 8
+2025-07-21 22:16:10,737 - INFO - 🔍 Processing job card 9/20
+2025-07-21 22:16:10,775 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:16:10,776 - ERROR - ❌ Job data extraction failed after 0.0s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=138.0.3351.83); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff78c6a8c85+23461]
+	(No symbol) [0x0x7ff78c5fcd70]
+	GetHandleVerifier [0x0x7ff78c920bb8+2611928]
+	(No symbol) [0x0x7ff78c3e04d5]
+	(No symbol) [0x0x7ff78c3df12f]
+	(No symbol) [0x0x7ff78c3e08db]
+	(No symbol) [0x0x7ff78c3d42ca]
+	(No symbol) [0x0x7ff78c3d271d]
+	(No symbol) [0x0x7ff78c3d60ac]
+	(No symbol) [0x0x7ff78c3d617f]
+	(No symbol) [0x0x7ff78c414c96]
+	(No symbol) [0x0x7ff78c43a6ba]
+	(No symbol) [0x0x7ff78c40f58d]
+	(No symbol) [0x0x7ff78c40f44d]
+	(No symbol) [0x0x7ff78c43a980]
+	(No symbol) [0x0x7ff78c40f58d]
+	(No symbol) [0x0x7ff78c45754f]
+	(No symbol) [0x0x7ff78c43a423]
+	(No symbol) [0x0x7ff78c40ea86]
+	(No symbol) [0x0x7ff78c40dd11]
+	(No symbol) [0x0x7ff78c40e8b3]
+	(No symbol) [0x0x7ff78c50e6fd]
+	(No symbol) [0x0x7ff78c51ba88]
+	GetHandleVerifier [0x0x7ff78c788acb+940523]
+	GetHandleVerifier [0x0x7ff78c791821+976705]
+	(No symbol) [0x0x7ff78c60a961]
+	(No symbol) [0x0x7ff78c603344]
+	(No symbol) [0x0x7ff78c603493]
+	(No symbol) [0x0x7ff78c5f4f36]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-21 22:16:10,780 - WARNING - ❌ Failed to extract data from card 9
+2025-07-21 22:16:10,780 - INFO - 🔍 Processing job card 10/20
+2025-07-21 22:16:10,819 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:16:10,822 - ERROR - ❌ Job data extraction failed after 0.0s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=138.0.3351.83); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff78c6a8c85+23461]
+	(No symbol) [0x0x7ff78c5fcd70]
+	GetHandleVerifier [0x0x7ff78c920bb8+2611928]
+	(No symbol) [0x0x7ff78c3e04d5]
+	(No symbol) [0x0x7ff78c3df12f]
+	(No symbol) [0x0x7ff78c3e08db]
+	(No symbol) [0x0x7ff78c3d42ca]
+	(No symbol) [0x0x7ff78c3d271d]
+	(No symbol) [0x0x7ff78c3d60ac]
+	(No symbol) [0x0x7ff78c3d617f]
+	(No symbol) [0x0x7ff78c414c96]
+	(No symbol) [0x0x7ff78c43a6ba]
+	(No symbol) [0x0x7ff78c40f58d]
+	(No symbol) [0x0x7ff78c40f44d]
+	(No symbol) [0x0x7ff78c43a980]
+	(No symbol) [0x0x7ff78c40f58d]
+	(No symbol) [0x0x7ff78c45754f]
+	(No symbol) [0x0x7ff78c43a423]
+	(No symbol) [0x0x7ff78c40ea86]
+	(No symbol) [0x0x7ff78c40dd11]
+	(No symbol) [0x0x7ff78c40e8b3]
+	(No symbol) [0x0x7ff78c50e6fd]
+	(No symbol) [0x0x7ff78c51ba88]
+	GetHandleVerifier [0x0x7ff78c788acb+940523]
+	GetHandleVerifier [0x0x7ff78c791821+976705]
+	(No symbol) [0x0x7ff78c60a961]
+	(No symbol) [0x0x7ff78c603344]
+	(No symbol) [0x0x7ff78c603493]
+	(No symbol) [0x0x7ff78c5f4f36]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-21 22:16:10,822 - WARNING - ❌ Failed to extract data from card 10
+2025-07-21 22:16:10,823 - INFO - 🔍 Processing job card 11/20
+2025-07-21 22:16:10,855 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:16:10,857 - ERROR - ❌ Job data extraction failed after 0.0s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=138.0.3351.83); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff78c6a8c85+23461]
+	(No symbol) [0x0x7ff78c5fcd70]
+	GetHandleVerifier [0x0x7ff78c920bb8+2611928]
+	(No symbol) [0x0x7ff78c3e04d5]
+	(No symbol) [0x0x7ff78c3df12f]
+	(No symbol) [0x0x7ff78c3e08db]
+	(No symbol) [0x0x7ff78c3d42ca]
+	(No symbol) [0x0x7ff78c3d271d]
+	(No symbol) [0x0x7ff78c3d60ac]
+	(No symbol) [0x0x7ff78c3d617f]
+	(No symbol) [0x0x7ff78c414c96]
+	(No symbol) [0x0x7ff78c43a6ba]
+	(No symbol) [0x0x7ff78c40f58d]
+	(No symbol) [0x0x7ff78c40f44d]
+	(No symbol) [0x0x7ff78c43a980]
+	(No symbol) [0x0x7ff78c40f58d]
+	(No symbol) [0x0x7ff78c45754f]
+	(No symbol) [0x0x7ff78c43a423]
+	(No symbol) [0x0x7ff78c40ea86]
+	(No symbol) [0x0x7ff78c40dd11]
+	(No symbol) [0x0x7ff78c40e8b3]
+	(No symbol) [0x0x7ff78c50e6fd]
+	(No symbol) [0x0x7ff78c51ba88]
+	GetHandleVerifier [0x0x7ff78c788acb+940523]
+	GetHandleVerifier [0x0x7ff78c791821+976705]
+	(No symbol) [0x0x7ff78c60a961]
+	(No symbol) [0x0x7ff78c603344]
+	(No symbol) [0x0x7ff78c603493]
+	(No symbol) [0x0x7ff78c5f4f36]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-21 22:16:10,858 - WARNING - ❌ Failed to extract data from card 11
+2025-07-21 22:16:10,859 - INFO - 🔍 Processing job card 12/20
+2025-07-21 22:16:10,890 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:16:10,896 - ERROR - ❌ Job data extraction failed after 0.0s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=138.0.3351.83); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff78c6a8c85+23461]
+	(No symbol) [0x0x7ff78c5fcd70]
+	GetHandleVerifier [0x0x7ff78c920bb8+2611928]
+	(No symbol) [0x0x7ff78c3e04d5]
+	(No symbol) [0x0x7ff78c3df12f]
+	(No symbol) [0x0x7ff78c3e08db]
+	(No symbol) [0x0x7ff78c3d42ca]
+	(No symbol) [0x0x7ff78c3d271d]
+	(No symbol) [0x0x7ff78c3d60ac]
+	(No symbol) [0x0x7ff78c3d617f]
+	(No symbol) [0x0x7ff78c414c96]
+	(No symbol) [0x0x7ff78c43a6ba]
+	(No symbol) [0x0x7ff78c40f58d]
+	(No symbol) [0x0x7ff78c40f44d]
+	(No symbol) [0x0x7ff78c43a980]
+	(No symbol) [0x0x7ff78c40f58d]
+	(No symbol) [0x0x7ff78c45754f]
+	(No symbol) [0x0x7ff78c43a423]
+	(No symbol) [0x0x7ff78c40ea86]
+	(No symbol) [0x0x7ff78c40dd11]
+	(No symbol) [0x0x7ff78c40e8b3]
+	(No symbol) [0x0x7ff78c50e6fd]
+	(No symbol) [0x0x7ff78c51ba88]
+	GetHandleVerifier [0x0x7ff78c788acb+940523]
+	GetHandleVerifier [0x0x7ff78c791821+976705]
+	(No symbol) [0x0x7ff78c60a961]
+	(No symbol) [0x0x7ff78c603344]
+	(No symbol) [0x0x7ff78c603493]
+	(No symbol) [0x0x7ff78c5f4f36]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-21 22:16:10,898 - WARNING - ❌ Failed to extract data from card 12
+2025-07-21 22:16:10,898 - INFO - 🔍 Processing job card 13/20
+2025-07-21 22:16:10,936 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:16:10,938 - ERROR - ❌ Job data extraction failed after 0.0s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=138.0.3351.83); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff78c6a8c85+23461]
+	(No symbol) [0x0x7ff78c5fcd70]
+	GetHandleVerifier [0x0x7ff78c920bb8+2611928]
+	(No symbol) [0x0x7ff78c3e04d5]
+	(No symbol) [0x0x7ff78c3df12f]
+	(No symbol) [0x0x7ff78c3e08db]
+	(No symbol) [0x0x7ff78c3d42ca]
+	(No symbol) [0x0x7ff78c3d271d]
+	(No symbol) [0x0x7ff78c3d60ac]
+	(No symbol) [0x0x7ff78c3d617f]
+	(No symbol) [0x0x7ff78c414c96]
+	(No symbol) [0x0x7ff78c43a6ba]
+	(No symbol) [0x0x7ff78c40f58d]
+	(No symbol) [0x0x7ff78c40f44d]
+	(No symbol) [0x0x7ff78c43a980]
+	(No symbol) [0x0x7ff78c40f58d]
+	(No symbol) [0x0x7ff78c45754f]
+	(No symbol) [0x0x7ff78c43a423]
+	(No symbol) [0x0x7ff78c40ea86]
+	(No symbol) [0x0x7ff78c40dd11]
+	(No symbol) [0x0x7ff78c40e8b3]
+	(No symbol) [0x0x7ff78c50e6fd]
+	(No symbol) [0x0x7ff78c51ba88]
+	GetHandleVerifier [0x0x7ff78c788acb+940523]
+	GetHandleVerifier [0x0x7ff78c791821+976705]
+	(No symbol) [0x0x7ff78c60a961]
+	(No symbol) [0x0x7ff78c603344]
+	(No symbol) [0x0x7ff78c603493]
+	(No symbol) [0x0x7ff78c5f4f36]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-21 22:16:10,939 - WARNING - ❌ Failed to extract data from card 13
+2025-07-21 22:16:10,940 - INFO - 🔍 Processing job card 14/20
+2025-07-21 22:16:10,978 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:16:10,980 - ERROR - ❌ Job data extraction failed after 0.0s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=138.0.3351.83); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff78c6a8c85+23461]
+	(No symbol) [0x0x7ff78c5fcd70]
+	GetHandleVerifier [0x0x7ff78c920bb8+2611928]
+	(No symbol) [0x0x7ff78c3e04d5]
+	(No symbol) [0x0x7ff78c3df12f]
+	(No symbol) [0x0x7ff78c3e08db]
+	(No symbol) [0x0x7ff78c3d42ca]
+	(No symbol) [0x0x7ff78c3d271d]
+	(No symbol) [0x0x7ff78c3d60ac]
+	(No symbol) [0x0x7ff78c3d617f]
+	(No symbol) [0x0x7ff78c414c96]
+	(No symbol) [0x0x7ff78c43a6ba]
+	(No symbol) [0x0x7ff78c40f58d]
+	(No symbol) [0x0x7ff78c40f44d]
+	(No symbol) [0x0x7ff78c43a980]
+	(No symbol) [0x0x7ff78c40f58d]
+	(No symbol) [0x0x7ff78c45754f]
+	(No symbol) [0x0x7ff78c43a423]
+	(No symbol) [0x0x7ff78c40ea86]
+	(No symbol) [0x0x7ff78c40dd11]
+	(No symbol) [0x0x7ff78c40e8b3]
+	(No symbol) [0x0x7ff78c50e6fd]
+	(No symbol) [0x0x7ff78c51ba88]
+	GetHandleVerifier [0x0x7ff78c788acb+940523]
+	GetHandleVerifier [0x0x7ff78c791821+976705]
+	(No symbol) [0x0x7ff78c60a961]
+	(No symbol) [0x0x7ff78c603344]
+	(No symbol) [0x0x7ff78c603493]
+	(No symbol) [0x0x7ff78c5f4f36]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-21 22:16:10,981 - WARNING - ❌ Failed to extract data from card 14
+2025-07-21 22:16:10,981 - INFO - 🔍 Processing job card 15/20
+2025-07-21 22:16:11,012 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:16:11,012 - ERROR - ❌ Job data extraction failed after 0.0s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=138.0.3351.83); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff78c6a8c85+23461]
+	(No symbol) [0x0x7ff78c5fcd70]
+	GetHandleVerifier [0x0x7ff78c920bb8+2611928]
+	(No symbol) [0x0x7ff78c3e04d5]
+	(No symbol) [0x0x7ff78c3df12f]
+	(No symbol) [0x0x7ff78c3e08db]
+	(No symbol) [0x0x7ff78c3d42ca]
+	(No symbol) [0x0x7ff78c3d271d]
+	(No symbol) [0x0x7ff78c3d60ac]
+	(No symbol) [0x0x7ff78c3d617f]
+	(No symbol) [0x0x7ff78c414c96]
+	(No symbol) [0x0x7ff78c43a6ba]
+	(No symbol) [0x0x7ff78c40f58d]
+	(No symbol) [0x0x7ff78c40f44d]
+	(No symbol) [0x0x7ff78c43a980]
+	(No symbol) [0x0x7ff78c40f58d]
+	(No symbol) [0x0x7ff78c45754f]
+	(No symbol) [0x0x7ff78c43a423]
+	(No symbol) [0x0x7ff78c40ea86]
+	(No symbol) [0x0x7ff78c40dd11]
+	(No symbol) [0x0x7ff78c40e8b3]
+	(No symbol) [0x0x7ff78c50e6fd]
+	(No symbol) [0x0x7ff78c51ba88]
+	GetHandleVerifier [0x0x7ff78c788acb+940523]
+	GetHandleVerifier [0x0x7ff78c791821+976705]
+	(No symbol) [0x0x7ff78c60a961]
+	(No symbol) [0x0x7ff78c603344]
+	(No symbol) [0x0x7ff78c603493]
+	(No symbol) [0x0x7ff78c5f4f36]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-21 22:16:11,012 - WARNING - ❌ Failed to extract data from card 15
+2025-07-21 22:16:11,012 - INFO - 🔍 Processing job card 16/20
+2025-07-21 22:16:11,064 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:16:11,066 - ERROR - ❌ Job data extraction failed after 0.1s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=138.0.3351.83); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff78c6a8c85+23461]
+	(No symbol) [0x0x7ff78c5fcd70]
+	GetHandleVerifier [0x0x7ff78c920bb8+2611928]
+	(No symbol) [0x0x7ff78c3e04d5]
+	(No symbol) [0x0x7ff78c3df12f]
+	(No symbol) [0x0x7ff78c3e08db]
+	(No symbol) [0x0x7ff78c3d42ca]
+	(No symbol) [0x0x7ff78c3d271d]
+	(No symbol) [0x0x7ff78c3d60ac]
+	(No symbol) [0x0x7ff78c3d617f]
+	(No symbol) [0x0x7ff78c414c96]
+	(No symbol) [0x0x7ff78c43a6ba]
+	(No symbol) [0x0x7ff78c40f58d]
+	(No symbol) [0x0x7ff78c40f44d]
+	(No symbol) [0x0x7ff78c43a980]
+	(No symbol) [0x0x7ff78c40f58d]
+	(No symbol) [0x0x7ff78c45754f]
+	(No symbol) [0x0x7ff78c43a423]
+	(No symbol) [0x0x7ff78c40ea86]
+	(No symbol) [0x0x7ff78c40dd11]
+	(No symbol) [0x0x7ff78c40e8b3]
+	(No symbol) [0x0x7ff78c50e6fd]
+	(No symbol) [0x0x7ff78c51ba88]
+	GetHandleVerifier [0x0x7ff78c788acb+940523]
+	GetHandleVerifier [0x0x7ff78c791821+976705]
+	(No symbol) [0x0x7ff78c60a961]
+	(No symbol) [0x0x7ff78c603344]
+	(No symbol) [0x0x7ff78c603493]
+	(No symbol) [0x0x7ff78c5f4f36]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-21 22:16:11,067 - WARNING - ❌ Failed to extract data from card 16
+2025-07-21 22:16:11,067 - INFO - 🔍 Processing job card 17/20
+2025-07-21 22:16:11,103 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:16:11,103 - ERROR - ❌ Job data extraction failed after 0.0s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=138.0.3351.83); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff78c6a8c85+23461]
+	(No symbol) [0x0x7ff78c5fcd70]
+	GetHandleVerifier [0x0x7ff78c920bb8+2611928]
+	(No symbol) [0x0x7ff78c3e04d5]
+	(No symbol) [0x0x7ff78c3df12f]
+	(No symbol) [0x0x7ff78c3e08db]
+	(No symbol) [0x0x7ff78c3d42ca]
+	(No symbol) [0x0x7ff78c3d271d]
+	(No symbol) [0x0x7ff78c3d60ac]
+	(No symbol) [0x0x7ff78c3d617f]
+	(No symbol) [0x0x7ff78c414c96]
+	(No symbol) [0x0x7ff78c43a6ba]
+	(No symbol) [0x0x7ff78c40f58d]
+	(No symbol) [0x0x7ff78c40f44d]
+	(No symbol) [0x0x7ff78c43a980]
+	(No symbol) [0x0x7ff78c40f58d]
+	(No symbol) [0x0x7ff78c45754f]
+	(No symbol) [0x0x7ff78c43a423]
+	(No symbol) [0x0x7ff78c40ea86]
+	(No symbol) [0x0x7ff78c40dd11]
+	(No symbol) [0x0x7ff78c40e8b3]
+	(No symbol) [0x0x7ff78c50e6fd]
+	(No symbol) [0x0x7ff78c51ba88]
+	GetHandleVerifier [0x0x7ff78c788acb+940523]
+	GetHandleVerifier [0x0x7ff78c791821+976705]
+	(No symbol) [0x0x7ff78c60a961]
+	(No symbol) [0x0x7ff78c603344]
+	(No symbol) [0x0x7ff78c603493]
+	(No symbol) [0x0x7ff78c5f4f36]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-21 22:16:11,103 - WARNING - ❌ Failed to extract data from card 17
+2025-07-21 22:16:11,103 - INFO - 🔍 Processing job card 18/20
+2025-07-21 22:16:11,143 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:16:11,146 - ERROR - ❌ Job data extraction failed after 0.0s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=138.0.3351.83); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff78c6a8c85+23461]
+	(No symbol) [0x0x7ff78c5fcd70]
+	GetHandleVerifier [0x0x7ff78c920bb8+2611928]
+	(No symbol) [0x0x7ff78c3e04d5]
+	(No symbol) [0x0x7ff78c3df12f]
+	(No symbol) [0x0x7ff78c3e08db]
+	(No symbol) [0x0x7ff78c3d42ca]
+	(No symbol) [0x0x7ff78c3d271d]
+	(No symbol) [0x0x7ff78c3d60ac]
+	(No symbol) [0x0x7ff78c3d617f]
+	(No symbol) [0x0x7ff78c414c96]
+	(No symbol) [0x0x7ff78c43a6ba]
+	(No symbol) [0x0x7ff78c40f58d]
+	(No symbol) [0x0x7ff78c40f44d]
+	(No symbol) [0x0x7ff78c43a980]
+	(No symbol) [0x0x7ff78c40f58d]
+	(No symbol) [0x0x7ff78c45754f]
+	(No symbol) [0x0x7ff78c43a423]
+	(No symbol) [0x0x7ff78c40ea86]
+	(No symbol) [0x0x7ff78c40dd11]
+	(No symbol) [0x0x7ff78c40e8b3]
+	(No symbol) [0x0x7ff78c50e6fd]
+	(No symbol) [0x0x7ff78c51ba88]
+	GetHandleVerifier [0x0x7ff78c788acb+940523]
+	GetHandleVerifier [0x0x7ff78c791821+976705]
+	(No symbol) [0x0x7ff78c60a961]
+	(No symbol) [0x0x7ff78c603344]
+	(No symbol) [0x0x7ff78c603493]
+	(No symbol) [0x0x7ff78c5f4f36]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-21 22:16:11,147 - WARNING - ❌ Failed to extract data from card 18
+2025-07-21 22:16:11,148 - INFO - 🔍 Processing job card 19/20
+2025-07-21 22:16:11,182 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:16:11,182 - ERROR - ❌ Job data extraction failed after 0.0s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=138.0.3351.83); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff78c6a8c85+23461]
+	(No symbol) [0x0x7ff78c5fcd70]
+	GetHandleVerifier [0x0x7ff78c920bb8+2611928]
+	(No symbol) [0x0x7ff78c3e04d5]
+	(No symbol) [0x0x7ff78c3df12f]
+	(No symbol) [0x0x7ff78c3e08db]
+	(No symbol) [0x0x7ff78c3d42ca]
+	(No symbol) [0x0x7ff78c3d271d]
+	(No symbol) [0x0x7ff78c3d60ac]
+	(No symbol) [0x0x7ff78c3d617f]
+	(No symbol) [0x0x7ff78c414c96]
+	(No symbol) [0x0x7ff78c43a6ba]
+	(No symbol) [0x0x7ff78c40f58d]
+	(No symbol) [0x0x7ff78c40f44d]
+	(No symbol) [0x0x7ff78c43a980]
+	(No symbol) [0x0x7ff78c40f58d]
+	(No symbol) [0x0x7ff78c45754f]
+	(No symbol) [0x0x7ff78c43a423]
+	(No symbol) [0x0x7ff78c40ea86]
+	(No symbol) [0x0x7ff78c40dd11]
+	(No symbol) [0x0x7ff78c40e8b3]
+	(No symbol) [0x0x7ff78c50e6fd]
+	(No symbol) [0x0x7ff78c51ba88]
+	GetHandleVerifier [0x0x7ff78c788acb+940523]
+	GetHandleVerifier [0x0x7ff78c791821+976705]
+	(No symbol) [0x0x7ff78c60a961]
+	(No symbol) [0x0x7ff78c603344]
+	(No symbol) [0x0x7ff78c603493]
+	(No symbol) [0x0x7ff78c5f4f36]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-21 22:16:11,182 - WARNING - ❌ Failed to extract data from card 19
+2025-07-21 22:16:11,182 - INFO - 🔍 Processing job card 20/20
+2025-07-21 22:16:11,221 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:16:11,224 - ERROR - ❌ Job data extraction failed after 0.0s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=138.0.3351.83); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff78c6a8c85+23461]
+	(No symbol) [0x0x7ff78c5fcd70]
+	GetHandleVerifier [0x0x7ff78c920bb8+2611928]
+	(No symbol) [0x0x7ff78c3e04d5]
+	(No symbol) [0x0x7ff78c3df12f]
+	(No symbol) [0x0x7ff78c3e08db]
+	(No symbol) [0x0x7ff78c3d42ca]
+	(No symbol) [0x0x7ff78c3d271d]
+	(No symbol) [0x0x7ff78c3d60ac]
+	(No symbol) [0x0x7ff78c3d617f]
+	(No symbol) [0x0x7ff78c414c96]
+	(No symbol) [0x0x7ff78c43a6ba]
+	(No symbol) [0x0x7ff78c40f58d]
+	(No symbol) [0x0x7ff78c40f44d]
+	(No symbol) [0x0x7ff78c43a980]
+	(No symbol) [0x0x7ff78c40f58d]
+	(No symbol) [0x0x7ff78c45754f]
+	(No symbol) [0x0x7ff78c43a423]
+	(No symbol) [0x0x7ff78c40ea86]
+	(No symbol) [0x0x7ff78c40dd11]
+	(No symbol) [0x0x7ff78c40e8b3]
+	(No symbol) [0x0x7ff78c50e6fd]
+	(No symbol) [0x0x7ff78c51ba88]
+	GetHandleVerifier [0x0x7ff78c788acb+940523]
+	GetHandleVerifier [0x0x7ff78c791821+976705]
+	(No symbol) [0x0x7ff78c60a961]
+	(No symbol) [0x0x7ff78c603344]
+	(No symbol) [0x0x7ff78c603493]
+	(No symbol) [0x0x7ff78c5f4f36]
+	BaseThreadInitThunk [0x0x7ffc1fe653e0+16]
+	RtlUserThreadStart [0x0x7ffc20d0485b+43]
+
+2025-07-21 22:16:11,225 - WARNING - ❌ Failed to extract data from card 20
+2025-07-21 22:16:11,225 - INFO - Page 2/2: https://www.naukri.com/data-engineer-jobs-in-bengaluru-2
+2025-07-21 22:16:20,920 - INFO - Found 20 job cards on page
+2025-07-21 22:16:20,920 - INFO - 🔍 Processing job card 1/20
+2025-07-21 22:16:36,050 - WARNING - ⏰ Company extraction timeout
+2025-07-21 22:16:36,086 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:16:36,110 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-07-21 22:16:46,710 - ERROR - Gemini API error for Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 12
+}
+]
+2025-07-21 22:16:46,710 - INFO - 🤖 AI Analysis: Data Engineer scored 40/100
+2025-07-21 22:16:46,710 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 40/100
+2025-07-21 22:16:50,142 - INFO - 🔍 Processing job card 2/20
+2025-07-21 22:17:05,265 - WARNING - ⏰ Company extraction timeout
+2025-07-21 22:17:05,301 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:17:05,333 - INFO - ✅ Extracted: Data Engineer - Introlligent at Company Name
+2025-07-21 22:17:05,620 - ERROR - Gemini API error for Data Engineer - Introlligent: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 53
+}
+]
+2025-07-21 22:17:05,620 - INFO - 🤖 AI Analysis: Data Engineer - Introlligent scored 40/100
+2025-07-21 22:17:05,620 - INFO - ⏭️  SKIPPED: Data Engineer - Introlligent | Score: 40/100
+2025-07-21 22:17:07,663 - INFO - 🔍 Processing job card 3/20
+2025-07-21 22:17:22,755 - WARNING - ⏰ Company extraction timeout
+2025-07-21 22:17:22,907 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:17:22,950 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-07-21 22:17:23,240 - ERROR - Gemini API error for Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 35
+}
+]
+2025-07-21 22:17:23,240 - INFO - 🤖 AI Analysis: Data Engineer scored 40/100
+2025-07-21 22:17:23,240 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 40/100
+2025-07-21 22:17:26,593 - INFO - 🔍 Processing job card 4/20
+2025-07-21 22:17:41,680 - WARNING - ⏰ Company extraction timeout
+2025-07-21 22:17:41,720 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:17:41,745 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-07-21 22:17:42,060 - ERROR - Gemini API error for Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 17
+}
+]
+2025-07-21 22:17:42,060 - INFO - 🤖 AI Analysis: Data Engineer scored 40/100
+2025-07-21 22:17:42,060 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 40/100
+2025-07-21 22:17:45,121 - INFO - 🔍 Processing job card 5/20
+2025-07-21 22:18:00,160 - WARNING - ⏰ Company extraction timeout
+2025-07-21 22:18:00,195 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:18:00,220 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-07-21 22:18:00,520 - ERROR - Gemini API error for Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 58
+}
+]
+2025-07-21 22:18:00,520 - INFO - 🤖 AI Analysis: Data Engineer scored 40/100
+2025-07-21 22:18:00,520 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 40/100
+2025-07-21 22:18:04,373 - INFO - 🔍 Processing job card 6/20
+2025-07-21 22:18:19,420 - WARNING - ⏰ Company extraction timeout
+2025-07-21 22:18:19,447 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:18:19,466 - INFO - ✅ Extracted: Cognite Data Engineer at Company Name
+2025-07-21 22:18:19,740 - ERROR - Gemini API error for Cognite Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 39
+}
+]
+2025-07-21 22:18:19,740 - INFO - 🤖 AI Analysis: Cognite Data Engineer scored 40/100
+2025-07-21 22:18:19,750 - INFO - ⏭️  SKIPPED: Cognite Data Engineer | Score: 40/100
+2025-07-21 22:18:22,225 - INFO - 🔍 Processing job card 7/20
+2025-07-21 22:18:37,280 - WARNING - ⏰ Company extraction timeout
+2025-07-21 22:18:37,319 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:18:37,340 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-07-21 22:18:37,610 - ERROR - Gemini API error for Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 21
+}
+]
+2025-07-21 22:18:37,610 - INFO - 🤖 AI Analysis: Data Engineer scored 40/100
+2025-07-21 22:18:37,610 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 40/100
+2025-07-21 22:18:40,378 - INFO - 🔍 Processing job card 8/20
+2025-07-21 22:18:55,460 - WARNING - ⏰ Company extraction timeout
+2025-07-21 22:18:55,489 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:18:55,502 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-07-21 22:18:58,299 - ERROR - Gemini API error for Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+}
+]
+2025-07-21 22:18:58,299 - INFO - 🤖 AI Analysis: Data Engineer scored 40/100
+2025-07-21 22:18:58,299 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 40/100
+2025-07-21 22:19:02,030 - INFO - 🔍 Processing job card 9/20
+2025-07-21 22:19:17,164 - WARNING - ⏰ Company extraction timeout
+2025-07-21 22:19:17,176 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:19:17,190 - INFO - ✅ Extracted: Data Engineer (ETL, Go, Databricks) at Instinctools
+2025-07-21 22:19:17,554 - ERROR - Gemini API error for Data Engineer (ETL, Go, Databricks): 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 41
+}
+]
+2025-07-21 22:19:17,557 - INFO - 🤖 AI Analysis: Data Engineer (ETL, Go, Databricks) scored 50/100
+2025-07-21 22:19:17,557 - INFO - ⏭️  SKIPPED: Data Engineer (ETL, Go, Databricks) | Score: 50/100
+2025-07-21 22:19:19,645 - INFO - 🔍 Processing job card 10/20
+2025-07-21 22:19:34,744 - WARNING - ⏰ Company extraction timeout
+2025-07-21 22:19:34,763 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:19:34,805 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-07-21 22:19:35,165 - ERROR - Gemini API error for Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 24
+}
+]
+2025-07-21 22:19:35,170 - INFO - 🤖 AI Analysis: Data Engineer scored 40/100
+2025-07-21 22:19:35,170 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 40/100
+2025-07-21 22:19:38,017 - INFO - 🔍 Processing job card 11/20
+2025-07-21 22:19:53,225 - WARNING - ⏰ Company extraction timeout
+2025-07-21 22:19:53,260 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:19:53,290 - INFO - ✅ Extracted: Data Engineer at Star4rall It Solutions
+2025-07-21 22:19:53,610 - ERROR - Gemini API error for Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 5
+}
+]
+2025-07-21 22:19:53,610 - INFO - 🤖 AI Analysis: Data Engineer scored 40/100
+2025-07-21 22:19:53,610 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 40/100
+2025-07-21 22:19:57,511 - INFO - 🔍 Processing job card 12/20
+2025-07-21 22:20:12,580 - WARNING - ⏰ Company extraction timeout
+2025-07-21 22:20:12,630 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:20:12,664 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-07-21 22:20:13,055 - ERROR - Gemini API error for Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 46
+}
+]
+2025-07-21 22:20:13,055 - INFO - 🤖 AI Analysis: Data Engineer scored 40/100
+2025-07-21 22:20:13,055 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 40/100
+2025-07-21 22:20:15,269 - INFO - 🔍 Processing job card 13/20
+2025-07-21 22:20:30,370 - WARNING - ⏰ Company extraction timeout
+2025-07-21 22:20:30,401 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:20:30,434 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-07-21 22:20:30,841 - ERROR - Gemini API error for Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 28
+}
+]
+2025-07-21 22:20:30,841 - INFO - 🤖 AI Analysis: Data Engineer scored 40/100
+2025-07-21 22:20:30,841 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 40/100
+2025-07-21 22:20:33,212 - INFO - 🔍 Processing job card 14/20
+2025-07-21 22:20:48,364 - WARNING - ⏰ Company extraction timeout
+2025-07-21 22:20:48,375 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:20:48,389 - INFO - ✅ Extracted: Data Engineer - Python / PySpark at BAY Area Technology Solutions
+2025-07-21 22:20:48,795 - ERROR - Gemini API error for Data Engineer - Python / PySpark: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 10
+}
+]
+2025-07-21 22:20:48,795 - INFO - 🤖 AI Analysis: Data Engineer - Python / PySpark scored 56/100
+2025-07-21 22:20:48,795 - INFO - ⏭️  SKIPPED: Data Engineer - Python / PySpark | Score: 56/100
+2025-07-21 22:20:51,717 - INFO - 🔍 Processing job card 15/20
+2025-07-21 22:21:06,783 - WARNING - ⏰ Company extraction timeout
+2025-07-21 22:21:06,810 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:21:06,839 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-07-21 22:21:07,179 - ERROR - Gemini API error for Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 52
+}
+]
+2025-07-21 22:21:07,179 - INFO - 🤖 AI Analysis: Data Engineer scored 40/100
+2025-07-21 22:21:07,179 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 40/100
+2025-07-21 22:21:09,701 - INFO - 🔍 Processing job card 16/20
+2025-07-21 22:21:24,797 - WARNING - ⏰ Company extraction timeout
+2025-07-21 22:21:24,820 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:21:24,850 - INFO - ✅ Extracted: Data Engineer - Databricks at Company Name
+2025-07-21 22:21:25,170 - ERROR - Gemini API error for Data Engineer - Databricks: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 34
+}
+]
+2025-07-21 22:21:25,180 - INFO - 🤖 AI Analysis: Data Engineer - Databricks scored 40/100
+2025-07-21 22:21:25,180 - INFO - ⏭️  SKIPPED: Data Engineer - Databricks | Score: 40/100
+2025-07-21 22:21:28,443 - INFO - 🔍 Processing job card 17/20
+2025-07-21 22:21:43,509 - WARNING - ⏰ Company extraction timeout
+2025-07-21 22:21:43,540 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:21:43,559 - INFO - ✅ Extracted: Data Engineer – Databricks at Company Name
+2025-07-21 22:21:43,840 - ERROR - Gemini API error for Data Engineer – Databricks: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 15
+}
+]
+2025-07-21 22:21:43,840 - INFO - 🤖 AI Analysis: Data Engineer – Databricks scored 40/100
+2025-07-21 22:21:43,840 - INFO - ⏭️  SKIPPED: Data Engineer – Databricks | Score: 40/100
+2025-07-21 22:21:46,292 - INFO - 🔍 Processing job card 18/20
+2025-07-21 22:22:01,394 - WARNING - ⏰ Company extraction timeout
+2025-07-21 22:22:01,434 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:22:01,453 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-07-21 22:22:01,789 - ERROR - Gemini API error for Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 57
+}
+]
+2025-07-21 22:22:01,789 - INFO - 🤖 AI Analysis: Data Engineer scored 40/100
+2025-07-21 22:22:01,789 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 40/100
+2025-07-21 22:22:05,022 - INFO - 🔍 Processing job card 19/20
+2025-07-21 22:22:20,135 - WARNING - ⏰ Company extraction timeout
+2025-07-21 22:22:20,174 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:22:20,193 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-07-21 22:22:20,545 - ERROR - Gemini API error for Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 38
+}
+]
+2025-07-21 22:22:20,545 - INFO - 🤖 AI Analysis: Data Engineer scored 40/100
+2025-07-21 22:22:20,549 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 40/100
+2025-07-21 22:22:23,859 - INFO - 🔍 Processing job card 20/20
+2025-07-21 22:22:38,940 - WARNING - ⏰ Company extraction timeout
+2025-07-21 22:22:39,009 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:22:39,050 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-07-21 22:22:39,384 - ERROR - Gemini API error for Data Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 19
+}
+]
+2025-07-21 22:22:39,390 - INFO - 🤖 AI Analysis: Data Engineer scored 40/100
+2025-07-21 22:22:39,391 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 40/100
+2025-07-21 22:22:42,892 - INFO - 🔍 Processing keyword 2/4: Python Developer
+2025-07-21 22:22:42,892 - INFO - Page 1/2: https://www.naukri.com/python-developer-jobs-in-bengaluru-1
+2025-07-21 22:22:52,529 - INFO - Found 20 job cards on page
+2025-07-21 22:22:52,534 - INFO - 🔍 Processing job card 1/20
+2025-07-21 22:23:07,720 - WARNING - ⏰ Company extraction timeout
+2025-07-21 22:23:07,780 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:23:07,810 - INFO - ✅ Extracted: Python Developer at Travitons Technologies
+2025-07-21 22:23:08,155 - ERROR - Gemini API error for Python Developer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 51
+}
+]
+2025-07-21 22:23:08,159 - INFO - 🤖 AI Analysis: Python Developer scored 38/100
+2025-07-21 22:23:08,159 - INFO - ⏭️  SKIPPED: Python Developer | Score: 38/100
+2025-07-21 22:23:10,375 - INFO - 🔍 Processing job card 2/20
+2025-07-21 22:23:25,499 - WARNING - ⏰ Company extraction timeout
+2025-07-21 22:23:25,545 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:23:25,581 - INFO - ✅ Extracted: PYTHON DEVELOPER at Company Name
+2025-07-21 22:23:25,975 - ERROR - Gemini API error for PYTHON DEVELOPER: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 33
+}
+]
+2025-07-21 22:23:25,990 - INFO - 🤖 AI Analysis: PYTHON DEVELOPER scored 38/100
+2025-07-21 22:23:26,002 - INFO - ⏭️  SKIPPED: PYTHON DEVELOPER | Score: 38/100
+2025-07-21 22:23:28,240 - INFO - 🔍 Processing job card 3/20
+2025-07-21 22:23:43,630 - WARNING - ⏰ Company extraction timeout
+2025-07-21 22:23:43,643 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:23:43,690 - INFO - ✅ Extracted: Python Developer at Sunhive Solutions
+2025-07-21 22:23:44,100 - ERROR - Gemini API error for Python Developer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 15
+}
+]
+2025-07-21 22:23:44,100 - INFO - 🤖 AI Analysis: Python Developer scored 38/100
+2025-07-21 22:23:44,100 - INFO - ⏭️  SKIPPED: Python Developer | Score: 38/100
+2025-07-21 22:23:47,440 - INFO - 🔍 Processing job card 4/20
+2025-07-21 22:24:02,545 - WARNING - ⏰ Company extraction timeout
+2025-07-21 22:24:02,602 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:24:02,614 - INFO - ✅ Extracted: Python Developer (Mid-Level) at Company Name
+2025-07-21 22:24:02,950 - ERROR - Gemini API error for Python Developer (Mid-Level): 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 56
+}
+]
+2025-07-21 22:24:02,950 - INFO - 🤖 AI Analysis: Python Developer (Mid-Level) scored 38/100
+2025-07-21 22:24:02,959 - INFO - ⏭️  SKIPPED: Python Developer (Mid-Level) | Score: 38/100
+2025-07-21 22:24:05,825 - INFO - 🔍 Processing job card 5/20
+2025-07-21 22:24:20,954 - WARNING - ⏰ Company extraction timeout
+2025-07-21 22:24:21,025 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:24:21,054 - INFO - ✅ Extracted: Python Developer at Indian Cyber Security Solutions
+2025-07-21 22:24:21,379 - ERROR - Gemini API error for Python Developer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 37
+}
+]
+2025-07-21 22:24:21,390 - INFO - 🤖 AI Analysis: Python Developer scored 38/100
+2025-07-21 22:24:21,400 - INFO - ⏭️  SKIPPED: Python Developer | Score: 38/100
+2025-07-21 22:24:23,710 - INFO - 🔍 Processing job card 6/20
+2025-07-21 22:24:38,940 - WARNING - ⏰ Company extraction timeout
+2025-07-21 22:24:38,955 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:24:38,999 - INFO - ✅ Extracted: Python Developer at Company Name
+2025-07-21 22:24:39,395 - ERROR - Gemini API error for Python Developer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 19
+}
+]
+2025-07-21 22:24:39,400 - INFO - 🤖 AI Analysis: Python Developer scored 38/100
+2025-07-21 22:24:39,400 - INFO - ⏭️  SKIPPED: Python Developer | Score: 38/100
+2025-07-21 22:24:42,833 - INFO - 🔍 Processing job card 7/20
+2025-07-21 22:24:58,024 - WARNING - ⏰ Company extraction timeout
+2025-07-21 22:24:58,261 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:24:58,269 - INFO - ✅ Extracted: python developer at Techno Facts Solutions
+2025-07-21 22:24:58,651 - ERROR - Gemini API error for python developer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+}
+]
+2025-07-21 22:24:58,697 - INFO - 🤖 AI Analysis: python developer scored 38/100
+2025-07-21 22:24:58,749 - INFO - ⏭️  SKIPPED: python developer | Score: 38/100
+2025-07-21 22:25:01,900 - INFO - 🔍 Processing job card 8/20
+2025-07-21 22:25:16,959 - WARNING - ⏰ Company extraction timeout
+2025-07-21 22:25:17,012 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:25:17,054 - INFO - ✅ Extracted: Python Software Developer at Company Name
+2025-07-21 22:25:17,390 - ERROR - Gemini API error for Python Software Developer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 41
+}
+]
+2025-07-21 22:25:17,390 - INFO - 🤖 AI Analysis: Python Software Developer scored 8/100
+2025-07-21 22:25:17,390 - INFO - ⏭️  SKIPPED: Python Software Developer | Score: 8/100
+2025-07-21 22:25:19,809 - INFO - 🔍 Processing job card 9/20
+2025-07-21 22:25:34,904 - WARNING - ⏰ Company extraction timeout
+2025-07-21 22:25:34,930 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:25:34,950 - INFO - ✅ Extracted: Python Developer-PAN INDIA_RA at Company Name
+2025-07-21 22:25:35,509 - ERROR - Gemini API error for Python Developer-PAN INDIA_RA: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 23
+}
+]
+2025-07-21 22:25:35,520 - INFO - 🤖 AI Analysis: Python Developer-PAN INDIA_RA scored 38/100
+2025-07-21 22:25:35,520 - INFO - ⏭️  SKIPPED: Python Developer-PAN INDIA_RA | Score: 38/100
+2025-07-21 22:25:39,315 - INFO - 🔍 Processing job card 10/20
+2025-07-21 22:25:54,479 - WARNING - ⏰ Company extraction timeout
+2025-07-21 22:25:54,545 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:25:54,589 - INFO - ✅ Extracted: Python Developer -ENG - Infosys@ PAN India at Company Name
+2025-07-21 22:25:54,969 - ERROR - Gemini API error for Python Developer -ENG - Infosys@ PAN India: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 4
+}
+]
+2025-07-21 22:25:54,969 - INFO - 🤖 AI Analysis: Python Developer -ENG - Infosys@ PAN India scored 18/100
+2025-07-21 22:25:54,969 - INFO - ⏭️  SKIPPED: Python Developer -ENG - Infosys@ PAN India | Score: 18/100
+2025-07-21 22:25:58,954 - INFO - 🔍 Processing job card 11/20
+2025-07-21 22:26:14,024 - WARNING - ⏰ Company extraction timeout
+2025-07-21 22:26:14,086 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:26:14,162 - INFO - ✅ Extracted: Python Developer at Company Name
+2025-07-21 22:26:14,445 - ERROR - Gemini API error for Python Developer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 44
+}
+]
+2025-07-21 22:26:14,445 - INFO - 🤖 AI Analysis: Python Developer scored 38/100
+2025-07-21 22:26:14,450 - INFO - ⏭️  SKIPPED: Python Developer | Score: 38/100
+2025-07-21 22:26:17,917 - INFO - 🔍 Processing job card 12/20
+2025-07-21 22:26:33,069 - WARNING - ⏰ Company extraction timeout
+2025-07-21 22:26:33,144 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:26:33,163 - INFO - ✅ Extracted: Python Developer@Infosys at Company Name
+2025-07-21 22:26:33,673 - ERROR - Gemini API error for Python Developer@Infosys: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 25
+}
+]
+2025-07-21 22:26:33,679 - INFO - 🤖 AI Analysis: Python Developer@Infosys scored 18/100
+2025-07-21 22:26:33,679 - INFO - ⏭️  SKIPPED: Python Developer@Infosys | Score: 18/100
+2025-07-21 22:26:37,109 - INFO - 🔍 Processing job card 13/20
+2025-07-21 22:26:52,254 - WARNING - ⏰ Company extraction timeout
+2025-07-21 22:26:52,331 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:26:52,363 - INFO - ✅ Extracted: Python Developer at Aparajitha Corporate Services
+2025-07-21 22:26:52,831 - ERROR - Gemini API error for Python Developer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 6
+}
+]
+2025-07-21 22:26:52,831 - INFO - 🤖 AI Analysis: Python Developer scored 38/100
+2025-07-21 22:26:52,831 - INFO - ⏭️  SKIPPED: Python Developer | Score: 38/100
+2025-07-21 22:26:55,560 - INFO - 🔍 Processing job card 14/20
+2025-07-21 22:27:10,699 - WARNING - ⏰ Company extraction timeout
+2025-07-21 22:27:10,755 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:27:10,803 - INFO - ✅ Extracted: Python Software Developer-AB Pan India at Company Name
+2025-07-21 22:27:11,160 - ERROR - Gemini API error for Python Software Developer-AB Pan India: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 48
+}
+]
+2025-07-21 22:27:11,160 - INFO - 🤖 AI Analysis: Python Software Developer-AB Pan India scored 8/100
+2025-07-21 22:27:11,160 - INFO - ⏭️  SKIPPED: Python Software Developer-AB Pan India | Score: 8/100
+2025-07-21 22:27:14,950 - INFO - 🔍 Processing job card 15/20
+2025-07-21 22:27:30,060 - WARNING - ⏰ Company extraction timeout
+2025-07-21 22:27:30,099 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:27:30,130 - INFO - ✅ Extracted: Python Developer at Company Name
+2025-07-21 22:27:30,609 - ERROR - Gemini API error for Python Developer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 28
+}
+]
+2025-07-21 22:27:30,615 - INFO - 🤖 AI Analysis: Python Developer scored 38/100
+2025-07-21 22:27:30,615 - INFO - ⏭️  SKIPPED: Python Developer | Score: 38/100
+2025-07-21 22:27:34,190 - INFO - 🔍 Processing job card 16/20
+2025-07-21 22:27:49,289 - WARNING - ⏰ Company extraction timeout
+2025-07-21 22:27:49,315 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:27:49,339 - INFO - ✅ Extracted: Developer - Python at Company Name
+2025-07-21 22:27:49,760 - ERROR - Gemini API error for Developer - Python: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 9
+}
+]
+2025-07-21 22:27:49,760 - INFO - 🤖 AI Analysis: Developer - Python scored 8/100
+2025-07-21 22:27:49,760 - INFO - ⏭️  SKIPPED: Developer - Python | Score: 8/100
+2025-07-21 22:27:52,179 - INFO - 🔍 Processing job card 17/20
+2025-07-21 22:28:07,269 - WARNING - ⏰ Company extraction timeout
+2025-07-21 22:28:07,294 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:28:07,324 - INFO - ✅ Extracted: Python Developer at Company Name
+2025-07-21 22:28:07,683 - ERROR - Gemini API error for Python Developer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 51
+}
+]
+2025-07-21 22:28:07,683 - INFO - 🤖 AI Analysis: Python Developer scored 38/100
+2025-07-21 22:28:07,683 - INFO - ⏭️  SKIPPED: Python Developer | Score: 38/100
+2025-07-21 22:28:10,761 - INFO - 🔍 Processing job card 18/20
+2025-07-21 22:28:25,849 - WARNING - ⏰ Company extraction timeout
+2025-07-21 22:28:25,909 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:28:25,960 - INFO - ✅ Extracted: Python Developer at Global Information Systems Technology (GIST)
+2025-07-21 22:28:26,320 - ERROR - Gemini API error for Python Developer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 32
+}
+]
+2025-07-21 22:28:26,321 - INFO - 🤖 AI Analysis: Python Developer scored 38/100
+2025-07-21 22:28:26,321 - INFO - ⏭️  SKIPPED: Python Developer | Score: 38/100
+2025-07-21 22:28:30,079 - INFO - 🔍 Processing job card 19/20
+2025-07-21 22:28:45,148 - WARNING - ⏰ Company extraction timeout
+2025-07-21 22:28:45,169 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:28:45,190 - INFO - ✅ Extracted: Python Developers at Company Name
+2025-07-21 22:28:45,670 - ERROR - Gemini API error for Python Developers: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 13
+}
+]
+2025-07-21 22:28:45,684 - INFO - 🤖 AI Analysis: Python Developers scored 38/100
+2025-07-21 22:28:45,691 - INFO - ⏭️  SKIPPED: Python Developers | Score: 38/100
+2025-07-21 22:28:49,385 - INFO - 🔍 Processing job card 20/20
+2025-07-21 22:29:04,600 - WARNING - ⏰ Company extraction timeout
+2025-07-21 22:29:04,669 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:29:04,709 - INFO - ✅ Extracted: Python Developer -AB-Pan India at Company Name
+2025-07-21 22:29:05,069 - ERROR - Gemini API error for Python Developer -AB-Pan India: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 54
+}
+]
+2025-07-21 22:29:05,075 - INFO - 🤖 AI Analysis: Python Developer -AB-Pan India scored 38/100
+2025-07-21 22:29:05,075 - INFO - ⏭️  SKIPPED: Python Developer -AB-Pan India | Score: 38/100
+2025-07-21 22:29:08,182 - INFO - Page 2/2: https://www.naukri.com/python-developer-jobs-in-bengaluru-2
+2025-07-21 22:29:17,059 - INFO - Found 20 job cards on page
+2025-07-21 22:29:17,059 - INFO - 🔍 Processing job card 1/20
+2025-07-21 22:29:32,139 - WARNING - ⏰ Company extraction timeout
+2025-07-21 22:29:32,204 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-07-21 22:29:32,239 - INFO - ✅ Extracted: python developer at Techno Facts Solutions
+2025-07-21 22:29:32,569 - ERROR - Gemini API error for python developer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 26
+}
+]
+2025-07-21 22:29:32,569 - INFO - 🤖 AI Analysis: python developer scored 38/100
+2025-07-21 22:29:32,569 - INFO - ⏭️  SKIPPED: python developer | Score: 38/100
+2025-07-21 22:29:36,289 - INFO - 🔍 Processing job card 2/20

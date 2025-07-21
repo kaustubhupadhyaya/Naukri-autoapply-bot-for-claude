@@ -1,0 +1,223 @@
+total_score,technology_score,experience_score,company_score,role_score,match_level,required_skills,preferred_skills,technologies_mentioned,experience_requirement,location,remote_friendly,company_type,application_recommendation,reasoning,skill_gaps,growth_potential,job_title,company_name,job_url,processed_at,should_apply,fallback_used
+72,34.0,10,18,10.0,good,"['Python', 'SQL', 'ETL Development', 'AWS S3', 'AWS EC2', 'RDBMS']","['Apache Airflow', 'AWS Lambda', 'PostgreSQL', 'Great Expectations', 'Jenkins', 'CI/CD Pipelines']","['Hive', 'Cloudera', 'Python', 'Data Analysis', 'Scala', 'Oozie', 'Airflow', 'Data Warehousing']",1-4 years,"Bengaluru, Pune, Mumbai, Kolkata, New Delhi, Hyderabad, Chennai",True,service,recommend,"Kaustubh has a good skillset for this role. His 2 years of experience at Eli Lilly & Company is relevant.  The experience requirement (1-4 years) is a good match, earning him a score of 10 in the experience category.  His strong foundation in Python, SQL, AWS, and ETL tools gives a decent technology score. However, the lack of significant experience with Big Data tools like Spark and Kafka lowers his technology score. The job description mentions tools like Hive and Cloudera, which he doesn't list as skills.  The company is service-based, but the flexibility of location including Bangalore and remote options boosts the company score.  The role is a perfect match for a Data Engineer, but some skills mentioned in the job description are missing from Kaustubh's profile. Overall, the combination of experience, skills, and role relevance makes this a good opportunity, but further skill development in Big Data technologies is recommended.","['Apache Spark', 'Kafka', 'Hadoop', 'DBT', 'Databricks', 'Snowflake', 'Cloudera', 'Hive']",medium,Data Engineer,Netlink Software Pvt Ltd is looking for Data Engineer to join our dynamic team and emba...,,1753043759.7262626,True,
+70,37.0,10,18,5.0,good,"['Python', 'SQL', 'Apache Airflow', 'AWS S3', 'AWS EC2', 'ETL Development', 'Data Validation', 'Schema Design']","['DBT', 'Spark', 'Kafka', 'AWS Lambda', 'PostgreSQL', 'Great Expectations']","['Python', 'SQL', 'Bash', 'Apache Airflow', 'Jenkins', 'Great Expectations', 'PostgreSQL', 'MySQL', 'Oracle DB', 'AWS S3', 'AWS EC2', 'AWS Lambda', 'AWS CloudWatch', 'AWS Secrets Manager', 'GCP', 'REST APIs', 'JSON', 'XML', 'CI/CD Pipelines', 'Kubernetes', 'Hive', 'Cloudera', 'Data Analysis', 'Scala', 'Oozie', 'Data Warehousing']",1-4 years,"Bengaluru, Pune, Mumbai, Kolkata, New Delhi, Hyderabad, Chennai",True,product,recommend,"Kaustubh has a good match with this role. His 2 years of experience aligns well with the 1-4 years requirement, earning a 'good match' score in the experience section.  His skillset strongly overlaps with the required technologies. He is proficient in Python, SQL, Airflow, and AWS services (S3, EC2), which are crucial for the role. He also has experience with ETL and data validation, aligning perfectly with Data Engineering responsibilities.  However, the lack of experience with Hadoop and some big data tools like Spark and Kafka reduces the technology score. The company is located in several cities including Bangalore, which suits Kaustubh’s preference. The role's mention of hybrid/remote work further enhances the appeal. His learning skills list many technologies mentioned in the job description, suggesting a good potential for rapid growth within the role. Therefore, applying is recommended.","['Hadoop', 'Spark (though listed as learning)', 'Kafka (though listed as learning)']",medium,Data Engineer,Edgematics,,1753043763.784503,True,
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Data Engineer,"Job Description Alimentation Couche-Tard Inc., (ACT) is a global Fortune 200 comp...",,1753043764.1185846,False,True
+35,14.0,10,5,3.5,poor,,,,,,,,avoid,Fallback scoring due to API error,,,SQL Developer / Data Engineer,Infidigit,,1753043768.1227744,False,True
+35,14.0,10,5,3.5,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Python Data Engineer,Helios Placement Solution,,1753043772.1289206,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Data Engineer,Uplers,,1753043776.1220758,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Data Engineer,Arsr Technologies,,1753043780.108195,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Data Engineer,Fractal Analytics,,1753043784.118478,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Data Engineer,Retailcloud,,1753043788.1294298,False,True
+35,14.0,10,5,3.5,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Data Engineer - Dataiku / Python,InfoCepts,,1753043792.1286085,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Data Engineer,Atlassian,,1753043796.1299717,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Data Engineer,NPS Prism,,1753043800.1235795,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Data Engineer,Investcloud,,1753043804.1286502,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Data Engineer,Sapaad Software,,1753043808.1287265,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Data Engineer,Photon,,1753043812.128662,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Data Engineer,Photon,,1753043816.1386433,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Data Engineer - Introlligent,Introlligent,,1753043820.1334374,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Data Engineer,Photon,,1753043824.1386156,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Data Engineer,Nityo Infotech,,1753043828.1283498,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Data Engineer,Puresoftware,,1753043832.1387005,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Cognite Data Engineer,EY,,1753043844.6235206,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Data Engineer,Tredence,,1753043848.6286032,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Data Engineer,Live Connections,,1753043852.6273012,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,"Data Engineer (ETL, Go, Databricks)",Instinctools,,1753043856.61882,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Data Engineer,"These include the data lake, operational databases, data pipelines, large-scale batch a...",,1753043860.6307583,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Data Engineer,Drivetrain,,1753043864.6284153,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Data Engineer,Open Insights,,1753043868.6282892,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Data Engineer - Automotive Research,S&P Global Market Intelligence,,1753043872.6187627,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Data Engineer,Miracle Solution,,1753043876.6189322,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Data Engineer - Databricks,Inorg,,1753043880.638243,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Data Engineer – Databricks,Inorg,,1753043884.6433482,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Data Engineer,Beinex,,1753043888.638571,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Data Engineer,Wipro,,1753043892.6285968,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Data Engineer,Amakshar Technology,,1753043896.6533802,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Data Engineer,database designdata modelingbigquerydesign principlesetlhivedata servicespython,,1753043900.648398,False,True
+35,14.0,10,5,3.5,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Data Engineer – Python,Soul Ai,,1753043904.6382122,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Data Engineer,Henson Group,,1753043908.6385477,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Data Engineer,Apex Group,,1753043920.5086558,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Microsoft Fabric Data Engineer,Avisoft,,1753043924.4885988,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Data Engineer,Accenture,,1753043928.4915524,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Data Engineer,Accenture,,1753043932.4899142,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Data Engineer,Virtualware Innovations,,1753043936.488821,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Data Engineer,CCS technologies,,1753043940.4983788,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Databricks Data Engineer,Upteam,,1753043944.4986994,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Data Engineer,Accenture,,1753043948.5085933,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Data Engineer - DBT (Data Build Tool),Leading Client,,1753043952.4988508,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Backend Data Engineer,IBM,,1753043956.5043628,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Data Engineer,database designdata modelinggcpdesign principlesbigqueryhivepythondata processing,,1753043960.5084107,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Data Engineer,Wits Innovation Lab,,1753043964.5086222,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Data Engineer,Kinara Capital,,1753043968.5086012,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Data Engineer,Accolite Software India Pvt Ltd,,1753043972.5093017,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Data Engineer,Clifyx Technology,,1753043976.5185404,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Data Engineer,Neal Analytics,,1753043980.5086005,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Data Engineer,Fractal Analytics,,1753043984.5085635,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Data Engineer,Virtusa,,1753043988.5089345,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Data Engineer,Accenture,,1753043992.5184238,False,True
+5,2.0,10,5,0.5,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Python Developer,Travitons Technologies,,1753044009.943316,False,True
+5,2.0,10,5,0.5,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Python Developer,Indian Cyber Security Solutions,,1753044013.928398,False,True
+5,2.0,10,5,0.5,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Python Developer-PAN INDIA_RA,Infosys,,1753044017.9784477,False,True
+25,10.0,10,5,2.5,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Python Developer (Mid-Level),Soul Ai,,1753044021.9434588,False,True
+5,2.0,10,5,0.5,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Python Developer,Millennium Management,,1753044025.9625778,False,True
+5,2.0,10,5,0.5,poor,,,,,,,,avoid,Fallback scoring due to API error,,,python developer,Techno Facts Solutions,,1753044029.9481552,False,True
+5,2.0,10,5,0.5,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Python Software Developer,Cloudxtreme,,1753044033.9482813,False,True
+5,2.0,10,5,0.5,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Python Developer -ENG - Infosys@ PAN India,Infosys,,1753044037.9488409,False,True
+5,2.0,10,5,0.5,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Python Developer,Prolegion,,1753044041.9583228,False,True
+5,2.0,10,5,0.5,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Python Developer,Rvr Innovations,,1753044045.948571,False,True
+5,2.0,10,5,0.5,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Developer - Python,Wipro,,1753044049.9583902,False,True
+5,2.0,10,5,0.5,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Python Developer@Infosys,Infosys,,1753044053.9485645,False,True
+5,2.0,10,5,0.5,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Python Developer,Aparajitha Corporate Services,,1753044057.9584448,False,True
+5,2.0,10,5,0.5,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Python Software Developer-AB Pan India,Infosys,,1753044061.9587414,False,True
+5,2.0,10,5,0.5,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Python Developer,Infosys,,1753044065.963011,False,True
+5,2.0,10,5,0.5,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Python Developer,Uplers,,1753044069.9594102,False,True
+5,2.0,10,5,0.5,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Python Developer,Global Information Systems Technology (GIST),,1753044073.9603038,False,True
+5,2.0,10,5,0.5,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Python Developers,7hills Technology Services,,1753044077.958603,False,True
+5,2.0,10,5,0.5,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Python Developer -AB-Pan India,Infosys,,1753044081.9924104,False,True
+5,2.0,10,5,0.5,poor,,,,,,,,avoid,Fallback scoring due to API error,,,python developer,Techno Facts Solutions,,1753044085.9587274,False,True
+5,2.0,10,5,0.5,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Python Developer,IQVIA,,1753044098.9985254,False,True
+5,2.0,10,5,0.5,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Python Developer,Xcel Hires Managment Solutions Pvt Ltd,,1753044102.998604,False,True
+5,2.0,10,5,0.5,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Python Developer,Bottle Lab Technologies,,1753044106.9984155,False,True
+5,2.0,10,5,0.5,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Software Developer: Python & JavaScript,IBM,,1753044110.998469,False,True
+5,2.0,10,5,0.5,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Python GITLAB CI CD Jenkins developer,Harman International,,1753044114.9981556,False,True
+5,2.0,10,5,0.5,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Python Software Developer,Techno Facts Solutions,,1753044118.9984226,False,True
+5,2.0,10,5,0.5,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Python Software Developer,Foxconn,,1753044123.0087569,False,True
+5,2.0,10,5,0.5,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Python Software Developer,Helios Placement Solution,,1753044127.1086628,False,True
+5,2.0,10,5,0.5,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Python ML developer,Infosys,,1753044131.0080576,False,True
+5,2.0,10,5,0.5,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Python Developer,MWB Technologies,,1753044134.9982324,False,True
+5,2.0,10,5,0.5,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Python Developer,Synergyworks,,1753044139.0128462,False,True
+5,2.0,10,5,0.5,poor,,,,,,,,avoid,Fallback scoring due to API error,,,"Python Software Developer-AB-Bengaluru,Chennai,Chandigarh",Infosys,,1753044143.016848,False,True
+5,2.0,10,5,0.5,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Python Software Developer,Exotel,,1753044147.0087695,False,True
+5,2.0,10,5,0.5,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Python Developer,The It Mind Services,,1753044151.0082908,False,True
+5,2.0,10,5,0.5,poor,,,,,,,,avoid,Fallback scoring due to API error,,,PYTHON DEVELOPER,Contingent Professionals,,1753044155.0181582,False,True
+5,2.0,10,5,0.5,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Python Developer,Weboccult Technologies,,1753044159.008327,False,True
+5,2.0,10,5,0.5,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Python developer,Riveredge Analytics,,1753044163.009558,False,True
+5,2.0,10,5,0.5,poor,,,,,,,,avoid,Fallback scoring due to API error,,,PYTHON DEVELOPER,Intelgic Technologies,,1753044167.017557,False,True
+5,2.0,10,5,0.5,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Python Developer,TalentWell Solutions,,1753044171.0281045,False,True
+5,2.0,10,5,0.5,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Python Developer,Virtualware Innovations,,1753044175.0183454,False,True
+5,2.0,10,5,0.5,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Python Developer,Perfios Software Solutions,,1753044187.0488858,False,True
+5,2.0,10,5,0.5,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Python Developers,Aegis Softtech,,1753044191.048332,False,True
+5,2.0,10,5,0.5,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Python Developer / Engineers,Blue Rose Technologies,,1753044195.05335,False,True
+5,2.0,10,5,0.5,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Python Developer,Diverse Lynx,,1753044199.0484836,False,True
+5,2.0,10,5,0.5,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Python Developer,S&P Global Market Intelligence,,1753044203.0583932,False,True
+5,2.0,10,5,0.5,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Python Developer,Persistent,,1753044207.0586762,False,True
+5,2.0,10,5,0.5,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Python Developer,Triad Square Infotec Pvt Ltd is looking for Python Developer to join our dynamic team a...,,1753044211.0585861,False,True
+5,2.0,10,5,0.5,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Python Developer,IDrive Software India Pvt Ltd,,1753044215.0482972,False,True
+5,2.0,10,5,0.5,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Python Developer,Diverse Lynx,,1753044219.0686939,False,True
+5,2.0,10,5,0.5,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Python Developer,Hunter Tech Ventures Pvt Ltd is looking for Python Developer to join our dynamic team a...,,1753044223.0655146,False,True
+5,2.0,10,5,0.5,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Python Developer,Ssms,,1753044227.0585597,False,True
+5,2.0,10,5,0.5,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Python Developer,Aritha,,1753044231.0685394,False,True
+5,2.0,10,5,0.5,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Python developer,Infosys,,1753044235.0880907,False,True
+5,2.0,10,5,0.5,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Python Developer,Uplers,,1753044239.058451,False,True
+5,2.0,10,5,0.5,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Serverless Architecture + Python Developer,Sportism,,1753044243.058334,False,True
+5,2.0,10,5,0.5,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Python Developer,Mirafra,,1753044247.0651681,False,True
+5,2.0,10,5,0.5,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Python Developer,Pegasus Knowledge Solutions (PKSI),,1753044251.0584834,False,True
+5,2.0,10,5,0.5,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Python developer,Post productionProduction supportLinuxRisk controlFixed incomeTrade supportRisk managementMonitoring,,1753044255.0683668,False,True
+5,2.0,10,5,0.5,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Python Developer,Mahiti Infotech,,1753044259.0687008,False,True
+5,2.0,10,5,0.5,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Python Developer,Pradeepit Consulting Services,,1753044263.0684893,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,ETL Developer,Guidewire Software,,1753044279.5512416,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,ETL Developer,Evnek,,1753044283.5385456,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,ETL Developer and ETL Testing,mspring infotech,,1753044287.5553365,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,ETL Developer,Clifyx Technology,,1753044291.549794,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,ETL Developer,Pradeepit Consulting Services,,1753044295.5562046,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,ETL Developer,Scalein,,1753044299.5479765,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,ETL Developer,ALLEGIS GLOBAL SOLUTION,,1753044303.5560532,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Etl Developer,Wissen Infotech,,1753044307.5499032,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Etl Developer,Exathought,,1753044311.5559661,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,ETL Developer,ACL Digital,,1753044315.5594747,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Etl Developer,Wissen Infotech,,1753044319.5562956,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Etl Developer - Snaplogic,Leading Client,,1753044323.5597625,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,ETL Developer Snap Logic,Leading Client,,1753044327.5616243,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,ETL Developer Snap Logic,"Proven experience with SnapLogic, including API builds and agent functionalityExperienc...",,1753044331.5683377,False,True
+35,14.0,10,5,3.5,poor,,,,,,,,avoid,Fallback scoring due to API error,,,"ETL Developer|Sybase,Python|Bangalore|12month Contract|",Fortune Global 500 MNC in Financial Services,,1753044335.558383,False,True
+35,14.0,10,5,3.5,poor,,,,,,,,avoid,Fallback scoring due to API error,,,DB ETL Developer(Python**)|Bangalore|12Mnths Contract|Top MNC,Fortune Global 500 MNC in Financial Services,,1753044339.5595758,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,ETL and BDX developer,NTT DATA Business Solutions,,1753044343.558486,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,ETL Developer,Wissen Technology,,1753044347.5643592,False,True
+40,16.0,10,5,4.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,ETL - Python/Pyspark Developer,"Company Profile:Founded in 1976, CGI is among the largest independent IT and business ...",,1753044351.5596056,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,ETL Developer,SE Mentor,,1753044361.6584759,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,ETL SSIS Developer,Mindcube Solutions,,1753044365.6651156,False,True
+35,14.0,10,5,3.5,poor,,,,,,,,avoid,Fallback scoring due to API error,,,"Python, ETL and DevOps - Developer",NTT DATA Business Solutions,,1753044369.668308,False,True
+35,14.0,10,5,3.5,poor,,,,,,,,avoid,Fallback scoring due to API error,,,ETL Developer - Python,Luxoft,,1753044373.657963,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,ETL Developer,Euclid Innovations,,1753044377.7161605,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Database/ETL Developer,Pradeepit Consulting Services,,1753044381.6684866,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,ETL Developer (ODI),Unison Consulting,,1753044385.6801107,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Etl Developer,Enaviya Information Technologies,,1753044389.6785989,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,"Etl Developer with ODI, sal max up To 20 lpa,",Large-Sized Firm in IT Services Sector,,1753044393.678396,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Data Engineer - ETL and Azure developer,ACL Digital,,1753044397.6832883,False,True
+0,0.0,10,5,0.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,HR Solutions,HR Solutions,,1753044401.6881695,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,ETL Developer,Naghavi Fintech,,1753044405.6898663,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,ETL Developer,Consulting with data management teams to get a big-picture idea of the companys data ...,,1753044409.6885433,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Data Engineer,Expian Technologies,,1753044413.688552,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,ETL Developer,Hireflex247,,1753044417.6882596,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,ETL Developer,Diverse Lynx,,1753044421.6883893,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,ETL developer,Clifyx Technology,,1753044425.7028553,False,True
+50,20.0,10,5,5.0,fair,,,,,,,,consider,Fallback scoring due to API error,,,"Stream sets ETL Developer, Associate",Deutsche Bank,,1753044429.6931279,True,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Hiring For ODI - ETL Developer For MNC - Permanent role,Direction,,1753044433.6884272,False,True
+5,2.0,10,5,0.5,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Software Engineer (Python Developer),Izmo Ltd,,1753044437.6985705,False,True
+50,20.0,10,5,5.0,fair,,,,,,,,consider,Fallback scoring due to API error,,,"Streamsets ETL Developer, Associate",Deutsche Bank,,1753044448.568207,True,True
+0,0.0,10,5,0.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Devops Engineer II,Cashfree Payments,,1753044452.5693378,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Junior Semantic Web ETL Developer,Siemens,,1753044456.5707493,False,True
+0,0.0,10,5,0.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Firmware Engineer - LoRaWAN/NB-IoT/WIFI,Mettsenia Solutions,,1753044460.5780835,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Data Engineer,Genxai,,1753044464.5886464,False,True
+0,0.0,10,5,0.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,IT Business Analyst,Kushals.com,,1753044468.568453,False,True
+0,0.0,10,5,0.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Coding and Robotics Teacher,K12 Techno Services,,1753044472.628368,False,True
+-10,-4.0,10,5,-1.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Mlops Engineer / Lead,German MNC,,1753044476.5883887,False,True
+35,14.0,10,5,3.5,poor,,,,,,,,avoid,Fallback scoring due to API error,,,"ETL Developer (Informatica Power Centre, SQL, Cloud IICS)",Diverse Lynx,,1753044480.5851607,False,True
+20,8.0,10,5,2.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Senior Software Engineer - ETL Developer,Aris Global Software,,1753044484.5883372,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,ETL Developer with Talend,Evnek,,1753044488.6096232,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Talend ETL Developer,Tarento Technologies,,1753044492.5986874,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,ETL Developer(Talend),Consulting with data management teams to get a big-picture idea of the companys data ...,,1753044496.598435,False,True
+0,0.0,10,5,0.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,BI and Analytics Engineer,Hackerrank,,1753044512.8841453,False,True
+0,0.0,10,5,0.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Analytics Engineer,Headout,,1753044516.8685083,False,True
+-10,-4.0,10,5,-1.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Lead Analytics Engineer,Velotio Technologies,,1753044520.8830543,False,True
+20,8.0,10,5,2.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Associate Analytics Engineer,Swiss Re,,1753044524.9205072,False,True
+0,0.0,10,5,0.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Wells Analytics Engineer,Exxon Mobil Corporation,,1753044528.8884141,False,True
+0,0.0,10,5,0.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Wells Analytics Engineer,Exxon Mobil Corporation,,1753044532.8732288,False,True
+-10,-4.0,10,5,-1.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Lead Analytics Engineer,Cimpress,,1753044536.8829737,False,True
+0,0.0,10,5,0.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Analytics Engineer II,Swiss Re,,1753044540.880085,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Manager_Data Engineer _Data and Analytics,PwC Service Delivery Center,,1753044544.8881211,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Manager_Data Engineer _Data and Analytics _Advisory,PwC Service Delivery Center,,1753044548.8839836,False,True
+0,0.0,10,5,0.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Refrigeration & Energy Systems - Data Analytics Engineer,Energy Recovery,,1753044552.8784528,False,True
+0,0.0,10,5,0.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,"Lead Data Analytics Engineer - Power BI, Snowflake, SQL, Python",Avalara India,,1753044556.8684294,False,True
+-10,-4.0,10,5,-1.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Senior Data Analytics Engineer,Prudential,,1753044560.8879733,False,True
+-10,-4.0,10,5,-1.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Senior Data Analytics Engineer,Prudential Corporation Asia,,1753044564.8879342,False,True
+0,0.0,10,5,0.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Analytics Engineer III,Swiss Re,,1753044568.8885188,False,True
+0,0.0,10,5,0.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Sr. Data Analytics Engineer - Databricks (On-site only),Ajmera Infotech,,1753044572.8880115,False,True
+0,0.0,10,5,0.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,People Data & Analytics Engineer,Apple,,1753044576.8781483,False,True
+0,0.0,10,5,0.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Data Analytics Engineer,Version controlData modelingBusiness analysisDiversity and InclusionAnalyticalData qualityBusiness intelligenceAnalytics,,1753044580.883217,False,True
+-10,-4.0,10,5,-1.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Senior Data Analytics Engineer,Ethos Life Technologies,,1753044592.588444,False,True
+0,0.0,10,5,0.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Digital Analytics Engineer,Orange Business Services,,1753044596.5780067,False,True
+-10,-4.0,10,5,-1.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Senior Data Analytics Engineer,Earnin,,1753044600.583226,False,True
+0,0.0,10,5,0.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Urgent requirement For Data Architect & Analytics- Engineer-Yesvantpur,Reputed client of Vaths Consulting,,1753044604.5883043,False,True
+0,0.0,10,5,0.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Google Analytics Engineer,Dyson,,1753044608.5935242,False,True
+0,0.0,10,5,0.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Adobe Analytics Engineer,Dyson,,1753044612.5781965,False,True
+-10,-4.0,10,5,-1.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,SENIOR ENGINEER - DATA ANALYTICS,Sasken Technologies,,1753044616.5880675,False,True
+0,0.0,10,5,0.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Technical Architect,Greetings from Encora Innovation Labs Pvt Ltd! Encora is looking for Technical Architec...,,1753044620.5926929,False,True
+-10,-4.0,10,5,-1.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Senior Analytics Engineer - Remote - 35 To 50 lacs,This is an URGENT requirement. We are hiring for a UK based Fintech company (name is ke...,,1753044624.6483376,False,True
+-10,-4.0,10,5,-1.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Senior Data & Analytics Engineer,Cisco,,1753044628.5885346,False,True
+-10,-4.0,10,5,-1.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Senior Data Analytics Engineer - Databricks (On site only),Ajmera Infotech,,1753044632.5885446,False,True
+20,8.0,10,5,2.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Associate Business & Analytics Engineer,Sabre is a technology company that powers the global travel industry. By leveraging ne...,,1753044636.5985081,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Data engineer- US MNC (analytics),US MNC (analytics),,1753044640.6029935,False,True
+-10,-4.0,10,5,-1.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Senior Data Analyst,Expian Technologies,,1753044644.598124,False,True
+-10,-4.0,10,5,-1.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Senior Data & Analytics Engineer,Cisco,,1753044648.5984826,False,True
+0,0.0,10,5,0.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Data Analytics Engineer - Databricks & Tableau Expert,Trupanion,,1753044652.5984893,False,True
+0,0.0,10,5,0.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,People Data & Analytics Engineer,Apple,,1753044656.6008506,False,True
+0,0.0,10,5,0.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Web Analytics Engineer,Infosys,,1753044669.2180192,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Client Analytics Engineer - ETL engineer,Superior Group,,1753044673.222084,False,True
+0,0.0,10,5,0.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Warehouse Video Analytics Engineer,Robert Bosch Engineering and Business Solutions Private Limited,,1753044677.2232637,False,True
+-10,-4.0,10,5,-1.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Senior Analytics Engineer,Onepay,,1753044681.2230237,False,True
+0,0.0,10,5,0.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Engineer - Power Grid Analytics,Zeroemission Grid,,1753044685.268422,False,True
+-10,-4.0,10,5,-1.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Senior Software Engineer-Analytics,Bloomreach Technologies,,1753044689.2282925,False,True
+0,0.0,10,5,0.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Data Analytics Engineer,"5 years of software solution development using agile, devops, product model that includ...",,1753044693.2277935,False,True
+0,0.0,10,5,0.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Sr Analytics Engineer GTM Strategy and Operations,Databricks,,1753044697.3298159,False,True
+0,0.0,10,5,0.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Machine Learning Operations Engineer - LYTX INDIA Technologies Pvt Ltd,Machine Learning Operations Engineer - LYTX INDIA Technologies Pvt Ltd,,1753044701.2444322,False,True
+0,0.0,10,5,0.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Statistical Analytics Engineer (F/M/D),Evnek,,1753044705.2519279,False,True
+0,0.0,10,5,0.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Devops Oracle Analytics Engineer,Oracle,,1753044709.2482486,False,True
+0,0.0,10,5,0.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,AIOps Data Analytics Engineer - ignio,Posted by Teamware Solutions ( A division of Quantum Leap Co nsulting Private LTD).,,1753044713.2383926,False,True
+0,0.0,10,5,0.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Portfolio Analytics - Software Engineer - Analyst,AQR India,,1753044717.2380388,False,True
+30,12.0,10,5,3.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Azure Data Engineer- US MNC (analytics),US MNC (analytics),,1753044721.2528548,False,True
+20,8.0,10,5,2.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Senior Data Pipeline Engineer - Global Team (India),Yipitdata,,1753044725.238132,False,True
+0,0.0,10,5,0.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Data Scientist,"Job Description Alimentation Couche-Tard Inc., (ACT) is a global Fortune 200 compa...",,1753044729.2487116,False,True
+0,0.0,10,5,0.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Software Engineer II,Betterworks,,1753044733.2380915,False,True
+0,0.0,10,5,0.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Sprinklr Solutions Architect,Simplisafe,,1753044737.2586012,False,True
+20,8.0,10,5,2.0,poor,,,,,,,,avoid,Fallback scoring due to API error,,,Associate Product Operations Analyst,Akamai,,1753044741.2482367,False,True

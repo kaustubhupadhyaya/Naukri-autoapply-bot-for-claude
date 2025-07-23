@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 Naukri Profile Refresher - Automated Profile Updates for Better Visibility
 Keeps your profile "fresh" in Naukri's database to appear higher in searches

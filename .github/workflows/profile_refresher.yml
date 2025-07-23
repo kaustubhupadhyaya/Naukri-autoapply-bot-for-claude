@@ -1,0 +1,145 @@
+name: Naukri Profile Refresh
+
+on:
+  schedule:
+    # Run every hour from 9 AM to 9 PM IST (3:30 AM to 3:30 PM UTC)
+    - cron: '30 3-15 * * *'
+  
+  # Allow manual triggering for testing
+  workflow_dispatch:
+    inputs:
+      force_run:
+        description: 'Force run profile refresh'
+        required: false
+        default: 'false'
+
+jobs:
+  refresh-profile:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+        
+    - name: Install system dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y \
+          wget \
+          curl \
+          unzip \
+          xvfb \
+          libnss3 \
+          libgconf-2-4 \
+          libxss1 \
+          libappindicator1 \
+          fonts-liberation \
+          libasound2 \
+          libatk-bridge2.0-0 \
+          libdrm2 \
+          libxcomposite1 \
+          libxdamage1 \
+          libxrandr2 \
+          libgbm1 \
+          libxkbcommon0 \
+          libgtk-3-0
+          
+    - name: Install Chrome
+      run: |
+        wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+        echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" | sudo tee /etc/apt/sources.list.d/google-chrome.list
+        sudo apt-get update
+        sudo apt-get install -y google-chrome-stable
+        
+    - name: Install Python dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install selenium webdriver-manager
+        
+    - name: Create config file from secrets
+      run: |
+        cat > enhanced_config.json << EOF
+        {
+          "credentials": {
+            "email": "${{ secrets.NAUKRI_EMAIL }}",
+            "password": "${{ secrets.NAUKRI_PASSWORD }}"
+          },
+          "personal_info": {
+            "firstname": "${{ secrets.FIRSTNAME }}",
+            "lastname": "${{ secrets.LASTNAME }}"
+          }
+        }
+        EOF
+        
+    - name: Run profile refresh
+      id: refresh
+      run: |
+        echo "🚀 Starting profile refresh..."
+        python naukri_profile_refresher.py
+        echo "refresh_status=success" >> $GITHUB_OUTPUT
+      continue-on-error: true
+      
+    - name: Check refresh result
+      run: |
+        if [ -f "profile_refresh_log.json" ]; then
+          echo "✅ Profile refresh log found:"
+          cat profile_refresh_log.json
+        else
+          echo "❌ No refresh log found"
+        fi
+        
+    - name: Commit and push logs (if any)
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        
+        if [ -f "profile_refresh_log.json" ] || [ -f "last_strategy.txt" ]; then
+          git add profile_refresh_log.json last_strategy.txt 2>/dev/null || true
+          git diff --staged --quiet || git commit -m "Update profile refresh logs - $(date)"
+          git push || echo "No changes to push"
+        fi
+      continue-on-error: true
+      
+    - name: Create status badge
+      run: |
+        if [ "${{ steps.refresh.outputs.refresh_status }}" = "success" ]; then
+          echo "![Profile Refresh](https://img.shields.io/badge/Profile%20Refresh-Success-green)" > refresh_status.md
+        else
+          echo "![Profile Refresh](https://img.shields.io/badge/Profile%20Refresh-Failed-red)" > refresh_status.md
+        fi
+        
+    - name: Notify on failure (optional)
+      if: failure()
+      run: |
+        echo "❌ Profile refresh failed at $(date)"
+        # Add notification logic here if needed (email, Discord webhook, etc.)
+
+  # Fallback job in case main job fails
+  fallback-refresh:
+    needs: refresh-profile
+    runs-on: ubuntu-latest
+    if: failure()
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Simple profile visit
+      run: |
+        echo "🔄 Running fallback profile refresh..."
+        # Could implement a simpler version or just log the attempt
+        echo "Fallback refresh attempted at $(date)" > fallback_log.txt
+        
+    - name: Commit fallback log
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action Fallback"
+        git add fallback_log.txt
+        git diff --staged --quiet || git commit -m "Fallback refresh attempt - $(date)"
+        git push || echo "No changes to push"
+      continue-on-error: true

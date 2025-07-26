@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 Naukri Profile Refresher - FULLY FIXED VERSION
 - Uses Edge WebDriver instead of Chrome

@@ -1,6 +1,8 @@
 """
-Naukri Profile Refresher - Automated Profile Updates for Better Visibility
-Keeps your profile "fresh" in Naukri's database to appear higher in searches
+Naukri Profile Refresher - FIXED VERSION
+- Uses Edge WebDriver instead of Chrome
+- Reads credentials from existing config.json
+- Auto-logs in without prompting
 """
 
 import os
@@ -13,9 +15,9 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.chrome.service import Service as ChromeService
+from selenium.webdriver.edge.service import Service as EdgeService
 from selenium.common.exceptions import TimeoutException, NoSuchElementException
-from webdriver_manager.chrome import ChromeDriverManager
+from webdriver_manager.microsoft import EdgeChromiumDriverManager
 
 # Configure logging
 logging.basicConfig(
@@ -25,9 +27,10 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 class NaukriProfileRefresher:
-    """Automated Naukri profile updater for better search visibility"""
+    """FIXED: Uses Edge + reads from config.json"""
     
-    def __init__(self, config_file="enhanced_config.json"):
+    def __init__(self, config_file="config.json"):
+        """Initialize with existing config.json"""
         self.config = self._load_config(config_file)
         self.driver = None
         self.wait = None
@@ -45,83 +48,117 @@ class NaukriProfileRefresher:
         self.last_strategy_file = "last_strategy.txt"
         
     def _load_config(self, config_file):
-        """Load configuration with credentials"""
+        """Load configuration from existing config.json"""
         try:
             with open(config_file, 'r') as f:
                 config = json.load(f)
             
-            # Validate required fields
-            if not config.get('credentials', {}).get('email'):
-                raise ValueError("Email not found in config")
-            if not config.get('credentials', {}).get('password'):
-                raise ValueError("Password not found in config")
-                
-            return config
+            # Check if config has correct structure
+            if 'login' in config and 'email' in config['login']:
+                # Handle existing config.json structure
+                credentials = {
+                    'email': config['login']['email'],
+                    'password': config['login']['password']
+                }
+                logger.info(f"✅ Loaded credentials from {config_file}")
+            elif 'credentials' in config:
+                # Handle enhanced config structure
+                credentials = config['credentials']
+                logger.info(f"✅ Loaded credentials from {config_file}")
+            else:
+                raise ValueError("Invalid config structure")
+            
+            # Return standardized config
+            return {
+                'credentials': credentials,
+                'personal_info': config.get('personal_info', {
+                    'firstname': credentials['email'].split('@')[0],
+                    'lastname': 'User'
+                })
+            }
+            
         except FileNotFoundError:
-            logger.error(f"Config file {config_file} not found")
+            logger.error(f"❌ Config file {config_file} not found!")
+            logger.info("Please ensure config.json exists with your Naukri credentials")
             raise
         except Exception as e:
-            logger.error(f"Error loading config: {e}")
+            logger.error(f"❌ Config loading failed: {e}")
             raise
     
     def setup_driver(self):
-        """Setup Chrome driver for GitHub Actions (headless)"""
+        """Setup Edge WebDriver (FIXED: was using Chrome)"""
         try:
-            options = webdriver.ChromeOptions()
+            logger.info("🔧 Setting up Edge WebDriver...")
             
-            # GitHub Actions requires headless mode
+            options = webdriver.EdgeOptions()
+            
+            # Headless mode for automation
             options.add_argument('--headless')
+            options.add_argument('--disable-gpu')
             options.add_argument('--no-sandbox')
             options.add_argument('--disable-dev-shm-usage')
-            options.add_argument('--disable-gpu')
-            options.add_argument('--disable-web-security')
-            options.add_argument('--allow-running-insecure-content')
             
             # Anti-detection measures
             options.add_argument('--disable-blink-features=AutomationControlled')
             options.add_experimental_option("excludeSwitches", ["enable-automation"])
             options.add_experimental_option('useAutomationExtension', False)
             
-            # Random user agent
-            user_agents = [
-                'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-                'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36',
-                'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
-            ]
-            options.add_argument(f'--user-agent={random.choice(user_agents)}')
+            # User agent
+            options.add_argument('--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36 Edg/91.0.864.59')
             
-            # Use ChromeDriverManager for automatic driver management
-            service = ChromeService(ChromeDriverManager().install())
-            self.driver = webdriver.Chrome(service=service, options=options)
+            # Try automatic Edge driver setup
+            try:
+                service = EdgeService(EdgeChromiumDriverManager().install())
+                self.driver = webdriver.Edge(service=service, options=options)
+                logger.info("✅ Edge driver auto-download successful")
+            except Exception as e:
+                logger.warning(f"Auto-download failed: {e}")
+                # Try manual path fallback
+                manual_paths = [
+                    r"C:\WebDrivers\msedgedriver.exe",
+                    r"C:\edgedriver\msedgedriver.exe",
+                    "msedgedriver.exe"  # If in PATH
+                ]
+                
+                driver_found = False
+                for path in manual_paths:
+                    if os.path.exists(path):
+                        logger.info(f"🔄 Trying manual path: {path}")
+                        service = EdgeService(path)
+                        self.driver = webdriver.Edge(service=service, options=options)
+                        driver_found = True
+                        break
+                
+                if not driver_found:
+                    logger.error("❌ No Edge driver found! Please install Edge WebDriver")
+                    return False
             
-            self.driver.set_window_size(1920, 1080)
+            self.driver.set_window_size(1280, 720)
             self.driver.implicitly_wait(10)
             self.wait = WebDriverWait(self.driver, 20)
             
-            logger.info("✅ Chrome driver setup successful (headless mode)")
+            logger.info("✅ Edge driver setup successful (headless mode)")
             return True
             
         except Exception as e:
-            logger.error(f"❌ Driver setup failed: {e}")
+            logger.error(f"❌ Edge driver setup failed: {e}")
             return False
     
     def login_to_naukri(self):
-        """Login to Naukri with enhanced error handling"""
+        """Login to Naukri using config.json credentials"""
         try:
             logger.info("🔐 Logging into Naukri...")
             
-            # Navigate to login page
+            # Navigate to Naukri login
             self.driver.get('https://www.naukri.com/nlogin/login')
             time.sleep(3)
             
-            # Handle potential cookie banners or pop-ups
+            # Handle cookie consent if present
             try:
-                # Look for cookie accept button
                 cookie_buttons = [
                     "//button[contains(text(), 'Accept')]",
-                    "//button[contains(text(), 'OK')]",
-                    ".cookie-accept",
-                    "#cookie-accept"
+                    "//button[contains(text(), 'Got it')]",
+                    ".cookiecon__buttons button"
                 ]
                 
                 for button_selector in cookie_buttons:
@@ -146,7 +183,7 @@ class NaukriProfileRefresher:
             self._human_type(email_field, self.config['credentials']['email'])
             time.sleep(1)
             
-            # Fill password
+            # Fill password  
             password_field = self.wait.until(
                 EC.element_to_be_clickable((By.ID, 'passwordField'))
             )
@@ -164,7 +201,7 @@ class NaukriProfileRefresher:
             # Verify login
             success_indicators = [
                 '.nI-gNb-drawer__icon',
-                '.view-profile-wrapper',
+                '.view-profile-wrapper', 
                 'My Naukri'
             ]
             
@@ -276,10 +313,10 @@ class NaukriProfileRefresher:
         try:
             # Look for headline edit button/field
             edit_selectors = [
-                "//span[contains(text(), 'Edit')]",
-                ".edit-icon",
-                "[data-automation='editHeadline']",
-                "//button[contains(@class, 'edit')]"
+                "//span[contains(text(), 'Edit')]/parent::button",
+                "//i[contains(@class, 'edit')]/parent::span/parent::button",
+                ".headlineCnt .edit",
+                "[data-automation='headlineEdit']"
             ]
             
             for selector in edit_selectors:
@@ -288,67 +325,34 @@ class NaukriProfileRefresher:
                         edit_btn = self.driver.find_element(By.XPATH, selector)
                     else:
                         edit_btn = self.driver.find_element(By.CSS_SELECTOR, selector)
-                    
                     edit_btn.click()
                     time.sleep(2)
-                    break
+                    
+                    # Find headline text field
+                    headline_field = self.driver.find_element(By.CSS_SELECTOR, "textarea, input[type='text']")
+                    current_text = headline_field.get_attribute('value')
+                    
+                    if current_text:
+                        # Make minor variations
+                        variations = [
+                            current_text.rstrip('.') + '.',
+                            current_text.rstrip() + ' ',
+                            current_text.replace('  ', ' '),
+                            current_text.replace(' ', '  ') if '  ' not in current_text else current_text.replace('  ', ' ')
+                        ]
+                        
+                        new_text = random.choice(variations)
+                        
+                        headline_field.clear()
+                        self._human_type(headline_field, new_text)
+                        
+                        # Save
+                        self._save_changes()
+                        return True
+                        
                 except:
                     continue
-            
-            # Look for headline input field
-            headline_selectors = [
-                "//input[contains(@placeholder, 'headline')]",
-                "//textarea[contains(@placeholder, 'headline')]",
-                "#headline",
-                "[name='headline']"
-            ]
-            
-            for selector in headline_selectors:
-                try:
-                    if selector.startswith('//'):
-                        headline_field = self.driver.find_element(By.XPATH, selector)
-                    else:
-                        headline_field = self.driver.find_element(By.CSS_SELECTOR, selector)
                     
-                    current_text = headline_field.get_attribute('value') or headline_field.text
-                    
-                    # Make minor variations
-                    variations = [
-                        lambda x: x.rstrip('.') + '.',  # Add/remove period
-                        lambda x: x.replace(' | ', ' • '),  # Change separator
-                        lambda x: x.replace(' • ', ' | '),  # Change separator back
-                        lambda x: x + ' 💼' if '💼' not in x else x.replace(' 💼', ''),  # Add/remove emoji
-                    ]
-                    
-                    variation_func = random.choice(variations)
-                    new_text = variation_func(current_text)
-                    
-                    # Update field
-                    headline_field.clear()
-                    self._human_type(headline_field, new_text)
-                    
-                    # Save changes
-                    save_buttons = [
-                        "//button[contains(text(), 'Save')]",
-                        "//button[contains(text(), 'Update')]",
-                        ".save-btn"
-                    ]
-                    
-                    for save_selector in save_buttons:
-                        try:
-                            if save_selector.startswith('//'):
-                                save_btn = self.driver.find_element(By.XPATH, save_selector)
-                            else:
-                                save_btn = self.driver.find_element(By.CSS_SELECTOR, save_selector)
-                            save_btn.click()
-                            time.sleep(2)
-                            return True
-                        except:
-                            continue
-                    
-                except:
-                    continue
-            
             return False
             
         except Exception as e:
@@ -356,16 +360,16 @@ class NaukriProfileRefresher:
             return False
     
     def _update_summary(self):
-        """Update summary with minor changes"""
+        """Update summary with minor formatting changes"""
         try:
-            # Navigate to summary section
-            summary_selectors = [
-                "//section[contains(@class, 'summary')]//span[contains(text(), 'Edit')]",
-                "//div[contains(@class, 'summary')]//button",
-                "[data-automation='editSummary']"
+            # Look for summary edit
+            edit_selectors = [
+                "//div[@class='resumeHeadline']//span[contains(text(), 'Edit')]",
+                ".summary .edit",
+                "[data-automation='summaryEdit']"
             ]
             
-            for selector in summary_selectors:
+            for selector in edit_selectors:
                 try:
                     if selector.startswith('//'):
                         edit_btn = self.driver.find_element(By.XPATH, selector)
@@ -373,29 +377,13 @@ class NaukriProfileRefresher:
                         edit_btn = self.driver.find_element(By.CSS_SELECTOR, selector)
                     edit_btn.click()
                     time.sleep(2)
-                    break
-                except:
-                    continue
-            
-            # Find summary text area
-            summary_field_selectors = [
-                "//textarea[contains(@placeholder, 'summary')]",
-                "#summary",
-                "[name='summary']",
-                "//textarea[@class*='summary']"
-            ]
-            
-            for selector in summary_field_selectors:
-                try:
-                    if selector.startswith('//'):
-                        summary_field = self.driver.find_element(By.XPATH, selector)
-                    else:
-                        summary_field = self.driver.find_element(By.CSS_SELECTOR, selector)
                     
-                    current_text = summary_field.get_attribute('value') or summary_field.text
+                    # Find summary text field
+                    summary_field = self.driver.find_element(By.CSS_SELECTOR, "textarea")
+                    current_text = summary_field.get_attribute('value')
                     
-                    # Minor text variations
                     if current_text:
+                        # Minor formatting changes
                         variations = [
                             current_text.rstrip('.') + '.',
                             current_text.replace('. ', '. \n'),  # Add line breaks
@@ -423,7 +411,6 @@ class NaukriProfileRefresher:
     def _reorder_skills(self):
         """Reorder skills slightly"""
         try:
-            # This is more complex - might just add/remove a skill
             skills_section = [
                 "//section[contains(@class, 'skill')]//span[contains(text(), 'Edit')]",
                 "[data-automation='editSkills']"
@@ -451,15 +438,14 @@ class NaukriProfileRefresher:
             return False
     
     def _touch_experience(self):
-        """Touch experience section (minimal change)"""
+        """Touch experience section"""
         try:
-            # Just navigate to experience and back
-            experience_selectors = [
+            exp_selectors = [
                 "//section[contains(@class, 'experience')]//span[contains(text(), 'Edit')]",
-                "[data-automation='editExperience']"
+                ".experience .edit"
             ]
             
-            for selector in experience_selectors:
+            for selector in exp_selectors:
                 try:
                     if selector.startswith('//'):
                         edit_btn = self.driver.find_element(By.XPATH, selector)
@@ -468,7 +454,7 @@ class NaukriProfileRefresher:
                     edit_btn.click()
                     time.sleep(2)
                     
-                    # Just opening the section updates "last modified"
+                    # Just opening the section triggers update
                     self._save_changes()
                     return True
                 except:
@@ -477,27 +463,43 @@ class NaukriProfileRefresher:
             return False
             
         except Exception as e:
-            logger.error(f"Experience touch failed: {e}")
+            logger.error(f"Experience update failed: {e}")
             return False
     
     def _refresh_contact(self):
-        """Refresh contact information view"""
+        """Refresh contact information"""
         try:
-            # Navigate to contact section
-            self.driver.get('https://www.naukri.com/mnjuser/profile?id=&altresid')
-            time.sleep(2)
+            contact_selectors = [
+                "//section[contains(@class, 'contact')]//span[contains(text(), 'Edit')]",
+                ".contact .edit"
+            ]
             
-            # Just viewing the contact section updates activity
-            return True
+            for selector in contact_selectors:
+                try:
+                    if selector.startswith('//'):
+                        edit_btn = self.driver.find_element(By.XPATH, selector)
+                    else:
+                        edit_btn = self.driver.find_element(By.CSS_SELECTOR, selector)
+                    edit_btn.click()
+                    time.sleep(2)
+                    
+                    self._save_changes()
+                    return True
+                except:
+                    continue
+            
+            return False
             
         except Exception as e:
-            logger.error(f"Contact refresh failed: {e}")
+            logger.error(f"Contact update failed: {e}")
             return False
     
     def _fallback_update(self):
-        """Fallback update method - just visit profile sections"""
+        """Fallback: Just visit different profile sections"""
         try:
-            # Visit different profile sections to update "last seen" time
+            logger.info("🔄 Running fallback profile update...")
+            
+            # Visit different sections of profile
             sections = [
                 'https://www.naukri.com/mnjuser/profile',
                 'https://www.naukri.com/mnjuser/profile?id=&altresid',
@@ -587,6 +589,9 @@ class NaukriProfileRefresher:
 
 # Main execution
 if __name__ == "__main__":
+    print("🔄 Naukri Profile Refresher (FIXED: Edge + config.json)")
+    print("=" * 60)
+    
     refresher = NaukriProfileRefresher()
     success = refresher.run_profile_refresh()
     

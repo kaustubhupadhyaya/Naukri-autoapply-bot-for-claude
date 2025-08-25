@@ -1,9 +1,8 @@
-"""
-Naukri Profile Refresher - FULLY FIXED VERSION
-- Uses Edge WebDriver instead of Chrome
-- Reads credentials from ANY config.json structure  
-- IMPROVED profile update strategies (no more fallback-only)
-- Updated selectors for current Naukri website
+ """
+Naukri Profile Refresher - SPAN-BASED SELECTORS VERSION
+- Uses Edge WebDriver with CORRECT span selectors (not buttons!)
+- REAL profile changes that toggle between runs
+- Fixed based on actual Naukri HTML structure using <span class="edit icon">
 """
 
 import os
@@ -17,6 +16,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.edge.service import Service as EdgeService
+from selenium.webdriver.common.action_chains import ActionChains
 from selenium.common.exceptions import TimeoutException, NoSuchElementException
 from webdriver_manager.microsoft import EdgeChromiumDriverManager
 
@@ -28,7 +28,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 class NaukriProfileRefresher:
-    """FULLY FIXED: Uses Edge + reads from ANY config structure + BETTER strategies"""
+    """FIXED: Uses correct span.edit.icon selectors based on real Naukri HTML"""
     
     def __init__(self, config_file="config.json"):
         """Initialize with flexible config reading"""
@@ -36,17 +36,28 @@ class NaukriProfileRefresher:
         self.driver = None
         self.wait = None
         
-        # Profile update strategies (rotated) - IMPROVED
+        # Targeted update strategies - REAL CHANGES
         self.update_strategies = [
-            'headline_tweak',
-            'summary_refresh', 
-            'profile_view',
-            'skills_refresh',
-            'contact_refresh'
+            'headline_dbt_toggle',
+            'skills_dbt_toggle', 
+            'summary_fullstop_toggle',
+            'linkedin_profile_toggle',
+            'salary_toggle'
         ]
         
-        # Keep track of last used strategy
+        # State tracking files for toggle functionality
+        self.state_files = {
+            'headline_dbt': 'headline_dbt_state.txt',
+            'skills_dbt': 'skills_dbt_state.txt', 
+            'summary_fullstop': 'summary_fullstop_state.txt',
+            'linkedin_profile': 'linkedin_profile_state.txt',
+            'salary_toggle': 'salary_toggle_state.txt'
+        }
+        
         self.last_strategy_file = "last_strategy.txt"
+        
+        # Your specific profile data
+        self.linkedin_url = "https://www.linkedin.com/in/kaustubh-upadhyaya/"
         
     def _load_config(self, config_file):
         """Load configuration from ANY config.json structure"""
@@ -320,6 +331,162 @@ class NaukriProfileRefresher:
             element.send_keys(char)
             time.sleep(random.uniform(0.05, 0.15))
     
+    def _get_toggle_state(self, state_key):
+        """Get current toggle state (True = add, False = remove)"""
+        state_file = self.state_files.get(state_key)
+        if not state_file:
+            return True
+        
+        try:
+            if os.path.exists(state_file):
+                with open(state_file, 'r') as f:
+                    return f.read().strip().lower() == 'true'
+            else:
+                return True  # Default to add
+        except:
+            return True
+    
+    def _set_toggle_state(self, state_key, state):
+        """Set toggle state for next run"""
+        state_file = self.state_files.get(state_key)
+        if state_file:
+            try:
+                with open(state_file, 'w') as f:
+                    f.write('true' if state else 'false')
+            except:
+                pass
+    
+    def _click_edit_span(self, text_content, timeout=10):
+        """Click edit span by finding text content first - FIXED WITH TEXT-BASED XPATH!"""
+        
+        # First, verify the text exists on the page
+        try:
+            text_elements = self.driver.find_elements(By.XPATH, f"//*[contains(text(), '{text_content}')]")
+            if not text_elements:
+                logger.warning(f"⚠️ No text '{text_content}' found on page")
+                self._debug_available_edit_spans(text_content)
+                return False
+            else:
+                logger.info(f"✅ Found {len(text_elements)} elements containing '{text_content}'")
+        except:
+            pass
+        
+        # PRIMARY: Text-based XPath selectors (the correct approach)
+        text_based_selectors = [
+            # Find the text, then navigate to sibling edit span
+            f"//span[contains(text(), '{text_content}')]/following-sibling::span[contains(@class, 'edit')]",
+            f"//span[contains(text(), '{text_content}')]/following-sibling::*[contains(@class, 'edit')]",
+            
+            # Find the text, then navigate to parent's edit span  
+            f"//span[contains(text(), '{text_content}')]/parent::*//*[contains(@class, 'edit')]",
+            f"//span[contains(text(), '{text_content}')]/parent::*//span[contains(@class, 'edit')]",
+            
+            # Find the text, then navigate up and find edit span
+            f"//span[contains(text(), '{text_content}')]/ancestor::*[1]//*[contains(@class, 'edit')]",
+            f"//span[contains(text(), '{text_content}')]/ancestor::*[2]//*[contains(@class, 'edit')]",
+            
+            # Alternative class patterns
+            f"//span[contains(text(), '{text_content}')]/following-sibling::span[@class='edit icon']",
+            f"//span[contains(text(), '{text_content}')]/parent::*//span[@class='edit icon']",
+            
+            # More flexible text matching
+            f"//*[contains(text(), '{text_content}')]/parent::*//*[contains(@class, 'edit')]",
+            f"//*[contains(text(), '{text_content}')]/following-sibling::*[contains(@class, 'edit')]"
+        ]
+        
+        for selector in text_based_selectors:
+            try:
+                edit_span = WebDriverWait(self.driver, timeout).until(
+                    EC.element_to_be_clickable((By.XPATH, selector))
+                )
+                self.driver.execute_script("arguments[0].scrollIntoView(true);", edit_span)
+                time.sleep(1)
+                edit_span.click()
+                logger.info(f"✅ Clicked edit span for '{text_content}' using: {selector[:80]}...")
+                return True
+            except:
+                continue
+        
+        # Debug: Show available edit spans
+        self._debug_available_edit_spans(text_content)
+        logger.warning(f"⚠️ Could not find edit span for: {text_content}")
+        return False
+    
+    def _debug_available_edit_spans(self, target_text):
+        """Debug helper: Show available edit spans with better text matching"""
+        try:
+            logger.info(f"🔍 DEBUG: Looking for '{target_text}' edit span, available edit elements:")
+            
+            # Find all edit spans and their context
+            edit_spans = self.driver.find_elements(By.CSS_SELECTOR, '.edit.icon, span.edit.icon, [class*="edit"]')
+            
+            for i, span in enumerate(edit_spans[:10]):
+                try:
+                    if span.is_displayed():
+                        # Get parent element text to understand context
+                        parent = span.find_element(By.XPATH, './ancestor::*[1]')
+                        parent_text = parent.text.strip()[:50]
+                        
+                        # Check if this might be our target
+                        match_indicator = ""
+                        if target_text.lower() in parent_text.lower():
+                            match_indicator = " 🎯 POSSIBLE MATCH!"
+                        
+                        logger.info(f"   {i+1}. Edit span near: '{parent_text}'{match_indicator}")
+                        
+                        # Show XPath that would find this element
+                        if match_indicator:
+                            logger.info(f"      Try XPath: //span[contains(text(), '{target_text}')]/following-sibling::span[contains(@class, 'edit')]")
+                            
+                except Exception as e:
+                    logger.info(f"   {i+1}. Edit span (error getting context: {e})")
+            
+            if len(edit_spans) > 10:
+                logger.info(f"   ... and {len(edit_spans) - 10} more edit spans")
+            
+            # Also show all text content that might contain our target
+            logger.info(f"🔍 All text containing '{target_text}':")
+            try:
+                text_elements = self.driver.find_elements(By.XPATH, f"//*[contains(text(), '{target_text}')]")
+                for i, element in enumerate(text_elements[:5]):
+                    if element.is_displayed():
+                        logger.info(f"   Text {i+1}: '{element.text.strip()[:50]}'")
+            except:
+                logger.info("   Could not find text elements")
+                
+        except Exception as e:
+            logger.warning(f"Debug failed: {e}")
+    
+    def _click_save_button(self, timeout=5):
+        """Click save/update button in modal"""
+        save_selectors = [
+            "//button[contains(text(), 'Save')]",
+            "//button[contains(text(), 'Update')]", 
+            "//button[contains(text(), 'Done')]",
+            ".btn-dark-ot",
+            "button[type='submit']",
+            ".save-btn"
+        ]
+        
+        for selector in save_selectors:
+            try:
+                if selector.startswith('//'):
+                    save_btn = WebDriverWait(self.driver, timeout).until(
+                        EC.element_to_be_clickable((By.XPATH, selector))
+                    )
+                else:
+                    save_btn = WebDriverWait(self.driver, timeout).until(
+                        EC.element_to_be_clickable((By.CSS_SELECTOR, selector))
+                    )
+                save_btn.click()
+                logger.info(f"✅ Clicked save button: {selector}")
+                return True
+            except:
+                continue
+        
+        logger.warning("⚠️ Could not find save button")
+        return False
+    
     def get_next_strategy(self):
         """Get next update strategy in rotation"""
         try:
@@ -348,270 +515,521 @@ class NaukriProfileRefresher:
             return self.update_strategies[0]
     
     def update_profile(self):
-        """IMPROVED: Update profile using selected strategy with better selectors"""
+        """TARGETED: Update profile using specific strategies with smart fallback"""
         try:
             strategy = self.get_next_strategy()
             logger.info(f"🔄 Using strategy: {strategy}")
             
             # Navigate to profile
-            self.driver.get('https://www.naukri.com/mnjuser/profile')
-            time.sleep(3)
+            self.driver.get('https://www.naukri.com/mnjuser/profile?id=&altresid')
+            time.sleep(4)
             
             success = False
             
-            if strategy == 'headline_tweak':
-                success = self._update_headline()
-            elif strategy == 'summary_refresh':
-                success = self._update_summary()
-            elif strategy == 'profile_view':
-                success = self._refresh_profile_view()
-            elif strategy == 'skills_refresh':
-                success = self._refresh_skills()
-            elif strategy == 'contact_refresh':
-                success = self._refresh_contact()
-            else:
-                logger.warning(f"Unknown strategy: {strategy}")
-                success = self._fallback_update()
+            if strategy == 'headline_dbt_toggle':
+                success = self._headline_dbt_toggle()
+            elif strategy == 'skills_dbt_toggle':
+                success = self._skills_dbt_toggle()
+            elif strategy == 'summary_fullstop_toggle':
+                success = self._summary_fullstop_toggle()
+            elif strategy == 'linkedin_profile_toggle':
+                success = self._linkedin_profile_toggle()
+            elif strategy == 'salary_toggle':
+                success = self._salary_toggle()
             
             if success:
                 logger.info(f"✅ Profile updated successfully using {strategy}")
                 return True
             else:
-                logger.warning(f"⚠️ Strategy {strategy} failed, trying fallback")
-                return self._fallback_update()
+                # Smart fallback: try next strategy in line
+                logger.warning(f"⚠️ Strategy {strategy} failed, trying next strategy")
+                return self._try_next_strategy(strategy)
                 
         except Exception as e:
             logger.error(f"❌ Profile update failed: {e}")
             return False
     
-    def _update_headline(self):
-        """IMPROVED: Update profile headline - just view the section"""
+    def _try_next_strategy(self, failed_strategy):
+        """Try the next strategy in line as fallback"""
         try:
-            logger.info("🔄 Refreshing headline section...")
+            current_index = self.update_strategies.index(failed_strategy)
+            next_index = (current_index + 1) % len(self.update_strategies)
+            next_strategy = self.update_strategies[next_index]
             
-            # Navigate to different profile sections to trigger updates
-            profile_sections = [
-                'https://www.naukri.com/mnjuser/profile',
-                'https://www.naukri.com/mnjuser/homepage',
-                'https://www.naukri.com/mnjuser/profile?id=&altresid'
+            logger.info(f"🔄 Trying fallback strategy: {next_strategy}")
+            
+            success = False
+            
+            if next_strategy == 'headline_dbt_toggle':
+                success = self._headline_dbt_toggle()
+            elif next_strategy == 'skills_dbt_toggle':
+                success = self._skills_dbt_toggle()
+            elif next_strategy == 'summary_fullstop_toggle':
+                success = self._summary_fullstop_toggle()
+            elif next_strategy == 'linkedin_profile_toggle':
+                success = self._linkedin_profile_toggle()
+            elif next_strategy == 'salary_toggle':
+                success = self._salary_toggle()
+            
+            if success:
+                logger.info(f"✅ Fallback strategy {next_strategy} succeeded")
+                return True
+            else:
+                logger.warning(f"⚠️ Fallback strategy {next_strategy} also failed")
+                # Try one more strategy
+                final_index = (next_index + 1) % len(self.update_strategies)
+                final_strategy = self.update_strategies[final_index]
+                
+                logger.info(f"🔄 Final attempt with: {final_strategy}")
+                
+                if final_strategy == 'headline_dbt_toggle':
+                    success = self._headline_dbt_toggle()
+                elif final_strategy == 'skills_dbt_toggle':
+                    success = self._skills_dbt_toggle()
+                elif final_strategy == 'summary_fullstop_toggle':
+                    success = self._summary_fullstop_toggle()
+                elif final_strategy == 'linkedin_profile_toggle':
+                    success = self._linkedin_profile_toggle()
+                elif final_strategy == 'salary_toggle':
+                    success = self._salary_toggle()
+                
+                if success:
+                    logger.info(f"✅ Final strategy {final_strategy} succeeded")
+                    return True
+                else:
+                    logger.error("❌ All strategies failed")
+                    return False
+                    
+        except Exception as e:
+            logger.error(f"❌ Fallback strategy failed: {e}")
+            return False
+    
+    def _headline_dbt_toggle(self):
+        """Toggle DBT in headline - FIXED WITH TEXT-BASED SELECTORS"""
+        try:
+            logger.info("🔄 Toggling DBT in headline...")
+            
+            # Click headline edit span using the actual visible text
+            if not self._click_edit_span("Resume headline"):
+                logger.error("❌ Could not find headline edit span")
+                return False
+            
+            time.sleep(3)
+            
+            # Find headline text field in the modal
+            headline_selectors = [
+                'textarea[name="headline"]',
+                'textarea[placeholder*="headline"]',
+                'textarea[placeholder*="Headline"]',
+                'input[name="headline"]',
+                'textarea',
+                'input[type="text"]'
             ]
             
-            for section in profile_sections:
-                self.driver.get(section)
-                time.sleep(2)
-                
-                # Look for any profile elements to interact with
+            headline_field = None
+            for selector in headline_selectors:
                 try:
-                    # Find any clickable profile elements
-                    profile_elements = self.driver.find_elements(By.CSS_SELECTOR, 
-                        '.pebBox, .widgetHead, .heading, [class*="profile"], .edit')
-                    
-                    if profile_elements:
-                        # Just hover over elements to show activity
-                        from selenium.webdriver.common.action_chains import ActionChains
-                        actions = ActionChains(self.driver)
-                        actions.move_to_element(profile_elements[0]).perform()
-                        time.sleep(1)
+                    fields = self.driver.find_elements(By.CSS_SELECTOR, selector)
+                    for field in fields:
+                        if field.is_displayed() and field.is_enabled():
+                            headline_field = field
+                            break
+                    if headline_field:
                         break
                 except:
                     continue
             
-            logger.info("✅ Headline section refreshed")
-            return True
-                        
-        except Exception as e:
-            logger.error(f"Headline update failed: {e}")
-            return False
-    
-    def _update_summary(self):
-        """IMPROVED: Update summary section"""
-        try:
-            logger.info("🔄 Refreshing summary section...")
+            if not headline_field:
+                logger.error("❌ Could not find headline field")
+                return False
             
-            # Navigate to profile and interact with summary area
-            self.driver.get('https://www.naukri.com/mnjuser/profile')
+            current_text = headline_field.get_attribute('value') or headline_field.text
+            should_add = self._get_toggle_state('headline_dbt')
+            
+            if should_add:
+                # Add DBT if not present
+                if 'DBT' not in current_text:
+                    new_text = current_text.strip() + ', DBT'
+                    logger.info("➕ Adding DBT to headline")
+                else:
+                    logger.info("ℹ️ DBT already in headline")
+                    new_text = current_text
+            else:
+                # Remove DBT if present
+                if 'DBT' in current_text:
+                    new_text = current_text.replace(', DBT', '').replace('DBT,', '').replace('DBT', '').strip()
+                    logger.info("➖ Removing DBT from headline")
+                else:
+                    logger.info("ℹ️ DBT not in headline")
+                    new_text = current_text
+            
+            # Update the field
+            headline_field.clear()
+            time.sleep(1)
+            self._human_type(headline_field, new_text)
+            time.sleep(2)
+            
+            # Save changes
+            self._click_save_button()
             time.sleep(3)
             
-            # Look for summary/headline sections
+            # Toggle state for next run
+            self._set_toggle_state('headline_dbt', not should_add)
+            
+            logger.info("✅ Headline DBT toggle completed")
+            return True
+            
+        except Exception as e:
+            logger.error(f"❌ Headline DBT toggle failed: {e}")
+            return False
+    
+    def _skills_dbt_toggle(self):
+        """Toggle DBT in skills - FIXED WITH TEXT-BASED SELECTORS"""
+        try:
+            logger.info("🔄 Toggling DBT in skills...")
+            
+            # Click skills edit span using the actual visible text
+            if not self._click_edit_span("Key skills"):
+                logger.error("❌ Could not find skills edit span")
+                return False
+            
+            time.sleep(3)
+            
+            should_add = self._get_toggle_state('skills_dbt')
+            
+            if should_add:
+                # Add DBT skill
+                logger.info("➕ Adding DBT skill")
+                
+                # Look for skill input field
+                skill_input_selectors = [
+                    'input[placeholder*="skill"]',
+                    'input[placeholder*="Skill"]',
+                    'input[name*="skill"]',
+                    '.skill-input input',
+                    'input[type="text"]',
+                    'input[placeholder*="Enter"]'
+                ]
+                
+                skill_field = None
+                for selector in skill_input_selectors:
+                    try:
+                        fields = self.driver.find_elements(By.CSS_SELECTOR, selector)
+                        for field in fields:
+                            if field.is_displayed() and field.is_enabled():
+                                skill_field = field
+                                break
+                        if skill_field:
+                            break
+                    except:
+                        continue
+                
+                if skill_field:
+                    skill_field.clear()
+                    self._human_type(skill_field, "DBT")
+                    time.sleep(1)
+                    
+                    # Try to add the skill
+                    self._click_save_button()
+                else:
+                    logger.error("❌ Could not find skill input field")
+                    return False
+            else:
+                # Remove DBT skill
+                logger.info("➖ Removing DBT skill")
+                
+                # Look for DBT skill to delete
+                dbt_skill_selectors = [
+                    "//span[contains(text(), 'DBT')]/following-sibling::*",
+                    "//span[contains(text(), 'DBT')]/parent::*//*[contains(@class, 'delete')]",
+                    "//span[contains(text(), 'DBT')]/parent::*//*[contains(text(), '×')]",
+                    "//span[contains(text(), 'DBT')]/parent::*//*[contains(@title, 'delete')]"
+                ]
+                
+                deleted = False
+                for selector in dbt_skill_selectors:
+                    try:
+                        delete_btn = self.driver.find_element(By.XPATH, selector)
+                        if delete_btn.is_displayed():
+                            delete_btn.click()
+                            logger.info("✅ DBT skill deleted")
+                            deleted = True
+                            break
+                    except:
+                        continue
+                
+                if not deleted:
+                    logger.warning("⚠️ DBT skill not found to delete")
+                
+                # Save changes
+                self._click_save_button()
+            
+            time.sleep(3)
+            
+            # Toggle state for next run
+            self._set_toggle_state('skills_dbt', not should_add)
+            
+            logger.info("✅ Skills DBT toggle completed")
+            return True
+            
+        except Exception as e:
+            logger.error(f"❌ Skills DBT toggle failed: {e}")
+            return False
+    
+    def _summary_fullstop_toggle(self):
+        """Toggle full stop at end of summary - FIXED WITH TEXT-BASED SELECTORS"""
+        try:
+            logger.info("🔄 Toggling full stop in summary...")
+            
+            # Click summary edit span using the actual visible text
+            if not self._click_edit_span("Profile summary"):
+                logger.error("❌ Could not find summary edit span")
+                return False
+            
+            time.sleep(3)
+            
+            # Find summary text field
             summary_selectors = [
-                '.resumeHeadline',
-                '.summary',
-                '.headlineCnt',
-                '[class*="headline"]',
-                '[class*="summary"]'
+                'textarea[name="summary"]',
+                'textarea[placeholder*="summary"]',
+                'textarea[placeholder*="Summary"]',
+                'textarea'
             ]
             
+            summary_field = None
             for selector in summary_selectors:
                 try:
-                    elements = self.driver.find_elements(By.CSS_SELECTOR, selector)
-                    if elements:
-                        # Scroll to element to trigger activity
-                        self.driver.execute_script("arguments[0].scrollIntoView();", elements[0])
-                        time.sleep(1)
-                        logger.info(f"✅ Found and interacted with: {selector}")
-                        return True
+                    fields = self.driver.find_elements(By.CSS_SELECTOR, selector)
+                    for field in fields:
+                        if field.is_displayed() and field.is_enabled():
+                            summary_field = field
+                            break
+                    if summary_field:
+                        break
                 except:
                     continue
             
-            logger.info("✅ Summary section refreshed")
-            return True
+            if not summary_field:
+                logger.error("❌ Could not find summary field")
+                return False
             
-        except Exception as e:
-            logger.error(f"Summary update failed: {e}")
-            return False
-    
-    def _refresh_profile_view(self):
-        """IMPROVED: Refresh by viewing different profile sections"""
-        try:
-            logger.info("🔄 Refreshing profile view...")
+            current_text = summary_field.get_attribute('value') or summary_field.text
+            should_add = self._get_toggle_state('summary_fullstop')
             
-            # Visit multiple profile URLs to simulate activity
-            urls = [
-                'https://www.naukri.com/mnjuser/profile',
-                'https://www.naukri.com/mnjuser/homepage',
-                'https://www.naukri.com/mnjuser/profile?id=&altresid',
-                'https://www.naukri.com/mnjuser/profile?mode=viewProfile'
-            ]
+            if should_add:
+                # Add full stop if not present
+                if not current_text.endswith('.'):
+                    new_text = current_text.strip() + '.'
+                    logger.info("➕ Adding full stop to summary")
+                else:
+                    logger.info("ℹ️ Full stop already present")
+                    new_text = current_text
+            else:
+                # Remove full stop if present
+                if current_text.endswith('.'):
+                    new_text = current_text.rstrip('.')
+                    logger.info("➖ Removing full stop from summary")
+                else:
+                    logger.info("ℹ️ No full stop to remove")
+                    new_text = current_text
             
-            for url in urls:
-                try:
-                    self.driver.get(url)
-                    time.sleep(2)
-                    
-                    # Scroll to trigger activity
-                    self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight/2);")
-                    time.sleep(1)
-                    self.driver.execute_script("window.scrollTo(0, 0);")
-                    time.sleep(1)
-                    
-                except Exception as e:
-                    logger.warning(f"Failed to visit {url}: {e}")
-                    continue
+            # Update the field
+            summary_field.clear()
+            self._human_type(summary_field, new_text)
+            time.sleep(2)
             
-            logger.info("✅ Profile view refreshed")
-            return True
-                
-        except Exception as e:
-            logger.error(f"Profile view refresh failed: {e}")
-            return False
-    
-    def _refresh_skills(self):
-        """IMPROVED: Refresh skills section"""
-        try:
-            logger.info("🔄 Refreshing skills section...")
-            
-            self.driver.get('https://www.naukri.com/mnjuser/profile')
+            # Save changes
+            self._click_save_button()
             time.sleep(3)
             
-            # Look for skills-related elements
-            skills_selectors = [
-                '[class*="skill"]',
-                '.skill',
-                '.skills',
-                '[data-automation*="skill"]'
-            ]
+            # Toggle state for next run
+            self._set_toggle_state('summary_fullstop', not should_add)
             
-            for selector in skills_selectors:
-                try:
-                    elements = self.driver.find_elements(By.CSS_SELECTOR, selector)
-                    if elements:
-                        # Scroll to skills section
-                        self.driver.execute_script("arguments[0].scrollIntoView();", elements[0])
-                        time.sleep(2)
-                        logger.info(f"✅ Found skills section: {selector}")
-                        return True
-                except:
-                    continue
-            
-            logger.info("✅ Skills section refreshed")
+            logger.info("✅ Summary full stop toggle completed")
             return True
-                
+            
         except Exception as e:
-            logger.error(f"Skills refresh failed: {e}")
+            logger.error(f"❌ Summary full stop toggle failed: {e}")
             return False
     
-    def _refresh_contact(self):
-        """IMPROVED: Refresh contact information"""
+    def _linkedin_profile_toggle(self):
+        """Toggle LinkedIn profile URL - FIXED WITH TEXT-BASED SELECTORS"""
         try:
-            logger.info("🔄 Refreshing contact section...")
+            logger.info("🔄 Toggling LinkedIn profile...")
             
-            self.driver.get('https://www.naukri.com/mnjuser/profile')
+            # For LinkedIn profile, we need to handle both existing and new profiles
+            # First try to find existing online profile section
+            try:
+                # Look for existing online profile to edit
+                if self._click_edit_span("Online profile"):
+                    logger.info("✅ Found existing online profile to edit")
+                else:
+                    # Try to find "Add" button for online profile in accomplishments section
+                    add_selectors = [
+                        "//button[contains(text(), 'Add') and contains(preceding-sibling::*//text(), 'Online profile')]",
+                        "//a[contains(text(), 'Add') and contains(preceding-sibling::*//text(), 'Online profile')]", 
+                        "//a[contains(@href, 'profile') and contains(text(), 'Add')]",
+                        "//button[contains(@class, 'blue-text') and contains(text(), 'Add')]"
+                    ]
+                    
+                    found_add = False
+                    for selector in add_selectors:
+                        try:
+                            add_btn = WebDriverWait(self.driver, 5).until(
+                                EC.element_to_be_clickable((By.XPATH, selector))
+                            )
+                            add_btn.click()
+                            logger.info(f"✅ Clicked add button: {selector[:50]}...")
+                            found_add = True
+                            break
+                        except:
+                            continue
+                    
+                    if not found_add:
+                        logger.error("❌ Could not find online profile edit span or add button")
+                        return False
+            except Exception as e:
+                logger.error(f"❌ Error finding online profile section: {e}")
+                return False
+            
             time.sleep(3)
             
-            # Look for contact-related elements
-            contact_selectors = [
-                '[class*="contact"]',
-                '.contact',
-                '.contactDetails',
-                '[data-automation*="contact"]'
-            ]
+            should_add = self._get_toggle_state('linkedin_profile')
             
-            for selector in contact_selectors:
-                try:
-                    elements = self.driver.find_elements(By.CSS_SELECTOR, selector)
-                    if elements:
-                        # Interact with contact section
-                        self.driver.execute_script("arguments[0].scrollIntoView();", elements[0])
-                        time.sleep(2)
-                        logger.info(f"✅ Found contact section: {selector}")
-                        return True
-                except:
-                    continue
-            
-            logger.info("✅ Contact section refreshed")
-            return True
+            if should_add:
+                # Add LinkedIn profile
+                logger.info("➕ Adding LinkedIn profile")
                 
-        except Exception as e:
-            logger.error(f"Contact refresh failed: {e}")
-            return False
-    
-    def _fallback_update(self):
-        """IMPROVED Fallback: Visit profile sections with interactions"""
-        try:
-            logger.info("🔄 Running IMPROVED fallback profile update...")
-            
-            # Visit different sections with scrolling and interactions
-            sections = [
-                'https://www.naukri.com/mnjuser/profile',
-                'https://www.naukri.com/mnjuser/homepage',
-                'https://www.naukri.com/mnjuser/profile?id=&altresid'
-            ]
-            
-            for section in sections:
-                try:
-                    self.driver.get(section)
-                    time.sleep(2)
-                    
-                    # Simulate real user behavior
-                    # Scroll down
-                    self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight/3);")
-                    time.sleep(1)
-                    
-                    # Scroll back up
-                    self.driver.execute_script("window.scrollTo(0, 0);")
-                    time.sleep(1)
-                    
-                    # Try to hover over any profile elements
+                # Look for URL input field
+                url_selectors = [
+                    'input[placeholder*="URL"]',
+                    'input[placeholder*="url"]',
+                    'input[placeholder*="link"]',
+                    'input[placeholder*="profile"]',
+                    'input[type="url"]',
+                    'input[name*="url"]'
+                ]
+                
+                url_field = None
+                for selector in url_selectors:
                     try:
-                        elements = self.driver.find_elements(By.CSS_SELECTOR, 
-                            '.pebBox, .widgetHead, .heading, [class*="profile"]')
-                        if elements:
-                            from selenium.webdriver.common.action_chains import ActionChains
-                            actions = ActionChains(self.driver)
-                            actions.move_to_element(elements[0]).perform()
-                            time.sleep(1)
+                        fields = self.driver.find_elements(By.CSS_SELECTOR, selector)
+                        for field in fields:
+                            if field.is_displayed() and field.is_enabled():
+                                url_field = field
+                                break
+                        if url_field:
+                            break
                     except:
-                        pass
-                        
-                except Exception as e:
-                    logger.warning(f"Section visit failed for {section}: {e}")
-                    continue
+                        continue
+                
+                if url_field:
+                    url_field.clear()
+                    self._human_type(url_field, self.linkedin_url)
+                    time.sleep(1)
+            else:
+                # Remove LinkedIn profile (look for existing one to delete)
+                logger.info("➖ Removing LinkedIn profile")
+                
+                # Look for delete button near LinkedIn URL
+                delete_selectors = [
+                    f"//a[contains(@href, 'linkedin.com')]/following-sibling::button",
+                    f"//span[contains(text(), 'linkedin.com')]/parent::*//*[contains(@class, 'delete')]",
+                    "//button[contains(@class, 'delBtn')]"
+                ]
+                
+                for selector in delete_selectors:
+                    try:
+                        delete_btn = self.driver.find_element(By.XPATH, selector)
+                        if delete_btn.is_displayed():
+                            delete_btn.click()
+                            logger.info("✅ LinkedIn profile deleted")
+                            break
+                    except:
+                        continue
             
-            logger.info("✅ IMPROVED fallback update completed")
+            # Save changes
+            self._click_save_button()
+            time.sleep(3)
+            
+            # Toggle state for next run
+            self._set_toggle_state('linkedin_profile', not should_add)
+            
+            logger.info("✅ LinkedIn profile toggle completed")
             return True
             
         except Exception as e:
-            logger.error(f"IMPROVED fallback update failed: {e}")
+            logger.error(f"❌ LinkedIn profile toggle failed: {e}")
+            return False
+    
+    def _salary_toggle(self):
+        """Toggle salary between 17 and 18 lakh - FIXED WITH TEXT-BASED SELECTORS"""
+        try:
+            logger.info("🔄 Toggling salary expectation...")
+            
+            # Navigate to career profile section
+            self.driver.get('https://www.naukri.com/mnjuser/profile?id=&altresid')
+            time.sleep(3)
+            
+            # Scroll to career profile section
+            self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight * 0.8);")
+            time.sleep(2)
+            
+            # Click career profile edit span using the actual visible text
+            if not self._click_edit_span("Career profile"):
+                logger.error("❌ Could not find career profile edit span")
+                return False
+            
+            time.sleep(3)
+            
+            should_use_18 = self._get_toggle_state('salary_toggle')
+            target_salary = "18" if should_use_18 else "17"
+            
+            logger.info(f"🔄 Setting salary to {target_salary} lakh")
+            
+            # Look for salary input fields
+            salary_selectors = [
+                'input[placeholder*="salary"]',
+                'input[placeholder*="Salary"]',
+                'input[placeholder*="amount"]',
+                'input[placeholder*="lakh"]',
+                'input[name*="salary"]',
+                'input[type="number"]'
+            ]
+            
+            salary_field = None
+            for selector in salary_selectors:
+                try:
+                    fields = self.driver.find_elements(By.CSS_SELECTOR, selector)
+                    for field in fields:
+                        if field.is_displayed() and field.is_enabled():
+                            salary_field = field
+                            break
+                    if salary_field:
+                        break
+                except:
+                    continue
+            
+            if salary_field:
+                salary_field.clear()
+                self._human_type(salary_field, target_salary)
+                time.sleep(1)
+                
+                # Save changes
+                self._click_save_button()
+                time.sleep(3)
+                
+                # Toggle state for next run
+                self._set_toggle_state('salary_toggle', not should_use_18)
+                
+                logger.info(f"✅ Salary set to {target_salary} lakh")
+                return True
+            else:
+                logger.error("❌ Could not find salary field")
+                return False
+            
+        except Exception as e:
+            logger.error(f"❌ Salary toggle failed: {e}")
             return False
     
     def run_profile_refresh(self):
@@ -663,8 +1081,8 @@ class NaukriProfileRefresher:
 
 # Main execution
 if __name__ == "__main__":
-    print("🔄 Naukri Profile Refresher (FULLY FIXED)")
-    print("✅ Edge WebDriver + ANY config.json + IMPROVED strategies")
+    print("🔄 Naukri Profile Refresher (SPAN-BASED SELECTORS)")
+    print("✅ Edge WebDriver + CORRECT span.edit.icon selectors")
     print("=" * 60)
     
     refresher = NaukriProfileRefresher()

@@ -75,7 +75,7 @@ The system rotates through these strategies to avoid detection:
 Each strategy makes minimal changes that trigger Naukri's "last updated" timestamp without affecting your profile content.
 
 ---
-
+    
 ## 📊 **Monitoring & Logs**
 
 ### **Success Indicators:**

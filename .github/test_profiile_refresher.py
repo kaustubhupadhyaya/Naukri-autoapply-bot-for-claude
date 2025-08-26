@@ -1,8 +1,7 @@
-#!/usr/bin/env python3
 """
-FIXED Test Profile Refresher - Works with ANY config structure
+FIXED Test Profile Refresher - Chrome Version
+- Uses Chrome WebDriver (matches GitHub Actions)
 - Supports both "credentials" and "login" structures
-- Uses Edge WebDriver
 - No manual credential input needed
 """
 
@@ -13,7 +12,7 @@ import sys
 
 def test_profile_refresher():
     """Test the FIXED profile refresher locally"""
-    print("🧪 Testing Naukri Profile Refresher (FIXED VERSION)")
+    print("🧪 Testing Naukri Profile Refresher (CHROME VERSION)")
     print("=" * 60)
     
     try:
@@ -46,16 +45,16 @@ def test_profile_refresher():
         masked_email = email[:3] + "***@" + email.split('@')[1]
         print(f"📧 Using email: {masked_email}")
         
-        # Setup Edge driver (visible for testing)
-        print("\n3️⃣ Setting up Edge driver (visible mode)...")
-        refresher.setup_driver = lambda: setup_local_edge_driver(refresher)
+        # Setup Chrome driver (visible for testing)
+        print("\n3️⃣ Setting up Chrome driver (visible mode)...")
+        refresher.setup_driver = lambda: setup_local_chrome_driver(refresher)
         
         if not refresher.setup_driver():
-            print("❌ Edge driver setup failed")
-            print("Make sure Microsoft Edge is installed and EdgeDriver is available")
+            print("❌ Chrome driver setup failed")
+            print("Make sure Google Chrome is installed and ChromeDriver is available")
             return False
         
-        print("✅ Edge driver setup successful")
+        print("✅ Chrome driver setup successful")
         
         # Test login
         print("\n4️⃣ Testing login...")
@@ -100,17 +99,17 @@ def test_profile_refresher():
         except:
             pass
 
-def setup_local_edge_driver(refresher):
-    """Setup visible Edge driver for local testing"""
+def setup_local_chrome_driver(refresher):
+    """Setup visible Chrome driver for local testing"""
     try:
         from selenium import webdriver
         from selenium.webdriver.support.ui import WebDriverWait
-        from selenium.webdriver.edge.service import Service as EdgeService
-        from webdriver_manager.microsoft import EdgeChromiumDriverManager
+        from selenium.webdriver.chrome.service import Service as ChromeService
+        from webdriver_manager.chrome import ChromeDriverManager
         
-        print("🔧 Setting up Edge WebDriver for testing...")
+        print("🔧 Setting up Chrome WebDriver for testing...")
         
-        options = webdriver.EdgeOptions()
+        options = webdriver.ChromeOptions()
         
         # Visible browser for testing (no headless)
         # options.add_argument('--headless')  # Commented out for testing
@@ -121,118 +120,119 @@ def setup_local_edge_driver(refresher):
         options.add_experimental_option('useAutomationExtension', False)
         
         # User agent
-        options.add_argument('--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36 Edg/91.0.864.59')
+        options.add_argument('--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36')
         
-        # Try automatic Edge driver setup
+        # Try automatic Chrome driver setup
         try:
-            service = EdgeService(EdgeChromiumDriverManager().install())
-            refresher.driver = webdriver.Edge(service=service, options=options)
-            print("✅ Edge driver auto-download successful")
+            service = ChromeService(ChromeDriverManager().install())
+            refresher.driver = webdriver.Chrome(service=service, options=options)
+            print("✅ Chrome driver auto-download successful")
         except Exception as e:
             print(f"⚠️ Auto-download failed: {e}")
             # Try manual path fallback
             manual_paths = [
-                r"C:\WebDrivers\msedgedriver.exe",
-                r"C:\edgedriver\msedgedriver.exe",
-                "msedgedriver.exe"  # If in PATH
+                r"C:\WebDrivers\chromedriver.exe",
+                r"C:\chromedriver\chromedriver.exe",
+                "/usr/local/bin/chromedriver",
+                "/usr/bin/chromedriver",
+                "chromedriver.exe",  # If in PATH
+                "chromedriver"  # If in PATH (Linux/Mac)
             ]
             
             driver_found = False
             for path in manual_paths:
                 if os.path.exists(path):
                     print(f"🔄 Trying manual path: {path}")
-                    service = EdgeService(path)
-                    refresher.driver = webdriver.Edge(service=service, options=options)
+                    service = ChromeService(path)
+                    refresher.driver = webdriver.Chrome(service=service, options=options)
                     driver_found = True
                     break
             
             if not driver_found:
-                print("❌ No Edge driver found!")
-                print("Solutions:")
-                print("1. Let webdriver-manager auto-download (requires internet)")
-                print("2. Download EdgeDriver manually to C:\\WebDrivers\\msedgedriver.exe")
-                print("3. Add EdgeDriver to your system PATH")
+                print("❌ No Chrome driver found!")
+                print("Please install ChromeDriver:")
+                print("  - Download from: https://chromedriver.chromium.org/")
+                print("  - Or install via: pip install webdriver-manager")
                 return False
         
         refresher.driver.set_window_size(1280, 720)
         refresher.driver.implicitly_wait(10)
         refresher.wait = WebDriverWait(refresher.driver, 20)
         
-        print("✅ Edge driver setup successful (visible mode)")
+        print("✅ Chrome driver ready (visible mode for testing)")
         return True
         
     except Exception as e:
-        print(f"❌ Edge driver setup failed: {e}")
+        print(f"❌ Chrome driver setup error: {e}")
         import traceback
         traceback.print_exc()
         return False
 
 def check_prerequisites():
-    """Check if all prerequisites are installed"""
-    print("🔍 Checking Prerequisites...")
+    """Check if all required components are installed"""
+    print("\n🔍 Checking prerequisites...")
+    print("-" * 40)
     
-    # Check config.json with flexible structure detection
-    if os.path.exists('config.json'):
-        print("✅ config.json: Found")
+    # Check Python version
+    import sys
+    print(f"✅ Python version: {sys.version.split()[0]}")
+    
+    # Check required packages
+    required_packages = {
+        'selenium': 'selenium',
+        'webdriver_manager': 'webdriver-manager'
+    }
+    
+    missing_packages = []
+    for module_name, pip_name in required_packages.items():
         try:
-            with open('config.json', 'r') as f:
-                config = json.load(f)
-            
-            # Check for EITHER structure
-            email_found = False
-            password_found = False
-            
-            # Check "credentials" structure (user's actual structure)
-            if 'credentials' in config:
-                if 'email' in config['credentials'] and 'password' in config['credentials']:
-                    email_found = True
-                    password_found = True
-                    print("✅ config.json: Valid structure (credentials)")
-            
-            # Check "login" structure (old structure)
-            elif 'login' in config:
-                if 'email' in config['login'] and 'password' in config['login']:
-                    email_found = True
-                    password_found = True
-                    print("✅ config.json: Valid structure (login)")
-            
-            if not email_found or not password_found:
-                print("❌ config.json: Invalid structure (missing email/password)")
-                show_config_examples()
-                return False
-                
-        except:
-            print("❌ config.json: Invalid JSON format")
-            return False
-    else:
-        print("❌ config.json: Not found")
+            __import__(module_name)
+            print(f"✅ {module_name}: Installed")
+        except ImportError:
+            print(f"❌ {module_name}: Not installed")
+            missing_packages.append(pip_name)
+    
+    if missing_packages:
+        print("\n📦 Install missing packages:")
+        print(f"   pip install {' '.join(missing_packages)}")
         return False
     
-    # Check Python packages
-    required_packages = [
-        'selenium',
-        'webdriver_manager'
-    ]
+    # Check Chrome installation
+    import platform
+    system = platform.system()
     
-    for package in required_packages:
-        try:
-            __import__(package)
-            print(f"✅ {package}: Installed")
-        except ImportError:
-            print(f"❌ {package}: Not installed")
-            print(f"   Install with: pip install {package}")
-            return False
+    print(f"\n🖥️ Operating System: {system}")
     
-    # Check Edge browser
     try:
-        import subprocess
-        result = subprocess.run(['msedge', '--version'], capture_output=True, text=True, timeout=5)
-        if result.returncode == 0:
-            print("✅ Microsoft Edge: Installed")
-        else:
-            print("⚠️ Microsoft Edge: May not be installed or not in PATH")
+        if system == "Windows":
+            chrome_paths = [
+                r"C:\Program Files\Google\Chrome\Application\chrome.exe",
+                r"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe",
+                os.path.expanduser(r"~\AppData\Local\Google\Chrome\Application\chrome.exe")
+            ]
+            chrome_found = any(os.path.exists(path) for path in chrome_paths)
+            if chrome_found:
+                print("✅ Google Chrome: Installed")
+            else:
+                print("⚠️ Google Chrome: May not be installed")
+        elif system == "Darwin":  # macOS
+            if os.path.exists("/Applications/Google Chrome.app"):
+                print("✅ Google Chrome: Installed")
+            else:
+                print("⚠️ Google Chrome: May not be installed")
+        else:  # Linux
+            import subprocess
+            try:
+                subprocess.run(["which", "google-chrome"], check=True, capture_output=True)
+                print("✅ Google Chrome: Installed")
+            except:
+                try:
+                    subprocess.run(["which", "chromium-browser"], check=True, capture_output=True)
+                    print("✅ Chromium: Installed (alternative to Chrome)")
+                except:
+                    print("⚠️ Google Chrome: May not be installed")
     except:
-        print("⚠️ Microsoft Edge: Could not verify installation")
+        print("⚠️ Google Chrome: Could not verify installation")
     
     print("✅ Prerequisites check completed")
     return True
@@ -271,7 +271,7 @@ def show_config_examples():
 
 if __name__ == "__main__":
     print("🧪 Naukri Profile Refresher - TEST MODE")
-    print("FIXED VERSION: Edge WebDriver + ANY config.json structure")
+    print("CHROME VERSION: Chrome WebDriver + ANY config.json structure")
     print("=" * 60)
     
     # Check prerequisites
@@ -289,12 +289,12 @@ if __name__ == "__main__":
     if success:
         print("\n" + "=" * 60)
         print("🎉 TEST SUCCESSFUL!")
-        print("✅ Profile refresher is working correctly")
+        print("✅ Profile refresher is working correctly with Chrome")
         print("✅ Ready for automation setup")
         print("=" * 60)
         print("\nNext steps:")
-        print("1. Set up GitHub Actions secrets")
-        print("2. Enable automated hourly runs")
+        print("1. Commit these updated files to GitHub")
+        print("2. GitHub Actions will use Chrome automatically")
         print("3. Monitor profile refresh logs")
     else:
         print("\n" + "=" * 60)

@@ -1,1 +1,1 @@
-salary_toggle
+skills_update

@@ -1,8 +1,10 @@
+
 """
-Naukri Profile Refresher - CHROME VERSION
-- Uses Chrome WebDriver (matches GitHub Actions setup)
-- REAL profile changes that toggle between runs
-- Fixed to work with Google Chrome instead of Edge
+Naukri Profile Refresher - COMPLETE FIXED VERSION
+- Text-based element finding for reliability
+- Improved save button detection
+- Better error handling and reporting
+- Chrome WebDriver compatible with GitHub Actions
 """
 
 import os
@@ -28,7 +30,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 class NaukriProfileRefresher:
-    """FIXED: Uses Chrome WebDriver to match GitHub Actions"""
+    """Complete fixed version with robust save functionality"""
     
     def __init__(self, config_file="config.json"):
         """Initialize with flexible config reading"""
@@ -36,28 +38,20 @@ class NaukriProfileRefresher:
         self.driver = None
         self.wait = None
         
-        # Targeted update strategies - REAL CHANGES
+        # Simplified to most reliable strategies
         self.update_strategies = [
-            'headline_dbt_toggle',
-            'skills_dbt_toggle', 
+            'headline_toggle',
             'summary_fullstop_toggle',
-            'linkedin_profile_toggle',
-            'salary_toggle'
+            'skills_update'
         ]
         
-        # State tracking files for toggle functionality
+        # State tracking files
         self.state_files = {
-            'headline_dbt': 'headline_dbt_state.txt',
-            'skills_dbt': 'skills_dbt_state.txt', 
-            'summary_fullstop': 'summary_fullstop_state.txt',
-            'linkedin_profile': 'linkedin_profile_state.txt',
-            'salary_toggle': 'salary_toggle_state.txt'
+            'headline_toggle': 'headline_toggle_state.txt',
+            'summary_fullstop': 'summary_fullstop_state.txt'
         }
         
         self.last_strategy_file = "last_strategy.txt"
-        
-        # Your specific profile data
-        self.linkedin_url = "https://www.linkedin.com/in/kaustubh-upadhyaya/"
         
     def _load_config(self, config_file):
         """Load configuration from ANY config.json structure"""
@@ -68,7 +62,7 @@ class NaukriProfileRefresher:
             # Handle MULTIPLE config structures
             credentials = None
             
-            # Structure 1: "credentials" (user's current structure)
+            # Structure 1: "credentials" (most common)
             if 'credentials' in config:
                 credentials = {
                     'email': config['credentials']['email'],
@@ -76,7 +70,7 @@ class NaukriProfileRefresher:
                 }
                 logger.info(f"✅ Loaded credentials from {config_file} (credentials structure)")
             
-            # Structure 2: "login" (alternative structure)
+            # Structure 2: "login"
             elif 'login' in config:
                 credentials = {
                     'email': config['login']['email'],
@@ -101,22 +95,25 @@ class NaukriProfileRefresher:
             
         except FileNotFoundError:
             logger.error(f"❌ Config file '{config_file}' not found!")
-            logger.info("Please ensure config.json exists with your Naukri credentials")
             raise
         except Exception as e:
             logger.error(f"❌ Config loading failed: {e}")
-            logger.info("Check your config.json format - email and password are required")
             raise
     
-    def setup_driver(self):
+    def setup_driver(self, debug_mode=False):
         """Setup Chrome WebDriver with improved settings"""
         try:
             logger.info("🔧 Setting up Chrome WebDriver...")
             
             options = webdriver.ChromeOptions()
             
-            # Headless mode for automation
-            options.add_argument('--headless')
+            # Headless mode for automation (disabled in debug mode)
+            if not debug_mode:
+                options.add_argument('--headless')
+                logger.info("Running in headless mode")
+            else:
+                logger.info("Running in visible mode (debug)")
+            
             options.add_argument('--disable-gpu')
             options.add_argument('--no-sandbox')
             options.add_argument('--disable-dev-shm-usage')
@@ -128,8 +125,11 @@ class NaukriProfileRefresher:
             options.add_experimental_option("excludeSwitches", ["enable-automation"])
             options.add_experimental_option('useAutomationExtension', False)
             
-            # User agent - Updated for Chrome 2025
+            # User agent
             options.add_argument('--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36')
+            
+            # Window size
+            options.add_argument('--window-size=1920,1080')
             
             # Try automatic Chrome driver setup
             try:
@@ -138,20 +138,19 @@ class NaukriProfileRefresher:
                 logger.info("✅ Chrome driver auto-download successful")
             except Exception as e:
                 logger.warning(f"Auto-download failed: {e}")
-                # Try manual path fallback
+                # Try manual paths
                 manual_paths = [
-                    "/usr/bin/chromedriver",  # Linux default
-                    "/usr/local/bin/chromedriver",  # macOS default
-                    r"C:\WebDrivers\chromedriver.exe",  # Windows
-                    r"C:\chromedriver\chromedriver.exe",  # Windows alternative
-                    "chromedriver",  # If in PATH
-                    "chromedriver.exe"  # Windows if in PATH
+                    "/usr/bin/chromedriver",
+                    "/usr/local/bin/chromedriver",
+                    r"C:\WebDrivers\chromedriver.exe",
+                    r"C:\chromedriver\chromedriver.exe",
+                    "chromedriver"
                 ]
                 
                 driver_found = False
                 for path in manual_paths:
                     if os.path.exists(path):
-                        logger.info(f"🔄 Trying manual path: {path}")
+                        logger.info(f"🔄 Using manual path: {path}")
                         service = ChromeService(path)
                         self.driver = webdriver.Chrome(service=service, options=options)
                         driver_found = True
@@ -159,14 +158,12 @@ class NaukriProfileRefresher:
                 
                 if not driver_found:
                     logger.error("❌ No Chrome driver found!")
-                    logger.info("Please install ChromeDriver")
                     return False
             
-            self.driver.set_window_size(1280, 720)
             self.driver.implicitly_wait(10)
             self.wait = WebDriverWait(self.driver, 20)
             
-            logger.info("✅ Chrome driver setup successful (headless mode)")
+            logger.info("✅ Chrome driver setup successful")
             return True
             
         except Exception as e:
@@ -184,96 +181,93 @@ class NaukriProfileRefresher:
             
             # Handle cookie consent if present
             try:
-                cookie_selectors = [
+                cookie_buttons = [
                     "//button[contains(text(), 'Accept')]",
                     "//button[contains(text(), 'Got it')]",
-                    "//button[contains(text(), 'Allow')]",
-                    ".cookiecon__buttons button",
-                    "#accept-cookies"
+                    "//button[contains(@class, 'cookies-accept')]"
                 ]
-                
-                for selector in cookie_selectors:
+                for xpath in cookie_buttons:
                     try:
-                        if selector.startswith('//'):
-                            button = self.wait.until(EC.element_to_be_clickable((By.XPATH, selector)))
-                        else:
-                            button = self.wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, selector)))
+                        button = self.driver.find_element(By.XPATH, xpath)
                         button.click()
                         time.sleep(1)
                         break
-                    except TimeoutException:
+                    except:
                         continue
             except:
                 pass
             
-            # Fill email with multiple selector fallbacks
+            # Fill email - try multiple selectors
+            email_field = None
             email_selectors = [
-                '#usernameField',
-                'input[placeholder*="Email"]',
-                'input[placeholder*="email"]',
-                'input[type="email"]',
-                'input[name="email"]'
+                "usernameField",
+                "emailField",
+                "email"
             ]
             
-            email_field = None
-            for selector in email_selectors:
+            for selector_id in email_selectors:
                 try:
-                    email_field = self.wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, selector)))
+                    email_field = self.wait.until(
+                        EC.presence_of_element_located((By.ID, selector_id))
+                    )
                     break
-                except TimeoutException:
+                except:
                     continue
             
             if not email_field:
-                logger.error("❌ Could not find email field")
-                return False
+                # Try by placeholder
+                try:
+                    email_field = self.driver.find_element(
+                        By.XPATH, "//input[contains(@placeholder, 'Email') or contains(@placeholder, 'email')]"
+                    )
+                except:
+                    logger.error("❌ Could not find email field")
+                    return False
             
             email_field.clear()
             email_field.send_keys(self.config['credentials']['email'])
             time.sleep(1)
             
-            # Fill password with multiple selector fallbacks
+            # Fill password - try multiple selectors
+            password_field = None
             password_selectors = [
-                '#passwordField',
-                'input[placeholder*="Password"]',
-                'input[placeholder*="password"]',
-                'input[type="password"]',
-                'input[name="password"]'
+                "passwordField",
+                "password"
             ]
             
-            password_field = None
-            for selector in password_selectors:
+            for selector_id in password_selectors:
                 try:
-                    password_field = self.driver.find_element(By.CSS_SELECTOR, selector)
+                    password_field = self.driver.find_element(By.ID, selector_id)
                     break
-                except NoSuchElementException:
+                except:
                     continue
             
             if not password_field:
-                logger.error("❌ Could not find password field")
-                return False
+                # Try by type
+                try:
+                    password_field = self.driver.find_element(By.CSS_SELECTOR, "input[type='password']")
+                except:
+                    logger.error("❌ Could not find password field")
+                    return False
             
             password_field.clear()
             password_field.send_keys(self.config['credentials']['password'])
             time.sleep(1)
             
-            # Click login button with multiple fallbacks
+            # Click login button
+            login_button = None
             login_selectors = [
-                'button[type="submit"]',
-                'button.loginButton',
-                '//button[contains(text(), "Login")]',
-                '//button[contains(text(), "Sign in")]',
-                '.loginButton'
+                "//button[contains(text(), 'Login')]",
+                "//button[@type='submit']",
+                "//button[contains(@class, 'loginButton')]"
             ]
             
-            for selector in login_selectors:
+            for xpath in login_selectors:
                 try:
-                    if selector.startswith('//'):
-                        login_button = self.driver.find_element(By.XPATH, selector)
-                    else:
-                        login_button = self.driver.find_element(By.CSS_SELECTOR, selector)
+                    login_button = self.driver.find_element(By.XPATH, xpath)
                     login_button.click()
                     break
-                except NoSuchElementException:
+                except:
                     continue
             
             # Wait for login to complete
@@ -291,24 +285,279 @@ class NaukriProfileRefresher:
             logger.error(f"❌ Login failed: {e}")
             return False
     
+    def _find_and_click_edit(self, section_text):
+        """
+        Find section by text, then click its edit button
+        This is more reliable than CSS selectors
+        """
+        try:
+            logger.info(f"🔍 Looking for '{section_text}' section...")
+            
+            # Strategy 1: Find heading text, then find edit icon in same container
+            try:
+                # Find the section by its heading text
+                section_xpath = f"//div[contains(., '{section_text}')]"
+                section_element = self.wait.until(
+                    EC.presence_of_element_located((By.XPATH, section_xpath))
+                )
+                
+                # Scroll to the section
+                self.driver.execute_script("arguments[0].scrollIntoView(true);", section_element)
+                time.sleep(1)
+                
+                # Find edit button/icon within or near this section
+                edit_selectors = [
+                    f"//div[contains(., '{section_text}')]//span[contains(@class, 'edit')]",
+                    f"//div[contains(., '{section_text}')]//button[contains(@class, 'edit')]",
+                    f"//div[contains(., '{section_text}')]//a[contains(@class, 'edit')]",
+                    f"//div[contains(., '{section_text}')]//*[@title='Edit' or @aria-label='Edit']",
+                    f"//div[contains(., '{section_text}')]//i[contains(@class, 'edit')]",
+                    f"//span[text()='{section_text}']/following-sibling::*[contains(@class, 'edit')]",
+                    f"//span[contains(text(), '{section_text}')]/parent::*//*[contains(@class, 'edit')]"
+                ]
+                
+                for selector in edit_selectors:
+                    try:
+                        edit_button = self.driver.find_element(By.XPATH, selector)
+                        if edit_button.is_displayed():
+                            # Try regular click first
+                            try:
+                                edit_button.click()
+                                logger.info(f"✅ Clicked edit for '{section_text}'")
+                                time.sleep(2)
+                                return True
+                            except:
+                                # If regular click fails, try JavaScript click
+                                self.driver.execute_script("arguments[0].click();", edit_button)
+                                logger.info(f"✅ JS clicked edit for '{section_text}'")
+                                time.sleep(2)
+                                return True
+                    except:
+                        continue
+                
+            except TimeoutException:
+                logger.warning(f"Could not find section with text '{section_text}'")
+            
+            # Strategy 2: Try finding by class names that might contain the section
+            section_class_mappings = {
+                "Resume headline": ["resumeHeadline", "resume-headline", "headline"],
+                "Profile summary": ["summary", "profileSummary", "profile-summary"],
+                "Key skills": ["keySkills", "key-skills", "skills"]
+            }
+            
+            if section_text in section_class_mappings:
+                for class_name in section_class_mappings[section_text]:
+                    try:
+                        edit_xpath = f"//*[contains(@class, '{class_name}')]//*[contains(@class, 'edit') or @title='Edit']"
+                        edit_button = self.driver.find_element(By.XPATH, edit_xpath)
+                        if edit_button.is_displayed():
+                            self.driver.execute_script("arguments[0].scrollIntoView(true);", edit_button)
+                            time.sleep(1)
+                            self.driver.execute_script("arguments[0].click();", edit_button)
+                            logger.info(f"✅ Found and clicked edit via class '{class_name}'")
+                            time.sleep(2)
+                            return True
+                    except:
+                        continue
+            
+            logger.error(f"❌ Could not find edit button for '{section_text}'")
+            return False
+            
+        except Exception as e:
+            logger.error(f"❌ Error clicking edit for '{section_text}': {e}")
+            return False
+    
+    def _find_profile_field(self, field_identifiers):
+        """
+        Find input/textarea fields using multiple strategies
+        field_identifiers: list of possible names, ids, or placeholders
+        """
+        try:
+            # Try by name attribute
+            for identifier in field_identifiers:
+                try:
+                    field = self.driver.find_element(By.NAME, identifier)
+                    if field.is_displayed():
+                        return field
+                except:
+                    continue
+            
+            # Try by ID
+            for identifier in field_identifiers:
+                try:
+                    field = self.driver.find_element(By.ID, identifier)
+                    if field.is_displayed():
+                        return field
+                except:
+                    continue
+            
+            # Try by placeholder
+            for identifier in field_identifiers:
+                try:
+                    field = self.driver.find_element(
+                        By.XPATH, f"//textarea[contains(@placeholder, '{identifier}')] | //input[contains(@placeholder, '{identifier}')]"
+                    )
+                    if field.is_displayed():
+                        return field
+                except:
+                    continue
+            
+            # Try any visible textarea (last resort)
+            try:
+                textareas = self.driver.find_elements(By.TAG_NAME, "textarea")
+                for textarea in textareas:
+                    if textarea.is_displayed() and textarea.is_enabled():
+                        return textarea
+            except:
+                pass
+            
+            return None
+            
+        except Exception as e:
+            logger.error(f"Error finding field: {e}")
+            return None
+    
+    def _click_save_button(self):
+        """
+        ENHANCED VERSION with debugging: Finds and clicks save button with extensive logging
+        """
+        try:
+            logger.info("🔍 Starting save button search...")
+            
+            # First, let's see ALL buttons on the page for debugging
+            try:
+                all_buttons = self.driver.find_elements(By.TAG_NAME, "button")
+                logger.info(f"📊 Found {len(all_buttons)} total buttons on page")
+                
+                # Log all visible button texts for debugging
+                for idx, btn in enumerate(all_buttons[:10]):  # Check first 10 buttons
+                    try:
+                        if btn.is_displayed():
+                            btn_text = btn.text.strip()
+                            btn_class = btn.get_attribute("class") or "no-class"
+                            btn_type = btn.get_attribute("type") or "no-type"
+                            logger.info(f"  Button {idx}: text='{btn_text}', class='{btn_class}', type='{btn_type}'")
+                    except:
+                        continue
+            except Exception as e:
+                logger.warning(f"Could not enumerate buttons: {e}")
+            
+            # Extended list of save button selectors
+            save_selectors = [
+                # Text-based selectors
+                "//button[contains(translate(text(), 'SAVE', 'save'), 'save')]",
+                "//button[contains(translate(text(), 'UPDATE', 'update'), 'update')]",
+                "//button[contains(translate(text(), 'SUBMIT', 'submit'), 'submit')]",
+                "//button[contains(translate(text(), 'APPLY', 'apply'), 'apply')]",
+                "//button[contains(translate(text(), 'OK', 'ok'), 'ok')]",
+                "//button[contains(translate(text(), 'DONE', 'done'), 'done')]",
+                
+                # Class-based selectors
+                "//button[contains(@class, 'save')]",
+                "//button[contains(@class, 'submit')]",
+                "//button[contains(@class, 'primary')]",
+                "//button[contains(@class, 'btn-primary')]",
+                "//button[contains(@class, 'positive')]",
+                
+                # Type-based selectors
+                "//button[@type='submit']",
+                "//input[@type='submit']",
+                "//button[@type='button'][contains(@class, 'primary')]",
+                
+                # Form selectors
+                "//form//button[@type='submit']",
+                "//form//button[contains(@class, 'primary')]",
+                "//form//button[not(@type='button') and not(@type='reset')]",
+                
+                # Modal/Dialog selectors
+                "//div[@role='dialog']//button[contains(@class, 'primary')]",
+                "//div[@role='dialog']//button[@type='submit']",
+                "//div[contains(@class, 'modal')]//button[contains(@class, 'primary')]",
+                
+                # Naukri-specific possibilities
+                "//button[@id='saveButton']",
+                "//button[contains(@ng-click, 'save')]",
+                "//button[contains(@onclick, 'save')]"
+            ]
+            
+            # Try each selector
+            for selector in save_selectors:
+                try:
+                    # Don't wait too long for each selector
+                    save_button = WebDriverWait(self.driver, 2).until(
+                        EC.presence_of_element_located((By.XPATH, selector))
+                    )
+                    
+                    if save_button.is_displayed() and save_button.is_enabled():
+                        btn_text = save_button.text or "no-text"
+                        logger.info(f"🎯 Found potential save button: '{btn_text}' with selector: {selector}")
+                        
+                        # Try to click it
+                        try:
+                            save_button.click()
+                        except:
+                            # If regular click fails, use JavaScript
+                            self.driver.execute_script("arguments[0].click();", save_button)
+                        
+                        logger.info(f"✅ Successfully clicked save button: '{btn_text}'")
+                        time.sleep(3)
+                        return True
+                        
+                except TimeoutException:
+                    continue
+                except Exception as e:
+                    continue
+            
+            # Ultra last resort - click ANY visible button that might be save
+            logger.warning("⚠️ Trying ultra last resort - any button that might be save...")
+            try:
+                buttons = self.driver.find_elements(By.TAG_NAME, "button")
+                for button in buttons:
+                    try:
+                        if button.is_displayed() and button.is_enabled():
+                            btn_text = button.text.strip().lower()
+                            btn_class = (button.get_attribute("class") or "").lower()
+                            
+                            # Check if this could be a save button
+                            save_keywords = ['save', 'update', 'submit', 'apply', 'done', 'ok', 'confirm']
+                            class_keywords = ['primary', 'submit', 'save', 'positive', 'success']
+                            
+                            if any(keyword in btn_text for keyword in save_keywords) or \
+                               any(keyword in btn_class for keyword in class_keywords):
+                                logger.info(f"🎲 Attempting to click button: '{button.text}'")
+                                self.driver.execute_script("arguments[0].click();", button)
+                                logger.info(f"✅ Clicked button: '{button.text}'")
+                                time.sleep(3)
+                                return True
+                    except:
+                        continue
+            except Exception as e:
+                logger.error(f"Ultra last resort failed: {e}")
+            
+            # If we reach here, we couldn't find the save button
+            logger.error("❌ Could not find save button after trying all methods")
+            
+            # Take a screenshot for debugging
+            try:
+                screenshot_path = f"save_button_not_found_{datetime.now().strftime('%Y%m%d_%H%M%S')}.png"
+                self.driver.save_screenshot(screenshot_path)
+                logger.info(f"📸 Screenshot saved: {screenshot_path}")
+            except:
+                pass
+            
+            return False
+            
+        except Exception as e:
+            logger.error(f"❌ Critical error in save button function: {e}")
+            return False
+    
     def _human_type(self, element, text):
-        """Type text with human-like delays"""
+        """Type text with faster, more reasonable delays"""
         element.clear()
+        # Much faster typing - 2-5 milliseconds per character instead of 50-150ms
         for char in text:
             element.send_keys(char)
-            time.sleep(random.uniform(0.05, 0.15))
-    
-    def _random_mouse_movement(self):
-        """Simulate random mouse movements"""
-        try:
-            actions = ActionChains(self.driver)
-            for _ in range(random.randint(2, 4)):
-                x = random.randint(100, 800)
-                y = random.randint(100, 600)
-                actions.move_by_offset(x, y).perform()
-                time.sleep(random.uniform(0.5, 1))
-        except:
-            pass
+            time.sleep(random.uniform(0.002, 0.005))  # Reduced from 0.05-0.15
     
     def _get_toggle_state(self, key):
         """Get current toggle state from file"""
@@ -356,7 +605,7 @@ class NaukriProfileRefresher:
         try:
             logger.info("📝 Navigating to profile edit page...")
             
-            # Navigate to profile edit - multiple URL attempts
+            # Navigate to profile
             profile_urls = [
                 'https://www.naukri.com/mnjuser/profile',
                 'https://www.naukri.com/mnjuser/profile?id=&altresid='
@@ -374,336 +623,167 @@ class NaukriProfileRefresher:
             
             # Execute strategy
             success = False
-            if strategy == 'headline_dbt_toggle':
-                success = self._toggle_headline_dbt()
-            elif strategy == 'skills_dbt_toggle':
-                success = self._toggle_skills_dbt()
+            if strategy == 'headline_toggle':
+                success = self._update_headline()
             elif strategy == 'summary_fullstop_toggle':
-                success = self._toggle_summary_fullstop()
-            elif strategy == 'linkedin_profile_toggle':
-                success = self._toggle_linkedin_profile()
-            elif strategy == 'salary_toggle':
-                success = self._toggle_salary()
+                success = self._update_summary()
+            elif strategy == 'skills_update':
+                success = self._update_skills()
             
             if success:
                 self.save_last_strategy(strategy)
                 logger.info(f"✅ Profile update successful using {strategy}")
+                return True
             else:
-                logger.warning(f"⚠️ Strategy {strategy} may have failed, but continuing")
-            
-            return True
+                logger.error(f"❌ Strategy {strategy} failed completely")
+                return False
             
         except Exception as e:
             logger.error(f"❌ Profile update failed: {e}")
             return False
     
-    def _click_edit_button(self, section_selector):
-        """Click the edit button using span.edit.icon selector"""
+    def _update_headline(self):
+        """Toggle between two headline versions with proper error handling"""
         try:
-            # CORRECT selector based on Naukri's HTML structure
-            edit_selectors = [
-                f'{section_selector} span.edit.icon',
-                f'{section_selector} .edit.icon',
-                f'{section_selector} span[class*="edit"]',
-                f'{section_selector} button[class*="edit"]'
-            ]
+            logger.info("🎯 Updating headline...")
             
-            for selector in edit_selectors:
-                try:
-                    edit_button = self.wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, selector)))
-                    self.driver.execute_script("arguments[0].scrollIntoView(true);", edit_button)
-                    time.sleep(1)
-                    edit_button.click()
-                    return True
-                except:
-                    continue
-            
-            return False
-        except:
-            return False
-    
-    def _click_save_button(self):
-        """Click save button with multiple fallbacks"""
-        try:
-            save_selectors = [
-                'button[type="submit"]',
-                'button.btn-primary',
-                '//button[contains(text(), "Save")]',
-                '//button[contains(text(), "Update")]',
-                '.saveButton',
-                'button[class*="save"]'
-            ]
-            
-            for selector in save_selectors:
-                try:
-                    if selector.startswith('//'):
-                        save_button = self.driver.find_element(By.XPATH, selector)
-                    else:
-                        save_button = self.driver.find_element(By.CSS_SELECTOR, selector)
-                    
-                    if save_button.is_displayed() and save_button.is_enabled():
-                        self.driver.execute_script("arguments[0].scrollIntoView(true);", save_button)
-                        time.sleep(1)
-                        save_button.click()
-                        return True
-                except:
-                    continue
-            
-            # Fallback: Press Enter or Escape
-            try:
-                from selenium.webdriver.common.keys import Keys
-                active_element = self.driver.switch_to.active_element
-                active_element.send_keys(Keys.ENTER)
-            except:
-                pass
-            
-            return True
-        except:
-            return True
-    
-    def _toggle_headline_dbt(self):
-        """Toggle DBT mention in headline"""
-        try:
-            logger.info("🎯 Toggling headline DBT...")
-            
-            # Click edit on headline section
-            if not self._click_edit_button('.resume-headline-view'):
-                logger.error("Could not click headline edit")
+            # Click edit for Resume headline section
+            if not self._find_and_click_edit("Resume headline"):
+                logger.error("Could not open headline edit")
                 return False
             
             time.sleep(2)
             
-            # Find headline textarea
-            headline_field = None
-            headline_selectors = [
-                'textarea#resumeHeadline',
-                'textarea[name="resumeHeadline"]',
-                'textarea.resumeHeadline',
-                'textarea[placeholder*="headline"]'
-            ]
-            
-            for selector in headline_selectors:
-                try:
-                    headline_field = self.driver.find_element(By.CSS_SELECTOR, selector)
-                    break
-                except:
-                    continue
+            # Find the headline field
+            headline_field = self._find_profile_field([
+                "resumeHeadline",
+                "headline",
+                "Headline",
+                "Resume headline"
+            ])
             
             if not headline_field:
                 logger.error("Could not find headline field")
                 return False
             
-            current_headline = headline_field.get_attribute('value')
+            # Get current headline
+            current_headline = headline_field.get_attribute('value') or headline_field.text
             
-            # Toggle DBT mention
-            should_add_dbt = self._get_toggle_state('headline_dbt')
+            # Define two headline versions
+            headline_a = "Data Engineer | Python | SQL | AWS"
+            headline_b = "Data Engineer | Python | SQL | Cloud"
             
-            if should_add_dbt and 'DBT' not in current_headline.upper():
-                new_headline = current_headline + " | DBT"
-            elif not should_add_dbt and 'DBT' in current_headline.upper():
-                new_headline = current_headline.replace(" | DBT", "").replace("| DBT", "").replace("DBT", "")
+            # If current headline matches neither, use the current with a minor change
+            if headline_a not in current_headline and headline_b not in current_headline:
+                # Just toggle a period at the end
+                if current_headline.rstrip().endswith('.'):
+                    new_headline = current_headline.rstrip()[:-1]
+                else:
+                    new_headline = current_headline.rstrip() + '.'
             else:
-                new_headline = current_headline + "."  # Just add a period as fallback
+                # Toggle between our two versions
+                should_use_b = self._get_toggle_state('headline_toggle')
+                new_headline = headline_b if should_use_b else headline_a
+                self._set_toggle_state('headline_toggle', not should_use_b)
             
+            # Update the field
             headline_field.clear()
-            self._human_type(headline_field, new_headline.strip())
+            self._human_type(headline_field, new_headline)
             time.sleep(1)
             
-            # Save changes
-            self._click_save_button()
-            time.sleep(3)
-            
-            # Toggle state for next run
-            self._set_toggle_state('headline_dbt', not should_add_dbt)
-            
-            logger.info("✅ Headline updated")
-            return True
-            
-        except Exception as e:
-            logger.error(f"❌ Headline toggle failed: {e}")
-            return False
-    
-    def _toggle_skills_dbt(self):
-        """Toggle DBT in skills section"""
-        try:
-            logger.info("🎯 Toggling skills DBT...")
-            
-            # Navigate to skills section
-            skills_section = self.driver.find_element(By.CSS_SELECTOR, '.key-skills-sec')
-            self.driver.execute_script("arguments[0].scrollIntoView(true);", skills_section)
-            time.sleep(2)
-            
-            # Click edit on skills
-            if not self._click_edit_button('.key-skills-sec'):
-                logger.error("Could not click skills edit")
-                return False
-            
-            time.sleep(2)
-            
-            # Just save to trigger update (visiting the section counts as activity)
-            self._click_save_button()
-            time.sleep(3)
-            
-            logger.info("✅ Skills section touched")
-            return True
-            
-        except Exception as e:
-            logger.error(f"❌ Skills toggle failed: {e}")
-            return False
-    
-    def _toggle_summary_fullstop(self):
-        """Toggle fullstop in summary"""
-        try:
-            logger.info("🎯 Toggling summary fullstop...")
-            
-            # Click edit on summary section
-            if not self._click_edit_button('.summary-view'):
-                logger.error("Could not click summary edit")
-                return False
-            
-            time.sleep(2)
-            
-            # Find summary field
-            summary_field = None
-            summary_selectors = [
-                'textarea#profileSummary',
-                'textarea[name="profileSummary"]',
-                'textarea.profileSummary',
-                'div[contenteditable="true"]'
-            ]
-            
-            for selector in summary_selectors:
-                try:
-                    summary_field = self.driver.find_element(By.CSS_SELECTOR, selector)
-                    break
-                except:
-                    continue
-            
-            if summary_field:
-                if summary_field.tag_name == 'div':
-                    current_summary = summary_field.text
-                else:
-                    current_summary = summary_field.get_attribute('value')
-                
-                # Toggle fullstop
-                if current_summary.rstrip().endswith('.'):
-                    new_summary = current_summary.rstrip()[:-1]
-                else:
-                    new_summary = current_summary.rstrip() + '.'
-                
-                summary_field.clear()
-                self._human_type(summary_field, new_summary)
-                time.sleep(1)
-            
-            # Save changes
-            self._click_save_button()
-            time.sleep(3)
-            
-            logger.info("✅ Summary updated")
-            return True
-            
-        except Exception as e:
-            logger.error(f"❌ Summary toggle failed: {e}")
-            return False
-    
-    def _toggle_linkedin_profile(self):
-        """Toggle LinkedIn profile URL"""
-        try:
-            logger.info("🎯 Toggling LinkedIn profile...")
-            
-            # Navigate to personal details section
-            try:
-                personal_section = self.driver.find_element(By.CSS_SELECTOR, '.personal-details-view')
-                self.driver.execute_script("arguments[0].scrollIntoView(true);", personal_section)
-            except:
-                pass
-            
-            time.sleep(2)
-            
-            # Click edit on personal details
-            if not self._click_edit_button('.personal-details-view'):
-                logger.error("Could not click personal details edit")
-                return False
-            
-            time.sleep(2)
-            
-            # Just save to trigger update
-            self._click_save_button()
-            time.sleep(3)
-            
-            logger.info("✅ Personal details touched")
-            return True
-            
-        except Exception as e:
-            logger.error(f"❌ LinkedIn toggle failed: {e}")
-            return False
-    
-    def _toggle_salary(self):
-        """Toggle expected salary between values"""
-        try:
-            logger.info("🎯 Toggling salary...")
-            
-            # Navigate to desired career profile section
-            try:
-                career_section = self.driver.find_element(By.CSS_SELECTOR, '.career-profile-view')
-                self.driver.execute_script("arguments[0].scrollIntoView(true);", career_section)
-            except:
-                pass
-            
-            time.sleep(2)
-            
-            # Click edit
-            if not self._click_edit_button('.career-profile-view'):
-                logger.error("Could not click career profile edit")
-                return False
-            
-            time.sleep(2)
-            
-            # Toggle between 18 and 20 lakh
-            should_use_18 = self._get_toggle_state('salary_toggle')
-            target_salary = "18" if should_use_18 else "20"
-            
-            # Find salary field
-            salary_field = None
-            salary_selectors = [
-                'input[name="expectedSalary"]',
-                'input#expectedSalary',
-                'input[placeholder*="salary"]',
-                'input[placeholder*="Salary"]'
-            ]
-            
-            for selector in salary_selectors:
-                try:
-                    fields = self.driver.find_elements(By.CSS_SELECTOR, selector)
-                    for field in fields:
-                        if field.is_displayed() and field.is_enabled():
-                            salary_field = field
-                            break
-                    if salary_field:
-                        break
-                except:
-                    continue
-            
-            if salary_field:
-                salary_field.clear()
-                self._human_type(salary_field, target_salary)
-                time.sleep(1)
-                
-                # Save changes
-                self._click_save_button()
-                time.sleep(3)
-                
-                # Toggle state for next run
-                self._set_toggle_state('salary_toggle', not should_use_18)
-                
-                logger.info(f"✅ Salary set to {target_salary} lakh")
+            # Save changes - WITH PROPER ERROR HANDLING
+            if self._click_save_button():
+                logger.info(f"✅ Headline successfully updated to: {new_headline[:50]}...")
                 return True
             else:
-                logger.error("❌ Could not find salary field")
+                logger.error("❌ Failed to save headline changes")
                 return False
             
         except Exception as e:
-            logger.error(f"❌ Salary toggle failed: {e}")
+            logger.error(f"❌ Headline update failed: {e}")
+            return False
+    
+    def _update_summary(self):
+        """Toggle fullstop at the end of summary with proper error handling"""
+        try:
+            logger.info("🎯 Updating summary...")
+            
+            # Click edit for Profile summary section
+            if not self._find_and_click_edit("Profile summary"):
+                # Try alternative text
+                if not self._find_and_click_edit("Summary"):
+                    logger.error("Could not open summary edit")
+                    return False
+            
+            time.sleep(2)
+            
+            # Find the summary field
+            summary_field = self._find_profile_field([
+                "summary",
+                "profileSummary",
+                "Summary",
+                "Profile summary"
+            ])
+            
+            if not summary_field:
+                logger.error("Could not find summary field")
+                return False
+            
+            # Get current summary
+            current_summary = summary_field.get_attribute('value') or summary_field.text
+            
+            # Toggle fullstop
+            if current_summary.rstrip().endswith('.'):
+                new_summary = current_summary.rstrip()[:-1]
+                logger.info("➖ Removing fullstop from summary")
+            else:
+                new_summary = current_summary.rstrip() + '.'
+                logger.info("➕ Adding fullstop to summary")
+            
+            # Update the field
+            summary_field.clear()
+            self._human_type(summary_field, new_summary)
+            time.sleep(1)
+            
+            # Save changes - WITH PROPER ERROR HANDLING
+            if self._click_save_button():
+                logger.info("✅ Summary successfully updated")
+                return True
+            else:
+                logger.error("❌ Failed to save summary changes")
+                return False
+            
+        except Exception as e:
+            logger.error(f"❌ Summary update failed: {e}")
+            return False
+    
+    def _update_skills(self):
+        """Update skills section with proper error handling"""
+        try:
+            logger.info("🎯 Updating skills...")
+            
+            # Click edit for Key skills section
+            if not self._find_and_click_edit("Key skills"):
+                # Try alternative text
+                if not self._find_and_click_edit("Skills"):
+                    logger.error("Could not open skills edit")
+                    return False
+            
+            time.sleep(3)
+            
+            # For skills, just opening and saving is enough to trigger an update
+            # The act of visiting the section counts as activity
+            
+            # Save changes - WITH PROPER ERROR HANDLING
+            if self._click_save_button():
+                logger.info("✅ Skills section successfully updated")
+                return True
+            else:
+                logger.error("❌ Failed to save skills changes")
+                return False
+            
+        except Exception as e:
+            logger.error(f"❌ Skills update failed: {e}")
             return False
     
     def run_profile_refresh(self):
@@ -713,14 +793,17 @@ class NaukriProfileRefresher:
             
             # Setup driver
             if not self.setup_driver():
+                logger.error("❌ Failed to setup driver")
                 return False
             
             # Login
             if not self.login_to_naukri():
+                logger.error("❌ Failed to login")
                 return False
             
             # Update profile
             if not self.update_profile():
+                logger.error("❌ Failed to update profile")
                 return False
             
             logger.info("🎉 Profile refresh completed successfully!")
@@ -755,8 +838,8 @@ class NaukriProfileRefresher:
 
 # Main execution
 if __name__ == "__main__":
-    print("🔄 Naukri Profile Refresher (CHROME VERSION)")
-    print("✅ Chrome WebDriver + CORRECT span.edit.icon selectors")
+    print("🔄 Naukri Profile Refresher (COMPLETE FIXED VERSION)")
+    print("✅ Improved save button detection + Better error handling")
     print("=" * 60)
     
     refresher = NaukriProfileRefresher()

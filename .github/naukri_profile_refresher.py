@@ -5,6 +5,13 @@ Naukri Profile Refresher - COMPLETE FIXED VERSION
 - Improved save button detection
 - Better error handling and reporting
 - Chrome WebDriver compatible with GitHub Actions
+- Skills update as fallback strategy for reliability
+
+SCHEDULE (GitHub Actions):
+- Runs every hour at :00 (e.g., 7:00, 8:00, 9:00...)
+- Active from 7:00 AM to 10:00 PM IST
+- Total: 16 automatic updates daily
+- Discord notifications on completion (requires DISCORD_WEBHOOK_URL secret)
 """
 
 import os
@@ -601,7 +608,7 @@ class NaukriProfileRefresher:
             pass
     
     def update_profile(self):
-        """Navigate to profile and make updates"""
+        """Navigate to profile and make updates with skills_update as fallback"""
         try:
             logger.info("📝 Navigating to profile edit page...")
             
@@ -635,11 +642,39 @@ class NaukriProfileRefresher:
                 logger.info(f"✅ Profile update successful using {strategy}")
                 return True
             else:
-                logger.error(f"❌ Strategy {strategy} failed completely")
-                return False
+                # FALLBACK TO SKILLS_UPDATE - the most reliable strategy
+                logger.warning(f"⚠️ Strategy {strategy} failed, trying fallback: skills_update")
+                
+                # Navigate back to profile if needed
+                if "profile" not in self.driver.current_url:
+                    self.driver.get('https://www.naukri.com/mnjuser/profile')
+                    time.sleep(3)
+                
+                # Try skills_update as fallback
+                fallback_success = self._update_skills()
+                
+                if fallback_success:
+                    # Still save the original strategy as "attempted" to maintain rotation
+                    self.save_last_strategy(strategy)
+                    logger.info(f"✅ Profile update successful using fallback (skills_update)")
+                    return True
+                else:
+                    logger.error(f"❌ Both {strategy} and fallback failed")
+                    return False
             
         except Exception as e:
             logger.error(f"❌ Profile update failed: {e}")
+            # Last ditch effort - try skills_update
+            try:
+                logger.info("🆘 Attempting emergency fallback to skills_update...")
+                if "profile" not in self.driver.current_url:
+                    self.driver.get('https://www.naukri.com/mnjuser/profile')
+                    time.sleep(3)
+                if self._update_skills():
+                    logger.info("✅ Emergency fallback successful!")
+                    return True
+            except:
+                pass
             return False
     
     def _update_headline(self):
@@ -786,13 +821,13 @@ class NaukriProfileRefresher:
             logger.error(f"❌ Skills update failed: {e}")
             return False
     
-    def run_profile_refresh(self):
+    def run_profile_refresh(self, debug_mode=False):
         """Main execution method"""
         try:
             logger.info("🚀 Starting Naukri Profile Refresh...")
             
             # Setup driver
-            if not self.setup_driver():
+            if not self.setup_driver(debug_mode=debug_mode):
                 logger.error("❌ Failed to setup driver")
                 return False
             
@@ -838,17 +873,25 @@ class NaukriProfileRefresher:
 
 # Main execution
 if __name__ == "__main__":
+    import sys
+    
     print("🔄 Naukri Profile Refresher (COMPLETE FIXED VERSION)")
-    print("✅ Improved save button detection + Better error handling")
+    print("✅ Enhanced debugging + Fast typing + Save button detection")
     print("=" * 60)
     
+    # Check for debug mode flag
+    debug_mode = "--debug" in sys.argv or "-d" in sys.argv
+    if debug_mode:
+        print("🔍 RUNNING IN DEBUG MODE (visible browser)")
+    
     refresher = NaukriProfileRefresher()
-    success = refresher.run_profile_refresh()
+    success = refresher.run_profile_refresh(debug_mode=debug_mode)
     
     if success:
         print("✅ Profile refresh completed successfully!")
     else:
         print("❌ Profile refresh failed - check logs above")
+        print("\n💡 TIP: Run with --debug flag to see the browser:")
+        print("   python naukri_profile_refresher.py --debug")
     
-    import sys
     sys.exit(0 if success else 1)

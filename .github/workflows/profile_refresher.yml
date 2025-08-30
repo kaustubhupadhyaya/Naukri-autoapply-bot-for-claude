@@ -2,8 +2,8 @@ name: Naukri Profile Refresh
 
 on:
   schedule:
-    # Run every hour from 9 AM to 9 PM IST (3:30 AM to 3:30 PM UTC)
-    - cron: '30 3-15 * * *'
+    # Run every hour from 7 AM to 10 PM IST (1:30 AM to 4:30 PM UTC)
+    - cron: '0 1-16 * * *'
   
   # Allow manual triggering for testing
   workflow_dispatch:
@@ -63,7 +63,7 @@ jobs:
         
     - name: Create config file from secrets
       run: |
-        cat > enhanced_config.json << EOF
+        cat > config.json << EOF
         {
           "credentials": {
             "email": "${{ secrets.NAUKRI_EMAIL }}",
@@ -80,9 +80,15 @@ jobs:
       id: refresh
       run: |
         echo "🚀 Starting profile refresh..."
-        python naukri_profile_refresher.py
-        echo "refresh_status=success" >> $GITHUB_OUTPUT
-      continue-on-error: true
+        if python .github/naukri_profile_refresher.py; then
+          echo "✅ Python script finished successfully."
+          echo "refresh_status=success" >> $GITHUB_OUTPUT
+        else
+          echo "❌ Python script failed."
+          echo "refresh_status=failed" >> $GITHUB_OUTPUT
+          exit 1 # Ensure the step fails if the script fails
+        fi
+      continue-on-error: true # This is still needed so the email step can run
       
     - name: Check refresh result
       run: |
@@ -113,11 +119,35 @@ jobs:
           echo "![Profile Refresh](https://img.shields.io/badge/Profile%20Refresh-Failed-red)" > refresh_status.md
         fi
         
-    - name: Notify on failure (optional)
-      if: failure()
-      run: |
-        echo "❌ Profile refresh failed at $(date)"
-        # Add notification logic here if needed (email, Discord webhook, etc.)
+    - name: Send Email Notification
+      if: always()
+      uses: dawidd6/action-send-mail@v3
+      with:
+        server_address: smtp.gmail.com
+        server_port: 465
+        secure: true
+        username: ${{ secrets.EMAIL_USERNAME }} # Requires email secret
+        password: ${{ secrets.EMAIL_PASSWORD }} # Requires email secret
+        subject: Naukri Profile Refresh - ${{ steps.refresh.outputs.refresh_status == 'success' && '✅ Success' || '❌ Failed' }}
+        to: ${{ secrets.NOTIFICATION_EMAIL }} # Requires email secret
+        from: GitHub Actions <${{ secrets.EMAIL_USERNAME }}> # Requires email secret
+        body: |
+          Naukri Profile Refresh Status Report
+          =====================================
+          
+          Status: ${{ steps.refresh.outputs.refresh_status == 'success' && 'SUCCESS ✅' || 'FAILED ❌' }}
+          Time: ${{ github.event.repository.updated_at }}
+          Repository: ${{ github.repository }}
+          Workflow: ${{ github.workflow }}
+          Run Number: ${{ github.run_number }}
+          
+          ${{ steps.refresh.outputs.refresh_status == 'success' && 'Your Naukri profile has been successfully updated!' || 'The profile refresh failed. Please check the GitHub Actions logs for details.' }}
+          
+          View Details: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          
+          ---
+          This is an automated notification from your Naukri Profile Refresher
+      continue-on-error: true
 
   # Fallback job in case main job fails
   fallback-refresh:
@@ -142,4 +172,34 @@ jobs:
         git add fallback_log.txt
         git diff --staged --quiet || git commit -m "Fallback refresh attempt - $(date)"
         git push || echo "No changes to push"
+      continue-on-error: true
+      
+    - name: Send Fallback Email Notification
+      if: always()
+      uses: dawidd6/action-send-mail@v3
+      with:
+        server_address: smtp.gmail.com
+        server_port: 465
+        secure: true
+        username: ${{ secrets.EMAIL_USERNAME }} # Requires email secret
+        password: ${{ secrets.EMAIL_PASSWORD }} # Requires email secret
+        subject: ⚠️ Naukri Profile Refresh - Fallback Triggered
+        to: ${{ secrets.NOTIFICATION_EMAIL }} # Requires email secret
+        from: GitHub Actions <${{ secrets.EMAIL_USERNAME }}> # Requires email secret
+        body: |
+          Naukri Profile Refresh - FALLBACK JOB TRIGGERED
+          ================================================
+          
+          The main refresh job failed, so the fallback job was triggered.
+          
+          Time: ${{ github.event.repository.updated_at }}
+          Repository: ${{ github.repository }}
+          
+          This usually means there was an issue with the main profile refresh.
+          Please check the logs for more details.
+          
+          View Details: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          
+          ---
+          This is an automated notification from your Naukri Profile Refresher
       continue-on-error: true

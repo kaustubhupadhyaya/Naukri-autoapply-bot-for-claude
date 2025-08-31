@@ -29,6 +29,14 @@ jobs:
         run: python .github/naukri_profile_refresher.py
         continue-on-error: true # Ensures the next step runs even if this one fails
 
+ # --- NEW STEP: UPLOAD SCREENSHOT IF SCRIPT FAILED ---
+      - name: Upload Screenshot on Failure
+        if: steps.refresh.outcome == 'failure'
+        uses: actions/upload-artifact@v3
+        with:
+          name: login-failure-screenshot
+          path: login_failure_screenshot.png
+
       - name: Send notification email
         if: always() # This condition ensures the email is sent on success or failure
         uses: dawidd6/action-send-mail@v3

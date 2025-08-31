@@ -1,4 +1,3 @@
-
 """
 Naukri Profile Refresher - COMPLETE FIXED VERSION
 - Text-based element finding for reliability

@@ -1,205 +1,48 @@
-name: Naukri Profile Refresh
+name: Run Python Script and Notify
 
 on:
   schedule:
-    # Run every hour from 7 AM to 10 PM IST (1:30 AM to 4:30 PM UTC)
-    - cron: '0 1-16 * * *'
-  
-  # Allow manual triggering for testing
-  workflow_dispatch:
-    inputs:
-      force_run:
-        description: 'Force run profile refresh'
-        required: false
-        default: 'false'
+    # Runs every 5 minutes
+    - cron: '*/5 * * * *'
+  workflow_dispatch: # Allows you to run it manually as well
 
 jobs:
-  refresh-profile:
+  build-and-notify:
     runs-on: ubuntu-latest
-    
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
-      
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.11'
-        
-    - name: Install system dependencies
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y \
-          wget \
-          curl \
-          unzip \
-          xvfb \
-          libnss3 \
-          libgconf-2-4 \
-          libxss1 \
-          libappindicator1 \
-          fonts-liberation \
-          libasound2 \
-          libatk-bridge2.0-0 \
-          libdrm2 \
-          libxcomposite1 \
-          libxdamage1 \
-          libxrandr2 \
-          libgbm1 \
-          libxkbcommon0 \
-          libgtk-3-0
-          
-    - name: Install Chrome
-      run: |
-        wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-        echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" | sudo tee /etc/apt/sources.list.d/google-chrome.list
-        sudo apt-get update
-        sudo apt-get install -y google-chrome-stable
-        
-    - name: Install Python dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install selenium webdriver-manager
-        
-    - name: Create config file from secrets
-      run: |
-        cat > config.json << EOF
-        {
-          "credentials": {
-            "email": "${{ secrets.NAUKRI_EMAIL }}",
-            "password": "${{ secrets.NAUKRI_PASSWORD }}"
-          },
-          "personal_info": {
-            "firstname": "${{ secrets.FIRSTNAME }}",
-            "lastname": "${{ secrets.LASTNAME }}"
-          }
-        }
-        EOF
-        
-    - name: Run profile refresh
-      id: refresh
-      run: |
-        echo "🚀 Starting profile refresh..."
-        if python .github/naukri_profile_refresher.py; then
-          echo "✅ Python script finished successfully."
-          echo "refresh_status=success" >> $GITHUB_OUTPUT
-        else
-          echo "❌ Python script failed."
-          echo "refresh_status=failed" >> $GITHUB_OUTPUT
-          exit 1 # Ensure the step fails if the script fails
-        fi
-      continue-on-error: true # This is still needed so the email step can run
-      
-    - name: Check refresh result
-      run: |
-        if [ -f "profile_refresh_log.json" ]; then
-          echo "✅ Profile refresh log found:"
-          cat profile_refresh_log.json
-        else
-          echo "❌ No refresh log found"
-        fi
-        
-    - name: Commit and push logs (if any)
-      run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        
-        if [ -f "profile_refresh_log.json" ] || [ -f "last_strategy.txt" ]; then
-          git add profile_refresh_log.json last_strategy.txt 2>/dev/null || true
-          git diff --staged --quiet || git commit -m "Update profile refresh logs - $(date)"
-          git push || echo "No changes to push"
-        fi
-      continue-on-error: true
-      
-    - name: Create status badge
-      run: |
-        if [ "${{ steps.refresh.outputs.refresh_status }}" = "success" ]; then
-          echo "![Profile Refresh](https://img.shields.io/badge/Profile%20Refresh-Success-green)" > refresh_status.md
-        else
-          echo "![Profile Refresh](https://img.shields.io/badge/Profile%20Refresh-Failed-red)" > refresh_status.md
-        fi
-        
-    - name: Send Email Notification
-      if: always()
-      uses: dawidd6/action-send-mail@v3
-      with:
-        server_address: smtp.gmail.com
-        server_port: 465
-        secure: true
-        username: ${{ secrets.EMAIL_USERNAME }} # Requires email secret
-        password: ${{ secrets.EMAIL_PASSWORD }} # Requires email secret
-        subject: Naukri Profile Refresh - ${{ steps.refresh.outputs.refresh_status == 'success' && '✅ Success' || '❌ Failed' }}
-        to: ${{ secrets.NOTIFICATION_EMAIL }} # Requires email secret
-        from: GitHub Actions <${{ secrets.EMAIL_USERNAME }}> # Requires email secret
-        body: |
-          Naukri Profile Refresh Status Report
-          =====================================
-          
-          Status: ${{ steps.refresh.outputs.refresh_status == 'success' && 'SUCCESS ✅' || 'FAILED ❌' }}
-          Time: ${{ github.event.repository.updated_at }}
-          Repository: ${{ github.repository }}
-          Workflow: ${{ github.workflow }}
-          Run Number: ${{ github.run_number }}
-          
-          ${{ steps.refresh.outputs.refresh_status == 'success' && 'Your Naukri profile has been successfully updated!' || 'The profile refresh failed. Please check the GitHub Actions logs for details.' }}
-          
-          View Details: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
-          
-          ---
-          This is an automated notification from your Naukri Profile Refresher
-      continue-on-error: true
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-  # Fallback job in case main job fails
-  fallback-refresh:
-    needs: refresh-profile
-    runs-on: ubuntu-latest
-    if: failure()
-    
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
-      
-    - name: Simple profile visit
-      run: |
-        echo "🔄 Running fallback profile refresh..."
-        # Could implement a simpler version or just log the attempt
-        echo "Fallback refresh attempted at $(date)" > fallback_log.txt
-        
-    - name: Commit fallback log
-      run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action Fallback"
-        git add fallback_log.txt
-        git diff --staged --quiet || git commit -m "Fallback refresh attempt - $(date)"
-        git push || echo "No changes to push"
-      continue-on-error: true
-      
-    - name: Send Fallback Email Notification
-      if: always()
-      uses: dawidd6/action-send-mail@v3
-      with:
-        server_address: smtp.gmail.com
-        server_port: 465
-        secure: true
-        username: ${{ secrets.EMAIL_USERNAME }} # Requires email secret
-        password: ${{ secrets.EMAIL_PASSWORD }} # Requires email secret
-        subject: ⚠️ Naukri Profile Refresh - Fallback Triggered
-        to: ${{ secrets.NOTIFICATION_EMAIL }} # Requires email secret
-        from: GitHub Actions <${{ secrets.EMAIL_USERNAME }}> # Requires email secret
-        body: |
-          Naukri Profile Refresh - FALLBACK JOB TRIGGERED
-          ================================================
-          
-          The main refresh job failed, so the fallback job was triggered.
-          
-          Time: ${{ github.event.repository.updated_at }}
-          Repository: ${{ github.repository }}
-          
-          This usually means there was an issue with the main profile refresh.
-          Please check the logs for more details.
-          
-          View Details: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
-          
-          ---
-          This is an automated notification from your Naukri Profile Refresher
-      continue-on-error: true
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          # FIXED: Added the required packages for your script
+          pip install selenium webdriver-manager
+
+      - name: Run Python script
+        id: script_step
+        run: python .github/naukri_profile_refresher.py
+        continue-on-error: true # Ensures the next step runs even if this one fails
+
+      - name: Send notification email
+        if: always() # This condition ensures the email is sent on success or failure
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          secure: true
+          username: ${{ secrets.EMAIL_USER }}
+          password: ${{ secrets.EMAIL_PASS }}
+          to: ${{ secrets.EMAIL_USER }} # Sends the email to your own address
+          from: GitHub Actions <${{ secrets.EMAIL_USER }}>
+          subject: "GitHub Action Run Result: ${{ job.status }}"
+          body: |
+            The job has completed with status: ${{ job.status }}.
+
+            View the full logs here:
+            ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}

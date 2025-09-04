@@ -74,7 +74,7 @@ class NaukriProfileRefresher:
                     'email': config['credentials']['email'],
                     'password': config['credentials']['password']
                 }
-                logger.info(f"✅ Loaded credentials from {config_file} (credentials structure)")
+                logger.info(f"Loaded credentials from {config_file} (credentials structure)")
             
             # Structure 2: "login"
             elif 'login' in config:
@@ -82,7 +82,7 @@ class NaukriProfileRefresher:
                     'email': config['login']['email'],
                     'password': config['login']['password']
                 }
-                logger.info(f"✅ Loaded credentials from {config_file} (login structure)")
+                logger.info(f"Loaded credentials from {config_file} (login structure)")
             
             # Structure 3: Direct email/password
             elif 'email' in config and 'password' in config:
@@ -90,7 +90,7 @@ class NaukriProfileRefresher:
                     'email': config['email'],
                     'password': config['password']
                 }
-                logger.info(f"✅ Loaded credentials from {config_file} (direct structure)")
+                logger.info(f"Loaded credentials from {config_file} (direct structure)")
             
             else:
                 raise ValueError("Could not find credentials in config file")
@@ -100,16 +100,16 @@ class NaukriProfileRefresher:
             return config
             
         except FileNotFoundError:
-            logger.error(f"❌ Config file '{config_file}' not found!")
+            logger.error(f"Config file '{config_file}' not found!")
             raise
         except Exception as e:
-            logger.error(f"❌ Config loading failed: {e}")
+            logger.error(f"Config loading failed: {e}")
             raise
     
     def setup_driver(self, debug_mode=False):
         """Setup Chrome WebDriver with improved settings"""
         try:
-            logger.info("🔧 Setting up Chrome WebDriver...")
+            logger.info("Setting up Chrome WebDriver...")
             
             options = webdriver.ChromeOptions()
             
@@ -141,7 +141,7 @@ class NaukriProfileRefresher:
             try:
                 service = ChromeService(ChromeDriverManager().install())
                 self.driver = webdriver.Chrome(service=service, options=options)
-                logger.info("✅ Chrome driver auto-download successful")
+                logger.info("Chrome driver auto-download successful")
             except Exception as e:
                 logger.warning(f"Auto-download failed: {e}")
                 # Try manual paths
@@ -156,30 +156,30 @@ class NaukriProfileRefresher:
                 driver_found = False
                 for path in manual_paths:
                     if os.path.exists(path):
-                        logger.info(f"🔄 Using manual path: {path}")
+                        logger.info(f"Using manual path: {path}")
                         service = ChromeService(path)
                         self.driver = webdriver.Chrome(service=service, options=options)
                         driver_found = True
                         break
                 
                 if not driver_found:
-                    logger.error("❌ No Chrome driver found!")
+                    logger.error("No Chrome driver found!")
                     return False
             
             self.driver.implicitly_wait(10)
             self.wait = WebDriverWait(self.driver, 20)
             
-            logger.info("✅ Chrome driver setup successful")
+            logger.info("Chrome driver setup successful")
             return True
             
         except Exception as e:
-            logger.error(f"❌ Chrome driver setup failed: {e}")
+            logger.error(f"Chrome driver setup failed: {e}")
             return False
     
     def login_to_naukri(self):
         """Login to Naukri using config credentials"""
         try:
-            logger.info("🔐 Logging into Naukri...")
+            logger.info("Logging into Naukri...")
             
             # Navigate to Naukri login
             self.driver.get('https://www.naukri.com/nlogin/login')
@@ -227,7 +227,7 @@ class NaukriProfileRefresher:
                         By.XPATH, "//input[contains(@placeholder, 'Email') or contains(@placeholder, 'email')]"
                     )
                 except:
-                    logger.error("❌ Could not find email field")
+                    logger.error("Could not find email field")
                     return False
             
             email_field.clear()
@@ -253,7 +253,7 @@ class NaukriProfileRefresher:
                 try:
                     password_field = self.driver.find_element(By.CSS_SELECTOR, "input[type='password']")
                 except:
-                    logger.error("❌ Could not find password field")
+                    logger.error("Could not find password field")
                     return False
             
             password_field.clear()
@@ -281,14 +281,14 @@ class NaukriProfileRefresher:
             
             # Check if login successful
             if "naukri.com/mnjuser" in self.driver.current_url or "homepage" in self.driver.current_url:
-                logger.info("✅ Login successful!")
+                logger.info("Login successful!")
                 return True
             else:
-                logger.warning("⚠️ Login may have issues - continuing anyway")
+                logger.warning("Login may have issues - continuing anyway")
                 return True
                 
         except Exception as e:
-            logger.error(f"❌ Login failed: {e}")
+            logger.error(f"Login failed: {e}")
             return False
     
     def _find_and_click_edit(self, section_text):
@@ -297,7 +297,7 @@ class NaukriProfileRefresher:
         This is more reliable than CSS selectors
         """
         try:
-            logger.info(f"🔍 Looking for '{section_text}' section...")
+            logger.info(f"Looking for '{section_text}' section...")
             
             # Strategy 1: Find heading text, then find edit icon in same container
             try:
@@ -329,13 +329,13 @@ class NaukriProfileRefresher:
                             # Try regular click first
                             try:
                                 edit_button.click()
-                                logger.info(f"✅ Clicked edit for '{section_text}'")
+                                logger.info(f"Clicked edit for '{section_text}'")
                                 time.sleep(2)
                                 return True
                             except:
                                 # If regular click fails, try JavaScript click
                                 self.driver.execute_script("arguments[0].click();", edit_button)
-                                logger.info(f"✅ JS clicked edit for '{section_text}'")
+                                logger.info(f"JS clicked edit for '{section_text}'")
                                 time.sleep(2)
                                 return True
                     except:
@@ -360,17 +360,17 @@ class NaukriProfileRefresher:
                             self.driver.execute_script("arguments[0].scrollIntoView(true);", edit_button)
                             time.sleep(1)
                             self.driver.execute_script("arguments[0].click();", edit_button)
-                            logger.info(f"✅ Found and clicked edit via class '{class_name}'")
+                            logger.info(f"Found and clicked edit via class '{class_name}'")
                             time.sleep(2)
                             return True
                     except:
                         continue
             
-            logger.error(f"❌ Could not find edit button for '{section_text}'")
+            logger.error(f"Could not find edit button for '{section_text}'")
             return False
             
         except Exception as e:
-            logger.error(f"❌ Error clicking edit for '{section_text}': {e}")
+            logger.error(f"Error clicking edit for '{section_text}': {e}")
             return False
     
     def _find_profile_field(self, field_identifiers):
@@ -428,12 +428,12 @@ class NaukriProfileRefresher:
         ENHANCED VERSION with debugging: Finds and clicks save button with extensive logging
         """
         try:
-            logger.info("🔍 Starting save button search...")
+            logger.info("Starting save button search...")
             
             # First, let's see ALL buttons on the page for debugging
             try:
                 all_buttons = self.driver.find_elements(By.TAG_NAME, "button")
-                logger.info(f"📊 Found {len(all_buttons)} total buttons on page")
+                logger.info(f"Found {len(all_buttons)} total buttons on page")
                 
                 # Log all visible button texts for debugging
                 for idx, btn in enumerate(all_buttons[:10]):  # Check first 10 buttons
@@ -496,7 +496,7 @@ class NaukriProfileRefresher:
                     
                     if save_button.is_displayed() and save_button.is_enabled():
                         btn_text = save_button.text or "no-text"
-                        logger.info(f"🎯 Found potential save button: '{btn_text}' with selector: {selector}")
+                        logger.info(f"Found potential save button: '{btn_text}' with selector: {selector}")
                         
                         # Try to click it
                         try:
@@ -505,7 +505,7 @@ class NaukriProfileRefresher:
                             # If regular click fails, use JavaScript
                             self.driver.execute_script("arguments[0].click();", save_button)
                         
-                        logger.info(f"✅ Successfully clicked save button: '{btn_text}'")
+                        logger.info(f"Successfully clicked save button: '{btn_text}'")
                         time.sleep(3)
                         return True
                         
@@ -515,7 +515,7 @@ class NaukriProfileRefresher:
                     continue
             
             # Ultra last resort - click ANY visible button that might be save
-            logger.warning("⚠️ Trying ultra last resort - any button that might be save...")
+            logger.warning("Trying ultra last resort - any button that might be save...")
             try:
                 buttons = self.driver.find_elements(By.TAG_NAME, "button")
                 for button in buttons:
@@ -530,9 +530,9 @@ class NaukriProfileRefresher:
                             
                             if any(keyword in btn_text for keyword in save_keywords) or \
                                any(keyword in btn_class for keyword in class_keywords):
-                                logger.info(f"🎲 Attempting to click button: '{button.text}'")
+                                logger.info(f"Attempting to click button: '{button.text}'")
                                 self.driver.execute_script("arguments[0].click();", button)
-                                logger.info(f"✅ Clicked button: '{button.text}'")
+                                logger.info(f"Clicked button: '{button.text}'")
                                 time.sleep(3)
                                 return True
                     except:
@@ -541,20 +541,20 @@ class NaukriProfileRefresher:
                 logger.error(f"Ultra last resort failed: {e}")
             
             # If we reach here, we couldn't find the save button
-            logger.error("❌ Could not find save button after trying all methods")
+            logger.error("Could not find save button after trying all methods")
             
             # Take a screenshot for debugging
             try:
                 screenshot_path = f"save_button_not_found_{datetime.now().strftime('%Y%m%d_%H%M%S')}.png"
                 self.driver.save_screenshot(screenshot_path)
-                logger.info(f"📸 Screenshot saved: {screenshot_path}")
+                logger.info(f"Screenshot saved: {screenshot_path}")
             except:
                 pass
             
             return False
             
         except Exception as e:
-            logger.error(f"❌ Critical error in save button function: {e}")
+            logger.error(f"Critical error in save button function: {e}")
             return False
     
     def _human_type(self, element, text):
@@ -609,7 +609,7 @@ class NaukriProfileRefresher:
     def update_profile(self):
         """Navigate to profile and make updates with skills_update as fallback"""
         try:
-            logger.info("📝 Navigating to profile edit page...")
+            logger.info("Navigating to profile edit page...")
             
             # Navigate to profile
             profile_urls = [
@@ -625,7 +625,7 @@ class NaukriProfileRefresher:
             
             # Get next strategy
             strategy = self.get_next_strategy()
-            logger.info(f"🔄 Using strategy: {strategy}")
+            logger.info(f"Using strategy: {strategy}")
             
             # Execute strategy
             success = False
@@ -638,11 +638,11 @@ class NaukriProfileRefresher:
             
             if success:
                 self.save_last_strategy(strategy)
-                logger.info(f"✅ Profile update successful using {strategy}")
+                logger.info(f"Profile update successful using {strategy}")
                 return True
             else:
                 # FALLBACK TO SKILLS_UPDATE - the most reliable strategy
-                logger.warning(f"⚠️ Strategy {strategy} failed, trying fallback: skills_update")
+                logger.warning(f"Strategy {strategy} failed, trying fallback: skills_update")
                 
                 # Navigate back to profile if needed
                 if "profile" not in self.driver.current_url:
@@ -655,22 +655,22 @@ class NaukriProfileRefresher:
                 if fallback_success:
                     # Still save the original strategy as "attempted" to maintain rotation
                     self.save_last_strategy(strategy)
-                    logger.info(f"✅ Profile update successful using fallback (skills_update)")
+                    logger.info(f"Profile update successful using fallback (skills_update)")
                     return True
                 else:
-                    logger.error(f"❌ Both {strategy} and fallback failed")
+                    logger.error(f"Both {strategy} and fallback failed")
                     return False
             
         except Exception as e:
-            logger.error(f"❌ Profile update failed: {e}")
+            logger.error(f"Profile update failed: {e}")
             # Last ditch effort - try skills_update
             try:
-                logger.info("🆘 Attempting emergency fallback to skills_update...")
+                logger.info("Attempting emergency fallback to skills_update...")
                 if "profile" not in self.driver.current_url:
                     self.driver.get('https://www.naukri.com/mnjuser/profile')
                     time.sleep(3)
                 if self._update_skills():
-                    logger.info("✅ Emergency fallback successful!")
+                    logger.info("Emergency fallback successful!")
                     return True
             except:
                 pass
@@ -679,7 +679,7 @@ class NaukriProfileRefresher:
     def _update_headline(self):
         """Toggle between two headline versions with proper error handling"""
         try:
-            logger.info("🎯 Updating headline...")
+            logger.info("Updating headline...")
             
             # Click edit for Resume headline section
             if not self._find_and_click_edit("Resume headline"):
@@ -727,20 +727,20 @@ class NaukriProfileRefresher:
             
             # Save changes - WITH PROPER ERROR HANDLING
             if self._click_save_button():
-                logger.info(f"✅ Headline successfully updated to: {new_headline[:50]}...")
+                logger.info(f"Headline successfully updated to: {new_headline[:50]}...")
                 return True
             else:
-                logger.error("❌ Failed to save headline changes")
+                logger.error("Failed to save headline changes")
                 return False
             
         except Exception as e:
-            logger.error(f"❌ Headline update failed: {e}")
+            logger.error(f"Headline update failed: {e}")
             return False
     
     def _update_summary(self):
         """Toggle fullstop at the end of summary with proper error handling"""
         try:
-            logger.info("🎯 Updating summary...")
+            logger.info("Updating summary...")
             
             # Click edit for Profile summary section
             if not self._find_and_click_edit("Profile summary"):
@@ -769,10 +769,10 @@ class NaukriProfileRefresher:
             # Toggle fullstop
             if current_summary.rstrip().endswith('.'):
                 new_summary = current_summary.rstrip()[:-1]
-                logger.info("➖ Removing fullstop from summary")
+                logger.info("Removing fullstop from summary")
             else:
                 new_summary = current_summary.rstrip() + '.'
-                logger.info("➕ Adding fullstop to summary")
+                logger.info("Adding fullstop to summary")
             
             # Update the field
             summary_field.clear()
@@ -781,20 +781,20 @@ class NaukriProfileRefresher:
             
             # Save changes - WITH PROPER ERROR HANDLING
             if self._click_save_button():
-                logger.info("✅ Summary successfully updated")
+                logger.info("Summary successfully updated")
                 return True
             else:
-                logger.error("❌ Failed to save summary changes")
+                logger.error("Failed to save summary changes")
                 return False
             
         except Exception as e:
-            logger.error(f"❌ Summary update failed: {e}")
+            logger.error(f"Summary update failed: {e}")
             return False
     
     def _update_skills(self):
         """Update skills section with proper error handling"""
         try:
-            logger.info("🎯 Updating skills...")
+            logger.info("Updating skills...")
             
             # Click edit for Key skills section
             if not self._find_and_click_edit("Key skills"):
@@ -810,37 +810,37 @@ class NaukriProfileRefresher:
             
             # Save changes - WITH PROPER ERROR HANDLING
             if self._click_save_button():
-                logger.info("✅ Skills section successfully updated")
+                logger.info("Skills section successfully updated")
                 return True
             else:
-                logger.error("❌ Failed to save skills changes")
+                logger.error("Failed to save skills changes")
                 return False
             
         except Exception as e:
-            logger.error(f"❌ Skills update failed: {e}")
+            logger.error(f"Skills update failed: {e}")
             return False
     
     def run_profile_refresh(self, debug_mode=False):
         """Main execution method"""
         try:
-            logger.info("🚀 Starting Naukri Profile Refresh...")
+            logger.info("Starting Naukri Profile Refresh...")
             
             # Setup driver
             if not self.setup_driver(debug_mode=debug_mode):
-                logger.error("❌ Failed to setup driver")
+                logger.error("Failed to setup driver")
                 return False
             
             # Login
             if not self.login_to_naukri():
-                logger.error("❌ Failed to login")
+                logger.error("Failed to login")
                 return False
             
             # Update profile
             if not self.update_profile():
-                logger.error("❌ Failed to update profile")
+                logger.error("Failed to update profile")
                 return False
             
-            logger.info("🎉 Profile refresh completed successfully!")
+            logger.info("Profile refresh completed successfully!")
             
             # Log session info
             self._log_session()
@@ -848,7 +848,7 @@ class NaukriProfileRefresher:
             return True
             
         except Exception as e:
-            logger.error(f"❌ Profile refresh failed: {e}")
+            logger.error(f"Profile refresh failed: {e}")
             return False
         
         finally:
@@ -874,23 +874,23 @@ class NaukriProfileRefresher:
 if __name__ == "__main__":
     import sys
     
-    print("🔄 Naukri Profile Refresher (COMPLETE FIXED VERSION)")
-    print("✅ Enhanced debugging + Fast typing + Save button detection")
+    print("Naukri Profile Refresher (COMPLETE FIXED VERSION)")
+    print("Enhanced debugging + Fast typing + Save button detection")
     print("=" * 60)
     
     # Check for debug mode flag
     debug_mode = "--debug" in sys.argv or "-d" in sys.argv
     if debug_mode:
-        print("🔍 RUNNING IN DEBUG MODE (visible browser)")
+        print("RUNNING IN DEBUG MODE (visible browser)")
     
     refresher = NaukriProfileRefresher()
     success = refresher.run_profile_refresh(debug_mode=debug_mode)
     
     if success:
-        print("✅ Profile refresh completed successfully!")
+        print("Profile refresh completed successfully!")
     else:
-        print("❌ Profile refresh failed - check logs above")
-        print("\n💡 TIP: Run with --debug flag to see the browser:")
+        print("Profile refresh failed - check logs above")
+        print("\nTIP: Run with --debug flag to see the browser:")
         print("   python naukri_profile_refresher.py --debug")
     
     sys.exit(0 if success else 1)

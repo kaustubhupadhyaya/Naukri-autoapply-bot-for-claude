@@ -47687,3 +47687,2126 @@ Stacktrace:
 2025-08-31 11:54:00,735 - INFO - 💾 Phase 4: Saving enhanced results...
 2025-08-31 11:54:00,743 - INFO - Enhanced results saved with timestamp: 20250831_115400
 2025-08-31 11:54:00,746 - INFO - 🎉 Enhanced Naukri Bot session completed successfully!
+2025-08-31 18:00:13,205 - INFO - 🚀 Starting Enhanced Naukri Bot with AI Intelligence...
+2025-08-31 18:00:13,205 - INFO - Configuration loaded successfully
+2025-08-31 18:00:13,232 - INFO - Job database initialized
+2025-08-31 18:00:13,232 - INFO - Bot initialized successfully
+2025-08-31 18:00:13,233 - INFO - Enhanced configuration loaded successfully
+2025-08-31 18:00:13,233 - INFO - Gemini API initialized successfully
+2025-08-31 18:00:14,906 - INFO - ✅ Gemini API connection test successful
+2025-08-31 18:00:14,922 - INFO - AI processor initialized successfully
+2025-08-31 18:00:14,922 - INFO - Enhanced Naukri Bot initialized successfully!
+2025-08-31 18:00:14,922 - INFO - 📡 Phase 1: Setting up browser...
+2025-08-31 18:00:14,922 - INFO - Setting up browser...
+2025-08-31 18:00:14,956 - INFO - Operating System: Windows-10-10.0.22000-SP0
+2025-08-31 18:00:14,989 - INFO - 🔄 Attempting automatic driver download...
+2025-08-31 18:00:15,009 - INFO - ====== WebDriver manager ======
+2025-08-31 18:00:17,553 - INFO - Get LATEST edgedriver version for Edge 139.0.3405
+2025-08-31 18:00:17,588 - WARNING - Webdriver manager failed: Could not reach host. Are you offline?
+2025-08-31 18:00:17,588 - WARNING - Driver setup method failed: Could not reach host. Are you offline?
+2025-08-31 18:00:17,588 - INFO - 🔄 Trying manual path: C:\WebDrivers\msedgedriver.exe
+2025-08-31 18:00:24,175 - INFO - ✅ Browser setup successful
+2025-08-31 18:00:24,177 - INFO - 🔐 Phase 2: Logging into Naukri...
+2025-08-31 18:00:24,178 - INFO - Login attempt 1/3
+2025-08-31 18:00:32,572 - INFO - ✅ Found email field with selector: #usernameField
+2025-08-31 18:00:40,411 - INFO - ✅ Found password field with selector: #passwordField
+2025-08-31 18:00:45,458 - INFO - ✅ Found login button with selector: //button[@type='submit']
+2025-08-31 18:00:51,639 - INFO - ✅ Login verified using: .nI-gNb-drawer__icon
+2025-08-31 18:00:51,640 - INFO - ✅ Login successful!
+2025-08-31 18:00:51,684 - INFO - ✅ Authentication verified using: Profile menu icon
+2025-08-31 18:00:51,685 - INFO - ✅ Authentication successful!
+2025-08-31 18:00:51,690 - INFO - 🧠 Phase 3: Starting AI-powered job processing...
+2025-08-31 18:00:51,718 - INFO - ✅ Authentication verified using: Profile menu icon
+2025-08-31 18:00:51,718 - INFO - 🎯 Starting AI-powered job processing (max 15 applications)
+2025-08-31 18:00:51,723 - INFO - 🔍 Processing keyword 1/4: Data Engineer
+2025-08-31 18:00:51,723 - INFO - Page 1/2: https://www.naukri.com/data-engineer-jobs-in-bengaluru-1
+2025-08-31 18:00:58,576 - INFO - Found 20 job cards on page
+2025-08-31 18:00:58,576 - INFO - 🔍 Processing job card 1/20
+2025-08-31 18:01:13,655 - WARNING - ⏰ Company extraction timeout
+2025-08-31 18:01:13,670 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 18:01:13,670 - INFO - ✅ Extracted: Data Engineer - SSIS and Tableau at Company Name
+2025-08-31 18:01:15,739 - INFO - 🤖 AI Analysis: Data Engineer - SSIS and Tableau scored 55/100
+2025-08-31 18:01:15,739 - INFO - ⏭️  SKIPPED: Data Engineer - SSIS and Tableau | Score: 55/100
+2025-08-31 18:01:18,499 - INFO - 🔍 Processing job card 2/20
+2025-08-31 18:01:33,574 - WARNING - ⏰ Company extraction timeout
+2025-08-31 18:01:33,605 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 18:01:33,620 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-08-31 18:01:35,791 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 18:01:35,791 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 18:01:38,474 - INFO - 🔍 Processing job card 3/20
+2025-08-31 18:01:53,549 - WARNING - ⏰ Company extraction timeout
+2025-08-31 18:01:53,549 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 18:01:53,565 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-08-31 18:01:53,565 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 18:01:53,565 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 18:01:55,944 - INFO - 🔍 Processing job card 4/20
+2025-08-31 18:02:11,024 - WARNING - ⏰ Company extraction timeout
+2025-08-31 18:02:11,047 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 18:02:11,047 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-08-31 18:02:11,047 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 18:02:11,047 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 18:02:13,988 - INFO - 🔍 Processing job card 5/20
+2025-08-31 18:02:29,081 - WARNING - ⏰ Company extraction timeout
+2025-08-31 18:02:29,128 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 18:02:29,144 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-08-31 18:02:29,144 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 18:02:29,144 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 18:02:32,913 - INFO - 🔍 Processing job card 6/20
+2025-08-31 18:02:47,957 - WARNING - ⏰ Company extraction timeout
+2025-08-31 18:02:47,979 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 18:02:47,994 - INFO - ✅ Extracted: Data Engineer at Arsr Technologies
+2025-08-31 18:02:50,107 - INFO - 🤖 AI Analysis: Data Engineer scored 70/100
+2025-08-31 18:02:50,107 - INFO - ⭐ HIGH SCORE JOB: Data Engineer | Score: 70/100
+2025-08-31 18:07:11,664 - INFO - ✅ Successfully applied to: Data Engineer
+2025-08-31 18:07:11,664 - INFO - ✅ Application #1 sent successfully!
+2025-08-31 18:07:15,377 - INFO - 🔍 Processing job card 7/20
+2025-08-31 18:07:15,422 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 18:07:15,422 - ERROR - ❌ Job data extraction failed after 0.0s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=139.0.3405.86); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff738a88c85+23461]
+	(No symbol) [0x0x7ff7389dcd70]
+	GetHandleVerifier [0x0x7ff738d00bb8+2611928]
+	(No symbol) [0x0x7ff7387c04d5]
+	(No symbol) [0x0x7ff7387bf12f]
+	(No symbol) [0x0x7ff7387c08db]
+	(No symbol) [0x0x7ff7387b42ca]
+	(No symbol) [0x0x7ff7387b271d]
+	(No symbol) [0x0x7ff7387b60ac]
+	(No symbol) [0x0x7ff7387b617f]
+	(No symbol) [0x0x7ff7387f4c96]
+	(No symbol) [0x0x7ff73881a6ba]
+	(No symbol) [0x0x7ff7387ef58d]
+	(No symbol) [0x0x7ff7387ef44d]
+	(No symbol) [0x0x7ff73881a980]
+	(No symbol) [0x0x7ff7387ef58d]
+	(No symbol) [0x0x7ff73883754f]
+	(No symbol) [0x0x7ff73881a423]
+	(No symbol) [0x0x7ff7387eea86]
+	(No symbol) [0x0x7ff7387edd11]
+	(No symbol) [0x0x7ff7387ee8b3]
+	(No symbol) [0x0x7ff7388ee6fd]
+	(No symbol) [0x0x7ff7388fba88]
+	GetHandleVerifier [0x0x7ff738b68acb+940523]
+	GetHandleVerifier [0x0x7ff738b71821+976705]
+	(No symbol) [0x0x7ff7389ea961]
+	(No symbol) [0x0x7ff7389e3344]
+	(No symbol) [0x0x7ff7389e3493]
+	(No symbol) [0x0x7ff7389d4f36]
+	BaseThreadInitThunk [0x0x7ffbbd7f53e0+16]
+	RtlUserThreadStart [0x0x7ffbbe0a485b+43]
+
+2025-08-31 18:07:15,422 - WARNING - ❌ Failed to extract data from card 7
+2025-08-31 18:07:15,422 - INFO - 🔍 Processing job card 8/20
+2025-08-31 18:07:15,453 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 18:07:15,453 - ERROR - ❌ Job data extraction failed after 0.0s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=139.0.3405.86); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff738a88c85+23461]
+	(No symbol) [0x0x7ff7389dcd70]
+	GetHandleVerifier [0x0x7ff738d00bb8+2611928]
+	(No symbol) [0x0x7ff7387c04d5]
+	(No symbol) [0x0x7ff7387bf12f]
+	(No symbol) [0x0x7ff7387c08db]
+	(No symbol) [0x0x7ff7387b42ca]
+	(No symbol) [0x0x7ff7387b271d]
+	(No symbol) [0x0x7ff7387b60ac]
+	(No symbol) [0x0x7ff7387b617f]
+	(No symbol) [0x0x7ff7387f4c96]
+	(No symbol) [0x0x7ff73881a6ba]
+	(No symbol) [0x0x7ff7387ef58d]
+	(No symbol) [0x0x7ff7387ef44d]
+	(No symbol) [0x0x7ff73881a980]
+	(No symbol) [0x0x7ff7387ef58d]
+	(No symbol) [0x0x7ff73883754f]
+	(No symbol) [0x0x7ff73881a423]
+	(No symbol) [0x0x7ff7387eea86]
+	(No symbol) [0x0x7ff7387edd11]
+	(No symbol) [0x0x7ff7387ee8b3]
+	(No symbol) [0x0x7ff7388ee6fd]
+	(No symbol) [0x0x7ff7388fba88]
+	GetHandleVerifier [0x0x7ff738b68acb+940523]
+	GetHandleVerifier [0x0x7ff738b71821+976705]
+	(No symbol) [0x0x7ff7389ea961]
+	(No symbol) [0x0x7ff7389e3344]
+	(No symbol) [0x0x7ff7389e3493]
+	(No symbol) [0x0x7ff7389d4f36]
+	BaseThreadInitThunk [0x0x7ffbbd7f53e0+16]
+	RtlUserThreadStart [0x0x7ffbbe0a485b+43]
+
+2025-08-31 18:07:15,453 - WARNING - ❌ Failed to extract data from card 8
+2025-08-31 18:07:15,453 - INFO - 🔍 Processing job card 9/20
+2025-08-31 18:07:15,509 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 18:07:15,513 - ERROR - ❌ Job data extraction failed after 0.1s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=139.0.3405.86); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff738a88c85+23461]
+	(No symbol) [0x0x7ff7389dcd70]
+	GetHandleVerifier [0x0x7ff738d00bb8+2611928]
+	(No symbol) [0x0x7ff7387c04d5]
+	(No symbol) [0x0x7ff7387bf12f]
+	(No symbol) [0x0x7ff7387c08db]
+	(No symbol) [0x0x7ff7387b42ca]
+	(No symbol) [0x0x7ff7387b271d]
+	(No symbol) [0x0x7ff7387b60ac]
+	(No symbol) [0x0x7ff7387b617f]
+	(No symbol) [0x0x7ff7387f4c96]
+	(No symbol) [0x0x7ff73881a6ba]
+	(No symbol) [0x0x7ff7387ef58d]
+	(No symbol) [0x0x7ff7387ef44d]
+	(No symbol) [0x0x7ff73881a980]
+	(No symbol) [0x0x7ff7387ef58d]
+	(No symbol) [0x0x7ff73883754f]
+	(No symbol) [0x0x7ff73881a423]
+	(No symbol) [0x0x7ff7387eea86]
+	(No symbol) [0x0x7ff7387edd11]
+	(No symbol) [0x0x7ff7387ee8b3]
+	(No symbol) [0x0x7ff7388ee6fd]
+	(No symbol) [0x0x7ff7388fba88]
+	GetHandleVerifier [0x0x7ff738b68acb+940523]
+	GetHandleVerifier [0x0x7ff738b71821+976705]
+	(No symbol) [0x0x7ff7389ea961]
+	(No symbol) [0x0x7ff7389e3344]
+	(No symbol) [0x0x7ff7389e3493]
+	(No symbol) [0x0x7ff7389d4f36]
+	BaseThreadInitThunk [0x0x7ffbbd7f53e0+16]
+	RtlUserThreadStart [0x0x7ffbbe0a485b+43]
+
+2025-08-31 18:07:15,517 - WARNING - ❌ Failed to extract data from card 9
+2025-08-31 18:07:15,518 - INFO - 🔍 Processing job card 10/20
+2025-08-31 18:07:15,564 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 18:07:15,568 - ERROR - ❌ Job data extraction failed after 0.0s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=139.0.3405.86); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff738a88c85+23461]
+	(No symbol) [0x0x7ff7389dcd70]
+	GetHandleVerifier [0x0x7ff738d00bb8+2611928]
+	(No symbol) [0x0x7ff7387c04d5]
+	(No symbol) [0x0x7ff7387bf12f]
+	(No symbol) [0x0x7ff7387c08db]
+	(No symbol) [0x0x7ff7387b42ca]
+	(No symbol) [0x0x7ff7387b271d]
+	(No symbol) [0x0x7ff7387b60ac]
+	(No symbol) [0x0x7ff7387b617f]
+	(No symbol) [0x0x7ff7387f4c96]
+	(No symbol) [0x0x7ff73881a6ba]
+	(No symbol) [0x0x7ff7387ef58d]
+	(No symbol) [0x0x7ff7387ef44d]
+	(No symbol) [0x0x7ff73881a980]
+	(No symbol) [0x0x7ff7387ef58d]
+	(No symbol) [0x0x7ff73883754f]
+	(No symbol) [0x0x7ff73881a423]
+	(No symbol) [0x0x7ff7387eea86]
+	(No symbol) [0x0x7ff7387edd11]
+	(No symbol) [0x0x7ff7387ee8b3]
+	(No symbol) [0x0x7ff7388ee6fd]
+	(No symbol) [0x0x7ff7388fba88]
+	GetHandleVerifier [0x0x7ff738b68acb+940523]
+	GetHandleVerifier [0x0x7ff738b71821+976705]
+	(No symbol) [0x0x7ff7389ea961]
+	(No symbol) [0x0x7ff7389e3344]
+	(No symbol) [0x0x7ff7389e3493]
+	(No symbol) [0x0x7ff7389d4f36]
+	BaseThreadInitThunk [0x0x7ffbbd7f53e0+16]
+	RtlUserThreadStart [0x0x7ffbbe0a485b+43]
+
+2025-08-31 18:07:15,570 - WARNING - ❌ Failed to extract data from card 10
+2025-08-31 18:07:15,570 - INFO - 🔍 Processing job card 11/20
+2025-08-31 18:07:15,658 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 18:07:15,658 - ERROR - ❌ Job data extraction failed after 0.1s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=139.0.3405.86); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff738a88c85+23461]
+	(No symbol) [0x0x7ff7389dcd70]
+	GetHandleVerifier [0x0x7ff738d00bb8+2611928]
+	(No symbol) [0x0x7ff7387c04d5]
+	(No symbol) [0x0x7ff7387bf12f]
+	(No symbol) [0x0x7ff7387c08db]
+	(No symbol) [0x0x7ff7387b42ca]
+	(No symbol) [0x0x7ff7387b271d]
+	(No symbol) [0x0x7ff7387b60ac]
+	(No symbol) [0x0x7ff7387b617f]
+	(No symbol) [0x0x7ff7387f4c96]
+	(No symbol) [0x0x7ff73881a6ba]
+	(No symbol) [0x0x7ff7387ef58d]
+	(No symbol) [0x0x7ff7387ef44d]
+	(No symbol) [0x0x7ff73881a980]
+	(No symbol) [0x0x7ff7387ef58d]
+	(No symbol) [0x0x7ff73883754f]
+	(No symbol) [0x0x7ff73881a423]
+	(No symbol) [0x0x7ff7387eea86]
+	(No symbol) [0x0x7ff7387edd11]
+	(No symbol) [0x0x7ff7387ee8b3]
+	(No symbol) [0x0x7ff7388ee6fd]
+	(No symbol) [0x0x7ff7388fba88]
+	GetHandleVerifier [0x0x7ff738b68acb+940523]
+	GetHandleVerifier [0x0x7ff738b71821+976705]
+	(No symbol) [0x0x7ff7389ea961]
+	(No symbol) [0x0x7ff7389e3344]
+	(No symbol) [0x0x7ff7389e3493]
+	(No symbol) [0x0x7ff7389d4f36]
+	BaseThreadInitThunk [0x0x7ffbbd7f53e0+16]
+	RtlUserThreadStart [0x0x7ffbbe0a485b+43]
+
+2025-08-31 18:07:15,671 - WARNING - ❌ Failed to extract data from card 11
+2025-08-31 18:07:15,674 - INFO - 🔍 Processing job card 12/20
+2025-08-31 18:07:15,893 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 18:07:15,893 - ERROR - ❌ Job data extraction failed after 0.2s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=139.0.3405.86); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff738a88c85+23461]
+	(No symbol) [0x0x7ff7389dcd70]
+	GetHandleVerifier [0x0x7ff738d00bb8+2611928]
+	(No symbol) [0x0x7ff7387c04d5]
+	(No symbol) [0x0x7ff7387bf12f]
+	(No symbol) [0x0x7ff7387c08db]
+	(No symbol) [0x0x7ff7387b42ca]
+	(No symbol) [0x0x7ff7387b271d]
+	(No symbol) [0x0x7ff7387b60ac]
+	(No symbol) [0x0x7ff7387b617f]
+	(No symbol) [0x0x7ff7387f4c96]
+	(No symbol) [0x0x7ff73881a6ba]
+	(No symbol) [0x0x7ff7387ef58d]
+	(No symbol) [0x0x7ff7387ef44d]
+	(No symbol) [0x0x7ff73881a980]
+	(No symbol) [0x0x7ff7387ef58d]
+	(No symbol) [0x0x7ff73883754f]
+	(No symbol) [0x0x7ff73881a423]
+	(No symbol) [0x0x7ff7387eea86]
+	(No symbol) [0x0x7ff7387edd11]
+	(No symbol) [0x0x7ff7387ee8b3]
+	(No symbol) [0x0x7ff7388ee6fd]
+	(No symbol) [0x0x7ff7388fba88]
+	GetHandleVerifier [0x0x7ff738b68acb+940523]
+	GetHandleVerifier [0x0x7ff738b71821+976705]
+	(No symbol) [0x0x7ff7389ea961]
+	(No symbol) [0x0x7ff7389e3344]
+	(No symbol) [0x0x7ff7389e3493]
+	(No symbol) [0x0x7ff7389d4f36]
+	BaseThreadInitThunk [0x0x7ffbbd7f53e0+16]
+	RtlUserThreadStart [0x0x7ffbbe0a485b+43]
+
+2025-08-31 18:07:15,893 - WARNING - ❌ Failed to extract data from card 12
+2025-08-31 18:07:15,893 - INFO - 🔍 Processing job card 13/20
+2025-08-31 18:07:15,989 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 18:07:16,005 - ERROR - ❌ Job data extraction failed after 0.1s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=139.0.3405.86); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff738a88c85+23461]
+	(No symbol) [0x0x7ff7389dcd70]
+	GetHandleVerifier [0x0x7ff738d00bb8+2611928]
+	(No symbol) [0x0x7ff7387c04d5]
+	(No symbol) [0x0x7ff7387bf12f]
+	(No symbol) [0x0x7ff7387c08db]
+	(No symbol) [0x0x7ff7387b42ca]
+	(No symbol) [0x0x7ff7387b271d]
+	(No symbol) [0x0x7ff7387b60ac]
+	(No symbol) [0x0x7ff7387b617f]
+	(No symbol) [0x0x7ff7387f4c96]
+	(No symbol) [0x0x7ff73881a6ba]
+	(No symbol) [0x0x7ff7387ef58d]
+	(No symbol) [0x0x7ff7387ef44d]
+	(No symbol) [0x0x7ff73881a980]
+	(No symbol) [0x0x7ff7387ef58d]
+	(No symbol) [0x0x7ff73883754f]
+	(No symbol) [0x0x7ff73881a423]
+	(No symbol) [0x0x7ff7387eea86]
+	(No symbol) [0x0x7ff7387edd11]
+	(No symbol) [0x0x7ff7387ee8b3]
+	(No symbol) [0x0x7ff7388ee6fd]
+	(No symbol) [0x0x7ff7388fba88]
+	GetHandleVerifier [0x0x7ff738b68acb+940523]
+	GetHandleVerifier [0x0x7ff738b71821+976705]
+	(No symbol) [0x0x7ff7389ea961]
+	(No symbol) [0x0x7ff7389e3344]
+	(No symbol) [0x0x7ff7389e3493]
+	(No symbol) [0x0x7ff7389d4f36]
+	BaseThreadInitThunk [0x0x7ffbbd7f53e0+16]
+	RtlUserThreadStart [0x0x7ffbbe0a485b+43]
+
+2025-08-31 18:07:16,005 - WARNING - ❌ Failed to extract data from card 13
+2025-08-31 18:07:16,005 - INFO - 🔍 Processing job card 14/20
+2025-08-31 18:07:16,132 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 18:07:16,132 - ERROR - ❌ Job data extraction failed after 0.1s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=139.0.3405.86); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff738a88c85+23461]
+	(No symbol) [0x0x7ff7389dcd70]
+	GetHandleVerifier [0x0x7ff738d00bb8+2611928]
+	(No symbol) [0x0x7ff7387c04d5]
+	(No symbol) [0x0x7ff7387bf12f]
+	(No symbol) [0x0x7ff7387c08db]
+	(No symbol) [0x0x7ff7387b42ca]
+	(No symbol) [0x0x7ff7387b271d]
+	(No symbol) [0x0x7ff7387b60ac]
+	(No symbol) [0x0x7ff7387b617f]
+	(No symbol) [0x0x7ff7387f4c96]
+	(No symbol) [0x0x7ff73881a6ba]
+	(No symbol) [0x0x7ff7387ef58d]
+	(No symbol) [0x0x7ff7387ef44d]
+	(No symbol) [0x0x7ff73881a980]
+	(No symbol) [0x0x7ff7387ef58d]
+	(No symbol) [0x0x7ff73883754f]
+	(No symbol) [0x0x7ff73881a423]
+	(No symbol) [0x0x7ff7387eea86]
+	(No symbol) [0x0x7ff7387edd11]
+	(No symbol) [0x0x7ff7387ee8b3]
+	(No symbol) [0x0x7ff7388ee6fd]
+	(No symbol) [0x0x7ff7388fba88]
+	GetHandleVerifier [0x0x7ff738b68acb+940523]
+	GetHandleVerifier [0x0x7ff738b71821+976705]
+	(No symbol) [0x0x7ff7389ea961]
+	(No symbol) [0x0x7ff7389e3344]
+	(No symbol) [0x0x7ff7389e3493]
+	(No symbol) [0x0x7ff7389d4f36]
+	BaseThreadInitThunk [0x0x7ffbbd7f53e0+16]
+	RtlUserThreadStart [0x0x7ffbbe0a485b+43]
+
+2025-08-31 18:07:16,132 - WARNING - ❌ Failed to extract data from card 14
+2025-08-31 18:07:16,132 - INFO - 🔍 Processing job card 15/20
+2025-08-31 18:07:16,189 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 18:07:16,190 - ERROR - ❌ Job data extraction failed after 0.1s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=139.0.3405.86); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff738a88c85+23461]
+	(No symbol) [0x0x7ff7389dcd70]
+	GetHandleVerifier [0x0x7ff738d00bb8+2611928]
+	(No symbol) [0x0x7ff7387c04d5]
+	(No symbol) [0x0x7ff7387bf12f]
+	(No symbol) [0x0x7ff7387c08db]
+	(No symbol) [0x0x7ff7387b42ca]
+	(No symbol) [0x0x7ff7387b271d]
+	(No symbol) [0x0x7ff7387b60ac]
+	(No symbol) [0x0x7ff7387b617f]
+	(No symbol) [0x0x7ff7387f4c96]
+	(No symbol) [0x0x7ff73881a6ba]
+	(No symbol) [0x0x7ff7387ef58d]
+	(No symbol) [0x0x7ff7387ef44d]
+	(No symbol) [0x0x7ff73881a980]
+	(No symbol) [0x0x7ff7387ef58d]
+	(No symbol) [0x0x7ff73883754f]
+	(No symbol) [0x0x7ff73881a423]
+	(No symbol) [0x0x7ff7387eea86]
+	(No symbol) [0x0x7ff7387edd11]
+	(No symbol) [0x0x7ff7387ee8b3]
+	(No symbol) [0x0x7ff7388ee6fd]
+	(No symbol) [0x0x7ff7388fba88]
+	GetHandleVerifier [0x0x7ff738b68acb+940523]
+	GetHandleVerifier [0x0x7ff738b71821+976705]
+	(No symbol) [0x0x7ff7389ea961]
+	(No symbol) [0x0x7ff7389e3344]
+	(No symbol) [0x0x7ff7389e3493]
+	(No symbol) [0x0x7ff7389d4f36]
+	BaseThreadInitThunk [0x0x7ffbbd7f53e0+16]
+	RtlUserThreadStart [0x0x7ffbbe0a485b+43]
+
+2025-08-31 18:07:16,190 - WARNING - ❌ Failed to extract data from card 15
+2025-08-31 18:07:16,190 - INFO - 🔍 Processing job card 16/20
+2025-08-31 18:07:16,222 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 18:07:16,222 - ERROR - ❌ Job data extraction failed after 0.0s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=139.0.3405.86); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff738a88c85+23461]
+	(No symbol) [0x0x7ff7389dcd70]
+	GetHandleVerifier [0x0x7ff738d00bb8+2611928]
+	(No symbol) [0x0x7ff7387c04d5]
+	(No symbol) [0x0x7ff7387bf12f]
+	(No symbol) [0x0x7ff7387c08db]
+	(No symbol) [0x0x7ff7387b42ca]
+	(No symbol) [0x0x7ff7387b271d]
+	(No symbol) [0x0x7ff7387b60ac]
+	(No symbol) [0x0x7ff7387b617f]
+	(No symbol) [0x0x7ff7387f4c96]
+	(No symbol) [0x0x7ff73881a6ba]
+	(No symbol) [0x0x7ff7387ef58d]
+	(No symbol) [0x0x7ff7387ef44d]
+	(No symbol) [0x0x7ff73881a980]
+	(No symbol) [0x0x7ff7387ef58d]
+	(No symbol) [0x0x7ff73883754f]
+	(No symbol) [0x0x7ff73881a423]
+	(No symbol) [0x0x7ff7387eea86]
+	(No symbol) [0x0x7ff7387edd11]
+	(No symbol) [0x0x7ff7387ee8b3]
+	(No symbol) [0x0x7ff7388ee6fd]
+	(No symbol) [0x0x7ff7388fba88]
+	GetHandleVerifier [0x0x7ff738b68acb+940523]
+	GetHandleVerifier [0x0x7ff738b71821+976705]
+	(No symbol) [0x0x7ff7389ea961]
+	(No symbol) [0x0x7ff7389e3344]
+	(No symbol) [0x0x7ff7389e3493]
+	(No symbol) [0x0x7ff7389d4f36]
+	BaseThreadInitThunk [0x0x7ffbbd7f53e0+16]
+	RtlUserThreadStart [0x0x7ffbbe0a485b+43]
+
+2025-08-31 18:07:16,222 - WARNING - ❌ Failed to extract data from card 16
+2025-08-31 18:07:16,222 - INFO - 🔍 Processing job card 17/20
+2025-08-31 18:07:16,253 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 18:07:16,253 - ERROR - ❌ Job data extraction failed after 0.0s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=139.0.3405.86); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff738a88c85+23461]
+	(No symbol) [0x0x7ff7389dcd70]
+	GetHandleVerifier [0x0x7ff738d00bb8+2611928]
+	(No symbol) [0x0x7ff7387c04d5]
+	(No symbol) [0x0x7ff7387bf12f]
+	(No symbol) [0x0x7ff7387c08db]
+	(No symbol) [0x0x7ff7387b42ca]
+	(No symbol) [0x0x7ff7387b271d]
+	(No symbol) [0x0x7ff7387b60ac]
+	(No symbol) [0x0x7ff7387b617f]
+	(No symbol) [0x0x7ff7387f4c96]
+	(No symbol) [0x0x7ff73881a6ba]
+	(No symbol) [0x0x7ff7387ef58d]
+	(No symbol) [0x0x7ff7387ef44d]
+	(No symbol) [0x0x7ff73881a980]
+	(No symbol) [0x0x7ff7387ef58d]
+	(No symbol) [0x0x7ff73883754f]
+	(No symbol) [0x0x7ff73881a423]
+	(No symbol) [0x0x7ff7387eea86]
+	(No symbol) [0x0x7ff7387edd11]
+	(No symbol) [0x0x7ff7387ee8b3]
+	(No symbol) [0x0x7ff7388ee6fd]
+	(No symbol) [0x0x7ff7388fba88]
+	GetHandleVerifier [0x0x7ff738b68acb+940523]
+	GetHandleVerifier [0x0x7ff738b71821+976705]
+	(No symbol) [0x0x7ff7389ea961]
+	(No symbol) [0x0x7ff7389e3344]
+	(No symbol) [0x0x7ff7389e3493]
+	(No symbol) [0x0x7ff7389d4f36]
+	BaseThreadInitThunk [0x0x7ffbbd7f53e0+16]
+	RtlUserThreadStart [0x0x7ffbbe0a485b+43]
+
+2025-08-31 18:07:16,253 - WARNING - ❌ Failed to extract data from card 17
+2025-08-31 18:07:16,253 - INFO - 🔍 Processing job card 18/20
+2025-08-31 18:07:16,290 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 18:07:16,293 - ERROR - ❌ Job data extraction failed after 0.0s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=139.0.3405.86); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff738a88c85+23461]
+	(No symbol) [0x0x7ff7389dcd70]
+	GetHandleVerifier [0x0x7ff738d00bb8+2611928]
+	(No symbol) [0x0x7ff7387c04d5]
+	(No symbol) [0x0x7ff7387bf12f]
+	(No symbol) [0x0x7ff7387c08db]
+	(No symbol) [0x0x7ff7387b42ca]
+	(No symbol) [0x0x7ff7387b271d]
+	(No symbol) [0x0x7ff7387b60ac]
+	(No symbol) [0x0x7ff7387b617f]
+	(No symbol) [0x0x7ff7387f4c96]
+	(No symbol) [0x0x7ff73881a6ba]
+	(No symbol) [0x0x7ff7387ef58d]
+	(No symbol) [0x0x7ff7387ef44d]
+	(No symbol) [0x0x7ff73881a980]
+	(No symbol) [0x0x7ff7387ef58d]
+	(No symbol) [0x0x7ff73883754f]
+	(No symbol) [0x0x7ff73881a423]
+	(No symbol) [0x0x7ff7387eea86]
+	(No symbol) [0x0x7ff7387edd11]
+	(No symbol) [0x0x7ff7387ee8b3]
+	(No symbol) [0x0x7ff7388ee6fd]
+	(No symbol) [0x0x7ff7388fba88]
+	GetHandleVerifier [0x0x7ff738b68acb+940523]
+	GetHandleVerifier [0x0x7ff738b71821+976705]
+	(No symbol) [0x0x7ff7389ea961]
+	(No symbol) [0x0x7ff7389e3344]
+	(No symbol) [0x0x7ff7389e3493]
+	(No symbol) [0x0x7ff7389d4f36]
+	BaseThreadInitThunk [0x0x7ffbbd7f53e0+16]
+	RtlUserThreadStart [0x0x7ffbbe0a485b+43]
+
+2025-08-31 18:07:16,293 - WARNING - ❌ Failed to extract data from card 18
+2025-08-31 18:07:16,293 - INFO - 🔍 Processing job card 19/20
+2025-08-31 18:07:16,315 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 18:07:16,315 - ERROR - ❌ Job data extraction failed after 0.0s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=139.0.3405.86); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff738a88c85+23461]
+	(No symbol) [0x0x7ff7389dcd70]
+	GetHandleVerifier [0x0x7ff738d00bb8+2611928]
+	(No symbol) [0x0x7ff7387c04d5]
+	(No symbol) [0x0x7ff7387bf12f]
+	(No symbol) [0x0x7ff7387c08db]
+	(No symbol) [0x0x7ff7387b42ca]
+	(No symbol) [0x0x7ff7387b271d]
+	(No symbol) [0x0x7ff7387b60ac]
+	(No symbol) [0x0x7ff7387b617f]
+	(No symbol) [0x0x7ff7387f4c96]
+	(No symbol) [0x0x7ff73881a6ba]
+	(No symbol) [0x0x7ff7387ef58d]
+	(No symbol) [0x0x7ff7387ef44d]
+	(No symbol) [0x0x7ff73881a980]
+	(No symbol) [0x0x7ff7387ef58d]
+	(No symbol) [0x0x7ff73883754f]
+	(No symbol) [0x0x7ff73881a423]
+	(No symbol) [0x0x7ff7387eea86]
+	(No symbol) [0x0x7ff7387edd11]
+	(No symbol) [0x0x7ff7387ee8b3]
+	(No symbol) [0x0x7ff7388ee6fd]
+	(No symbol) [0x0x7ff7388fba88]
+	GetHandleVerifier [0x0x7ff738b68acb+940523]
+	GetHandleVerifier [0x0x7ff738b71821+976705]
+	(No symbol) [0x0x7ff7389ea961]
+	(No symbol) [0x0x7ff7389e3344]
+	(No symbol) [0x0x7ff7389e3493]
+	(No symbol) [0x0x7ff7389d4f36]
+	BaseThreadInitThunk [0x0x7ffbbd7f53e0+16]
+	RtlUserThreadStart [0x0x7ffbbe0a485b+43]
+
+2025-08-31 18:07:16,315 - WARNING - ❌ Failed to extract data from card 19
+2025-08-31 18:07:16,315 - INFO - 🔍 Processing job card 20/20
+2025-08-31 18:07:16,347 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 18:07:16,362 - ERROR - ❌ Job data extraction failed after 0.0s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=139.0.3405.86); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff738a88c85+23461]
+	(No symbol) [0x0x7ff7389dcd70]
+	GetHandleVerifier [0x0x7ff738d00bb8+2611928]
+	(No symbol) [0x0x7ff7387c04d5]
+	(No symbol) [0x0x7ff7387bf12f]
+	(No symbol) [0x0x7ff7387c08db]
+	(No symbol) [0x0x7ff7387b42ca]
+	(No symbol) [0x0x7ff7387b271d]
+	(No symbol) [0x0x7ff7387b60ac]
+	(No symbol) [0x0x7ff7387b617f]
+	(No symbol) [0x0x7ff7387f4c96]
+	(No symbol) [0x0x7ff73881a6ba]
+	(No symbol) [0x0x7ff7387ef58d]
+	(No symbol) [0x0x7ff7387ef44d]
+	(No symbol) [0x0x7ff73881a980]
+	(No symbol) [0x0x7ff7387ef58d]
+	(No symbol) [0x0x7ff73883754f]
+	(No symbol) [0x0x7ff73881a423]
+	(No symbol) [0x0x7ff7387eea86]
+	(No symbol) [0x0x7ff7387edd11]
+	(No symbol) [0x0x7ff7387ee8b3]
+	(No symbol) [0x0x7ff7388ee6fd]
+	(No symbol) [0x0x7ff7388fba88]
+	GetHandleVerifier [0x0x7ff738b68acb+940523]
+	GetHandleVerifier [0x0x7ff738b71821+976705]
+	(No symbol) [0x0x7ff7389ea961]
+	(No symbol) [0x0x7ff7389e3344]
+	(No symbol) [0x0x7ff7389e3493]
+	(No symbol) [0x0x7ff7389d4f36]
+	BaseThreadInitThunk [0x0x7ffbbd7f53e0+16]
+	RtlUserThreadStart [0x0x7ffbbe0a485b+43]
+
+2025-08-31 18:07:16,362 - WARNING - ❌ Failed to extract data from card 20
+2025-08-31 18:07:16,362 - INFO - Page 2/2: https://www.naukri.com/data-engineer-jobs-in-bengaluru-2
+2025-08-31 18:07:22,334 - INFO - Found 20 job cards on page
+2025-08-31 18:07:22,334 - INFO - 🔍 Processing job card 1/20
+2025-08-31 18:07:37,430 - WARNING - ⏰ Company extraction timeout
+2025-08-31 18:07:37,445 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 18:07:37,461 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-08-31 18:07:37,461 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 18:07:37,461 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 18:07:40,893 - INFO - 🔍 Processing job card 2/20
+2025-08-31 18:07:55,978 - WARNING - ⏰ Company extraction timeout
+2025-08-31 18:07:56,009 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 18:07:56,038 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-08-31 18:07:56,038 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 18:07:56,038 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 18:08:00,005 - INFO - 🔍 Processing job card 3/20
+2025-08-31 18:08:15,085 - WARNING - ⏰ Company extraction timeout
+2025-08-31 18:08:15,101 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 18:08:15,125 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-08-31 18:08:15,126 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 18:08:15,126 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 18:08:18,407 - INFO - 🔍 Processing job card 4/20
+2025-08-31 18:08:33,458 - WARNING - ⏰ Company extraction timeout
+2025-08-31 18:08:33,474 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 18:08:33,490 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-08-31 18:08:33,490 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 18:08:33,490 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 18:08:35,737 - INFO - 🔍 Processing job card 5/20
+2025-08-31 18:08:50,774 - WARNING - ⏰ Company extraction timeout
+2025-08-31 18:08:50,805 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 18:08:50,852 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-08-31 18:08:50,852 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 18:08:50,852 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 18:08:52,951 - INFO - 🔍 Processing job card 6/20
+2025-08-31 18:09:08,033 - WARNING - ⏰ Company extraction timeout
+2025-08-31 18:09:08,049 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 18:09:08,065 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-08-31 18:09:08,065 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 18:09:08,065 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 18:09:10,281 - INFO - 🔍 Processing job card 7/20
+2025-08-31 18:09:25,375 - WARNING - ⏰ Company extraction timeout
+2025-08-31 18:09:25,407 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 18:09:25,422 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-08-31 18:09:25,422 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 18:09:25,422 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 18:09:29,334 - INFO - 🔍 Processing job card 8/20
+2025-08-31 18:09:44,410 - WARNING - ⏰ Company extraction timeout
+2025-08-31 18:09:44,426 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 18:09:44,457 - INFO - ✅ Extracted: Data Engineer- TIBCO BW at Company Name
+2025-08-31 18:09:47,296 - INFO - 🤖 AI Analysis: Data Engineer- TIBCO BW scored 55/100
+2025-08-31 18:09:47,296 - INFO - ⏭️  SKIPPED: Data Engineer- TIBCO BW | Score: 55/100
+2025-08-31 18:09:49,774 - INFO - 🔍 Processing job card 9/20
+2025-08-31 18:10:04,858 - WARNING - ⏰ Company extraction timeout
+2025-08-31 18:10:04,873 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 18:10:04,889 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-08-31 18:10:04,889 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 18:10:04,889 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 18:10:06,962 - INFO - 🔍 Processing job card 10/20
+2025-08-31 18:10:22,020 - WARNING - ⏰ Company extraction timeout
+2025-08-31 18:10:22,051 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 18:10:22,067 - INFO - ✅ Extracted: Data engineer - PL/SQL at Company Name
+2025-08-31 18:10:24,129 - INFO - 🤖 AI Analysis: Data engineer - PL/SQL scored 65/100
+2025-08-31 18:10:24,144 - INFO - ⏭️  SKIPPED: Data engineer - PL/SQL | Score: 65/100
+2025-08-31 18:10:26,520 - INFO - 🔍 Processing job card 11/20
+2025-08-31 18:10:41,596 - WARNING - ⏰ Company extraction timeout
+2025-08-31 18:10:41,612 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 18:10:41,627 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-08-31 18:10:41,627 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 18:10:41,627 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 18:10:44,709 - INFO - 🔍 Processing job card 12/20
+2025-08-31 18:10:59,751 - WARNING - ⏰ Company extraction timeout
+2025-08-31 18:10:59,766 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 18:10:59,782 - INFO - ✅ Extracted: Data Engineer (ETL, Go, Databricks) at Instinctools
+2025-08-31 18:11:01,949 - INFO - 🤖 AI Analysis: Data Engineer (ETL, Go, Databricks) scored 65/100
+2025-08-31 18:11:01,949 - INFO - ⏭️  SKIPPED: Data Engineer (ETL, Go, Databricks) | Score: 65/100
+2025-08-31 18:11:05,479 - INFO - 🔍 Processing job card 13/20
+2025-08-31 18:11:20,557 - WARNING - ⏰ Company extraction timeout
+2025-08-31 18:11:20,572 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 18:11:20,588 - INFO - ✅ Extracted: Data Engineer at Star4rall It Solutions
+2025-08-31 18:11:22,559 - INFO - 🤖 AI Analysis: Data Engineer scored 70/100
+2025-08-31 18:11:22,559 - INFO - ⭐ HIGH SCORE JOB: Data Engineer | Score: 70/100
+2025-08-31 18:15:47,245 - INFO - ✅ Successfully applied to: Data Engineer
+2025-08-31 18:15:47,247 - INFO - ✅ Application #2 sent successfully!
+2025-08-31 18:15:51,051 - INFO - 🔍 Processing job card 14/20
+2025-08-31 18:15:51,088 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 18:15:51,088 - ERROR - ❌ Job data extraction failed after 0.0s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=139.0.3405.86); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff738a88c85+23461]
+	(No symbol) [0x0x7ff7389dcd70]
+	GetHandleVerifier [0x0x7ff738d00bb8+2611928]
+	(No symbol) [0x0x7ff7387c04d5]
+	(No symbol) [0x0x7ff7387bf12f]
+	(No symbol) [0x0x7ff7387c08db]
+	(No symbol) [0x0x7ff7387b42ca]
+	(No symbol) [0x0x7ff7387b271d]
+	(No symbol) [0x0x7ff7387b60ac]
+	(No symbol) [0x0x7ff7387b617f]
+	(No symbol) [0x0x7ff7387f4c96]
+	(No symbol) [0x0x7ff73881a6ba]
+	(No symbol) [0x0x7ff7387ef58d]
+	(No symbol) [0x0x7ff7387ef44d]
+	(No symbol) [0x0x7ff73881a980]
+	(No symbol) [0x0x7ff7387ef58d]
+	(No symbol) [0x0x7ff73883754f]
+	(No symbol) [0x0x7ff73881a423]
+	(No symbol) [0x0x7ff7387eea86]
+	(No symbol) [0x0x7ff7387edd11]
+	(No symbol) [0x0x7ff7387ee8b3]
+	(No symbol) [0x0x7ff7388ee6fd]
+	(No symbol) [0x0x7ff7388fba88]
+	GetHandleVerifier [0x0x7ff738b68acb+940523]
+	GetHandleVerifier [0x0x7ff738b71821+976705]
+	(No symbol) [0x0x7ff7389ea961]
+	(No symbol) [0x0x7ff7389e3344]
+	(No symbol) [0x0x7ff7389e3493]
+	(No symbol) [0x0x7ff7389d4f36]
+	BaseThreadInitThunk [0x0x7ffbbd7f53e0+16]
+	RtlUserThreadStart [0x0x7ffbbe0a485b+43]
+
+2025-08-31 18:15:51,088 - WARNING - ❌ Failed to extract data from card 14
+2025-08-31 18:15:51,088 - INFO - 🔍 Processing job card 15/20
+2025-08-31 18:15:51,119 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 18:15:51,119 - ERROR - ❌ Job data extraction failed after 0.0s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=139.0.3405.86); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff738a88c85+23461]
+	(No symbol) [0x0x7ff7389dcd70]
+	GetHandleVerifier [0x0x7ff738d00bb8+2611928]
+	(No symbol) [0x0x7ff7387c04d5]
+	(No symbol) [0x0x7ff7387bf12f]
+	(No symbol) [0x0x7ff7387c08db]
+	(No symbol) [0x0x7ff7387b42ca]
+	(No symbol) [0x0x7ff7387b271d]
+	(No symbol) [0x0x7ff7387b60ac]
+	(No symbol) [0x0x7ff7387b617f]
+	(No symbol) [0x0x7ff7387f4c96]
+	(No symbol) [0x0x7ff73881a6ba]
+	(No symbol) [0x0x7ff7387ef58d]
+	(No symbol) [0x0x7ff7387ef44d]
+	(No symbol) [0x0x7ff73881a980]
+	(No symbol) [0x0x7ff7387ef58d]
+	(No symbol) [0x0x7ff73883754f]
+	(No symbol) [0x0x7ff73881a423]
+	(No symbol) [0x0x7ff7387eea86]
+	(No symbol) [0x0x7ff7387edd11]
+	(No symbol) [0x0x7ff7387ee8b3]
+	(No symbol) [0x0x7ff7388ee6fd]
+	(No symbol) [0x0x7ff7388fba88]
+	GetHandleVerifier [0x0x7ff738b68acb+940523]
+	GetHandleVerifier [0x0x7ff738b71821+976705]
+	(No symbol) [0x0x7ff7389ea961]
+	(No symbol) [0x0x7ff7389e3344]
+	(No symbol) [0x0x7ff7389e3493]
+	(No symbol) [0x0x7ff7389d4f36]
+	BaseThreadInitThunk [0x0x7ffbbd7f53e0+16]
+	RtlUserThreadStart [0x0x7ffbbe0a485b+43]
+
+2025-08-31 18:15:51,119 - WARNING - ❌ Failed to extract data from card 15
+2025-08-31 18:15:51,119 - INFO - 🔍 Processing job card 16/20
+2025-08-31 18:15:51,150 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 18:15:51,150 - ERROR - ❌ Job data extraction failed after 0.0s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=139.0.3405.86); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff738a88c85+23461]
+	(No symbol) [0x0x7ff7389dcd70]
+	GetHandleVerifier [0x0x7ff738d00bb8+2611928]
+	(No symbol) [0x0x7ff7387c04d5]
+	(No symbol) [0x0x7ff7387bf12f]
+	(No symbol) [0x0x7ff7387c08db]
+	(No symbol) [0x0x7ff7387b42ca]
+	(No symbol) [0x0x7ff7387b271d]
+	(No symbol) [0x0x7ff7387b60ac]
+	(No symbol) [0x0x7ff7387b617f]
+	(No symbol) [0x0x7ff7387f4c96]
+	(No symbol) [0x0x7ff73881a6ba]
+	(No symbol) [0x0x7ff7387ef58d]
+	(No symbol) [0x0x7ff7387ef44d]
+	(No symbol) [0x0x7ff73881a980]
+	(No symbol) [0x0x7ff7387ef58d]
+	(No symbol) [0x0x7ff73883754f]
+	(No symbol) [0x0x7ff73881a423]
+	(No symbol) [0x0x7ff7387eea86]
+	(No symbol) [0x0x7ff7387edd11]
+	(No symbol) [0x0x7ff7387ee8b3]
+	(No symbol) [0x0x7ff7388ee6fd]
+	(No symbol) [0x0x7ff7388fba88]
+	GetHandleVerifier [0x0x7ff738b68acb+940523]
+	GetHandleVerifier [0x0x7ff738b71821+976705]
+	(No symbol) [0x0x7ff7389ea961]
+	(No symbol) [0x0x7ff7389e3344]
+	(No symbol) [0x0x7ff7389e3493]
+	(No symbol) [0x0x7ff7389d4f36]
+	BaseThreadInitThunk [0x0x7ffbbd7f53e0+16]
+	RtlUserThreadStart [0x0x7ffbbe0a485b+43]
+
+2025-08-31 18:15:51,150 - WARNING - ❌ Failed to extract data from card 16
+2025-08-31 18:15:51,150 - INFO - 🔍 Processing job card 17/20
+2025-08-31 18:15:51,166 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 18:15:51,182 - ERROR - ❌ Job data extraction failed after 0.0s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=139.0.3405.86); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff738a88c85+23461]
+	(No symbol) [0x0x7ff7389dcd70]
+	GetHandleVerifier [0x0x7ff738d00bb8+2611928]
+	(No symbol) [0x0x7ff7387c04d5]
+	(No symbol) [0x0x7ff7387bf12f]
+	(No symbol) [0x0x7ff7387c08db]
+	(No symbol) [0x0x7ff7387b42ca]
+	(No symbol) [0x0x7ff7387b271d]
+	(No symbol) [0x0x7ff7387b60ac]
+	(No symbol) [0x0x7ff7387b617f]
+	(No symbol) [0x0x7ff7387f4c96]
+	(No symbol) [0x0x7ff73881a6ba]
+	(No symbol) [0x0x7ff7387ef58d]
+	(No symbol) [0x0x7ff7387ef44d]
+	(No symbol) [0x0x7ff73881a980]
+	(No symbol) [0x0x7ff7387ef58d]
+	(No symbol) [0x0x7ff73883754f]
+	(No symbol) [0x0x7ff73881a423]
+	(No symbol) [0x0x7ff7387eea86]
+	(No symbol) [0x0x7ff7387edd11]
+	(No symbol) [0x0x7ff7387ee8b3]
+	(No symbol) [0x0x7ff7388ee6fd]
+	(No symbol) [0x0x7ff7388fba88]
+	GetHandleVerifier [0x0x7ff738b68acb+940523]
+	GetHandleVerifier [0x0x7ff738b71821+976705]
+	(No symbol) [0x0x7ff7389ea961]
+	(No symbol) [0x0x7ff7389e3344]
+	(No symbol) [0x0x7ff7389e3493]
+	(No symbol) [0x0x7ff7389d4f36]
+	BaseThreadInitThunk [0x0x7ffbbd7f53e0+16]
+	RtlUserThreadStart [0x0x7ffbbe0a485b+43]
+
+2025-08-31 18:15:51,182 - WARNING - ❌ Failed to extract data from card 17
+2025-08-31 18:15:51,182 - INFO - 🔍 Processing job card 18/20
+2025-08-31 18:15:51,213 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 18:15:51,213 - ERROR - ❌ Job data extraction failed after 0.0s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=139.0.3405.86); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff738a88c85+23461]
+	(No symbol) [0x0x7ff7389dcd70]
+	GetHandleVerifier [0x0x7ff738d00bb8+2611928]
+	(No symbol) [0x0x7ff7387c04d5]
+	(No symbol) [0x0x7ff7387bf12f]
+	(No symbol) [0x0x7ff7387c08db]
+	(No symbol) [0x0x7ff7387b42ca]
+	(No symbol) [0x0x7ff7387b271d]
+	(No symbol) [0x0x7ff7387b60ac]
+	(No symbol) [0x0x7ff7387b617f]
+	(No symbol) [0x0x7ff7387f4c96]
+	(No symbol) [0x0x7ff73881a6ba]
+	(No symbol) [0x0x7ff7387ef58d]
+	(No symbol) [0x0x7ff7387ef44d]
+	(No symbol) [0x0x7ff73881a980]
+	(No symbol) [0x0x7ff7387ef58d]
+	(No symbol) [0x0x7ff73883754f]
+	(No symbol) [0x0x7ff73881a423]
+	(No symbol) [0x0x7ff7387eea86]
+	(No symbol) [0x0x7ff7387edd11]
+	(No symbol) [0x0x7ff7387ee8b3]
+	(No symbol) [0x0x7ff7388ee6fd]
+	(No symbol) [0x0x7ff7388fba88]
+	GetHandleVerifier [0x0x7ff738b68acb+940523]
+	GetHandleVerifier [0x0x7ff738b71821+976705]
+	(No symbol) [0x0x7ff7389ea961]
+	(No symbol) [0x0x7ff7389e3344]
+	(No symbol) [0x0x7ff7389e3493]
+	(No symbol) [0x0x7ff7389d4f36]
+	BaseThreadInitThunk [0x0x7ffbbd7f53e0+16]
+	RtlUserThreadStart [0x0x7ffbbe0a485b+43]
+
+2025-08-31 18:15:51,213 - WARNING - ❌ Failed to extract data from card 18
+2025-08-31 18:15:51,213 - INFO - 🔍 Processing job card 19/20
+2025-08-31 18:15:51,260 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 18:15:51,275 - ERROR - ❌ Job data extraction failed after 0.1s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=139.0.3405.86); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff738a88c85+23461]
+	(No symbol) [0x0x7ff7389dcd70]
+	GetHandleVerifier [0x0x7ff738d00bb8+2611928]
+	(No symbol) [0x0x7ff7387c04d5]
+	(No symbol) [0x0x7ff7387bf12f]
+	(No symbol) [0x0x7ff7387c08db]
+	(No symbol) [0x0x7ff7387b42ca]
+	(No symbol) [0x0x7ff7387b271d]
+	(No symbol) [0x0x7ff7387b60ac]
+	(No symbol) [0x0x7ff7387b617f]
+	(No symbol) [0x0x7ff7387f4c96]
+	(No symbol) [0x0x7ff73881a6ba]
+	(No symbol) [0x0x7ff7387ef58d]
+	(No symbol) [0x0x7ff7387ef44d]
+	(No symbol) [0x0x7ff73881a980]
+	(No symbol) [0x0x7ff7387ef58d]
+	(No symbol) [0x0x7ff73883754f]
+	(No symbol) [0x0x7ff73881a423]
+	(No symbol) [0x0x7ff7387eea86]
+	(No symbol) [0x0x7ff7387edd11]
+	(No symbol) [0x0x7ff7387ee8b3]
+	(No symbol) [0x0x7ff7388ee6fd]
+	(No symbol) [0x0x7ff7388fba88]
+	GetHandleVerifier [0x0x7ff738b68acb+940523]
+	GetHandleVerifier [0x0x7ff738b71821+976705]
+	(No symbol) [0x0x7ff7389ea961]
+	(No symbol) [0x0x7ff7389e3344]
+	(No symbol) [0x0x7ff7389e3493]
+	(No symbol) [0x0x7ff7389d4f36]
+	BaseThreadInitThunk [0x0x7ffbbd7f53e0+16]
+	RtlUserThreadStart [0x0x7ffbbe0a485b+43]
+
+2025-08-31 18:15:51,275 - WARNING - ❌ Failed to extract data from card 19
+2025-08-31 18:15:51,275 - INFO - 🔍 Processing job card 20/20
+2025-08-31 18:15:51,322 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 18:15:51,322 - ERROR - ❌ Job data extraction failed after 0.0s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=139.0.3405.86); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff738a88c85+23461]
+	(No symbol) [0x0x7ff7389dcd70]
+	GetHandleVerifier [0x0x7ff738d00bb8+2611928]
+	(No symbol) [0x0x7ff7387c04d5]
+	(No symbol) [0x0x7ff7387bf12f]
+	(No symbol) [0x0x7ff7387c08db]
+	(No symbol) [0x0x7ff7387b42ca]
+	(No symbol) [0x0x7ff7387b271d]
+	(No symbol) [0x0x7ff7387b60ac]
+	(No symbol) [0x0x7ff7387b617f]
+	(No symbol) [0x0x7ff7387f4c96]
+	(No symbol) [0x0x7ff73881a6ba]
+	(No symbol) [0x0x7ff7387ef58d]
+	(No symbol) [0x0x7ff7387ef44d]
+	(No symbol) [0x0x7ff73881a980]
+	(No symbol) [0x0x7ff7387ef58d]
+	(No symbol) [0x0x7ff73883754f]
+	(No symbol) [0x0x7ff73881a423]
+	(No symbol) [0x0x7ff7387eea86]
+	(No symbol) [0x0x7ff7387edd11]
+	(No symbol) [0x0x7ff7387ee8b3]
+	(No symbol) [0x0x7ff7388ee6fd]
+	(No symbol) [0x0x7ff7388fba88]
+	GetHandleVerifier [0x0x7ff738b68acb+940523]
+	GetHandleVerifier [0x0x7ff738b71821+976705]
+	(No symbol) [0x0x7ff7389ea961]
+	(No symbol) [0x0x7ff7389e3344]
+	(No symbol) [0x0x7ff7389e3493]
+	(No symbol) [0x0x7ff7389d4f36]
+	BaseThreadInitThunk [0x0x7ffbbd7f53e0+16]
+	RtlUserThreadStart [0x0x7ffbbe0a485b+43]
+
+2025-08-31 18:15:51,322 - WARNING - ❌ Failed to extract data from card 20
+2025-08-31 18:15:51,322 - INFO - 🔍 Processing keyword 2/4: Python Developer
+2025-08-31 18:15:51,322 - INFO - Page 1/2: https://www.naukri.com/python-developer-jobs-in-bengaluru-1
+2025-08-31 18:44:40,688 - ERROR - Error on page 1 for keyword 'Python Developer': Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: unable to send message to renderer
+  (Session info: MicrosoftEdge=139.0.3405.86); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff738a88c85+23461]
+	(No symbol) [0x0x7ff7389dcd70]
+	GetHandleVerifier [0x0x7ff738d00bb8+2611928]
+	(No symbol) [0x0x7ff73879d471]
+	(No symbol) [0x0x7ff73879d3dc]
+	(No symbol) [0x0x7ff73879bf52]
+	(No symbol) [0x0x7ff73879c86f]
+	(No symbol) [0x0x7ff7387b1a18]
+	(No symbol) [0x0x7ff7387b230e]
+	(No symbol) [0x0x7ff7387b60ac]
+	(No symbol) [0x0x7ff7387b617f]
+	(No symbol) [0x0x7ff7387f8d2b]
+	(No symbol) [0x0x7ff7387f946b]
+	(No symbol) [0x0x7ff738839a67]
+	(No symbol) [0x0x7ff73881a6ff]
+	(No symbol) [0x0x7ff7387ef58d]
+	(No symbol) [0x0x7ff73883754f]
+	(No symbol) [0x0x7ff73881a423]
+	(No symbol) [0x0x7ff7387eea86]
+	(No symbol) [0x0x7ff7387edd11]
+	(No symbol) [0x0x7ff7387ee8b3]
+	(No symbol) [0x0x7ff7388ee6fd]
+	(No symbol) [0x0x7ff7388fba88]
+	GetHandleVerifier [0x0x7ff738b68acb+940523]
+	GetHandleVerifier [0x0x7ff738b71821+976705]
+	(No symbol) [0x0x7ff7389ea961]
+	(No symbol) [0x0x7ff7389e3344]
+	(No symbol) [0x0x7ff7389e3493]
+	(No symbol) [0x0x7ff7389d4f36]
+	BaseThreadInitThunk [0x0x7ffbbd7f53e0+16]
+	RtlUserThreadStart [0x0x7ffbbe0a485b+43]
+
+2025-08-31 18:44:41,020 - INFO - Page 2/2: https://www.naukri.com/python-developer-jobs-in-bengaluru-2
+2025-08-31 18:44:43,065 - ERROR - Error on page 2 for keyword 'Python Developer': Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff738a88c85+23461]
+	(No symbol) [0x0x7ff7389dcd70]
+	(No symbol) [0x0x7ff7387ace40]
+	(No symbol) [0x0x7ff7387ed473]
+	(No symbol) [0x0x7ff73881a582]
+	(No symbol) [0x0x7ff7387c5c7b]
+	(No symbol) [0x0x7ff738817195]
+	(No symbol) [0x0x7ff7388168aa]
+	(No symbol) [0x0x7ff738782c75]
+	(No symbol) [0x0x7ff7388ee6fd]
+	(No symbol) [0x0x7ff7388fba88]
+	GetHandleVerifier [0x0x7ff738b68acb+940523]
+	GetHandleVerifier [0x0x7ff738b71821+976705]
+	(No symbol) [0x0x7ff7389ea961]
+	(No symbol) [0x0x7ff7387817a7]
+	GetHandleVerifier [0x0x7ff738cb62d8+2306552]
+	BaseThreadInitThunk [0x0x7ffbbd7f53e0+16]
+	RtlUserThreadStart [0x0x7ffbbe0a485b+43]
+
+2025-08-31 18:44:43,066 - INFO - 🔍 Processing keyword 3/4: ETL Developer
+2025-08-31 18:44:43,067 - INFO - Page 1/2: https://www.naukri.com/etl-developer-jobs-in-bengaluru-1
+2025-08-31 18:44:43,069 - ERROR - Error on page 1 for keyword 'ETL Developer': Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff738a88c85+23461]
+	(No symbol) [0x0x7ff7389dcd70]
+	(No symbol) [0x0x7ff7387ace40]
+	(No symbol) [0x0x7ff7387ed473]
+	(No symbol) [0x0x7ff73881a582]
+	(No symbol) [0x0x7ff7387c5c7b]
+	(No symbol) [0x0x7ff738817195]
+	(No symbol) [0x0x7ff7388168aa]
+	(No symbol) [0x0x7ff738782c75]
+	(No symbol) [0x0x7ff7388ee6fd]
+	(No symbol) [0x0x7ff7388fba88]
+	GetHandleVerifier [0x0x7ff738b68acb+940523]
+	GetHandleVerifier [0x0x7ff738b71821+976705]
+	(No symbol) [0x0x7ff7389ea961]
+	(No symbol) [0x0x7ff7387817a7]
+	GetHandleVerifier [0x0x7ff738cb62d8+2306552]
+	BaseThreadInitThunk [0x0x7ffbbd7f53e0+16]
+	RtlUserThreadStart [0x0x7ffbbe0a485b+43]
+
+2025-08-31 18:44:43,069 - INFO - Page 2/2: https://www.naukri.com/etl-developer-jobs-in-bengaluru-2
+2025-08-31 18:44:43,070 - ERROR - Error on page 2 for keyword 'ETL Developer': Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff738a88c85+23461]
+	(No symbol) [0x0x7ff7389dcd70]
+	(No symbol) [0x0x7ff7387ace40]
+	(No symbol) [0x0x7ff7387ed473]
+	(No symbol) [0x0x7ff73881a582]
+	(No symbol) [0x0x7ff7387c5c7b]
+	(No symbol) [0x0x7ff738817195]
+	(No symbol) [0x0x7ff7388168aa]
+	(No symbol) [0x0x7ff738782c75]
+	(No symbol) [0x0x7ff7388ee6fd]
+	(No symbol) [0x0x7ff7388fba88]
+	GetHandleVerifier [0x0x7ff738b68acb+940523]
+	GetHandleVerifier [0x0x7ff738b71821+976705]
+	(No symbol) [0x0x7ff7389ea961]
+	(No symbol) [0x0x7ff7387817a7]
+	GetHandleVerifier [0x0x7ff738cb62d8+2306552]
+	BaseThreadInitThunk [0x0x7ffbbd7f53e0+16]
+	RtlUserThreadStart [0x0x7ffbbe0a485b+43]
+
+2025-08-31 18:44:43,071 - INFO - 🔍 Processing keyword 4/4: Analytics Engineer
+2025-08-31 18:44:43,071 - INFO - Page 1/2: https://www.naukri.com/analytics-engineer-jobs-in-bengaluru-1
+2025-08-31 18:44:43,072 - ERROR - Error on page 1 for keyword 'Analytics Engineer': Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff738a88c85+23461]
+	(No symbol) [0x0x7ff7389dcd70]
+	(No symbol) [0x0x7ff7387ace40]
+	(No symbol) [0x0x7ff7387ed473]
+	(No symbol) [0x0x7ff73881a582]
+	(No symbol) [0x0x7ff7387c5c7b]
+	(No symbol) [0x0x7ff738817195]
+	(No symbol) [0x0x7ff7388168aa]
+	(No symbol) [0x0x7ff738782c75]
+	(No symbol) [0x0x7ff7388ee6fd]
+	(No symbol) [0x0x7ff7388fba88]
+	GetHandleVerifier [0x0x7ff738b68acb+940523]
+	GetHandleVerifier [0x0x7ff738b71821+976705]
+	(No symbol) [0x0x7ff7389ea961]
+	(No symbol) [0x0x7ff7387817a7]
+	GetHandleVerifier [0x0x7ff738cb62d8+2306552]
+	BaseThreadInitThunk [0x0x7ffbbd7f53e0+16]
+	RtlUserThreadStart [0x0x7ffbbe0a485b+43]
+
+2025-08-31 18:44:43,074 - INFO - Page 2/2: https://www.naukri.com/analytics-engineer-jobs-in-bengaluru-2
+2025-08-31 18:44:43,075 - ERROR - Error on page 2 for keyword 'Analytics Engineer': Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff738a88c85+23461]
+	(No symbol) [0x0x7ff7389dcd70]
+	(No symbol) [0x0x7ff7387ace40]
+	(No symbol) [0x0x7ff7387ed473]
+	(No symbol) [0x0x7ff73881a582]
+	(No symbol) [0x0x7ff7387c5c7b]
+	(No symbol) [0x0x7ff738817195]
+	(No symbol) [0x0x7ff7388168aa]
+	(No symbol) [0x0x7ff738782c75]
+	(No symbol) [0x0x7ff7388ee6fd]
+	(No symbol) [0x0x7ff7388fba88]
+	GetHandleVerifier [0x0x7ff738b68acb+940523]
+	GetHandleVerifier [0x0x7ff738b71821+976705]
+	(No symbol) [0x0x7ff7389ea961]
+	(No symbol) [0x0x7ff7387817a7]
+	GetHandleVerifier [0x0x7ff738cb62d8+2306552]
+	BaseThreadInitThunk [0x0x7ffbbd7f53e0+16]
+	RtlUserThreadStart [0x0x7ffbbe0a485b+43]
+
+2025-08-31 18:44:43,078 - INFO - 🏁 AI session completed: 2 applications sent, 19 jobs analyzed
+2025-08-31 18:44:43,078 - INFO - 
+        ╔═══ ENHANCED NAUKRI BOT SESSION SUMMARY ═══
+        ║ 🔍 Total Jobs Analyzed: 19
+        ║ 🧠 AI Analysis Success: 19/19 (100.0%)
+        ║ ⭐ High Score Jobs (70+): 2
+        ║ ✅ Applications Sent: 2
+        ║ ❌ Skipped (Low Score): 17
+        ║ 🔄 Fallback Scores Used: 0
+        ║ 🚫 AI Failures: 0
+        ║ 📊 Extraction Failures: 21
+        ║ 📈 Application Rate: 10.5%
+        ╚═══════════════════════════════════════════
+        
+2025-08-31 18:44:43,079 - INFO - 💾 Phase 4: Saving enhanced results...
+2025-08-31 18:44:43,080 - INFO - Enhanced results saved with timestamp: 20250831_184443
+2025-08-31 18:44:43,088 - INFO - 🎉 Enhanced Naukri Bot session completed successfully!
+2025-08-31 19:32:27,293 - INFO - 🚀 Starting Enhanced Naukri Bot with AI Intelligence...
+2025-08-31 19:32:27,293 - INFO - Configuration loaded successfully
+2025-08-31 19:32:27,293 - INFO - Job database initialized
+2025-08-31 19:32:27,293 - INFO - Bot initialized successfully
+2025-08-31 19:32:27,293 - INFO - Enhanced configuration loaded successfully
+2025-08-31 19:32:27,293 - INFO - Gemini API initialized successfully
+2025-08-31 19:32:28,736 - INFO - ✅ Gemini API connection test successful
+2025-08-31 19:32:28,736 - INFO - AI processor initialized successfully
+2025-08-31 19:32:28,736 - INFO - Enhanced Naukri Bot initialized successfully!
+2025-08-31 19:32:28,736 - INFO - 📡 Phase 1: Setting up browser...
+2025-08-31 19:32:28,736 - INFO - Setting up browser...
+2025-08-31 19:32:28,771 - INFO - Operating System: Windows-10-10.0.22000-SP0
+2025-08-31 19:32:28,799 - INFO - 🔄 Attempting automatic driver download...
+2025-08-31 19:32:28,799 - INFO - ====== WebDriver manager ======
+2025-08-31 19:32:30,324 - INFO - Get LATEST edgedriver version for Edge 139.0.3405
+2025-08-31 19:32:30,361 - WARNING - Webdriver manager failed: Could not reach host. Are you offline?
+2025-08-31 19:32:30,361 - WARNING - Driver setup method failed: Could not reach host. Are you offline?
+2025-08-31 19:32:30,361 - INFO - 🔄 Trying manual path: C:\WebDrivers\msedgedriver.exe
+2025-08-31 19:32:33,742 - INFO - ✅ Browser setup successful
+2025-08-31 19:32:33,743 - INFO - 🔐 Phase 2: Logging into Naukri...
+2025-08-31 19:32:33,743 - INFO - Login attempt 1/3
+2025-08-31 19:32:40,269 - INFO - ✅ Found email field with selector: #usernameField
+2025-08-31 19:32:48,574 - INFO - ✅ Found password field with selector: #passwordField
+2025-08-31 19:32:52,812 - INFO - ✅ Found login button with selector: //button[@type='submit']
+2025-08-31 19:32:58,909 - INFO - ✅ Login verified using: .nI-gNb-drawer__icon
+2025-08-31 19:32:58,910 - INFO - ✅ Login successful!
+2025-08-31 19:32:58,923 - INFO - ✅ Authentication verified using: Profile menu icon
+2025-08-31 19:32:58,923 - INFO - ✅ Authentication successful!
+2025-08-31 19:32:58,923 - INFO - 🧠 Phase 3: Starting AI-powered job processing...
+2025-08-31 19:32:58,938 - INFO - ✅ Authentication verified using: Profile menu icon
+2025-08-31 19:32:58,938 - INFO - 🎯 Starting AI-powered job processing (max 15 applications)
+2025-08-31 19:32:58,939 - INFO - 🔍 Processing keyword 1/4: Data Engineer
+2025-08-31 19:32:58,940 - INFO - Page 1/2: https://www.naukri.com/data-engineer-jobs-in-bengaluru-1
+2025-08-31 19:33:04,421 - INFO - Found 20 job cards on page
+2025-08-31 19:33:04,421 - INFO - 🔍 Processing job card 1/20
+2025-08-31 19:33:19,499 - WARNING - ⏰ Company extraction timeout
+2025-08-31 19:33:19,516 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 19:33:19,516 - INFO - ✅ Extracted: Data Engineer - SSIS and Tableau at Company Name
+2025-08-31 19:33:21,686 - INFO - 🤖 AI Analysis: Data Engineer - SSIS and Tableau scored 60/100
+2025-08-31 19:33:21,686 - INFO - ⏭️  SKIPPED: Data Engineer - SSIS and Tableau | Score: 60/100
+2025-08-31 19:33:25,527 - INFO - 🔍 Processing job card 2/20
+2025-08-31 19:33:40,607 - WARNING - ⏰ Company extraction timeout
+2025-08-31 19:33:40,622 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 19:33:40,653 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-08-31 19:33:43,084 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 19:33:43,084 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 19:33:45,255 - INFO - 🔍 Processing job card 3/20
+2025-08-31 19:34:00,335 - WARNING - ⏰ Company extraction timeout
+2025-08-31 19:34:00,350 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 19:34:00,363 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-08-31 19:34:00,364 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 19:34:00,364 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 19:34:03,102 - INFO - 🔍 Processing job card 4/20
+2025-08-31 19:34:18,187 - WARNING - ⏰ Company extraction timeout
+2025-08-31 19:34:18,205 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 19:34:18,218 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-08-31 19:34:18,219 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 19:34:18,219 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 19:34:21,622 - INFO - 🔍 Processing job card 5/20
+2025-08-31 19:34:36,669 - WARNING - ⏰ Company extraction timeout
+2025-08-31 19:34:36,693 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 19:34:36,715 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-08-31 19:34:36,715 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 19:34:36,715 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 19:34:39,864 - INFO - 🔍 Processing job card 6/20
+2025-08-31 19:34:54,913 - WARNING - ⏰ Company extraction timeout
+2025-08-31 19:34:54,961 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 19:34:54,961 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-08-31 19:34:54,961 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 19:34:54,961 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 19:34:58,743 - INFO - 🔍 Processing job card 7/20
+2025-08-31 19:35:13,817 - WARNING - ⏰ Company extraction timeout
+2025-08-31 19:35:13,845 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 19:35:13,867 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-08-31 19:35:13,867 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 19:35:13,867 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 19:35:16,148 - INFO - 🔍 Processing job card 8/20
+2025-08-31 19:35:31,240 - WARNING - ⏰ Company extraction timeout
+2025-08-31 19:35:31,256 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 19:35:31,273 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-08-31 19:35:31,273 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 19:35:31,273 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 19:35:34,704 - INFO - 🔍 Processing job card 9/20
+2025-08-31 19:35:49,758 - WARNING - ⏰ Company extraction timeout
+2025-08-31 19:35:49,776 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 19:35:49,790 - INFO - ✅ Extracted: Data Engineer / Data Analyst (Hybrid Role) at Company Name
+2025-08-31 19:35:52,038 - INFO - 🤖 AI Analysis: Data Engineer / Data Analyst (Hybrid Role) scored 60/100
+2025-08-31 19:35:52,038 - INFO - ⏭️  SKIPPED: Data Engineer / Data Analyst (Hybrid Role) | Score: 60/100
+2025-08-31 19:35:54,480 - INFO - 🔍 Processing job card 10/20
+2025-08-31 19:36:09,578 - WARNING - ⏰ Company extraction timeout
+2025-08-31 19:36:09,604 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 19:36:09,619 - INFO - ✅ Extracted: Data Engineer - Python/SQL at Company Name
+2025-08-31 19:36:11,783 - INFO - 🤖 AI Analysis: Data Engineer - Python/SQL scored 65/100
+2025-08-31 19:36:11,783 - INFO - ⏭️  SKIPPED: Data Engineer - Python/SQL | Score: 65/100
+2025-08-31 19:36:15,491 - INFO - 🔍 Processing job card 11/20
+2025-08-31 19:36:30,526 - WARNING - ⏰ Company extraction timeout
+2025-08-31 19:36:30,550 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 19:36:30,563 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-08-31 19:36:30,563 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 19:36:30,563 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 19:36:33,967 - INFO - 🔍 Processing job card 12/20
+2025-08-31 19:36:49,037 - WARNING - ⏰ Company extraction timeout
+2025-08-31 19:36:49,055 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 19:36:49,072 - INFO - ✅ Extracted: Data Engineer at MetaFolks Technologies
+2025-08-31 19:36:51,322 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 19:36:51,323 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 19:36:54,022 - INFO - 🔍 Processing job card 13/20
+2025-08-31 19:37:09,106 - WARNING - ⏰ Company extraction timeout
+2025-08-31 19:37:09,116 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 19:37:09,126 - INFO - ✅ Extracted: Data Engineer (Python with Gen AI) at Company Name
+2025-08-31 19:37:11,191 - INFO - 🤖 AI Analysis: Data Engineer (Python with Gen AI) scored 65/100
+2025-08-31 19:37:11,191 - INFO - ⏭️  SKIPPED: Data Engineer (Python with Gen AI) | Score: 65/100
+2025-08-31 19:37:13,707 - INFO - 🔍 Processing job card 14/20
+2025-08-31 19:37:28,748 - WARNING - ⏰ Company extraction timeout
+2025-08-31 19:37:28,764 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 19:37:28,769 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-08-31 19:37:28,769 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 19:37:28,769 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 19:37:32,373 - INFO - 🔍 Processing job card 15/20
+2025-08-31 19:37:47,467 - WARNING - ⏰ Company extraction timeout
+2025-08-31 19:37:47,467 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 19:37:47,483 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-08-31 19:37:47,483 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 19:37:47,483 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 19:37:50,006 - INFO - 🔍 Processing job card 16/20
+2025-08-31 19:38:05,136 - WARNING - ⏰ Company extraction timeout
+2025-08-31 19:38:05,161 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 19:38:05,172 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-08-31 19:38:05,172 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 19:38:05,173 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 19:38:08,386 - INFO - 🔍 Processing job card 17/20
+2025-08-31 19:38:23,435 - WARNING - ⏰ Company extraction timeout
+2025-08-31 19:38:23,457 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 19:38:23,475 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-08-31 19:38:23,476 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 19:38:23,476 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 19:38:25,534 - INFO - 🔍 Processing job card 18/20
+2025-08-31 19:38:40,614 - WARNING - ⏰ Company extraction timeout
+2025-08-31 19:38:40,627 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 19:38:40,639 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-08-31 19:38:40,639 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 19:38:40,639 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 19:38:43,839 - INFO - 🔍 Processing job card 19/20
+2025-08-31 19:38:58,901 - WARNING - ⏰ Company extraction timeout
+2025-08-31 19:38:58,918 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 19:38:58,930 - INFO - ✅ Extracted: Data Engineer TPC at Company Name
+2025-08-31 19:39:01,200 - INFO - 🤖 AI Analysis: Data Engineer TPC scored 70/100
+2025-08-31 19:39:01,200 - INFO - ⭐ HIGH SCORE JOB: Data Engineer TPC | Score: 70/100
+2025-08-31 19:43:20,776 - INFO - ✅ Successfully applied to: Data Engineer TPC
+2025-08-31 19:43:20,776 - INFO - ✅ Application #1 sent successfully!
+2025-08-31 19:43:23,108 - INFO - 🔍 Processing job card 20/20
+2025-08-31 19:43:23,156 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 19:43:23,158 - ERROR - ❌ Job data extraction failed after 0.0s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=139.0.3405.86); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff738a88c85+23461]
+	(No symbol) [0x0x7ff7389dcd70]
+	GetHandleVerifier [0x0x7ff738d00bb8+2611928]
+	(No symbol) [0x0x7ff7387c04d5]
+	(No symbol) [0x0x7ff7387bf12f]
+	(No symbol) [0x0x7ff7387c08db]
+	(No symbol) [0x0x7ff7387b42ca]
+	(No symbol) [0x0x7ff7387b271d]
+	(No symbol) [0x0x7ff7387b60ac]
+	(No symbol) [0x0x7ff7387b617f]
+	(No symbol) [0x0x7ff7387f4c96]
+	(No symbol) [0x0x7ff73881a6ba]
+	(No symbol) [0x0x7ff7387ef58d]
+	(No symbol) [0x0x7ff7387ef44d]
+	(No symbol) [0x0x7ff73881a980]
+	(No symbol) [0x0x7ff7387ef58d]
+	(No symbol) [0x0x7ff73883754f]
+	(No symbol) [0x0x7ff73881a423]
+	(No symbol) [0x0x7ff7387eea86]
+	(No symbol) [0x0x7ff7387edd11]
+	(No symbol) [0x0x7ff7387ee8b3]
+	(No symbol) [0x0x7ff7388ee6fd]
+	(No symbol) [0x0x7ff7388fba88]
+	GetHandleVerifier [0x0x7ff738b68acb+940523]
+	GetHandleVerifier [0x0x7ff738b71821+976705]
+	(No symbol) [0x0x7ff7389ea961]
+	(No symbol) [0x0x7ff7389e3344]
+	(No symbol) [0x0x7ff7389e3493]
+	(No symbol) [0x0x7ff7389d4f36]
+	BaseThreadInitThunk [0x0x7ffbbd7f53e0+16]
+	RtlUserThreadStart [0x0x7ffbbe0a485b+43]
+
+2025-08-31 19:43:23,159 - WARNING - ❌ Failed to extract data from card 20
+2025-08-31 19:43:23,159 - INFO - Page 2/2: https://www.naukri.com/data-engineer-jobs-in-bengaluru-2
+2025-08-31 19:43:29,575 - INFO - Found 20 job cards on page
+2025-08-31 19:43:29,591 - INFO - 🔍 Processing job card 1/20
+2025-08-31 19:43:44,616 - WARNING - ⏰ Company extraction timeout
+2025-08-31 19:43:44,637 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 19:43:44,659 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-08-31 19:43:44,659 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 19:43:44,659 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 19:43:48,248 - INFO - 🔍 Processing job card 2/20
+2025-08-31 19:44:03,317 - WARNING - ⏰ Company extraction timeout
+2025-08-31 19:44:03,339 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 19:44:03,355 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-08-31 19:44:03,355 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 19:44:03,355 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 19:44:05,391 - INFO - 🔍 Processing job card 3/20
+2025-08-31 19:44:20,439 - WARNING - ⏰ Company extraction timeout
+2025-08-31 19:44:20,472 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 19:44:20,483 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-08-31 19:44:20,483 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 19:44:20,483 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 19:44:22,959 - INFO - 🔍 Processing job card 4/20
+2025-08-31 19:44:38,039 - WARNING - ⏰ Company extraction timeout
+2025-08-31 19:44:38,067 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 19:44:38,079 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-08-31 19:44:38,079 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 19:44:38,079 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 19:44:41,392 - INFO - 🔍 Processing job card 5/20
+2025-08-31 19:44:56,440 - WARNING - ⏰ Company extraction timeout
+2025-08-31 19:44:56,472 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 19:44:56,484 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-08-31 19:44:56,484 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 19:44:56,485 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 19:44:58,933 - INFO - 🔍 Processing job card 6/20
+2025-08-31 19:45:14,022 - WARNING - ⏰ Company extraction timeout
+2025-08-31 19:45:14,071 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 19:45:14,099 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-08-31 19:45:14,099 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 19:45:14,099 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 19:45:17,397 - INFO - 🔍 Processing job card 7/20
+2025-08-31 19:45:32,430 - WARNING - ⏰ Company extraction timeout
+2025-08-31 19:45:32,452 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 19:45:32,466 - INFO - ✅ Extracted: Data Engineer- TIBCO BW at Company Name
+2025-08-31 19:45:35,493 - INFO - 🤖 AI Analysis: Data Engineer- TIBCO BW scored 55/100
+2025-08-31 19:45:35,493 - INFO - ⏭️  SKIPPED: Data Engineer- TIBCO BW | Score: 55/100
+2025-08-31 19:45:39,185 - INFO - 🔍 Processing job card 8/20
+2025-08-31 19:45:54,251 - WARNING - ⏰ Company extraction timeout
+2025-08-31 19:45:54,317 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 19:45:54,348 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-08-31 19:45:54,348 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 19:45:54,348 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 19:45:57,923 - INFO - 🔍 Processing job card 9/20
+2025-08-31 19:46:13,008 - WARNING - ⏰ Company extraction timeout
+2025-08-31 19:46:13,022 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 19:46:13,044 - INFO - ✅ Extracted: Data engineer - PL/SQL at Company Name
+2025-08-31 19:46:15,188 - INFO - 🤖 AI Analysis: Data engineer - PL/SQL scored 65/100
+2025-08-31 19:46:15,188 - INFO - ⏭️  SKIPPED: Data engineer - PL/SQL | Score: 65/100
+2025-08-31 19:46:17,522 - INFO - 🔍 Processing job card 10/20
+2025-08-31 19:46:32,559 - WARNING - ⏰ Company extraction timeout
+2025-08-31 19:46:32,559 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 19:46:32,581 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-08-31 19:46:32,581 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 19:46:32,581 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 19:46:35,476 - INFO - 🔍 Processing job card 11/20
+2025-08-31 19:46:50,551 - WARNING - ⏰ Company extraction timeout
+2025-08-31 19:46:50,590 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 19:46:50,602 - INFO - ✅ Extracted: Data Engineer (ETL, Go, Databricks) at Instinctools
+2025-08-31 19:46:52,654 - INFO - 🤖 AI Analysis: Data Engineer (ETL, Go, Databricks) scored 65/100
+2025-08-31 19:46:52,654 - INFO - ⏭️  SKIPPED: Data Engineer (ETL, Go, Databricks) | Score: 65/100
+2025-08-31 19:46:56,614 - INFO - 🔍 Processing job card 12/20
+2025-08-31 19:47:11,679 - WARNING - ⏰ Company extraction timeout
+2025-08-31 19:47:11,716 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 19:47:11,732 - INFO - ✅ Extracted: Data engineer at Company Name
+2025-08-31 19:47:11,732 - INFO - 🤖 AI Analysis: Data engineer scored 65/100
+2025-08-31 19:47:11,732 - INFO - ⏭️  SKIPPED: Data engineer | Score: 65/100
+2025-08-31 19:47:15,472 - INFO - 🔍 Processing job card 13/20
+2025-08-31 19:47:30,493 - WARNING - ⏰ Company extraction timeout
+2025-08-31 19:47:30,508 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 19:47:30,536 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-08-31 19:47:30,537 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 19:47:30,537 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 19:47:33,053 - INFO - 🔍 Processing job card 14/20
+2025-08-31 19:47:48,120 - WARNING - ⏰ Company extraction timeout
+2025-08-31 19:47:48,141 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 19:47:48,157 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-08-31 19:47:48,157 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 19:47:48,157 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 19:47:52,144 - INFO - 🔍 Processing job card 15/20
+2025-08-31 19:48:07,194 - WARNING - ⏰ Company extraction timeout
+2025-08-31 19:48:07,210 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 19:48:07,237 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-08-31 19:48:07,238 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 19:48:07,238 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 19:48:10,084 - INFO - 🔍 Processing job card 16/20
+2025-08-31 19:48:25,184 - WARNING - ⏰ Company extraction timeout
+2025-08-31 19:48:25,228 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 19:48:25,243 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-08-31 19:48:25,243 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 19:48:25,243 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 19:48:29,013 - INFO - 🔍 Processing job card 17/20
+2025-08-31 19:48:44,076 - WARNING - ⏰ Company extraction timeout
+2025-08-31 19:48:44,119 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 19:48:44,138 - INFO - ✅ Extracted: Data Engineer at Posted by GEETHA TECHNOLOGY SOLUTIONS PRIVATE LIMITED
+2025-08-31 19:48:46,506 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 19:48:46,506 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 19:48:49,021 - INFO - 🔍 Processing job card 18/20
+2025-08-31 19:49:04,077 - WARNING - ⏰ Company extraction timeout
+2025-08-31 19:49:04,100 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 19:49:04,112 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-08-31 19:49:04,112 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 19:49:04,112 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 19:49:06,987 - INFO - 🔍 Processing job card 19/20
+2025-08-31 19:49:22,052 - WARNING - ⏰ Company extraction timeout
+2025-08-31 19:49:22,068 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 19:49:22,085 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-08-31 19:49:22,085 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 19:49:22,085 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 19:49:25,473 - INFO - 🔍 Processing job card 20/20
+2025-08-31 19:49:40,511 - WARNING - ⏰ Company extraction timeout
+2025-08-31 19:49:40,530 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 19:49:40,545 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-08-31 19:49:40,545 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 19:49:40,546 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 19:49:44,514 - INFO - 🔍 Processing keyword 2/4: Python Developer
+2025-08-31 19:49:44,514 - INFO - Page 1/2: https://www.naukri.com/python-developer-jobs-in-bengaluru-1
+2025-08-31 19:49:51,050 - INFO - Found 20 job cards on page
+2025-08-31 19:49:51,050 - INFO - 🔍 Processing job card 1/20
+2025-08-31 19:50:06,127 - WARNING - ⏰ Company extraction timeout
+2025-08-31 19:50:06,154 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 19:50:06,168 - INFO - ✅ Extracted: Python Developer at Company Name
+2025-08-31 19:50:08,232 - INFO - 🤖 AI Analysis: Python Developer scored 65/100
+2025-08-31 19:50:08,232 - INFO - ⏭️  SKIPPED: Python Developer | Score: 65/100
+2025-08-31 19:50:10,441 - INFO - 🔍 Processing job card 2/20
+2025-08-31 19:50:25,522 - WARNING - ⏰ Company extraction timeout
+2025-08-31 19:50:25,544 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 19:50:25,556 - INFO - ✅ Extracted: Python Developer & Lead at Company Name
+2025-08-31 19:50:27,593 - INFO - 🤖 AI Analysis: Python Developer & Lead scored 65/100
+2025-08-31 19:50:27,593 - INFO - ⏭️  SKIPPED: Python Developer & Lead | Score: 65/100
+2025-08-31 19:50:31,040 - INFO - 🔍 Processing job card 3/20
+2025-08-31 19:50:46,093 - WARNING - ⏰ Company extraction timeout
+2025-08-31 19:50:46,108 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 19:50:46,133 - INFO - ✅ Extracted: Python Developer at Company Name
+2025-08-31 19:50:46,134 - INFO - 🤖 AI Analysis: Python Developer scored 65/100
+2025-08-31 19:50:46,134 - INFO - ⏭️  SKIPPED: Python Developer | Score: 65/100
+2025-08-31 19:50:48,191 - INFO - 🔍 Processing job card 4/20
+2025-08-31 19:51:03,297 - WARNING - ⏰ Company extraction timeout
+2025-08-31 19:51:03,335 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 19:51:03,347 - INFO - ✅ Extracted: Python Developer at Company Name
+2025-08-31 19:51:03,347 - INFO - 🤖 AI Analysis: Python Developer scored 65/100
+2025-08-31 19:51:03,347 - INFO - ⏭️  SKIPPED: Python Developer | Score: 65/100
+2025-08-31 19:51:07,233 - INFO - 🔍 Processing job card 5/20
+2025-08-31 19:51:22,263 - WARNING - ⏰ Company extraction timeout
+2025-08-31 19:51:22,280 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 19:51:22,291 - INFO - ✅ Extracted: Python developer at Company Name
+2025-08-31 19:51:22,291 - INFO - 🤖 AI Analysis: Python developer scored 65/100
+2025-08-31 19:51:22,292 - INFO - ⏭️  SKIPPED: Python developer | Score: 65/100
+2025-08-31 19:51:26,100 - INFO - 🔍 Processing job card 6/20
+2025-08-31 19:51:41,198 - WARNING - ⏰ Company extraction timeout
+2025-08-31 19:51:41,230 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 19:51:41,244 - INFO - ✅ Extracted: Python Developer - Bangalore & Chennai at Company Name
+2025-08-31 19:51:43,543 - INFO - 🤖 AI Analysis: Python Developer - Bangalore & Chennai scored 65/100
+2025-08-31 19:51:43,543 - INFO - ⏭️  SKIPPED: Python Developer - Bangalore & Chennai | Score: 65/100
+2025-08-31 19:51:45,853 - INFO - 🔍 Processing job card 7/20
+2025-08-31 19:52:00,887 - WARNING - ⏰ Company extraction timeout
+2025-08-31 19:52:00,914 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 19:52:00,928 - INFO - ✅ Extracted: Python Developer at Zysk Technologies
+2025-08-31 19:52:03,059 - INFO - 🤖 AI Analysis: Python Developer scored 65/100
+2025-08-31 19:52:03,059 - INFO - ⏭️  SKIPPED: Python Developer | Score: 65/100
+2025-08-31 19:52:05,500 - INFO - 🔍 Processing job card 8/20
+2025-08-31 19:52:20,564 - WARNING - ⏰ Company extraction timeout
+2025-08-31 19:52:20,580 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 19:52:20,609 - INFO - ✅ Extracted: Python developer at Company Name
+2025-08-31 19:52:20,610 - INFO - 🤖 AI Analysis: Python developer scored 65/100
+2025-08-31 19:52:20,610 - INFO - ⏭️  SKIPPED: Python developer | Score: 65/100
+2025-08-31 19:52:22,614 - INFO - 🔍 Processing job card 9/20
+2025-08-31 19:52:37,702 - WARNING - ⏰ Company extraction timeout
+2025-08-31 19:52:37,740 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 19:52:37,763 - INFO - ✅ Extracted: Python Developer at Company Name
+2025-08-31 19:52:37,764 - INFO - 🤖 AI Analysis: Python Developer scored 65/100
+2025-08-31 19:52:37,764 - INFO - ⏭️  SKIPPED: Python Developer | Score: 65/100
+2025-08-31 19:52:40,875 - INFO - 🔍 Processing job card 10/20
+2025-08-31 19:52:55,950 - WARNING - ⏰ Company extraction timeout
+2025-08-31 19:52:55,971 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 19:52:55,971 - INFO - ✅ Extracted: Python Developer at Xcel Hires Managment Solutions Pvt Ltd
+2025-08-31 19:52:57,999 - INFO - 🤖 AI Analysis: Python Developer scored 65/100
+2025-08-31 19:52:57,999 - INFO - ⏭️  SKIPPED: Python Developer | Score: 65/100
+2025-08-31 19:53:00,483 - INFO - 🔍 Processing job card 11/20
+2025-08-31 19:53:15,519 - WARNING - ⏰ Company extraction timeout
+2025-08-31 19:53:15,556 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 19:53:15,567 - INFO - ✅ Extracted: Experienced Software Engineer C/C++ & Python Developer at Company Name
+2025-08-31 19:53:17,402 - INFO - 🤖 AI Analysis: Experienced Software Engineer C/C++ & Python Developer scored 60/100
+2025-08-31 19:53:17,402 - INFO - ⏭️  SKIPPED: Experienced Software Engineer C/C++ & Python Developer | Score: 60/100
+2025-08-31 19:53:19,758 - INFO - 🔍 Processing job card 12/20
+2025-08-31 19:53:34,823 - WARNING - ⏰ Company extraction timeout
+2025-08-31 19:53:34,874 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 19:53:34,901 - INFO - ✅ Extracted: Python Developer at Company Name
+2025-08-31 19:53:34,916 - INFO - 🤖 AI Analysis: Python Developer scored 65/100
+2025-08-31 19:53:34,916 - INFO - ⏭️  SKIPPED: Python Developer | Score: 65/100
+2025-08-31 19:53:38,677 - INFO - 🔍 Processing job card 13/20
+2025-08-31 19:53:53,744 - WARNING - ⏰ Company extraction timeout
+2025-08-31 19:53:53,760 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 19:53:53,784 - INFO - ✅ Extracted: Python Developer at Company Name
+2025-08-31 19:53:53,784 - INFO - 🤖 AI Analysis: Python Developer scored 65/100
+2025-08-31 19:53:53,785 - INFO - ⏭️  SKIPPED: Python Developer | Score: 65/100
+2025-08-31 19:53:57,437 - INFO - 🔍 Processing job card 14/20
+2025-08-31 19:54:12,500 - WARNING - ⏰ Company extraction timeout
+2025-08-31 19:54:12,516 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 19:54:12,543 - INFO - ✅ Extracted: Python Developer at Company Name
+2025-08-31 19:54:12,543 - INFO - 🤖 AI Analysis: Python Developer scored 65/100
+2025-08-31 19:54:12,543 - INFO - ⏭️  SKIPPED: Python Developer | Score: 65/100
+2025-08-31 19:56:00,171 - INFO - 🔍 Processing job card 15/20
+2025-08-31 19:56:01,904 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 19:56:01,905 - ERROR - ❌ Job data extraction failed after 1.7s: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff738a88c85+23461]
+	(No symbol) [0x0x7ff7389dcd70]
+	(No symbol) [0x0x7ff7387ace40]
+	(No symbol) [0x0x7ff7387ed473]
+	(No symbol) [0x0x7ff73881a582]
+	(No symbol) [0x0x7ff7387c5c7b]
+	(No symbol) [0x0x7ff738817195]
+	(No symbol) [0x0x7ff7388168aa]
+	(No symbol) [0x0x7ff738782c75]
+	(No symbol) [0x0x7ff7388ee6fd]
+	(No symbol) [0x0x7ff7388fba88]
+	GetHandleVerifier [0x0x7ff738b68acb+940523]
+	GetHandleVerifier [0x0x7ff738b71821+976705]
+	(No symbol) [0x0x7ff7389ea961]
+	(No symbol) [0x0x7ff7387817a7]
+	GetHandleVerifier [0x0x7ff738cb62d8+2306552]
+	BaseThreadInitThunk [0x0x7ffbbd7f53e0+16]
+	RtlUserThreadStart [0x0x7ffbbe0a485b+43]
+
+2025-08-31 19:56:01,905 - WARNING - ❌ Failed to extract data from card 15
+2025-08-31 19:56:01,905 - INFO - 🔍 Processing job card 16/20
+2025-08-31 19:56:01,905 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 19:56:01,920 - ERROR - ❌ Job data extraction failed after 0.0s: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff738a88c85+23461]
+	(No symbol) [0x0x7ff7389dcd70]
+	(No symbol) [0x0x7ff7387ace40]
+	(No symbol) [0x0x7ff7387ed473]
+	(No symbol) [0x0x7ff73881a582]
+	(No symbol) [0x0x7ff7387c5c7b]
+	(No symbol) [0x0x7ff738817195]
+	(No symbol) [0x0x7ff7388168aa]
+	(No symbol) [0x0x7ff738782c75]
+	(No symbol) [0x0x7ff7388ee6fd]
+	(No symbol) [0x0x7ff7388fba88]
+	GetHandleVerifier [0x0x7ff738b68acb+940523]
+	GetHandleVerifier [0x0x7ff738b71821+976705]
+	(No symbol) [0x0x7ff7389ea961]
+	(No symbol) [0x0x7ff7387817a7]
+	GetHandleVerifier [0x0x7ff738cb62d8+2306552]
+	BaseThreadInitThunk [0x0x7ffbbd7f53e0+16]
+	RtlUserThreadStart [0x0x7ffbbe0a485b+43]
+
+2025-08-31 19:56:01,921 - WARNING - ❌ Failed to extract data from card 16
+2025-08-31 19:56:01,921 - INFO - 🔍 Processing job card 17/20
+2025-08-31 19:56:01,934 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 19:56:01,938 - ERROR - ❌ Job data extraction failed after 0.0s: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff738a88c85+23461]
+	(No symbol) [0x0x7ff7389dcd70]
+	(No symbol) [0x0x7ff7387ace40]
+	(No symbol) [0x0x7ff7387ed473]
+	(No symbol) [0x0x7ff73881a582]
+	(No symbol) [0x0x7ff7387c5c7b]
+	(No symbol) [0x0x7ff738817195]
+	(No symbol) [0x0x7ff7388168aa]
+	(No symbol) [0x0x7ff738782c75]
+	(No symbol) [0x0x7ff7388ee6fd]
+	(No symbol) [0x0x7ff7388fba88]
+	GetHandleVerifier [0x0x7ff738b68acb+940523]
+	GetHandleVerifier [0x0x7ff738b71821+976705]
+	(No symbol) [0x0x7ff7389ea961]
+	(No symbol) [0x0x7ff7387817a7]
+	GetHandleVerifier [0x0x7ff738cb62d8+2306552]
+	BaseThreadInitThunk [0x0x7ffbbd7f53e0+16]
+	RtlUserThreadStart [0x0x7ffbbe0a485b+43]
+
+2025-08-31 19:56:01,939 - WARNING - ❌ Failed to extract data from card 17
+2025-08-31 19:56:01,939 - INFO - 🔍 Processing job card 18/20
+2025-08-31 19:56:01,940 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 19:56:01,949 - ERROR - ❌ Job data extraction failed after 0.0s: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff738a88c85+23461]
+	(No symbol) [0x0x7ff7389dcd70]
+	(No symbol) [0x0x7ff7387ace40]
+	(No symbol) [0x0x7ff7387ed473]
+	(No symbol) [0x0x7ff73881a582]
+	(No symbol) [0x0x7ff7387c5c7b]
+	(No symbol) [0x0x7ff738817195]
+	(No symbol) [0x0x7ff7388168aa]
+	(No symbol) [0x0x7ff738782c75]
+	(No symbol) [0x0x7ff7388ee6fd]
+	(No symbol) [0x0x7ff7388fba88]
+	GetHandleVerifier [0x0x7ff738b68acb+940523]
+	GetHandleVerifier [0x0x7ff738b71821+976705]
+	(No symbol) [0x0x7ff7389ea961]
+	(No symbol) [0x0x7ff7387817a7]
+	GetHandleVerifier [0x0x7ff738cb62d8+2306552]
+	BaseThreadInitThunk [0x0x7ffbbd7f53e0+16]
+	RtlUserThreadStart [0x0x7ffbbe0a485b+43]
+
+2025-08-31 19:56:01,953 - WARNING - ❌ Failed to extract data from card 18
+2025-08-31 19:56:01,956 - INFO - 🔍 Processing job card 19/20
+2025-08-31 19:56:01,966 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 19:56:01,971 - ERROR - ❌ Job data extraction failed after 0.0s: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff738a88c85+23461]
+	(No symbol) [0x0x7ff7389dcd70]
+	(No symbol) [0x0x7ff7387ace40]
+	(No symbol) [0x0x7ff7387ed473]
+	(No symbol) [0x0x7ff73881a582]
+	(No symbol) [0x0x7ff7387c5c7b]
+	(No symbol) [0x0x7ff738817195]
+	(No symbol) [0x0x7ff7388168aa]
+	(No symbol) [0x0x7ff738782c75]
+	(No symbol) [0x0x7ff7388ee6fd]
+	(No symbol) [0x0x7ff7388fba88]
+	GetHandleVerifier [0x0x7ff738b68acb+940523]
+	GetHandleVerifier [0x0x7ff738b71821+976705]
+	(No symbol) [0x0x7ff7389ea961]
+	(No symbol) [0x0x7ff7387817a7]
+	GetHandleVerifier [0x0x7ff738cb62d8+2306552]
+	BaseThreadInitThunk [0x0x7ffbbd7f53e0+16]
+	RtlUserThreadStart [0x0x7ffbbe0a485b+43]
+
+2025-08-31 19:56:01,971 - WARNING - ❌ Failed to extract data from card 19
+2025-08-31 19:56:01,972 - INFO - 🔍 Processing job card 20/20
+2025-08-31 19:56:01,979 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 19:56:01,979 - ERROR - ❌ Job data extraction failed after 0.0s: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff738a88c85+23461]
+	(No symbol) [0x0x7ff7389dcd70]
+	(No symbol) [0x0x7ff7387ace40]
+	(No symbol) [0x0x7ff7387ed473]
+	(No symbol) [0x0x7ff73881a582]
+	(No symbol) [0x0x7ff7387c5c7b]
+	(No symbol) [0x0x7ff738817195]
+	(No symbol) [0x0x7ff7388168aa]
+	(No symbol) [0x0x7ff738782c75]
+	(No symbol) [0x0x7ff7388ee6fd]
+	(No symbol) [0x0x7ff7388fba88]
+	GetHandleVerifier [0x0x7ff738b68acb+940523]
+	GetHandleVerifier [0x0x7ff738b71821+976705]
+	(No symbol) [0x0x7ff7389ea961]
+	(No symbol) [0x0x7ff7387817a7]
+	GetHandleVerifier [0x0x7ff738cb62d8+2306552]
+	BaseThreadInitThunk [0x0x7ffbbd7f53e0+16]
+	RtlUserThreadStart [0x0x7ffbbe0a485b+43]
+
+2025-08-31 19:56:01,982 - WARNING - ❌ Failed to extract data from card 20
+2025-08-31 19:56:01,982 - INFO - Page 2/2: https://www.naukri.com/python-developer-jobs-in-bengaluru-2
+2025-08-31 19:56:01,984 - ERROR - Error on page 2 for keyword 'Python Developer': Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff738a88c85+23461]
+	(No symbol) [0x0x7ff7389dcd70]
+	(No symbol) [0x0x7ff7387ace40]
+	(No symbol) [0x0x7ff7387ed473]
+	(No symbol) [0x0x7ff73881a582]
+	(No symbol) [0x0x7ff7387c5c7b]
+	(No symbol) [0x0x7ff738817195]
+	(No symbol) [0x0x7ff7388168aa]
+	(No symbol) [0x0x7ff738782c75]
+	(No symbol) [0x0x7ff7388ee6fd]
+	(No symbol) [0x0x7ff7388fba88]
+	GetHandleVerifier [0x0x7ff738b68acb+940523]
+	GetHandleVerifier [0x0x7ff738b71821+976705]
+	(No symbol) [0x0x7ff7389ea961]
+	(No symbol) [0x0x7ff7387817a7]
+	GetHandleVerifier [0x0x7ff738cb62d8+2306552]
+	BaseThreadInitThunk [0x0x7ffbbd7f53e0+16]
+	RtlUserThreadStart [0x0x7ffbbe0a485b+43]
+
+2025-08-31 19:56:01,988 - INFO - 🔍 Processing keyword 3/4: ETL Developer
+2025-08-31 19:56:01,988 - INFO - Page 1/2: https://www.naukri.com/etl-developer-jobs-in-bengaluru-1
+2025-08-31 19:56:01,989 - ERROR - Error on page 1 for keyword 'ETL Developer': Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff738a88c85+23461]
+	(No symbol) [0x0x7ff7389dcd70]
+	(No symbol) [0x0x7ff7387ace40]
+	(No symbol) [0x0x7ff7387ed473]
+	(No symbol) [0x0x7ff73881a582]
+	(No symbol) [0x0x7ff7387c5c7b]
+	(No symbol) [0x0x7ff738817195]
+	(No symbol) [0x0x7ff7388168aa]
+	(No symbol) [0x0x7ff738782c75]
+	(No symbol) [0x0x7ff7388ee6fd]
+	(No symbol) [0x0x7ff7388fba88]
+	GetHandleVerifier [0x0x7ff738b68acb+940523]
+	GetHandleVerifier [0x0x7ff738b71821+976705]
+	(No symbol) [0x0x7ff7389ea961]
+	(No symbol) [0x0x7ff7387817a7]
+	GetHandleVerifier [0x0x7ff738cb62d8+2306552]
+	BaseThreadInitThunk [0x0x7ffbbd7f53e0+16]
+	RtlUserThreadStart [0x0x7ffbbe0a485b+43]
+
+2025-08-31 19:56:01,990 - INFO - Page 2/2: https://www.naukri.com/etl-developer-jobs-in-bengaluru-2
+2025-08-31 19:56:01,991 - ERROR - Error on page 2 for keyword 'ETL Developer': Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff738a88c85+23461]
+	(No symbol) [0x0x7ff7389dcd70]
+	(No symbol) [0x0x7ff7387ace40]
+	(No symbol) [0x0x7ff7387ed473]
+	(No symbol) [0x0x7ff73881a582]
+	(No symbol) [0x0x7ff7387c5c7b]
+	(No symbol) [0x0x7ff738817195]
+	(No symbol) [0x0x7ff7388168aa]
+	(No symbol) [0x0x7ff738782c75]
+	(No symbol) [0x0x7ff7388ee6fd]
+	(No symbol) [0x0x7ff7388fba88]
+	GetHandleVerifier [0x0x7ff738b68acb+940523]
+	GetHandleVerifier [0x0x7ff738b71821+976705]
+	(No symbol) [0x0x7ff7389ea961]
+	(No symbol) [0x0x7ff7387817a7]
+	GetHandleVerifier [0x0x7ff738cb62d8+2306552]
+	BaseThreadInitThunk [0x0x7ffbbd7f53e0+16]
+	RtlUserThreadStart [0x0x7ffbbe0a485b+43]
+
+2025-08-31 19:56:01,992 - INFO - 🔍 Processing keyword 4/4: Analytics Engineer
+2025-08-31 19:56:01,993 - INFO - Page 1/2: https://www.naukri.com/analytics-engineer-jobs-in-bengaluru-1
+2025-08-31 19:56:01,993 - ERROR - Error on page 1 for keyword 'Analytics Engineer': Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff738a88c85+23461]
+	(No symbol) [0x0x7ff7389dcd70]
+	(No symbol) [0x0x7ff7387ace40]
+	(No symbol) [0x0x7ff7387ed473]
+	(No symbol) [0x0x7ff73881a582]
+	(No symbol) [0x0x7ff7387c5c7b]
+	(No symbol) [0x0x7ff738817195]
+	(No symbol) [0x0x7ff7388168aa]
+	(No symbol) [0x0x7ff738782c75]
+	(No symbol) [0x0x7ff7388ee6fd]
+	(No symbol) [0x0x7ff7388fba88]
+	GetHandleVerifier [0x0x7ff738b68acb+940523]
+	GetHandleVerifier [0x0x7ff738b71821+976705]
+	(No symbol) [0x0x7ff7389ea961]
+	(No symbol) [0x0x7ff7387817a7]
+	GetHandleVerifier [0x0x7ff738cb62d8+2306552]
+	BaseThreadInitThunk [0x0x7ffbbd7f53e0+16]
+	RtlUserThreadStart [0x0x7ffbbe0a485b+43]
+
+2025-08-31 19:56:01,994 - INFO - Page 2/2: https://www.naukri.com/analytics-engineer-jobs-in-bengaluru-2
+2025-08-31 19:56:01,995 - ERROR - Error on page 2 for keyword 'Analytics Engineer': Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff738a88c85+23461]
+	(No symbol) [0x0x7ff7389dcd70]
+	(No symbol) [0x0x7ff7387ace40]
+	(No symbol) [0x0x7ff7387ed473]
+	(No symbol) [0x0x7ff73881a582]
+	(No symbol) [0x0x7ff7387c5c7b]
+	(No symbol) [0x0x7ff738817195]
+	(No symbol) [0x0x7ff7388168aa]
+	(No symbol) [0x0x7ff738782c75]
+	(No symbol) [0x0x7ff7388ee6fd]
+	(No symbol) [0x0x7ff7388fba88]
+	GetHandleVerifier [0x0x7ff738b68acb+940523]
+	GetHandleVerifier [0x0x7ff738b71821+976705]
+	(No symbol) [0x0x7ff7389ea961]
+	(No symbol) [0x0x7ff7387817a7]
+	GetHandleVerifier [0x0x7ff738cb62d8+2306552]
+	BaseThreadInitThunk [0x0x7ffbbd7f53e0+16]
+	RtlUserThreadStart [0x0x7ffbbe0a485b+43]
+
+2025-08-31 19:56:01,996 - INFO - 🏁 AI session completed: 1 applications sent, 53 jobs analyzed
+2025-08-31 19:56:01,996 - INFO - 
+        ╔═══ ENHANCED NAUKRI BOT SESSION SUMMARY ═══
+        ║ 🔍 Total Jobs Analyzed: 53
+        ║ 🧠 AI Analysis Success: 53/53 (100.0%)
+        ║ ⭐ High Score Jobs (70+): 1
+        ║ ✅ Applications Sent: 1
+        ║ ❌ Skipped (Low Score): 52
+        ║ 🔄 Fallback Scores Used: 0
+        ║ 🚫 AI Failures: 0
+        ║ 📊 Extraction Failures: 7
+        ║ 📈 Application Rate: 1.9%
+        ╚═══════════════════════════════════════════
+        
+2025-08-31 19:56:01,996 - INFO - 💾 Phase 4: Saving enhanced results...
+2025-08-31 19:56:01,997 - INFO - Enhanced results saved with timestamp: 20250831_195601
+2025-08-31 19:56:01,999 - INFO - 🎉 Enhanced Naukri Bot session completed successfully!
+2025-08-31 19:56:47,037 - INFO - 🚀 Starting Enhanced Naukri Bot with AI Intelligence...
+2025-08-31 19:56:47,037 - INFO - Configuration loaded successfully
+2025-08-31 19:56:47,039 - INFO - Job database initialized
+2025-08-31 19:56:47,039 - INFO - Bot initialized successfully
+2025-08-31 19:56:47,039 - INFO - Enhanced configuration loaded successfully
+2025-08-31 19:56:47,039 - INFO - Gemini API initialized successfully
+2025-08-31 19:56:48,461 - INFO - ✅ Gemini API connection test successful
+2025-08-31 19:56:48,462 - INFO - AI processor initialized successfully
+2025-08-31 19:56:48,462 - INFO - Enhanced Naukri Bot initialized successfully!
+2025-08-31 19:56:48,462 - INFO - 📡 Phase 1: Setting up browser...
+2025-08-31 19:56:48,463 - INFO - Setting up browser...
+2025-08-31 19:56:48,465 - INFO - Operating System: Windows-10-10.0.22000-SP0
+2025-08-31 19:56:48,499 - INFO - 🔄 Attempting automatic driver download...
+2025-08-31 19:56:48,499 - INFO - ====== WebDriver manager ======
+2025-08-31 19:56:49,505 - INFO - Get LATEST edgedriver version for Edge 139.0.3405
+2025-08-31 19:56:49,532 - WARNING - Webdriver manager failed: Could not reach host. Are you offline?
+2025-08-31 19:56:49,532 - WARNING - Driver setup method failed: Could not reach host. Are you offline?
+2025-08-31 19:56:49,532 - INFO - 🔄 Trying manual path: C:\WebDrivers\msedgedriver.exe
+2025-08-31 19:56:52,993 - INFO - ✅ Browser setup successful
+2025-08-31 19:56:52,993 - INFO - 🔐 Phase 2: Logging into Naukri...
+2025-08-31 19:56:52,993 - INFO - Login attempt 1/3
+2025-08-31 19:56:59,976 - INFO - ✅ Found email field with selector: #usernameField
+2025-08-31 19:57:08,034 - INFO - ✅ Found password field with selector: #passwordField
+2025-08-31 19:57:12,834 - INFO - ✅ Found login button with selector: //button[@type='submit']
+2025-08-31 19:57:20,610 - INFO - ✅ Login verified using: .nI-gNb-drawer__icon
+2025-08-31 19:57:20,610 - INFO - ✅ Login successful!
+2025-08-31 19:57:20,656 - INFO - ✅ Authentication verified using: Profile menu icon
+2025-08-31 19:57:20,656 - INFO - ✅ Authentication successful!
+2025-08-31 19:57:20,656 - INFO - 🧠 Phase 3: Starting AI-powered job processing...
+2025-08-31 19:57:20,688 - INFO - ✅ Authentication verified using: Profile menu icon
+2025-08-31 19:57:20,688 - INFO - 🎯 Starting AI-powered job processing (max 15 applications)
+2025-08-31 19:57:20,688 - INFO - 🔍 Processing keyword 1/4: Data Engineer
+2025-08-31 19:57:20,688 - INFO - Page 1/2: https://www.naukri.com/data-engineer-jobs-in-bengaluru-1
+2025-08-31 19:57:27,132 - INFO - Found 20 job cards on page
+2025-08-31 19:57:27,132 - INFO - 🔍 Processing job card 1/20
+2025-08-31 19:57:42,231 - WARNING - ⏰ Company extraction timeout
+2025-08-31 19:57:42,246 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 19:57:42,262 - INFO - ✅ Extracted: Data Engineer - SSIS and Tableau at Company Name
+2025-08-31 19:57:44,176 - INFO - 🤖 AI Analysis: Data Engineer - SSIS and Tableau scored 60/100
+2025-08-31 19:57:44,176 - INFO - ⏭️  SKIPPED: Data Engineer - SSIS and Tableau | Score: 60/100
+2025-08-31 19:57:46,799 - INFO - 🔍 Processing job card 2/20
+2025-08-31 19:58:01,848 - WARNING - ⏰ Company extraction timeout
+2025-08-31 19:58:01,880 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 19:58:01,895 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-08-31 19:58:04,428 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 19:58:04,428 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 19:58:06,866 - INFO - 🔍 Processing job card 3/20
+2025-08-31 19:58:21,946 - WARNING - ⏰ Company extraction timeout
+2025-08-31 19:58:21,962 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 19:58:21,962 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-08-31 19:58:21,962 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 19:58:21,962 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 19:58:25,702 - INFO - 🔍 Processing job card 4/20
+2025-08-31 19:58:40,855 - WARNING - ⏰ Company extraction timeout
+2025-08-31 19:58:40,910 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 19:58:40,922 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-08-31 19:58:40,922 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 19:58:40,923 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 19:58:44,741 - INFO - 🔍 Processing job card 5/20
+2025-08-31 19:58:59,791 - WARNING - ⏰ Company extraction timeout
+2025-08-31 19:58:59,822 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 19:58:59,837 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-08-31 19:58:59,837 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 19:58:59,837 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 19:59:02,457 - INFO - 🔍 Processing job card 6/20
+2025-08-31 19:59:17,492 - WARNING - ⏰ Company extraction timeout
+2025-08-31 19:59:17,524 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 19:59:17,539 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-08-31 19:59:17,539 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 19:59:17,539 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 19:59:21,435 - INFO - 🔍 Processing job card 7/20
+2025-08-31 19:59:36,517 - WARNING - ⏰ Company extraction timeout
+2025-08-31 19:59:36,533 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 19:59:36,533 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-08-31 19:59:36,533 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 19:59:36,533 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 19:59:39,629 - INFO - 🔍 Processing job card 8/20
+2025-08-31 19:59:54,675 - WARNING - ⏰ Company extraction timeout
+2025-08-31 19:59:54,700 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 19:59:54,719 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-08-31 19:59:54,719 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 19:59:54,719 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 19:59:58,170 - INFO - 🔍 Processing job card 9/20
+2025-08-31 20:00:13,211 - WARNING - ⏰ Company extraction timeout
+2025-08-31 20:00:13,226 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 20:00:13,242 - INFO - ✅ Extracted: Data Engineer / Data Analyst (Hybrid Role) at Company Name
+2025-08-31 20:00:15,366 - INFO - 🤖 AI Analysis: Data Engineer / Data Analyst (Hybrid Role) scored 55/100
+2025-08-31 20:00:15,366 - INFO - ⏭️  SKIPPED: Data Engineer / Data Analyst (Hybrid Role) | Score: 55/100
+2025-08-31 20:00:18,412 - INFO - 🔍 Processing job card 10/20
+2025-08-31 20:00:33,462 - WARNING - ⏰ Company extraction timeout
+2025-08-31 20:00:33,494 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 20:00:33,507 - INFO - ✅ Extracted: Data Engineer - Python/SQL at Company Name
+2025-08-31 20:00:35,499 - INFO - 🤖 AI Analysis: Data Engineer - Python/SQL scored 65/100
+2025-08-31 20:00:35,499 - INFO - ⏭️  SKIPPED: Data Engineer - Python/SQL | Score: 65/100
+2025-08-31 20:00:39,192 - INFO - 🔍 Processing job card 11/20
+2025-08-31 20:00:54,292 - WARNING - ⏰ Company extraction timeout
+2025-08-31 20:00:54,308 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 20:00:54,323 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-08-31 20:00:54,323 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 20:00:54,323 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 20:00:57,243 - INFO - 🔍 Processing job card 12/20
+2025-08-31 20:01:12,277 - WARNING - ⏰ Company extraction timeout
+2025-08-31 20:01:12,292 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 20:01:12,308 - INFO - ✅ Extracted: Data Engineer at MetaFolks Technologies
+2025-08-31 20:01:14,496 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 20:01:14,496 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 20:01:17,779 - INFO - 🔍 Processing job card 13/20
+2025-08-31 20:01:32,873 - WARNING - ⏰ Company extraction timeout
+2025-08-31 20:01:32,888 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 20:01:32,904 - INFO - ✅ Extracted: Data Engineer (Python with Gen AI) at Company Name
+2025-08-31 20:01:34,965 - INFO - 🤖 AI Analysis: Data Engineer (Python with Gen AI) scored 65/100
+2025-08-31 20:01:34,965 - INFO - ⏭️  SKIPPED: Data Engineer (Python with Gen AI) | Score: 65/100
+2025-08-31 20:01:38,695 - INFO - 🔍 Processing job card 14/20
+2025-08-31 20:01:53,732 - WARNING - ⏰ Company extraction timeout
+2025-08-31 20:01:53,748 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 20:01:53,764 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-08-31 20:01:53,764 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 20:01:53,764 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 20:01:57,486 - INFO - 🔍 Processing job card 15/20
+2025-08-31 20:02:12,535 - WARNING - ⏰ Company extraction timeout
+2025-08-31 20:02:12,551 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 20:02:12,566 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-08-31 20:02:12,566 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 20:02:12,566 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 20:02:14,699 - INFO - 🔍 Processing job card 16/20
+2025-08-31 20:02:29,744 - WARNING - ⏰ Company extraction timeout
+2025-08-31 20:02:29,759 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 20:02:29,775 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-08-31 20:02:29,775 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 20:02:29,775 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 20:02:32,275 - INFO - 🔍 Processing job card 17/20
+2025-08-31 20:02:47,352 - WARNING - ⏰ Company extraction timeout
+2025-08-31 20:02:47,383 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 20:02:47,398 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-08-31 20:02:47,398 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 20:02:47,398 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 20:02:50,232 - INFO - 🔍 Processing job card 18/20
+2025-08-31 20:03:05,260 - WARNING - ⏰ Company extraction timeout
+2025-08-31 20:03:05,291 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 20:03:05,306 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-08-31 20:03:05,306 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 20:03:05,306 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 20:03:08,953 - INFO - 🔍 Processing job card 19/20
+2025-08-31 20:03:24,013 - WARNING - ⏰ Company extraction timeout
+2025-08-31 20:03:24,044 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 20:03:24,059 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-08-31 20:03:24,059 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 20:03:24,059 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 20:03:27,220 - INFO - 🔍 Processing job card 20/20
+2025-08-31 20:03:42,231 - WARNING - ⏰ Company extraction timeout
+2025-08-31 20:03:42,272 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 20:03:42,289 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-08-31 20:03:42,289 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 20:03:42,289 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 20:03:44,825 - INFO - Page 2/2: https://www.naukri.com/data-engineer-jobs-in-bengaluru-2
+2025-08-31 20:03:50,883 - INFO - Found 20 job cards on page
+2025-08-31 20:03:50,883 - INFO - 🔍 Processing job card 1/20
+2025-08-31 20:04:05,976 - WARNING - ⏰ Company extraction timeout
+2025-08-31 20:04:06,010 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 20:04:06,041 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-08-31 20:04:06,041 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 20:04:06,041 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 20:04:09,160 - INFO - 🔍 Processing job card 2/20
+2025-08-31 20:04:24,232 - WARNING - ⏰ Company extraction timeout
+2025-08-31 20:04:24,263 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 20:04:24,263 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-08-31 20:04:24,263 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 20:04:24,263 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 20:04:27,525 - INFO - 🔍 Processing job card 3/20
+2025-08-31 20:04:42,546 - WARNING - ⏰ Company extraction timeout
+2025-08-31 20:04:42,562 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 20:04:42,577 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-08-31 20:04:42,577 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 20:04:42,577 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 20:04:45,643 - INFO - 🔍 Processing job card 4/20
+2025-08-31 20:05:00,666 - WARNING - ⏰ Company extraction timeout
+2025-08-31 20:05:00,706 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 20:05:00,722 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-08-31 20:05:00,722 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 20:05:00,722 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 20:05:03,955 - INFO - 🔍 Processing job card 5/20
+2025-08-31 20:05:19,010 - WARNING - ⏰ Company extraction timeout
+2025-08-31 20:05:19,025 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 20:05:19,041 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-08-31 20:05:19,041 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 20:05:19,041 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 20:05:21,702 - INFO - 🔍 Processing job card 6/20
+2025-08-31 20:05:36,797 - WARNING - ⏰ Company extraction timeout
+2025-08-31 20:05:36,812 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 20:05:36,828 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-08-31 20:05:36,828 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 20:05:36,828 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 20:05:40,613 - INFO - 🔍 Processing job card 7/20
+2025-08-31 20:05:55,668 - WARNING - ⏰ Company extraction timeout
+2025-08-31 20:05:55,683 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 20:05:55,699 - INFO - ✅ Extracted: Data Engineer- TIBCO BW at Company Name
+2025-08-31 20:05:58,917 - INFO - 🤖 AI Analysis: Data Engineer- TIBCO BW scored 55/100
+2025-08-31 20:05:58,917 - INFO - ⏭️  SKIPPED: Data Engineer- TIBCO BW | Score: 55/100
+2025-08-31 20:06:01,658 - INFO - 🔍 Processing job card 8/20
+2025-08-31 20:06:16,696 - WARNING - ⏰ Company extraction timeout
+2025-08-31 20:06:16,712 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 20:06:16,728 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-08-31 20:06:16,728 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 20:06:16,728 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 20:06:20,453 - INFO - 🔍 Processing job card 9/20
+2025-08-31 20:06:35,547 - WARNING - ⏰ Company extraction timeout
+2025-08-31 20:06:35,578 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 20:06:35,593 - INFO - ✅ Extracted: Data engineer - PL/SQL at Company Name
+2025-08-31 20:06:37,717 - INFO - 🤖 AI Analysis: Data engineer - PL/SQL scored 65/100
+2025-08-31 20:06:37,717 - INFO - ⏭️  SKIPPED: Data engineer - PL/SQL | Score: 65/100
+2025-08-31 20:06:40,372 - INFO - 🔍 Processing job card 10/20
+2025-08-31 20:06:55,407 - WARNING - ⏰ Company extraction timeout
+2025-08-31 20:06:55,433 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 20:06:55,447 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-08-31 20:06:55,449 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 20:06:55,449 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 20:06:58,363 - INFO - 🔍 Processing job card 11/20
+2025-08-31 20:07:13,431 - WARNING - ⏰ Company extraction timeout
+2025-08-31 20:07:13,462 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 20:07:13,478 - INFO - ✅ Extracted: Data Engineer (ETL, Go, Databricks) at Instinctools
+2025-08-31 20:07:15,564 - INFO - 🤖 AI Analysis: Data Engineer (ETL, Go, Databricks) scored 65/100
+2025-08-31 20:07:15,564 - INFO - ⏭️  SKIPPED: Data Engineer (ETL, Go, Databricks) | Score: 65/100
+2025-08-31 20:07:18,931 - INFO - 🔍 Processing job card 12/20
+2025-08-31 20:07:33,964 - WARNING - ⏰ Company extraction timeout
+2025-08-31 20:07:33,980 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 20:07:33,996 - INFO - ✅ Extracted: Data engineer at Company Name
+2025-08-31 20:07:33,996 - INFO - 🤖 AI Analysis: Data engineer scored 65/100
+2025-08-31 20:07:33,996 - INFO - ⏭️  SKIPPED: Data engineer | Score: 65/100
+2025-08-31 20:07:37,782 - INFO - 🔍 Processing job card 13/20
+2025-08-31 20:07:52,848 - WARNING - ⏰ Company extraction timeout
+2025-08-31 20:07:52,863 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 20:07:52,879 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-08-31 20:07:52,879 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 20:07:52,879 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 20:07:55,425 - INFO - 🔍 Processing job card 14/20
+2025-08-31 20:08:10,496 - WARNING - ⏰ Company extraction timeout
+2025-08-31 20:08:10,527 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 20:08:10,527 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-08-31 20:08:10,527 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 20:08:10,527 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 20:08:14,511 - INFO - 🔍 Processing job card 15/20
+2025-08-31 20:08:29,541 - WARNING - ⏰ Company extraction timeout
+2025-08-31 20:08:29,556 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 20:08:29,572 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-08-31 20:08:29,572 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 20:08:29,572 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 20:08:32,681 - INFO - 🔍 Processing job card 16/20
+2025-08-31 20:08:47,788 - WARNING - ⏰ Company extraction timeout
+2025-08-31 20:08:47,801 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 20:08:47,814 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-08-31 20:08:47,814 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 20:08:47,815 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 20:08:50,332 - INFO - 🔍 Processing job card 17/20
+2025-08-31 20:09:05,374 - WARNING - ⏰ Company extraction timeout
+2025-08-31 20:09:05,405 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 20:09:05,420 - INFO - ✅ Extracted: Data Engineer at Posted by GEETHA TECHNOLOGY SOLUTIONS PRIVATE LIMITED
+2025-08-31 20:09:07,762 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 20:09:07,763 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 20:09:11,426 - INFO - 🔍 Processing job card 18/20
+2025-08-31 20:09:26,464 - WARNING - ⏰ Company extraction timeout
+2025-08-31 20:09:26,479 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 20:09:26,542 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-08-31 20:09:26,542 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 20:09:26,542 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 20:09:30,331 - INFO - 🔍 Processing job card 19/20
+2025-08-31 20:09:45,368 - WARNING - ⏰ Company extraction timeout
+2025-08-31 20:09:45,384 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 20:09:45,399 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-08-31 20:09:45,399 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 20:09:45,399 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 20:09:47,629 - INFO - 🔍 Processing job card 20/20
+2025-08-31 20:10:02,700 - WARNING - ⏰ Company extraction timeout
+2025-08-31 20:10:02,731 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 20:10:02,731 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-08-31 20:10:02,731 - INFO - 🤖 AI Analysis: Data Engineer scored 65/100
+2025-08-31 20:10:02,731 - INFO - ⏭️  SKIPPED: Data Engineer | Score: 65/100
+2025-08-31 20:10:05,312 - INFO - 🔍 Processing keyword 2/4: Python Developer
+2025-08-31 20:10:05,312 - INFO - Page 1/2: https://www.naukri.com/python-developer-jobs-in-bengaluru-1
+2025-08-31 20:10:11,776 - INFO - Found 20 job cards on page
+2025-08-31 20:10:11,776 - INFO - 🔍 Processing job card 1/20
+2025-08-31 20:10:26,891 - WARNING - ⏰ Company extraction timeout
+2025-08-31 20:10:26,907 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 20:10:26,922 - INFO - ✅ Extracted: Python Developer at Company Name
+2025-08-31 20:10:28,917 - INFO - 🤖 AI Analysis: Python Developer scored 65/100
+2025-08-31 20:10:28,917 - INFO - ⏭️  SKIPPED: Python Developer | Score: 65/100
+2025-08-31 20:10:31,280 - INFO - 🔍 Processing job card 2/20
+2025-08-31 20:10:46,355 - WARNING - ⏰ Company extraction timeout
+2025-08-31 20:10:46,370 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 20:10:46,370 - INFO - ✅ Extracted: Python Developer & Lead at Company Name
+2025-08-31 20:10:48,356 - INFO - 🤖 AI Analysis: Python Developer & Lead scored 65/100
+2025-08-31 20:10:48,356 - INFO - ⏭️  SKIPPED: Python Developer & Lead | Score: 65/100
+2025-08-31 20:10:52,346 - INFO - 🔍 Processing job card 3/20
+2025-08-31 20:11:07,403 - WARNING - ⏰ Company extraction timeout
+2025-08-31 20:11:07,439 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 20:11:07,455 - INFO - ✅ Extracted: Python Developer at Company Name
+2025-08-31 20:11:07,455 - INFO - 🤖 AI Analysis: Python Developer scored 65/100
+2025-08-31 20:11:07,455 - INFO - ⏭️  SKIPPED: Python Developer | Score: 65/100
+2025-08-31 20:11:11,236 - INFO - 🔍 Processing job card 4/20
+2025-08-31 20:11:26,324 - WARNING - ⏰ Company extraction timeout
+2025-08-31 20:11:26,355 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 20:11:26,355 - INFO - ✅ Extracted: Python Developer at Company Name
+2025-08-31 20:11:26,371 - INFO - 🤖 AI Analysis: Python Developer scored 65/100
+2025-08-31 20:11:26,371 - INFO - ⏭️  SKIPPED: Python Developer | Score: 65/100
+2025-08-31 20:11:29,711 - INFO - 🔍 Processing job card 5/20
+2025-08-31 20:11:44,776 - WARNING - ⏰ Company extraction timeout
+2025-08-31 20:11:44,791 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 20:11:44,807 - INFO - ✅ Extracted: Python developer at Company Name
+2025-08-31 20:11:44,807 - INFO - 🤖 AI Analysis: Python developer scored 65/100
+2025-08-31 20:11:44,807 - INFO - ⏭️  SKIPPED: Python developer | Score: 65/100
+2025-08-31 20:11:48,243 - INFO - 🔍 Processing job card 6/20
+2025-08-31 20:12:03,272 - WARNING - ⏰ Company extraction timeout
+2025-08-31 20:12:03,287 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 20:12:03,303 - INFO - ✅ Extracted: Python Developer - Bangalore & Chennai at Company Name
+2025-08-31 20:12:05,430 - INFO - 🤖 AI Analysis: Python Developer - Bangalore & Chennai scored 65/100
+2025-08-31 20:12:05,430 - INFO - ⏭️  SKIPPED: Python Developer - Bangalore & Chennai | Score: 65/100
+2025-08-31 20:12:08,813 - INFO - 🔍 Processing job card 7/20
+2025-08-31 20:12:23,854 - WARNING - ⏰ Company extraction timeout
+2025-08-31 20:12:23,885 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 20:12:23,901 - INFO - ✅ Extracted: Python Developer at Zysk Technologies
+2025-08-31 20:12:26,109 - INFO - 🤖 AI Analysis: Python Developer scored 65/100
+2025-08-31 20:12:26,109 - INFO - ⏭️  SKIPPED: Python Developer | Score: 65/100
+2025-08-31 20:12:28,229 - INFO - 🔍 Processing job card 8/20
+2025-08-31 20:12:43,310 - WARNING - ⏰ Company extraction timeout
+2025-08-31 20:12:43,342 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 20:12:43,357 - INFO - ✅ Extracted: Python developer at Company Name
+2025-08-31 20:12:43,357 - INFO - 🤖 AI Analysis: Python developer scored 65/100
+2025-08-31 20:12:43,357 - INFO - ⏭️  SKIPPED: Python developer | Score: 65/100
+2025-08-31 20:12:46,828 - INFO - 🔍 Processing job card 9/20
+2025-08-31 20:13:02,001 - WARNING - ⏰ Company extraction timeout
+2025-08-31 20:13:02,092 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-08-31 20:13:02,112 - INFO - ✅ Extracted: Python Developer at Company Name
+2025-08-31 20:13:02,112 - INFO - 🤖 AI Analysis: Python Developer scored 65/100
+2025-08-31 20:13:02,112 - INFO - ⏭️  SKIPPED: Python Developer | Score: 65/100
+2025-08-31 20:13:04,920 - INFO - 🔍 Processing job card 10/20

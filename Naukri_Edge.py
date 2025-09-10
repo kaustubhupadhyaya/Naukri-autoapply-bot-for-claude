@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 Naukri Auto-Apply Bot - Complete Fixed Version
 Author: Fixed for Kaustubh Upadhyaya
@@ -136,7 +135,7 @@ class IntelligentNaukriBot:
             # Enhanced Edge options for stealth
             options = webdriver.EdgeOptions()
             options.add_argument("--disable-blink-features=AutomationControlled")
-            options.add_experimental_option("excludeSwitches", ["enable-automation"])
+            options.add_experimental_option("excludeSwitches", ["enable-automation", "enable-logging"])
             options.add_experimental_option('useAutomationExtension', False)
             options.add_argument("--disable-web-security")
             options.add_argument("--allow-running-insecure-content")
@@ -144,6 +143,7 @@ class IntelligentNaukriBot:
             options.add_argument("--no-sandbox")
             options.add_argument("--disable-dev-shm-usage")
             options.add_argument("--disable-gpu")
+            options.add_argument("--disable-features=msSmartScreenProxy")
             
             # Add realistic user agent
             options.add_argument("--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0")
@@ -242,40 +242,42 @@ class IntelligentNaukriBot:
                 # UPDATED LOGIN SELECTORS - Try multiple selectors for email field
                 email_selectors = [
                     '#usernameField',
-                    'input[placeholder*="email" i]',
-                    'input[placeholder*="Email" i]', 
-                    'input[type="email"]',
-                    'input[name="email"]',
-                    'input[id*="email" i]',
-                    'input[id*="username" i]'
+                    '#emailField', 
+                    '#email',
+                    '#username',
+                    "input[placeholder*='Email']",
+                    "input[placeholder*='email']",
+                    "input[name='email']",
+                    "input[type='email']"
                 ]
                 
                 email_field = None
                 for selector in email_selectors:
                     try:
-                        email_field = self.wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, selector)))
-                        logger.info(f"✅ Found email field with selector: {selector}")
-                        break
-                    except TimeoutException:
+                        email_field = self.driver.find_element(By.CSS_SELECTOR, selector)
+                        if email_field.is_displayed() and email_field.is_enabled():
+                            logger.info(f"✅ Found email field with selector: {selector}")
+                            break
+                    except NoSuchElementException:
                         continue
                 
                 if not email_field:
                     logger.error("❌ Could not find email field")
                     continue
                 
-                # Fill email
+                # Enter email
                 self.human_type(email_field, self.config['credentials']['email'])
                 self.smart_delay(1, 2)
                 
-                # UPDATED PASSWORD SELECTORS - Try multiple selectors for password field
+                # UPDATED PASSWORD SELECTORS
                 password_selectors = [
                     '#passwordField',
-                    'input[placeholder*="password" i]',
-                    'input[placeholder*="Password" i]',
-                    'input[type="password"]',
-                    'input[name="password"]',
-                    'input[id*="password" i]',
-                    'input[id*="pwd" i]'
+                    '#password',
+                    '#pass',
+                    "input[placeholder*='Password']",
+                    "input[placeholder*='password']",
+                    "input[name='password']",
+                    "input[type='password']"
                 ]
                 
                 password_field = None
@@ -292,7 +294,7 @@ class IntelligentNaukriBot:
                     logger.error("❌ Could not find password field")
                     continue
                 
-                # Fill password
+                # Enter password
                 self.human_type(password_field, self.config['credentials']['password'])
                 self.smart_delay(1, 2)
                 
@@ -443,51 +445,54 @@ class IntelligentNaukriBot:
                         job_cards = self.driver.find_elements(By.CSS_SELECTOR, self.job_card_selector)
                         logger.info(f"Found {len(job_cards)} job cards")
                         
+                        page_links = []
                         for card in job_cards:
                             try:
-                                # Extract job URL
-                                title_link = card.find_element(By.CSS_SELECTOR, self.job_title_selector)
-                                job_url = title_link.get_attribute('href')
-                                job_title = title_link.text.strip()
+                                # Get job link
+                                title_element = card.find_element(By.CSS_SELECTOR, self.job_title_selector)
+                                job_url = title_element.get_attribute('href')
                                 
-                                # Basic quality check
-                                if self._is_quality_job(card.text, job_title):
-                                    if job_url not in self.processed_jobs:
-                                        self.joblinks.append(job_url)
+                                if job_url and job_url not in self.processed_jobs:
+                                    # Get job text for basic filtering
+                                    job_text = card.text.lower()
+                                    
+                                    if self._is_relevant_job(job_text):
+                                        page_links.append(job_url)
                                         self.processed_jobs.add(job_url)
-                                        logger.debug(f"Added job: {job_title}")
-                                
-                            except NoSuchElementException:
-                                logger.debug("Could not extract job link from card")
+                                        
+                            except Exception as e:
+                                logger.debug(f"Error extracting job card: {e}")
                                 continue
                         
-                        # Scroll and wait
-                        self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-                        self.smart_delay(2, 3)
+                        logger.info(f"Page {page}: Found {len(page_links)} relevant jobs")
+                        self.joblinks.extend(page_links)
+                        
+                        # Delay between pages
+                        self.smart_delay(3, 5)
                         
                     except Exception as e:
                         logger.error(f"Error on page {page}: {e}")
                         continue
             
-            logger.info(f"Total quality jobs found: {len(self.joblinks)}")
+            logger.info(f"✅ Job search completed. Found {len(self.joblinks)} total jobs")
             return len(self.joblinks) > 0
             
         except Exception as e:
-            logger.error(f"Job scraping failed: {e}")
+            logger.error(f"Error in scrape_job_links: {e}")
             return False
     
-    def _is_quality_job(self, job_text, job_title):
-        """Enhanced job quality check"""
+    def _is_relevant_job(self, job_text):
+        """Filter jobs based on relevance"""
         text_lower = job_text.lower()
-        title_lower = job_title.lower()
         
-        # Check for relevant keywords
-        relevant_keywords = [
-            'data engineer', 'python developer', 'etl developer', 'sql developer',
-            'data analyst', 'business analyst', 'analytics engineer'
-        ]
+        # Exclude irrelevant positions
+        exclude_keywords = ['sales', 'marketing', 'hr', 'recruiter', 'bpo', 'call center', 'customer service']
+        if any(keyword in text_lower for keyword in exclude_keywords):
+            return False
         
-        if not any(keyword in title_lower for keyword in relevant_keywords):
+        # Must contain relevant keywords  
+        relevant_keywords = ['python', 'data', 'engineer', 'developer', 'sql', 'etl', 'analytics', 'software']
+        if not any(keyword in text_lower for keyword in relevant_keywords):
             return False
         
         # Check experience level (prefer 1-5 years)
@@ -551,6 +556,103 @@ class IntelligentNaukriBot:
         except Exception as e:
             logger.error(f"Error in apply_to_jobs: {e}")
     
+    def _apply_to_single_job(self, job_url):
+        """
+        Apply to a single job with a priority for 'Easy Apply', fallback to standard
+        application, and improved waiting and checking logic.
+        """
+        try:
+            self.driver.get(job_url)
+            # Use wait for the page to load, e.g., for a known element in the footer
+            self.wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, 'body')))
+
+            # 1. CHECK IF ALREADY APPLIED ON THE PAGE
+            try:
+                applied_text_element = self.driver.find_element(By.XPATH, "//*[contains(text(), 'Applied')]")
+                if applied_text_element.is_displayed():
+                    logger.info("⏩ Job is already marked as 'Applied' on the page. Skipping.")
+                    self.skipped += 1
+                    return False
+            except NoSuchElementException:
+                pass # Not applied, so continue
+
+            # 2. PRIORITY 1: Look for 'Apply on Naukri' (Easy Apply)
+            try:
+                easy_apply_selector = "//button[contains(text(), 'Apply on Naukri') or contains(text(), 'Easy Apply')]"
+                easy_apply_button = self.wait.until(EC.element_to_be_clickable((By.XPATH, easy_apply_selector)))
+                
+                logger.info("✅ Found 'Easy Apply' button. Initiating on-site application.")
+                self.driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", easy_apply_button)
+                self.smart_delay(1, 2) # A small delay can still be useful here
+                easy_apply_button.click()
+                
+                if self._handle_easy_apply_submission():
+                    job_id = self._extract_job_id(job_url)
+                    self._save_job_application(job_id, job_url, "Applied (Easy Apply)")
+                    return True
+                else:
+                    logger.warning("Easy Apply submission could not be confirmed.")
+                    return False
+
+            except TimeoutException:
+                logger.info("-> No 'Easy Apply' button found. Searching for a standard apply button.")
+                pass
+
+            # 3. PRIORITY 2: Fallback to Standard Apply Button
+            apply_button_selectors = [
+                "//button[contains(translate(text(), 'A', 'a'), 'apply')]",
+                ".btn-apply",
+                "[data-job-apply]",
+                "#apply-button"
+            ]
+            
+            for selector in apply_button_selectors:
+                try:
+                    apply_button = self.wait.until(EC.element_to_be_clickable((By.XPATH if selector.startswith('//') else By.CSS_SELECTOR, selector)))
+                    logger.info(f"Found standard apply button with selector: {selector}")
+                    self.driver.execute_script("arguments[0].click();", apply_button)
+                    self.smart_delay(4, 6) # Wait for potential new tab
+                    
+                    logger.info("✔️ Standard apply button clicked (likely redirected to external site).")
+                    job_id = self._extract_job_id(job_url)
+                    self._save_job_application(job_id, job_url, "Applied (External)")
+                    return True
+                except (TimeoutException, NoSuchElementException, ElementClickInterceptedException):
+                    continue
+
+            logger.warning("❌ No actionable apply button was found on the page.")
+            return False
+            
+        except Exception as e:
+            logger.error(f"Error in _apply_to_single_job for {job_url}: {e}")
+            return False
+
+    def _handle_easy_apply_submission(self):
+        """Handles the final submission on the 'Easy Apply' pop-up/modal."""
+        try:
+            submit_selectors = [
+                "//button[contains(text(), 'Submit') and contains(@class, 'btn-primary')]",
+                "//button[@id='submit-application']",
+                "//button[contains(text(), 'Confirm')]"
+            ]
+            
+            for selector in submit_selectors:
+                try:
+                    submit_button = self.wait.until(EC.element_to_be_clickable((By.XPATH, selector)))
+                    logger.info(f"Found easy apply submission button: {selector}")
+                    submit_button.click()
+                    self.smart_delay(3, 5) # Wait for confirmation
+                    logger.info("✅ 'Easy Apply' submission successful.")
+                    return True
+                except TimeoutException:
+                    continue
+                    
+            logger.warning("Could not find the final 'Submit' button for easy apply.")
+            return False
+        except Exception as e:
+            logger.error(f"An error occurred during easy apply submission: {e}")
+            return False
+    
     def _extract_job_id(self, job_url):
         """Extract job ID from URL"""
         try:
@@ -575,124 +677,8 @@ class IntelligentNaukriBot:
         except:
             return False
     
-    def _apply_to_single_job(self, job_url):
-        """Apply to a single job with enhanced error handling"""
-        try:
-            # Navigate to job page
-            self.driver.get(job_url)
-            self.smart_delay(3, 5)
-            
-            # Look for apply buttons with multiple selectors
-            apply_button_selectors = [
-                "//button[contains(translate(text(), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'apply')]",
-                "//a[contains(translate(text(), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'apply')]",
-                "//span[contains(translate(text(), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'apply')]",
-                ".btn-apply",
-                "[data-job-apply]",
-                "#apply-button"
-            ]
-            
-            apply_button = None
-            for selector in apply_button_selectors:
-                try:
-                    if selector.startswith('//'):
-                        apply_button = self.driver.find_element(By.XPATH, selector)
-                    else:
-                        apply_button = self.driver.find_element(By.CSS_SELECTOR, selector)
-                    
-                    if apply_button.is_displayed() and apply_button.is_enabled():
-                        logger.debug(f"Found apply button: {selector}")
-                        break
-                except:
-                    continue
-            
-            if not apply_button:
-                logger.warning("No apply button found")
-                return False
-            
-            # Click apply button
-            try:
-                self.driver.execute_script("arguments[0].scrollIntoView();", apply_button)
-                self.smart_delay(1, 2)
-                apply_button.click()
-            except:
-                try:
-                    self.driver.execute_script("arguments[0].click();", apply_button)
-                except:
-                    logger.error("Could not click apply button")
-                    return False
-            
-            self.smart_delay(3, 5)
-            
-            # Handle application form if present
-            self._handle_application_form()
-            
-            # Save successful application
-            job_id = self._extract_job_id(job_url)
-            self._save_job_application(job_id, job_url, "Applied")
-            
-            return True
-            
-        except Exception as e:
-            logger.error(f"Error applying to job {job_url}: {e}")
-            return False
-    
-    def _handle_application_form(self):
-        """Handle application form if it appears"""
-        try:
-            self.smart_delay(2, 3)
-            
-            # Common form field mappings
-            form_fields = {
-                'firstName': self.config['personal_info']['firstname'],
-                'lastname': self.config['personal_info']['lastname'],
-                'phone': self.config['personal_info'].get('phone', ''),
-                'mobile': self.config['personal_info'].get('phone', '')
-            }
-            
-            # Fill form fields
-            for field_id, value in form_fields.items():
-                if not value:
-                    continue
-                
-                field_selectors = [f'#{field_id}', f'[name="{field_id}"]', f'[id*="{field_id}" i]']
-                
-                for selector in field_selectors:
-                    try:
-                        field = self.driver.find_element(By.CSS_SELECTOR, selector)
-                        if field.is_displayed() and field.is_enabled():
-                            self.human_type(field, str(value))
-                            break
-                    except:
-                        continue
-            
-            # Look for submit button
-            submit_selectors = [
-                "//button[contains(text(), 'Submit')]",
-                "//button[contains(text(), 'Apply')]",
-                "//input[@type='submit']",
-                ".btn-submit"
-            ]
-            
-            for selector in submit_selectors:
-                try:
-                    if selector.startswith('//'):
-                        submit_btn = self.driver.find_element(By.XPATH, selector)
-                    else:
-                        submit_btn = self.driver.find_element(By.CSS_SELECTOR, selector)
-                    
-                    if submit_btn.is_displayed() and submit_btn.is_enabled():
-                        submit_btn.click()
-                        self.smart_delay(2, 3)
-                        break
-                except:
-                    continue
-                    
-        except Exception as e:
-            logger.debug(f"Form handling error: {e}")
-    
     def _save_job_application(self, job_id, job_url, status):
-        """Save job application to database"""
+        """Save application details to database"""
         if not self.db_conn:
             return
         

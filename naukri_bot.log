@@ -49810,3 +49810,2066 @@ Stacktrace:
 2025-08-31 20:13:02,112 - INFO - 🤖 AI Analysis: Python Developer scored 65/100
 2025-08-31 20:13:02,112 - INFO - ⏭️  SKIPPED: Python Developer | Score: 65/100
 2025-08-31 20:13:04,920 - INFO - 🔍 Processing job card 10/20
+2025-09-08 08:25:59,030 - INFO - 🚀 Starting Enhanced Naukri Bot with AI Intelligence...
+2025-09-08 08:25:59,053 - INFO - Configuration loaded successfully
+2025-09-08 08:25:59,068 - INFO - Job database initialized
+2025-09-08 08:25:59,069 - INFO - Bot initialized successfully
+2025-09-08 08:25:59,069 - INFO - Enhanced configuration loaded successfully
+2025-09-08 08:25:59,070 - INFO - Gemini API initialized successfully
+2025-09-08 08:26:00,791 - INFO - ✅ Gemini API connection test successful
+2025-09-08 08:26:00,791 - INFO - AI processor initialized successfully
+2025-09-08 08:26:00,792 - INFO - Enhanced Naukri Bot initialized successfully!
+2025-09-08 08:26:00,793 - INFO - 📡 Phase 1: Setting up browser...
+2025-09-08 08:26:00,793 - INFO - Setting up browser...
+2025-09-08 08:26:00,812 - INFO - Operating System: Windows-10-10.0.22000-SP0
+2025-09-08 08:26:00,875 - INFO - 🔄 Attempting automatic driver download...
+2025-09-08 08:26:00,875 - INFO - ====== WebDriver manager ======
+2025-09-08 08:26:02,998 - INFO - Get LATEST edgedriver version for Edge 139.0.3405
+2025-09-08 08:26:03,009 - WARNING - Webdriver manager failed: Could not reach host. Are you offline?
+2025-09-08 08:26:03,017 - WARNING - Driver setup method failed: Could not reach host. Are you offline?
+2025-09-08 08:26:03,019 - INFO - 🔄 Trying manual path: C:\WebDrivers\msedgedriver.exe
+2025-09-08 08:26:06,859 - INFO - ✅ Browser setup successful
+2025-09-08 08:26:06,888 - INFO - 🔐 Phase 2: Logging into Naukri...
+2025-09-08 08:26:06,894 - INFO - Login attempt 1/3
+2025-09-08 08:26:12,646 - INFO - ✅ Found email field with selector: #usernameField
+2025-09-08 08:26:21,303 - INFO - ✅ Found password field with selector: #passwordField
+2025-09-08 08:26:26,033 - INFO - ✅ Found login button with selector: //button[@type='submit']
+2025-09-08 08:26:34,138 - INFO - ✅ Login verified using: .nI-gNb-drawer__icon
+2025-09-08 08:26:34,142 - INFO - ✅ Login successful!
+2025-09-08 08:26:34,190 - INFO - ✅ Authentication verified using: Profile menu icon
+2025-09-08 08:26:34,197 - INFO - ✅ Authentication successful!
+2025-09-08 08:26:34,198 - INFO - 🧠 Phase 3: Starting AI-powered job processing...
+2025-09-08 08:26:34,246 - INFO - ✅ Authentication verified using: Profile menu icon
+2025-09-08 08:26:34,253 - INFO - 🎯 Starting AI-powered job processing (max 15 applications)
+2025-09-08 08:26:34,282 - INFO - 🔍 Processing keyword 1/4: Data Engineer
+2025-09-08 08:26:34,389 - INFO - Page 1/2: https://www.naukri.com/data-engineer-jobs-in-bengaluru-1
+2025-09-08 08:26:45,681 - INFO - Found 20 job cards on page
+2025-09-08 08:26:45,681 - INFO - 🔍 Processing job card 1/20
+2025-09-08 08:27:00,779 - WARNING - ⏰ Company extraction timeout
+2025-09-08 08:27:00,786 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-09-08 08:27:00,810 - INFO - ✅ Extracted: Data Engineer - SSIS and Tableau at Company Name
+2025-09-08 08:27:02,818 - INFO - 🤖 AI Analysis: Data Engineer - SSIS and Tableau scored 60/100
+2025-09-08 08:27:02,818 - INFO - ⏭️  SKIPPED: Data Engineer - SSIS and Tableau | Score: 60/100
+2025-09-08 08:27:06,547 - INFO - 🔍 Processing job card 2/20
+2025-09-08 08:27:21,611 - WARNING - ⏰ Company extraction timeout
+2025-09-08 08:27:21,632 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-09-08 08:27:21,648 - INFO - ✅ Extracted: Data Engineer at Company Name
+2025-09-08 08:27:23,661 - INFO - 🤖 AI Analysis: Data Engineer scored 70/100
+2025-09-08 08:27:23,661 - INFO - ⭐ HIGH SCORE JOB: Data Engineer | Score: 70/100
+2025-09-08 08:31:45,985 - INFO - ✅ Successfully applied to: Data Engineer
+2025-09-08 08:31:45,985 - INFO - ✅ Application #1 sent successfully!
+2025-09-08 08:31:49,206 - INFO - 🔍 Processing job card 3/20
+2025-09-08 08:31:49,240 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-09-08 08:31:49,240 - ERROR - ❌ Job data extraction failed after 0.0s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=139.0.3405.125); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff680268c85+23461]
+	(No symbol) [0x0x7ff6801bcd70]
+	GetHandleVerifier [0x0x7ff6804e0bb8+2611928]
+	(No symbol) [0x0x7ff67ffa04d5]
+	(No symbol) [0x0x7ff67ff9f12f]
+	(No symbol) [0x0x7ff67ffa08db]
+	(No symbol) [0x0x7ff67ff942ca]
+	(No symbol) [0x0x7ff67ff9271d]
+	(No symbol) [0x0x7ff67ff960ac]
+	(No symbol) [0x0x7ff67ff9617f]
+	(No symbol) [0x0x7ff67ffd4c96]
+	(No symbol) [0x0x7ff67fffa6ba]
+	(No symbol) [0x0x7ff67ffcf58d]
+	(No symbol) [0x0x7ff67ffcf44d]
+	(No symbol) [0x0x7ff67fffa980]
+	(No symbol) [0x0x7ff67ffcf58d]
+	(No symbol) [0x0x7ff68001754f]
+	(No symbol) [0x0x7ff67fffa423]
+	(No symbol) [0x0x7ff67ffcea86]
+	(No symbol) [0x0x7ff67ffcdd11]
+	(No symbol) [0x0x7ff67ffce8b3]
+	(No symbol) [0x0x7ff6800ce6fd]
+	(No symbol) [0x0x7ff6800dba88]
+	GetHandleVerifier [0x0x7ff680348acb+940523]
+	GetHandleVerifier [0x0x7ff680351821+976705]
+	(No symbol) [0x0x7ff6801ca961]
+	(No symbol) [0x0x7ff6801c3344]
+	(No symbol) [0x0x7ff6801c3493]
+	(No symbol) [0x0x7ff6801b4f36]
+	BaseThreadInitThunk [0x0x7fffa6d653e0+16]
+	RtlUserThreadStart [0x0x7fffa752485b+43]
+
+2025-09-08 08:31:49,240 - WARNING - ❌ Failed to extract data from card 3
+2025-09-08 08:31:49,240 - INFO - 🔍 Processing job card 4/20
+2025-09-08 08:31:49,295 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-09-08 08:31:49,295 - ERROR - ❌ Job data extraction failed after 0.1s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=139.0.3405.125); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff680268c85+23461]
+	(No symbol) [0x0x7ff6801bcd70]
+	GetHandleVerifier [0x0x7ff6804e0bb8+2611928]
+	(No symbol) [0x0x7ff67ffa04d5]
+	(No symbol) [0x0x7ff67ff9f12f]
+	(No symbol) [0x0x7ff67ffa08db]
+	(No symbol) [0x0x7ff67ff942ca]
+	(No symbol) [0x0x7ff67ff9271d]
+	(No symbol) [0x0x7ff67ff960ac]
+	(No symbol) [0x0x7ff67ff9617f]
+	(No symbol) [0x0x7ff67ffd4c96]
+	(No symbol) [0x0x7ff67fffa6ba]
+	(No symbol) [0x0x7ff67ffcf58d]
+	(No symbol) [0x0x7ff67ffcf44d]
+	(No symbol) [0x0x7ff67fffa980]
+	(No symbol) [0x0x7ff67ffcf58d]
+	(No symbol) [0x0x7ff68001754f]
+	(No symbol) [0x0x7ff67fffa423]
+	(No symbol) [0x0x7ff67ffcea86]
+	(No symbol) [0x0x7ff67ffcdd11]
+	(No symbol) [0x0x7ff67ffce8b3]
+	(No symbol) [0x0x7ff6800ce6fd]
+	(No symbol) [0x0x7ff6800dba88]
+	GetHandleVerifier [0x0x7ff680348acb+940523]
+	GetHandleVerifier [0x0x7ff680351821+976705]
+	(No symbol) [0x0x7ff6801ca961]
+	(No symbol) [0x0x7ff6801c3344]
+	(No symbol) [0x0x7ff6801c3493]
+	(No symbol) [0x0x7ff6801b4f36]
+	BaseThreadInitThunk [0x0x7fffa6d653e0+16]
+	RtlUserThreadStart [0x0x7fffa752485b+43]
+
+2025-09-08 08:31:49,295 - WARNING - ❌ Failed to extract data from card 4
+2025-09-08 08:31:49,295 - INFO - 🔍 Processing job card 5/20
+2025-09-08 08:31:49,347 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-09-08 08:31:49,349 - ERROR - ❌ Job data extraction failed after 0.1s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=139.0.3405.125); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff680268c85+23461]
+	(No symbol) [0x0x7ff6801bcd70]
+	GetHandleVerifier [0x0x7ff6804e0bb8+2611928]
+	(No symbol) [0x0x7ff67ffa04d5]
+	(No symbol) [0x0x7ff67ff9f12f]
+	(No symbol) [0x0x7ff67ffa08db]
+	(No symbol) [0x0x7ff67ff942ca]
+	(No symbol) [0x0x7ff67ff9271d]
+	(No symbol) [0x0x7ff67ff960ac]
+	(No symbol) [0x0x7ff67ff9617f]
+	(No symbol) [0x0x7ff67ffd4c96]
+	(No symbol) [0x0x7ff67fffa6ba]
+	(No symbol) [0x0x7ff67ffcf58d]
+	(No symbol) [0x0x7ff67ffcf44d]
+	(No symbol) [0x0x7ff67fffa980]
+	(No symbol) [0x0x7ff67ffcf58d]
+	(No symbol) [0x0x7ff68001754f]
+	(No symbol) [0x0x7ff67fffa423]
+	(No symbol) [0x0x7ff67ffcea86]
+	(No symbol) [0x0x7ff67ffcdd11]
+	(No symbol) [0x0x7ff67ffce8b3]
+	(No symbol) [0x0x7ff6800ce6fd]
+	(No symbol) [0x0x7ff6800dba88]
+	GetHandleVerifier [0x0x7ff680348acb+940523]
+	GetHandleVerifier [0x0x7ff680351821+976705]
+	(No symbol) [0x0x7ff6801ca961]
+	(No symbol) [0x0x7ff6801c3344]
+	(No symbol) [0x0x7ff6801c3493]
+	(No symbol) [0x0x7ff6801b4f36]
+	BaseThreadInitThunk [0x0x7fffa6d653e0+16]
+	RtlUserThreadStart [0x0x7fffa752485b+43]
+
+2025-09-08 08:31:49,349 - WARNING - ❌ Failed to extract data from card 5
+2025-09-08 08:31:49,350 - INFO - 🔍 Processing job card 6/20
+2025-09-08 08:31:49,382 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-09-08 08:31:49,384 - ERROR - ❌ Job data extraction failed after 0.0s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=139.0.3405.125); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff680268c85+23461]
+	(No symbol) [0x0x7ff6801bcd70]
+	GetHandleVerifier [0x0x7ff6804e0bb8+2611928]
+	(No symbol) [0x0x7ff67ffa04d5]
+	(No symbol) [0x0x7ff67ff9f12f]
+	(No symbol) [0x0x7ff67ffa08db]
+	(No symbol) [0x0x7ff67ff942ca]
+	(No symbol) [0x0x7ff67ff9271d]
+	(No symbol) [0x0x7ff67ff960ac]
+	(No symbol) [0x0x7ff67ff9617f]
+	(No symbol) [0x0x7ff67ffd4c96]
+	(No symbol) [0x0x7ff67fffa6ba]
+	(No symbol) [0x0x7ff67ffcf58d]
+	(No symbol) [0x0x7ff67ffcf44d]
+	(No symbol) [0x0x7ff67fffa980]
+	(No symbol) [0x0x7ff67ffcf58d]
+	(No symbol) [0x0x7ff68001754f]
+	(No symbol) [0x0x7ff67fffa423]
+	(No symbol) [0x0x7ff67ffcea86]
+	(No symbol) [0x0x7ff67ffcdd11]
+	(No symbol) [0x0x7ff67ffce8b3]
+	(No symbol) [0x0x7ff6800ce6fd]
+	(No symbol) [0x0x7ff6800dba88]
+	GetHandleVerifier [0x0x7ff680348acb+940523]
+	GetHandleVerifier [0x0x7ff680351821+976705]
+	(No symbol) [0x0x7ff6801ca961]
+	(No symbol) [0x0x7ff6801c3344]
+	(No symbol) [0x0x7ff6801c3493]
+	(No symbol) [0x0x7ff6801b4f36]
+	BaseThreadInitThunk [0x0x7fffa6d653e0+16]
+	RtlUserThreadStart [0x0x7fffa752485b+43]
+
+2025-09-08 08:31:49,385 - WARNING - ❌ Failed to extract data from card 6
+2025-09-08 08:31:49,385 - INFO - 🔍 Processing job card 7/20
+2025-09-08 08:31:49,434 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-09-08 08:31:49,434 - ERROR - ❌ Job data extraction failed after 0.0s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=139.0.3405.125); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff680268c85+23461]
+	(No symbol) [0x0x7ff6801bcd70]
+	GetHandleVerifier [0x0x7ff6804e0bb8+2611928]
+	(No symbol) [0x0x7ff67ffa04d5]
+	(No symbol) [0x0x7ff67ff9f12f]
+	(No symbol) [0x0x7ff67ffa08db]
+	(No symbol) [0x0x7ff67ff942ca]
+	(No symbol) [0x0x7ff67ff9271d]
+	(No symbol) [0x0x7ff67ff960ac]
+	(No symbol) [0x0x7ff67ff9617f]
+	(No symbol) [0x0x7ff67ffd4c96]
+	(No symbol) [0x0x7ff67fffa6ba]
+	(No symbol) [0x0x7ff67ffcf58d]
+	(No symbol) [0x0x7ff67ffcf44d]
+	(No symbol) [0x0x7ff67fffa980]
+	(No symbol) [0x0x7ff67ffcf58d]
+	(No symbol) [0x0x7ff68001754f]
+	(No symbol) [0x0x7ff67fffa423]
+	(No symbol) [0x0x7ff67ffcea86]
+	(No symbol) [0x0x7ff67ffcdd11]
+	(No symbol) [0x0x7ff67ffce8b3]
+	(No symbol) [0x0x7ff6800ce6fd]
+	(No symbol) [0x0x7ff6800dba88]
+	GetHandleVerifier [0x0x7ff680348acb+940523]
+	GetHandleVerifier [0x0x7ff680351821+976705]
+	(No symbol) [0x0x7ff6801ca961]
+	(No symbol) [0x0x7ff6801c3344]
+	(No symbol) [0x0x7ff6801c3493]
+	(No symbol) [0x0x7ff6801b4f36]
+	BaseThreadInitThunk [0x0x7fffa6d653e0+16]
+	RtlUserThreadStart [0x0x7fffa752485b+43]
+
+2025-09-08 08:31:49,434 - WARNING - ❌ Failed to extract data from card 7
+2025-09-08 08:31:49,434 - INFO - 🔍 Processing job card 8/20
+2025-09-08 08:31:49,482 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-09-08 08:31:49,484 - ERROR - ❌ Job data extraction failed after 0.0s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=139.0.3405.125); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff680268c85+23461]
+	(No symbol) [0x0x7ff6801bcd70]
+	GetHandleVerifier [0x0x7ff6804e0bb8+2611928]
+	(No symbol) [0x0x7ff67ffa04d5]
+	(No symbol) [0x0x7ff67ff9f12f]
+	(No symbol) [0x0x7ff67ffa08db]
+	(No symbol) [0x0x7ff67ff942ca]
+	(No symbol) [0x0x7ff67ff9271d]
+	(No symbol) [0x0x7ff67ff960ac]
+	(No symbol) [0x0x7ff67ff9617f]
+	(No symbol) [0x0x7ff67ffd4c96]
+	(No symbol) [0x0x7ff67fffa6ba]
+	(No symbol) [0x0x7ff67ffcf58d]
+	(No symbol) [0x0x7ff67ffcf44d]
+	(No symbol) [0x0x7ff67fffa980]
+	(No symbol) [0x0x7ff67ffcf58d]
+	(No symbol) [0x0x7ff68001754f]
+	(No symbol) [0x0x7ff67fffa423]
+	(No symbol) [0x0x7ff67ffcea86]
+	(No symbol) [0x0x7ff67ffcdd11]
+	(No symbol) [0x0x7ff67ffce8b3]
+	(No symbol) [0x0x7ff6800ce6fd]
+	(No symbol) [0x0x7ff6800dba88]
+	GetHandleVerifier [0x0x7ff680348acb+940523]
+	GetHandleVerifier [0x0x7ff680351821+976705]
+	(No symbol) [0x0x7ff6801ca961]
+	(No symbol) [0x0x7ff6801c3344]
+	(No symbol) [0x0x7ff6801c3493]
+	(No symbol) [0x0x7ff6801b4f36]
+	BaseThreadInitThunk [0x0x7fffa6d653e0+16]
+	RtlUserThreadStart [0x0x7fffa752485b+43]
+
+2025-09-08 08:31:49,484 - WARNING - ❌ Failed to extract data from card 8
+2025-09-08 08:31:49,485 - INFO - 🔍 Processing job card 9/20
+2025-09-08 08:31:49,513 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-09-08 08:31:49,513 - ERROR - ❌ Job data extraction failed after 0.0s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=139.0.3405.125); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff680268c85+23461]
+	(No symbol) [0x0x7ff6801bcd70]
+	GetHandleVerifier [0x0x7ff6804e0bb8+2611928]
+	(No symbol) [0x0x7ff67ffa04d5]
+	(No symbol) [0x0x7ff67ff9f12f]
+	(No symbol) [0x0x7ff67ffa08db]
+	(No symbol) [0x0x7ff67ff942ca]
+	(No symbol) [0x0x7ff67ff9271d]
+	(No symbol) [0x0x7ff67ff960ac]
+	(No symbol) [0x0x7ff67ff9617f]
+	(No symbol) [0x0x7ff67ffd4c96]
+	(No symbol) [0x0x7ff67fffa6ba]
+	(No symbol) [0x0x7ff67ffcf58d]
+	(No symbol) [0x0x7ff67ffcf44d]
+	(No symbol) [0x0x7ff67fffa980]
+	(No symbol) [0x0x7ff67ffcf58d]
+	(No symbol) [0x0x7ff68001754f]
+	(No symbol) [0x0x7ff67fffa423]
+	(No symbol) [0x0x7ff67ffcea86]
+	(No symbol) [0x0x7ff67ffcdd11]
+	(No symbol) [0x0x7ff67ffce8b3]
+	(No symbol) [0x0x7ff6800ce6fd]
+	(No symbol) [0x0x7ff6800dba88]
+	GetHandleVerifier [0x0x7ff680348acb+940523]
+	GetHandleVerifier [0x0x7ff680351821+976705]
+	(No symbol) [0x0x7ff6801ca961]
+	(No symbol) [0x0x7ff6801c3344]
+	(No symbol) [0x0x7ff6801c3493]
+	(No symbol) [0x0x7ff6801b4f36]
+	BaseThreadInitThunk [0x0x7fffa6d653e0+16]
+	RtlUserThreadStart [0x0x7fffa752485b+43]
+
+2025-09-08 08:31:49,519 - WARNING - ❌ Failed to extract data from card 9
+2025-09-08 08:31:49,519 - INFO - 🔍 Processing job card 10/20
+2025-09-08 08:31:49,557 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-09-08 08:31:49,559 - ERROR - ❌ Job data extraction failed after 0.0s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=139.0.3405.125); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff680268c85+23461]
+	(No symbol) [0x0x7ff6801bcd70]
+	GetHandleVerifier [0x0x7ff6804e0bb8+2611928]
+	(No symbol) [0x0x7ff67ffa04d5]
+	(No symbol) [0x0x7ff67ff9f12f]
+	(No symbol) [0x0x7ff67ffa08db]
+	(No symbol) [0x0x7ff67ff942ca]
+	(No symbol) [0x0x7ff67ff9271d]
+	(No symbol) [0x0x7ff67ff960ac]
+	(No symbol) [0x0x7ff67ff9617f]
+	(No symbol) [0x0x7ff67ffd4c96]
+	(No symbol) [0x0x7ff67fffa6ba]
+	(No symbol) [0x0x7ff67ffcf58d]
+	(No symbol) [0x0x7ff67ffcf44d]
+	(No symbol) [0x0x7ff67fffa980]
+	(No symbol) [0x0x7ff67ffcf58d]
+	(No symbol) [0x0x7ff68001754f]
+	(No symbol) [0x0x7ff67fffa423]
+	(No symbol) [0x0x7ff67ffcea86]
+	(No symbol) [0x0x7ff67ffcdd11]
+	(No symbol) [0x0x7ff67ffce8b3]
+	(No symbol) [0x0x7ff6800ce6fd]
+	(No symbol) [0x0x7ff6800dba88]
+	GetHandleVerifier [0x0x7ff680348acb+940523]
+	GetHandleVerifier [0x0x7ff680351821+976705]
+	(No symbol) [0x0x7ff6801ca961]
+	(No symbol) [0x0x7ff6801c3344]
+	(No symbol) [0x0x7ff6801c3493]
+	(No symbol) [0x0x7ff6801b4f36]
+	BaseThreadInitThunk [0x0x7fffa6d653e0+16]
+	RtlUserThreadStart [0x0x7fffa752485b+43]
+
+2025-09-08 08:31:49,560 - WARNING - ❌ Failed to extract data from card 10
+2025-09-08 08:31:49,560 - INFO - 🔍 Processing job card 11/20
+2025-09-08 08:31:49,568 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-09-08 08:31:49,590 - ERROR - ❌ Job data extraction failed after 0.0s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=139.0.3405.125); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff680268c85+23461]
+	(No symbol) [0x0x7ff6801bcd70]
+	GetHandleVerifier [0x0x7ff6804e0bb8+2611928]
+	(No symbol) [0x0x7ff67ffa04d5]
+	(No symbol) [0x0x7ff67ff9f12f]
+	(No symbol) [0x0x7ff67ffa08db]
+	(No symbol) [0x0x7ff67ff942ca]
+	(No symbol) [0x0x7ff67ff9271d]
+	(No symbol) [0x0x7ff67ff960ac]
+	(No symbol) [0x0x7ff67ff9617f]
+	(No symbol) [0x0x7ff67ffd4c96]
+	(No symbol) [0x0x7ff67fffa6ba]
+	(No symbol) [0x0x7ff67ffcf58d]
+	(No symbol) [0x0x7ff67ffcf44d]
+	(No symbol) [0x0x7ff67fffa980]
+	(No symbol) [0x0x7ff67ffcf58d]
+	(No symbol) [0x0x7ff68001754f]
+	(No symbol) [0x0x7ff67fffa423]
+	(No symbol) [0x0x7ff67ffcea86]
+	(No symbol) [0x0x7ff67ffcdd11]
+	(No symbol) [0x0x7ff67ffce8b3]
+	(No symbol) [0x0x7ff6800ce6fd]
+	(No symbol) [0x0x7ff6800dba88]
+	GetHandleVerifier [0x0x7ff680348acb+940523]
+	GetHandleVerifier [0x0x7ff680351821+976705]
+	(No symbol) [0x0x7ff6801ca961]
+	(No symbol) [0x0x7ff6801c3344]
+	(No symbol) [0x0x7ff6801c3493]
+	(No symbol) [0x0x7ff6801b4f36]
+	BaseThreadInitThunk [0x0x7fffa6d653e0+16]
+	RtlUserThreadStart [0x0x7fffa752485b+43]
+
+2025-09-08 08:31:49,591 - WARNING - ❌ Failed to extract data from card 11
+2025-09-08 08:31:49,591 - INFO - 🔍 Processing job card 12/20
+2025-09-08 08:31:49,640 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-09-08 08:31:49,642 - ERROR - ❌ Job data extraction failed after 0.1s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=139.0.3405.125); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff680268c85+23461]
+	(No symbol) [0x0x7ff6801bcd70]
+	GetHandleVerifier [0x0x7ff6804e0bb8+2611928]
+	(No symbol) [0x0x7ff67ffa04d5]
+	(No symbol) [0x0x7ff67ff9f12f]
+	(No symbol) [0x0x7ff67ffa08db]
+	(No symbol) [0x0x7ff67ff942ca]
+	(No symbol) [0x0x7ff67ff9271d]
+	(No symbol) [0x0x7ff67ff960ac]
+	(No symbol) [0x0x7ff67ff9617f]
+	(No symbol) [0x0x7ff67ffd4c96]
+	(No symbol) [0x0x7ff67fffa6ba]
+	(No symbol) [0x0x7ff67ffcf58d]
+	(No symbol) [0x0x7ff67ffcf44d]
+	(No symbol) [0x0x7ff67fffa980]
+	(No symbol) [0x0x7ff67ffcf58d]
+	(No symbol) [0x0x7ff68001754f]
+	(No symbol) [0x0x7ff67fffa423]
+	(No symbol) [0x0x7ff67ffcea86]
+	(No symbol) [0x0x7ff67ffcdd11]
+	(No symbol) [0x0x7ff67ffce8b3]
+	(No symbol) [0x0x7ff6800ce6fd]
+	(No symbol) [0x0x7ff6800dba88]
+	GetHandleVerifier [0x0x7ff680348acb+940523]
+	GetHandleVerifier [0x0x7ff680351821+976705]
+	(No symbol) [0x0x7ff6801ca961]
+	(No symbol) [0x0x7ff6801c3344]
+	(No symbol) [0x0x7ff6801c3493]
+	(No symbol) [0x0x7ff6801b4f36]
+	BaseThreadInitThunk [0x0x7fffa6d653e0+16]
+	RtlUserThreadStart [0x0x7fffa752485b+43]
+
+2025-09-08 08:31:49,643 - WARNING - ❌ Failed to extract data from card 12
+2025-09-08 08:31:49,643 - INFO - 🔍 Processing job card 13/20
+2025-09-08 08:31:49,677 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-09-08 08:31:49,681 - ERROR - ❌ Job data extraction failed after 0.0s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=139.0.3405.125); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff680268c85+23461]
+	(No symbol) [0x0x7ff6801bcd70]
+	GetHandleVerifier [0x0x7ff6804e0bb8+2611928]
+	(No symbol) [0x0x7ff67ffa04d5]
+	(No symbol) [0x0x7ff67ff9f12f]
+	(No symbol) [0x0x7ff67ffa08db]
+	(No symbol) [0x0x7ff67ff942ca]
+	(No symbol) [0x0x7ff67ff9271d]
+	(No symbol) [0x0x7ff67ff960ac]
+	(No symbol) [0x0x7ff67ff9617f]
+	(No symbol) [0x0x7ff67ffd4c96]
+	(No symbol) [0x0x7ff67fffa6ba]
+	(No symbol) [0x0x7ff67ffcf58d]
+	(No symbol) [0x0x7ff67ffcf44d]
+	(No symbol) [0x0x7ff67fffa980]
+	(No symbol) [0x0x7ff67ffcf58d]
+	(No symbol) [0x0x7ff68001754f]
+	(No symbol) [0x0x7ff67fffa423]
+	(No symbol) [0x0x7ff67ffcea86]
+	(No symbol) [0x0x7ff67ffcdd11]
+	(No symbol) [0x0x7ff67ffce8b3]
+	(No symbol) [0x0x7ff6800ce6fd]
+	(No symbol) [0x0x7ff6800dba88]
+	GetHandleVerifier [0x0x7ff680348acb+940523]
+	GetHandleVerifier [0x0x7ff680351821+976705]
+	(No symbol) [0x0x7ff6801ca961]
+	(No symbol) [0x0x7ff6801c3344]
+	(No symbol) [0x0x7ff6801c3493]
+	(No symbol) [0x0x7ff6801b4f36]
+	BaseThreadInitThunk [0x0x7fffa6d653e0+16]
+	RtlUserThreadStart [0x0x7fffa752485b+43]
+
+2025-09-08 08:31:49,682 - WARNING - ❌ Failed to extract data from card 13
+2025-09-08 08:31:49,682 - INFO - 🔍 Processing job card 14/20
+2025-09-08 08:31:49,729 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-09-08 08:31:49,731 - ERROR - ❌ Job data extraction failed after 0.0s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=139.0.3405.125); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff680268c85+23461]
+	(No symbol) [0x0x7ff6801bcd70]
+	GetHandleVerifier [0x0x7ff6804e0bb8+2611928]
+	(No symbol) [0x0x7ff67ffa04d5]
+	(No symbol) [0x0x7ff67ff9f12f]
+	(No symbol) [0x0x7ff67ffa08db]
+	(No symbol) [0x0x7ff67ff942ca]
+	(No symbol) [0x0x7ff67ff9271d]
+	(No symbol) [0x0x7ff67ff960ac]
+	(No symbol) [0x0x7ff67ff9617f]
+	(No symbol) [0x0x7ff67ffd4c96]
+	(No symbol) [0x0x7ff67fffa6ba]
+	(No symbol) [0x0x7ff67ffcf58d]
+	(No symbol) [0x0x7ff67ffcf44d]
+	(No symbol) [0x0x7ff67fffa980]
+	(No symbol) [0x0x7ff67ffcf58d]
+	(No symbol) [0x0x7ff68001754f]
+	(No symbol) [0x0x7ff67fffa423]
+	(No symbol) [0x0x7ff67ffcea86]
+	(No symbol) [0x0x7ff67ffcdd11]
+	(No symbol) [0x0x7ff67ffce8b3]
+	(No symbol) [0x0x7ff6800ce6fd]
+	(No symbol) [0x0x7ff6800dba88]
+	GetHandleVerifier [0x0x7ff680348acb+940523]
+	GetHandleVerifier [0x0x7ff680351821+976705]
+	(No symbol) [0x0x7ff6801ca961]
+	(No symbol) [0x0x7ff6801c3344]
+	(No symbol) [0x0x7ff6801c3493]
+	(No symbol) [0x0x7ff6801b4f36]
+	BaseThreadInitThunk [0x0x7fffa6d653e0+16]
+	RtlUserThreadStart [0x0x7fffa752485b+43]
+
+2025-09-08 08:31:49,731 - WARNING - ❌ Failed to extract data from card 14
+2025-09-08 08:31:49,731 - INFO - 🔍 Processing job card 15/20
+2025-09-08 08:31:49,763 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-09-08 08:31:49,763 - ERROR - ❌ Job data extraction failed after 0.0s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=139.0.3405.125); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff680268c85+23461]
+	(No symbol) [0x0x7ff6801bcd70]
+	GetHandleVerifier [0x0x7ff6804e0bb8+2611928]
+	(No symbol) [0x0x7ff67ffa04d5]
+	(No symbol) [0x0x7ff67ff9f12f]
+	(No symbol) [0x0x7ff67ffa08db]
+	(No symbol) [0x0x7ff67ff942ca]
+	(No symbol) [0x0x7ff67ff9271d]
+	(No symbol) [0x0x7ff67ff960ac]
+	(No symbol) [0x0x7ff67ff9617f]
+	(No symbol) [0x0x7ff67ffd4c96]
+	(No symbol) [0x0x7ff67fffa6ba]
+	(No symbol) [0x0x7ff67ffcf58d]
+	(No symbol) [0x0x7ff67ffcf44d]
+	(No symbol) [0x0x7ff67fffa980]
+	(No symbol) [0x0x7ff67ffcf58d]
+	(No symbol) [0x0x7ff68001754f]
+	(No symbol) [0x0x7ff67fffa423]
+	(No symbol) [0x0x7ff67ffcea86]
+	(No symbol) [0x0x7ff67ffcdd11]
+	(No symbol) [0x0x7ff67ffce8b3]
+	(No symbol) [0x0x7ff6800ce6fd]
+	(No symbol) [0x0x7ff6800dba88]
+	GetHandleVerifier [0x0x7ff680348acb+940523]
+	GetHandleVerifier [0x0x7ff680351821+976705]
+	(No symbol) [0x0x7ff6801ca961]
+	(No symbol) [0x0x7ff6801c3344]
+	(No symbol) [0x0x7ff6801c3493]
+	(No symbol) [0x0x7ff6801b4f36]
+	BaseThreadInitThunk [0x0x7fffa6d653e0+16]
+	RtlUserThreadStart [0x0x7fffa752485b+43]
+
+2025-09-08 08:31:49,767 - WARNING - ❌ Failed to extract data from card 15
+2025-09-08 08:31:49,767 - INFO - 🔍 Processing job card 16/20
+2025-09-08 08:31:49,807 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-09-08 08:31:49,809 - ERROR - ❌ Job data extraction failed after 0.0s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=139.0.3405.125); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff680268c85+23461]
+	(No symbol) [0x0x7ff6801bcd70]
+	GetHandleVerifier [0x0x7ff6804e0bb8+2611928]
+	(No symbol) [0x0x7ff67ffa04d5]
+	(No symbol) [0x0x7ff67ff9f12f]
+	(No symbol) [0x0x7ff67ffa08db]
+	(No symbol) [0x0x7ff67ff942ca]
+	(No symbol) [0x0x7ff67ff9271d]
+	(No symbol) [0x0x7ff67ff960ac]
+	(No symbol) [0x0x7ff67ff9617f]
+	(No symbol) [0x0x7ff67ffd4c96]
+	(No symbol) [0x0x7ff67fffa6ba]
+	(No symbol) [0x0x7ff67ffcf58d]
+	(No symbol) [0x0x7ff67ffcf44d]
+	(No symbol) [0x0x7ff67fffa980]
+	(No symbol) [0x0x7ff67ffcf58d]
+	(No symbol) [0x0x7ff68001754f]
+	(No symbol) [0x0x7ff67fffa423]
+	(No symbol) [0x0x7ff67ffcea86]
+	(No symbol) [0x0x7ff67ffcdd11]
+	(No symbol) [0x0x7ff67ffce8b3]
+	(No symbol) [0x0x7ff6800ce6fd]
+	(No symbol) [0x0x7ff6800dba88]
+	GetHandleVerifier [0x0x7ff680348acb+940523]
+	GetHandleVerifier [0x0x7ff680351821+976705]
+	(No symbol) [0x0x7ff6801ca961]
+	(No symbol) [0x0x7ff6801c3344]
+	(No symbol) [0x0x7ff6801c3493]
+	(No symbol) [0x0x7ff6801b4f36]
+	BaseThreadInitThunk [0x0x7fffa6d653e0+16]
+	RtlUserThreadStart [0x0x7fffa752485b+43]
+
+2025-09-08 08:31:49,810 - WARNING - ❌ Failed to extract data from card 16
+2025-09-08 08:31:49,810 - INFO - 🔍 Processing job card 17/20
+2025-09-08 08:31:49,835 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-09-08 08:31:49,844 - ERROR - ❌ Job data extraction failed after 0.0s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=139.0.3405.125); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff680268c85+23461]
+	(No symbol) [0x0x7ff6801bcd70]
+	GetHandleVerifier [0x0x7ff6804e0bb8+2611928]
+	(No symbol) [0x0x7ff67ffa04d5]
+	(No symbol) [0x0x7ff67ff9f12f]
+	(No symbol) [0x0x7ff67ffa08db]
+	(No symbol) [0x0x7ff67ff942ca]
+	(No symbol) [0x0x7ff67ff9271d]
+	(No symbol) [0x0x7ff67ff960ac]
+	(No symbol) [0x0x7ff67ff9617f]
+	(No symbol) [0x0x7ff67ffd4c96]
+	(No symbol) [0x0x7ff67fffa6ba]
+	(No symbol) [0x0x7ff67ffcf58d]
+	(No symbol) [0x0x7ff67ffcf44d]
+	(No symbol) [0x0x7ff67fffa980]
+	(No symbol) [0x0x7ff67ffcf58d]
+	(No symbol) [0x0x7ff68001754f]
+	(No symbol) [0x0x7ff67fffa423]
+	(No symbol) [0x0x7ff67ffcea86]
+	(No symbol) [0x0x7ff67ffcdd11]
+	(No symbol) [0x0x7ff67ffce8b3]
+	(No symbol) [0x0x7ff6800ce6fd]
+	(No symbol) [0x0x7ff6800dba88]
+	GetHandleVerifier [0x0x7ff680348acb+940523]
+	GetHandleVerifier [0x0x7ff680351821+976705]
+	(No symbol) [0x0x7ff6801ca961]
+	(No symbol) [0x0x7ff6801c3344]
+	(No symbol) [0x0x7ff6801c3493]
+	(No symbol) [0x0x7ff6801b4f36]
+	BaseThreadInitThunk [0x0x7fffa6d653e0+16]
+	RtlUserThreadStart [0x0x7fffa752485b+43]
+
+2025-09-08 08:31:49,845 - WARNING - ❌ Failed to extract data from card 17
+2025-09-08 08:31:49,845 - INFO - 🔍 Processing job card 18/20
+2025-09-08 08:31:49,896 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-09-08 08:31:49,896 - ERROR - ❌ Job data extraction failed after 0.1s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=139.0.3405.125); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff680268c85+23461]
+	(No symbol) [0x0x7ff6801bcd70]
+	GetHandleVerifier [0x0x7ff6804e0bb8+2611928]
+	(No symbol) [0x0x7ff67ffa04d5]
+	(No symbol) [0x0x7ff67ff9f12f]
+	(No symbol) [0x0x7ff67ffa08db]
+	(No symbol) [0x0x7ff67ff942ca]
+	(No symbol) [0x0x7ff67ff9271d]
+	(No symbol) [0x0x7ff67ff960ac]
+	(No symbol) [0x0x7ff67ff9617f]
+	(No symbol) [0x0x7ff67ffd4c96]
+	(No symbol) [0x0x7ff67fffa6ba]
+	(No symbol) [0x0x7ff67ffcf58d]
+	(No symbol) [0x0x7ff67ffcf44d]
+	(No symbol) [0x0x7ff67fffa980]
+	(No symbol) [0x0x7ff67ffcf58d]
+	(No symbol) [0x0x7ff68001754f]
+	(No symbol) [0x0x7ff67fffa423]
+	(No symbol) [0x0x7ff67ffcea86]
+	(No symbol) [0x0x7ff67ffcdd11]
+	(No symbol) [0x0x7ff67ffce8b3]
+	(No symbol) [0x0x7ff6800ce6fd]
+	(No symbol) [0x0x7ff6800dba88]
+	GetHandleVerifier [0x0x7ff680348acb+940523]
+	GetHandleVerifier [0x0x7ff680351821+976705]
+	(No symbol) [0x0x7ff6801ca961]
+	(No symbol) [0x0x7ff6801c3344]
+	(No symbol) [0x0x7ff6801c3493]
+	(No symbol) [0x0x7ff6801b4f36]
+	BaseThreadInitThunk [0x0x7fffa6d653e0+16]
+	RtlUserThreadStart [0x0x7fffa752485b+43]
+
+2025-09-08 08:31:49,896 - WARNING - ❌ Failed to extract data from card 18
+2025-09-08 08:31:49,896 - INFO - 🔍 Processing job card 19/20
+2025-09-08 08:31:49,937 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-09-08 08:31:49,937 - ERROR - ❌ Job data extraction failed after 0.0s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=139.0.3405.125); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff680268c85+23461]
+	(No symbol) [0x0x7ff6801bcd70]
+	GetHandleVerifier [0x0x7ff6804e0bb8+2611928]
+	(No symbol) [0x0x7ff67ffa04d5]
+	(No symbol) [0x0x7ff67ff9f12f]
+	(No symbol) [0x0x7ff67ffa08db]
+	(No symbol) [0x0x7ff67ff942ca]
+	(No symbol) [0x0x7ff67ff9271d]
+	(No symbol) [0x0x7ff67ff960ac]
+	(No symbol) [0x0x7ff67ff9617f]
+	(No symbol) [0x0x7ff67ffd4c96]
+	(No symbol) [0x0x7ff67fffa6ba]
+	(No symbol) [0x0x7ff67ffcf58d]
+	(No symbol) [0x0x7ff67ffcf44d]
+	(No symbol) [0x0x7ff67fffa980]
+	(No symbol) [0x0x7ff67ffcf58d]
+	(No symbol) [0x0x7ff68001754f]
+	(No symbol) [0x0x7ff67fffa423]
+	(No symbol) [0x0x7ff67ffcea86]
+	(No symbol) [0x0x7ff67ffcdd11]
+	(No symbol) [0x0x7ff67ffce8b3]
+	(No symbol) [0x0x7ff6800ce6fd]
+	(No symbol) [0x0x7ff6800dba88]
+	GetHandleVerifier [0x0x7ff680348acb+940523]
+	GetHandleVerifier [0x0x7ff680351821+976705]
+	(No symbol) [0x0x7ff6801ca961]
+	(No symbol) [0x0x7ff6801c3344]
+	(No symbol) [0x0x7ff6801c3493]
+	(No symbol) [0x0x7ff6801b4f36]
+	BaseThreadInitThunk [0x0x7fffa6d653e0+16]
+	RtlUserThreadStart [0x0x7fffa752485b+43]
+
+2025-09-08 08:31:49,937 - WARNING - ❌ Failed to extract data from card 19
+2025-09-08 08:31:49,937 - INFO - 🔍 Processing job card 20/20
+2025-09-08 08:31:50,053 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-09-08 08:31:50,069 - ERROR - ❌ Job data extraction failed after 0.1s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=139.0.3405.125); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff680268c85+23461]
+	(No symbol) [0x0x7ff6801bcd70]
+	GetHandleVerifier [0x0x7ff6804e0bb8+2611928]
+	(No symbol) [0x0x7ff67ffa04d5]
+	(No symbol) [0x0x7ff67ff9f12f]
+	(No symbol) [0x0x7ff67ffa08db]
+	(No symbol) [0x0x7ff67ff942ca]
+	(No symbol) [0x0x7ff67ff9271d]
+	(No symbol) [0x0x7ff67ff960ac]
+	(No symbol) [0x0x7ff67ff9617f]
+	(No symbol) [0x0x7ff67ffd4c96]
+	(No symbol) [0x0x7ff67fffa6ba]
+	(No symbol) [0x0x7ff67ffcf58d]
+	(No symbol) [0x0x7ff67ffcf44d]
+	(No symbol) [0x0x7ff67fffa980]
+	(No symbol) [0x0x7ff67ffcf58d]
+	(No symbol) [0x0x7ff68001754f]
+	(No symbol) [0x0x7ff67fffa423]
+	(No symbol) [0x0x7ff67ffcea86]
+	(No symbol) [0x0x7ff67ffcdd11]
+	(No symbol) [0x0x7ff67ffce8b3]
+	(No symbol) [0x0x7ff6800ce6fd]
+	(No symbol) [0x0x7ff6800dba88]
+	GetHandleVerifier [0x0x7ff680348acb+940523]
+	GetHandleVerifier [0x0x7ff680351821+976705]
+	(No symbol) [0x0x7ff6801ca961]
+	(No symbol) [0x0x7ff6801c3344]
+	(No symbol) [0x0x7ff6801c3493]
+	(No symbol) [0x0x7ff6801b4f36]
+	BaseThreadInitThunk [0x0x7fffa6d653e0+16]
+	RtlUserThreadStart [0x0x7fffa752485b+43]
+
+2025-09-08 08:31:50,069 - WARNING - ❌ Failed to extract data from card 20
+2025-09-08 08:31:50,069 - INFO - Page 2/2: https://www.naukri.com/data-engineer-jobs-in-bengaluru-2
+2025-09-08 08:31:58,795 - INFO - Found 20 job cards on page
+2025-09-08 08:31:58,805 - INFO - 🔍 Processing job card 1/20
+2025-09-08 08:32:13,866 - WARNING - ⏰ Company extraction timeout
+2025-09-08 08:32:13,881 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-09-08 08:32:13,911 - INFO - ✅ Extracted: Data engineer at Company Name
+2025-09-08 08:32:13,911 - INFO - 🤖 AI Analysis: Data engineer scored 70/100
+2025-09-08 08:32:13,911 - INFO - ⭐ HIGH SCORE JOB: Data engineer | Score: 70/100
+2025-09-08 08:38:09,137 - INFO - ✅ Successfully applied to: Data engineer
+2025-09-08 08:38:09,138 - INFO - ✅ Application #2 sent successfully!
+2025-09-08 08:38:12,588 - INFO - 🔍 Processing job card 2/20
+2025-09-08 08:38:15,756 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-09-08 08:38:16,965 - ERROR - ❌ Job data extraction failed after 4.2s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=139.0.3405.125); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff680268c85+23461]
+	(No symbol) [0x0x7ff6801bcd70]
+	GetHandleVerifier [0x0x7ff6804e0bb8+2611928]
+	(No symbol) [0x0x7ff67ffa04d5]
+	(No symbol) [0x0x7ff67ff9f12f]
+	(No symbol) [0x0x7ff67ffa08db]
+	(No symbol) [0x0x7ff67ff942ca]
+	(No symbol) [0x0x7ff67ff9271d]
+	(No symbol) [0x0x7ff67ff960ac]
+	(No symbol) [0x0x7ff67ff9617f]
+	(No symbol) [0x0x7ff67ffd4c96]
+	(No symbol) [0x0x7ff67fffa6ba]
+	(No symbol) [0x0x7ff67ffcf58d]
+	(No symbol) [0x0x7ff67ffcf44d]
+	(No symbol) [0x0x7ff67fffa980]
+	(No symbol) [0x0x7ff67ffcf58d]
+	(No symbol) [0x0x7ff68001754f]
+	(No symbol) [0x0x7ff67fffa423]
+	(No symbol) [0x0x7ff67ffcea86]
+	(No symbol) [0x0x7ff67ffcdd11]
+	(No symbol) [0x0x7ff67ffce8b3]
+	(No symbol) [0x0x7ff6800ce6fd]
+	(No symbol) [0x0x7ff6800dba88]
+	GetHandleVerifier [0x0x7ff680348acb+940523]
+	GetHandleVerifier [0x0x7ff680351821+976705]
+	(No symbol) [0x0x7ff6801ca961]
+	(No symbol) [0x0x7ff6801c3344]
+	(No symbol) [0x0x7ff6801c3493]
+	(No symbol) [0x0x7ff6801b4f36]
+	BaseThreadInitThunk [0x0x7fffa6d653e0+16]
+	RtlUserThreadStart [0x0x7fffa752485b+43]
+
+2025-09-08 08:38:16,967 - WARNING - ❌ Failed to extract data from card 2
+2025-09-08 08:38:16,967 - INFO - 🔍 Processing job card 3/20
+2025-09-08 08:38:27,414 - WARNING - ⏰ Company extraction timeout
+2025-09-08 08:38:27,914 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-09-08 08:38:28,604 - ERROR - ❌ Job data extraction failed after 11.6s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=139.0.3405.125); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff680268c85+23461]
+	(No symbol) [0x0x7ff6801bcd70]
+	GetHandleVerifier [0x0x7ff6804e0bb8+2611928]
+	(No symbol) [0x0x7ff67ffa04d5]
+	(No symbol) [0x0x7ff67ff9f12f]
+	(No symbol) [0x0x7ff67ffa08db]
+	(No symbol) [0x0x7ff67ff942ca]
+	(No symbol) [0x0x7ff67ff9271d]
+	(No symbol) [0x0x7ff67ff960ac]
+	(No symbol) [0x0x7ff67ff9617f]
+	(No symbol) [0x0x7ff67ffd4c96]
+	(No symbol) [0x0x7ff67fffa6ba]
+	(No symbol) [0x0x7ff67ffcf58d]
+	(No symbol) [0x0x7ff67ffcf44d]
+	(No symbol) [0x0x7ff67fffa980]
+	(No symbol) [0x0x7ff67ffcf58d]
+	(No symbol) [0x0x7ff68001754f]
+	(No symbol) [0x0x7ff67fffa423]
+	(No symbol) [0x0x7ff67ffcea86]
+	(No symbol) [0x0x7ff67ffcdd11]
+	(No symbol) [0x0x7ff67ffce8b3]
+	(No symbol) [0x0x7ff6800ce6fd]
+	(No symbol) [0x0x7ff6800dba88]
+	GetHandleVerifier [0x0x7ff680348acb+940523]
+	GetHandleVerifier [0x0x7ff680351821+976705]
+	(No symbol) [0x0x7ff6801ca961]
+	(No symbol) [0x0x7ff6801c3344]
+	(No symbol) [0x0x7ff6801c3493]
+	(No symbol) [0x0x7ff6801b4f36]
+	BaseThreadInitThunk [0x0x7fffa6d653e0+16]
+	RtlUserThreadStart [0x0x7fffa752485b+43]
+
+2025-09-08 08:38:28,679 - WARNING - ❌ Failed to extract data from card 3
+2025-09-08 08:38:28,765 - INFO - 🔍 Processing job card 4/20
+2025-09-08 08:38:31,829 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-09-08 08:38:31,929 - ERROR - ❌ Job data extraction failed after 3.0s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=139.0.3405.125); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff680268c85+23461]
+	(No symbol) [0x0x7ff6801bcd70]
+	GetHandleVerifier [0x0x7ff6804e0bb8+2611928]
+	(No symbol) [0x0x7ff67ffa04d5]
+	(No symbol) [0x0x7ff67ff9f12f]
+	(No symbol) [0x0x7ff67ffa08db]
+	(No symbol) [0x0x7ff67ff942ca]
+	(No symbol) [0x0x7ff67ff9271d]
+	(No symbol) [0x0x7ff67ff960ac]
+	(No symbol) [0x0x7ff67ff9617f]
+	(No symbol) [0x0x7ff67ffd4c96]
+	(No symbol) [0x0x7ff67fffa6ba]
+	(No symbol) [0x0x7ff67ffcf58d]
+	(No symbol) [0x0x7ff67ffcf44d]
+	(No symbol) [0x0x7ff67fffa980]
+	(No symbol) [0x0x7ff67ffcf58d]
+	(No symbol) [0x0x7ff68001754f]
+	(No symbol) [0x0x7ff67fffa423]
+	(No symbol) [0x0x7ff67ffcea86]
+	(No symbol) [0x0x7ff67ffcdd11]
+	(No symbol) [0x0x7ff67ffce8b3]
+	(No symbol) [0x0x7ff6800ce6fd]
+	(No symbol) [0x0x7ff6800dba88]
+	GetHandleVerifier [0x0x7ff680348acb+940523]
+	GetHandleVerifier [0x0x7ff680351821+976705]
+	(No symbol) [0x0x7ff6801ca961]
+	(No symbol) [0x0x7ff6801c3344]
+	(No symbol) [0x0x7ff6801c3493]
+	(No symbol) [0x0x7ff6801b4f36]
+	BaseThreadInitThunk [0x0x7fffa6d653e0+16]
+	RtlUserThreadStart [0x0x7fffa752485b+43]
+
+2025-09-08 08:38:31,982 - WARNING - ❌ Failed to extract data from card 4
+2025-09-08 08:38:32,024 - INFO - 🔍 Processing job card 5/20
+2025-09-08 08:38:39,454 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-09-08 08:38:39,486 - ERROR - ❌ Job data extraction failed after 7.4s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=139.0.3405.125); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff680268c85+23461]
+	(No symbol) [0x0x7ff6801bcd70]
+	GetHandleVerifier [0x0x7ff6804e0bb8+2611928]
+	(No symbol) [0x0x7ff67ffa04d5]
+	(No symbol) [0x0x7ff67ff9f12f]
+	(No symbol) [0x0x7ff67ffa08db]
+	(No symbol) [0x0x7ff67ff942ca]
+	(No symbol) [0x0x7ff67ff9271d]
+	(No symbol) [0x0x7ff67ff960ac]
+	(No symbol) [0x0x7ff67ff9617f]
+	(No symbol) [0x0x7ff67ffd4c96]
+	(No symbol) [0x0x7ff67fffa6ba]
+	(No symbol) [0x0x7ff67ffcf58d]
+	(No symbol) [0x0x7ff67ffcf44d]
+	(No symbol) [0x0x7ff67fffa980]
+	(No symbol) [0x0x7ff67ffcf58d]
+	(No symbol) [0x0x7ff68001754f]
+	(No symbol) [0x0x7ff67fffa423]
+	(No symbol) [0x0x7ff67ffcea86]
+	(No symbol) [0x0x7ff67ffcdd11]
+	(No symbol) [0x0x7ff67ffce8b3]
+	(No symbol) [0x0x7ff6800ce6fd]
+	(No symbol) [0x0x7ff6800dba88]
+	GetHandleVerifier [0x0x7ff680348acb+940523]
+	GetHandleVerifier [0x0x7ff680351821+976705]
+	(No symbol) [0x0x7ff6801ca961]
+	(No symbol) [0x0x7ff6801c3344]
+	(No symbol) [0x0x7ff6801c3493]
+	(No symbol) [0x0x7ff6801b4f36]
+	BaseThreadInitThunk [0x0x7fffa6d653e0+16]
+	RtlUserThreadStart [0x0x7fffa752485b+43]
+
+2025-09-08 08:38:39,830 - WARNING - ❌ Failed to extract data from card 5
+2025-09-08 08:38:40,008 - INFO - 🔍 Processing job card 6/20
+2025-09-08 08:38:40,169 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-09-08 08:38:40,246 - ERROR - ❌ Job data extraction failed after 0.1s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=139.0.3405.125); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff680268c85+23461]
+	(No symbol) [0x0x7ff6801bcd70]
+	GetHandleVerifier [0x0x7ff6804e0bb8+2611928]
+	(No symbol) [0x0x7ff67ffa04d5]
+	(No symbol) [0x0x7ff67ff9f12f]
+	(No symbol) [0x0x7ff67ffa08db]
+	(No symbol) [0x0x7ff67ff942ca]
+	(No symbol) [0x0x7ff67ff9271d]
+	(No symbol) [0x0x7ff67ff960ac]
+	(No symbol) [0x0x7ff67ff9617f]
+	(No symbol) [0x0x7ff67ffd4c96]
+	(No symbol) [0x0x7ff67fffa6ba]
+	(No symbol) [0x0x7ff67ffcf58d]
+	(No symbol) [0x0x7ff67ffcf44d]
+	(No symbol) [0x0x7ff67fffa980]
+	(No symbol) [0x0x7ff67ffcf58d]
+	(No symbol) [0x0x7ff68001754f]
+	(No symbol) [0x0x7ff67fffa423]
+	(No symbol) [0x0x7ff67ffcea86]
+	(No symbol) [0x0x7ff67ffcdd11]
+	(No symbol) [0x0x7ff67ffce8b3]
+	(No symbol) [0x0x7ff6800ce6fd]
+	(No symbol) [0x0x7ff6800dba88]
+	GetHandleVerifier [0x0x7ff680348acb+940523]
+	GetHandleVerifier [0x0x7ff680351821+976705]
+	(No symbol) [0x0x7ff6801ca961]
+	(No symbol) [0x0x7ff6801c3344]
+	(No symbol) [0x0x7ff6801c3493]
+	(No symbol) [0x0x7ff6801b4f36]
+	BaseThreadInitThunk [0x0x7fffa6d653e0+16]
+	RtlUserThreadStart [0x0x7fffa752485b+43]
+
+2025-09-08 08:38:40,403 - WARNING - ❌ Failed to extract data from card 6
+2025-09-08 08:38:40,571 - INFO - 🔍 Processing job card 7/20
+2025-09-08 08:38:40,777 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-09-08 08:38:40,862 - ERROR - ❌ Job data extraction failed after 0.2s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=139.0.3405.125); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff680268c85+23461]
+	(No symbol) [0x0x7ff6801bcd70]
+	GetHandleVerifier [0x0x7ff6804e0bb8+2611928]
+	(No symbol) [0x0x7ff67ffa04d5]
+	(No symbol) [0x0x7ff67ff9f12f]
+	(No symbol) [0x0x7ff67ffa08db]
+	(No symbol) [0x0x7ff67ff942ca]
+	(No symbol) [0x0x7ff67ff9271d]
+	(No symbol) [0x0x7ff67ff960ac]
+	(No symbol) [0x0x7ff67ff9617f]
+	(No symbol) [0x0x7ff67ffd4c96]
+	(No symbol) [0x0x7ff67fffa6ba]
+	(No symbol) [0x0x7ff67ffcf58d]
+	(No symbol) [0x0x7ff67ffcf44d]
+	(No symbol) [0x0x7ff67fffa980]
+	(No symbol) [0x0x7ff67ffcf58d]
+	(No symbol) [0x0x7ff68001754f]
+	(No symbol) [0x0x7ff67fffa423]
+	(No symbol) [0x0x7ff67ffcea86]
+	(No symbol) [0x0x7ff67ffcdd11]
+	(No symbol) [0x0x7ff67ffce8b3]
+	(No symbol) [0x0x7ff6800ce6fd]
+	(No symbol) [0x0x7ff6800dba88]
+	GetHandleVerifier [0x0x7ff680348acb+940523]
+	GetHandleVerifier [0x0x7ff680351821+976705]
+	(No symbol) [0x0x7ff6801ca961]
+	(No symbol) [0x0x7ff6801c3344]
+	(No symbol) [0x0x7ff6801c3493]
+	(No symbol) [0x0x7ff6801b4f36]
+	BaseThreadInitThunk [0x0x7fffa6d653e0+16]
+	RtlUserThreadStart [0x0x7fffa752485b+43]
+
+2025-09-08 08:38:40,946 - WARNING - ❌ Failed to extract data from card 7
+2025-09-08 08:38:41,014 - INFO - 🔍 Processing job card 8/20
+2025-09-08 08:38:42,106 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-09-08 08:38:42,357 - ERROR - ❌ Job data extraction failed after 1.2s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=139.0.3405.125); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff680268c85+23461]
+	(No symbol) [0x0x7ff6801bcd70]
+	GetHandleVerifier [0x0x7ff6804e0bb8+2611928]
+	(No symbol) [0x0x7ff67ffa04d5]
+	(No symbol) [0x0x7ff67ff9f12f]
+	(No symbol) [0x0x7ff67ffa08db]
+	(No symbol) [0x0x7ff67ff942ca]
+	(No symbol) [0x0x7ff67ff9271d]
+	(No symbol) [0x0x7ff67ff960ac]
+	(No symbol) [0x0x7ff67ff9617f]
+	(No symbol) [0x0x7ff67ffd4c96]
+	(No symbol) [0x0x7ff67fffa6ba]
+	(No symbol) [0x0x7ff67ffcf58d]
+	(No symbol) [0x0x7ff67ffcf44d]
+	(No symbol) [0x0x7ff67fffa980]
+	(No symbol) [0x0x7ff67ffcf58d]
+	(No symbol) [0x0x7ff68001754f]
+	(No symbol) [0x0x7ff67fffa423]
+	(No symbol) [0x0x7ff67ffcea86]
+	(No symbol) [0x0x7ff67ffcdd11]
+	(No symbol) [0x0x7ff67ffce8b3]
+	(No symbol) [0x0x7ff6800ce6fd]
+	(No symbol) [0x0x7ff6800dba88]
+	GetHandleVerifier [0x0x7ff680348acb+940523]
+	GetHandleVerifier [0x0x7ff680351821+976705]
+	(No symbol) [0x0x7ff6801ca961]
+	(No symbol) [0x0x7ff6801c3344]
+	(No symbol) [0x0x7ff6801c3493]
+	(No symbol) [0x0x7ff6801b4f36]
+	BaseThreadInitThunk [0x0x7fffa6d653e0+16]
+	RtlUserThreadStart [0x0x7fffa752485b+43]
+
+2025-09-08 08:38:42,570 - WARNING - ❌ Failed to extract data from card 8
+2025-09-08 08:38:42,735 - INFO - 🔍 Processing job card 9/20
+2025-09-08 08:38:55,804 - WARNING - ⏰ Title extraction timeout
+2025-09-08 08:38:55,900 - WARNING - ⏰ Company extraction timeout
+2025-09-08 08:38:56,396 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-09-08 08:38:56,851 - ERROR - ❌ Job data extraction failed after 14.1s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=139.0.3405.125); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff680268c85+23461]
+	(No symbol) [0x0x7ff6801bcd70]
+	GetHandleVerifier [0x0x7ff6804e0bb8+2611928]
+	(No symbol) [0x0x7ff67ffa04d5]
+	(No symbol) [0x0x7ff67ff9f12f]
+	(No symbol) [0x0x7ff67ffa08db]
+	(No symbol) [0x0x7ff67ff942ca]
+	(No symbol) [0x0x7ff67ff9271d]
+	(No symbol) [0x0x7ff67ff960ac]
+	(No symbol) [0x0x7ff67ff9617f]
+	(No symbol) [0x0x7ff67ffd4c96]
+	(No symbol) [0x0x7ff67fffa6ba]
+	(No symbol) [0x0x7ff67ffcf58d]
+	(No symbol) [0x0x7ff67ffcf44d]
+	(No symbol) [0x0x7ff67fffa980]
+	(No symbol) [0x0x7ff67ffcf58d]
+	(No symbol) [0x0x7ff68001754f]
+	(No symbol) [0x0x7ff67fffa423]
+	(No symbol) [0x0x7ff67ffcea86]
+	(No symbol) [0x0x7ff67ffcdd11]
+	(No symbol) [0x0x7ff67ffce8b3]
+	(No symbol) [0x0x7ff6800ce6fd]
+	(No symbol) [0x0x7ff6800dba88]
+	GetHandleVerifier [0x0x7ff680348acb+940523]
+	GetHandleVerifier [0x0x7ff680351821+976705]
+	(No symbol) [0x0x7ff6801ca961]
+	(No symbol) [0x0x7ff6801c3344]
+	(No symbol) [0x0x7ff6801c3493]
+	(No symbol) [0x0x7ff6801b4f36]
+	BaseThreadInitThunk [0x0x7fffa6d653e0+16]
+	RtlUserThreadStart [0x0x7fffa752485b+43]
+
+2025-09-08 08:38:56,894 - WARNING - ❌ Failed to extract data from card 9
+2025-09-08 08:38:56,895 - INFO - 🔍 Processing job card 10/20
+2025-09-08 08:38:57,226 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-09-08 08:38:57,316 - ERROR - ❌ Job data extraction failed after 0.2s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=139.0.3405.125); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff680268c85+23461]
+	(No symbol) [0x0x7ff6801bcd70]
+	GetHandleVerifier [0x0x7ff6804e0bb8+2611928]
+	(No symbol) [0x0x7ff67ffa04d5]
+	(No symbol) [0x0x7ff67ff9f12f]
+	(No symbol) [0x0x7ff67ffa08db]
+	(No symbol) [0x0x7ff67ff942ca]
+	(No symbol) [0x0x7ff67ff9271d]
+	(No symbol) [0x0x7ff67ff960ac]
+	(No symbol) [0x0x7ff67ff9617f]
+	(No symbol) [0x0x7ff67ffd4c96]
+	(No symbol) [0x0x7ff67fffa6ba]
+	(No symbol) [0x0x7ff67ffcf58d]
+	(No symbol) [0x0x7ff67ffcf44d]
+	(No symbol) [0x0x7ff67fffa980]
+	(No symbol) [0x0x7ff67ffcf58d]
+	(No symbol) [0x0x7ff68001754f]
+	(No symbol) [0x0x7ff67fffa423]
+	(No symbol) [0x0x7ff67ffcea86]
+	(No symbol) [0x0x7ff67ffcdd11]
+	(No symbol) [0x0x7ff67ffce8b3]
+	(No symbol) [0x0x7ff6800ce6fd]
+	(No symbol) [0x0x7ff6800dba88]
+	GetHandleVerifier [0x0x7ff680348acb+940523]
+	GetHandleVerifier [0x0x7ff680351821+976705]
+	(No symbol) [0x0x7ff6801ca961]
+	(No symbol) [0x0x7ff6801c3344]
+	(No symbol) [0x0x7ff6801c3493]
+	(No symbol) [0x0x7ff6801b4f36]
+	BaseThreadInitThunk [0x0x7fffa6d653e0+16]
+	RtlUserThreadStart [0x0x7fffa752485b+43]
+
+2025-09-08 08:38:57,414 - WARNING - ❌ Failed to extract data from card 10
+2025-09-08 08:38:57,620 - INFO - 🔍 Processing job card 11/20
+2025-09-08 08:38:58,281 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-09-08 08:38:58,630 - ERROR - ❌ Job data extraction failed after 0.5s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=139.0.3405.125); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff680268c85+23461]
+	(No symbol) [0x0x7ff6801bcd70]
+	GetHandleVerifier [0x0x7ff6804e0bb8+2611928]
+	(No symbol) [0x0x7ff67ffa04d5]
+	(No symbol) [0x0x7ff67ff9f12f]
+	(No symbol) [0x0x7ff67ffa08db]
+	(No symbol) [0x0x7ff67ff942ca]
+	(No symbol) [0x0x7ff67ff9271d]
+	(No symbol) [0x0x7ff67ff960ac]
+	(No symbol) [0x0x7ff67ff9617f]
+	(No symbol) [0x0x7ff67ffd4c96]
+	(No symbol) [0x0x7ff67fffa6ba]
+	(No symbol) [0x0x7ff67ffcf58d]
+	(No symbol) [0x0x7ff67ffcf44d]
+	(No symbol) [0x0x7ff67fffa980]
+	(No symbol) [0x0x7ff67ffcf58d]
+	(No symbol) [0x0x7ff68001754f]
+	(No symbol) [0x0x7ff67fffa423]
+	(No symbol) [0x0x7ff67ffcea86]
+	(No symbol) [0x0x7ff67ffcdd11]
+	(No symbol) [0x0x7ff67ffce8b3]
+	(No symbol) [0x0x7ff6800ce6fd]
+	(No symbol) [0x0x7ff6800dba88]
+	GetHandleVerifier [0x0x7ff680348acb+940523]
+	GetHandleVerifier [0x0x7ff680351821+976705]
+	(No symbol) [0x0x7ff6801ca961]
+	(No symbol) [0x0x7ff6801c3344]
+	(No symbol) [0x0x7ff6801c3493]
+	(No symbol) [0x0x7ff6801b4f36]
+	BaseThreadInitThunk [0x0x7fffa6d653e0+16]
+	RtlUserThreadStart [0x0x7fffa752485b+43]
+
+2025-09-08 08:38:59,150 - WARNING - ❌ Failed to extract data from card 11
+2025-09-08 08:38:59,150 - INFO - 🔍 Processing job card 12/20
+2025-09-08 08:39:00,037 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-09-08 08:39:00,074 - ERROR - ❌ Job data extraction failed after 0.9s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=139.0.3405.125); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff680268c85+23461]
+	(No symbol) [0x0x7ff6801bcd70]
+	GetHandleVerifier [0x0x7ff6804e0bb8+2611928]
+	(No symbol) [0x0x7ff67ffa04d5]
+	(No symbol) [0x0x7ff67ff9f12f]
+	(No symbol) [0x0x7ff67ffa08db]
+	(No symbol) [0x0x7ff67ff942ca]
+	(No symbol) [0x0x7ff67ff9271d]
+	(No symbol) [0x0x7ff67ff960ac]
+	(No symbol) [0x0x7ff67ff9617f]
+	(No symbol) [0x0x7ff67ffd4c96]
+	(No symbol) [0x0x7ff67fffa6ba]
+	(No symbol) [0x0x7ff67ffcf58d]
+	(No symbol) [0x0x7ff67ffcf44d]
+	(No symbol) [0x0x7ff67fffa980]
+	(No symbol) [0x0x7ff67ffcf58d]
+	(No symbol) [0x0x7ff68001754f]
+	(No symbol) [0x0x7ff67fffa423]
+	(No symbol) [0x0x7ff67ffcea86]
+	(No symbol) [0x0x7ff67ffcdd11]
+	(No symbol) [0x0x7ff67ffce8b3]
+	(No symbol) [0x0x7ff6800ce6fd]
+	(No symbol) [0x0x7ff6800dba88]
+	GetHandleVerifier [0x0x7ff680348acb+940523]
+	GetHandleVerifier [0x0x7ff680351821+976705]
+	(No symbol) [0x0x7ff6801ca961]
+	(No symbol) [0x0x7ff6801c3344]
+	(No symbol) [0x0x7ff6801c3493]
+	(No symbol) [0x0x7ff6801b4f36]
+	BaseThreadInitThunk [0x0x7fffa6d653e0+16]
+	RtlUserThreadStart [0x0x7fffa752485b+43]
+
+2025-09-08 08:39:00,075 - WARNING - ❌ Failed to extract data from card 12
+2025-09-08 08:39:00,076 - INFO - 🔍 Processing job card 13/20
+2025-09-08 08:39:15,877 - WARNING - ⏰ Title extraction timeout
+2025-09-08 08:39:15,953 - WARNING - ⏰ Company extraction timeout
+2025-09-08 08:39:16,335 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-09-08 08:39:16,945 - ERROR - ❌ Job data extraction failed after 16.9s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=139.0.3405.125); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff680268c85+23461]
+	(No symbol) [0x0x7ff6801bcd70]
+	GetHandleVerifier [0x0x7ff6804e0bb8+2611928]
+	(No symbol) [0x0x7ff67ffa04d5]
+	(No symbol) [0x0x7ff67ff9f12f]
+	(No symbol) [0x0x7ff67ffa08db]
+	(No symbol) [0x0x7ff67ff942ca]
+	(No symbol) [0x0x7ff67ff9271d]
+	(No symbol) [0x0x7ff67ff960ac]
+	(No symbol) [0x0x7ff67ff9617f]
+	(No symbol) [0x0x7ff67ffd4c96]
+	(No symbol) [0x0x7ff67fffa6ba]
+	(No symbol) [0x0x7ff67ffcf58d]
+	(No symbol) [0x0x7ff67ffcf44d]
+	(No symbol) [0x0x7ff67fffa980]
+	(No symbol) [0x0x7ff67ffcf58d]
+	(No symbol) [0x0x7ff68001754f]
+	(No symbol) [0x0x7ff67fffa423]
+	(No symbol) [0x0x7ff67ffcea86]
+	(No symbol) [0x0x7ff67ffcdd11]
+	(No symbol) [0x0x7ff67ffce8b3]
+	(No symbol) [0x0x7ff6800ce6fd]
+	(No symbol) [0x0x7ff6800dba88]
+	GetHandleVerifier [0x0x7ff680348acb+940523]
+	GetHandleVerifier [0x0x7ff680351821+976705]
+	(No symbol) [0x0x7ff6801ca961]
+	(No symbol) [0x0x7ff6801c3344]
+	(No symbol) [0x0x7ff6801c3493]
+	(No symbol) [0x0x7ff6801b4f36]
+	BaseThreadInitThunk [0x0x7fffa6d653e0+16]
+	RtlUserThreadStart [0x0x7fffa752485b+43]
+
+2025-09-08 08:39:16,946 - WARNING - ❌ Failed to extract data from card 13
+2025-09-08 08:39:16,947 - INFO - 🔍 Processing job card 14/20
+2025-09-08 08:39:19,138 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-09-08 08:39:19,301 - ERROR - ❌ Job data extraction failed after 2.4s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=139.0.3405.125); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff680268c85+23461]
+	(No symbol) [0x0x7ff6801bcd70]
+	GetHandleVerifier [0x0x7ff6804e0bb8+2611928]
+	(No symbol) [0x0x7ff67ffa04d5]
+	(No symbol) [0x0x7ff67ff9f12f]
+	(No symbol) [0x0x7ff67ffa08db]
+	(No symbol) [0x0x7ff67ff942ca]
+	(No symbol) [0x0x7ff67ff9271d]
+	(No symbol) [0x0x7ff67ff960ac]
+	(No symbol) [0x0x7ff67ff9617f]
+	(No symbol) [0x0x7ff67ffd4c96]
+	(No symbol) [0x0x7ff67fffa6ba]
+	(No symbol) [0x0x7ff67ffcf58d]
+	(No symbol) [0x0x7ff67ffcf44d]
+	(No symbol) [0x0x7ff67fffa980]
+	(No symbol) [0x0x7ff67ffcf58d]
+	(No symbol) [0x0x7ff68001754f]
+	(No symbol) [0x0x7ff67fffa423]
+	(No symbol) [0x0x7ff67ffcea86]
+	(No symbol) [0x0x7ff67ffcdd11]
+	(No symbol) [0x0x7ff67ffce8b3]
+	(No symbol) [0x0x7ff6800ce6fd]
+	(No symbol) [0x0x7ff6800dba88]
+	GetHandleVerifier [0x0x7ff680348acb+940523]
+	GetHandleVerifier [0x0x7ff680351821+976705]
+	(No symbol) [0x0x7ff6801ca961]
+	(No symbol) [0x0x7ff6801c3344]
+	(No symbol) [0x0x7ff6801c3493]
+	(No symbol) [0x0x7ff6801b4f36]
+	BaseThreadInitThunk [0x0x7fffa6d653e0+16]
+	RtlUserThreadStart [0x0x7fffa752485b+43]
+
+2025-09-08 08:39:19,303 - WARNING - ❌ Failed to extract data from card 14
+2025-09-08 08:39:19,303 - INFO - 🔍 Processing job card 15/20
+2025-09-08 08:39:28,634 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-09-08 08:39:28,853 - ERROR - ❌ Job data extraction failed after 9.5s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=139.0.3405.125); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff680268c85+23461]
+	(No symbol) [0x0x7ff6801bcd70]
+	GetHandleVerifier [0x0x7ff6804e0bb8+2611928]
+	(No symbol) [0x0x7ff67ffa04d5]
+	(No symbol) [0x0x7ff67ff9f12f]
+	(No symbol) [0x0x7ff67ffa08db]
+	(No symbol) [0x0x7ff67ff942ca]
+	(No symbol) [0x0x7ff67ff9271d]
+	(No symbol) [0x0x7ff67ff960ac]
+	(No symbol) [0x0x7ff67ff9617f]
+	(No symbol) [0x0x7ff67ffd4c96]
+	(No symbol) [0x0x7ff67fffa6ba]
+	(No symbol) [0x0x7ff67ffcf58d]
+	(No symbol) [0x0x7ff67ffcf44d]
+	(No symbol) [0x0x7ff67fffa980]
+	(No symbol) [0x0x7ff67ffcf58d]
+	(No symbol) [0x0x7ff68001754f]
+	(No symbol) [0x0x7ff67fffa423]
+	(No symbol) [0x0x7ff67ffcea86]
+	(No symbol) [0x0x7ff67ffcdd11]
+	(No symbol) [0x0x7ff67ffce8b3]
+	(No symbol) [0x0x7ff6800ce6fd]
+	(No symbol) [0x0x7ff6800dba88]
+	GetHandleVerifier [0x0x7ff680348acb+940523]
+	GetHandleVerifier [0x0x7ff680351821+976705]
+	(No symbol) [0x0x7ff6801ca961]
+	(No symbol) [0x0x7ff6801c3344]
+	(No symbol) [0x0x7ff6801c3493]
+	(No symbol) [0x0x7ff6801b4f36]
+	BaseThreadInitThunk [0x0x7fffa6d653e0+16]
+	RtlUserThreadStart [0x0x7fffa752485b+43]
+
+2025-09-08 08:39:28,943 - WARNING - ❌ Failed to extract data from card 15
+2025-09-08 08:39:29,039 - INFO - 🔍 Processing job card 16/20
+2025-09-08 08:39:29,170 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-09-08 08:39:29,174 - ERROR - ❌ Job data extraction failed after 0.1s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=139.0.3405.125); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff680268c85+23461]
+	(No symbol) [0x0x7ff6801bcd70]
+	GetHandleVerifier [0x0x7ff6804e0bb8+2611928]
+	(No symbol) [0x0x7ff67ffa04d5]
+	(No symbol) [0x0x7ff67ff9f12f]
+	(No symbol) [0x0x7ff67ffa08db]
+	(No symbol) [0x0x7ff67ff942ca]
+	(No symbol) [0x0x7ff67ff9271d]
+	(No symbol) [0x0x7ff67ff960ac]
+	(No symbol) [0x0x7ff67ff9617f]
+	(No symbol) [0x0x7ff67ffd4c96]
+	(No symbol) [0x0x7ff67fffa6ba]
+	(No symbol) [0x0x7ff67ffcf58d]
+	(No symbol) [0x0x7ff67ffcf44d]
+	(No symbol) [0x0x7ff67fffa980]
+	(No symbol) [0x0x7ff67ffcf58d]
+	(No symbol) [0x0x7ff68001754f]
+	(No symbol) [0x0x7ff67fffa423]
+	(No symbol) [0x0x7ff67ffcea86]
+	(No symbol) [0x0x7ff67ffcdd11]
+	(No symbol) [0x0x7ff67ffce8b3]
+	(No symbol) [0x0x7ff6800ce6fd]
+	(No symbol) [0x0x7ff6800dba88]
+	GetHandleVerifier [0x0x7ff680348acb+940523]
+	GetHandleVerifier [0x0x7ff680351821+976705]
+	(No symbol) [0x0x7ff6801ca961]
+	(No symbol) [0x0x7ff6801c3344]
+	(No symbol) [0x0x7ff6801c3493]
+	(No symbol) [0x0x7ff6801b4f36]
+	BaseThreadInitThunk [0x0x7fffa6d653e0+16]
+	RtlUserThreadStart [0x0x7fffa752485b+43]
+
+2025-09-08 08:39:29,297 - WARNING - ❌ Failed to extract data from card 16
+2025-09-08 08:39:29,377 - INFO - 🔍 Processing job card 17/20
+2025-09-08 08:39:29,585 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-09-08 08:39:29,644 - ERROR - ❌ Job data extraction failed after 0.2s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=139.0.3405.125); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff680268c85+23461]
+	(No symbol) [0x0x7ff6801bcd70]
+	GetHandleVerifier [0x0x7ff6804e0bb8+2611928]
+	(No symbol) [0x0x7ff67ffa04d5]
+	(No symbol) [0x0x7ff67ff9f12f]
+	(No symbol) [0x0x7ff67ffa08db]
+	(No symbol) [0x0x7ff67ff942ca]
+	(No symbol) [0x0x7ff67ff9271d]
+	(No symbol) [0x0x7ff67ff960ac]
+	(No symbol) [0x0x7ff67ff9617f]
+	(No symbol) [0x0x7ff67ffd4c96]
+	(No symbol) [0x0x7ff67fffa6ba]
+	(No symbol) [0x0x7ff67ffcf58d]
+	(No symbol) [0x0x7ff67ffcf44d]
+	(No symbol) [0x0x7ff67fffa980]
+	(No symbol) [0x0x7ff67ffcf58d]
+	(No symbol) [0x0x7ff68001754f]
+	(No symbol) [0x0x7ff67fffa423]
+	(No symbol) [0x0x7ff67ffcea86]
+	(No symbol) [0x0x7ff67ffcdd11]
+	(No symbol) [0x0x7ff67ffce8b3]
+	(No symbol) [0x0x7ff6800ce6fd]
+	(No symbol) [0x0x7ff6800dba88]
+	GetHandleVerifier [0x0x7ff680348acb+940523]
+	GetHandleVerifier [0x0x7ff680351821+976705]
+	(No symbol) [0x0x7ff6801ca961]
+	(No symbol) [0x0x7ff6801c3344]
+	(No symbol) [0x0x7ff6801c3493]
+	(No symbol) [0x0x7ff6801b4f36]
+	BaseThreadInitThunk [0x0x7fffa6d653e0+16]
+	RtlUserThreadStart [0x0x7fffa752485b+43]
+
+2025-09-08 08:39:29,771 - WARNING - ❌ Failed to extract data from card 17
+2025-09-08 08:39:29,904 - INFO - 🔍 Processing job card 18/20
+2025-09-08 08:39:30,853 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-09-08 08:39:31,720 - ERROR - ❌ Job data extraction failed after 1.7s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=139.0.3405.125); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff680268c85+23461]
+	(No symbol) [0x0x7ff6801bcd70]
+	GetHandleVerifier [0x0x7ff6804e0bb8+2611928]
+	(No symbol) [0x0x7ff67ffa04d5]
+	(No symbol) [0x0x7ff67ff9f12f]
+	(No symbol) [0x0x7ff67ffa08db]
+	(No symbol) [0x0x7ff67ff942ca]
+	(No symbol) [0x0x7ff67ff9271d]
+	(No symbol) [0x0x7ff67ff960ac]
+	(No symbol) [0x0x7ff67ff9617f]
+	(No symbol) [0x0x7ff67ffd4c96]
+	(No symbol) [0x0x7ff67fffa6ba]
+	(No symbol) [0x0x7ff67ffcf58d]
+	(No symbol) [0x0x7ff67ffcf44d]
+	(No symbol) [0x0x7ff67fffa980]
+	(No symbol) [0x0x7ff67ffcf58d]
+	(No symbol) [0x0x7ff68001754f]
+	(No symbol) [0x0x7ff67fffa423]
+	(No symbol) [0x0x7ff67ffcea86]
+	(No symbol) [0x0x7ff67ffcdd11]
+	(No symbol) [0x0x7ff67ffce8b3]
+	(No symbol) [0x0x7ff6800ce6fd]
+	(No symbol) [0x0x7ff6800dba88]
+	GetHandleVerifier [0x0x7ff680348acb+940523]
+	GetHandleVerifier [0x0x7ff680351821+976705]
+	(No symbol) [0x0x7ff6801ca961]
+	(No symbol) [0x0x7ff6801c3344]
+	(No symbol) [0x0x7ff6801c3493]
+	(No symbol) [0x0x7ff6801b4f36]
+	BaseThreadInitThunk [0x0x7fffa6d653e0+16]
+	RtlUserThreadStart [0x0x7fffa752485b+43]
+
+2025-09-08 08:39:31,721 - WARNING - ❌ Failed to extract data from card 18
+2025-09-08 08:39:31,722 - INFO - 🔍 Processing job card 19/20
+2025-09-08 08:39:41,367 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-09-08 08:39:41,695 - ERROR - ❌ Job data extraction failed after 10.0s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=139.0.3405.125); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff680268c85+23461]
+	(No symbol) [0x0x7ff6801bcd70]
+	GetHandleVerifier [0x0x7ff6804e0bb8+2611928]
+	(No symbol) [0x0x7ff67ffa04d5]
+	(No symbol) [0x0x7ff67ff9f12f]
+	(No symbol) [0x0x7ff67ffa08db]
+	(No symbol) [0x0x7ff67ff942ca]
+	(No symbol) [0x0x7ff67ff9271d]
+	(No symbol) [0x0x7ff67ff960ac]
+	(No symbol) [0x0x7ff67ff9617f]
+	(No symbol) [0x0x7ff67ffd4c96]
+	(No symbol) [0x0x7ff67fffa6ba]
+	(No symbol) [0x0x7ff67ffcf58d]
+	(No symbol) [0x0x7ff67ffcf44d]
+	(No symbol) [0x0x7ff67fffa980]
+	(No symbol) [0x0x7ff67ffcf58d]
+	(No symbol) [0x0x7ff68001754f]
+	(No symbol) [0x0x7ff67fffa423]
+	(No symbol) [0x0x7ff67ffcea86]
+	(No symbol) [0x0x7ff67ffcdd11]
+	(No symbol) [0x0x7ff67ffce8b3]
+	(No symbol) [0x0x7ff6800ce6fd]
+	(No symbol) [0x0x7ff6800dba88]
+	GetHandleVerifier [0x0x7ff680348acb+940523]
+	GetHandleVerifier [0x0x7ff680351821+976705]
+	(No symbol) [0x0x7ff6801ca961]
+	(No symbol) [0x0x7ff6801c3344]
+	(No symbol) [0x0x7ff6801c3493]
+	(No symbol) [0x0x7ff6801b4f36]
+	BaseThreadInitThunk [0x0x7fffa6d653e0+16]
+	RtlUserThreadStart [0x0x7fffa752485b+43]
+
+2025-09-08 08:39:41,875 - WARNING - ❌ Failed to extract data from card 19
+2025-09-08 08:39:42,061 - INFO - 🔍 Processing job card 20/20
+2025-09-08 08:39:42,305 - WARNING - 🔍 Direct selectors failed, trying alternative approach...
+2025-09-08 08:39:42,536 - ERROR - ❌ Job data extraction failed after 0.3s: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=139.0.3405.125); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff680268c85+23461]
+	(No symbol) [0x0x7ff6801bcd70]
+	GetHandleVerifier [0x0x7ff6804e0bb8+2611928]
+	(No symbol) [0x0x7ff67ffa04d5]
+	(No symbol) [0x0x7ff67ff9f12f]
+	(No symbol) [0x0x7ff67ffa08db]
+	(No symbol) [0x0x7ff67ff942ca]
+	(No symbol) [0x0x7ff67ff9271d]
+	(No symbol) [0x0x7ff67ff960ac]
+	(No symbol) [0x0x7ff67ff9617f]
+	(No symbol) [0x0x7ff67ffd4c96]
+	(No symbol) [0x0x7ff67fffa6ba]
+	(No symbol) [0x0x7ff67ffcf58d]
+	(No symbol) [0x0x7ff67ffcf44d]
+	(No symbol) [0x0x7ff67fffa980]
+	(No symbol) [0x0x7ff67ffcf58d]
+	(No symbol) [0x0x7ff68001754f]
+	(No symbol) [0x0x7ff67fffa423]
+	(No symbol) [0x0x7ff67ffcea86]
+	(No symbol) [0x0x7ff67ffcdd11]
+	(No symbol) [0x0x7ff67ffce8b3]
+	(No symbol) [0x0x7ff6800ce6fd]
+	(No symbol) [0x0x7ff6800dba88]
+	GetHandleVerifier [0x0x7ff680348acb+940523]
+	GetHandleVerifier [0x0x7ff680351821+976705]
+	(No symbol) [0x0x7ff6801ca961]
+	(No symbol) [0x0x7ff6801c3344]
+	(No symbol) [0x0x7ff6801c3493]
+	(No symbol) [0x0x7ff6801b4f36]
+	BaseThreadInitThunk [0x0x7fffa6d653e0+16]
+	RtlUserThreadStart [0x0x7fffa752485b+43]
+
+2025-09-08 08:39:42,766 - WARNING - ❌ Failed to extract data from card 20
+2025-09-08 08:39:42,955 - INFO - 🔍 Processing keyword 2/4: Python Developer
+2025-09-08 08:39:43,088 - INFO - Page 1/2: https://www.naukri.com/python-developer-jobs-in-bengaluru-1
+2025-09-08 08:40:28,567 - ERROR - Error on page 1 for keyword 'Python Developer': Message: timeout: Timed out receiving message from renderer: 40.674
+  (Session info: MicrosoftEdge=139.0.3405.125)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff680268c85+23461]
+	(No symbol) [0x0x7ff6801bcd70]
+	GetHandleVerifier [0x0x7ff6804e0bb8+2611928]
+	(No symbol) [0x0x7ff67ff7e342]
+	(No symbol) [0x0x7ff67ff7e0b8]
+	(No symbol) [0x0x7ff67ff7c0b9]
+	(No symbol) [0x0x7ff67ff7c86f]
+	(No symbol) [0x0x7ff67ff883b2]
+	(No symbol) [0x0x7ff67ff9b1ed]
+	(No symbol) [0x0x7ff67ffa12fa]
+	(No symbol) [0x0x7ff67ff7d218]
+	(No symbol) [0x0x7ff67ff7cf59]
+	(No symbol) [0x0x7ff67ff9af9e]
+	(No symbol) [0x0x7ff68001771c]
+	(No symbol) [0x0x7ff67fffa423]
+	(No symbol) [0x0x7ff67ffcea86]
+	(No symbol) [0x0x7ff67ffcdd11]
+	(No symbol) [0x0x7ff67ffce8b3]
+	(No symbol) [0x0x7ff6800ce6fd]
+	(No symbol) [0x0x7ff6800dba88]
+	GetHandleVerifier [0x0x7ff680348acb+940523]
+	GetHandleVerifier [0x0x7ff680351821+976705]
+	(No symbol) [0x0x7ff6801ca961]
+	(No symbol) [0x0x7ff6801c3344]
+	(No symbol) [0x0x7ff6801c3493]
+	(No symbol) [0x0x7ff6801b4f36]
+	BaseThreadInitThunk [0x0x7fffa6d653e0+16]
+	RtlUserThreadStart [0x0x7fffa752485b+43]
+
+2025-09-08 08:40:28,568 - INFO - Page 2/2: https://www.naukri.com/python-developer-jobs-in-bengaluru-2
+2025-09-08 08:42:24,538 - WARNING - Job cards did not load, trying anyway...
+2025-09-08 08:45:00,777 - WARNING - ❌ No job cards found with any selector
+2025-09-08 08:45:00,777 - INFO - Found 0 job cards on page
+2025-09-08 08:45:00,778 - WARNING - No job cards found on page
+2025-09-08 08:45:00,778 - INFO - 🔍 Processing keyword 3/4: ETL Developer
+2025-09-08 08:45:00,778 - INFO - Page 1/2: https://www.naukri.com/etl-developer-jobs-in-bengaluru-1
+2025-09-08 08:47:04,273 - ERROR - Error on page 1 for keyword 'ETL Developer': HTTPConnectionPool(host='localhost', port=55296): Read timed out. (read timeout=120)
+2025-09-08 08:47:04,320 - INFO - Page 2/2: https://www.naukri.com/etl-developer-jobs-in-bengaluru-2
+2025-09-08 08:48:29,112 - ERROR - Error on page 2 for keyword 'ETL Developer': Message: timeout: Timed out receiving message from renderer: -0.170
+  (Session info: MicrosoftEdge=139.0.3405.125)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff680268c85+23461]
+	(No symbol) [0x0x7ff6801bcd70]
+	GetHandleVerifier [0x0x7ff6804e0bb8+2611928]
+	(No symbol) [0x0x7ff67ff7e342]
+	(No symbol) [0x0x7ff67ff7e0b8]
+	(No symbol) [0x0x7ff67ff7c0b9]
+	(No symbol) [0x0x7ff67ff7c86f]
+	(No symbol) [0x0x7ff67ff883b2]
+	(No symbol) [0x0x7ff67ff9b1ed]
+	(No symbol) [0x0x7ff67ffa12fa]
+	(No symbol) [0x0x7ff67ff7d218]
+	(No symbol) [0x0x7ff67ff7cf59]
+	(No symbol) [0x0x7ff67ff9af9e]
+	(No symbol) [0x0x7ff6800174a5]
+	(No symbol) [0x0x7ff67fffa423]
+	(No symbol) [0x0x7ff67ffcea86]
+	(No symbol) [0x0x7ff67ffcdd11]
+	(No symbol) [0x0x7ff67ffce8b3]
+	(No symbol) [0x0x7ff6800ce6fd]
+	(No symbol) [0x0x7ff6800dba88]
+	GetHandleVerifier [0x0x7ff680348acb+940523]
+	GetHandleVerifier [0x0x7ff680351821+976705]
+	(No symbol) [0x0x7ff6801ca961]
+	(No symbol) [0x0x7ff6801c3344]
+	(No symbol) [0x0x7ff6801c3493]
+	(No symbol) [0x0x7ff6801b4f36]
+	BaseThreadInitThunk [0x0x7fffa6d653e0+16]
+	RtlUserThreadStart [0x0x7fffa752485b+43]
+
+2025-09-08 08:48:29,113 - INFO - 🔍 Processing keyword 4/4: Analytics Engineer
+2025-09-08 08:48:29,114 - INFO - Page 1/2: https://www.naukri.com/analytics-engineer-jobs-in-bengaluru-1
+2025-09-08 08:49:14,208 - ERROR - Error on page 1 for keyword 'Analytics Engineer': Message: timeout: Timed out receiving message from renderer: 33.556
+  (Session info: MicrosoftEdge=139.0.3405.125)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff680268c85+23461]
+	(No symbol) [0x0x7ff6801bcd70]
+	GetHandleVerifier [0x0x7ff6804e0bb8+2611928]
+	(No symbol) [0x0x7ff67ff7e342]
+	(No symbol) [0x0x7ff67ff7e0b8]
+	(No symbol) [0x0x7ff67ff7c0b9]
+	(No symbol) [0x0x7ff67ff7c86f]
+	(No symbol) [0x0x7ff67ff883b2]
+	(No symbol) [0x0x7ff67ff9b1ed]
+	(No symbol) [0x0x7ff67ffa12fa]
+	(No symbol) [0x0x7ff67ff7d218]
+	(No symbol) [0x0x7ff67ff7cf59]
+	(No symbol) [0x0x7ff67ff9af9e]
+	(No symbol) [0x0x7ff68001771c]
+	(No symbol) [0x0x7ff67fffa423]
+	(No symbol) [0x0x7ff67ffcea86]
+	(No symbol) [0x0x7ff67ffcdd11]
+	(No symbol) [0x0x7ff67ffce8b3]
+	(No symbol) [0x0x7ff6800ce6fd]
+	(No symbol) [0x0x7ff6800dba88]
+	GetHandleVerifier [0x0x7ff680348acb+940523]
+	GetHandleVerifier [0x0x7ff680351821+976705]
+	(No symbol) [0x0x7ff6801ca961]
+	(No symbol) [0x0x7ff6801c3344]
+	(No symbol) [0x0x7ff6801c3493]
+	(No symbol) [0x0x7ff6801b4f36]
+	BaseThreadInitThunk [0x0x7fffa6d653e0+16]
+	RtlUserThreadStart [0x0x7fffa752485b+43]
+
+2025-09-08 08:49:14,284 - INFO - Page 2/2: https://www.naukri.com/analytics-engineer-jobs-in-bengaluru-2
+2025-09-08 08:49:59,690 - ERROR - Error on page 2 for keyword 'Analytics Engineer': Message: timeout: Timed out receiving message from renderer: 1.642
+  (Session info: MicrosoftEdge=139.0.3405.125)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff680268c85+23461]
+	(No symbol) [0x0x7ff6801bcd70]
+	GetHandleVerifier [0x0x7ff6804e0bb8+2611928]
+	(No symbol) [0x0x7ff67ff7e342]
+	(No symbol) [0x0x7ff67ff7e0b8]
+	(No symbol) [0x0x7ff67ff7c0b9]
+	(No symbol) [0x0x7ff67ff7c86f]
+	(No symbol) [0x0x7ff67ff883b2]
+	(No symbol) [0x0x7ff67ff9b1ed]
+	(No symbol) [0x0x7ff67ffa12fa]
+	(No symbol) [0x0x7ff67ff7d218]
+	(No symbol) [0x0x7ff67ff7cf59]
+	(No symbol) [0x0x7ff67ff9af9e]
+	(No symbol) [0x0x7ff68001771c]
+	(No symbol) [0x0x7ff67fffa423]
+	(No symbol) [0x0x7ff67ffcea86]
+	(No symbol) [0x0x7ff67ffcdd11]
+	(No symbol) [0x0x7ff67ffce8b3]
+	(No symbol) [0x0x7ff6800ce6fd]
+	(No symbol) [0x0x7ff6800dba88]
+	GetHandleVerifier [0x0x7ff680348acb+940523]
+	GetHandleVerifier [0x0x7ff680351821+976705]
+	(No symbol) [0x0x7ff6801ca961]
+	(No symbol) [0x0x7ff6801c3344]
+	(No symbol) [0x0x7ff6801c3493]
+	(No symbol) [0x0x7ff6801b4f36]
+	BaseThreadInitThunk [0x0x7fffa6d653e0+16]
+	RtlUserThreadStart [0x0x7fffa752485b+43]
+
+2025-09-08 08:49:59,690 - INFO - 🏁 AI session completed: 2 applications sent, 3 jobs analyzed
+2025-09-08 08:49:59,691 - INFO - 
+        ╔═══ ENHANCED NAUKRI BOT SESSION SUMMARY ═══
+        ║ 🔍 Total Jobs Analyzed: 3
+        ║ 🧠 AI Analysis Success: 3/3 (100.0%)
+        ║ ⭐ High Score Jobs (70+): 2
+        ║ ✅ Applications Sent: 2
+        ║ ❌ Skipped (Low Score): 1
+        ║ 🔄 Fallback Scores Used: 0
+        ║ 🚫 AI Failures: 0
+        ║ 📊 Extraction Failures: 37
+        ║ 📈 Application Rate: 66.7%
+        ╚═══════════════════════════════════════════
+        
+2025-09-08 08:49:59,692 - INFO - 💾 Phase 4: Saving enhanced results...
+2025-09-08 08:49:59,705 - INFO - Enhanced results saved with timestamp: 20250908_084959
+2025-09-08 08:49:59,706 - INFO - 🎉 Enhanced Naukri Bot session completed successfully!
+2025-09-08 17:55:48,853 - INFO - Configuration loaded successfully
+2025-09-08 17:55:48,864 - INFO - Job database initialized
+2025-09-08 17:55:48,865 - INFO - Bot initialized successfully
+2025-09-08 17:55:48,866 - INFO - Setting up browser...
+2025-09-08 17:55:48,866 - INFO - Setting up browser...
+2025-09-08 17:55:48,894 - INFO - Operating System: Windows-10-10.0.22000-SP0
+2025-09-08 17:55:49,036 - INFO - 🔄 Attempting automatic driver download...
+2025-09-08 17:55:49,047 - INFO - ====== WebDriver manager ======
+2025-09-08 17:55:51,602 - INFO - Get LATEST edgedriver version for Edge 139.0.3405
+2025-09-08 17:55:51,616 - WARNING - Webdriver manager failed: Could not reach host. Are you offline?
+2025-09-08 17:55:51,622 - WARNING - Driver setup method failed: Could not reach host. Are you offline?
+2025-09-08 17:55:51,622 - INFO - 🔄 Trying manual path: C:\WebDrivers\msedgedriver.exe
+2025-09-08 17:55:55,675 - INFO - ✅ Browser setup successful
+2025-09-08 17:55:55,796 - INFO - Logging into Naukri...
+2025-09-08 17:55:55,796 - INFO - Login attempt 1/3
+2025-09-08 17:56:03,160 - INFO - ✅ Found email field with selector: #usernameField
+2025-09-08 17:56:11,164 - INFO - ✅ Found password field with selector: #passwordField
+2025-09-08 17:56:15,550 - INFO - ✅ Found login button with selector: //button[@type='submit']
+2025-09-08 17:56:22,107 - INFO - ✅ Login verified using: .nI-gNb-drawer__icon
+2025-09-08 17:56:22,108 - INFO - ✅ Login successful!
+2025-09-08 17:56:22,109 - INFO - Starting intelligent job search...
+2025-09-08 17:56:22,109 - INFO - 🔍 Starting enhanced job search...
+2025-09-08 17:56:22,109 - INFO - Searching for: Data Engineer
+2025-09-08 17:56:22,109 - INFO - Page 1: https://www.naukri.com/data-engineer-jobs-in-bengaluru-1
+2025-09-08 17:56:29,323 - INFO - Found 20 job cards
+2025-09-08 18:01:39,454 - INFO - Page 2: https://www.naukri.com/data-engineer-jobs-in-bengaluru-2
+2025-09-08 18:02:45,750 - INFO - Found 20 job cards
+2025-09-08 18:09:12,504 - INFO - Searching for: Python Developer
+2025-09-08 18:09:12,513 - INFO - Page 1: https://www.naukri.com/python-developer-jobs-in-bengaluru-1
+2025-09-08 18:09:57,550 - ERROR - Error on page 1: Message: timeout: Timed out receiving message from renderer: 4.569
+  (Session info: MicrosoftEdge=139.0.3405.125)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff680268c85+23461]
+	(No symbol) [0x0x7ff6801bcd70]
+	GetHandleVerifier [0x0x7ff6804e0bb8+2611928]
+	(No symbol) [0x0x7ff67ff7e342]
+	(No symbol) [0x0x7ff67ff7e0b8]
+	(No symbol) [0x0x7ff67ff7c0b9]
+	(No symbol) [0x0x7ff67ff7c86f]
+	(No symbol) [0x0x7ff67ff883b2]
+	(No symbol) [0x0x7ff67ff9b1ed]
+	(No symbol) [0x0x7ff67ffa12fa]
+	(No symbol) [0x0x7ff67ff7d218]
+	(No symbol) [0x0x7ff67ff7cf59]
+	(No symbol) [0x0x7ff67ff9af9e]
+	(No symbol) [0x0x7ff68001771c]
+	(No symbol) [0x0x7ff67fffa423]
+	(No symbol) [0x0x7ff67ffcea86]
+	(No symbol) [0x0x7ff67ffcdd11]
+	(No symbol) [0x0x7ff67ffce8b3]
+	(No symbol) [0x0x7ff6800ce6fd]
+	(No symbol) [0x0x7ff6800dba88]
+	GetHandleVerifier [0x0x7ff680348acb+940523]
+	GetHandleVerifier [0x0x7ff680351821+976705]
+	(No symbol) [0x0x7ff6801ca961]
+	(No symbol) [0x0x7ff6801c3344]
+	(No symbol) [0x0x7ff6801c3493]
+	(No symbol) [0x0x7ff6801b4f36]
+	BaseThreadInitThunk [0x0x7fffa6d653e0+16]
+	RtlUserThreadStart [0x0x7fffa752485b+43]
+
+2025-09-08 18:09:57,554 - INFO - Page 2: https://www.naukri.com/python-developer-jobs-in-bengaluru-2
+2025-09-08 18:10:42,570 - ERROR - Error on page 2: Message: timeout: Timed out receiving message from renderer: 32.487
+  (Session info: MicrosoftEdge=139.0.3405.125)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff680268c85+23461]
+	(No symbol) [0x0x7ff6801bcd70]
+	GetHandleVerifier [0x0x7ff6804e0bb8+2611928]
+	(No symbol) [0x0x7ff67ff7e342]
+	(No symbol) [0x0x7ff67ff7e0b8]
+	(No symbol) [0x0x7ff67ff7c0b9]
+	(No symbol) [0x0x7ff67ff7c86f]
+	(No symbol) [0x0x7ff67ff883b2]
+	(No symbol) [0x0x7ff67ff9b1ed]
+	(No symbol) [0x0x7ff67ffa12fa]
+	(No symbol) [0x0x7ff67ff7d218]
+	(No symbol) [0x0x7ff67ff7cf59]
+	(No symbol) [0x0x7ff67ff9af9e]
+	(No symbol) [0x0x7ff68001771c]
+	(No symbol) [0x0x7ff67fffa423]
+	(No symbol) [0x0x7ff67ffcea86]
+	(No symbol) [0x0x7ff67ffcdd11]
+	(No symbol) [0x0x7ff67ffce8b3]
+	(No symbol) [0x0x7ff6800ce6fd]
+	(No symbol) [0x0x7ff6800dba88]
+	GetHandleVerifier [0x0x7ff680348acb+940523]
+	GetHandleVerifier [0x0x7ff680351821+976705]
+	(No symbol) [0x0x7ff6801ca961]
+	(No symbol) [0x0x7ff6801c3344]
+	(No symbol) [0x0x7ff6801c3493]
+	(No symbol) [0x0x7ff6801b4f36]
+	BaseThreadInitThunk [0x0x7fffa6d653e0+16]
+	RtlUserThreadStart [0x0x7fffa752485b+43]
+
+2025-09-08 18:10:42,575 - INFO - Searching for: ETL Developer
+2025-09-08 18:10:42,576 - INFO - Page 1: https://www.naukri.com/etl-developer-jobs-in-bengaluru-1
+2025-09-08 18:11:27,615 - ERROR - Error on page 1: Message: timeout: Timed out receiving message from renderer: 41.648
+  (Session info: MicrosoftEdge=139.0.3405.125)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff680268c85+23461]
+	(No symbol) [0x0x7ff6801bcd70]
+	GetHandleVerifier [0x0x7ff6804e0bb8+2611928]
+	(No symbol) [0x0x7ff67ff7e342]
+	(No symbol) [0x0x7ff67ff7e0b8]
+	(No symbol) [0x0x7ff67ff7c0b9]
+	(No symbol) [0x0x7ff67ff7c86f]
+	(No symbol) [0x0x7ff67ff883b2]
+	(No symbol) [0x0x7ff67ff9b1ed]
+	(No symbol) [0x0x7ff67ffa12fa]
+	(No symbol) [0x0x7ff67ff7d218]
+	(No symbol) [0x0x7ff67ff7cf59]
+	(No symbol) [0x0x7ff67ff9af9e]
+	(No symbol) [0x0x7ff68001771c]
+	(No symbol) [0x0x7ff67fffa423]
+	(No symbol) [0x0x7ff67ffcea86]
+	(No symbol) [0x0x7ff67ffcdd11]
+	(No symbol) [0x0x7ff67ffce8b3]
+	(No symbol) [0x0x7ff6800ce6fd]
+	(No symbol) [0x0x7ff6800dba88]
+	GetHandleVerifier [0x0x7ff680348acb+940523]
+	GetHandleVerifier [0x0x7ff680351821+976705]
+	(No symbol) [0x0x7ff6801ca961]
+	(No symbol) [0x0x7ff6801c3344]
+	(No symbol) [0x0x7ff6801c3493]
+	(No symbol) [0x0x7ff6801b4f36]
+	BaseThreadInitThunk [0x0x7fffa6d653e0+16]
+	RtlUserThreadStart [0x0x7fffa752485b+43]
+
+2025-09-08 18:11:27,621 - INFO - Page 2: https://www.naukri.com/etl-developer-jobs-in-bengaluru-2
+2025-09-08 18:12:12,666 - ERROR - Error on page 2: Message: timeout: Timed out receiving message from renderer: 43.859
+  (Session info: MicrosoftEdge=139.0.3405.125)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff680268c85+23461]
+	(No symbol) [0x0x7ff6801bcd70]
+	GetHandleVerifier [0x0x7ff6804e0bb8+2611928]
+	(No symbol) [0x0x7ff67ff7e342]
+	(No symbol) [0x0x7ff67ff7e0b8]
+	(No symbol) [0x0x7ff67ff7c0b9]
+	(No symbol) [0x0x7ff67ff7c86f]
+	(No symbol) [0x0x7ff67ff883b2]
+	(No symbol) [0x0x7ff67ff9b1ed]
+	(No symbol) [0x0x7ff67ffa12fa]
+	(No symbol) [0x0x7ff67ff7d218]
+	(No symbol) [0x0x7ff67ff7cf59]
+	(No symbol) [0x0x7ff67ff9af9e]
+	(No symbol) [0x0x7ff68001771c]
+	(No symbol) [0x0x7ff67fffa423]
+	(No symbol) [0x0x7ff67ffcea86]
+	(No symbol) [0x0x7ff67ffcdd11]
+	(No symbol) [0x0x7ff67ffce8b3]
+	(No symbol) [0x0x7ff6800ce6fd]
+	(No symbol) [0x0x7ff6800dba88]
+	GetHandleVerifier [0x0x7ff680348acb+940523]
+	GetHandleVerifier [0x0x7ff680351821+976705]
+	(No symbol) [0x0x7ff6801ca961]
+	(No symbol) [0x0x7ff6801c3344]
+	(No symbol) [0x0x7ff6801c3493]
+	(No symbol) [0x0x7ff6801b4f36]
+	BaseThreadInitThunk [0x0x7fffa6d653e0+16]
+	RtlUserThreadStart [0x0x7fffa752485b+43]
+
+2025-09-08 18:12:12,678 - INFO - Searching for: SQL Developer
+2025-09-08 18:12:12,683 - INFO - Page 1: https://www.naukri.com/sql-developer-jobs-in-bengaluru-1
+2025-09-08 18:12:57,755 - ERROR - Error on page 1: Message: timeout: Timed out receiving message from renderer: 28.870
+  (Session info: MicrosoftEdge=139.0.3405.125)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff680268c85+23461]
+	(No symbol) [0x0x7ff6801bcd70]
+	GetHandleVerifier [0x0x7ff6804e0bb8+2611928]
+	(No symbol) [0x0x7ff67ff7e342]
+	(No symbol) [0x0x7ff67ff7e0b8]
+	(No symbol) [0x0x7ff67ff7c0b9]
+	(No symbol) [0x0x7ff67ff7c86f]
+	(No symbol) [0x0x7ff67ff883b2]
+	(No symbol) [0x0x7ff67ff9b1ed]
+	(No symbol) [0x0x7ff67ffa12fa]
+	(No symbol) [0x0x7ff67ff7d218]
+	(No symbol) [0x0x7ff67ff7cf59]
+	(No symbol) [0x0x7ff67ff9af9e]
+	(No symbol) [0x0x7ff68001771c]
+	(No symbol) [0x0x7ff67fffa423]
+	(No symbol) [0x0x7ff67ffcea86]
+	(No symbol) [0x0x7ff67ffcdd11]
+	(No symbol) [0x0x7ff67ffce8b3]
+	(No symbol) [0x0x7ff6800ce6fd]
+	(No symbol) [0x0x7ff6800dba88]
+	GetHandleVerifier [0x0x7ff680348acb+940523]
+	GetHandleVerifier [0x0x7ff680351821+976705]
+	(No symbol) [0x0x7ff6801ca961]
+	(No symbol) [0x0x7ff6801c3344]
+	(No symbol) [0x0x7ff6801c3493]
+	(No symbol) [0x0x7ff6801b4f36]
+	BaseThreadInitThunk [0x0x7fffa6d653e0+16]
+	RtlUserThreadStart [0x0x7fffa752485b+43]
+
+2025-09-08 18:12:57,759 - INFO - Page 2: https://www.naukri.com/sql-developer-jobs-in-bengaluru-2
+2025-09-08 18:13:42,859 - ERROR - Error on page 2: Message: timeout: Timed out receiving message from renderer: 42.851
+  (Session info: MicrosoftEdge=139.0.3405.125)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff680268c85+23461]
+	(No symbol) [0x0x7ff6801bcd70]
+	GetHandleVerifier [0x0x7ff6804e0bb8+2611928]
+	(No symbol) [0x0x7ff67ff7e342]
+	(No symbol) [0x0x7ff67ff7e0b8]
+	(No symbol) [0x0x7ff67ff7c0b9]
+	(No symbol) [0x0x7ff67ff7c86f]
+	(No symbol) [0x0x7ff67ff883b2]
+	(No symbol) [0x0x7ff67ff9b1ed]
+	(No symbol) [0x0x7ff67ffa12fa]
+	(No symbol) [0x0x7ff67ff7d218]
+	(No symbol) [0x0x7ff67ff7cf59]
+	(No symbol) [0x0x7ff67ff9af9e]
+	(No symbol) [0x0x7ff68001771c]
+	(No symbol) [0x0x7ff67fffa423]
+	(No symbol) [0x0x7ff67ffcea86]
+	(No symbol) [0x0x7ff67ffcdd11]
+	(No symbol) [0x0x7ff67ffce8b3]
+	(No symbol) [0x0x7ff6800ce6fd]
+	(No symbol) [0x0x7ff6800dba88]
+	GetHandleVerifier [0x0x7ff680348acb+940523]
+	GetHandleVerifier [0x0x7ff680351821+976705]
+	(No symbol) [0x0x7ff6801ca961]
+	(No symbol) [0x0x7ff6801c3344]
+	(No symbol) [0x0x7ff6801c3493]
+	(No symbol) [0x0x7ff6801b4f36]
+	BaseThreadInitThunk [0x0x7fffa6d653e0+16]
+	RtlUserThreadStart [0x0x7fffa752485b+43]
+
+2025-09-08 18:13:42,877 - INFO - Total quality jobs found: 0
+2025-09-08 18:13:42,893 - ERROR - No quality jobs found matching criteria
+2025-09-09 10:23:49,216 - INFO - Browser closed
+2025-09-09 10:24:43,378 - INFO - Configuration loaded successfully
+2025-09-09 10:24:43,388 - INFO - Job database initialized
+2025-09-09 10:24:43,388 - INFO - Bot initialized successfully
+2025-09-09 10:24:43,390 - INFO - Setting up browser...
+2025-09-09 10:24:43,390 - INFO - Setting up browser...
+2025-09-09 10:24:43,414 - INFO - Operating System: Windows-10-10.0.22000-SP0
+2025-09-09 10:24:43,554 - INFO - 🔄 Attempting automatic driver download...
+2025-09-09 10:24:43,559 - INFO - ====== WebDriver manager ======
+2025-09-09 10:24:46,484 - INFO - Get LATEST edgedriver version for Edge 139.0.3405
+2025-09-09 10:24:46,498 - WARNING - Webdriver manager failed: Could not reach host. Are you offline?
+2025-09-09 10:24:46,500 - WARNING - Driver setup method failed: Could not reach host. Are you offline?
+2025-09-09 10:24:46,501 - INFO - 🔄 Trying manual path: C:\WebDrivers\msedgedriver.exe
+2025-09-09 10:24:49,895 - INFO - ✅ Browser setup successful
+2025-09-09 10:24:49,933 - INFO - Logging into Naukri...
+2025-09-09 10:24:50,094 - INFO - Login attempt 1/3
+2025-09-09 10:24:55,531 - INFO - ✅ Found email field with selector: #usernameField
+2025-09-09 10:25:03,552 - INFO - ✅ Found password field with selector: #passwordField
+2025-09-09 10:25:07,380 - INFO - ✅ Found login button with selector: //button[@type='submit']
+2025-09-09 10:25:13,357 - INFO - ✅ Login verified using: .nI-gNb-drawer__icon
+2025-09-09 10:25:13,361 - INFO - ✅ Login successful!
+2025-09-09 10:25:13,361 - INFO - Starting intelligent job search...
+2025-09-09 10:25:13,362 - INFO - 🔍 Starting enhanced job search...
+2025-09-09 10:25:13,363 - INFO - Searching for: Data Engineer
+2025-09-09 10:25:13,365 - INFO - Page 1: https://www.naukri.com/data-engineer-jobs-in-bengaluru-1
+2025-09-09 10:25:21,506 - INFO - Found 20 job cards
+2025-09-09 10:30:23,052 - INFO - Page 1: Found 0 relevant jobs
+2025-09-09 10:30:27,573 - INFO - Page 2: https://www.naukri.com/data-engineer-jobs-in-bengaluru-2
+2025-09-09 10:30:32,802 - INFO - Found 20 job cards
+2025-09-09 10:35:27,489 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001D88D68E710>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/1e95ce046d04681a6902efd57e04bc1f/element/f.4AF93F2CADBADC2A2CDBC262A0FD0E68.d.A826F87F34171AEA3E5C9D8F50F00629.e.240/element
+2025-09-09 10:35:32,302 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001D88D68F150>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/1e95ce046d04681a6902efd57e04bc1f/element/f.4AF93F2CADBADC2A2CDBC262A0FD0E68.d.A826F87F34171AEA3E5C9D8F50F00629.e.240/element
+2025-09-09 10:35:36,804 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001D88D68FB90>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/1e95ce046d04681a6902efd57e04bc1f/element/f.4AF93F2CADBADC2A2CDBC262A0FD0E68.d.A826F87F34171AEA3E5C9D8F50F00629.e.240/element
+2025-09-09 10:35:41,493 - INFO - Page 2: Found 0 relevant jobs
+2025-09-09 10:35:44,747 - INFO - Searching for: Python Developer
+2025-09-09 10:35:44,769 - INFO - Page 1: https://www.naukri.com/python-developer-jobs-in-bengaluru-1
+2025-09-09 10:35:49,391 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001D88D6952D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/1e95ce046d04681a6902efd57e04bc1f/url
+2025-09-09 10:35:53,983 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001D88D695E50>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/1e95ce046d04681a6902efd57e04bc1f/url
+2025-09-09 10:35:58,789 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001D88D696910>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/1e95ce046d04681a6902efd57e04bc1f/url
+2025-09-09 10:36:17,143 - INFO - Configuration loaded successfully
+2025-09-09 10:36:17,158 - INFO - Job database initialized
+2025-09-09 10:36:17,162 - INFO - Bot initialized successfully
+2025-09-09 10:36:17,175 - INFO - Setting up browser...
+2025-09-09 10:36:17,177 - INFO - Setting up browser...
+2025-09-09 10:36:17,262 - INFO - Operating System: Windows-10-10.0.22000-SP0
+2025-09-09 10:36:17,786 - INFO - 🔄 Attempting automatic driver download...
+2025-09-09 10:36:17,787 - INFO - ====== WebDriver manager ======
+2025-09-09 10:36:26,926 - INFO - Get LATEST edgedriver version for Edge 139.0.3405
+2025-09-09 10:36:26,954 - WARNING - Webdriver manager failed: Could not reach host. Are you offline?
+2025-09-09 10:36:26,984 - WARNING - Driver setup method failed: Could not reach host. Are you offline?
+2025-09-09 10:36:26,986 - INFO - 🔄 Trying manual path: C:\WebDrivers\msedgedriver.exe
+2025-09-09 10:36:33,245 - INFO - ✅ Browser setup successful
+2025-09-09 10:36:33,511 - INFO - Logging into Naukri...
+2025-09-09 10:36:33,766 - INFO - Login attempt 1/3
+2025-09-09 10:36:43,296 - INFO - ✅ Found email field with selector: #usernameField
+2025-09-09 10:36:57,504 - INFO - ✅ Found password field with selector: #passwordField
+2025-09-09 10:37:03,071 - INFO - ✅ Found login button with selector: //button[@type='submit']
+2025-09-09 10:37:13,818 - INFO - ✅ Login verified using: .nI-gNb-drawer__icon
+2025-09-09 10:37:13,823 - INFO - ✅ Login successful!
+2025-09-09 10:37:13,823 - INFO - Starting intelligent job search...
+2025-09-09 10:37:13,823 - INFO - 🔍 Starting enhanced job search...
+2025-09-09 10:37:13,823 - INFO - Searching for: Data Engineer
+2025-09-09 10:37:13,826 - INFO - Page 1: https://www.naukri.com/data-engineer-jobs-in-bengaluru-1
+2025-09-09 10:37:26,876 - INFO - Found 20 job cards
+2025-09-09 10:42:27,973 - INFO - Page 1: Found 0 relevant jobs
+2025-09-09 10:42:32,670 - INFO - Page 2: https://www.naukri.com/data-engineer-jobs-in-bengaluru-2
+2025-09-09 10:42:41,790 - INFO - Found 20 job cards
+2025-09-09 10:47:47,190 - INFO - Page 2: Found 0 relevant jobs
+2025-09-09 10:47:50,587 - INFO - Searching for: Python Developer
+2025-09-09 10:47:50,590 - INFO - Page 1: https://www.naukri.com/python-developer-jobs-in-bengaluru-1
+2025-09-09 10:47:55,597 - INFO - Found 20 job cards
+2025-09-09 10:52:56,123 - INFO - Page 1: Found 0 relevant jobs
+2025-09-09 10:52:59,288 - INFO - Page 2: https://www.naukri.com/python-developer-jobs-in-bengaluru-2
+2025-09-09 10:53:03,575 - INFO - Found 20 job cards
+2025-09-09 10:58:05,367 - INFO - Page 2: Found 0 relevant jobs
+2025-09-09 10:58:08,917 - INFO - Searching for: ETL Developer
+2025-09-09 10:58:08,917 - INFO - Page 1: https://www.naukri.com/etl-developer-jobs-in-bengaluru-1
+2025-09-09 10:58:13,287 - INFO - Found 20 job cards
+2025-09-09 11:03:13,990 - INFO - Page 1: Found 0 relevant jobs
+2025-09-09 11:03:17,415 - INFO - Page 2: https://www.naukri.com/etl-developer-jobs-in-bengaluru-2
+2025-09-09 11:03:21,811 - INFO - Found 20 job cards
+2025-09-09 11:08:22,399 - INFO - Page 2: Found 0 relevant jobs
+2025-09-09 11:08:26,843 - INFO - Searching for: SQL Developer
+2025-09-09 11:08:26,843 - INFO - Page 1: https://www.naukri.com/sql-developer-jobs-in-bengaluru-1
+2025-09-09 11:08:30,801 - INFO - Found 20 job cards
+2025-09-09 11:13:31,993 - INFO - Page 1: Found 0 relevant jobs
+2025-09-09 11:13:35,016 - INFO - Page 2: https://www.naukri.com/sql-developer-jobs-in-bengaluru-2
+2025-09-09 11:13:38,725 - INFO - Found 20 job cards
+2025-09-09 11:18:39,459 - INFO - Page 2: Found 0 relevant jobs
+2025-09-09 11:18:44,017 - INFO - ✅ Job search completed. Found 0 total jobs
+2025-09-09 11:18:44,020 - ERROR - No quality jobs found matching criteria
+2025-09-10 15:56:13,146 - INFO - Browser closed
+2025-09-10 15:56:44,495 - INFO - Configuration loaded successfully
+2025-09-10 15:56:44,504 - INFO - Job database initialized
+2025-09-10 15:56:44,504 - INFO - Bot initialized successfully
+2025-09-10 15:56:44,505 - INFO - Setting up browser...
+2025-09-10 15:56:44,506 - INFO - Setting up browser...
+2025-09-10 15:56:44,609 - INFO - Operating System: Windows-10-10.0.22000-SP0
+2025-09-10 15:56:44,751 - INFO - 🔄 Attempting automatic driver download...
+2025-09-10 15:56:44,755 - INFO - ====== WebDriver manager ======
+2025-09-10 15:56:51,111 - INFO - Get LATEST edgedriver version for Edge 139.0.3405
+2025-09-10 15:56:51,137 - WARNING - Webdriver manager failed: Could not reach host. Are you offline?
+2025-09-10 15:56:51,160 - WARNING - Driver setup method failed: Could not reach host. Are you offline?
+2025-09-10 15:56:51,169 - INFO - 🔄 Trying manual path: C:\WebDrivers\msedgedriver.exe
+2025-09-10 15:56:56,687 - INFO - ✅ Browser setup successful
+2025-09-10 15:56:56,697 - INFO - Logging into Naukri...
+2025-09-10 15:56:56,712 - INFO - Login attempt 1/3
+2025-09-10 15:57:05,334 - INFO - ✅ Found email field with selector: #usernameField
+2025-09-10 15:57:36,323 - INFO - ✅ Found password field with selector: #passwordField
+2025-09-10 15:57:49,823 - INFO - ✅ Found login button with selector: //button[@type='submit']
+2025-09-10 15:58:38,182 - ERROR - Login attempt 1 error: Message: timeout: Timed out receiving message from renderer: 45.000
+  (Session info: MicrosoftEdge=139.0.3405.125)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff744928c85+23461]
+	(No symbol) [0x0x7ff74487cd70]
+	GetHandleVerifier [0x0x7ff744ba0bb8+2611928]
+	(No symbol) [0x0x7ff74463e342]
+	(No symbol) [0x0x7ff74463e0b8]
+	(No symbol) [0x0x7ff74463c0b9]
+	(No symbol) [0x0x7ff74463c86f]
+	(No symbol) [0x0x7ff7446483b2]
+	(No symbol) [0x0x7ff74465b1ed]
+	(No symbol) [0x0x7ff7446612fa]
+	(No symbol) [0x0x7ff74463d218]
+	(No symbol) [0x0x7ff74463cf59]
+	(No symbol) [0x0x7ff74465af9e]
+	(No symbol) [0x0x7ff74465adaf]
+	(No symbol) [0x0x7ff7446d771c]
+	(No symbol) [0x0x7ff7446ba423]
+	(No symbol) [0x0x7ff74468ea86]
+	(No symbol) [0x0x7ff74468dd11]
+	(No symbol) [0x0x7ff74468e8b3]
+	(No symbol) [0x0x7ff74478e6fd]
+	(No symbol) [0x0x7ff74479ba88]
+	GetHandleVerifier [0x0x7ff744a08acb+940523]
+	GetHandleVerifier [0x0x7ff744a11821+976705]
+	(No symbol) [0x0x7ff74488a961]
+	(No symbol) [0x0x7ff744883344]
+	(No symbol) [0x0x7ff744883493]
+	(No symbol) [0x0x7ff744874f36]
+	BaseThreadInitThunk [0x0x7fffa6d653e0+16]
+	RtlUserThreadStart [0x0x7fffa752485b+43]
+
+2025-09-10 15:58:45,342 - INFO - Login attempt 2/3
+2025-09-10 15:59:30,381 - ERROR - Login attempt 2 error: Message: timeout: Timed out receiving message from renderer: 45.000
+  (Session info: MicrosoftEdge=139.0.3405.125)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff744928c85+23461]
+	(No symbol) [0x0x7ff74487cd70]
+	GetHandleVerifier [0x0x7ff744ba0bb8+2611928]
+	(No symbol) [0x0x7ff74463e342]
+	(No symbol) [0x0x7ff74463e0b8]
+	(No symbol) [0x0x7ff74463c0b9]
+	(No symbol) [0x0x7ff74463c86f]
+	(No symbol) [0x0x7ff7446483b2]
+	(No symbol) [0x0x7ff74465b1ed]
+	(No symbol) [0x0x7ff7446612fa]
+	(No symbol) [0x0x7ff74463d218]
+	(No symbol) [0x0x7ff74463cf59]
+	(No symbol) [0x0x7ff74465af9e]
+	(No symbol) [0x0x7ff7446d74a5]
+	(No symbol) [0x0x7ff7446ba423]
+	(No symbol) [0x0x7ff74468ea86]
+	(No symbol) [0x0x7ff74468dd11]
+	(No symbol) [0x0x7ff74468e8b3]
+	(No symbol) [0x0x7ff74478e6fd]
+	(No symbol) [0x0x7ff74479ba88]
+	GetHandleVerifier [0x0x7ff744a08acb+940523]
+	GetHandleVerifier [0x0x7ff744a11821+976705]
+	(No symbol) [0x0x7ff74488a961]
+	(No symbol) [0x0x7ff744883344]
+	(No symbol) [0x0x7ff744883493]
+	(No symbol) [0x0x7ff744874f36]
+	BaseThreadInitThunk [0x0x7fffa6d653e0+16]
+	RtlUserThreadStart [0x0x7fffa752485b+43]
+
+2025-09-10 15:59:37,313 - INFO - Login attempt 3/3
+2025-09-10 16:01:55,108 - ERROR - ❌ Could not find email field
+2025-09-10 16:01:55,108 - ERROR - ❌ All login attempts failed
+2025-09-10 16:01:55,108 - ERROR - Failed to login to Naukri
+2025-09-10 16:03:28,478 - INFO - Browser closed
+2025-09-10 16:03:43,670 - INFO - Configuration loaded successfully
+2025-09-10 16:03:43,708 - INFO - Job database initialized
+2025-09-10 16:03:43,727 - INFO - Bot initialized successfully
+2025-09-10 16:03:43,749 - INFO - Setting up browser...
+2025-09-10 16:03:43,767 - INFO - Setting up browser...
+2025-09-10 16:03:43,798 - INFO - Operating System: Windows-10-10.0.22000-SP0
+2025-09-10 16:03:43,910 - INFO - 🔄 Attempting automatic driver download...
+2025-09-10 16:03:43,910 - INFO - ====== WebDriver manager ======
+2025-09-10 16:03:45,890 - INFO - Get LATEST edgedriver version for Edge 139.0.3405
+2025-09-10 16:03:45,903 - WARNING - Webdriver manager failed: Could not reach host. Are you offline?
+2025-09-10 16:03:45,915 - WARNING - Driver setup method failed: Could not reach host. Are you offline?
+2025-09-10 16:03:45,923 - INFO - 🔄 Trying manual path: C:\WebDrivers\msedgedriver.exe
+2025-09-10 16:03:48,562 - INFO - ✅ Browser setup successful
+2025-09-10 16:03:48,581 - INFO - Logging into Naukri...
+2025-09-10 16:03:48,582 - INFO - Login attempt 1/3
+2025-09-10 16:03:56,620 - INFO - ✅ Found email field with selector: #usernameField
+2025-09-10 16:04:03,923 - INFO - ✅ Found password field with selector: #passwordField
+2025-09-10 16:04:08,499 - INFO - ✅ Found login button with selector: //button[@type='submit']
+2025-09-10 16:04:15,919 - INFO - ✅ Login verified using: .nI-gNb-drawer__icon
+2025-09-10 16:04:15,925 - INFO - ✅ Login successful!
+2025-09-10 16:04:15,925 - INFO - Starting intelligent job search...
+2025-09-10 16:04:15,930 - INFO - 🔍 Starting enhanced job search...
+2025-09-10 16:04:15,931 - INFO - Searching for: Data Engineer
+2025-09-10 16:04:15,931 - INFO - Page 1: https://www.naukri.com/data-engineer-jobs-in-bengaluru-1
+2025-09-10 16:04:36,030 - INFO - Found 20 job cards

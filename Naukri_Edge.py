@@ -411,10 +411,47 @@ class IntelligentNaukriBot:
             logger.error(f"Error verifying login: {e}")
             return False
     
-    def scrape_job_links(self):
-        """Scrape job links with updated selectors"""
+    def _handle_popups(self):
+        """Handles common pop-ups and overlays that can block the main content."""
         try:
-            logger.info("🔍 Starting enhanced job search...")
+            # Use a short wait time for pop-ups as they may not always appear
+            short_wait = WebDriverWait(self.driver, 5)
+            
+            # Common selectors for pop-up close buttons
+            close_button_selectors = [
+                "span.close-popup",          # Generic close icon
+                "button.close",              # Common button class
+                "div.cross-icon",            # Another common icon
+                "[aria-label='Close']",      # Accessibility label
+                "i.naukri-icon-close"        # Naukri-specific icon
+            ]
+            
+            for selector in close_button_selectors:
+                try:
+                    close_button = short_wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, selector)))
+                    logger.info(f"Found and closing a pop-up with selector: {selector}")
+                    try:
+                        close_button.click()
+                    except Exception:
+                        # Try JS click as a fallback
+                        try:
+                            self.driver.execute_script("arguments[0].click();", close_button)
+                        except Exception:
+                            logger.debug(f"Failed to click pop-up close button for selector: {selector}")
+                    self.smart_delay(1, 2) # Wait for pop-up to disappear
+                except TimeoutException:
+                    pass # Pop-up with this selector was not found, which is fine
+                    
+        except Exception as e:
+            logger.warning(f"An error occurred while handling pop-ups: {e}")
+
+    def scrape_job_links(self):
+        """
+        Scrape job links with added scrolling to handle lazy loading,
+        pop-up handling, and high-speed parsing.
+        """
+        try:
+            logger.info("🔍 Starting definitive job search with scroll handling...")
             
             keywords = self.config['job_search']['keywords']
             location = self.config['job_search']['location']
@@ -425,88 +462,99 @@ class IntelligentNaukriBot:
                 
                 for page in range(1, pages_per_keyword + 1):
                     try:
-                        # Build search URL
                         search_keyword = keyword.lower().replace(' ', '-')
-                        search_location = location.lower().replace(' ', '-') 
-                        url = f"https://www.naukri.com/{search_keyword}-jobs-in-{search_location}-{page}"
+                        search_location = location.lower().replace(' ', '-')
+                        base_url = f"https://www.naukri.com/{search_keyword}-jobs-in-{search_location}-{page}"
+
+                        # Optionally append jobAge param to filter by job posting age
+                        job_age_days = None
+                        try:
+                            job_age_days = int(self.config.get('job_search', {}).get('job_age_days', 0))
+                        except Exception:
+                            job_age_days = None
+
+                        if job_age_days and job_age_days > 0:
+                            # If base_url already has query params (unlikely here), append with &
+                            sep = '&' if '?' in base_url else '?'
+                            url = f"{base_url}{sep}jobAge={job_age_days}"
+                        else:
+                            url = base_url
                         
                         logger.info(f"Page {page}: {url}")
                         self.driver.get(url)
-                        self.smart_delay(3, 5)
                         
-                        # Wait for job cards to load
-                        try:
-                            self.wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, self.job_card_selector)))
-                        except TimeoutException:
-                            logger.warning("Job cards did not load in time")
-                            continue
+                        self._handle_popups()
+
+                        # --- SIMULATE SCROLLING TO TRIGGER LAZY LOADING ---
+                        logger.info("Scrolling page to trigger job loading...")
+                        # Scroll down a few times to ensure content loads
+                        for _ in range(3):
+                            self.driver.execute_script("window.scrollBy(0, 500);")
+                            time.sleep(1) # Wait for content to potentially load
+                        # --------------------------------------------------
+
+                        # Now, wait for the first job card to be visible
+                        self.wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, self.job_card_selector)))
                         
-                        # Extract job links
-                        job_cards = self.driver.find_elements(By.CSS_SELECTOR, self.job_card_selector)
+                        soup = BeautifulSoup(self.driver.page_source, 'html.parser')
+                        job_cards = soup.select('.srp-jobtuple-wrapper')
                         logger.info(f"Found {len(job_cards)} job cards")
-                        
+
                         page_links = []
                         for card in job_cards:
                             try:
-                                # Get job link
-                                title_element = card.find_element(By.CSS_SELECTOR, self.job_title_selector)
-                                job_url = title_element.get_attribute('href')
-                                
-                                if job_url and job_url not in self.processed_jobs:
-                                    # Get job text for basic filtering
-                                    job_text = card.text.lower()
+                                title_element = card.select_one('a.title')
+                                if title_element and title_element.has_attr('href'):
+                                    job_url = title_element['href']
                                     
-                                    if self._is_relevant_job(job_text):
-                                        page_links.append(job_url)
-                                        self.processed_jobs.add(job_url)
-                                        
+                                    if job_url and job_url not in self.processed_jobs:
+                                        job_text = card.get_text().lower()
+                                        if self._is_relevant_job(job_text):
+                                            page_links.append(job_url)
+                                            self.processed_jobs.add(job_url)
                             except Exception as e:
-                                logger.debug(f"Error extracting job card: {e}")
+                                logger.debug(f"Error processing a job card with BeautifulSoup: {e}")
                                 continue
-                        
+                                
                         logger.info(f"Page {page}: Found {len(page_links)} relevant jobs")
                         self.joblinks.extend(page_links)
-                        
-                        # Delay between pages
-                        self.smart_delay(3, 5)
+                        self.smart_delay(1, 2)
                         
                     except Exception as e:
-                        logger.error(f"Error on page {page}: {e}")
+                        logger.error(f"Error on page {page} for '{keyword}': {e}")
                         continue
             
-            logger.info(f"✅ Job search completed. Found {len(self.joblinks)} total jobs")
+            logger.info(f"✅ Job search completed. Found {len(self.joblinks)} total jobs.")
             return len(self.joblinks) > 0
             
         except Exception as e:
-            logger.error(f"Error in scrape_job_links: {e}")
+            logger.error(f"Fatal error in scrape_job_links: {e}")
             return False
     
     def _is_relevant_job(self, job_text):
-        """Filter jobs based on relevance"""
+        """
+        A more lenient filter to gather potentially relevant jobs for further analysis.
+        """
         text_lower = job_text.lower()
-        
-        # Exclude irrelevant positions
-        exclude_keywords = ['sales', 'marketing', 'hr', 'recruiter', 'bpo', 'call center', 'customer service']
+
+        # 1. Broadly exclude positions that are clearly not a fit.
+        exclude_keywords = [
+            'sales', 'marketing', 'hr', 'recruiter', 'bpo', 'customer service',
+            'voice process', 'support engineer'
+        ]
         if any(keyword in text_lower for keyword in exclude_keywords):
             return False
-        
-        # Must contain relevant keywords  
-        relevant_keywords = ['python', 'data', 'engineer', 'developer', 'sql', 'etl', 'analytics', 'software']
-        if not any(keyword in text_lower for keyword in relevant_keywords):
-            return False
-        
-        # Check experience level (prefer 1-5 years)
-        experience_patterns = ['1-3', '2-5', '3-5', '1-4', '2-4', '0-3', '1-2']
-        if not any(pattern in text_lower for pattern in experience_patterns):
-            # Allow if no specific experience mentioned
-            if any(senior in text_lower for senior in ['senior', 'lead', '5+', '6+', '7+']):
-                return False
-        
-        # Check location preference
-        if 'bengaluru' in text_lower or 'bangalore' in text_lower or 'remote' in text_lower:
-            return True
-        
-        # Default to include if basic criteria met
+
+        # 2. Ensure at least one of the core keywords from your search is present.
+        #    This prevents completely unrelated jobs from getting through.
+        search_keywords = [kw.lower() for kw in self.config['job_search']['keywords']]
+        if not any(keyword in text_lower for keyword in search_keywords):
+            # This check might be too strict if the card text is minimal.
+            # We can be even more lenient and trust the search results initially.
+            pass
+
+        # 3. If it's not explicitly excluded, consider it relevant for now.
+        #    The detailed check will happen during the application phase.
         return True
     
     def apply_to_jobs(self):
@@ -515,14 +563,8 @@ class IntelligentNaukriBot:
             if not self.joblinks:
                 logger.warning("No jobs to apply to")
                 return
-            
             logger.info(f"🎯 Starting applications to {len(self.joblinks)} jobs...")
-            max_applications = self.config['job_search']['max_applications_per_session']
-            
             for index, job_url in enumerate(self.joblinks):
-                if self.applied >= max_applications:
-                    logger.info(f"Reached application limit: {max_applications}")
-                    break
                 
                 try:
                     logger.info(f"Applying to job {index + 1}/{len(self.joblinks)}: {job_url}")
@@ -558,34 +600,41 @@ class IntelligentNaukriBot:
     
     def _apply_to_single_job(self, job_url):
         """
-        Apply to a single job with a priority for 'Easy Apply', fallback to standard
-        application, and improved waiting and checking logic.
+        Apply to a single job with a corrected 'Easy Apply' selector.
         """
         try:
             self.driver.get(job_url)
-            # Use wait for the page to load, e.g., for a known element in the footer
             self.wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, 'body')))
 
             # 1. CHECK IF ALREADY APPLIED ON THE PAGE
             try:
-                applied_text_element = self.driver.find_element(By.XPATH, "//*[contains(text(), 'Applied')]")
+                applied_text_element = self.driver.find_element(By.XPATH, "//*[contains(@class, 'applied-already')]")
                 if applied_text_element.is_displayed():
                     logger.info("⏩ Job is already marked as 'Applied' on the page. Skipping.")
                     self.skipped += 1
                     return False
             except NoSuchElementException:
-                pass # Not applied, so continue
+                pass
 
-            # 2. PRIORITY 1: Look for 'Apply on Naukri' (Easy Apply)
+            # 2. PRIORITY 1: Look for 'Apply on Naukri' (Easy Apply) with CORRECTED selector
             try:
-                easy_apply_selector = "//button[contains(text(), 'Apply on Naukri') or contains(text(), 'Easy Apply')]"
-                easy_apply_button = self.wait.until(EC.element_to_be_clickable((By.XPATH, easy_apply_selector)))
+                # This selector is more robust and targets the button by its function
+                easy_apply_selector = "button[data-apply-id]"
+                easy_apply_button = self.wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, easy_apply_selector)))
                 
                 logger.info("✅ Found 'Easy Apply' button. Initiating on-site application.")
                 self.driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", easy_apply_button)
-                self.smart_delay(1, 2) # A small delay can still be useful here
+                self.smart_delay(1, 2)
                 easy_apply_button.click()
                 
+                # Handle possible chatbot that appears after Easy Apply
+                try:
+                    chatbot_handled = self._handle_chatbot()
+                    if chatbot_handled:
+                        logger.info("Chatbot interaction detected and handled.")
+                except Exception as e:
+                    logger.debug(f"Chatbot handler raised exception: {e}")
+
                 if self._handle_easy_apply_submission():
                     job_id = self._extract_job_id(job_url)
                     self._save_job_application(job_id, job_url, "Applied (Easy Apply)")
@@ -602,8 +651,6 @@ class IntelligentNaukriBot:
             apply_button_selectors = [
                 "//button[contains(translate(text(), 'A', 'a'), 'apply')]",
                 ".btn-apply",
-                "[data-job-apply]",
-                "#apply-button"
             ]
             
             for selector in apply_button_selectors:
@@ -611,7 +658,7 @@ class IntelligentNaukriBot:
                     apply_button = self.wait.until(EC.element_to_be_clickable((By.XPATH if selector.startswith('//') else By.CSS_SELECTOR, selector)))
                     logger.info(f"Found standard apply button with selector: {selector}")
                     self.driver.execute_script("arguments[0].click();", apply_button)
-                    self.smart_delay(4, 6) # Wait for potential new tab
+                    self.smart_delay(4, 6)
                     
                     logger.info("✔️ Standard apply button clicked (likely redirected to external site).")
                     job_id = self._extract_job_id(job_url)
@@ -651,6 +698,95 @@ class IntelligentNaukriBot:
             return False
         except Exception as e:
             logger.error(f"An error occurred during easy apply submission: {e}")
+            return False
+
+    def _handle_chatbot(self, timeout=8):
+        """Detects a chatbot drawer after starting an application and answers simple questions.
+
+        The answers are read from self.config['chatbot_answers'] and the function
+        attempts to send them to the chatbot UI. Returns True if any interaction
+        was performed, False otherwise.
+        """
+        try:
+            answers = self.config.get('chatbot_answers', {})
+            if not answers:
+                return False
+
+            short_wait = WebDriverWait(self.driver, timeout)
+
+            # Heuristic: detect a drawer or chat widget by common attributes
+            chat_drawer = None
+            possible_drawers = ["div[id*='Drawer']", "div[class*='chatbot']", "div[id*='chat']"]
+            for sel in possible_drawers:
+                try:
+                    chat_drawer = short_wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, sel)))
+                    if chat_drawer:
+                        break
+                except TimeoutException:
+                    continue
+
+            if not chat_drawer:
+                return False
+
+            logger.info("Detected chatbot drawer. Attempting to answer simple prompts.")
+
+            # Try a loop to answer up to 5 questions
+            for _ in range(5):
+                try:
+                    # Latest bot message (heuristic selector)
+                    bot_msg = self.driver.find_element(By.CSS_SELECTOR, "li.botItem:last-of-type div.botMsg span")
+                    question = bot_msg.text.strip().lower()
+
+                    # Select an answer based on keywords
+                    answer_text = answers.get('default_answer')
+                    if 'experience' in question and answers.get('experience'):
+                        answer_text = answers['experience']
+                    elif 'notice' in question and answers.get('notice_period'):
+                        answer_text = answers['notice_period']
+                    elif 'ctc' in question and answers.get('current_ctc'):
+                        answer_text = answers['current_ctc']
+
+                    if not answer_text:
+                        logger.debug("No configured answer for detected question; skipping chatbot interaction.")
+                        return False
+
+                    # Find input and send
+                    try:
+                        user_input = self.driver.find_element(By.CSS_SELECTOR, "div[id*='userInput'] textarea, input[type='text']")
+                        user_input.clear()
+                        user_input.send_keys(answer_text)
+                    except Exception:
+                        try:
+                            # Fallback: contenteditable div
+                            editable = self.driver.find_element(By.CSS_SELECTOR, "div[contenteditable='true']")
+                            editable.click()
+                            editable.send_keys(answer_text)
+                        except Exception:
+                            logger.debug("Could not find chatbot input field to type into.")
+                            return False
+
+                    # Click send
+                    try:
+                        send_btn = self.driver.find_element(By.CSS_SELECTOR, "div[id*='sendMsg__'], button.send, button[class*='send']")
+                        self.driver.execute_script("arguments[0].click();", send_btn)
+                    except Exception:
+                        try:
+                            user_input.send_keys("\n")
+                        except Exception:
+                            logger.debug("Failed to submit chatbot answer.")
+                            return False
+
+                    # Wait briefly for bot to respond to next question
+                    time.sleep(1.5)
+                except NoSuchElementException:
+                    break
+                except Exception as e:
+                    logger.debug(f"Chatbot loop encountered: {e}")
+                    break
+
+            return True
+        except Exception as e:
+            logger.debug(f"_handle_chatbot error: {e}")
             return False
     
     def _extract_job_id(self, job_url):

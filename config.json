@@ -11,7 +11,7 @@
   "job_search": {
     "keywords": [
       "Data Engineer",
-      "Python Developer", 
+      "Big Data Engineer",
       "ETL Developer",
       "SQL Developer"
     ],
@@ -41,5 +41,13 @@
     "max_delay": 7,
     "typing_delay": 0.1,
     "scroll_pause": 2
+  }
+  ,
+  "chatbot_answers": {
+    "experience": "5",
+    "notice_period": "30",
+    "current_ctc": "15",
+    "expected_ctc": "20",
+    "default_answer": "Yes"
   }
 }

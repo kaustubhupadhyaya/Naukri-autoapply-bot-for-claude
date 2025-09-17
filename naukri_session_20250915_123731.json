@@ -1,0 +1,26 @@
+{
+  "session_date": "2025-09-15T12:37:31.877709",
+  "total_jobs_found": 149,
+  "applications_sent": 15,
+  "applications_failed": 0,
+  "jobs_skipped": 134,
+  "success_rate": "10.1%",
+  "applied_jobs": [
+    "https://www.naukri.com/job-listings-data-engineer-accenture-solutions-pvt-ltd-bengaluru-3-to-8-years-250825921747",
+    "https://www.naukri.com/job-listings-backend-data-engineer-ibm-india-pvt-limited-bengaluru-1-to-3-years-180825908243",
+    "https://www.naukri.com/job-listings-data-engineer-accenture-solutions-pvt-ltd-bengaluru-3-to-8-years-140825937677",
+    "https://www.naukri.com/job-listings-data-engineer-sapaad-software-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-2-to-7-years-260624500498",
+    "https://www.naukri.com/job-listings-data-engineer-fractal-analytics-ltd-mumbai-pune-chennai-gurugram-bengaluru-3-to-7-years-210125501878",
+    "https://www.naukri.com/job-listings-data-scientist-engineer-cyquent-mumbai-delhi-ncr-bengaluru-2-to-5-years-270825911871",
+    "https://www.naukri.com/job-listings-big-data-snowflake-engineers-mindrives-business-solutions-private-limited-bengaluru-5-to-9-years-200924503720",
+    "https://www.naukri.com/job-listings-data-engineer-big-data-triangle-global-bengaluru-8-to-13-years-100323503512",
+    "https://www.naukri.com/job-listings-big-data-developer-evnek-new-delhi-ahmedabad-bengaluru-3-to-5-years-270825912406",
+    "https://www.naukri.com/job-listings-data-analyst-enterpriseminds-india-private-limited-bengaluru-1-to-4-years-120925918594",
+    "https://www.naukri.com/job-listings-databricks-engineer-version-1-services-private-limited-bengaluru-2-to-5-years-050925918157",
+    "https://www.naukri.com/job-listings-data-scientist-artificial-intelligence-ibm-india-pvt-limited-bengaluru-3-to-7-years-290825915152",
+    "https://www.naukri.com/job-listings-big-data-developer-diverse-lynx-bengaluru-2-to-6-years-270825502708",
+    "https://www.naukri.com/job-listings-cloud-application-engineer-kushals-com-bengaluru-1-to-4-years-090925029743",
+    "https://www.naukri.com/job-listings-sql-developer-data-collection-infotech-india-private-limited-bengaluru-1-to-4-years-310723500138"
+  ],
+  "failed_jobs": []
+}

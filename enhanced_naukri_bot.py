@@ -46,8 +46,7 @@ class EnhancedNaukriBot(IntelligentNaukriBot):
         # Enhanced tracking
         self.applied_count = 0
         self.analyzed_count = 0
-        self.max_applications = self.config['job_search']['max_applications_per_session']
-        
+
         # Session statistics
         self.session_stats = {
             'ai_calls': 0,
@@ -58,7 +57,7 @@ class EnhancedNaukriBot(IntelligentNaukriBot):
             'ai_failures': 0,
             'extraction_failures': 0
         }
-        
+
         logger.info("Enhanced Naukri Bot initialized successfully!")
     
     def process_jobs_with_streaming_application(self):
@@ -72,19 +71,12 @@ class EnhancedNaukriBot(IntelligentNaukriBot):
         keywords = self.config['job_search']['keywords']
         location = self.config['job_search']['location']
         pages_per_keyword = self.config['job_search']['pages_per_keyword']
-        
-        logger.info(f"🎯 Starting AI-powered job processing (max {self.max_applications} applications)")
-        
+        logger.info("🎯 Starting AI-powered job processing (no application cap)")
+
         for keyword_index, keyword in enumerate(keywords):
-            if self.applied_count >= self.max_applications:
-                logger.info(f"✅ Reached application limit: {self.max_applications}")
-                break
-            
             logger.info(f"🔍 Processing keyword {keyword_index + 1}/{len(keywords)}: {keyword}")
             
             for page in range(1, pages_per_keyword + 1):
-                if self.applied_count >= self.max_applications:
-                    break
                 
                 try:
                     # Navigate to search page
@@ -115,8 +107,6 @@ class EnhancedNaukriBot(IntelligentNaukriBot):
                     
                     # Process each job card with timeout
                     for card_index, job_card in enumerate(job_cards):
-                        if self.applied_count >= self.max_applications:
-                            break
                         
                         try:
                             logger.info(f"🔍 Processing job card {card_index + 1}/{len(job_cards)}")

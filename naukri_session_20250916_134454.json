@@ -1,0 +1,40 @@
+{
+  "session_date": "2025-09-16T13:44:54.101410",
+  "total_jobs_found": 152,
+  "applications_sent": 27,
+  "applications_failed": 1,
+  "jobs_skipped": 124,
+  "success_rate": "17.8%",
+  "applied_jobs": [
+    "https://www.naukri.com/job-listings-data-engineer-accenture-solutions-pvt-ltd-bengaluru-3-to-8-years-150925925448",
+    "https://www.naukri.com/job-listings-data-engineer-accenture-solutions-pvt-ltd-bengaluru-2-to-4-years-150925923988",
+    "https://www.naukri.com/job-listings-data-engineer-accenture-solutions-pvt-ltd-bengaluru-2-to-4-years-150925925550",
+    "https://www.naukri.com/job-listings-data-engineer-accenture-solutions-pvt-ltd-bengaluru-2-to-4-years-150925925518",
+    "https://www.naukri.com/job-listings-data-engineer-accenture-solutions-pvt-ltd-bengaluru-2-to-4-years-150925925383",
+    "https://www.naukri.com/job-listings-data-engineer-accenture-solutions-pvt-ltd-bengaluru-2-to-4-years-150925925263",
+    "https://www.naukri.com/job-listings-data-engineer-accenture-solutions-pvt-ltd-bengaluru-2-to-4-years-150925925467",
+    "https://www.naukri.com/job-listings-data-engineer-accenture-solutions-pvt-ltd-bengaluru-2-to-4-years-150925925453",
+    "https://www.naukri.com/job-listings-data-engineer-accenture-solutions-pvt-ltd-bengaluru-2-to-4-years-150925925237",
+    "https://www.naukri.com/job-listings-data-engineer-wipro-limited-bengaluru-5-to-8-years-160925913483",
+    "https://www.naukri.com/job-listings-data-engineer-accenture-solutions-pvt-ltd-bengaluru-7-to-12-years-150925923721",
+    "https://www.naukri.com/job-listings-data-engineer-accenture-solutions-pvt-ltd-bengaluru-3-to-8-years-150925925182",
+    "https://www.naukri.com/job-listings-backend-engineer-founding-engineer-zintlr-bengaluru-1-to-3-years-110725500053",
+    "https://www.naukri.com/job-listings-data-scientist-artificial-intelligence-ibm-india-pvt-limited-bengaluru-5-to-7-years-040925927623",
+    "https://www.naukri.com/job-listings-data-scientist-artificial-intelligence-ibm-india-pvt-limited-bengaluru-5-to-7-years-010925917613",
+    "https://www.naukri.com/job-listings-azure-data-engineer-hiring-for-one-of-the-big-four-company-acme-services-bengaluru-5-to-10-years-010925022270",
+    "https://www.naukri.com/job-listings-data-scientist-artificial-intelligence-ibm-india-pvt-limited-bengaluru-5-to-7-years-250825914558",
+    "https://www.naukri.com/job-listings-data-scientist-artificial-intelligence-ibm-india-pvt-limited-bengaluru-5-to-7-years-250825914542",
+    "https://www.naukri.com/job-listings-data-scientist-artificial-intelligence-ibm-india-pvt-limited-bengaluru-5-to-7-years-200825922190",
+    "https://www.naukri.com/job-listings-etl-developer-ntt-data-information-processing-services-private-l-imited-bengaluru-7-to-10-years-160925913156",
+    "https://www.naukri.com/job-listings-etl-developer-quantaleap-hyderabad-bengaluru-4-to-9-years-160925013733",
+    "https://www.naukri.com/job-listings-etl-developer-clifyx-technology-bengaluru-5-to-8-years-080525503811",
+    "https://www.naukri.com/job-listings-etl-developer-param-info-computer-services-bengaluru-6-to-11-years-250825009254",
+    "https://www.naukri.com/job-listings-sql-developer-siage-solutions-bengaluru-3-to-4-years-160925016898",
+    "https://www.naukri.com/job-listings-sql-unix-developer-hexaware-technologies-pune-chennai-bengaluru-7-to-12-years-160925017088",
+    "https://www.naukri.com/job-listings-techno-functional-business-analyst-sql-developer-exp-ltimindtree-bengaluru-8-to-12-years-150925029392",
+    "https://www.naukri.com/job-listings-data-build-tool-dbt-developer-with-sql-python-expertise-tredence-analytics-solutions-private-limited-bengaluru-7-to-12-years-150925028692"
+  ],
+  "failed_jobs": [
+    "https://www.naukri.com/job-listings-walk-in-drive-hyderabad-chennai-indium-data-analyst-data-engineers-indium-software-hyderabad-bengaluru-2-to-6-years-160925015369"
+  ]
+}

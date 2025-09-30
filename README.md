@@ -19,3 +19,15 @@ Automation that applies to jobs on Naukri.com easily for fatster job hunting and
 - Run the Naukri-autoapply bot by python Naukri-Edge.py
 - Please note this script was built in selenium version 4
 
+
+
+- Last run: 2025-09-29T19:35:10.210758 UTC
+- Jobs discovered: 90
+- Applied (easy apply): 0
+- Skipped (external): 11
+
+
+- Last run: 2025-09-30T19:28:12.764881 UTC
+- Jobs discovered: 128
+- Applied (easy apply): 0
+- Skipped (external): 58

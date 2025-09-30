@@ -1,7 +1,7 @@
 """
 Naukri Auto-Apply Bot - Complete Fixed Version
 Author: Fixed for Kaustubh Upadhyaya
-Date: July 2025
+Date: September 2025
 """
 
 import pandas as pd
@@ -16,13 +16,13 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.edge.service import Service as EdgeService
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.edge.service import Service
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.common.exceptions import TimeoutException, NoSuchElementException, ElementClickInterceptedException
 from bs4 import BeautifulSoup
 from datetime import datetime
 import sqlite3
+import google.generativeai as genai
 
 # Configure logging
 logging.basicConfig(
@@ -38,9 +38,24 @@ logger = logging.getLogger(__name__)
 class IntelligentNaukriBot:
     """Fixed Naukri Bot with updated login and selectors"""
     
-    def __init__(self, config_file='config.json'):
+    def __init__(self, config_file='enhanced_config.json'):
         """Initialize the bot with configuration"""
         self.config = self.load_config(config_file)
+        
+        # --- Configure Gemini API ---
+        try:
+            gemini_api_key = self.config.get('gemini_api_key')
+            if gemini_api_key:
+                genai.configure(api_key=gemini_api_key)
+                self.gemini_model = genai.GenerativeModel('gemini-1.5-flash')
+                logger.info("Gemini API configured successfully.")
+            else:
+                self.gemini_model = None
+                logger.warning("Gemini API key not found in config. AI chatbot will be disabled.")
+        except Exception as e:
+            self.gemini_model = None
+            logger.error(f"Failed to configure Gemini API: {e}")
+
         self.driver = None
         self.wait = None
         self.joblinks = []
@@ -52,8 +67,12 @@ class IntelligentNaukriBot:
         
         # Initialize simple job tracking
         self.init_job_database()
+        # Repository root (used for saving CSVs and README updates)
+        try:
+            self.repo_root = os.path.abspath(os.path.dirname(__file__))
+        except Exception:
+            self.repo_root = os.getcwd()
         
-        # Updated selectors based on current Naukri structure
         self.job_card_selector = '.srp-jobtuple-wrapper'
         self.job_title_selector = '.title a'
         
@@ -82,7 +101,10 @@ class IntelligentNaukriBot:
                     "keywords": ["Data Engineer", "Python Developer", "ETL Developer", "SQL Developer"],
                     "location": "bengaluru",
                     "max_applications_per_session": 20,
-                    "pages_per_keyword": 3,
+                    # FIXED ISSUE 2: Increased pages to find more jobs
+                    "pages_per_keyword": 10,
+                    # FIXED ISSUE 1: Added filter for recent jobs
+                    "job_age_days": 3,
                     "preferred_companies": ["Microsoft", "Google", "Amazon", "Netflix"],
                     "avoid_companies": ["TCS", "Infosys", "Wipro"]
                 },
@@ -127,60 +149,60 @@ class IntelligentNaukriBot:
             self.db_conn = None
     
     def setup_driver(self):
-        """Setup WebDriver with enhanced error handling"""
+        """Setup WebDriver with enhanced stability and stealth options."""
+        logger.info("Setting up new browser session...")
         try:
-            logger.info("Setting up browser...")
-            logger.info(f"Operating System: {platform.platform()}")
-            
-            # Enhanced Edge options for stealth
             options = webdriver.EdgeOptions()
-            options.add_argument("--disable-blink-features=AutomationControlled")
-            options.add_experimental_option("excludeSwitches", ["enable-automation", "enable-logging"])
-            options.add_experimental_option('useAutomationExtension', False)
-            options.add_argument("--disable-web-security")
-            options.add_argument("--allow-running-insecure-content")
-            options.add_argument("--disable-extensions")
-            options.add_argument("--no-sandbox")
-            options.add_argument("--disable-dev-shm-usage")
-            options.add_argument("--disable-gpu")
-            options.add_argument("--disable-features=msSmartScreenProxy")
-            
-            # Add realistic user agent
-            options.add_argument("--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0")
-            
-            if self.config['webdriver'].get('headless', False):
+            # --- CRITICAL STABILITY OPTIONS ---
+            # Respect the config setting for headless (allow turning off headless to avoid access blocks)
+            headless_cfg = self.config.get('webdriver', {}).get('headless', True)
+            if headless_cfg:
                 options.add_argument("--headless")
-            
-            # Try multiple driver setup methods
-            driver_methods = [
-                self._try_webdriver_manager,
-                self._try_manual_path,
-                self._try_system_driver
-            ]
-            
-            for method in driver_methods:
+            options.add_argument("--no-sandbox")
+            options.add_argument("--disable-gpu")
+            options.add_argument("--disable-dev-shm-usage")
+            options.add_argument("--disable-infobars")
+            options.add_argument("--disable-extensions")
+            options.add_argument("--log-level=3")
+            options.add_argument("--disable-blink-features=AutomationControlled")
+            options.add_experimental_option("excludeSwitches", ["enable-automation"])
+            options.add_experimental_option('useAutomationExtension', False)
+            options.add_argument('--disable-features=IsolateOrigins,site-per-process')
+
+            prefs = {"profile.managed_default_content_settings.images": 2}
+            options.add_experimental_option("prefs", prefs)
+
+            # Optionally reuse a user profile to bypass some bot protections (set path in config)
+            user_data_dir = self.config.get('webdriver', {}).get('user_data_dir')
+            if user_data_dir and os.path.exists(user_data_dir):
                 try:
-                    self.driver = method(options)
-                    if self.driver:
-                        break
+                    options.add_argument(f"--user-data-dir={user_data_dir}")
+                    logger.info(f"Using existing browser profile from: {user_data_dir}")
+                except Exception:
+                    logger.debug("Failed to apply user data dir for browser profile")
+
+            # Prefer a local driver path if provided to avoid network calls in restricted environments
+            local_path = self.config.get('webdriver', {}).get('edge_driver_path')
+            if local_path and os.path.exists(local_path):
+                try:
+                    service = EdgeService(local_path)
+                    self.driver = webdriver.Edge(service=service, options=options)
+                except Exception:
+                    self.driver = None
+            else:
+                # Fall back to webdriver-manager (may require network access)
+                try:
+                    from webdriver_manager.microsoft import EdgeChromiumDriverManager
+                    service = EdgeService(EdgeChromiumDriverManager().install())
+                    self.driver = webdriver.Edge(service=service, options=options)
                 except Exception as e:
-                    logger.warning(f"Driver setup method failed: {e}")
-                    continue
-            
-            if not self.driver:
-                logger.error("All driver setup methods failed")
-                return False
-            
-            # Configure driver
-            self.driver.implicitly_wait(self.config['webdriver']['implicit_wait'])
-            self.driver.set_page_load_timeout(self.config['webdriver']['page_load_timeout'])
+                    logger.error(f"webdriver-manager fallback failed: {e}")
+                    self.driver = None
+
+            self.driver.set_page_load_timeout(60)
             self.wait = WebDriverWait(self.driver, 20)
-            
-            # Test driver with simple navigation
-            self.driver.get("https://www.google.com")
-            logger.info("✅ Browser setup successful")
+            logger.info("✅ Browser setup successful.")
             return True
-            
         except Exception as e:
             logger.error(f"WebDriver setup failed: {e}")
             return False
@@ -238,6 +260,11 @@ class IntelligentNaukriBot:
                 # Navigate to login page
                 self.driver.get('https://www.naukri.com/nlogin/login')
                 self.smart_delay(3, 5)
+                # Try to close any popups that might obscure the form
+                try:
+                    self._handle_popups()
+                except Exception:
+                    pass
                 
                 # UPDATED LOGIN SELECTORS - Try multiple selectors for email field
                 email_selectors = [
@@ -252,17 +279,55 @@ class IntelligentNaukriBot:
                 ]
                 
                 email_field = None
+                # Try searching for selectors in the main document first
                 for selector in email_selectors:
                     try:
-                        email_field = self.driver.find_element(By.CSS_SELECTOR, selector)
+                        email_field = WebDriverWait(self.driver, 8).until(
+                            EC.presence_of_element_located((By.CSS_SELECTOR, selector))
+                        )
                         if email_field.is_displayed() and email_field.is_enabled():
-                            logger.info(f"✅ Found email field with selector: {selector}")
+                            logger.info("✅ Found email field in main document")
                             break
-                    except NoSuchElementException:
+                    except Exception:
+                        email_field = None
                         continue
+
+                # If not found, try inside iframes (some login flows embed the form)
+                if not email_field:
+                    try:
+                        frames = self.driver.find_elements(By.TAG_NAME, 'iframe')
+                        for fr in frames:
+                            try:
+                                self.driver.switch_to.frame(fr)
+                                for selector in email_selectors:
+                                    try:
+                                        email_field = self.driver.find_element(By.CSS_SELECTOR, selector)
+                                        if email_field.is_displayed() and email_field.is_enabled():
+                                            logger.info("✅ Found email field inside an iframe")
+                                            break
+                                    except Exception:
+                                        continue
+                                self.driver.switch_to.default_content()
+                                if email_field:
+                                    break
+                            except Exception:
+                                try:
+                                    self.driver.switch_to.default_content()
+                                except Exception:
+                                    pass
+                                continue
+                    except Exception:
+                        pass
                 
                 if not email_field:
                     logger.error("❌ Could not find email field")
+                    # Save a debug snapshot for inspection
+                    try:
+                        with open('login_debug_snapshot.html', 'w', encoding='utf-8') as f:
+                            f.write(self.driver.page_source)
+                        logger.info("Saved login_debug_snapshot.html for troubleshooting")
+                    except Exception:
+                        pass
                     continue
                 
                 # Enter email
@@ -419,11 +484,11 @@ class IntelligentNaukriBot:
             
             # Common selectors for pop-up close buttons
             close_button_selectors = [
-                "span.close-popup",          # Generic close icon
-                "button.close",              # Common button class
-                "div.cross-icon",            # Another common icon
-                "[aria-label='Close']",      # Accessibility label
-                "i.naukri-icon-close"        # Naukri-specific icon
+                "span.close-popup",      # Generic close icon
+                "button.close",          # Common button class
+                "div.cross-icon",        # Another common icon
+                "[aria-label='Close']",  # Accessibility label
+                "i.naukri-icon-close"    # Naukri-specific icon
             ]
             
             for selector in close_button_selectors:
@@ -447,8 +512,8 @@ class IntelligentNaukriBot:
 
     def scrape_job_links(self):
         """
-        Scrape job links with added scrolling to handle lazy loading,
-        pop-up handling, and high-speed parsing.
+        OPTIMIZED: Scrape job links and automatically stop searching a keyword
+        if multiple consecutive pages yield no new results.
         """
         try:
             logger.info("🔍 Starting definitive job search with scroll handling...")
@@ -460,47 +525,45 @@ class IntelligentNaukriBot:
             for keyword in keywords:
                 logger.info(f"Searching for: {keyword}")
                 
+                # --- START OF OPTIMIZATION LOGIC ---
+                consecutive_pages_with_no_new_jobs = 0
+                # --- END OF OPTIMIZATION LOGIC ---
+
                 for page in range(1, pages_per_keyword + 1):
+                    # --- START OF OPTIMIZATION CHECK ---
+                    if consecutive_pages_with_no_new_jobs >= 3:
+                        logger.info(f"Found no new jobs for '{keyword}' for 3 consecutive pages. Moving to next keyword.")
+                        break
+                    # --- END OF OPTIMIZATION CHECK ---
+
                     try:
                         search_keyword = keyword.lower().replace(' ', '-')
                         search_location = location.lower().replace(' ', '-')
+                        
                         base_url = f"https://www.naukri.com/{search_keyword}-jobs-in-{search_location}-{page}"
+                        job_age_days = self.config['job_search'].get('job_age_days')
 
-                        # Optionally append jobAge param to filter by job posting age
-                        job_age_days = None
-                        try:
-                            job_age_days = int(self.config.get('job_search', {}).get('job_age_days', 0))
-                        except Exception:
-                            job_age_days = None
-
-                        if job_age_days and job_age_days > 0:
-                            # If base_url already has query params (unlikely here), append with &
-                            sep = '&' if '?' in base_url else '?'
-                            url = f"{base_url}{sep}jobAge={job_age_days}"
+                        if job_age_days and int(job_age_days) > 0:
+                            url = f"{base_url}?jobAge={job_age_days}"
                         else:
                             url = base_url
                         
                         logger.info(f"Page {page}: {url}")
                         self.driver.get(url)
-                        
                         self._handle_popups()
 
-                        # --- SIMULATE SCROLLING TO TRIGGER LAZY LOADING ---
                         logger.info("Scrolling page to trigger job loading...")
-                        # Scroll down a few times to ensure content loads
                         for _ in range(3):
                             self.driver.execute_script("window.scrollBy(0, 500);")
-                            time.sleep(1) # Wait for content to potentially load
-                        # --------------------------------------------------
+                            time.sleep(1)
 
-                        # Now, wait for the first job card to be visible
                         self.wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, self.job_card_selector)))
                         
                         soup = BeautifulSoup(self.driver.page_source, 'html.parser')
                         job_cards = soup.select('.srp-jobtuple-wrapper')
-                        logger.info(f"Found {len(job_cards)} job cards")
+                        logger.info(f"Found {len(job_cards)} job cards on page")
 
-                        page_links = []
+                        new_links_found_on_this_page = 0
                         for card in job_cards:
                             try:
                                 title_element = card.select_one('a.title')
@@ -510,21 +573,30 @@ class IntelligentNaukriBot:
                                     if job_url and job_url not in self.processed_jobs:
                                         job_text = card.get_text().lower()
                                         if self._is_relevant_job(job_text):
-                                            page_links.append(job_url)
+                                            self.joblinks.append(job_url)
                                             self.processed_jobs.add(job_url)
+                                            new_links_found_on_this_page += 1
                             except Exception as e:
-                                logger.debug(f"Error processing a job card with BeautifulSoup: {e}")
+                                logger.debug(f"Error processing a job card: {e}")
                                 continue
                                 
-                        logger.info(f"Page {page}: Found {len(page_links)} relevant jobs")
-                        self.joblinks.extend(page_links)
+                        logger.info(f"Page {page}: Found {new_links_found_on_this_page} new relevant jobs")
+
+                        # --- START OF OPTIMIZATION COUNTER ---
+                        if new_links_found_on_this_page == 0:
+                            consecutive_pages_with_no_new_jobs += 1
+                        else:
+                            consecutive_pages_with_no_new_jobs = 0
+                        # --- END OF OPTIMIZATION COUNTER ---
+
                         self.smart_delay(1, 2)
                         
                     except Exception as e:
                         logger.error(f"Error on page {page} for '{keyword}': {e}")
+                        consecutive_pages_with_no_new_jobs += 1 # Count error pages as empty
                         continue
             
-            logger.info(f"✅ Job search completed. Found {len(self.joblinks)} total jobs.")
+            logger.info(f"✅ Job search completed. Found {len(self.joblinks)} total new jobs.")
             return len(self.joblinks) > 0
             
         except Exception as e:
@@ -558,14 +630,14 @@ class IntelligentNaukriBot:
         return True
     
     def apply_to_jobs(self):
-        """Apply to jobs with enhanced error handling"""
+        """Apply to jobs with enhanced error handling and self-healing browser checks"""
         try:
             if not self.joblinks:
                 logger.warning("No jobs to apply to")
                 return
             logger.info(f"🎯 Starting applications to {len(self.joblinks)} jobs...")
             for index, job_url in enumerate(self.joblinks):
-                
+
                 try:
                     logger.info(f"Applying to job {index + 1}/{len(self.joblinks)}: {job_url}")
                     
@@ -600,74 +672,76 @@ class IntelligentNaukriBot:
     
     def _apply_to_single_job(self, job_url):
         """
-        Apply to a single job with a corrected 'Easy Apply' selector.
+        Applies to a single job.
+        - "Easy Apply" is a full attempt.
+        - External links are opened in a new tab and the bot immediately returns.
         """
         try:
+            # Keep track of the original tab
+            original_tab = self.driver.current_window_handle
+
+            # Navigate to the job page
             self.driver.get(job_url)
             self.wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, 'body')))
 
-            # 1. CHECK IF ALREADY APPLIED ON THE PAGE
+            # Check if job is already marked as applied on the page itself
             try:
-                applied_text_element = self.driver.find_element(By.XPATH, "//*[contains(@class, 'applied-already')]")
-                if applied_text_element.is_displayed():
-                    logger.info("⏩ Job is already marked as 'Applied' on the page. Skipping.")
-                    self.skipped += 1
+                if self.driver.find_element(By.CSS_SELECTOR, ".already-applied-layer").is_displayed():
+                    logger.info("⏩ Page indicates this job has already been applied to. Skipping.")
+                    self._save_job_application(self._extract_job_id(job_url), job_url, "Skipped (Already Applied)")
                     return False
             except NoSuchElementException:
                 pass
 
-            # 2. PRIORITY 1: Look for 'Apply on Naukri' (Easy Apply) with CORRECTED selector
+            # PRIORITY 1: Handle "Easy Apply"
             try:
-                # This selector is more robust and targets the button by its function
-                easy_apply_selector = "button[data-apply-id]"
-                easy_apply_button = self.wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, easy_apply_selector)))
-                
+                easy_apply_button = WebDriverWait(self.driver, 5).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "button.apply-button")))
                 logger.info("✅ Found 'Easy Apply' button. Initiating on-site application.")
                 self.driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", easy_apply_button)
-                self.smart_delay(1, 2)
+                time.sleep(1)
                 easy_apply_button.click()
                 
-                # Handle possible chatbot that appears after Easy Apply
-                try:
-                    chatbot_handled = self._handle_chatbot()
-                    if chatbot_handled:
-                        logger.info("Chatbot interaction detected and handled.")
-                except Exception as e:
-                    logger.debug(f"Chatbot handler raised exception: {e}")
-
+                self._handle_chatbot()
+                
                 if self._handle_easy_apply_submission():
-                    job_id = self._extract_job_id(job_url)
-                    self._save_job_application(job_id, job_url, "Applied (Easy Apply)")
-                    return True
+                    self._save_job_application(self._extract_job_id(job_url), job_url, "Applied (Easy Apply)")
+                    return True # This is the ONLY success case
                 else:
                     logger.warning("Easy Apply submission could not be confirmed.")
                     return False
 
             except TimeoutException:
-                logger.info("-> No 'Easy Apply' button found. Searching for a standard apply button.")
+                logger.info("-> No 'Easy Apply' button found. Checking for external site link.")
                 pass
 
-            # 3. PRIORITY 2: Fallback to Standard Apply Button
-            apply_button_selectors = [
-                "//button[contains(translate(text(), 'A', 'a'), 'apply')]",
-                ".btn-apply",
-            ]
-            
-            for selector in apply_button_selectors:
-                try:
-                    apply_button = self.wait.until(EC.element_to_be_clickable((By.XPATH if selector.startswith('//') else By.CSS_SELECTOR, selector)))
-                    logger.info(f"Found standard apply button with selector: {selector}")
-                    self.driver.execute_script("arguments[0].click();", apply_button)
-                    self.smart_delay(4, 6)
-                    
-                    logger.info("✔️ Standard apply button clicked (likely redirected to external site).")
-                    job_id = self._extract_job_id(job_url)
-                    self._save_job_application(job_id, job_url, "Applied (External)")
-                    return True
-                except (TimeoutException, NoSuchElementException, ElementClickInterceptedException):
-                    continue
+            # PRIORITY 2: Handle External Site Links
+            try:
+                apply_button_selectors = [
+                    "//button[contains(translate(text(), 'A', 'a'), 'apply')]", "//a[contains(translate(text(), 'A', 'a'), 'apply')]"
+                ]
+                for selector in apply_button_selectors:
+                    try:
+                        external_apply_button = WebDriverWait(self.driver, 2).until(EC.element_to_be_clickable((By.XPATH, selector)))
+                        
+                        logger.info("↗️ Found external apply link. Opening in new tab.")
+                        job_id = self._extract_job_id(job_url)
+                        self._save_job_application(job_id, job_url, "Skipped (External Site)")
 
-            logger.warning("❌ No actionable apply button was found on the page.")
+                        # Open the link in a new tab and switch back
+                        self.driver.switch_to.new_window('tab')
+                        self.driver.get(job_url) # Re-navigate to the job page in the new tab to click the button
+                        WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable((By.XPATH, selector))).click()
+                        
+                        self.driver.switch_to.window(original_tab) # Switch back to the main tab
+                        logger.info("⬅️ Switched back to main tab.")
+                        return False # Not counted as a success
+                    except TimeoutException:
+                        continue
+            except Exception as e:
+                logger.error(f"Error handling external link: {e}")
+                pass
+
+            logger.warning("❌ No actionable apply button of any kind was found on the page.")
             return False
             
         except Exception as e:
@@ -675,130 +749,201 @@ class IntelligentNaukriBot:
             return False
 
     def _handle_easy_apply_submission(self):
-        """Handles the final submission on the 'Easy Apply' pop-up/modal."""
+        """
+        Handles the final submission on the 'Easy Apply' pop-up/modal with more robust selectors.
+        """
         try:
+            # More comprehensive list of possible selectors for the final submit button
             submit_selectors = [
-                "//button[contains(text(), 'Submit') and contains(@class, 'btn-primary')]",
+                "//button[contains(text(), 'Submit Application')]",
+                "//button[contains(text(), 'Submit')]",
+                "//button[contains(text(), 'Confirm')]",
                 "//button[@id='submit-application']",
-                "//button[contains(text(), 'Confirm')]"
+                "//button[contains(@class, 'submit-btn')]",
+                "//button[@type='submit']"
             ]
             
             for selector in submit_selectors:
                 try:
-                    submit_button = self.wait.until(EC.element_to_be_clickable((By.XPATH, selector)))
-                    logger.info(f"Found easy apply submission button: {selector}")
+                    # Use a slightly shorter wait here to cycle through options faster
+                    submit_button = WebDriverWait(self.driver, 10).until(
+                        EC.element_to_be_clickable((By.XPATH, selector))
+                    )
+                    logger.info(f"Found easy apply submission button with selector: {selector}")
                     submit_button.click()
-                    self.smart_delay(3, 5) # Wait for confirmation
+                    self.smart_delay(3, 5) # Wait for confirmation screen
                     logger.info("✅ 'Easy Apply' submission successful.")
                     return True
                 except TimeoutException:
-                    continue
-                    
-            logger.warning("Could not find the final 'Submit' button for easy apply.")
+                    continue # Try the next selector
+            
+            logger.warning("Could not find the final 'Submit' button for easy apply after trying all selectors.")
             return False
         except Exception as e:
             logger.error(f"An error occurred during easy apply submission: {e}")
             return False
 
-    def _handle_chatbot(self, timeout=8):
-        """Detects a chatbot drawer after starting an application and answers simple questions.
+    def _get_gemini_answer(self, question):
+        """Sends the question to Gemini for a concise answer based on the user's config data."""
+        if not getattr(self, 'gemini_model', None):
+            return "AI model not configured."
 
-        The answers are read from self.config['chatbot_answers'] and the function
-        attempts to send them to the chatbot UI. Returns True if any interaction
-        was performed, False otherwise.
-        """
         try:
-            answers = self.config.get('chatbot_answers', {})
-            if not answers:
-                return False
+            user_profile = self.config.get('user_profile', {})
+            personal_info = self.config.get('personal_info', {})
 
-            short_wait = WebDriverWait(self.driver, timeout)
+            context = f"""
+            - Name: {user_profile.get('name')}
+            - Total Experience: {user_profile.get('experience_years')} years
+            - Current Role: {user_profile.get('current_role')}
+            - Core Skills: {', '.join(user_profile.get('core_skills', []))}
+            - Current CTC: {personal_info.get('current_ctc')}
+            - Expected CTC: {personal_info.get('expected_ctc')}
+            - Notice Period: {personal_info.get('notice_period')}
+            """
 
-            # Heuristic: detect a drawer or chat widget by common attributes
-            chat_drawer = None
-            possible_drawers = ["div[id*='Drawer']", "div[class*='chatbot']", "div[id*='chat']"]
-            for sel in possible_drawers:
+            prompt = f"""
+            You are an AI assistant for a job applicant. Answer the chatbot's question concisely and professionally based ONLY on the provided context.
+            Keep answers very short (e.g., "2 years", "18 LPA", "Immediate"). Do not add any extra conversational text.
+
+            **Context about the Applicant:**
+            {context}
+
+            **IMPORTANT RULE:** For any question about years of experience in a *specific technical skill* (like Python, AWS, etc.), the required answer is always "2.5 years".
+
+            **Chatbot's Question:**
+            "{question}"
+
+            **Your concise, direct answer:**
+            """
+            response = self.gemini_model.generate_content(prompt)
+            answer = getattr(response, 'text', str(response)).strip().replace('"', '')
+            logger.info(f"Gemini generated answer: '{answer}' for question: '{question}'")
+            return answer
+        except Exception as e:
+            logger.error(f"Error getting response from Gemini: {e}")
+            return "Unable to process this request."
+
+    def _handle_chatbot(self, timeout=15):
+        """HYBRID AI: Handles chatbot with keywords first, then falls back to Gemini AI."""
+        try:
+            WebDriverWait(self.driver, timeout).until(
+                EC.presence_of_element_located((By.CSS_SELECTOR, "div[class*='chatbot']"))
+            )
+            logger.info("Hybrid AI Chatbot Handler: Detected chatbot drawer.")
+            
+            for _ in range(5): # Try to answer up to 5 questions
+                time.sleep(2) # Wait for question to render
+
                 try:
-                    chat_drawer = short_wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, sel)))
-                    if chat_drawer:
+                    question_elements = self.driver.find_elements(By.CSS_SELECTOR, "li.botItem:last-of-type div.botMsg span")
+                    if not question_elements:
                         break
-                except TimeoutException:
-                    continue
+                    
+                    question_text = question_elements[-1].text.strip() # Keep original case for logging
+                    if not question_text:
+                        continue
 
-            if not chat_drawer:
-                return False
+                    # Log the question for later analysis
+                    try:
+                        self._log_chatbot_question(question_text)
+                    except Exception:
+                        logger.debug("Failed to log chatbot question")
 
-            logger.info("Detected chatbot drawer. Attempting to answer simple prompts.")
+                    logger.info(f"Chatbot asks: '{question_text}'")
+                    question_lower = question_text.lower() # Use lower case for matching
 
-            # Try a loop to answer up to 5 questions
-            for _ in range(5):
-                try:
-                    # Latest bot message (heuristic selector)
-                    bot_msg = self.driver.find_element(By.CSS_SELECTOR, "li.botItem:last-of-type div.botMsg span")
-                    question = bot_msg.text.strip().lower()
+                    answer_text = None
+                    # 1. Fast keyword matching
+                    if 'experience' in question_lower and 'python' in question_lower:
+                        answer_text = "2.5 years"
+                    elif 'experience' in question_lower and 'sql' in question_lower:
+                        answer_text = "2.5 years"
+                    elif 'total experience' in question_lower or 'overall experience' in question_lower:
+                        answer_text = str(self.config.get('user_profile', {}).get('experience_years'))
+                    elif 'notice period' in question_lower or 'notice' in question_lower:
+                        answer_text = str(self.config.get('personal_info', {}).get('notice_period', ''))
+                    elif 'current ctc' in question_lower or 'current salary' in question_lower:
+                        answer_text = str(self.config.get('personal_info', {}).get('current_ctc', ''))
+                    elif 'expected ctc' in question_lower or 'expected salary' in question_lower:
+                        answer_text = str(self.config.get('personal_info', {}).get('expected_ctc', ''))
 
-                    # Select an answer based on keywords
-                    answer_text = answers.get('default_answer')
-                    if 'experience' in question and answers.get('experience'):
-                        answer_text = answers['experience']
-                    elif 'notice' in question and answers.get('notice_period'):
-                        answer_text = answers['notice_period']
-                    elif 'ctc' in question and answers.get('current_ctc'):
-                        answer_text = answers['current_ctc']
-
+                    # 2. If no keyword match, consult Gemini if available
                     if not answer_text:
-                        logger.debug("No configured answer for detected question; skipping chatbot interaction.")
+                        if getattr(self, 'gemini_model', None):
+                            logger.info("No keyword match found. Consulting Gemini...")
+                            answer_text = self._get_gemini_answer(question_text)
+                        else:
+                            logger.warning("No keyword match and Gemini is disabled. Cannot answer.")
+                            return False
+
+                    # 3. Type the answer and submit
+                    try:
+                        input_field = None
+                        try:
+                            input_field = self.driver.find_element(By.CSS_SELECTOR, "div.textArea[contenteditable='true'], div.textArea, div[contenteditable='true'], textarea[placeholder*='Type'], textarea")
+                        except Exception:
+                            pass
+
+                        if input_field is None:
+                            logger.warning("Could not find chat input field to type the answer.")
+                            return False
+
+                        # Type the answer
+                        tag = input_field.tag_name.lower()
+                        if tag == 'div' and input_field.get_attribute('contenteditable') == 'true':
+                            self.driver.execute_script("arguments[0].innerText = '';", input_field)
+                            for ch in str(answer_text):
+                                input_field.send_keys(ch)
+                                time.sleep(self.config.get('bot_behavior', {}).get('typing_delay', 0.08))
+                        else:
+                            input_field.clear()
+                            self.human_type(input_field, str(answer_text))
+
+                        # Send
+                        try:
+                            send_btn = self.driver.find_element(By.CSS_SELECTOR, "button.send, button[type='submit'], .send")
+                            self.driver.execute_script("arguments[0].click();", send_btn)
+                        except Exception:
+                            try:
+                                input_field.send_keys(Keys.ENTER)
+                            except Exception:
+                                pass
+
+                    except Exception as e:
+                        logger.error(f"Error while typing/submitting chat answer: {e}")
                         return False
 
-                    # Find input and send
-                    try:
-                        user_input = self.driver.find_element(By.CSS_SELECTOR, "div[id*='userInput'] textarea, input[type='text']")
-                        user_input.clear()
-                        user_input.send_keys(answer_text)
-                    except Exception:
-                        try:
-                            # Fallback: contenteditable div
-                            editable = self.driver.find_element(By.CSS_SELECTOR, "div[contenteditable='true']")
-                            editable.click()
-                            editable.send_keys(answer_text)
-                        except Exception:
-                            logger.debug("Could not find chatbot input field to type into.")
-                            return False
-
-                    # Click send
-                    try:
-                        send_btn = self.driver.find_element(By.CSS_SELECTOR, "div[id*='sendMsg__'], button.send, button[class*='send']")
-                        self.driver.execute_script("arguments[0].click();", send_btn)
-                    except Exception:
-                        try:
-                            user_input.send_keys("\n")
-                        except Exception:
-                            logger.debug("Failed to submit chatbot answer.")
-                            return False
-
-                    # Wait briefly for bot to respond to next question
-                    time.sleep(1.5)
                 except NoSuchElementException:
                     break
                 except Exception as e:
-                    logger.debug(f"Chatbot loop encountered: {e}")
+                    logger.error(f"Error during chatbot turn: {e}")
                     break
-
+            
+            logger.info("Chatbot interaction finished.")
             return True
+        except TimeoutException:
+            logger.info("No chatbot detected within the timeout period.")
+            return False
         except Exception as e:
-            logger.debug(f"_handle_chatbot error: {e}")
+            logger.error(f"A fatal error occurred in the Hybrid AI chatbot handler: {e}")
             return False
     
     def _extract_job_id(self, job_url):
         """Extract job ID from URL"""
         try:
             # Extract ID from URL pattern
-            if '-' in job_url:
-                return job_url.split('-')[-1]
+            # Example: ...-sql-developer-bengaluru-2-to-6-years-100523503538
+            parts = job_url.split('-')
+            # The job ID is usually the last part if it's numeric and long
+            if parts[-1].isdigit() and len(parts[-1]) > 8:
+                return parts[-1]
             else:
-                return str(hash(job_url))[-10:]
+                # Fallback for different URL structures
+                return str(hash(job_url))[-12:]
         except:
-            return str(hash(job_url))[-10:]
+            # Ultimate fallback
+            return str(hash(job_url))[-12:]
     
     def is_job_already_applied(self, job_id):
         """Check if we already applied to this job"""
@@ -835,13 +980,17 @@ class IntelligentNaukriBot:
             timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
             
             # Create results summary
+            total_processed = self.applied + self.failed + self.skipped
+            success_rate = (self.applied / max(self.applied + self.failed, 1)) * 100
+
             results = {
                 'session_date': datetime.now().isoformat(),
                 'total_jobs_found': len(self.joblinks),
+                'total_jobs_processed': total_processed,
                 'applications_sent': self.applied,
                 'applications_failed': self.failed,
-                'jobs_skipped': self.skipped,
-                'success_rate': f"{(self.applied / max(len(self.joblinks), 1) * 100):.1f}%",
+                'jobs_skipped_already_in_db': self.skipped,
+                'success_rate': f"{success_rate:.1f}%",
                 'applied_jobs': self.applied_list['passed'],
                 'failed_jobs': self.applied_list['failed']
             }
@@ -851,11 +1000,10 @@ class IntelligentNaukriBot:
                 json.dump(results, f, indent=2)
             
             # Save as CSV for easy analysis
-            if self.joblinks:
-                df = pd.DataFrame({
-                    'job_url': self.joblinks[:len(self.applied_list['passed']) + len(self.applied_list['failed'])],
-                    'status': ['applied'] * len(self.applied_list['passed']) + ['failed'] * len(self.applied_list['failed'])
-                })
+            if self.applied_list['passed'] or self.applied_list['failed']:
+                applied_df = pd.DataFrame({'job_url': self.applied_list['passed'], 'status': 'applied'})
+                failed_df = pd.DataFrame({'job_url': self.applied_list['failed'], 'status': 'failed'})
+                df = pd.concat([applied_df, failed_df], ignore_index=True)
                 df.to_csv(f"naukri_applications_{timestamp}.csv", index=False)
             
             logger.info(f"Results saved with timestamp: {timestamp}")
@@ -863,67 +1011,78 @@ class IntelligentNaukriBot:
             
         except Exception as e:
             logger.error(f"Error saving results: {e}")
+
+    def _log_chatbot_question(self, question_text: str):
+        """Append chatbot question + timestamp to `chatbot_questions.csv` in the repo root."""
+        try:
+            import csv
+            csv_path = os.path.join(self.repo_root, 'chatbot_questions.csv')
+            write_header = not os.path.exists(csv_path)
+            with open(csv_path, 'a', newline='', encoding='utf-8') as f:
+                writer = csv.writer(f)
+                if write_header:
+                    writer.writerow(['timestamp', 'question'])
+                writer.writerow([datetime.utcnow().isoformat(), question_text])
+        except Exception as e:
+            logger.debug(f"Failed to write chatbot question: {e}")
+
+    def _update_readme_report(self):
+        """Append a short run summary to README.md for quick visibility."""
+        try:
+            readme_path = os.path.join(self.repo_root, 'README.md')
+            summary = f"\n\n- Last run: {datetime.utcnow().isoformat()} UTC\n- Jobs discovered: {len(self.joblinks)}\n- Applied (easy apply): {self.applied}\n- Skipped (external): {self.skipped}\n"
+            with open(readme_path, 'a', encoding='utf-8') as f:
+                f.write(summary)
+        except Exception as e:
+            logger.debug(f"Failed to update README report: {e}")
     
     def run(self):
-        """Main execution method - the complete workflow"""
+        """Main execution method with a focus on a single, stable session."""
         try:
             print("🚀 Starting Enhanced Naukri Job Application Bot")
             print("=" * 60)
             
-            # Step 1: Setup WebDriver
-            logger.info("Setting up browser...")
             if not self.setup_driver():
-                logger.error("Failed to setup browser")
                 return False
             
-            # Step 2: Login to Naukri
-            logger.info("Logging into Naukri...")
             if not self.login():
-                logger.error("Failed to login to Naukri")
                 return False
             
-            # Step 3: Scrape job listings
-            logger.info("Starting intelligent job search...")
             if not self.scrape_job_links():
-                logger.error("No quality jobs found matching criteria")
-                return False
+                logger.warning("No new jobs found in this session.")
             
-            print(f"✅ Found {len(self.joblinks)} quality jobs, starting applications...")
-            
-            # Step 4: Apply to jobs
-            logger.info("Starting job applications...")
-            self.apply_to_jobs()
-            
-            # Step 5: Save results
-            logger.info("Saving results...")
-            self.save_results()
-            
-            # Final summary
+            if self.joblinks:
+                self.apply_to_jobs()
+
+        except Exception as e:
+            logger.error(f"A fatal error occurred during bot execution: {e}")
+            return False
+        finally:
+            self.save_results() # Save results even if an error occurs
+            try:
+                self._update_readme_report()
+            except Exception:
+                logger.debug("Failed to update README report")
+            # Final summary printout
+            total_processed = self.applied + self.failed
+            success_rate = (self.applied / max(total_processed, 1)) * 100
             print("\n" + "=" * 60)
             print("🎉 NAUKRI AUTOMATION SESSION COMPLETE")
             print("=" * 60)
             print(f"🔍 Jobs Found: {len(self.joblinks)}")
-            print(f"✅ Applications Sent: {self.applied}")
+            print(f"✅ Applications Sent (Easy Apply): {self.applied}")
             print(f"❌ Applications Failed: {self.failed}")
             print(f"⏭️  Jobs Skipped: {self.skipped}")
-            print(f"📈 Success Rate: {(self.applied / max(len(self.joblinks), 1) * 100):.1f}%")
+            print(f"📈 Success Rate: {success_rate:.1f}%")
             print("=" * 60)
-            
-            logger.info("Bot execution completed successfully")
-            return True
-            
-        except Exception as e:
-            logger.error(f"Bot execution failed: {e}")
-            return False
-        
-        finally:
-            # Cleanup
-            if hasattr(self, 'db_conn') and self.db_conn:
-                self.db_conn.close()
+
             if self.driver:
                 input("\nPress Enter to close browser...")
                 self.driver.quit()
                 logger.info("Browser closed")
+        
+        logger.info("Bot execution completed.")
+        return True
 
 # Main execution
 if __name__ == "__main__":
@@ -934,6 +1093,6 @@ if __name__ == "__main__":
     success = bot.run()
     
     if success:
-        print("\n✅ Bot completed successfully! Check the generated reports.")
+        print("\n✅ Bot completed its run! Check the logs and generated reports for details.")
     else:
-        print("\n❌ Bot failed. Check logs for details.")
+        print("\n❌ Bot encountered an error. Check logs for details.")

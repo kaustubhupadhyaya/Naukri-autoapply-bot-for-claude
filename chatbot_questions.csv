@@ -1,28 +1,116 @@
 timestamp,question
-2025-09-30T17:51:30.501422,What is your notice period?
-2025-09-30T18:32:26.069192,Country Code
-2025-09-30T18:36:35.053019,Please enter your Date of Birth (DD/MM/YYYY)
-2025-09-30T18:36:43.417790,Have you worked at Infosys previously?
-2025-09-30T18:39:24.854183,What is your notice period?
-2025-09-30T18:39:28.693897,What is your expected CTC in Lacs per annum?
-2025-09-30T18:39:31.888135,What is your current CTC in Lacs per annum?
-2025-09-30T18:39:35.068629,Are you comfortable working on 24x7 shifts?
-2025-09-30T18:42:26.484569,How many years of experience do you have in Etl Development?
-2025-09-30T18:52:32.385545,How many years of experience do you have in ETL Development?
-2025-09-30T18:52:40.727820,How many years of experience do you have in Advanced SQL?
-2025-09-30T18:52:44.505335,How many years of experience do you have in Snowflake?
-2025-09-30T18:52:52.681484,How many years of experience do you have in Data warehousing?
-2025-09-30T18:53:00.844676,What is your notice period?
-2025-09-30T19:01:41.326282,How Many years of experience do you have in .Net Development.
-2025-09-30T19:01:49.607520,How Many years of experience do you have in .NET Application Developer
-2025-09-30T19:01:57.643635,How Many years of experience do you have in Application Support And SQL
-2025-09-30T19:02:01.705390,What is your notice period?
-2025-09-30T19:11:50.407173,How many years of experience do you have in handling team of accountants in a consulting firm?
-2025-09-30T19:11:58.758997,Thank you for your responses.
-2025-09-30T19:21:38.932731,How many years of experience do you have with Automation Unit Testing? List the tools or frameworks that you've used for automation unit testing.
-2025-09-30T19:21:47.253001,How many years of experience do you have in developing and maintaining data pipelines using PySpark and SQL on the Databricks platform?
-2025-09-30T19:21:51.117581,Mention some complex SQL queries for data retrieval and manipulation that you're proficient with.
-2025-09-30T19:21:59.264979,Thank you for your responses.
-2025-09-30T19:23:39.114348,What is your current CTC in Lacs per annum?
-2025-09-30T19:23:42.365209,What is your expected CTC in Lacs per annum?
-2025-09-30T19:23:45.563465,What is your notice period?
+2025-10-05T11:25:51.248380,Country Code
+2025-10-05T11:25:54.557601,Country Code
+2025-10-05T11:25:57.091012,Country Code
+2025-10-05T11:25:59.627534,Country Code
+2025-10-05T11:26:02.162206,Country Code
+2025-10-05T11:29:19.642195,Please enter your Date of Birth (DD/MM/YYYY)
+2025-10-05T11:29:22.332471,Please enter your Date of Birth (DD/MM/YYYY)
+2025-10-05T11:29:24.878943,Please enter your Date of Birth (DD/MM/YYYY)
+2025-10-05T11:29:27.428734,Please enter your Date of Birth (DD/MM/YYYY)
+2025-10-05T11:29:30.027821,Please enter your Date of Birth (DD/MM/YYYY)
+2025-10-05T11:58:24.797556,Country Code
+2025-10-05T11:58:28.001889,Country Code
+2025-10-05T11:58:30.530075,Country Code
+2025-10-05T11:58:33.058827,Country Code
+2025-10-05T11:58:35.588333,Country Code
+2025-10-05T12:01:49.501638,Do you have 4+ yrs exp as a Python Developer
+2025-10-05T12:01:52.406038,Do you have 4+ yrs exp as a Python Developer
+2025-10-05T12:01:54.946534,Do you have 4+ yrs exp as a Python Developer
+2025-10-05T12:01:57.475647,Do you have 4+ yrs exp as a Python Developer
+2025-10-05T12:02:00.008544,Do you have 4+ yrs exp as a Python Developer
+2025-10-05T12:05:12.718491,"Hi kaustubh, companies value diversity and want to build inclusive teams. Share your career status to proceed with this job application. Are you on a career break?"
+2025-10-05T12:05:15.403410,"Hi kaustubh, companies value diversity and want to build inclusive teams. Share your career status to proceed with this job application. Are you on a career break?"
+2025-10-05T12:05:17.932993,"Hi kaustubh, companies value diversity and want to build inclusive teams. Share your career status to proceed with this job application. Are you on a career break?"
+2025-10-05T12:05:20.476485,"Hi kaustubh, companies value diversity and want to build inclusive teams. Share your career status to proceed with this job application. Are you on a career break?"
+2025-10-05T12:05:23.005929,"Hi kaustubh, companies value diversity and want to build inclusive teams. Share your career status to proceed with this job application. Are you on a career break?"
+2025-10-05T12:12:01.735080,How many years of experience do you have in Python?
+2025-10-05T12:12:04.935609,How many years of experience do you have in Python?
+2025-10-05T12:12:07.466734,How many years of experience do you have in Python?
+2025-10-05T12:12:09.997940,How many years of experience do you have in Python?
+2025-10-05T12:12:12.528812,How many years of experience do you have in Python?
+2025-10-05T12:15:24.711950,Will be available for F2F Interview on 27th Sep (Weekend Drive)
+2025-10-05T12:15:27.405882,Will be available for F2F Interview on 27th Sep (Weekend Drive)
+2025-10-05T12:15:29.934347,Will be available for F2F Interview on 27th Sep (Weekend Drive)
+2025-10-05T12:15:32.469398,Will be available for F2F Interview on 27th Sep (Weekend Drive)
+2025-10-05T12:15:34.996121,Will be available for F2F Interview on 27th Sep (Weekend Drive)
+2025-10-05T12:18:51.225404,How many years of experience do you have in Python?
+2025-10-05T12:18:53.915038,How many years of experience do you have in Python?
+2025-10-05T12:18:56.445098,How many years of experience do you have in Python?
+2025-10-05T12:18:58.970317,How many years of experience do you have in Python?
+2025-10-05T12:19:01.499535,How many years of experience do you have in Python?
+2025-10-05T12:22:15.742167,How many years experience in Python?
+2025-10-05T12:22:18.443130,How many years experience in Python?
+2025-10-05T12:22:20.974019,How many years experience in Python?
+2025-10-05T12:22:23.503180,How many years experience in Python?
+2025-10-05T12:22:26.029352,How many years experience in Python?
+2025-10-05T12:25:42.409577,How many years of experience do you have in Python?
+2025-10-05T12:25:45.112542,How many years of experience do you have in Python?
+2025-10-05T12:25:47.648954,How many years of experience do you have in Python?
+2025-10-05T12:25:50.175292,How many years of experience do you have in Python?
+2025-10-05T12:25:52.704756,How many years of experience do you have in Python?
+2025-10-05T12:29:06.241616,"Are you an immediate joiner or serving notice? If yes, when is your Last Working Day?"
+2025-10-05T12:29:08.930533,"Are you an immediate joiner or serving notice? If yes, when is your Last Working Day?"
+2025-10-05T12:29:11.456922,"Are you an immediate joiner or serving notice? If yes, when is your Last Working Day?"
+2025-10-05T12:29:13.986707,"Are you an immediate joiner or serving notice? If yes, when is your Last Working Day?"
+2025-10-05T12:29:16.516743,"Are you an immediate joiner or serving notice? If yes, when is your Last Working Day?"
+2025-10-05T12:32:31.327740,What is your expected CTC in Lacs per annum?
+2025-10-05T12:32:34.175509,What is your expected CTC in Lacs per annum?
+2025-10-05T12:32:36.707194,What is your expected CTC in Lacs per annum?
+2025-10-05T12:32:39.234701,What is your expected CTC in Lacs per annum?
+2025-10-05T12:32:41.764451,What is your expected CTC in Lacs per annum?
+2025-10-05T12:35:52.766101,How many years of experience do you have in Python?
+2025-10-05T12:35:55.450639,How many years of experience do you have in Python?
+2025-10-05T12:35:57.984488,How many years of experience do you have in Python?
+2025-10-05T12:36:00.518859,How many years of experience do you have in Python?
+2025-10-05T12:36:03.052371,How many years of experience do you have in Python?
+2025-10-05T12:39:15.777801,This is for permanent position with T*ta group (India's Largest IT company). Are you ok?
+2025-10-05T12:39:18.459257,This is for permanent position with T*ta group (India's Largest IT company). Are you ok?
+2025-10-05T12:39:20.987492,This is for permanent position with T*ta group (India's Largest IT company). Are you ok?
+2025-10-05T12:39:23.516219,This is for permanent position with T*ta group (India's Largest IT company). Are you ok?
+2025-10-05T12:39:26.043062,This is for permanent position with T*ta group (India's Largest IT company). Are you ok?
+2025-10-05T12:46:03.001397,What is your current CTC in Lacs per annum?
+2025-10-05T12:46:06.178394,What is your current CTC in Lacs per annum?
+2025-10-05T12:46:08.708965,What is your current CTC in Lacs per annum?
+2025-10-05T12:46:11.236033,What is your current CTC in Lacs per annum?
+2025-10-05T12:46:13.766180,What is your current CTC in Lacs per annum?
+2025-10-05T12:49:27.352892,How many years of experience do you have in Python?
+2025-10-05T12:49:30.550501,How many years of experience do you have in Python?
+2025-10-05T12:49:33.082298,How many years of experience do you have in Python?
+2025-10-05T12:49:35.620803,How many years of experience do you have in Python?
+2025-10-05T12:49:38.157315,How many years of experience do you have in Python?
+2025-10-05T13:01:36.791002,How many years of experience do you have in ETL Development?
+2025-10-05T13:01:40.026458,How many years of experience do you have in ETL Development?
+2025-10-05T13:01:42.561345,How many years of experience do you have in ETL Development?
+2025-10-05T13:01:45.095698,How many years of experience do you have in ETL Development?
+2025-10-05T13:01:47.624148,How many years of experience do you have in ETL Development?
+2025-10-05T13:05:03.180139,How Many years of experience do you have in .Net Development.
+2025-10-05T13:05:06.396554,How Many years of experience do you have in .Net Development.
+2025-10-05T13:05:08.946579,How Many years of experience do you have in .Net Development.
+2025-10-05T13:05:11.475782,How Many years of experience do you have in .Net Development.
+2025-10-05T13:05:14.005211,How Many years of experience do you have in .Net Development.
+2025-10-05T13:08:47.805517,How many years of experience do you have in AI/ML Engineer?
+2025-10-05T13:08:50.985013,How many years of experience do you have in AI/ML Engineer?
+2025-10-05T13:08:53.523602,How many years of experience do you have in AI/ML Engineer?
+2025-10-05T13:08:56.056226,How many years of experience do you have in AI/ML Engineer?
+2025-10-05T13:08:58.583154,How many years of experience do you have in AI/ML Engineer?
+2025-10-05T13:12:11.935438,What is your current CTC in Lacs per annum?
+2025-10-05T13:12:14.619390,What is your current CTC in Lacs per annum?
+2025-10-05T13:12:17.147158,What is your current CTC in Lacs per annum?
+2025-10-05T13:12:19.674391,What is your current CTC in Lacs per annum?
+2025-10-05T13:12:22.223709,What is your current CTC in Lacs per annum?
+2025-10-05T13:15:36.807475,Do you have experience in CCTV ?
+2025-10-05T13:15:39.497176,Do you have experience in CCTV ?
+2025-10-05T13:15:42.034590,Do you have experience in CCTV ?
+2025-10-05T13:15:44.562294,Do you have experience in CCTV ?
+2025-10-05T13:15:47.089456,Do you have experience in CCTV ?
+2025-10-05T13:18:59.123456,What is your highest educational Qualification?
+2025-10-05T13:19:01.811089,What is your highest educational Qualification?
+2025-10-05T13:19:04.343833,What is your highest educational Qualification?
+2025-10-05T13:19:06.877618,What is your highest educational Qualification?
+2025-10-05T13:19:09.409736,What is your highest educational Qualification?
+2025-10-05T13:25:51.192489,"Are you currently residing in Tiruchirapalli, Tamil Nadu or willing to relocate to Tiruchirapalli, Tamil Nadu?"
+2025-10-05T13:25:54.380370,"Are you currently residing in Tiruchirapalli, Tamil Nadu or willing to relocate to Tiruchirapalli, Tamil Nadu?"
+2025-10-05T13:25:56.918121,"Are you currently residing in Tiruchirapalli, Tamil Nadu or willing to relocate to Tiruchirapalli, Tamil Nadu?"
+2025-10-05T13:25:59.455948,"Are you currently residing in Tiruchirapalli, Tamil Nadu or willing to relocate to Tiruchirapalli, Tamil Nadu?"
+2025-10-05T13:26:01.988941,"Are you currently residing in Tiruchirapalli, Tamil Nadu or willing to relocate to Tiruchirapalli, Tamil Nadu?"

@@ -10,7 +10,14 @@
     "phone": "9880380081",
     "current_ctc": "13 LPA",
     "expected_ctc": "18 LPA",
-    "notice_period": "Immediate"
+    "notice_period": "15 Days"
+    ,
+    "chatbot_answers": {
+      "Employment Type": "FTE",
+      "Notice period": "15 Days",
+      "Current Location": "Bengaluru",
+      "Preferred Location": "Bengaluru"
+    }
   },
   "user_profile": {
     "name": "Kaustubh Upadhyaya",
@@ -63,7 +70,8 @@
       "Remote",
       "Hybrid"
     ],
-    "target_company_types": [
+  "resume_text": "Kaustubh Upadhyaya - Data Engineer | Big Data Engineer. Bengaluru, KA. +91 84319 88388; kaustubh.upadhyaya1@gmail.com. Professional summary: 2.3 years of data engineering experience in Python, SQL, and AWS building scalable ETL pipelines with Airflow and Apache Spark. Expertise in Kafka, Databricks, dbt and PostgreSQL. Specialized in pharmaceutical data systems and regulatory compliance workflows, with experience in complex database migrations and multi-system integrations. Work experience highlights: Nov 2024 - Present: Data Engineer-I at Eli Lilly and Company — developed and refactored production ETL pipelines, reduced DAG parsing time by 30%, implemented monitoring and secrets management; Jul 2023 – Nov 2024: Analyst – Software Configuration and Development — automated ETL validation, implemented data quality checks for 10M+ daily records, designed data pipelines and orchestration. Technical skills: Python, PySpark, SQL, Airflow, Kafka, Databricks, Snowflake, AWS (S3, EC2, Lambda, Glue), PostgreSQL, MySQL, Oracle, dbt, Jenkins, Kubernetes, Unit testing, Monitoring. Certifications: PySpark, AWS Lambda, Databricks Fundamentals. Education: Bachelor of Engineering, Information Science & Engineering — BMS College of Engineering, Bengaluru.\n\n",
+  "target_company_types": [
       "Product",
       "Startup",
       "Mid-size",

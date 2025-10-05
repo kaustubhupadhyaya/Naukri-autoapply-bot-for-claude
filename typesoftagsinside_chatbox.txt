@@ -1,0 +1,116 @@
+<div id="_woxrz1xdkSingleSelectRadioButton">
+        <div class="singleselect-radiobutton-container" id="ssrc__woxrz1xdkSingleSelectRadioButton">
+            
+            <div class="ssrc__radio-btn-container">
+              <input type="radio" id="Coimbatore" name="radio-button" value="Coimbatore" class="ssrc__radio" data-val="pb" data-index="0">
+              <label for="Coimbatore" class="ssrc__label">Coimbatore</label><br>
+            </div>
+            <div class="ssrc__radio-btn-container">
+              <input type="radio" id="Madurai" name="radio-button" value="Madurai" class="ssrc__radio" data-val="pb" data-index="1">
+              <label for="Madurai" class="ssrc__label">Madurai</label><br>
+            </div>
+            <div class="ssrc__radio-btn-container">
+              <input type="radio" id="Bhubaneswar" name="radio-button" value="Bhubaneswar" class="ssrc__radio" data-val="pb" data-index="2">
+              <label for="Bhubaneswar" class="ssrc__label">Bhubaneswar</label><br>
+            </div>
+            <div class="ssrc__radio-btn-container">
+              <input type="radio" id="Pune" name="radio-button" value="Pune" class="ssrc__radio" data-val="pb" data-index="3">
+              <label for="Pune" class="ssrc__label">Pune</label><br>
+            </div>
+            <div class="ssrc__radio-btn-container">
+              <input type="radio" id="Noida" name="radio-button" value="Noida" class="ssrc__radio" data-val="pb" data-index="4">
+              <label for="Noida" class="ssrc__label">Noida</label><br>
+            </div>
+            <div class="ssrc__radio-btn-container">
+              <input type="radio" id="Bengaluru" name="radio-button" value="Bengaluru" class="ssrc__radio" data-val="pb" data-index="5">
+              <label for="Bengaluru" class="ssrc__label">Bengaluru</label><br>
+            </div>
+            <div class="ssrc__radio-btn-container">
+              <input type="radio" id="Cochin" name="radio-button" value="Cochin" class="ssrc__radio" data-val="pb" data-index="6">
+              <label for="Cochin" class="ssrc__label">Cochin</label><br>
+            </div>
+            <div class="ssrc__radio-btn-container">
+              <input type="radio" id="Chennai" name="radio-button" value="Chennai" class="ssrc__radio" data-val="pb" data-index="7">
+              <label for="Chennai" class="ssrc__label">Chennai</label><br>
+            </div>
+            <div class="ssrc__radio-btn-container">
+              <input type="radio" id="Hyderabad" name="radio-button" value="Hyderabad" class="ssrc__radio" data-val="pb" data-index="8">
+              <label for="Hyderabad" class="ssrc__label">Hyderabad</label><br>
+            </div>
+            <div class="ssrc__radio-btn-container">
+              <input type="radio" id="Nepal" name="radio-button" value="Nepal" class="ssrc__radio" data-val="pb" data-index="9">
+              <label for="Nepal" class="ssrc__label">Nepal</label><br>
+            </div>
+            <div class="ssrc__radio-btn-container">
+              <input type="radio" id="Saudi Arabia" name="radio-button" value="Saudi Arabia" class="ssrc__radio" data-val="pb" data-index="10">
+              <label for="Saudi Arabia" class="ssrc__label">Saudi Arabia</label><br>
+            </div>
+            <div class="ssrc__radio-btn-container">
+              <input type="radio" id="Oman" name="radio-button" value="Oman" class="ssrc__radio" data-val="pb" data-index="11">
+              <label for="Oman" class="ssrc__label">Oman</label><br>
+            </div>
+            <div class="ssrc__radio-btn-container">
+              <input type="radio" id="United Arab Emirates" name="radio-button" value="United Arab Emirates" class="ssrc__radio" data-val="pb" data-index="12">
+              <label for="United Arab Emirates" class="ssrc__label">United Arab Emirates</label><br>
+            </div>
+            <div class="ssrc__radio-btn-container">
+              <input type="radio" id="UK" name="radio-button" value="UK" class="ssrc__radio" data-val="pb" data-index="13">
+              <label for="UK" class="ssrc__label">UK</label><br>
+            </div>
+            <div class="ssrc__radio-btn-container">
+              <input type="radio" id="USA" name="radio-button" value="USA" class="ssrc__radio" data-val="pb" data-index="14">
+              <label for="USA" class="ssrc__label">USA</label><br>
+            </div>
+            <div class="ssrc__radio-btn-container">
+              <input type="radio" id="Singapore" name="radio-button" value="Singapore" class="ssrc__radio" data-val="pb" data-index="15">
+              <label for="Singapore" class="ssrc__label">Singapore</label><br>
+            </div>
+            <div class="ssrc__radio-btn-container">
+              <input type="radio" id="Malaysia" name="radio-button" value="Malaysia" class="ssrc__radio" data-val="pb" data-index="16">
+              <label for="Malaysia" class="ssrc__label">Malaysia</label><br>
+            </div>
+            <div class="ssrc__radio-btn-container">
+              <input type="radio" id="HongKong" name="radio-button" value="HongKong" class="ssrc__radio" data-val="pb" data-index="17">
+              <label for="HongKong" class="ssrc__label">HongKong</label><br>
+            </div>
+            <div class="ssrc__radio-btn-container">
+              <input type="radio" id="South Africa" name="radio-button" value="South Africa" class="ssrc__radio" data-val="pb" data-index="18">
+              <label for="South Africa" class="ssrc__label">South Africa</label><br>
+            </div>
+            <div class="ssrc__radio-btn-container">
+              <input type="radio" id="Nairobi" name="radio-button" value="Nairobi" class="ssrc__radio" data-val="pb" data-index="19">
+              <label for="Nairobi" class="ssrc__label">Nairobi</label><br>
+            </div>
+            <div class="ssrc__radio-btn-container">
+              <input type="radio" id="Australia" name="radio-button" value="Australia" class="ssrc__radio" data-val="pb" data-index="20">
+              <label for="Australia" class="ssrc__label">Australia</label><br>
+            </div>
+            <div class="ssrc__radio-btn-container">
+              <input type="radio" id="Netherlands" name="radio-button" value="Netherlands" class="ssrc__radio" data-val="pb" data-index="21">
+              <label for="Netherlands" class="ssrc__label">Netherlands</label><br>
+            </div>
+            <div class="ssrc__radio-btn-container">
+              <input type="radio" id="Canada" name="radio-button" value="Canada" class="ssrc__radio" data-val="pb" data-index="22">
+              <label for="Canada" class="ssrc__label">Canada</label><br>
+            </div>
+            <div class="ssrc__radio-btn-container">
+              <input type="radio" id="Mexico" name="radio-button" value="Mexico" class="ssrc__radio" data-val="pb" data-index="23">
+              <label for="Mexico" class="ssrc__label">Mexico</label><br>
+            </div>
+        </div>
+    </div>
+
+    <div id="_woxrz1xdkFooter" class="footerWrapper">
+                
+                <div class="footerInputBoxWrapper">
+                
+                <div id="_woxrz1xdkInputBox" class="chatbot_SendMessageContainer">
+                    <div class="chatbot_InputContainer">
+                        <div class="textAreaWrapper">
+                        <div id="userInput__woxrz1xdkInputBox" class="textArea" contenteditable="true" data-placeholder="Type message here..."></div>
+                        <span class="chatBot chatBot-add-round add-icon d-none p-events-none" id="add-icon__woxrz1xdkInputBox"></span>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>

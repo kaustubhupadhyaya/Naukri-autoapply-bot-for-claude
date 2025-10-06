@@ -1,0 +1,416 @@
+2025-10-06 02:37:33,455 - INFO - Configuration loaded successfully
+2025-10-06 02:37:33,465 - INFO - Job database initialized
+2025-10-06 02:37:33,473 - INFO - Bot initialized successfully
+2025-10-06 02:37:33,473 - INFO - Setting up browser...
+2025-10-06 02:37:33,502 - INFO - Operating System: Windows 10
+2025-10-06 02:37:34,442 - INFO - ====== WebDriver manager ======
+2025-10-06 02:37:35,765 - INFO - Get LATEST edgedriver version for Edge 141.0.3537
+2025-10-06 02:37:35,778 - WARNING - Auto-download failed: Could not reach host. Are you offline?
+2025-10-06 02:37:35,779 - WARNING - Driver setup method failed: Could not reach host. Are you offline?
+2025-10-06 02:37:37,725 - INFO - Login attempt 1/3
+2025-10-06 02:37:59,699 - INFO - Searching for: Data Engineer
+2025-10-06 02:37:59,699 - INFO - Page 1: https://www.naukri.com/data-engineer-jobs-in-bengaluru-1
+2025-10-06 02:40:07,145 - INFO - Found 20 job cards
+2025-10-06 11:02:25,226 - INFO - Page 1: Found 16 new relevant jobs
+2025-10-06 11:02:25,242 - INFO - Page 2: https://www.naukri.com/data-engineer-jobs-in-bengaluru-2
+2025-10-06 11:02:25,273 - ERROR - Error on page 2: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x0x7ff6c2413ec5+18309]
+	(No symbol) [0x0x7ff6c2381570]
+	(No symbol) [0x0x7ff6c2180df0]
+	(No symbol) [0x0x7ff6c21c22ac]
+	(No symbol) [0x0x7ff6c21efaa2]
+	(No symbol) [0x0x7ff6c219a1b5]
+	(No symbol) [0x0x7ff6c21ec5b2]
+	(No symbol) [0x0x7ff6c21ebcb7]
+	(No symbol) [0x0x7ff6c21563b5]
+	(No symbol) [0x0x7ff6c22b2f75]
+	(No symbol) [0x0x7ff6c22be74d]
+	GetHandleVerifier [0x0x7ff6c24a95b3+630387]
+	GetHandleVerifier [0x0x7ff6c24b1151+662033]
+	(No symbol) [0x0x7ff6c238d659]
+	(No symbol) [0x0x7ff6c2154e8e]
+	GetHandleVerifier [0x0x7ff6c25be818+1765592]
+	BaseThreadInitThunk [0x0x7ffe0c3ce8d7+23]
+	RtlUserThreadStart [0x0x7ffe0cc68d9c+44]
+
+2025-10-06 11:02:25,373 - INFO - Searching for: Big Data Engineer
+2025-10-06 11:02:25,373 - INFO - Page 1: https://www.naukri.com/big-data-engineer-jobs-in-bengaluru-1
+2025-10-06 11:02:25,407 - ERROR - Error on page 1: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x0x7ff6c2413ec5+18309]
+	(No symbol) [0x0x7ff6c2381570]
+	(No symbol) [0x0x7ff6c2180df0]
+	(No symbol) [0x0x7ff6c21c22ac]
+	(No symbol) [0x0x7ff6c21efaa2]
+	(No symbol) [0x0x7ff6c219a1b5]
+	(No symbol) [0x0x7ff6c21ec5b2]
+	(No symbol) [0x0x7ff6c21ebcb7]
+	(No symbol) [0x0x7ff6c21563b5]
+	(No symbol) [0x0x7ff6c22b2f75]
+	(No symbol) [0x0x7ff6c22be74d]
+	GetHandleVerifier [0x0x7ff6c24a95b3+630387]
+	GetHandleVerifier [0x0x7ff6c24b1151+662033]
+	(No symbol) [0x0x7ff6c238d659]
+	(No symbol) [0x0x7ff6c2154e8e]
+	GetHandleVerifier [0x0x7ff6c25be818+1765592]
+	BaseThreadInitThunk [0x0x7ffe0c3ce8d7+23]
+	RtlUserThreadStart [0x0x7ffe0cc68d9c+44]
+
+2025-10-06 11:02:25,438 - INFO - Page 2: https://www.naukri.com/big-data-engineer-jobs-in-bengaluru-2
+2025-10-06 11:02:25,462 - ERROR - Error on page 2: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x0x7ff6c2413ec5+18309]
+	(No symbol) [0x0x7ff6c2381570]
+	(No symbol) [0x0x7ff6c2180df0]
+	(No symbol) [0x0x7ff6c21c22ac]
+	(No symbol) [0x0x7ff6c21efaa2]
+	(No symbol) [0x0x7ff6c219a1b5]
+	(No symbol) [0x0x7ff6c21ec5b2]
+	(No symbol) [0x0x7ff6c21ebcb7]
+	(No symbol) [0x0x7ff6c21563b5]
+	(No symbol) [0x0x7ff6c22b2f75]
+	(No symbol) [0x0x7ff6c22be74d]
+	GetHandleVerifier [0x0x7ff6c24a95b3+630387]
+	GetHandleVerifier [0x0x7ff6c24b1151+662033]
+	(No symbol) [0x0x7ff6c238d659]
+	(No symbol) [0x0x7ff6c2154e8e]
+	GetHandleVerifier [0x0x7ff6c25be818+1765592]
+	BaseThreadInitThunk [0x0x7ffe0c3ce8d7+23]
+	RtlUserThreadStart [0x0x7ffe0cc68d9c+44]
+
+2025-10-06 11:02:25,482 - INFO - Searching for: ETL Developer
+2025-10-06 11:02:25,493 - INFO - Page 1: https://www.naukri.com/etl-developer-jobs-in-bengaluru-1
+2025-10-06 11:02:25,544 - ERROR - Error on page 1: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x0x7ff6c2413ec5+18309]
+	(No symbol) [0x0x7ff6c2381570]
+	(No symbol) [0x0x7ff6c2180df0]
+	(No symbol) [0x0x7ff6c21c22ac]
+	(No symbol) [0x0x7ff6c21efaa2]
+	(No symbol) [0x0x7ff6c219a1b5]
+	(No symbol) [0x0x7ff6c21ec5b2]
+	(No symbol) [0x0x7ff6c21ebcb7]
+	(No symbol) [0x0x7ff6c21563b5]
+	(No symbol) [0x0x7ff6c22b2f75]
+	(No symbol) [0x0x7ff6c22be74d]
+	GetHandleVerifier [0x0x7ff6c24a95b3+630387]
+	GetHandleVerifier [0x0x7ff6c24b1151+662033]
+	(No symbol) [0x0x7ff6c238d659]
+	(No symbol) [0x0x7ff6c2154e8e]
+	GetHandleVerifier [0x0x7ff6c25be818+1765592]
+	BaseThreadInitThunk [0x0x7ffe0c3ce8d7+23]
+	RtlUserThreadStart [0x0x7ffe0cc68d9c+44]
+
+2025-10-06 11:02:25,588 - INFO - Page 2: https://www.naukri.com/etl-developer-jobs-in-bengaluru-2
+2025-10-06 11:02:25,603 - ERROR - Error on page 2: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x0x7ff6c2413ec5+18309]
+	(No symbol) [0x0x7ff6c2381570]
+	(No symbol) [0x0x7ff6c2180df0]
+	(No symbol) [0x0x7ff6c21c22ac]
+	(No symbol) [0x0x7ff6c21efaa2]
+	(No symbol) [0x0x7ff6c219a1b5]
+	(No symbol) [0x0x7ff6c21ec5b2]
+	(No symbol) [0x0x7ff6c21ebcb7]
+	(No symbol) [0x0x7ff6c21563b5]
+	(No symbol) [0x0x7ff6c22b2f75]
+	(No symbol) [0x0x7ff6c22be74d]
+	GetHandleVerifier [0x0x7ff6c24a95b3+630387]
+	GetHandleVerifier [0x0x7ff6c24b1151+662033]
+	(No symbol) [0x0x7ff6c238d659]
+	(No symbol) [0x0x7ff6c2154e8e]
+	GetHandleVerifier [0x0x7ff6c25be818+1765592]
+	BaseThreadInitThunk [0x0x7ffe0c3ce8d7+23]
+	RtlUserThreadStart [0x0x7ffe0cc68d9c+44]
+
+2025-10-06 11:02:25,620 - INFO - Searching for: SQL Developer
+2025-10-06 11:02:25,621 - INFO - Page 1: https://www.naukri.com/sql-developer-jobs-in-bengaluru-1
+2025-10-06 11:02:25,658 - ERROR - Error on page 1: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x0x7ff6c2413ec5+18309]
+	(No symbol) [0x0x7ff6c2381570]
+	(No symbol) [0x0x7ff6c2180df0]
+	(No symbol) [0x0x7ff6c21c22ac]
+	(No symbol) [0x0x7ff6c21efaa2]
+	(No symbol) [0x0x7ff6c219a1b5]
+	(No symbol) [0x0x7ff6c21ec5b2]
+	(No symbol) [0x0x7ff6c21ebcb7]
+	(No symbol) [0x0x7ff6c21563b5]
+	(No symbol) [0x0x7ff6c22b2f75]
+	(No symbol) [0x0x7ff6c22be74d]
+	GetHandleVerifier [0x0x7ff6c24a95b3+630387]
+	GetHandleVerifier [0x0x7ff6c24b1151+662033]
+	(No symbol) [0x0x7ff6c238d659]
+	(No symbol) [0x0x7ff6c2154e8e]
+	GetHandleVerifier [0x0x7ff6c25be818+1765592]
+	BaseThreadInitThunk [0x0x7ffe0c3ce8d7+23]
+	RtlUserThreadStart [0x0x7ffe0cc68d9c+44]
+
+2025-10-06 11:02:25,669 - INFO - Page 2: https://www.naukri.com/sql-developer-jobs-in-bengaluru-2
+2025-10-06 11:02:25,709 - ERROR - Error on page 2: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x0x7ff6c2413ec5+18309]
+	(No symbol) [0x0x7ff6c2381570]
+	(No symbol) [0x0x7ff6c2180df0]
+	(No symbol) [0x0x7ff6c21c22ac]
+	(No symbol) [0x0x7ff6c21efaa2]
+	(No symbol) [0x0x7ff6c219a1b5]
+	(No symbol) [0x0x7ff6c21ec5b2]
+	(No symbol) [0x0x7ff6c21ebcb7]
+	(No symbol) [0x0x7ff6c21563b5]
+	(No symbol) [0x0x7ff6c22b2f75]
+	(No symbol) [0x0x7ff6c22be74d]
+	GetHandleVerifier [0x0x7ff6c24a95b3+630387]
+	GetHandleVerifier [0x0x7ff6c24b1151+662033]
+	(No symbol) [0x0x7ff6c238d659]
+	(No symbol) [0x0x7ff6c2154e8e]
+	GetHandleVerifier [0x0x7ff6c25be818+1765592]
+	BaseThreadInitThunk [0x0x7ffe0c3ce8d7+23]
+	RtlUserThreadStart [0x0x7ffe0cc68d9c+44]
+
+2025-10-06 11:02:25,825 - INFO - Applying to job 1/16: https://www.naukri.com/job-listings-data-engineer-netlink-software-group-america-inc-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-1-to-4-years-150125501602
+2025-10-06 11:02:25,893 - INFO - Applying to job 2/16: https://www.naukri.com/job-listings-data-engineer-accenture-solutions-pvt-ltd-bengaluru-2-to-4-years-290925923314
+2025-10-06 11:02:25,942 - INFO - Applying to job 3/16: https://www.naukri.com/job-listings-data-engineer-accenture-solutions-pvt-ltd-bengaluru-3-to-8-years-290925906687
+2025-10-06 11:02:25,971 - INFO - Applying to job 4/16: https://www.naukri.com/job-listings-data-engineer-data-happiest-minds-technologies-bengaluru-3-to-5-years-160925039586
+2025-10-06 11:02:26,016 - INFO - Applying to job 5/16: https://www.naukri.com/job-listings-data-engineer-data-happiest-minds-technologies-bengaluru-3-to-5-years-160925039694
+2025-10-06 11:02:26,049 - INFO - Applying to job 6/16: https://www.naukri.com/job-listings-data-engineer-accenture-solutions-pvt-ltd-bengaluru-3-to-8-years-150925925448
+2025-10-06 11:02:26,067 - INFO - Applying to job 7/16: https://www.naukri.com/job-listings-data-engineer-accenture-solutions-pvt-ltd-bengaluru-3-to-8-years-150925919652
+2025-10-06 11:02:26,095 - INFO - Applying to job 8/16: https://www.naukri.com/job-listings-data-engineer-accenture-solutions-pvt-ltd-bengaluru-3-to-8-years-220925915726
+2025-10-06 11:02:26,133 - INFO - Applying to job 9/16: https://www.naukri.com/job-listings-data-engineer-happiest-minds-technologies-noida-pune-bengaluru-3-to-8-years-100925018199
+2025-10-06 11:02:26,196 - INFO - Applying to job 10/16: https://www.naukri.com/job-listings-data-engineer-etl-go-databricks-instinctools-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-2-to-6-years-230425503776
+2025-10-06 11:02:26,254 - INFO - Applying to job 11/16: https://www.naukri.com/job-listings-data-engineer-retailcloud-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-1-to-4-years-050525501999
+2025-10-06 11:02:26,294 - INFO - Applying to job 12/16: https://www.naukri.com/job-listings-data-engineer-python-with-gen-ai-capgemini-technology-services-india-limited-hyderabad-pune-bengaluru-2-to-6-years-160925925044
+2025-10-06 11:02:26,312 - INFO - Applying to job 13/16: https://www.naukri.com/job-listings-data-engineer-accenture-solutions-pvt-ltd-bengaluru-2-to-4-years-150925923988
+2025-10-06 11:02:26,333 - INFO - Applying to job 14/16: https://www.naukri.com/job-listings-data-engineer-accenture-solutions-pvt-ltd-bengaluru-2-to-4-years-150925919206
+2025-10-06 11:02:26,592 - INFO - Applying to job 15/16: https://www.naukri.com/job-listings-data-engineer-accenture-solutions-pvt-ltd-bengaluru-3-to-8-years-220925917568
+2025-10-06 11:02:27,175 - INFO - Applying to job 16/16: https://www.naukri.com/job-listings-data-engineer-accenture-solutions-pvt-ltd-bengaluru-3-to-8-years-220925916212
+2025-10-06 11:02:27,559 - INFO - Session report saved: c:\Users\Admin\Documents\GitHub\Naukri-autoapply-bot-for-claude\naukri_session_20251006_110227.json
+2025-10-06 15:21:09,940 - INFO - Browser closed
+2025-10-06 15:21:09,943 - INFO - Database connection closed
+2025-10-06 15:21:30,327 - INFO - Configuration loaded successfully
+2025-10-06 15:21:30,327 - INFO - Job database initialized
+2025-10-06 15:21:30,338 - INFO - Bot initialized successfully
+2025-10-06 15:21:30,339 - INFO - Setting up browser...
+2025-10-06 15:21:30,377 - INFO - Operating System: Windows 10
+2025-10-06 15:21:31,182 - INFO - ====== WebDriver manager ======
+2025-10-06 15:21:32,726 - INFO - Get LATEST edgedriver version for Edge 141.0.3537
+2025-10-06 15:21:32,736 - WARNING - Auto-download failed: Could not reach host. Are you offline?
+2025-10-06 15:21:32,736 - WARNING - Driver setup method failed: Could not reach host. Are you offline?
+2025-10-06 15:21:34,709 - INFO - Login attempt 1/3
+2025-10-06 15:21:57,314 - INFO - Searching for: Data Engineer
+2025-10-06 15:21:57,314 - INFO - Page 1: https://www.naukri.com/data-engineer-jobs-in-bengaluru-1
+2025-10-06 15:24:04,597 - INFO - Found 20 job cards
+2025-10-06 15:34:06,862 - INFO - Page 1: Found 20 new relevant jobs
+2025-10-06 15:34:06,862 - INFO - Page 2: https://www.naukri.com/data-engineer-jobs-in-bengaluru-2
+2025-10-06 15:36:14,256 - INFO - Found 20 job cards
+2025-10-06 15:46:16,237 - INFO - Page 2: Found 20 new relevant jobs
+2025-10-06 15:46:16,237 - INFO - Searching for: Big Data Engineer
+2025-10-06 15:46:16,237 - INFO - Page 1: https://www.naukri.com/big-data-engineer-jobs-in-bengaluru-1
+2025-10-06 15:48:23,266 - INFO - Found 20 job cards
+2025-10-06 15:58:25,302 - INFO - Page 1: Found 20 new relevant jobs
+2025-10-06 15:58:25,302 - INFO - Page 2: https://www.naukri.com/big-data-engineer-jobs-in-bengaluru-2
+2025-10-06 16:00:34,036 - INFO - Found 20 job cards
+2025-10-06 16:10:36,055 - INFO - Page 2: Found 19 new relevant jobs
+2025-10-06 16:10:36,060 - INFO - Searching for: ETL Developer
+2025-10-06 16:10:36,060 - INFO - Page 1: https://www.naukri.com/etl-developer-jobs-in-bengaluru-1
+2025-10-06 16:12:42,985 - INFO - Found 20 job cards
+2025-10-06 16:22:44,922 - INFO - Page 1: Found 7 new relevant jobs
+2025-10-06 16:22:44,922 - INFO - Page 2: https://www.naukri.com/etl-developer-jobs-in-bengaluru-2
+2025-10-06 16:24:51,999 - INFO - Found 20 job cards
+2025-10-06 16:34:54,234 - INFO - Page 2: Found 9 new relevant jobs
+2025-10-06 16:34:54,236 - INFO - Searching for: SQL Developer
+2025-10-06 16:34:54,236 - INFO - Page 1: https://www.naukri.com/sql-developer-jobs-in-bengaluru-1
+2025-10-06 16:37:02,443 - INFO - Found 20 job cards
+2025-10-06 16:47:04,852 - INFO - Page 1: Found 20 new relevant jobs
+2025-10-06 16:47:04,852 - INFO - Page 2: https://www.naukri.com/sql-developer-jobs-in-bengaluru-2
+2025-10-06 16:49:12,772 - INFO - Found 20 job cards
+2025-10-06 16:59:15,171 - INFO - Page 2: Found 20 new relevant jobs
+2025-10-06 16:59:15,199 - INFO - Applying to job 1/135: https://www.naukri.com/job-listings-data-engineer-netlink-software-group-america-inc-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-1-to-4-years-150125501602
+2025-10-06 16:59:15,236 - INFO - Applying to job 2/135: https://www.naukri.com/job-listings-data-engineer-accenture-solutions-pvt-ltd-bengaluru-2-to-4-years-290925923314
+2025-10-06 16:59:15,238 - INFO - Applying to job 3/135: https://www.naukri.com/job-listings-data-engineer-accenture-solutions-pvt-ltd-bengaluru-3-to-8-years-290925906687
+2025-10-06 16:59:15,263 - INFO - Applying to job 4/135: https://www.naukri.com/job-listings-data-engineer-data-happiest-minds-technologies-bengaluru-3-to-5-years-160925039586
+2025-10-06 16:59:15,269 - INFO - Applying to job 5/135: https://www.naukri.com/job-listings-data-engineer-data-happiest-minds-technologies-bengaluru-3-to-5-years-160925039694
+2025-10-06 16:59:15,273 - INFO - Applying to job 6/135: https://www.naukri.com/job-listings-data-engineer-accenture-solutions-pvt-ltd-bengaluru-3-to-8-years-150925925448
+2025-10-06 16:59:15,277 - INFO - Applying to job 7/135: https://www.naukri.com/job-listings-data-engineer-accenture-solutions-pvt-ltd-bengaluru-3-to-8-years-150925919652
+2025-10-06 16:59:15,284 - INFO - Applying to job 8/135: https://www.naukri.com/job-listings-data-engineer-accenture-solutions-pvt-ltd-bengaluru-2-to-4-years-061025911117
+2025-10-06 17:00:46,842 - INFO - Applying to job 9/135: https://www.naukri.com/job-listings-data-engineer-accenture-solutions-pvt-ltd-bengaluru-3-to-8-years-220925915726
+2025-10-06 17:00:46,844 - INFO - Applying to job 10/135: https://www.naukri.com/job-listings-data-engineer-happiest-minds-technologies-noida-pune-bengaluru-3-to-8-years-100925018199
+2025-10-06 17:00:46,848 - INFO - Applying to job 11/135: https://www.naukri.com/job-listings-data-engineer-etl-go-databricks-instinctools-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-2-to-6-years-230425503776
+2025-10-06 17:00:46,856 - INFO - Applying to job 12/135: https://www.naukri.com/job-listings-data-engineer-retailcloud-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-1-to-4-years-050525501999
+2025-10-06 17:00:46,860 - INFO - Applying to job 13/135: https://www.naukri.com/job-listings-data-engineer-python-with-gen-ai-capgemini-technology-services-india-limited-hyderabad-pune-bengaluru-2-to-6-years-160925925044
+2025-10-06 17:00:46,862 - INFO - Applying to job 14/135: https://www.naukri.com/job-listings-data-engineer-accenture-solutions-pvt-ltd-bengaluru-2-to-4-years-150925923988
+2025-10-06 17:00:46,867 - INFO - Applying to job 15/135: https://www.naukri.com/job-listings-data-engineer-accenture-solutions-pvt-ltd-bengaluru-2-to-4-years-150925919206
+2025-10-06 17:00:46,872 - INFO - Applying to job 16/135: https://www.naukri.com/job-listings-data-engineer-accenture-solutions-pvt-ltd-bengaluru-3-to-8-years-220925917568
+2025-10-06 17:00:46,874 - INFO - Applying to job 17/135: https://www.naukri.com/job-listings-data-engineer-accenture-solutions-pvt-ltd-bengaluru-3-to-8-years-220925916212
+2025-10-06 17:00:46,877 - INFO - Applying to job 18/135: https://www.naukri.com/job-listings-data-engineer-accenture-solutions-pvt-ltd-bengaluru-3-to-8-years-220925916071
+2025-10-06 17:00:46,883 - INFO - Applying to job 19/135: https://www.naukri.com/job-listings-data-engineer-nps-prism-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-3-to-6-years-280625500828
+2025-10-06 17:00:46,884 - INFO - Applying to job 20/135: https://www.naukri.com/job-listings-data-engineer-photon-infotech-p-ltd-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-3-to-7-years-200125502764
+2025-10-06 17:00:46,891 - INFO - Applying to job 21/135: https://www.naukri.com/job-listings-data-engineer-photon-infotech-p-ltd-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-2-to-5-years-101123500226
+2025-10-06 17:00:46,893 - INFO - Applying to job 22/135: https://www.naukri.com/job-listings-data-engineer-circle-k-stores-inc-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-3-to-8-years-090725500511
+2025-10-06 17:00:46,895 - INFO - Applying to job 23/135: https://www.naukri.com/job-listings-data-engineer-drivetrain-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-1-to-5-years-070624501928
+2025-10-06 17:00:46,896 - INFO - Applying to job 24/135: https://www.naukri.com/job-listings-data-engineer-neal-analytics-noida-mumbai-pune-chennai-gurugram-bengaluru-6-to-12-years-010725502632
+2025-10-06 17:00:46,900 - INFO - Applying to job 25/135: https://www.naukri.com/job-listings-data-engineer-fractal-analytics-ltd-noida-mumbai-pune-chennai-gurugram-bengaluru-6-to-12-years-010725501403
+2025-10-06 17:00:46,902 - INFO - Applying to job 26/135: https://www.naukri.com/job-listings-data-engineer-accenture-solutions-pvt-ltd-bengaluru-3-to-8-years-100925932759
+2025-10-06 17:00:46,908 - INFO - Applying to job 27/135: https://www.naukri.com/job-listings-data-engineer-accenture-solutions-pvt-ltd-bengaluru-2-to-4-years-080925928500
+2025-10-06 17:00:46,910 - INFO - Applying to job 28/135: https://www.naukri.com/job-listings-data-engineer-capgemini-technology-services-india-limited-noida-hyderabad-bengaluru-5-to-10-years-160925925362
+2025-10-06 17:00:46,913 - INFO - Applying to job 29/135: https://www.naukri.com/job-listings-data-engineer-accenture-solutions-pvt-ltd-bengaluru-3-to-8-years-290925923717
+2025-10-06 17:00:46,914 - INFO - Applying to job 30/135: https://www.naukri.com/job-listings-data-engineer-accenture-solutions-pvt-ltd-bengaluru-12-to-15-years-290925908280
+2025-10-06 17:00:46,915 - INFO - Applying to job 31/135: https://www.naukri.com/job-listings-data-engineer-accenture-solutions-pvt-ltd-bengaluru-3-to-8-years-230925916394
+2025-10-06 17:00:46,918 - INFO - Applying to job 32/135: https://www.naukri.com/job-listings-data-engineer-accenture-solutions-pvt-ltd-bengaluru-2-to-4-years-170925935738
+2025-10-06 17:02:51,087 - WARNING - No apply method found for this job
+2025-10-06 17:02:55,924 - INFO - Applying to job 33/135: https://www.naukri.com/job-listings-data-engineer-accenture-solutions-pvt-ltd-bengaluru-2-to-4-years-150925925550
+2025-10-06 17:02:55,928 - INFO - Applying to job 34/135: https://www.naukri.com/job-listings-data-engineer-accenture-solutions-pvt-ltd-bengaluru-2-to-4-years-150925925518
+2025-10-06 17:02:55,932 - INFO - Applying to job 35/135: https://www.naukri.com/job-listings-data-engineer-accenture-solutions-pvt-ltd-bengaluru-2-to-4-years-150925925383
+2025-10-06 17:02:55,936 - INFO - Applying to job 36/135: https://www.naukri.com/job-listings-data-engineer-accenture-solutions-pvt-ltd-bengaluru-2-to-4-years-150925925263
+2025-10-06 17:02:55,938 - INFO - Applying to job 37/135: https://www.naukri.com/job-listings-data-engineer-accenture-solutions-pvt-ltd-bengaluru-3-to-8-years-150925920791
+2025-10-06 17:02:55,941 - INFO - Applying to job 38/135: https://www.naukri.com/job-listings-data-engineer-accenture-solutions-pvt-ltd-bengaluru-2-to-4-years-150925919552
+2025-10-06 17:02:55,943 - INFO - Applying to job 39/135: https://www.naukri.com/job-listings-data-engineer-accenture-solutions-pvt-ltd-bengaluru-2-to-4-years-080925928033
+2025-10-06 17:02:55,951 - INFO - Applying to job 40/135: https://www.naukri.com/job-listings-data-engineer-virtualware-innovations-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-5-to-10-years-300723500787
+2025-10-06 17:04:28,770 - INFO - Applying to job 41/135: https://www.naukri.com/job-listings-big-data-engineer-hexaware-technologies-ltd-noida-navi-mumbai-bengaluru-4-to-6-years-061025903067
+2025-10-06 17:05:00,265 - INFO - No chatbot detected
+2025-10-06 17:16:55,082 - WARNING - Could not find submit button with any selector
+2025-10-06 17:16:55,082 - WARNING - Easy Apply submission could not be confirmed
+2025-10-06 17:16:59,111 - INFO - Applying to job 42/135: https://www.naukri.com/job-listings-hiring-python-spark-big-data-engineer-chennai-bangalore-tech-mahindra-chennai-bengaluru-5-to-10-years-260925018429
+2025-10-06 17:17:15,762 - INFO - Chatbot detected
+2025-10-06 17:17:30,826 - INFO - Chatbot interaction completed
+2025-10-06 17:29:25,624 - WARNING - Could not find submit button with any selector
+2025-10-06 17:29:25,624 - WARNING - Easy Apply submission could not be confirmed
+2025-10-06 17:29:31,376 - INFO - Applying to job 43/135: https://www.naukri.com/job-listings-big-data-engineer-spark-developer-symphoni-hr-hyderabad-pune-bengaluru-6-to-11-years-300925029873
+2025-10-06 17:29:47,836 - INFO - Chatbot detected
+2025-10-06 17:30:02,890 - INFO - Chatbot interaction completed
+2025-10-06 17:41:57,771 - WARNING - Could not find submit button with any selector
+2025-10-06 17:41:57,771 - WARNING - Easy Apply submission could not be confirmed
+2025-10-06 17:42:02,817 - INFO - Applying to job 44/135: https://www.naukri.com/job-listings-data-engineer-big-data-developer-talent21-bengaluru-7-to-12-years-260925918806
+2025-10-06 17:42:35,505 - INFO - No chatbot detected
+2025-10-06 17:54:30,581 - WARNING - Could not find submit button with any selector
+2025-10-06 17:54:30,581 - WARNING - Easy Apply submission could not be confirmed
+2025-10-06 17:54:34,708 - INFO - Applying to job 45/135: https://www.naukri.com/job-listings-big-data-engineer-tech-highbrows-software-solutions-pvt-ltd-bengaluru-4-to-8-years-270622502290
+2025-10-06 17:56:00,237 - INFO - Applying to job 46/135: https://www.naukri.com/job-listings-azure-big-data-engineer-pyspark-professional-krazy-mantra-hr-solutions-pvt-ltd-hyderabad-chennai-bengaluru-6-to-10-years-260925908600
+2025-10-06 17:56:31,779 - INFO - No chatbot detected
+2025-10-06 18:08:26,572 - WARNING - Could not find submit button with any selector
+2025-10-06 18:08:26,572 - WARNING - Easy Apply submission could not be confirmed
+2025-10-06 18:08:31,100 - INFO - Applying to job 47/135: https://www.naukri.com/job-listings-big-data-engineer-pyspark-suzva-software-technology-bengaluru-6-to-8-years-190925920182
+2025-10-06 18:09:02,704 - INFO - No chatbot detected
+2025-10-06 18:20:57,468 - WARNING - Could not find submit button with any selector
+2025-10-06 18:20:57,468 - WARNING - Easy Apply submission could not be confirmed
+2025-10-06 18:21:01,439 - INFO - Applying to job 48/135: https://www.naukri.com/job-listings-big-data-engineer-pokkt-bengaluru-6-to-11-years-140722500632
+2025-10-06 18:22:39,470 - INFO - Applying to job 49/135: https://www.naukri.com/job-listings-big-data-engineer-technix-india-p-limited-patna-bengaluru-4-to-9-years-160323502180
+2025-10-06 18:24:07,330 - INFO - Applying to job 50/135: https://www.naukri.com/job-listings-big-data-engineer-alphacom-systems-and-solutions-hyderabad-ahmedabad-bengaluru-5-to-8-years-190925029279
+2025-10-06 18:24:23,871 - INFO - Chatbot detected
+2025-10-06 18:24:38,918 - INFO - Chatbot interaction completed
+2025-10-06 18:36:33,674 - WARNING - Could not find submit button with any selector
+2025-10-06 18:36:33,674 - WARNING - Easy Apply submission could not be confirmed
+2025-10-06 18:36:37,988 - INFO - Applying to job 51/135: https://www.naukri.com/job-listings-full-stack-engineer-ai-ml-big-data-solutions-net-connect-global-bengaluru-7-to-12-years-090925034710
+2025-10-06 18:36:37,988 - INFO - Applying to job 52/135: https://www.naukri.com/job-listings-bigdata-engineer-fractal-analytics-ltd-bengaluru-5-to-7-years-190925501571
+2025-10-06 18:38:06,218 - INFO - Applying to job 53/135: https://www.naukri.com/job-listings-data-engineer-hiring-for-one-of-the-big-4-acme-services-bangalore-rural-bengaluru-5-to-8-years-270925011696
+2025-10-06 18:38:37,755 - INFO - No chatbot detected
+2025-10-06 18:50:32,678 - WARNING - Could not find submit button with any selector
+2025-10-06 18:50:32,678 - WARNING - Easy Apply submission could not be confirmed
+2025-10-06 18:50:36,912 - INFO - Applying to job 54/135: https://www.naukri.com/job-listings-bigdata-engineer-neal-analytics-bengaluru-5-to-7-years-190925501562
+2025-10-06 18:52:04,941 - INFO - Applying to job 55/135: https://www.naukri.com/job-listings-big-data-developer-terrabit-consulting-chennai-bengaluru-4-to-8-years-100725017814
+2025-10-06 18:52:21,366 - INFO - Chatbot detected
+2025-10-06 18:52:36,404 - INFO - Chatbot interaction completed
+2025-10-06 19:04:31,278 - WARNING - Could not find submit button with any selector
+2025-10-06 19:04:31,278 - WARNING - Easy Apply submission could not be confirmed
+2025-10-06 19:04:35,487 - INFO - Applying to job 56/135: https://www.naukri.com/job-listings-data-scientist-artificial-intelligence-ibm-india-pvt-limited-bengaluru-5-to-7-years-290925920185
+2025-10-06 19:06:01,747 - INFO - Applying to job 57/135: https://www.naukri.com/job-listings-data-scientist-artificial-intelligence-ibm-india-pvt-limited-bengaluru-5-to-7-years-290925920107
+2025-10-06 19:07:28,454 - INFO - Applying to job 58/135: https://www.naukri.com/job-listings-data-scientist-artificial-intelligence-ibm-india-pvt-limited-bengaluru-5-to-7-years-031025917865
+2025-10-06 19:08:56,308 - INFO - Applying to job 59/135: https://www.naukri.com/job-listings-data-scientist-artificial-intelligence-ibm-india-pvt-limited-bengaluru-5-to-7-years-220925924532
+2025-10-06 19:10:23,202 - INFO - Applying to job 60/135: https://www.naukri.com/job-listings-data-scientist-artificial-intelligence-ibm-india-pvt-limited-bengaluru-5-to-7-years-220925924433
+2025-10-06 19:11:49,400 - INFO - Applying to job 61/135: https://www.naukri.com/job-listings-data-scientist-artificial-intelligence-ibm-india-pvt-limited-bengaluru-5-to-7-years-220925924274
+2025-10-06 19:13:17,408 - INFO - Applying to job 62/135: https://www.naukri.com/job-listings-data-scientist-artificial-intelligence-ibm-india-pvt-limited-bengaluru-5-to-7-years-220925924181
+2025-10-06 19:14:45,526 - INFO - Applying to job 63/135: https://www.naukri.com/job-listings-bigdata-developer-talent21-management-shared-services-pvt-ltd-bengaluru-palem-3-to-8-years-260925924087
+2025-10-06 19:15:17,106 - INFO - No chatbot detected
+2025-10-06 19:27:11,948 - WARNING - Could not find submit button with any selector
+2025-10-06 19:27:11,948 - WARNING - Easy Apply submission could not be confirmed
+2025-10-06 19:27:16,555 - INFO - Applying to job 64/135: https://www.naukri.com/job-listings-data-scientist-artificial-intelligence-ibm-india-pvt-limited-bengaluru-5-to-7-years-170925934285
+2025-10-06 19:29:21,813 - WARNING - No apply method found for this job
+2025-10-06 19:29:26,787 - INFO - Applying to job 65/135: https://www.naukri.com/job-listings-data-scientist-artificial-intelligence-ibm-india-pvt-limited-bengaluru-5-to-7-years-170925934282
+2025-10-06 19:31:31,032 - WARNING - No apply method found for this job
+2025-10-06 19:31:34,665 - INFO - Applying to job 66/135: https://www.naukri.com/job-listings-data-scientist-artificial-intelligence-ibm-india-pvt-limited-bengaluru-5-to-7-years-170925934163
+2025-10-06 19:33:39,197 - WARNING - No apply method found for this job
+2025-10-06 19:33:42,358 - INFO - Applying to job 67/135: https://www.naukri.com/job-listings-data-scientist-artificial-intelligence-ibm-india-pvt-limited-bengaluru-5-to-7-years-040925927623
+2025-10-06 19:33:42,362 - INFO - Applying to job 68/135: https://www.naukri.com/job-listings-data-scientist-incedo-technology-solutions-ltd-bengaluru-4-to-6-years-031025909781
+2025-10-06 19:34:13,949 - INFO - No chatbot detected
+2025-10-06 19:46:08,867 - WARNING - Could not find submit button with any selector
+2025-10-06 19:46:08,867 - WARNING - Easy Apply submission could not be confirmed
+2025-10-06 19:46:13,782 - INFO - Applying to job 69/135: https://www.naukri.com/job-listings-data-analyst-techno-facts-solutions-bengaluru-6-to-8-years-260925017721
+2025-10-06 19:46:31,541 - INFO - Chatbot detected
+2025-10-06 19:46:46,599 - INFO - Chatbot interaction completed
+2025-10-06 19:58:41,417 - WARNING - Could not find submit button with any selector
+2025-10-06 19:58:41,417 - WARNING - Easy Apply submission could not be confirmed
+2025-10-06 19:58:45,084 - INFO - Applying to job 70/135: https://www.naukri.com/job-listings-bigdata-developer-talent21-management-shared-services-pvt-ltd-bengaluru-3-to-8-years-260925924088
+2025-10-06 19:59:17,235 - INFO - No chatbot detected
+2025-10-06 20:11:12,122 - WARNING - Could not find submit button with any selector
+2025-10-06 20:11:12,122 - WARNING - Easy Apply submission could not be confirmed
+2025-10-06 20:11:15,486 - INFO - Applying to job 71/135: https://www.naukri.com/job-listings-big-data-developer-tata-consultancy-services-hyderabad-chennai-bengaluru-4-to-8-years-240925022757
+2025-10-06 20:11:46,995 - INFO - No chatbot detected
+2025-10-06 20:23:42,167 - WARNING - Could not find submit button with any selector
+2025-10-06 20:23:42,175 - WARNING - Easy Apply submission could not be confirmed
+2025-10-06 20:23:47,293 - INFO - Applying to job 72/135: https://www.naukri.com/job-listings-hadoop-developers-krazy-mantra-hr-solutions-pvt-ltd-kolkata-hyderabad-bengaluru-5-to-10-years-260925912738
+2025-10-06 20:24:18,890 - INFO - No chatbot detected
+2025-10-06 20:36:13,528 - WARNING - Could not find submit button with any selector
+2025-10-06 20:36:13,528 - WARNING - Easy Apply submission could not be confirmed
+2025-10-06 20:36:18,637 - INFO - Applying to job 73/135: https://www.naukri.com/job-listings-ai-data-scientist-architect-ideslabs-private-limited-bengaluru-6-to-11-years-260925915099
+2025-10-06 20:36:50,226 - INFO - No chatbot detected
+2025-10-06 20:48:45,843 - WARNING - Could not find submit button with any selector
+2025-10-06 20:48:45,843 - WARNING - Easy Apply submission could not be confirmed
+2025-10-06 20:48:51,363 - INFO - Applying to job 74/135: https://www.naukri.com/job-listings-big-data-developer-itc-infotech-bengaluru-4-to-9-years-300925018940
+2025-10-06 20:49:08,467 - INFO - Chatbot detected
+2025-10-06 20:49:23,542 - INFO - Chatbot interaction completed
+2025-10-06 21:01:18,432 - WARNING - Could not find submit button with any selector
+2025-10-06 21:01:18,432 - WARNING - Easy Apply submission could not be confirmed
+2025-10-06 21:01:22,802 - INFO - Applying to job 75/135: https://www.naukri.com/job-listings-big-data-developer-persistent-systems-limited-bengaluru-4-to-8-years-171024011482
+2025-10-06 21:01:39,788 - INFO - Chatbot detected
+2025-10-06 21:01:54,819 - INFO - Chatbot interaction completed
+2025-10-06 21:13:49,913 - WARNING - Could not find submit button with any selector
+2025-10-06 21:13:49,913 - WARNING - Easy Apply submission could not be confirmed
+2025-10-06 21:13:53,443 - INFO - Applying to job 76/135: https://www.naukri.com/job-listings-bigdata-engineer-vanya-it-noida-nagpur-pune-bengaluru-5-to-10-years-120724500264
+2025-10-06 21:15:24,641 - INFO - Applying to job 77/135: https://www.naukri.com/job-listings-big-data-developer-wenger-watson-bengaluru-7-to-12-years-240925932390
+2025-10-06 21:15:56,433 - INFO - No chatbot detected
+2025-10-06 21:27:52,236 - WARNING - Could not find submit button with any selector
+2025-10-06 21:27:52,236 - WARNING - Easy Apply submission could not be confirmed
+2025-10-06 21:27:56,910 - INFO - Applying to job 78/135: https://www.naukri.com/job-listings-spark-developer-appzlogic-mobility-solutions-pvt-ltd-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-0-to-2-years-111124502361
+2025-10-06 21:29:28,385 - INFO - Applying to job 79/135: https://www.naukri.com/job-listings-big-data-developer-wenger-watson-bengaluru-6-to-11-years-240925932384
+2025-10-06 21:30:00,440 - INFO - No chatbot detected
+2025-10-06 21:41:55,857 - WARNING - Could not find submit button with any selector
+2025-10-06 21:41:55,861 - WARNING - Easy Apply submission could not be confirmed
+2025-10-06 21:41:59,760 - INFO - Applying to job 80/135: https://www.naukri.com/job-listings-etl-developer-systechcorp-inc-hyderabad-chennai-bengaluru-4-to-7-years-061025006590
+2025-10-06 21:42:16,954 - INFO - Chatbot detected
+2025-10-06 21:42:31,990 - INFO - Chatbot interaction completed
+2025-10-06 21:54:26,771 - WARNING - Could not find submit button with any selector
+2025-10-06 21:54:26,771 - WARNING - Easy Apply submission could not be confirmed
+2025-10-06 21:54:30,052 - INFO - Applying to job 81/135: https://www.naukri.com/job-listings-etl-developer-staffspectrum-kochi-bengaluru-4-to-8-years-260925030194
+2025-10-06 21:54:46,745 - INFO - Chatbot detected
+2025-10-06 21:55:01,775 - INFO - Chatbot interaction completed
+2025-10-06 22:06:57,011 - WARNING - Could not find submit button with any selector
+2025-10-06 22:06:57,011 - WARNING - Easy Apply submission could not be confirmed
+2025-10-06 22:07:01,931 - INFO - Applying to job 82/135: https://www.naukri.com/job-listings-etl-developer-place-elements-hr-kochi-bengaluru-5-to-8-years-260925008461
+2025-10-06 22:07:34,995 - INFO - No chatbot detected
+2025-10-06 22:19:30,295 - WARNING - Could not find submit button with any selector
+2025-10-06 22:19:30,295 - WARNING - Easy Apply submission could not be confirmed
+2025-10-06 22:19:33,990 - INFO - Applying to job 83/135: https://www.naukri.com/job-listings-etl-developer-2-latentview-chennai-bengaluru-6-to-11-years-150925024115
+2025-10-06 22:19:33,995 - INFO - Applying to job 84/135: https://www.naukri.com/job-listings-senior-net-developer-senior-application-developer-yucca-it-solutions-bengaluru-7-to-12-years-230925026582
+2025-10-06 22:19:50,535 - INFO - Chatbot detected
+2025-10-06 22:20:05,544 - INFO - Chatbot interaction completed
+2025-10-06 22:32:00,633 - WARNING - Could not find submit button with any selector
+2025-10-06 22:32:00,633 - WARNING - Easy Apply submission could not be confirmed
+2025-10-06 22:32:05,355 - INFO - Applying to job 85/135: https://www.naukri.com/job-listings-engineering-manager-cashfree-payments-bengaluru-8-to-12-years-140925000046
+2025-10-06 22:32:05,355 - INFO - Applying to job 86/135: https://www.naukri.com/job-listings-senior-etl-developer-talend-clifyx-technology-bengaluru-5-to-8-years-260625502263
+2025-10-06 22:32:05,364 - INFO - Applying to job 87/135: https://www.naukri.com/job-listings-etl-developer-informatica-power-centre-sql-cloud-iics-diverse-lynx-bengaluru-3-to-7-years-271223501652
+2025-10-06 22:32:05,367 - INFO - Applying to job 88/135: https://www.naukri.com/job-listings-senior-etl-developer-diverse-lynx-bengaluru-3-to-8-years-250221501112
+2025-10-06 22:32:05,371 - INFO - Applying to job 89/135: https://www.naukri.com/job-listings-salesforce-developer-silk-route-advisors-llp-bengaluru-1-to-3-years-160925020244
+2025-10-06 22:32:37,067 - INFO - No chatbot detected
+2025-10-06 22:33:42,154 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F191C25110>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/e89b1dc2018ccbd97e823e7c72e86dd0/element
+2025-10-06 22:33:46,261 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F191C25B90>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/e89b1dc2018ccbd97e823e7c72e86dd0/element
+2025-10-06 22:33:50,327 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F191C26550>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/e89b1dc2018ccbd97e823e7c72e86dd0/element
+2025-10-06 22:33:58,460 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F191C27990>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/e89b1dc2018ccbd97e823e7c72e86dd0/element
+2025-10-06 22:34:02,512 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F191C34450>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/e89b1dc2018ccbd97e823e7c72e86dd0/element
+2025-10-06 22:34:06,588 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F191BFA9D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/e89b1dc2018ccbd97e823e7c72e86dd0/element
+2025-10-06 22:34:14,745 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F191C26210>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/e89b1dc2018ccbd97e823e7c72e86dd0/element
+2025-10-06 22:34:18,794 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F191C25650>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/e89b1dc2018ccbd97e823e7c72e86dd0/element
+2025-10-06 22:34:22,843 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F191C24AD0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/e89b1dc2018ccbd97e823e7c72e86dd0/element
+2025-10-06 22:34:30,977 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F191C35710>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/e89b1dc2018ccbd97e823e7c72e86dd0/element
+2025-10-06 22:34:35,042 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F191C36210>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/e89b1dc2018ccbd97e823e7c72e86dd0/element
+2025-10-06 22:34:39,092 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F191C36C90>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/e89b1dc2018ccbd97e823e7c72e86dd0/element

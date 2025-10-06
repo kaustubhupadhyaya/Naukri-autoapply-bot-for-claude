@@ -88,9 +88,9 @@ class NaukriBot:
             if 'gemini_api_key' in self.config and self.config['gemini_api_key']:
                 import google.generativeai as genai
                 genai.configure(api_key=self.config['gemini_api_key'])
-                self.gemini_model = genai.GenerativeModel('gemini-pro')
+                self.gemini_model = genai.GenerativeModel('gemini-1.5-flash')
                 logger.info("✅ Gemini AI initialized")
-            else:
+            else: 
                 self.gemini_model = None
                 logger.info("ℹ️ Gemini AI not configured (optional)")
         except Exception as e:
@@ -136,8 +136,8 @@ class NaukriBot:
             "job_search": {
                 "keywords": ["Python Developer", "Data Engineer"],
                 "location": "bengaluru",
-                "max_applications_per_session": 20,
-                "pages_per_keyword": 5,
+                "max_applications_per_session": 3,
+                "pages_per_keyword": 3,
                 "job_age_days": 7,
                 "preferred_companies": [],
                 "avoid_companies": []
@@ -923,7 +923,28 @@ class NaukriBot:
                 "button.submitButton",
                 "button#submitButton",
                 ".btn-primary[type='submit']",
-                "input[type='submit']"
+                "input[type='submit']",
+                "button.btn-primary[type='submit']",
+                "button[type='submit'][class*='apply']",
+                "button[data-action='submit-application']",
+                ".apply-button-submit",
+                "#submit-application-btn",
+                
+                # Naukri-specific patterns
+                "button.naukri-apply-button",
+                "button[class*='submit'][class*='btn']",
+                ".job-apply-form button[type='submit']",
+                
+                # Text-based (case-insensitive) - fallbacks
+                "//button[contains(translate(., 'SUBMIT', 'submit'), 'submit')]",
+                "//button[@type='submit']",
+                "//button[contains(@class, 'submit')]",
+                
+                # Generic last resorts
+                "button[type='submit']",
+                "input[type='submit']",
+                ".submit-btn",
+                "#submit"
             ]
             
             for selector in submit_selectors:

@@ -682,3 +682,362 @@ Stacktrace:
 2025-10-07 21:30:06,397 - INFO - ✅ Found Easy Apply button
 2025-10-07 21:30:07,413 - INFO - 💬 Chatbot detected
 2025-10-07 21:30:22,477 - INFO - Chatbot interaction completed
+2025-10-07 21:36:04,478 - WARNING - Could not find submit button
+2025-10-07 21:36:04,478 - WARNING - Easy Apply submission failed
+2025-10-07 21:36:04,480 - WARNING - ❌ Application failed
+2025-10-07 21:36:07,923 - INFO - 
+============================================================
+2025-10-07 21:36:07,925 - INFO - Applying to job 4/65: https://www.naukri.com/job-listings-hiring-python-spark-big-data-engineer-chennai-bangalore-tech-mahindra-chennai-bengaluru-5-to-10-years-260925018429
+2025-10-07 21:36:54,422 - INFO - 📋 Unknown at Unknown
+2025-10-07 21:36:54,467 - INFO - ✅ Found Easy Apply button
+2025-10-07 21:36:55,558 - INFO - 💬 Chatbot detected
+2025-10-07 21:37:10,587 - INFO - Chatbot interaction completed
+2025-10-07 21:42:52,578 - WARNING - Could not find submit button
+2025-10-07 21:42:52,578 - WARNING - Easy Apply submission failed
+2025-10-07 21:42:52,580 - WARNING - ❌ Application failed
+2025-10-07 21:42:55,317 - INFO - 
+============================================================
+2025-10-07 21:42:55,319 - INFO - Applying to job 5/65: https://www.naukri.com/job-listings-big-data-engineer-spark-developer-symphoni-hr-hyderabad-pune-bengaluru-6-to-11-years-300925029873
+2025-10-07 21:43:40,920 - INFO - 📋 Unknown at Unknown
+2025-10-07 21:43:40,953 - INFO - ✅ Found Easy Apply button
+2025-10-07 21:43:42,001 - INFO - 💬 Chatbot detected
+2025-10-07 21:43:57,018 - INFO - Chatbot interaction completed
+2025-10-07 21:49:38,852 - WARNING - Could not find submit button
+2025-10-07 21:49:38,852 - WARNING - Easy Apply submission failed
+2025-10-07 21:49:38,852 - WARNING - ❌ Application failed
+2025-10-07 21:49:38,852 - INFO - ⏸️ Rate limit pause: 10s
+2025-10-07 21:49:48,866 - INFO - 
+============================================================
+2025-10-07 21:49:48,866 - INFO - Applying to job 6/65: https://www.naukri.com/job-listings-big-data-engineer-alphacom-systems-and-solutions-hyderabad-ahmedabad-bengaluru-5-to-8-years-190925029279
+2025-10-07 21:50:34,814 - INFO - 📋 Unknown at Unknown
+2025-10-07 21:50:34,846 - INFO - ✅ Found Easy Apply button
+2025-10-07 21:50:35,890 - INFO - 💬 Chatbot detected
+2025-10-07 21:50:50,898 - INFO - Chatbot interaction completed
+2025-10-07 21:56:32,703 - WARNING - Could not find submit button
+2025-10-07 21:56:32,703 - WARNING - Easy Apply submission failed
+2025-10-07 21:56:32,703 - WARNING - ❌ Application failed
+2025-10-07 21:56:35,192 - INFO - 
+============================================================
+2025-10-07 21:56:35,194 - INFO - Applying to job 7/65: https://www.naukri.com/job-listings-big-data-developer-terrabit-consulting-chennai-bengaluru-4-to-8-years-100725017814
+2025-10-07 21:57:20,728 - INFO - 📋 Unknown at Unknown
+2025-10-07 21:57:20,756 - INFO - ✅ Found Easy Apply button
+2025-10-07 21:57:21,756 - INFO - 💬 Chatbot detected
+2025-10-07 21:57:36,826 - INFO - Chatbot interaction completed
+2025-10-07 22:03:18,592 - WARNING - Could not find submit button
+2025-10-07 22:03:18,592 - WARNING - Easy Apply submission failed
+2025-10-07 22:03:18,594 - WARNING - ❌ Application failed
+2025-10-07 22:03:18,600 - INFO - 
+============================================================
+2025-10-07 22:03:18,601 - INFO - Applying to job 8/65: https://www.naukri.com/job-listings-data-scientist-artificial-intelligence-ibm-india-pvt-limited-bengaluru-5-to-7-years-170925934285
+2025-10-07 22:04:04,016 - INFO - 📋 Unknown at Unknown
+2025-10-07 22:05:52,766 - WARNING - No apply method found
+2025-10-07 22:05:52,766 - WARNING - ❌ Application failed
+2025-10-07 22:05:52,771 - INFO - 
+============================================================
+2025-10-07 22:05:52,773 - INFO - Applying to job 9/65: https://www.naukri.com/job-listings-data-scientist-artificial-intelligence-ibm-india-pvt-limited-bengaluru-5-to-7-years-170925934282
+2025-10-07 22:06:38,595 - INFO - 📋 Unknown at Unknown
+2025-10-07 22:08:27,374 - WARNING - No apply method found
+2025-10-07 22:08:27,375 - WARNING - ❌ Application failed
+2025-10-07 22:08:31,325 - INFO - 
+============================================================
+2025-10-07 22:08:31,325 - INFO - Applying to job 10/65: https://www.naukri.com/job-listings-data-scientist-artificial-intelligence-ibm-india-pvt-limited-bengaluru-5-to-7-years-170925934163
+2025-10-07 22:09:16,813 - INFO - 📋 Unknown at Unknown
+2025-10-07 22:11:05,519 - WARNING - No apply method found
+2025-10-07 22:11:05,520 - WARNING - ❌ Application failed
+2025-10-07 22:11:05,522 - INFO - ⏸️ Rate limit pause: 10s
+2025-10-07 22:11:15,528 - INFO - 
+============================================================
+2025-10-07 22:11:15,528 - INFO - Applying to job 11/65: https://www.naukri.com/job-listings-data-analyst-techno-facts-solutions-bengaluru-6-to-8-years-260925017721
+2025-10-07 22:12:01,371 - INFO - 📋 Unknown at Unknown
+2025-10-07 22:12:01,403 - INFO - ✅ Found Easy Apply button
+2025-10-07 22:12:02,449 - INFO - 💬 Chatbot detected
+2025-10-07 22:12:17,519 - INFO - Chatbot interaction completed
+2025-10-07 22:17:59,240 - WARNING - Could not find submit button
+2025-10-07 22:17:59,241 - WARNING - Easy Apply submission failed
+2025-10-07 22:17:59,241 - WARNING - ❌ Application failed
+2025-10-07 22:17:59,249 - INFO - 
+============================================================
+2025-10-07 22:17:59,250 - INFO - Applying to job 12/65: https://www.naukri.com/job-listings-big-data-developer-itc-infotech-bengaluru-4-to-9-years-300925018940
+2025-10-07 22:18:44,966 - INFO - 📋 Unknown at Unknown
+2025-10-07 22:18:44,998 - INFO - ✅ Found Easy Apply button
+2025-10-07 22:18:45,986 - INFO - 💬 Chatbot detected
+2025-10-07 22:19:01,012 - INFO - Chatbot interaction completed
+2025-10-07 22:24:42,694 - WARNING - Could not find submit button
+2025-10-07 22:24:42,694 - WARNING - Easy Apply submission failed
+2025-10-07 22:24:42,694 - WARNING - ❌ Application failed
+2025-10-07 22:24:46,669 - INFO - 
+============================================================
+2025-10-07 22:24:46,672 - INFO - Applying to job 13/65: https://www.naukri.com/job-listings-big-data-developer-persistent-systems-limited-bengaluru-4-to-8-years-171024011482
+2025-10-07 22:25:32,414 - INFO - 📋 Unknown at Unknown
+2025-10-07 22:25:32,447 - INFO - ✅ Found Easy Apply button
+2025-10-07 22:25:33,417 - INFO - 💬 Chatbot detected
+2025-10-07 22:25:48,478 - INFO - Chatbot interaction completed
+2025-10-07 22:31:30,367 - WARNING - Could not find submit button
+2025-10-07 22:31:30,367 - WARNING - Easy Apply submission failed
+2025-10-07 22:31:30,369 - WARNING - ❌ Application failed
+2025-10-07 22:31:30,373 - INFO - 
+============================================================
+2025-10-07 22:31:30,376 - INFO - Applying to job 14/65: https://www.naukri.com/job-listings-big-data-developer-wenger-watson-bengaluru-6-to-11-years-240925931572
+2025-10-07 22:32:15,974 - INFO - 📋 Unknown at Unknown
+2025-10-07 22:32:16,008 - INFO - ✅ Found Easy Apply button
+2025-10-07 22:32:32,125 - INFO - No chatbot detected
+2025-10-07 22:38:13,983 - WARNING - Could not find submit button
+2025-10-07 22:38:13,983 - WARNING - Easy Apply submission failed
+2025-10-07 22:38:13,985 - WARNING - ❌ Application failed
+2025-10-07 22:38:13,989 - INFO - 
+============================================================
+2025-10-07 22:38:13,992 - INFO - Applying to job 15/65: https://www.naukri.com/job-listings-hadoop-developers-krazy-mantra-hr-solutions-pvt-ltd-hyderabad-bengaluru-7-to-10-years-250925931665
+2025-10-07 22:39:00,461 - INFO - 📋 Unknown at Unknown
+2025-10-07 22:39:00,493 - INFO - ✅ Found Easy Apply button
+2025-10-07 22:39:16,644 - INFO - No chatbot detected
+2025-10-07 22:44:58,601 - WARNING - Could not find submit button
+2025-10-07 22:44:58,601 - WARNING - Easy Apply submission failed
+2025-10-07 22:44:58,601 - WARNING - ❌ Application failed
+2025-10-07 22:44:58,601 - INFO - ⏸️ Rate limit pause: 10s
+2025-10-07 22:45:08,611 - INFO - 
+============================================================
+2025-10-07 22:45:08,611 - INFO - Applying to job 16/65: https://www.naukri.com/job-listings-devops-engineer-ii-cashfree-payments-bengaluru-4-to-6-years-200825024001
+2025-10-07 22:45:54,209 - INFO - 📋 Unknown at Unknown
+2025-10-07 22:45:54,244 - INFO - ✅ Found Easy Apply button
+2025-10-07 22:46:10,376 - INFO - No chatbot detected
+2025-10-07 22:51:52,314 - WARNING - Could not find submit button
+2025-10-07 22:51:52,314 - WARNING - Easy Apply submission failed
+2025-10-07 22:51:52,314 - WARNING - ❌ Application failed
+2025-10-07 22:51:52,320 - INFO - 
+============================================================
+2025-10-07 22:51:52,323 - INFO - Applying to job 17/65: https://www.naukri.com/job-listings-big-data-developer-gforce-consulting-solutions-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-2-to-6-years-150523500681
+2025-10-07 22:52:37,913 - INFO - 📋 Unknown at Unknown
+2025-10-07 22:53:40,146 - INFO - ↗️ Found external apply link
+2025-10-07 22:53:42,972 - INFO - ⬅️ Returned from external site
+2025-10-07 22:53:42,974 - WARNING - ❌ Application failed
+2025-10-07 22:53:43,001 - INFO - 
+============================================================
+2025-10-07 22:53:43,004 - INFO - Applying to job 18/65: https://www.naukri.com/job-listings-data-scientist-bot-consulting-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-2-to-5-years-230525505084
+2025-10-07 22:54:28,948 - INFO - 📋 Unknown at Unknown
+2025-10-07 22:55:31,089 - INFO - ↗️ Found external apply link
+2025-10-07 22:55:32,166 - INFO - ⬅️ Returned from external site
+2025-10-07 22:55:32,169 - WARNING - ❌ Application failed
+2025-10-07 22:55:32,219 - INFO - 
+============================================================
+2025-10-07 22:55:32,219 - INFO - Applying to job 19/65: https://www.naukri.com/job-listings-data-scientist-fort-technologies-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-1-to-3-years-051124502448
+2025-10-07 22:56:17,801 - INFO - 📋 Unknown at Unknown
+2025-10-07 22:57:19,943 - INFO - ↗️ Found external apply link
+2025-10-07 22:57:22,277 - INFO - ⬅️ Returned from external site
+2025-10-07 22:57:22,278 - WARNING - ❌ Application failed
+2025-10-07 22:57:26,114 - INFO - 
+============================================================
+2025-10-07 22:57:26,114 - INFO - Applying to job 20/65: https://www.naukri.com/job-listings-trading-engineer-ag-trading-cargill-business-services-india-private-limited-bengaluru-3-to-5-years-230925923160
+2025-10-07 22:58:11,933 - INFO - 📋 Unknown at Unknown
+2025-10-07 22:58:11,965 - INFO - ✅ Found Easy Apply button
+2025-10-07 22:58:28,039 - INFO - No chatbot detected
+2025-10-07 23:04:09,795 - WARNING - Could not find submit button
+2025-10-07 23:04:09,795 - WARNING - Easy Apply submission failed
+2025-10-07 23:04:09,795 - WARNING - ❌ Application failed
+2025-10-07 23:04:09,795 - INFO - ⏸️ Rate limit pause: 10s
+2025-10-07 23:04:19,803 - INFO - 
+============================================================
+2025-10-07 23:04:19,803 - INFO - Applying to job 21/65: https://www.naukri.com/job-listings-big-data-engineer-lead-brillio-bengaluru-6-to-10-years-110925032865
+2025-10-07 23:05:05,310 - INFO - 📋 Unknown at Unknown
+2025-10-07 23:05:05,338 - INFO - ✅ Found Easy Apply button
+2025-10-07 23:05:06,293 - INFO - 💬 Chatbot detected
+2025-10-07 23:05:21,327 - INFO - Chatbot interaction completed
+2025-10-07 23:11:03,170 - WARNING - Could not find submit button
+2025-10-07 23:11:03,170 - WARNING - Easy Apply submission failed
+2025-10-07 23:11:03,175 - WARNING - ❌ Application failed
+2025-10-07 23:11:03,196 - INFO - 
+============================================================
+2025-10-07 23:11:03,197 - INFO - Applying to job 22/65: https://www.naukri.com/job-listings-senior-net-developer-senior-application-developer-yucca-it-solutions-bengaluru-7-to-12-years-230925026582
+2025-10-07 23:11:48,773 - INFO - 📋 Unknown at Unknown
+2025-10-07 23:11:48,808 - INFO - ✅ Found Easy Apply button
+2025-10-07 23:11:49,818 - INFO - 💬 Chatbot detected
+2025-10-07 23:12:04,865 - INFO - Chatbot interaction completed
+2025-10-07 23:17:46,580 - WARNING - Could not find submit button
+2025-10-07 23:17:46,581 - WARNING - Easy Apply submission failed
+2025-10-07 23:17:46,582 - WARNING - ❌ Application failed
+2025-10-07 23:17:46,590 - INFO - 
+============================================================
+2025-10-07 23:17:46,591 - INFO - Applying to job 23/65: https://www.naukri.com/job-listings-senior-big-data-engineer-big-data-bizviz-bizviz-technologies-pvt-ltd-hyderabad-bengaluru-5-to-10-years-170719501656
+2025-10-07 23:18:32,711 - INFO - 📋 Unknown at Unknown
+2025-10-07 23:19:34,876 - INFO - ↗️ Found external apply link
+2025-10-07 23:19:39,684 - INFO - ⬅️ Returned from external site
+2025-10-07 23:19:39,689 - WARNING - ❌ Application failed
+2025-10-07 23:19:42,937 - INFO - 
+============================================================
+2025-10-07 23:19:42,937 - INFO - Applying to job 24/65: https://www.naukri.com/job-listings-senior-big-data-engineer-bizviz-technologies-pvt-ltd-bengaluru-5-to-7-years-160424500933
+2025-10-07 23:20:28,685 - INFO - 📋 Unknown at Unknown
+2025-10-07 23:21:30,844 - INFO - ↗️ Found external apply link
+2025-10-07 23:21:35,782 - INFO - ⬅️ Returned from external site
+2025-10-07 23:21:35,783 - WARNING - ❌ Application failed
+2025-10-07 23:21:38,040 - INFO - 
+============================================================
+2025-10-07 23:21:38,040 - INFO - Applying to job 25/65: https://www.naukri.com/job-listings-big-data-developer-grid-dynamics-hyderabad-chennai-bengaluru-3-to-7-years-250925509140
+2025-10-07 23:22:23,867 - INFO - 📋 Unknown at Unknown
+2025-10-07 23:23:26,040 - INFO - ↗️ Found external apply link
+2025-10-07 23:23:28,997 - INFO - ⬅️ Returned from external site
+2025-10-07 23:23:28,997 - WARNING - ❌ Application failed
+2025-10-07 23:23:28,999 - INFO - ⏸️ Rate limit pause: 10s
+2025-10-07 23:23:39,008 - INFO - 
+============================================================
+2025-10-07 23:23:39,008 - INFO - Applying to job 26/65: https://www.naukri.com/job-listings-data-scientist-affle-mumbai-gurugram-bengaluru-2-to-5-years-130525504503
+2025-10-07 23:24:24,530 - INFO - 📋 Unknown at Unknown
+2025-10-07 23:25:26,745 - INFO - ↗️ Found external apply link
+2025-10-07 23:25:30,571 - INFO - ⬅️ Returned from external site
+2025-10-07 23:25:30,571 - WARNING - ❌ Application failed
+2025-10-07 23:25:34,009 - INFO - 
+============================================================
+2025-10-07 23:25:34,011 - INFO - Applying to job 27/65: https://www.naukri.com/job-listings-data-scientist-i-affle-mumbai-gurugram-bengaluru-1-to-5-years-090625500500
+2025-10-07 23:26:19,547 - INFO - 📋 Unknown at Unknown
+2025-10-07 23:27:21,685 - INFO - ↗️ Found external apply link
+2025-10-07 23:27:26,388 - INFO - ⬅️ Returned from external site
+2025-10-07 23:27:26,393 - WARNING - ❌ Application failed
+2025-10-07 23:27:28,595 - INFO - 
+============================================================
+2025-10-07 23:27:28,597 - INFO - Applying to job 28/65: https://www.naukri.com/job-listings-senior-big-data-engineer-banyan-data-services-bengaluru-5-to-10-years-030423501879
+2025-10-07 23:28:14,370 - INFO - 📋 Unknown at Unknown
+2025-10-07 23:29:16,553 - INFO - ↗️ Found external apply link
+2025-10-07 23:29:17,425 - INFO - ⬅️ Returned from external site
+2025-10-07 23:29:17,427 - WARNING - ❌ Application failed
+2025-10-07 23:29:20,516 - INFO - 
+============================================================
+2025-10-07 23:29:20,519 - INFO - Applying to job 29/65: https://www.naukri.com/job-listings-nursery-carmel-high-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-2-to-6-years-221024501691
+2025-10-07 23:30:06,251 - INFO - 📋 Unknown at Unknown
+2025-10-07 23:31:08,368 - INFO - ↗️ Found external apply link
+2025-10-07 23:31:09,304 - INFO - ⬅️ Returned from external site
+2025-10-07 23:31:09,307 - WARNING - ❌ Application failed
+2025-10-07 23:31:09,313 - INFO - 
+============================================================
+2025-10-07 23:31:09,314 - INFO - Applying to job 30/65: https://www.naukri.com/job-listings-data-scientist-artificial-intelligence-ibm-india-pvt-limited-bengaluru-3-to-7-years-031025917674
+2025-10-07 23:31:55,308 - INFO - 📋 Unknown at Unknown
+2025-10-07 23:32:57,416 - INFO - ↗️ Found external apply link
+2025-10-07 23:33:01,764 - INFO - ⬅️ Returned from external site
+2025-10-07 23:33:01,766 - WARNING - ❌ Application failed
+2025-10-07 23:33:01,767 - INFO - ⏸️ Rate limit pause: 10s
+2025-10-07 23:33:11,772 - INFO - 
+============================================================
+2025-10-07 23:33:11,773 - INFO - Applying to job 31/65: https://www.naukri.com/job-listings-scala-senior-big-data-engineer-ave-promagne-business-solutions-mumbai-bengaluru-8-to-10-years-150925923843
+2025-10-07 23:33:57,185 - INFO - 📋 Unknown at Unknown
+2025-10-07 23:33:57,221 - INFO - ✅ Found Easy Apply button
+2025-10-07 23:34:13,357 - INFO - No chatbot detected
+2025-10-07 23:39:55,250 - WARNING - Could not find submit button
+2025-10-07 23:39:55,250 - WARNING - Easy Apply submission failed
+2025-10-07 23:39:55,254 - WARNING - ❌ Application failed
+2025-10-07 23:39:55,271 - INFO - 
+============================================================
+2025-10-07 23:39:55,273 - INFO - Applying to job 32/65: https://www.naukri.com/job-listings-senior-data-engineer-cybernetics-controls-limited-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-0-to-2-years-121124501072
+2025-10-07 23:40:41,326 - INFO - 📋 Unknown at Unknown
+2025-10-07 23:41:43,514 - INFO - ↗️ Found external apply link
+2025-10-07 23:41:45,918 - INFO - ⬅️ Returned from external site
+2025-10-07 23:41:45,920 - WARNING - ❌ Application failed
+2025-10-07 23:41:49,891 - INFO - 
+============================================================
+2025-10-07 23:41:49,892 - INFO - Applying to job 33/65: https://www.naukri.com/job-listings-data-engineering-professional-suzva-software-technology-pune-gurugram-bengaluru-5-to-9-years-290925918523
+2025-10-07 23:42:35,677 - INFO - 📋 Unknown at Unknown
+2025-10-07 23:42:35,708 - INFO - ✅ Found Easy Apply button
+2025-10-07 23:42:51,800 - INFO - No chatbot detected
+2025-10-07 23:48:33,628 - WARNING - Could not find submit button
+2025-10-07 23:48:33,628 - WARNING - Easy Apply submission failed
+2025-10-07 23:48:33,630 - WARNING - ❌ Application failed
+2025-10-07 23:48:33,635 - INFO - 
+============================================================
+2025-10-07 23:48:33,635 - INFO - Applying to job 34/65: https://www.naukri.com/job-listings-data-scientist-cgi-information-systems-and-management-consultants-private-limited-hyderabad-chennai-bengaluru-4-to-7-years-050925916934
+2025-10-07 23:49:19,195 - INFO - 📋 Unknown at Unknown
+2025-10-07 23:49:19,236 - INFO - ✅ Found Easy Apply button
+2025-10-07 23:49:35,364 - INFO - No chatbot detected
+2025-10-07 23:55:17,160 - WARNING - Could not find submit button
+2025-10-07 23:55:17,161 - WARNING - Easy Apply submission failed
+2025-10-07 23:55:17,163 - WARNING - ❌ Application failed
+2025-10-07 23:55:21,064 - INFO - 
+============================================================
+2025-10-07 23:55:21,064 - INFO - Applying to job 35/65: https://www.naukri.com/job-listings-data-scientist-capgemini-technology-services-india-limited-bengaluru-4-to-7-years-071025929031
+2025-10-07 23:56:07,323 - INFO - 📋 Unknown at Unknown
+2025-10-07 23:57:09,500 - INFO - ↗️ Found external apply link
+2025-10-07 23:57:14,129 - INFO - ⬅️ Returned from external site
+2025-10-07 23:57:14,131 - WARNING - ❌ Application failed
+2025-10-07 23:57:14,131 - INFO - ⏸️ Rate limit pause: 10s
+2025-10-07 23:57:24,140 - INFO - 
+============================================================
+2025-10-07 23:57:24,140 - INFO - Applying to job 36/65: https://www.naukri.com/job-listings-big-data-developer-etl-apptad-inc-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-3-to-6-years-100925504181
+2025-10-07 23:58:09,807 - INFO - 📋 Unknown at Unknown
+2025-10-07 23:59:12,011 - INFO - ↗️ Found external apply link
+2025-10-07 23:59:16,685 - INFO - ⬅️ Returned from external site
+2025-10-07 23:59:16,688 - WARNING - ❌ Application failed
+2025-10-07 23:59:20,016 - INFO - 
+============================================================
+2025-10-07 23:59:20,023 - INFO - Applying to job 37/65: https://www.naukri.com/job-listings-hadoop-developer-diverse-lynx-bengaluru-2-to-7-years-120523500738
+2025-10-08 00:00:05,686 - INFO - 📋 Unknown at Unknown
+2025-10-08 00:01:07,889 - INFO - ↗️ Found external apply link
+2025-10-08 00:01:12,713 - INFO - ⬅️ Returned from external site
+2025-10-08 00:01:12,716 - WARNING - ❌ Application failed
+2025-10-08 00:01:12,739 - INFO - 
+============================================================
+2025-10-08 00:01:12,743 - INFO - Applying to job 38/65: https://www.naukri.com/job-listings-etl-developer-systechcorp-inc-hyderabad-chennai-bengaluru-4-to-7-years-061025006590
+2025-10-08 00:01:58,543 - INFO - 📋 Unknown at Unknown
+2025-10-08 00:01:58,566 - INFO - ✅ Found Easy Apply button
+2025-10-08 00:01:59,592 - INFO - 💬 Chatbot detected
+2025-10-08 00:02:14,606 - INFO - Chatbot interaction completed
+2025-10-08 00:07:56,556 - WARNING - Could not find submit button
+2025-10-08 00:07:56,556 - WARNING - Easy Apply submission failed
+2025-10-08 00:07:56,557 - WARNING - ❌ Application failed
+2025-10-08 00:07:56,563 - INFO - 
+============================================================
+2025-10-08 00:07:56,563 - INFO - Applying to job 39/65: https://www.naukri.com/job-listings-etl-developer-careernet-bengaluru-5-to-10-years-061025017909
+2025-10-08 00:08:42,536 - INFO - 📋 Unknown at Unknown
+2025-10-08 00:08:42,567 - INFO - ✅ Found Easy Apply button
+2025-10-08 00:08:58,685 - INFO - No chatbot detected
+2025-10-08 00:14:40,494 - WARNING - Could not find submit button
+2025-10-08 00:14:40,496 - WARNING - Easy Apply submission failed
+2025-10-08 00:14:40,497 - WARNING - ❌ Application failed
+2025-10-08 00:14:40,502 - INFO - 
+============================================================
+2025-10-08 00:14:40,502 - INFO - Applying to job 40/65: https://www.naukri.com/job-listings-etl-developer-staffspectrum-kochi-bengaluru-4-to-8-years-260925030194
+2025-10-08 00:15:25,941 - INFO - 📋 Unknown at Unknown
+2025-10-08 00:15:25,980 - INFO - ✅ Found Easy Apply button
+2025-10-08 00:15:26,932 - INFO - 💬 Chatbot detected
+2025-10-08 00:15:42,007 - INFO - Chatbot interaction completed
+2025-10-08 00:21:23,950 - WARNING - Could not find submit button
+2025-10-08 00:21:23,950 - WARNING - Easy Apply submission failed
+2025-10-08 00:21:23,950 - WARNING - ❌ Application failed
+2025-10-08 00:21:23,950 - INFO - ⏸️ Rate limit pause: 10s
+2025-10-08 00:21:34,185 - INFO - 
+============================================================
+2025-10-08 00:21:34,185 - INFO - Applying to job 41/65: https://www.naukri.com/job-listings-salesforce-developer-silk-route-advisors-llp-bengaluru-1-to-3-years-160925020244
+2025-10-08 00:22:21,907 - INFO - 📋 Unknown at Unknown
+2025-10-08 00:22:21,975 - INFO - ✅ Found Easy Apply button
+2025-10-08 00:22:38,555 - INFO - No chatbot detected
+2025-10-08 00:28:20,677 - WARNING - Could not find submit button
+2025-10-08 00:28:20,683 - WARNING - Easy Apply submission failed
+2025-10-08 00:28:20,689 - WARNING - ❌ Application failed
+2025-10-08 00:28:23,784 - INFO - 
+============================================================
+2025-10-08 00:28:23,786 - INFO - Applying to job 42/65: https://www.naukri.com/job-listings-etl-developer-java-support-engineer-acesoft-labs-bengaluru-3-to-6-years-180925934283
+2025-10-08 00:29:10,159 - INFO - 📋 Unknown at Unknown
+2025-10-08 00:29:10,194 - INFO - ✅ Found Easy Apply button
+2025-10-08 00:29:26,276 - INFO - No chatbot detected
+2025-10-08 00:35:08,143 - WARNING - Could not find submit button
+2025-10-08 00:35:08,144 - WARNING - Easy Apply submission failed
+2025-10-08 00:35:08,146 - WARNING - ❌ Application failed
+2025-10-08 00:35:08,153 - INFO - 
+============================================================
+2025-10-08 00:35:08,153 - INFO - Applying to job 43/65: https://www.naukri.com/job-listings-data-engineer-accenture-solutions-pvt-ltd-bengaluru-2-to-4-years-170925932416
+2025-10-08 00:35:54,573 - INFO - 📋 Unknown at Unknown
+2025-10-08 00:37:43,247 - WARNING - No apply method found
+2025-10-08 00:37:43,248 - WARNING - ❌ Application failed
+2025-10-08 00:37:43,255 - INFO - 
+============================================================
+2025-10-08 00:37:43,267 - INFO - Applying to job 44/65: https://www.naukri.com/job-listings-sql-developer-omega-healthcare-hyderabad-chennai-bengaluru-8-to-13-years-011025009900
+2025-10-08 00:38:29,373 - INFO - 📋 Unknown at Unknown
+2025-10-08 00:38:29,449 - INFO - ✅ Found Easy Apply button
+2025-10-08 00:38:45,577 - INFO - No chatbot detected
+2025-10-08 00:44:28,359 - WARNING - Could not find submit button
+2025-10-08 00:44:28,361 - WARNING - Easy Apply submission failed
+2025-10-08 00:44:28,362 - WARNING - ❌ Application failed
+2025-10-08 00:44:31,363 - INFO - 
+============================================================
+2025-10-08 00:44:31,365 - INFO - Applying to job 45/65: https://www.naukri.com/job-listings-sql-developer-iospl-technology-services-private-limited-noida-hyderabad-bengaluru-4-to-9-years-190925912904
+2025-10-08 00:45:17,516 - INFO - 📋 Unknown at Unknown
+2025-10-08 00:45:17,560 - INFO - ✅ Found Easy Apply button
+2025-10-08 00:45:33,698 - INFO - No chatbot detected
+2025-10-08 00:51:11,866 - WARNING - Could not find submit button
+2025-10-08 00:51:11,866 - WARNING - Easy Apply submission failed
+2025-10-08 00:51:28,127 - WARNING - ❌ Application failed
+2025-10-08 00:51:28,127 - INFO - ⏸️ Rate limit pause: 10s

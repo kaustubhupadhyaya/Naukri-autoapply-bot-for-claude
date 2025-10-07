@@ -1,0 +1,8 @@
+{
+  "login_email": "#usernameField",
+  "login_password": "#passwordField",
+  "login_button": null,
+  "submit_button": null,
+  "job_card": null,
+  "apply_button": null
+}

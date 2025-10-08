@@ -1,0 +1,10 @@
+{
+    "credentials": {
+        "email": "you@example.com",
+        "password": "changeme"
+    },
+    "personal_info": {},
+    "job_search": {},
+    "webdriver": {},
+    "bot_behavior": {}
+}

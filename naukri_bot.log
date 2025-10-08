@@ -1616,3 +1616,715 @@ Stacktrace:
 2025-10-08 07:57:58,505 - WARNING - ❌ Application failed
 2025-10-08 07:57:58,505 - INFO - ⏸️ Rate limit pause: 10s
 2025-10-08 07:58:08,511 - INFO - 📊 Session report saved: c:\Users\Admin\Documents\GitHub\Naukri-autoapply-bot-for-claude\naukri_session_20251008_075808.json
+2025-10-08 13:05:51,462 - INFO - ✅ Configuration loaded successfully
+2025-10-08 13:05:51,462 - INFO - ✅ Loaded selector cache with 2 cached selectors
+2025-10-08 13:05:51,466 - INFO - ✅ Job database initialized
+2025-10-08 13:05:51,467 - INFO - ℹ️ Gemini AI not configured (optional)
+2025-10-08 13:05:51,467 - INFO - ✅ Bot initialized successfully
+2025-10-08 13:05:51,467 - INFO - 🚀 Setting up browser...
+2025-10-08 13:05:55,134 - INFO - ✅ Driver setup successful (manual path)
+2025-10-08 13:05:55,634 - INFO - ✅ WebDriver ready
+2025-10-08 13:05:55,655 - INFO - 🔐 Login attempt 1/3
+2025-10-08 13:05:57,637 - INFO - ✅ Email entered
+2025-10-08 13:05:58,666 - INFO - ✅ Password entered
+2025-10-08 13:05:59,252 - INFO - ✅ Found login button
+2025-10-08 13:06:02,506 - INFO - ✅ Login verified
+2025-10-08 13:06:02,508 - INFO - ✅ Login successful!
+2025-10-08 13:06:02,508 - INFO - 🔍 Starting job search...
+2025-10-08 13:06:02,508 - INFO - 🔎 Searching for: Data Engineer
+2025-10-08 13:06:02,508 - INFO - 📄 Page 1
+2025-10-08 13:17:39,619 - INFO - ✅ Found 0 new jobs
+2025-10-08 13:17:39,620 - INFO - 📄 Page 2
+2025-10-08 13:29:16,947 - INFO - ✅ Found 2 new jobs
+2025-10-08 13:29:16,949 - INFO - 🔎 Searching for: Big Data Engineer
+2025-10-08 13:29:16,951 - INFO - 📄 Page 1
+2025-10-08 13:40:52,604 - INFO - ✅ Found 12 new jobs
+2025-10-08 13:40:52,607 - INFO - 📄 Page 2
+2025-10-08 13:52:29,915 - INFO - ✅ Found 16 new jobs
+2025-10-08 13:52:29,916 - INFO - 🔎 Searching for: ETL Developer
+2025-10-08 13:52:29,916 - INFO - 📄 Page 1
+2025-10-08 14:04:07,550 - INFO - ✅ Found 4 new jobs
+2025-10-08 14:04:08,493 - INFO - 📄 Page 2
+2025-10-08 14:15:43,729 - INFO - ✅ Found 3 new jobs
+2025-10-08 14:15:43,729 - INFO - 🔎 Searching for: SQL Developer
+2025-10-08 14:15:43,729 - INFO - 📄 Page 1
+2025-10-08 14:27:19,248 - INFO - ✅ Found 8 new jobs
+2025-10-08 14:27:19,248 - INFO - 📄 Page 2
+2025-10-08 14:38:54,734 - INFO - ✅ Found 14 new jobs
+2025-10-08 14:38:54,735 - INFO - ✅ Total jobs found: 59
+2025-10-08 14:38:54,735 - INFO - 🎯 Starting applications to 59 jobs...
+2025-10-08 14:38:54,739 - INFO - 
+============================================================
+2025-10-08 14:38:54,740 - INFO - Job 1/59
+2025-10-08 14:39:47,352 - INFO - 📋 Unknown at Unknown
+2025-10-08 14:39:47,395 - INFO - ✅ Found Easy Apply button
+2025-10-08 14:39:48,606 - INFO - 💬 Chatbot detected
+2025-10-08 14:40:03,621 - INFO - 🔍 Looking for submit button...
+2025-10-08 14:41:36,865 - INFO - 🔍 Trying all submit selectors...
+2025-10-08 14:44:58,868 - ERROR - ❌ Could not find submit button
+2025-10-08 14:44:58,959 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251008_144458.png
+2025-10-08 14:44:59,014 - INFO - ↗️ Found external apply link
+2025-10-08 14:45:00,122 - WARNING - No apply method found
+2025-10-08 14:45:00,124 - WARNING - ❌ Application failed
+2025-10-08 14:45:00,129 - INFO - 
+============================================================
+2025-10-08 14:45:00,131 - INFO - Job 2/59
+2025-10-08 14:45:45,746 - INFO - 📋 Unknown at Unknown
+2025-10-08 14:47:34,593 - WARNING - No apply method found
+2025-10-08 14:47:34,595 - WARNING - ❌ Application failed
+2025-10-08 14:47:36,824 - INFO - 
+============================================================
+2025-10-08 14:47:36,825 - INFO - Job 3/59
+2025-10-08 14:48:23,309 - INFO - 📋 Unknown at Unknown
+2025-10-08 14:48:23,346 - INFO - ✅ Found Easy Apply button
+2025-10-08 14:48:24,562 - INFO - 💬 Chatbot detected
+2025-10-08 14:48:39,627 - INFO - 🔍 Looking for submit button...
+2025-10-08 14:50:13,196 - INFO - 🔍 Trying all submit selectors...
+2025-10-08 14:53:35,201 - ERROR - ❌ Could not find submit button
+2025-10-08 14:53:35,272 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251008_145335.png
+2025-10-08 14:53:35,305 - INFO - ↗️ Found external apply link
+2025-10-08 14:53:36,498 - WARNING - No apply method found
+2025-10-08 14:53:36,503 - WARNING - ❌ Application failed
+2025-10-08 14:53:40,187 - INFO - 
+============================================================
+2025-10-08 14:53:40,188 - INFO - Job 4/59
+2025-10-08 14:54:26,542 - INFO - 📋 Unknown at Unknown
+2025-10-08 14:54:26,602 - INFO - ✅ Found Easy Apply button
+2025-10-08 14:54:28,832 - INFO - 💬 Chatbot detected
+2025-10-08 14:54:43,899 - INFO - 🔍 Looking for submit button...
+2025-10-08 14:56:17,202 - INFO - 🔍 Trying all submit selectors...
+2025-10-08 14:59:39,415 - ERROR - ❌ Could not find submit button
+2025-10-08 14:59:39,722 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251008_145939.png
+2025-10-08 14:59:39,789 - INFO - ↗️ Found external apply link
+2025-10-08 14:59:40,853 - WARNING - No apply method found
+2025-10-08 14:59:40,855 - WARNING - ❌ Application failed
+2025-10-08 14:59:43,054 - INFO - 
+============================================================
+2025-10-08 14:59:43,055 - INFO - Job 5/59
+2025-10-08 15:00:28,556 - INFO - 📋 Unknown at Unknown
+2025-10-08 15:00:28,595 - INFO - ✅ Found Easy Apply button
+2025-10-08 15:00:29,757 - INFO - 💬 Chatbot detected
+2025-10-08 15:00:44,782 - INFO - 🔍 Looking for submit button...
+2025-10-08 15:02:18,107 - INFO - 🔍 Trying all submit selectors...
+2025-10-08 15:05:41,074 - ERROR - ❌ Could not find submit button
+2025-10-08 15:05:41,155 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251008_150541.png
+2025-10-08 15:05:41,197 - INFO - ↗️ Found external apply link
+2025-10-08 15:05:42,321 - WARNING - No apply method found
+2025-10-08 15:05:42,324 - WARNING - ❌ Application failed
+2025-10-08 15:05:42,324 - INFO - ⏸️ Rate limit pause: 10s
+2025-10-08 15:05:52,330 - INFO - 
+============================================================
+2025-10-08 15:05:52,331 - INFO - Job 6/59
+2025-10-08 15:06:38,808 - INFO - 📋 Unknown at Unknown
+2025-10-08 15:06:38,846 - INFO - ✅ Found Easy Apply button
+2025-10-08 15:06:40,159 - INFO - 💬 Chatbot detected
+2025-10-08 15:06:55,258 - INFO - 🔍 Looking for submit button...
+2025-10-08 15:08:28,538 - INFO - 🔍 Trying all submit selectors...
+2025-10-08 15:11:50,635 - ERROR - ❌ Could not find submit button
+2025-10-08 15:11:50,708 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251008_151150.png
+2025-10-08 15:11:50,740 - INFO - ↗️ Found external apply link
+2025-10-08 15:11:51,854 - WARNING - No apply method found
+2025-10-08 15:11:51,856 - WARNING - ❌ Application failed
+2025-10-08 15:11:54,975 - INFO - 
+============================================================
+2025-10-08 15:11:54,977 - INFO - Job 7/59
+2025-10-08 15:12:40,508 - INFO - 📋 Unknown at Unknown
+2025-10-08 15:14:29,294 - WARNING - No apply method found
+2025-10-08 15:14:29,296 - WARNING - ❌ Application failed
+2025-10-08 15:14:31,898 - INFO - 
+============================================================
+2025-10-08 15:14:31,899 - INFO - Job 8/59
+2025-10-08 15:15:18,211 - INFO - 📋 Unknown at Unknown
+2025-10-08 15:17:06,953 - WARNING - No apply method found
+2025-10-08 15:17:06,955 - WARNING - ❌ Application failed
+2025-10-08 15:17:06,962 - INFO - 
+============================================================
+2025-10-08 15:17:07,009 - INFO - Job 9/59
+2025-10-08 15:17:54,027 - INFO - 📋 Unknown at Unknown
+2025-10-08 15:19:42,880 - WARNING - No apply method found
+2025-10-08 15:19:42,881 - WARNING - ❌ Application failed
+2025-10-08 15:19:46,399 - INFO - 
+============================================================
+2025-10-08 15:19:46,399 - INFO - Job 10/59
+2025-10-08 15:20:32,130 - INFO - 📋 Unknown at Unknown
+2025-10-08 15:20:32,174 - INFO - ✅ Found Easy Apply button
+2025-10-08 15:20:33,347 - INFO - 💬 Chatbot detected
+2025-10-08 15:20:48,389 - INFO - 🔍 Looking for submit button...
+2025-10-08 15:22:21,967 - INFO - 🔍 Trying all submit selectors...
+2025-10-08 15:25:44,127 - ERROR - ❌ Could not find submit button
+2025-10-08 15:25:44,218 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251008_152544.png
+2025-10-08 15:25:44,254 - INFO - ↗️ Found external apply link
+2025-10-08 15:25:45,368 - WARNING - No apply method found
+2025-10-08 15:25:45,370 - WARNING - ❌ Application failed
+2025-10-08 15:25:45,372 - INFO - ⏸️ Rate limit pause: 10s
+2025-10-08 15:25:55,380 - INFO - 
+============================================================
+2025-10-08 15:25:55,380 - INFO - Job 11/59
+2025-10-08 15:26:41,118 - INFO - 📋 Unknown at Unknown
+2025-10-08 15:26:41,153 - INFO - ✅ Found Easy Apply button
+2025-10-08 15:26:42,334 - INFO - 💬 Chatbot detected
+2025-10-08 15:26:57,404 - INFO - 🔍 Looking for submit button...
+2025-10-08 15:28:00,651 - INFO - 🔍 Trying all submit selectors...
+2025-10-08 15:31:22,638 - ERROR - ❌ Could not find submit button
+2025-10-08 15:31:22,786 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251008_153122.png
+2025-10-08 15:31:22,861 - INFO - ↗️ Found external apply link
+2025-10-08 15:31:24,703 - WARNING - No apply method found
+2025-10-08 15:31:24,705 - WARNING - ❌ Application failed
+2025-10-08 15:31:28,058 - INFO - 
+============================================================
+2025-10-08 15:31:28,060 - INFO - Job 12/59
+2025-10-08 15:32:13,751 - INFO - 📋 Unknown at Unknown
+2025-10-08 15:32:13,781 - INFO - ✅ Found Easy Apply button
+2025-10-08 15:32:14,860 - INFO - 💬 Chatbot detected
+2025-10-08 15:32:29,918 - INFO - 🔍 Looking for submit button...
+2025-10-08 15:34:03,550 - INFO - 🔍 Trying all submit selectors...
+2025-10-08 15:37:25,559 - ERROR - ❌ Could not find submit button
+2025-10-08 15:37:25,646 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251008_153725.png
+2025-10-08 15:37:25,706 - INFO - ↗️ Found external apply link
+2025-10-08 15:37:27,086 - WARNING - No apply method found
+2025-10-08 15:37:27,092 - WARNING - ❌ Application failed
+2025-10-08 15:37:27,111 - INFO - 
+============================================================
+2025-10-08 15:37:27,112 - INFO - Job 13/59
+2025-10-08 15:38:12,871 - INFO - 📋 Unknown at Unknown
+2025-10-08 15:38:12,911 - INFO - ✅ Found Easy Apply button
+2025-10-08 15:38:14,484 - INFO - 💬 Chatbot detected
+2025-10-08 15:38:29,527 - INFO - 🔍 Looking for submit button...
+2025-10-08 15:40:02,769 - INFO - 🔍 Trying all submit selectors...
+2025-10-08 15:43:25,109 - ERROR - ❌ Could not find submit button
+2025-10-08 15:43:25,227 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251008_154325.png
+2025-10-08 15:43:25,274 - INFO - ↗️ Found external apply link
+2025-10-08 15:43:26,406 - WARNING - No apply method found
+2025-10-08 15:43:26,407 - WARNING - ❌ Application failed
+2025-10-08 15:43:26,411 - INFO - 
+============================================================
+2025-10-08 15:43:26,412 - INFO - Job 14/59
+2025-10-08 15:44:12,339 - INFO - 📋 Unknown at Unknown
+2025-10-08 15:44:12,364 - INFO - ✅ Found Easy Apply button
+2025-10-08 15:44:13,726 - INFO - 💬 Chatbot detected
+2025-10-08 15:44:28,772 - INFO - 🔍 Looking for submit button...
+2025-10-08 15:46:02,037 - INFO - 🔍 Trying all submit selectors...
+2025-10-08 15:49:24,094 - ERROR - ❌ Could not find submit button
+2025-10-08 15:49:24,167 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251008_154924.png
+2025-10-08 15:49:24,199 - INFO - ↗️ Found external apply link
+2025-10-08 15:49:25,283 - WARNING - No apply method found
+2025-10-08 15:49:25,283 - WARNING - ❌ Application failed
+2025-10-08 15:49:25,290 - INFO - 
+============================================================
+2025-10-08 15:49:25,291 - INFO - Job 15/59
+2025-10-08 15:50:11,274 - INFO - 📋 Unknown at Unknown
+2025-10-08 15:50:11,307 - INFO - ✅ Found Easy Apply button
+2025-10-08 15:50:12,465 - INFO - 💬 Chatbot detected
+2025-10-08 15:50:27,510 - INFO - 🔍 Looking for submit button...
+2025-10-08 15:52:00,810 - INFO - 🔍 Trying all submit selectors...
+2025-10-08 15:55:22,865 - ERROR - ❌ Could not find submit button
+2025-10-08 15:55:22,999 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251008_155522.png
+2025-10-08 15:55:23,083 - INFO - ↗️ Found external apply link
+2025-10-08 15:55:24,428 - WARNING - No apply method found
+2025-10-08 15:55:24,429 - WARNING - ❌ Application failed
+2025-10-08 15:55:24,429 - INFO - ⏸️ Rate limit pause: 10s
+2025-10-08 15:55:34,435 - INFO - 
+============================================================
+2025-10-08 15:55:34,439 - INFO - Job 16/59
+2025-10-08 15:56:20,390 - INFO - 📋 Unknown at Unknown
+2025-10-08 15:56:20,480 - INFO - ✅ Found Easy Apply button
+2025-10-08 15:56:21,742 - INFO - 💬 Chatbot detected
+2025-10-08 15:56:36,808 - INFO - 🔍 Looking for submit button...
+2025-10-08 15:58:10,223 - INFO - 🔍 Trying all submit selectors...
+2025-10-08 16:01:32,127 - ERROR - ❌ Could not find submit button
+2025-10-08 16:01:32,191 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251008_160132.png
+2025-10-08 16:01:32,227 - INFO - ↗️ Found external apply link
+2025-10-08 16:01:33,325 - WARNING - No apply method found
+2025-10-08 16:01:33,326 - WARNING - ❌ Application failed
+2025-10-08 16:01:33,332 - INFO - 
+============================================================
+2025-10-08 16:01:33,333 - INFO - Job 17/59
+2025-10-08 16:02:19,613 - INFO - 📋 Unknown at Unknown
+2025-10-08 16:04:08,478 - WARNING - No apply method found
+2025-10-08 16:04:08,480 - WARNING - ❌ Application failed
+2025-10-08 16:04:08,484 - INFO - 
+============================================================
+2025-10-08 16:04:08,485 - INFO - Job 18/59
+2025-10-08 16:04:53,944 - INFO - 📋 Unknown at Unknown
+2025-10-08 16:04:53,984 - INFO - ✅ Found Easy Apply button
+2025-10-08 16:04:55,252 - INFO - 💬 Chatbot detected
+2025-10-08 16:05:10,280 - INFO - 🔍 Looking for submit button...
+2025-10-08 16:06:43,630 - INFO - 🔍 Trying all submit selectors...
+2025-10-08 16:10:05,583 - ERROR - ❌ Could not find submit button
+2025-10-08 16:10:05,655 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251008_161005.png
+2025-10-08 16:10:05,687 - INFO - ↗️ Found external apply link
+2025-10-08 16:10:06,763 - WARNING - No apply method found
+2025-10-08 16:10:06,765 - WARNING - ❌ Application failed
+2025-10-08 16:10:09,828 - INFO - 
+============================================================
+2025-10-08 16:10:09,828 - INFO - Job 19/59
+2025-10-08 16:10:55,352 - INFO - 📋 Unknown at Unknown
+2025-10-08 16:10:55,397 - INFO - ✅ Found Easy Apply button
+2025-10-08 16:11:11,536 - INFO - 🔍 Looking for submit button...
+2025-10-08 16:12:56,752 - INFO - 🔍 Trying all submit selectors...
+2025-10-08 16:16:18,720 - ERROR - ❌ Could not find submit button
+2025-10-08 16:16:18,786 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251008_161618.png
+2025-10-08 16:17:05,436 - WARNING - No apply method found
+2025-10-08 16:17:05,438 - WARNING - ❌ Application failed
+2025-10-08 16:17:08,186 - INFO - 
+============================================================
+2025-10-08 16:17:08,186 - INFO - Job 20/59
+2025-10-08 16:17:54,870 - INFO - 📋 Unknown at Unknown
+2025-10-08 16:17:54,917 - INFO - ✅ Found Easy Apply button
+2025-10-08 16:18:11,055 - INFO - 🔍 Looking for submit button...
+2025-10-08 16:19:56,335 - INFO - 🔍 Trying all submit selectors...
+2025-10-08 16:23:18,351 - ERROR - ❌ Could not find submit button
+2025-10-08 16:23:18,458 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251008_162318.png
+2025-10-08 16:24:05,138 - WARNING - No apply method found
+2025-10-08 16:24:05,139 - WARNING - ❌ Application failed
+2025-10-08 16:24:05,139 - INFO - ⏸️ Rate limit pause: 10s
+2025-10-08 16:24:15,148 - INFO - 
+============================================================
+2025-10-08 16:24:15,150 - INFO - Job 21/59
+2025-10-08 16:25:01,286 - INFO - 📋 Unknown at Unknown
+2025-10-08 16:26:03,529 - INFO - ↗️ Found external apply link
+2025-10-08 16:26:06,260 - INFO - 🌐 External tab opened (total: 1)
+2025-10-08 16:26:06,262 - INFO - 📌 Tab will remain open for manual filling
+2025-10-08 16:26:06,343 - INFO - ⬅️ Returned to main tab
+2025-10-08 16:26:06,377 - WARNING - ❌ Application failed
+2025-10-08 16:26:06,409 - INFO - 
+============================================================
+2025-10-08 16:26:06,411 - INFO - Job 22/59
+2025-10-08 16:26:52,003 - INFO - 📋 Unknown at Unknown
+2025-10-08 16:27:54,228 - INFO - ↗️ Found external apply link
+2025-10-08 16:27:57,856 - INFO - 🌐 External tab opened (total: 2)
+2025-10-08 16:27:57,857 - INFO - 📌 Tab will remain open for manual filling
+2025-10-08 16:27:57,911 - INFO - ⬅️ Returned to main tab
+2025-10-08 16:27:57,942 - WARNING - ❌ Application failed
+2025-10-08 16:28:00,027 - INFO - 
+============================================================
+2025-10-08 16:28:00,028 - INFO - Job 23/59
+2025-10-08 16:28:47,456 - INFO - 📋 Unknown at Unknown
+2025-10-08 16:29:49,614 - INFO - ↗️ Found external apply link
+2025-10-08 16:29:50,674 - INFO - 🌐 External tab opened (total: 3)
+2025-10-08 16:29:50,675 - INFO - 📌 Tab will remain open for manual filling
+2025-10-08 16:29:50,725 - INFO - ⬅️ Returned to main tab
+2025-10-08 16:29:50,738 - WARNING - ❌ Application failed
+2025-10-08 16:29:50,744 - INFO - 
+============================================================
+2025-10-08 16:29:50,744 - INFO - Job 24/59
+2025-10-08 16:30:36,545 - INFO - 📋 Unknown at Unknown
+2025-10-08 16:31:38,709 - INFO - ↗️ Found external apply link
+2025-10-08 16:31:41,823 - INFO - 🌐 External tab opened (total: 4)
+2025-10-08 16:31:41,824 - INFO - 📌 Tab will remain open for manual filling
+2025-10-08 16:31:41,876 - INFO - ⬅️ Returned to main tab
+2025-10-08 16:31:41,887 - WARNING - ❌ Application failed
+2025-10-08 16:31:41,894 - INFO - 
+============================================================
+2025-10-08 16:31:41,894 - INFO - Job 25/59
+2025-10-08 16:32:27,506 - INFO - 📋 Unknown at Unknown
+2025-10-08 16:33:29,665 - INFO - ↗️ Found external apply link
+2025-10-08 16:33:30,378 - INFO - 🌐 External tab opened (total: 5)
+2025-10-08 16:33:30,378 - INFO - 📌 Tab will remain open for manual filling
+2025-10-08 16:33:30,423 - INFO - ⬅️ Returned to main tab
+2025-10-08 16:33:30,429 - WARNING - ❌ Application failed
+2025-10-08 16:33:30,437 - INFO - ⏸️ Rate limit pause: 10s
+2025-10-08 16:33:40,448 - INFO - 
+============================================================
+2025-10-08 16:33:40,450 - INFO - Job 26/59
+2025-10-08 16:34:26,188 - INFO - 📋 Unknown at Unknown
+2025-10-08 16:35:28,425 - INFO - ↗️ Found external apply link
+2025-10-08 16:35:31,917 - INFO - 🌐 External tab opened (total: 6)
+2025-10-08 16:35:31,919 - INFO - 📌 Tab will remain open for manual filling
+2025-10-08 16:35:31,960 - INFO - ⬅️ Returned to main tab
+2025-10-08 16:35:31,971 - WARNING - ❌ Application failed
+2025-10-08 16:35:31,980 - INFO - 
+============================================================
+2025-10-08 16:35:31,981 - INFO - Job 27/59
+2025-10-08 16:36:17,471 - INFO - 📋 Unknown at Unknown
+2025-10-08 16:37:19,643 - INFO - ↗️ Found external apply link
+2025-10-08 16:37:20,759 - INFO - 🌐 External tab opened (total: 7)
+2025-10-08 16:37:20,760 - INFO - 📌 Tab will remain open for manual filling
+2025-10-08 16:37:20,797 - INFO - ⬅️ Returned to main tab
+2025-10-08 16:37:20,811 - WARNING - ❌ Application failed
+2025-10-08 16:37:20,887 - INFO - 
+============================================================
+2025-10-08 16:37:20,888 - INFO - Job 28/59
+2025-10-08 16:38:07,227 - INFO - 📋 Unknown at Unknown
+2025-10-08 16:38:07,277 - INFO - ✅ Found Easy Apply button
+2025-10-08 16:38:23,547 - INFO - 🔍 Looking for submit button...
+2025-10-08 16:40:08,725 - INFO - 🔍 Trying all submit selectors...
+2025-10-08 16:43:30,675 - ERROR - ❌ Could not find submit button
+2025-10-08 16:43:30,757 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251008_164330.png
+2025-10-08 16:44:17,377 - WARNING - No apply method found
+2025-10-08 16:44:17,377 - WARNING - ❌ Application failed
+2025-10-08 16:44:17,387 - INFO - 
+============================================================
+2025-10-08 16:44:17,387 - INFO - Job 29/59
+2025-10-08 16:45:02,992 - INFO - 📋 Unknown at Unknown
+2025-10-08 16:45:03,055 - INFO - ✅ Found Easy Apply button
+2025-10-08 16:45:19,180 - INFO - 🔍 Looking for submit button...
+2025-10-08 16:47:04,393 - INFO - 🔍 Trying all submit selectors...
+2025-10-08 16:50:26,292 - ERROR - ❌ Could not find submit button
+2025-10-08 16:50:26,398 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251008_165026.png
+2025-10-08 16:51:12,972 - WARNING - No apply method found
+2025-10-08 16:51:12,975 - WARNING - ❌ Application failed
+2025-10-08 16:51:16,756 - INFO - 
+============================================================
+2025-10-08 16:51:16,756 - INFO - Job 30/59
+2025-10-08 16:52:02,524 - INFO - 📋 Unknown at Unknown
+2025-10-08 16:52:02,557 - INFO - ✅ Found Easy Apply button
+2025-10-08 16:52:18,660 - INFO - 🔍 Looking for submit button...
+2025-10-08 16:54:03,964 - INFO - 🔍 Trying all submit selectors...
+2025-10-08 16:57:26,109 - ERROR - ❌ Could not find submit button
+2025-10-08 16:57:26,173 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251008_165726.png
+2025-10-08 16:58:12,859 - WARNING - No apply method found
+2025-10-08 16:58:12,860 - WARNING - ❌ Application failed
+2025-10-08 16:58:12,860 - INFO - ⏸️ Rate limit pause: 10s
+2025-10-08 16:58:22,868 - INFO - 
+============================================================
+2025-10-08 16:58:22,868 - INFO - Job 31/59
+2025-10-08 16:59:08,710 - INFO - 📋 Unknown at Unknown
+2025-10-08 16:59:08,748 - INFO - ✅ Found Easy Apply button
+2025-10-08 16:59:10,375 - INFO - 💬 Chatbot detected
+2025-10-08 16:59:25,431 - INFO - 🔍 Looking for submit button...
+2025-10-08 17:00:58,725 - INFO - 🔍 Trying all submit selectors...
+2025-10-08 17:04:20,828 - ERROR - ❌ Could not find submit button
+2025-10-08 17:04:20,946 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251008_170420.png
+2025-10-08 17:04:20,975 - INFO - ↗️ Found external apply link
+2025-10-08 17:04:22,050 - WARNING - No apply method found
+2025-10-08 17:04:22,051 - WARNING - ❌ Application failed
+2025-10-08 17:04:25,563 - INFO - 
+============================================================
+2025-10-08 17:04:25,563 - INFO - Job 32/59
+2025-10-08 17:05:11,194 - INFO - 📋 Unknown at Unknown
+2025-10-08 17:05:11,240 - INFO - ✅ Found Easy Apply button
+2025-10-08 17:05:12,801 - INFO - 💬 Chatbot detected
+2025-10-08 17:05:27,878 - INFO - 🔍 Looking for submit button...
+2025-10-08 17:07:01,112 - INFO - 🔍 Trying all submit selectors...
+2025-10-08 17:10:23,175 - ERROR - ❌ Could not find submit button
+2025-10-08 17:10:23,280 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251008_171023.png
+2025-10-08 17:10:23,310 - INFO - ↗️ Found external apply link
+2025-10-08 17:10:24,377 - WARNING - No apply method found
+2025-10-08 17:10:24,379 - WARNING - ❌ Application failed
+2025-10-08 17:10:24,385 - INFO - 
+============================================================
+2025-10-08 17:10:24,385 - INFO - Job 33/59
+2025-10-08 17:11:09,882 - INFO - 📋 Unknown at Unknown
+2025-10-08 17:11:09,916 - INFO - ✅ Found Easy Apply button
+2025-10-08 17:11:25,986 - INFO - 🔍 Looking for submit button...
+2025-10-08 17:13:11,198 - INFO - 🔍 Trying all submit selectors...
+2025-10-08 17:16:33,203 - ERROR - ❌ Could not find submit button
+2025-10-08 17:16:33,269 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251008_171633.png
+2025-10-08 17:17:19,863 - WARNING - No apply method found
+2025-10-08 17:17:19,865 - WARNING - ❌ Application failed
+2025-10-08 17:17:23,276 - INFO - 
+============================================================
+2025-10-08 17:17:23,276 - INFO - Job 34/59
+2025-10-08 17:18:08,903 - INFO - 📋 Unknown at Unknown
+2025-10-08 17:18:08,936 - INFO - ✅ Found Easy Apply button
+2025-10-08 17:18:10,131 - INFO - 💬 Chatbot detected
+2025-10-08 17:18:25,145 - INFO - 🔍 Looking for submit button...
+2025-10-08 17:19:58,383 - INFO - 🔍 Trying all submit selectors...
+2025-10-08 17:23:20,296 - ERROR - ❌ Could not find submit button
+2025-10-08 17:23:20,372 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251008_172320.png
+2025-10-08 17:23:20,397 - INFO - ↗️ Found external apply link
+2025-10-08 17:23:21,476 - WARNING - No apply method found
+2025-10-08 17:23:21,478 - WARNING - ❌ Application failed
+2025-10-08 17:23:21,482 - INFO - 
+============================================================
+2025-10-08 17:23:21,482 - INFO - Job 35/59
+2025-10-08 17:24:06,912 - INFO - 📋 Unknown at Unknown
+2025-10-08 17:24:06,942 - INFO - ✅ Found Easy Apply button
+2025-10-08 17:24:23,061 - INFO - 🔍 Looking for submit button...
+2025-10-08 17:26:08,284 - INFO - 🔍 Trying all submit selectors...
+2025-10-08 17:29:30,297 - ERROR - ❌ Could not find submit button
+2025-10-08 17:29:30,379 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251008_172930.png
+2025-10-08 17:29:30,404 - INFO - ↗️ Found external apply link
+2025-10-08 17:29:30,472 - INFO - 🌐 External tab opened (total: 8)
+2025-10-08 17:29:30,473 - INFO - 📌 Tab will remain open for manual filling
+2025-10-08 17:29:30,475 - INFO - ⬅️ Returned to main tab
+2025-10-08 17:29:30,481 - WARNING - ❌ Application failed
+2025-10-08 17:29:30,481 - INFO - ⏸️ Rate limit pause: 10s
+2025-10-08 17:29:40,487 - INFO - 
+============================================================
+2025-10-08 17:29:40,487 - INFO - Job 36/59
+2025-10-08 17:30:26,043 - INFO - 📋 Unknown at Unknown
+2025-10-08 17:32:14,816 - WARNING - No apply method found
+2025-10-08 17:32:14,818 - WARNING - ❌ Application failed
+2025-10-08 17:32:17,443 - INFO - 
+============================================================
+2025-10-08 17:32:17,444 - INFO - Job 37/59
+2025-10-08 17:33:02,897 - INFO - 📋 Unknown at Unknown
+2025-10-08 17:34:51,626 - WARNING - No apply method found
+2025-10-08 17:34:51,626 - WARNING - ❌ Application failed
+2025-10-08 17:34:51,633 - INFO - 
+============================================================
+2025-10-08 17:34:51,633 - INFO - Job 38/59
+2025-10-08 17:35:37,824 - INFO - 📋 Unknown at Unknown
+2025-10-08 17:35:37,852 - INFO - ✅ Found Easy Apply button
+2025-10-08 17:35:53,966 - INFO - 🔍 Looking for submit button...
+2025-10-08 17:37:39,220 - INFO - 🔍 Trying all submit selectors...
+2025-10-08 17:41:01,290 - ERROR - ❌ Could not find submit button
+2025-10-08 17:41:01,356 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251008_174101.png
+2025-10-08 17:41:47,918 - WARNING - No apply method found
+2025-10-08 17:41:47,920 - WARNING - ❌ Application failed
+2025-10-08 17:41:47,924 - INFO - 
+============================================================
+2025-10-08 17:41:47,924 - INFO - Job 39/59
+2025-10-08 17:42:33,447 - INFO - 📋 Unknown at Unknown
+2025-10-08 17:42:33,478 - INFO - ✅ Found Easy Apply button
+2025-10-08 17:42:34,618 - INFO - 💬 Chatbot detected
+2025-10-08 17:42:49,676 - INFO - 🔍 Looking for submit button...
+2025-10-08 17:44:22,919 - INFO - 🔍 Trying all submit selectors...
+2025-10-08 17:47:44,862 - ERROR - ❌ Could not find submit button
+2025-10-08 17:47:44,926 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251008_174744.png
+2025-10-08 17:47:44,948 - INFO - ↗️ Found external apply link
+2025-10-08 17:47:46,019 - WARNING - No apply method found
+2025-10-08 17:47:46,019 - WARNING - ❌ Application failed
+2025-10-08 17:47:48,740 - INFO - 
+============================================================
+2025-10-08 17:47:48,740 - INFO - Job 40/59
+2025-10-08 17:48:39,012 - INFO - 📋 Unknown at Unknown
+2025-10-08 17:48:39,039 - INFO - ✅ Found Easy Apply button
+2025-10-08 17:48:40,087 - INFO - 💬 Chatbot detected
+2025-10-08 17:48:55,113 - INFO - 🔍 Looking for submit button...
+2025-10-08 17:50:28,419 - INFO - 🔍 Trying all submit selectors...
+2025-10-08 17:53:50,379 - ERROR - ❌ Could not find submit button
+2025-10-08 17:53:50,456 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251008_175350.png
+2025-10-08 17:53:50,477 - INFO - ↗️ Found external apply link
+2025-10-08 17:53:51,535 - WARNING - No apply method found
+2025-10-08 17:53:51,539 - WARNING - ❌ Application failed
+2025-10-08 17:53:51,539 - INFO - ⏸️ Rate limit pause: 10s
+2025-10-08 17:54:01,541 - INFO - 
+============================================================
+2025-10-08 17:54:01,541 - INFO - Job 41/59
+2025-10-08 17:54:47,084 - INFO - 📋 Unknown at Unknown
+2025-10-08 17:54:47,114 - INFO - ✅ Found Easy Apply button
+2025-10-08 17:54:48,215 - INFO - 💬 Chatbot detected
+2025-10-08 17:55:03,244 - INFO - 🔍 Looking for submit button...
+2025-10-08 17:56:36,558 - INFO - 🔍 Trying all submit selectors...
+2025-10-08 17:59:58,497 - ERROR - ❌ Could not find submit button
+2025-10-08 17:59:58,579 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251008_175958.png
+2025-10-08 17:59:58,602 - INFO - ↗️ Found external apply link
+2025-10-08 17:59:59,670 - WARNING - No apply method found
+2025-10-08 17:59:59,675 - WARNING - ❌ Application failed
+2025-10-08 17:59:59,682 - INFO - 
+============================================================
+2025-10-08 17:59:59,682 - INFO - Job 42/59
+2025-10-08 18:00:45,212 - INFO - 📋 Unknown at Unknown
+2025-10-08 18:00:45,239 - INFO - ✅ Found Easy Apply button
+2025-10-08 18:00:46,430 - INFO - 💬 Chatbot detected
+2025-10-08 18:01:01,478 - INFO - 🔍 Looking for submit button...
+2025-10-08 18:02:04,759 - INFO - 🔍 Trying all submit selectors...
+2025-10-08 18:05:26,688 - ERROR - ❌ Could not find submit button
+2025-10-08 18:05:26,751 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251008_180526.png
+2025-10-08 18:05:26,778 - INFO - ↗️ Found external apply link
+2025-10-08 18:05:27,831 - WARNING - No apply method found
+2025-10-08 18:05:27,833 - WARNING - ❌ Application failed
+2025-10-08 18:05:27,837 - INFO - 
+============================================================
+2025-10-08 18:05:27,837 - INFO - Job 43/59
+2025-10-08 18:06:13,772 - INFO - 📋 Unknown at Unknown
+2025-10-08 18:06:13,805 - INFO - ✅ Found Easy Apply button
+2025-10-08 18:06:14,898 - INFO - 💬 Chatbot detected
+2025-10-08 18:06:29,928 - INFO - 🔍 Looking for submit button...
+2025-10-08 18:08:03,199 - INFO - 🔍 Trying all submit selectors...
+2025-10-08 18:11:25,109 - ERROR - ❌ Could not find submit button
+2025-10-08 18:11:25,164 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251008_181125.png
+2025-10-08 18:11:25,187 - INFO - ↗️ Found external apply link
+2025-10-08 18:11:26,253 - WARNING - No apply method found
+2025-10-08 18:11:26,256 - WARNING - ❌ Application failed
+2025-10-08 18:11:26,261 - INFO - 
+============================================================
+2025-10-08 18:11:26,261 - INFO - Job 44/59
+2025-10-08 18:12:12,166 - INFO - 📋 Unknown at Unknown
+2025-10-08 18:12:12,195 - INFO - ✅ Found Easy Apply button
+2025-10-08 18:12:13,287 - INFO - 💬 Chatbot detected
+2025-10-08 18:12:28,300 - INFO - 🔍 Looking for submit button...
+2025-10-08 18:14:01,532 - INFO - 🔍 Trying all submit selectors...
+2025-10-08 18:17:23,486 - ERROR - ❌ Could not find submit button
+2025-10-08 18:17:23,544 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251008_181723.png
+2025-10-08 18:17:23,567 - INFO - ↗️ Found external apply link
+2025-10-08 18:17:24,641 - WARNING - No apply method found
+2025-10-08 18:17:24,643 - WARNING - ❌ Application failed
+2025-10-08 18:17:26,876 - INFO - 
+============================================================
+2025-10-08 18:17:26,876 - INFO - Job 45/59
+2025-10-08 18:18:13,015 - INFO - 📋 Unknown at Unknown
+2025-10-08 18:18:13,047 - INFO - ✅ Found Easy Apply button
+2025-10-08 18:18:14,162 - INFO - 💬 Chatbot detected
+2025-10-08 18:18:29,214 - INFO - 🔍 Looking for submit button...
+2025-10-08 18:20:02,370 - INFO - 🔍 Trying all submit selectors...
+2025-10-08 18:23:24,306 - ERROR - ❌ Could not find submit button
+2025-10-08 18:23:24,370 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251008_182324.png
+2025-10-08 18:23:24,398 - INFO - ↗️ Found external apply link
+2025-10-08 18:23:25,469 - WARNING - No apply method found
+2025-10-08 18:23:25,471 - WARNING - ❌ Application failed
+2025-10-08 18:23:25,472 - INFO - ⏸️ Rate limit pause: 10s
+2025-10-08 18:23:35,481 - INFO - 
+============================================================
+2025-10-08 18:23:35,484 - INFO - Job 46/59
+2025-10-08 18:24:21,567 - INFO - 📋 Unknown at Unknown
+2025-10-08 18:26:10,357 - WARNING - No apply method found
+2025-10-08 18:26:10,358 - WARNING - ❌ Application failed
+2025-10-08 18:26:10,363 - INFO - 
+============================================================
+2025-10-08 18:26:10,364 - INFO - Job 47/59
+2025-10-08 18:26:55,777 - INFO - 📋 Unknown at Unknown
+2025-10-08 18:26:55,807 - INFO - ✅ Found Easy Apply button
+2025-10-08 18:26:56,959 - INFO - 💬 Chatbot detected
+2025-10-08 18:27:12,003 - INFO - 🔍 Looking for submit button...
+2025-10-08 18:28:45,288 - INFO - 🔍 Trying all submit selectors...
+2025-10-08 18:32:07,360 - ERROR - ❌ Could not find submit button
+2025-10-08 18:32:07,443 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251008_183207.png
+2025-10-08 18:32:07,465 - INFO - ↗️ Found external apply link
+2025-10-08 18:32:08,524 - WARNING - No apply method found
+2025-10-08 18:32:08,524 - WARNING - ❌ Application failed
+2025-10-08 18:32:10,604 - INFO - 
+============================================================
+2025-10-08 18:32:10,607 - INFO - Job 48/59
+2025-10-08 18:32:56,391 - INFO - 📋 Unknown at Unknown
+2025-10-08 18:32:56,419 - INFO - ✅ Found Easy Apply button
+2025-10-08 18:32:57,551 - INFO - 💬 Chatbot detected
+2025-10-08 18:33:12,570 - INFO - 🔍 Looking for submit button...
+2025-10-08 18:34:45,917 - INFO - 🔍 Trying all submit selectors...
+2025-10-08 18:38:07,959 - ERROR - ❌ Could not find submit button
+2025-10-08 18:38:08,032 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251008_183807.png
+2025-10-08 18:38:08,056 - INFO - ↗️ Found external apply link
+2025-10-08 18:38:09,121 - WARNING - No apply method found
+2025-10-08 18:38:09,121 - WARNING - ❌ Application failed
+2025-10-08 18:38:09,129 - INFO - 
+============================================================
+2025-10-08 18:38:09,129 - INFO - Job 49/59
+2025-10-08 18:38:55,377 - INFO - 📋 Unknown at Unknown
+2025-10-08 18:38:55,412 - INFO - ✅ Found Easy Apply button
+2025-10-08 18:38:56,484 - INFO - 💬 Chatbot detected
+2025-10-08 18:39:11,529 - INFO - 🔍 Looking for submit button...
+2025-10-08 18:40:44,783 - INFO - 🔍 Trying all submit selectors...
+2025-10-08 18:44:06,645 - ERROR - ❌ Could not find submit button
+2025-10-08 18:44:06,704 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251008_184406.png
+2025-10-08 18:44:06,729 - INFO - ↗️ Found external apply link
+2025-10-08 18:44:07,805 - WARNING - No apply method found
+2025-10-08 18:44:07,805 - WARNING - ❌ Application failed
+2025-10-08 18:44:07,809 - INFO - 
+============================================================
+2025-10-08 18:44:07,809 - INFO - Job 50/59
+2025-10-08 18:44:53,588 - INFO - 📋 Unknown at Unknown
+2025-10-08 18:45:55,764 - INFO - ↗️ Found external apply link
+2025-10-08 18:45:57,524 - INFO - 🌐 External tab opened (total: 9)
+2025-10-08 18:45:57,525 - INFO - 📌 Tab will remain open for manual filling
+2025-10-08 18:45:57,551 - INFO - ⬅️ Returned to main tab
+2025-10-08 18:45:57,567 - WARNING - ❌ Application failed
+2025-10-08 18:45:57,580 - INFO - ⏸️ Rate limit pause: 10s
+2025-10-08 18:46:07,962 - INFO - 
+============================================================
+2025-10-08 18:46:07,964 - INFO - Job 51/59
+2025-10-08 18:46:53,733 - INFO - 📋 Unknown at Unknown
+2025-10-08 18:47:56,184 - INFO - ↗️ Found external apply link
+2025-10-08 18:47:59,735 - INFO - 🌐 External tab opened (total: 10)
+2025-10-08 18:47:59,736 - INFO - 📌 Tab will remain open for manual filling
+2025-10-08 18:47:59,816 - INFO - ⬅️ Returned to main tab
+2025-10-08 18:47:59,848 - WARNING - ❌ Application failed
+2025-10-08 18:47:59,930 - INFO - 
+============================================================
+2025-10-08 18:47:59,932 - INFO - Job 52/59
+2025-10-08 18:48:45,679 - INFO - 📋 Unknown at Unknown
+2025-10-08 18:49:47,925 - INFO - ↗️ Found external apply link
+2025-10-08 18:49:52,644 - INFO - 🌐 External tab opened (total: 11)
+2025-10-08 18:49:52,646 - INFO - 📌 Tab will remain open for manual filling
+2025-10-08 18:49:52,682 - INFO - ⬅️ Returned to main tab
+2025-10-08 18:49:52,696 - WARNING - ❌ Application failed
+2025-10-08 18:49:52,709 - INFO - 
+============================================================
+2025-10-08 18:49:52,710 - INFO - Job 53/59
+2025-10-08 18:50:38,104 - INFO - 📋 Unknown at Unknown
+2025-10-08 18:51:40,316 - INFO - ↗️ Found external apply link
+2025-10-08 18:51:41,315 - INFO - 🌐 External tab opened (total: 12)
+2025-10-08 18:51:41,315 - INFO - 📌 Tab will remain open for manual filling
+2025-10-08 18:51:41,354 - INFO - ⬅️ Returned to main tab
+2025-10-08 18:51:41,376 - WARNING - ❌ Application failed
+2025-10-08 18:51:43,812 - INFO - 
+============================================================
+2025-10-08 18:51:43,812 - INFO - Job 54/59
+2025-10-08 18:52:29,746 - INFO - 📋 Unknown at Unknown
+2025-10-08 18:53:31,973 - INFO - ↗️ Found external apply link
+2025-10-08 18:53:32,938 - INFO - 🌐 External tab opened (total: 13)
+2025-10-08 18:53:32,939 - INFO - 📌 Tab will remain open for manual filling
+2025-10-08 18:53:32,964 - INFO - ⬅️ Returned to main tab
+2025-10-08 18:53:32,979 - WARNING - ❌ Application failed
+2025-10-08 18:53:33,013 - INFO - 
+============================================================
+2025-10-08 18:53:33,014 - INFO - Job 55/59
+2025-10-08 18:54:18,962 - INFO - 📋 Unknown at Unknown
+2025-10-08 18:54:18,988 - INFO - ✅ Found Easy Apply button
+2025-10-08 18:54:35,096 - INFO - 🔍 Looking for submit button...
+2025-10-08 18:56:20,291 - INFO - 🔍 Trying all submit selectors...
+2025-10-08 18:59:42,343 - ERROR - ❌ Could not find submit button
+2025-10-08 18:59:42,443 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251008_185942.png
+2025-10-08 18:59:42,469 - INFO - ↗️ Found external apply link
+2025-10-08 18:59:42,542 - INFO - 🌐 External tab opened (total: 14)
+2025-10-08 18:59:42,544 - INFO - 📌 Tab will remain open for manual filling
+2025-10-08 18:59:42,546 - INFO - ⬅️ Returned to main tab
+2025-10-08 18:59:42,552 - WARNING - ❌ Application failed
+2025-10-08 18:59:42,553 - INFO - ⏸️ Rate limit pause: 10s
+2025-10-08 18:59:52,560 - INFO - 
+============================================================
+2025-10-08 18:59:52,560 - INFO - Job 56/59
+2025-10-08 19:00:38,208 - INFO - 📋 Unknown at Unknown
+2025-10-08 19:00:38,240 - INFO - ✅ Found Easy Apply button
+2025-10-08 19:00:54,330 - INFO - 🔍 Looking for submit button...
+2025-10-08 19:02:39,615 - INFO - 🔍 Trying all submit selectors...
+2025-10-08 19:06:01,581 - ERROR - ❌ Could not find submit button
+2025-10-08 19:06:01,660 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251008_190601.png
+2025-10-08 19:06:01,693 - INFO - ↗️ Found external apply link
+2025-10-08 19:06:01,777 - INFO - 🌐 External tab opened (total: 15)
+2025-10-08 19:06:01,778 - INFO - 📌 Tab will remain open for manual filling
+2025-10-08 19:06:01,780 - INFO - ⬅️ Returned to main tab
+2025-10-08 19:06:01,785 - WARNING - ❌ Application failed
+2025-10-08 19:06:05,492 - INFO - 
+============================================================
+2025-10-08 19:06:05,493 - INFO - Job 57/59
+2025-10-08 19:06:51,078 - INFO - 📋 Unknown at Unknown
+2025-10-08 19:06:51,122 - INFO - ✅ Found Easy Apply button
+2025-10-08 19:07:07,208 - INFO - 🔍 Looking for submit button...
+2025-10-08 19:08:52,438 - INFO - 🔍 Trying all submit selectors...
+2025-10-08 19:12:14,523 - ERROR - ❌ Could not find submit button
+2025-10-08 19:12:14,607 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251008_191214.png
+2025-10-08 19:12:14,634 - INFO - ↗️ Found external apply link
+2025-10-08 19:12:14,711 - INFO - 🌐 External tab opened (total: 16)
+2025-10-08 19:12:14,712 - INFO - 📌 Tab will remain open for manual filling
+2025-10-08 19:12:14,716 - INFO - ⬅️ Returned to main tab
+2025-10-08 19:12:14,723 - WARNING - ❌ Application failed
+2025-10-08 19:12:14,729 - INFO - 
+============================================================
+2025-10-08 19:12:14,730 - INFO - Job 58/59
+2025-10-08 19:13:00,122 - INFO - 📋 Unknown at Unknown
+2025-10-08 19:13:00,190 - INFO - ✅ Found Easy Apply button
+2025-10-08 19:13:16,282 - INFO - 🔍 Looking for submit button...
+2025-10-08 19:15:01,587 - INFO - 🔍 Trying all submit selectors...
+2025-10-08 19:18:23,571 - ERROR - ❌ Could not find submit button
+2025-10-08 19:18:23,682 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251008_191823.png
+2025-10-08 19:18:23,709 - INFO - ↗️ Found external apply link
+2025-10-08 19:18:25,650 - INFO - 🌐 External tab opened (total: 17)
+2025-10-08 19:18:25,650 - INFO - 📌 Tab will remain open for manual filling
+2025-10-08 19:18:25,652 - INFO - ⬅️ Returned to main tab
+2025-10-08 19:18:25,658 - WARNING - ❌ Application failed
+2025-10-08 19:18:25,666 - INFO - 
+============================================================
+2025-10-08 19:18:25,666 - INFO - Job 59/59
+2025-10-08 19:19:11,549 - INFO - 📋 Unknown at Unknown
+2025-10-08 19:19:11,582 - INFO - ✅ Found Easy Apply button
+2025-10-08 19:19:27,701 - INFO - 🔍 Looking for submit button...
+2025-10-08 19:21:13,037 - INFO - 🔍 Trying all submit selectors...
+2025-10-08 19:24:35,190 - ERROR - ❌ Could not find submit button
+2025-10-08 19:24:35,257 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251008_192435.png
+2025-10-08 19:24:35,285 - INFO - ↗️ Found external apply link
+2025-10-08 19:24:37,124 - INFO - 🌐 External tab opened (total: 18)
+2025-10-08 19:24:37,125 - INFO - 📌 Tab will remain open for manual filling
+2025-10-08 19:24:37,127 - INFO - ⬅️ Returned to main tab
+2025-10-08 19:24:37,132 - WARNING - ❌ Application failed
+2025-10-08 19:24:37,143 - INFO - 📊 Session report saved: naukri_session_20251008_192437.json
+2025-10-08 19:24:37,147 - INFO - 
+============================================================
+2025-10-08 19:24:37,147 - INFO - 📌 18 external tabs remain open
+2025-10-08 19:24:37,149 - INFO - 💡 You can now manually fill these applications
+2025-10-08 19:24:37,149 - INFO - ============================================================
+
+2025-10-08 19:24:37,154 - INFO - Database closed
+2025-10-08 20:41:10,551 - INFO - Browser closed (all tabs)

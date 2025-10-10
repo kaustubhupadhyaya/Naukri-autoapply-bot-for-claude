@@ -2328,3 +2328,966 @@ Stacktrace:
 
 2025-10-08 19:24:37,154 - INFO - Database closed
 2025-10-08 20:41:10,551 - INFO - Browser closed (all tabs)
+2025-10-09 02:07:10,586 - INFO - ✅ Configuration loaded successfully
+2025-10-09 02:07:10,594 - INFO - ✅ Loaded selector cache with 2 cached selectors
+2025-10-09 02:07:10,605 - INFO - ✅ Job database initialized
+2025-10-09 02:07:10,606 - INFO - ℹ️ Gemini AI not configured (optional)
+2025-10-09 02:07:10,606 - INFO - ✅ Bot initialized successfully
+2025-10-09 02:07:10,607 - INFO - 🚀 Setting up browser...
+2025-10-09 02:07:14,699 - INFO - ✅ Driver setup successful (manual path)
+2025-10-09 02:07:14,866 - INFO - ✅ WebDriver ready
+2025-10-09 02:07:14,866 - INFO - 🔐 Login attempt 1/3
+2025-10-09 02:07:18,410 - INFO - ✅ Email entered
+2025-10-09 02:07:19,299 - INFO - ✅ Password entered
+2025-10-09 02:07:19,432 - INFO - ✅ Found login button
+2025-10-09 02:07:19,532 - WARNING - ❌ Login attempt 1 failed
+2025-10-09 02:07:25,105 - INFO - 🔐 Login attempt 2/3
+2025-10-09 02:07:26,001 - WARNING - Element became stale during typing, retrying...
+2025-10-09 02:07:26,345 - ERROR - Failed to find email field: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=141.0.3537.57); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff603ef3ec5+18309]
+	(No symbol) [0x0x7ff603e61570]
+	GetHandleVerifier [0x0x7ff6040e8efc+2070460]
+	(No symbol) [0x0x7ff603c74806]
+	(No symbol) [0x0x7ff603c7344d]
+	(No symbol) [0x0x7ff603c74c1f]
+	(No symbol) [0x0x7ff603c683d8]
+	(No symbol) [0x0x7ff603c6681c]
+	(No symbol) [0x0x7ff603c6a1ff]
+	(No symbol) [0x0x7ff603c6a2bf]
+	(No symbol) [0x0x7ff603caf18a]
+	(No symbol) [0x0x7ff603caf08c]
+	(No symbol) [0x0x7ff603caf238]
+	(No symbol) [0x0x7ff603ca76f2]
+	(No symbol) [0x0x7ff603ccfc7a]
+	(No symbol) [0x0x7ff603ca443b]
+	(No symbol) [0x0x7ff603ca42ed]
+	(No symbol) [0x0x7ff603ccff30]
+	(No symbol) [0x0x7ff603ca443b]
+	(No symbol) [0x0x7ff603ced082]
+	(No symbol) [0x0x7ff603ccf943]
+	(No symbol) [0x0x7ff603ca38e6]
+	(No symbol) [0x0x7ff603ca2b52]
+	(No symbol) [0x0x7ff603ca3723]
+	(No symbol) [0x0x7ff603d92f75]
+	(No symbol) [0x0x7ff603d9e74d]
+	GetHandleVerifier [0x0x7ff603f895b3+630387]
+	GetHandleVerifier [0x0x7ff603f91151+662033]
+	(No symbol) [0x0x7ff603e6d659]
+	(No symbol) [0x0x7ff603e66ff4]
+	(No symbol) [0x0x7ff603e67143]
+	(No symbol) [0x0x7ff603e5afc6]
+	BaseThreadInitThunk [0x0x7ffe0c3ce8d7+23]
+	RtlUserThreadStart [0x0x7ffe0cc68d9c+44]
+
+2025-10-09 02:07:26,347 - INFO - 🔐 Login attempt 3/3
+2025-10-09 02:09:16,182 - ERROR - Failed to find email field: Message: Could not find element with any selector for login_email; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+
+2025-10-09 02:09:16,183 - ERROR - ❌ All login attempts failed
+2025-10-09 02:09:16,184 - INFO - 📊 Session report saved: naukri_session_20251009_020916.json
+2025-10-09 02:09:16,191 - INFO - Database closed
+2025-10-09 05:26:46,767 - INFO - Browser closed (all tabs)
+2025-10-09 05:26:54,005 - INFO - ✅ Configuration loaded successfully
+2025-10-09 05:26:54,006 - INFO - ✅ Loaded selector cache with 2 cached selectors
+2025-10-09 05:26:54,008 - INFO - ✅ Job database initialized
+2025-10-09 05:26:54,008 - INFO - ℹ️ Gemini AI not configured (optional)
+2025-10-09 05:26:54,009 - INFO - ✅ Bot initialized successfully
+2025-10-09 05:26:54,013 - INFO - 🚀 Setting up browser...
+2025-10-09 05:26:57,422 - INFO - ✅ Driver setup successful (manual path)
+2025-10-09 05:26:57,897 - INFO - ✅ WebDriver ready
+2025-10-09 05:26:57,907 - INFO - 🔐 Login attempt 1/3
+2025-10-09 05:27:01,772 - INFO - ✅ Email entered
+2025-10-09 05:27:02,603 - INFO - ✅ Password entered
+2025-10-09 05:27:03,307 - INFO - ✅ Found login button
+2025-10-09 05:27:07,319 - INFO - ✅ Login verified
+2025-10-09 05:27:07,320 - INFO - ✅ Login successful!
+2025-10-09 05:27:07,320 - INFO - 🔍 Starting job search...
+2025-10-09 05:27:07,320 - INFO - 🔎 Searching for: Data Engineer
+2025-10-09 05:27:07,320 - INFO - 📄 Page 1
+2025-10-09 05:38:44,261 - INFO - ✅ Found 1 new jobs
+2025-10-09 05:38:44,263 - INFO - 📄 Page 2
+2025-10-09 05:50:20,011 - INFO - ✅ Found 6 new jobs
+2025-10-09 05:50:20,691 - INFO - 🔎 Searching for: Big Data Engineer
+2025-10-09 05:50:20,691 - INFO - 📄 Page 1
+2025-10-09 06:01:56,264 - INFO - ✅ Found 15 new jobs
+2025-10-09 06:01:56,264 - INFO - 📄 Page 2
+2025-10-09 06:13:31,428 - INFO - ✅ Found 13 new jobs
+2025-10-09 06:13:31,428 - INFO - 🔎 Searching for: ETL Developer
+2025-10-09 06:13:31,428 - INFO - 📄 Page 1
+2025-10-09 06:25:06,825 - INFO - ✅ Found 3 new jobs
+2025-10-09 06:25:06,827 - INFO - 📄 Page 2
+2025-10-09 06:36:42,530 - INFO - ✅ Found 3 new jobs
+2025-10-09 06:36:42,530 - INFO - 🔎 Searching for: SQL Developer
+2025-10-09 06:36:42,531 - INFO - 📄 Page 1
+2025-10-09 06:48:19,365 - INFO - ✅ Found 8 new jobs
+2025-10-09 06:48:19,366 - INFO - 📄 Page 2
+2025-10-09 06:59:54,812 - INFO - ✅ Found 6 new jobs
+2025-10-09 06:59:54,812 - INFO - ✅ Total jobs found: 55
+2025-10-09 06:59:54,812 - INFO - 🎯 Starting applications to 55 jobs...
+2025-10-09 06:59:54,817 - INFO - 
+============================================================
+2025-10-09 06:59:54,817 - INFO - Job 1/55
+2025-10-09 07:00:43,366 - INFO - 📋 Unknown at Unknown
+2025-10-09 07:00:43,398 - INFO - ✅ Found Easy Apply button
+2025-10-09 07:00:46,874 - INFO - 💬 Chatbot detected
+2025-10-09 07:01:01,932 - INFO - 🔍 Looking for submit button...
+2025-10-09 07:02:35,126 - INFO - 🔍 Trying all submit selectors...
+2025-10-09 07:05:56,889 - ERROR - ❌ Could not find submit button
+2025-10-09 07:05:57,007 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251009_070556.png
+2025-10-09 07:05:57,035 - INFO - ↗️ Found external apply link
+2025-10-09 07:05:58,125 - WARNING - No apply method found
+2025-10-09 07:05:58,125 - WARNING - ❌ Application failed
+2025-10-09 07:05:58,133 - INFO - 
+============================================================
+2025-10-09 07:05:58,133 - INFO - Job 2/55
+2025-10-09 07:06:44,814 - INFO - 📋 Unknown at Unknown
+2025-10-09 07:06:44,866 - INFO - ✅ Found Easy Apply button
+2025-10-09 07:06:51,053 - INFO - 💬 Chatbot detected
+2025-10-09 07:07:06,103 - INFO - 🔍 Looking for submit button...
+2025-10-09 07:08:39,408 - INFO - 🔍 Trying all submit selectors...
+2025-10-09 07:12:01,364 - ERROR - ❌ Could not find submit button
+2025-10-09 07:12:01,448 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251009_071201.png
+2025-10-09 07:12:01,478 - INFO - ↗️ Found external apply link
+2025-10-09 07:12:02,525 - WARNING - No apply method found
+2025-10-09 07:12:02,527 - WARNING - ❌ Application failed
+2025-10-09 07:12:02,531 - INFO - 
+============================================================
+2025-10-09 07:12:02,531 - INFO - Job 3/55
+2025-10-09 07:12:56,919 - INFO - 📋 Unknown at Unknown
+2025-10-09 07:12:56,947 - INFO - ✅ Found Easy Apply button
+2025-10-09 07:12:57,873 - INFO - 💬 Chatbot detected
+2025-10-09 07:13:12,902 - INFO - 🔍 Looking for submit button...
+2025-10-09 07:14:46,180 - INFO - 🔍 Trying all submit selectors...
+2025-10-09 07:18:08,061 - ERROR - ❌ Could not find submit button
+2025-10-09 07:18:08,141 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251009_071808.png
+2025-10-09 07:18:08,166 - INFO - ↗️ Found external apply link
+2025-10-09 07:18:09,227 - WARNING - No apply method found
+2025-10-09 07:18:09,228 - WARNING - ❌ Application failed
+2025-10-09 07:18:09,233 - INFO - 
+============================================================
+2025-10-09 07:18:09,233 - INFO - Job 4/55
+2025-10-09 07:18:54,707 - INFO - 📋 Unknown at Unknown
+2025-10-09 07:18:54,806 - INFO - ✅ Found Easy Apply button
+2025-10-09 07:19:11,044 - INFO - 🔍 Looking for submit button...
+2025-10-09 07:20:56,338 - INFO - 🔍 Trying all submit selectors...
+2025-10-09 07:24:18,358 - ERROR - ❌ Could not find submit button
+2025-10-09 07:24:18,412 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251009_072418.png
+2025-10-09 07:25:05,074 - WARNING - No apply method found
+2025-10-09 07:25:05,075 - WARNING - ❌ Application failed
+2025-10-09 07:25:05,080 - INFO - 
+============================================================
+2025-10-09 07:25:05,082 - INFO - Job 5/55
+2025-10-09 07:25:52,457 - INFO - 📋 Unknown at Unknown
+2025-10-09 07:25:52,488 - INFO - ✅ Found Easy Apply button
+2025-10-09 07:26:08,566 - INFO - 🔍 Looking for submit button...
+2025-10-09 07:27:53,738 - INFO - 🔍 Trying all submit selectors...
+2025-10-09 07:31:15,921 - ERROR - ❌ Could not find submit button
+2025-10-09 07:31:15,973 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251009_073115.png
+2025-10-09 07:32:02,626 - WARNING - No apply method found
+2025-10-09 07:32:02,626 - WARNING - ❌ Application failed
+2025-10-09 07:32:02,626 - INFO - ⏸️ Rate limit pause: 10s
+2025-10-09 07:32:12,634 - INFO - 
+============================================================
+2025-10-09 07:32:12,636 - INFO - Job 6/55
+2025-10-09 07:33:04,866 - INFO - 📋 Unknown at Unknown
+2025-10-09 07:33:04,909 - INFO - ✅ Found Easy Apply button
+2025-10-09 07:33:20,986 - INFO - 🔍 Looking for submit button...
+2025-10-09 07:35:06,274 - INFO - 🔍 Trying all submit selectors...
+2025-10-09 07:38:28,365 - ERROR - ❌ Could not find submit button
+2025-10-09 07:38:28,435 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251009_073828.png
+2025-10-09 07:39:14,987 - WARNING - No apply method found
+2025-10-09 07:39:14,987 - WARNING - ❌ Application failed
+2025-10-09 07:39:14,992 - INFO - 
+============================================================
+2025-10-09 07:39:14,994 - INFO - Job 7/55
+2025-10-09 07:40:09,841 - INFO - 📋 Unknown at Unknown
+2025-10-09 07:41:58,610 - WARNING - No apply method found
+2025-10-09 07:41:58,610 - WARNING - ❌ Application failed
+2025-10-09 07:42:01,942 - INFO - 
+============================================================
+2025-10-09 07:42:01,943 - INFO - Job 8/55
+2025-10-09 07:42:49,370 - INFO - 📋 Unknown at Unknown
+2025-10-09 07:42:49,402 - INFO - ✅ Found Easy Apply button
+2025-10-09 07:42:50,360 - INFO - 💬 Chatbot detected
+2025-10-09 07:43:05,366 - INFO - 🔍 Looking for submit button...
+2025-10-09 07:44:38,598 - INFO - 🔍 Trying all submit selectors...
+2025-10-09 07:48:00,600 - ERROR - ❌ Could not find submit button
+2025-10-09 07:48:00,660 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251009_074800.png
+2025-10-09 07:48:00,685 - INFO - ↗️ Found external apply link
+2025-10-09 07:48:01,780 - WARNING - No apply method found
+2025-10-09 07:48:01,783 - WARNING - ❌ Application failed
+2025-10-09 07:48:05,670 - INFO - 
+============================================================
+2025-10-09 07:48:05,670 - INFO - Job 9/55
+2025-10-09 07:48:51,540 - INFO - 📋 Unknown at Unknown
+2025-10-09 07:48:51,567 - INFO - ✅ Found Easy Apply button
+2025-10-09 07:48:52,594 - INFO - 💬 Chatbot detected
+2025-10-09 07:49:07,618 - INFO - 🔍 Looking for submit button...
+2025-10-09 07:50:40,797 - INFO - 🔍 Trying all submit selectors...
+2025-10-09 07:54:02,771 - ERROR - ❌ Could not find submit button
+2025-10-09 07:54:02,825 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251009_075402.png
+2025-10-09 07:54:02,850 - INFO - ↗️ Found external apply link
+2025-10-09 07:54:03,911 - WARNING - No apply method found
+2025-10-09 07:54:03,912 - WARNING - ❌ Application failed
+2025-10-09 07:54:03,919 - INFO - 
+============================================================
+2025-10-09 07:54:03,919 - INFO - Job 10/55
+2025-10-09 07:54:51,740 - INFO - 📋 Unknown at Unknown
+2025-10-09 07:54:51,769 - INFO - ✅ Found Easy Apply button
+2025-10-09 07:54:52,790 - INFO - 💬 Chatbot detected
+2025-10-09 07:55:07,832 - INFO - 🔍 Looking for submit button...
+2025-10-09 07:56:41,092 - INFO - 🔍 Trying all submit selectors...
+2025-10-09 08:00:03,127 - ERROR - ❌ Could not find submit button
+2025-10-09 08:00:03,174 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251009_080003.png
+2025-10-09 08:00:03,198 - INFO - ↗️ Found external apply link
+2025-10-09 08:00:04,269 - WARNING - No apply method found
+2025-10-09 08:00:04,272 - WARNING - ❌ Application failed
+2025-10-09 08:00:04,272 - INFO - ⏸️ Rate limit pause: 10s
+2025-10-09 08:00:14,279 - INFO - 
+============================================================
+2025-10-09 08:00:14,279 - INFO - Job 11/55
+2025-10-09 08:01:09,629 - INFO - 📋 Unknown at Unknown
+2025-10-09 08:01:09,658 - INFO - ✅ Found Easy Apply button
+2025-10-09 08:01:25,740 - INFO - 🔍 Looking for submit button...
+2025-10-09 08:03:10,975 - INFO - 🔍 Trying all submit selectors...
+2025-10-09 08:06:32,977 - ERROR - ❌ Could not find submit button
+2025-10-09 08:06:33,025 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251009_080632.png
+2025-10-09 08:07:19,580 - WARNING - No apply method found
+2025-10-09 08:07:19,580 - WARNING - ❌ Application failed
+2025-10-09 08:07:19,588 - INFO - 
+============================================================
+2025-10-09 08:07:19,588 - INFO - Job 12/55
+2025-10-09 08:08:05,045 - INFO - 📋 Unknown at Unknown
+2025-10-09 08:08:05,076 - INFO - ✅ Found Easy Apply button
+2025-10-09 08:08:06,110 - INFO - 💬 Chatbot detected
+2025-10-09 08:08:21,120 - INFO - 🔍 Looking for submit button...
+2025-10-09 08:09:54,399 - INFO - 🔍 Trying all submit selectors...
+2025-10-09 08:13:16,427 - ERROR - ❌ Could not find submit button
+2025-10-09 08:13:16,529 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251009_081316.png
+2025-10-09 08:13:16,559 - INFO - ↗️ Found external apply link
+2025-10-09 08:13:17,652 - WARNING - No apply method found
+2025-10-09 08:13:17,654 - WARNING - ❌ Application failed
+2025-10-09 08:13:21,064 - INFO - 
+============================================================
+2025-10-09 08:13:21,064 - INFO - Job 13/55
+2025-10-09 08:14:15,126 - INFO - 📋 Unknown at Unknown
+2025-10-09 08:16:03,878 - WARNING - No apply method found
+2025-10-09 08:16:03,880 - WARNING - ❌ Application failed
+2025-10-09 08:16:06,100 - INFO - 
+============================================================
+2025-10-09 08:16:06,100 - INFO - Job 14/55
+2025-10-09 08:16:51,565 - INFO - 📋 Unknown at Unknown
+2025-10-09 08:18:40,300 - WARNING - No apply method found
+2025-10-09 08:18:40,304 - WARNING - ❌ Application failed
+2025-10-09 08:18:40,316 - INFO - 
+============================================================
+2025-10-09 08:18:40,316 - INFO - Job 15/55
+2025-10-09 08:19:32,342 - INFO - 📋 Unknown at Unknown
+2025-10-09 08:21:21,031 - WARNING - No apply method found
+2025-10-09 08:21:21,032 - WARNING - ❌ Application failed
+2025-10-09 08:21:21,032 - INFO - ⏸️ Rate limit pause: 10s
+2025-10-09 08:21:31,038 - INFO - 
+============================================================
+2025-10-09 08:21:31,040 - INFO - Job 16/55
+2025-10-09 08:22:22,874 - INFO - 📋 Unknown at Unknown
+2025-10-09 08:22:22,906 - INFO - ✅ Found Easy Apply button
+2025-10-09 08:22:23,879 - INFO - 💬 Chatbot detected
+2025-10-09 08:22:38,891 - INFO - 🔍 Looking for submit button...
+2025-10-09 08:24:12,192 - INFO - 🔍 Trying all submit selectors...
+2025-10-09 08:27:34,161 - ERROR - ❌ Could not find submit button
+2025-10-09 08:27:34,219 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251009_082734.png
+2025-10-09 08:27:34,242 - INFO - ↗️ Found external apply link
+2025-10-09 08:27:35,292 - WARNING - No apply method found
+2025-10-09 08:27:35,292 - WARNING - ❌ Application failed
+2025-10-09 08:27:35,300 - INFO - 
+============================================================
+2025-10-09 08:27:35,300 - INFO - Job 17/55
+2025-10-09 08:28:29,595 - INFO - 📋 Unknown at Unknown
+2025-10-09 08:28:29,630 - INFO - ✅ Found Easy Apply button
+2025-10-09 08:28:30,659 - INFO - 💬 Chatbot detected
+2025-10-09 08:28:45,728 - INFO - 🔍 Looking for submit button...
+2025-10-09 08:29:49,072 - INFO - 🔍 Trying all submit selectors...
+2025-10-09 08:33:11,046 - ERROR - ❌ Could not find submit button
+2025-10-09 08:33:11,126 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251009_083311.png
+2025-10-09 08:33:11,155 - INFO - ↗️ Found external apply link
+2025-10-09 08:33:12,251 - WARNING - No apply method found
+2025-10-09 08:33:12,251 - WARNING - ❌ Application failed
+2025-10-09 08:33:12,259 - INFO - 
+============================================================
+2025-10-09 08:33:12,259 - INFO - Job 18/55
+2025-10-09 08:34:03,268 - INFO - 📋 Unknown at Unknown
+2025-10-09 08:34:03,297 - INFO - ✅ Found Easy Apply button
+2025-10-09 08:34:04,337 - INFO - 💬 Chatbot detected
+2025-10-09 08:34:19,350 - INFO - 🔍 Looking for submit button...
+2025-10-09 08:35:52,628 - INFO - 🔍 Trying all submit selectors...
+2025-10-09 08:39:14,592 - ERROR - ❌ Could not find submit button
+2025-10-09 08:39:14,656 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251009_083914.png
+2025-10-09 08:39:14,684 - INFO - ↗️ Found external apply link
+2025-10-09 08:39:15,784 - WARNING - No apply method found
+2025-10-09 08:39:15,785 - WARNING - ❌ Application failed
+2025-10-09 08:39:15,788 - INFO - 
+============================================================
+2025-10-09 08:39:15,788 - INFO - Job 19/55
+2025-10-09 08:40:01,496 - INFO - 📋 Unknown at Unknown
+2025-10-09 08:40:01,522 - INFO - ✅ Found Easy Apply button
+2025-10-09 08:40:02,517 - INFO - 💬 Chatbot detected
+2025-10-09 08:40:17,586 - INFO - 🔍 Looking for submit button...
+2025-10-09 08:41:50,898 - INFO - 🔍 Trying all submit selectors...
+2025-10-09 08:45:12,928 - ERROR - ❌ Could not find submit button
+2025-10-09 08:45:12,982 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251009_084512.png
+2025-10-09 08:45:13,006 - INFO - ↗️ Found external apply link
+2025-10-09 08:45:14,076 - WARNING - No apply method found
+2025-10-09 08:45:14,077 - WARNING - ❌ Application failed
+2025-10-09 08:45:14,082 - INFO - 
+============================================================
+2025-10-09 08:45:14,082 - INFO - Job 20/55
+2025-10-09 08:45:59,550 - INFO - 📋 Unknown at Unknown
+2025-10-09 08:45:59,579 - INFO - ✅ Found Easy Apply button
+2025-10-09 08:46:00,654 - INFO - 💬 Chatbot detected
+2025-10-09 08:46:15,664 - INFO - 🔍 Looking for submit button...
+2025-10-09 08:47:48,871 - INFO - 🔍 Trying all submit selectors...
+2025-10-09 08:51:10,918 - ERROR - ❌ Could not find submit button
+2025-10-09 08:51:10,990 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251009_085110.png
+2025-10-09 08:51:11,015 - INFO - ↗️ Found external apply link
+2025-10-09 08:51:12,106 - WARNING - No apply method found
+2025-10-09 08:51:12,108 - WARNING - ❌ Application failed
+2025-10-09 08:51:12,110 - INFO - ⏸️ Rate limit pause: 10s
+2025-10-09 08:51:22,115 - INFO - 
+============================================================
+2025-10-09 08:51:22,117 - INFO - Job 21/55
+2025-10-09 08:52:08,576 - INFO - 📋 Unknown at Unknown
+2025-10-09 08:52:08,602 - INFO - ✅ Found Easy Apply button
+2025-10-09 08:52:09,587 - INFO - 💬 Chatbot detected
+2025-10-09 08:52:24,619 - INFO - 🔍 Looking for submit button...
+2025-10-09 08:53:57,921 - INFO - 🔍 Trying all submit selectors...
+2025-10-09 08:57:19,943 - ERROR - ❌ Could not find submit button
+2025-10-09 08:57:19,992 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251009_085719.png
+2025-10-09 08:57:20,016 - INFO - ↗️ Found external apply link
+2025-10-09 08:57:21,120 - WARNING - No apply method found
+2025-10-09 08:57:21,121 - WARNING - ❌ Application failed
+2025-10-09 08:57:21,127 - INFO - 
+============================================================
+2025-10-09 08:57:21,128 - INFO - Job 22/55
+2025-10-09 08:58:06,506 - INFO - 📋 Unknown at Unknown
+2025-10-09 08:59:08,736 - INFO - ↗️ Found external apply link
+2025-10-09 08:59:10,430 - INFO - 🌐 External tab opened (total: 1)
+2025-10-09 08:59:10,431 - INFO - 📌 Tab will remain open for manual filling
+2025-10-09 08:59:10,456 - INFO - ⬅️ Returned to main tab
+2025-10-09 08:59:10,480 - WARNING - ❌ Application failed
+2025-10-09 08:59:13,897 - INFO - 
+============================================================
+2025-10-09 08:59:13,897 - INFO - Job 23/55
+2025-10-09 08:59:59,352 - INFO - 📋 Unknown at Unknown
+2025-10-09 09:01:01,603 - INFO - ↗️ Found external apply link
+2025-10-09 09:01:04,790 - INFO - 🌐 External tab opened (total: 2)
+2025-10-09 09:01:04,792 - INFO - 📌 Tab will remain open for manual filling
+2025-10-09 09:01:04,810 - INFO - ⬅️ Returned to main tab
+2025-10-09 09:01:04,822 - WARNING - ❌ Application failed
+2025-10-09 09:01:07,842 - INFO - 
+============================================================
+2025-10-09 09:01:07,843 - INFO - Job 24/55
+2025-10-09 09:01:53,317 - INFO - 📋 Unknown at Unknown
+2025-10-09 09:01:53,355 - INFO - ✅ Found Easy Apply button
+2025-10-09 09:01:54,478 - INFO - 💬 Chatbot detected
+2025-10-09 09:02:09,482 - INFO - 🔍 Looking for submit button...
+2025-10-09 09:03:42,763 - INFO - 🔍 Trying all submit selectors...
+2025-10-09 09:07:04,714 - ERROR - ❌ Could not find submit button
+2025-10-09 09:07:04,776 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251009_090704.png
+2025-10-09 09:07:04,800 - INFO - ↗️ Found external apply link
+2025-10-09 09:07:05,886 - WARNING - No apply method found
+2025-10-09 09:07:05,888 - WARNING - ❌ Application failed
+2025-10-09 09:07:09,812 - INFO - 
+============================================================
+2025-10-09 09:07:09,812 - INFO - Job 25/55
+2025-10-09 09:07:57,316 - INFO - 📋 Unknown at Unknown
+2025-10-09 09:07:57,343 - INFO - ✅ Found Easy Apply button
+2025-10-09 09:07:58,452 - INFO - 💬 Chatbot detected
+2025-10-09 09:08:13,483 - INFO - 🔍 Looking for submit button...
+2025-10-09 09:09:46,712 - INFO - 🔍 Trying all submit selectors...
+2025-10-09 09:13:08,616 - ERROR - ❌ Could not find submit button
+2025-10-09 09:13:08,674 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251009_091308.png
+2025-10-09 09:13:08,698 - INFO - ↗️ Found external apply link
+2025-10-09 09:13:09,771 - WARNING - No apply method found
+2025-10-09 09:13:09,774 - WARNING - ❌ Application failed
+2025-10-09 09:13:09,774 - INFO - ⏸️ Rate limit pause: 10s
+2025-10-09 09:13:19,781 - INFO - 
+============================================================
+2025-10-09 09:13:19,781 - INFO - Job 26/55
+2025-10-09 09:14:05,444 - INFO - 📋 Unknown at Unknown
+2025-10-09 09:14:05,470 - INFO - ✅ Found Easy Apply button
+2025-10-09 09:14:21,536 - INFO - 🔍 Looking for submit button...
+2025-10-09 09:16:06,739 - INFO - 🔍 Trying all submit selectors...
+2025-10-09 09:19:28,671 - ERROR - ❌ Could not find submit button
+2025-10-09 09:19:28,720 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251009_091928.png
+2025-10-09 09:20:15,385 - WARNING - No apply method found
+2025-10-09 09:20:15,385 - WARNING - ❌ Application failed
+2025-10-09 09:20:15,394 - INFO - 
+============================================================
+2025-10-09 09:20:15,394 - INFO - Job 27/55
+2025-10-09 09:21:01,247 - INFO - 📋 Unknown at Unknown
+2025-10-09 09:22:49,941 - WARNING - No apply method found
+2025-10-09 09:22:49,941 - WARNING - ❌ Application failed
+2025-10-09 09:22:49,949 - INFO - 
+============================================================
+2025-10-09 09:22:49,949 - INFO - Job 28/55
+2025-10-09 09:23:37,877 - INFO - 📋 Unknown at Unknown
+2025-10-09 09:23:37,909 - INFO - ✅ Found Easy Apply button
+2025-10-09 09:23:39,122 - INFO - 💬 Chatbot detected
+2025-10-09 09:23:54,129 - INFO - 🔍 Looking for submit button...
+2025-10-09 09:25:27,412 - INFO - 🔍 Trying all submit selectors...
+2025-10-09 09:28:49,410 - ERROR - ❌ Could not find submit button
+2025-10-09 09:28:49,473 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251009_092849.png
+2025-10-09 09:28:49,497 - INFO - ↗️ Found external apply link
+2025-10-09 09:28:50,559 - WARNING - No apply method found
+2025-10-09 09:28:50,559 - WARNING - ❌ Application failed
+2025-10-09 09:28:50,565 - INFO - 
+============================================================
+2025-10-09 09:28:50,567 - INFO - Job 29/55
+2025-10-09 09:29:36,964 - INFO - 📋 Unknown at Unknown
+2025-10-09 09:29:36,992 - INFO - ✅ Found Easy Apply button
+2025-10-09 09:29:53,093 - INFO - 🔍 Looking for submit button...
+2025-10-09 09:31:38,258 - INFO - 🔍 Trying all submit selectors...
+2025-10-09 09:35:00,329 - ERROR - ❌ Could not find submit button
+2025-10-09 09:35:00,390 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251009_093500.png
+2025-10-09 09:35:46,964 - WARNING - No apply method found
+2025-10-09 09:35:46,966 - WARNING - ❌ Application failed
+2025-10-09 09:35:46,972 - INFO - 
+============================================================
+2025-10-09 09:35:46,973 - INFO - Job 30/55
+2025-10-09 09:36:32,916 - INFO - 📋 Unknown at Unknown
+2025-10-09 09:37:35,124 - INFO - ↗️ Found external apply link
+2025-10-09 09:37:35,995 - INFO - 🌐 External tab opened (total: 3)
+2025-10-09 09:37:35,996 - INFO - 📌 Tab will remain open for manual filling
+2025-10-09 09:37:36,016 - INFO - ⬅️ Returned to main tab
+2025-10-09 09:37:36,032 - WARNING - ❌ Application failed
+2025-10-09 09:37:36,037 - INFO - ⏸️ Rate limit pause: 10s
+2025-10-09 09:37:46,047 - INFO - 
+============================================================
+2025-10-09 09:37:46,048 - INFO - Job 31/55
+2025-10-09 09:38:31,789 - INFO - 📋 Unknown at Unknown
+2025-10-09 09:39:33,963 - INFO - ↗️ Found external apply link
+2025-10-09 09:39:36,418 - INFO - 🌐 External tab opened (total: 4)
+2025-10-09 09:39:36,419 - INFO - 📌 Tab will remain open for manual filling
+2025-10-09 09:39:36,439 - INFO - ⬅️ Returned to main tab
+2025-10-09 09:39:36,460 - WARNING - ❌ Application failed
+2025-10-09 09:39:39,407 - INFO - 
+============================================================
+2025-10-09 09:39:39,407 - INFO - Job 32/55
+2025-10-09 09:40:25,115 - INFO - 📋 Unknown at Unknown
+2025-10-09 09:41:27,354 - INFO - ↗️ Found external apply link
+2025-10-09 09:41:30,033 - INFO - 🌐 External tab opened (total: 5)
+2025-10-09 09:41:30,034 - INFO - 📌 Tab will remain open for manual filling
+2025-10-09 09:41:30,053 - INFO - ⬅️ Returned to main tab
+2025-10-09 09:41:30,072 - WARNING - ❌ Application failed
+2025-10-09 09:41:30,081 - INFO - 
+============================================================
+2025-10-09 09:41:30,082 - INFO - Job 33/55
+2025-10-09 09:42:16,035 - INFO - 📋 Unknown at Unknown
+2025-10-09 09:43:18,222 - INFO - ↗️ Found external apply link
+2025-10-09 09:43:20,444 - INFO - 🌐 External tab opened (total: 6)
+2025-10-09 09:43:20,444 - INFO - 📌 Tab will remain open for manual filling
+2025-10-09 09:43:20,471 - INFO - ⬅️ Returned to main tab
+2025-10-09 09:43:20,486 - WARNING - ❌ Application failed
+2025-10-09 09:43:24,221 - INFO - 
+============================================================
+2025-10-09 09:43:24,221 - INFO - Job 34/55
+2025-10-09 09:44:09,654 - INFO - 📋 Unknown at Unknown
+2025-10-09 09:44:09,682 - INFO - ✅ Found Easy Apply button
+2025-10-09 09:44:25,788 - INFO - 🔍 Looking for submit button...
+2025-10-09 09:46:11,027 - INFO - 🔍 Trying all submit selectors...
+2025-10-09 09:49:32,907 - ERROR - ❌ Could not find submit button
+2025-10-09 09:49:32,966 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251009_094932.png
+2025-10-09 09:50:19,539 - WARNING - No apply method found
+2025-10-09 09:50:19,541 - WARNING - ❌ Application failed
+2025-10-09 09:50:19,547 - INFO - 
+============================================================
+2025-10-09 09:50:19,549 - INFO - Job 35/55
+2025-10-09 09:51:05,301 - INFO - 📋 Unknown at Unknown
+2025-10-09 09:51:05,330 - INFO - ✅ Found Easy Apply button
+2025-10-09 09:51:21,417 - INFO - 🔍 Looking for submit button...
+2025-10-09 09:53:06,684 - INFO - 🔍 Trying all submit selectors...
+2025-10-09 09:56:28,703 - ERROR - ❌ Could not find submit button
+2025-10-09 09:56:28,769 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251009_095628.png
+2025-10-09 09:57:15,490 - WARNING - No apply method found
+2025-10-09 09:57:15,490 - WARNING - ❌ Application failed
+2025-10-09 09:57:15,490 - INFO - ⏸️ Rate limit pause: 10s
+2025-10-09 09:57:25,500 - INFO - 
+============================================================
+2025-10-09 09:57:25,500 - INFO - Job 36/55
+2025-10-09 09:58:12,112 - INFO - 📋 Unknown at Unknown
+2025-10-09 09:58:12,144 - INFO - ✅ Found Easy Apply button
+2025-10-09 09:58:13,367 - INFO - 💬 Chatbot detected
+2025-10-09 09:58:28,431 - INFO - 🔍 Looking for submit button...
+2025-10-09 10:00:01,713 - INFO - 🔍 Trying all submit selectors...
+2025-10-09 10:03:23,775 - ERROR - ❌ Could not find submit button
+2025-10-09 10:03:23,842 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251009_100323.png
+2025-10-09 10:03:23,867 - INFO - ↗️ Found external apply link
+2025-10-09 10:03:24,935 - WARNING - No apply method found
+2025-10-09 10:03:24,935 - WARNING - ❌ Application failed
+2025-10-09 10:03:24,942 - INFO - 
+============================================================
+2025-10-09 10:03:24,942 - INFO - Job 37/55
+2025-10-09 10:04:10,557 - INFO - 📋 Unknown at Unknown
+2025-10-09 10:04:10,583 - INFO - ✅ Found Easy Apply button
+2025-10-09 10:04:11,741 - INFO - 💬 Chatbot detected
+2025-10-09 10:04:26,791 - INFO - 🔍 Looking for submit button...
+2025-10-09 10:06:00,072 - INFO - 🔍 Trying all submit selectors...
+2025-10-09 10:09:22,165 - ERROR - ❌ Could not find submit button
+2025-10-09 10:09:22,222 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251009_100922.png
+2025-10-09 10:09:22,246 - INFO - ↗️ Found external apply link
+2025-10-09 10:09:23,314 - WARNING - No apply method found
+2025-10-09 10:09:23,314 - WARNING - ❌ Application failed
+2025-10-09 10:09:26,035 - INFO - 
+============================================================
+2025-10-09 10:09:26,036 - INFO - Job 38/55
+2025-10-09 10:10:11,794 - INFO - 📋 Unknown at Unknown
+2025-10-09 10:10:11,820 - INFO - ✅ Found Easy Apply button
+2025-10-09 10:10:13,006 - INFO - 💬 Chatbot detected
+2025-10-09 10:10:28,058 - INFO - 🔍 Looking for submit button...
+2025-10-09 10:12:01,257 - INFO - 🔍 Trying all submit selectors...
+2025-10-09 10:15:23,161 - ERROR - ❌ Could not find submit button
+2025-10-09 10:15:23,211 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251009_101523.png
+2025-10-09 10:15:23,235 - INFO - ↗️ Found external apply link
+2025-10-09 10:15:24,343 - WARNING - No apply method found
+2025-10-09 10:15:24,346 - WARNING - ❌ Application failed
+2025-10-09 10:15:28,075 - INFO - 
+============================================================
+2025-10-09 10:15:28,075 - INFO - Job 39/55
+2025-10-09 10:16:13,484 - INFO - 📋 Unknown at Unknown
+2025-10-09 10:18:02,353 - WARNING - No apply method found
+2025-10-09 10:18:02,354 - WARNING - ❌ Application failed
+2025-10-09 10:18:06,087 - INFO - 
+============================================================
+2025-10-09 10:18:06,088 - INFO - Job 40/55
+2025-10-09 10:18:52,060 - INFO - 📋 Unknown at Unknown
+2025-10-09 10:20:40,846 - WARNING - No apply method found
+2025-10-09 10:20:40,849 - WARNING - ❌ Application failed
+2025-10-09 10:20:40,849 - INFO - ⏸️ Rate limit pause: 10s
+2025-10-09 10:20:50,858 - INFO - 
+============================================================
+2025-10-09 10:20:50,859 - INFO - Job 41/55
+2025-10-09 10:21:37,248 - INFO - 📋 Unknown at Unknown
+2025-10-09 10:21:37,280 - INFO - ✅ Found Easy Apply button
+2025-10-09 10:21:38,430 - INFO - 💬 Chatbot detected
+2025-10-09 10:21:53,496 - INFO - 🔍 Looking for submit button...
+2025-10-09 10:23:26,716 - INFO - 🔍 Trying all submit selectors...
+2025-10-09 10:26:48,791 - ERROR - ❌ Could not find submit button
+2025-10-09 10:26:48,853 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251009_102648.png
+2025-10-09 10:26:48,878 - INFO - ↗️ Found external apply link
+2025-10-09 10:26:49,985 - WARNING - No apply method found
+2025-10-09 10:26:49,987 - WARNING - ❌ Application failed
+2025-10-09 10:26:49,993 - INFO - 
+============================================================
+2025-10-09 10:26:49,993 - INFO - Job 42/55
+2025-10-09 10:27:35,679 - INFO - 📋 Unknown at Unknown
+2025-10-09 10:27:35,710 - INFO - ✅ Found Easy Apply button
+2025-10-09 10:27:51,792 - INFO - 🔍 Looking for submit button...
+2025-10-09 10:29:37,079 - INFO - 🔍 Trying all submit selectors...
+2025-10-09 10:32:59,033 - ERROR - ❌ Could not find submit button
+2025-10-09 10:32:59,097 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251009_103259.png
+2025-10-09 10:33:45,677 - WARNING - No apply method found
+2025-10-09 10:33:45,678 - WARNING - ❌ Application failed
+2025-10-09 10:33:48,384 - INFO - 
+============================================================
+2025-10-09 10:33:48,384 - INFO - Job 43/55
+2025-10-09 10:34:34,404 - INFO - 📋 Unknown at Unknown
+2025-10-09 10:34:34,436 - INFO - ✅ Found Easy Apply button
+2025-10-09 10:34:40,166 - INFO - 💬 Chatbot detected
+2025-10-09 10:34:55,231 - INFO - 🔍 Looking for submit button...
+2025-10-09 10:36:28,561 - INFO - 🔍 Trying all submit selectors...
+2025-10-09 10:39:50,676 - ERROR - ❌ Could not find submit button
+2025-10-09 10:39:50,731 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251009_103950.png
+2025-10-09 10:39:50,758 - INFO - ↗️ Found external apply link
+2025-10-09 10:39:51,809 - WARNING - No apply method found
+2025-10-09 10:39:51,810 - WARNING - ❌ Application failed
+2025-10-09 10:39:55,542 - INFO - 
+============================================================
+2025-10-09 10:39:55,542 - INFO - Job 44/55
+2025-10-09 10:40:41,006 - INFO - 📋 Unknown at Unknown
+2025-10-09 10:40:41,036 - INFO - ✅ Found Easy Apply button
+2025-10-09 10:40:42,575 - INFO - 💬 Chatbot detected
+2025-10-09 10:40:57,632 - INFO - 🔍 Looking for submit button...
+2025-10-09 10:42:30,833 - INFO - 🔍 Trying all submit selectors...
+2025-10-09 10:45:52,772 - ERROR - ❌ Could not find submit button
+2025-10-09 10:45:52,832 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251009_104552.png
+2025-10-09 10:45:52,857 - INFO - ↗️ Found external apply link
+2025-10-09 10:45:53,929 - WARNING - No apply method found
+2025-10-09 10:45:53,930 - WARNING - ❌ Application failed
+2025-10-09 10:45:57,236 - INFO - 
+============================================================
+2025-10-09 10:45:57,236 - INFO - Job 45/55
+2025-10-09 10:46:43,023 - INFO - 📋 Unknown at Unknown
+2025-10-09 10:46:43,051 - INFO - ✅ Found Easy Apply button
+2025-10-09 10:46:44,486 - INFO - 💬 Chatbot detected
+2025-10-09 10:46:59,547 - INFO - 🔍 Looking for submit button...
+2025-10-09 10:48:32,804 - INFO - 🔍 Trying all submit selectors...
+2025-10-09 10:51:54,724 - ERROR - ❌ Could not find submit button
+2025-10-09 10:51:54,785 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251009_105154.png
+2025-10-09 10:51:54,810 - INFO - ↗️ Found external apply link
+2025-10-09 10:51:55,902 - WARNING - No apply method found
+2025-10-09 10:51:55,903 - WARNING - ❌ Application failed
+2025-10-09 10:51:55,904 - INFO - ⏸️ Rate limit pause: 10s
+2025-10-09 10:52:05,910 - INFO - 
+============================================================
+2025-10-09 10:52:05,910 - INFO - Job 46/55
+2025-10-09 10:52:52,198 - INFO - 📋 Unknown at Unknown
+2025-10-09 10:52:52,228 - INFO - ✅ Found Easy Apply button
+2025-10-09 10:52:53,379 - INFO - 💬 Chatbot detected
+2025-10-09 10:53:08,444 - INFO - 🔍 Looking for submit button...
+2025-10-09 10:54:11,765 - INFO - 🔍 Trying all submit selectors...
+2025-10-09 10:57:33,776 - ERROR - ❌ Could not find submit button
+2025-10-09 10:57:33,834 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251009_105733.png
+2025-10-09 10:57:33,859 - INFO - ↗️ Found external apply link
+2025-10-09 10:57:34,935 - WARNING - No apply method found
+2025-10-09 10:57:34,937 - WARNING - ❌ Application failed
+2025-10-09 10:57:38,942 - INFO - 
+============================================================
+2025-10-09 10:57:38,942 - INFO - Job 47/55
+2025-10-09 10:58:29,098 - INFO - 📋 Unknown at Unknown
+2025-10-09 10:58:29,129 - INFO - ✅ Found Easy Apply button
+2025-10-09 10:58:30,188 - INFO - 💬 Chatbot detected
+2025-10-09 10:58:45,203 - INFO - 🔍 Looking for submit button...
+2025-10-09 11:00:18,465 - INFO - 🔍 Trying all submit selectors...
+2025-10-09 11:03:40,564 - ERROR - ❌ Could not find submit button
+2025-10-09 11:03:40,614 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251009_110340.png
+2025-10-09 11:03:40,638 - INFO - ↗️ Found external apply link
+2025-10-09 11:03:41,685 - WARNING - No apply method found
+2025-10-09 11:03:41,689 - WARNING - ❌ Application failed
+2025-10-09 11:03:45,534 - INFO - 
+============================================================
+2025-10-09 11:03:45,535 - INFO - Job 48/55
+2025-10-09 11:04:31,442 - INFO - 📋 Unknown at Unknown
+2025-10-09 11:04:31,474 - INFO - ✅ Found Easy Apply button
+2025-10-09 11:04:32,640 - INFO - 💬 Chatbot detected
+2025-10-09 11:04:47,683 - INFO - 🔍 Looking for submit button...
+2025-10-09 11:06:20,991 - INFO - 🔍 Trying all submit selectors...
+2025-10-09 11:09:42,947 - ERROR - ❌ Could not find submit button
+2025-10-09 11:09:43,019 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251009_110942.png
+2025-10-09 11:09:43,042 - INFO - ↗️ Found external apply link
+2025-10-09 11:09:44,139 - WARNING - No apply method found
+2025-10-09 11:09:44,139 - WARNING - ❌ Application failed
+2025-10-09 11:09:46,366 - INFO - 
+============================================================
+2025-10-09 11:09:46,368 - INFO - Job 49/55
+2025-10-09 11:10:31,741 - INFO - 📋 Unknown at Unknown
+2025-10-09 11:10:31,768 - INFO - ✅ Found Easy Apply button
+2025-10-09 11:10:33,188 - INFO - 💬 Chatbot detected
+2025-10-09 11:10:48,231 - INFO - 🔍 Looking for submit button...
+2025-10-09 11:12:21,477 - INFO - 🔍 Trying all submit selectors...
+2025-10-09 11:15:43,481 - ERROR - ❌ Could not find submit button
+2025-10-09 11:15:43,543 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251009_111543.png
+2025-10-09 11:15:43,567 - INFO - ↗️ Found external apply link
+2025-10-09 11:15:44,624 - WARNING - No apply method found
+2025-10-09 11:15:44,625 - WARNING - ❌ Application failed
+2025-10-09 11:15:46,969 - INFO - 
+============================================================
+2025-10-09 11:15:46,970 - INFO - Job 50/55
+2025-10-09 11:16:32,857 - INFO - 📋 Unknown at Unknown
+2025-10-09 11:16:32,890 - INFO - ✅ Found Easy Apply button
+2025-10-09 11:16:34,244 - INFO - 💬 Chatbot detected
+2025-10-09 11:16:49,294 - INFO - 🔍 Looking for submit button...
+2025-10-09 11:18:22,492 - INFO - 🔍 Trying all submit selectors...
+2025-10-09 11:21:44,608 - ERROR - ❌ Could not find submit button
+2025-10-09 11:21:44,666 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251009_112144.png
+2025-10-09 11:21:44,690 - INFO - ↗️ Found external apply link
+2025-10-09 11:21:45,761 - WARNING - No apply method found
+2025-10-09 11:21:45,763 - WARNING - ❌ Application failed
+2025-10-09 11:21:45,763 - INFO - ⏸️ Rate limit pause: 10s
+2025-10-09 11:21:55,776 - INFO - 
+============================================================
+2025-10-09 11:21:55,777 - INFO - Job 51/55
+2025-10-09 11:22:41,350 - INFO - 📋 Unknown at Unknown
+2025-10-09 11:22:41,376 - INFO - ✅ Found Easy Apply button
+2025-10-09 11:22:42,642 - INFO - 💬 Chatbot detected
+2025-10-09 11:22:57,649 - INFO - 🔍 Looking for submit button...
+2025-10-09 11:24:30,846 - INFO - 🔍 Trying all submit selectors...
+2025-10-09 11:27:52,866 - ERROR - ❌ Could not find submit button
+2025-10-09 11:27:52,924 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251009_112752.png
+2025-10-09 11:27:53,008 - INFO - ↗️ Found external apply link
+2025-10-09 11:27:54,112 - WARNING - No apply method found
+2025-10-09 11:27:54,114 - WARNING - ❌ Application failed
+2025-10-09 11:27:54,120 - INFO - 
+============================================================
+2025-10-09 11:27:54,120 - INFO - Job 52/55
+2025-10-09 11:28:39,550 - INFO - 📋 Unknown at Unknown
+2025-10-09 11:28:39,578 - INFO - ✅ Found Easy Apply button
+2025-10-09 11:28:40,893 - INFO - 💬 Chatbot detected
+2025-10-09 11:28:55,948 - INFO - 🔍 Looking for submit button...
+2025-10-09 11:30:29,271 - INFO - 🔍 Trying all submit selectors...
+2025-10-09 11:33:51,397 - ERROR - ❌ Could not find submit button
+2025-10-09 11:33:51,461 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251009_113351.png
+2025-10-09 11:33:51,487 - INFO - ↗️ Found external apply link
+2025-10-09 11:33:52,538 - WARNING - No apply method found
+2025-10-09 11:33:52,539 - WARNING - ❌ Application failed
+2025-10-09 11:33:56,206 - INFO - 
+============================================================
+2025-10-09 11:33:56,206 - INFO - Job 53/55
+2025-10-09 11:34:42,195 - INFO - 📋 Unknown at Unknown
+2025-10-09 11:34:42,223 - INFO - ✅ Found Easy Apply button
+2025-10-09 11:34:58,336 - INFO - 🔍 Looking for submit button...
+2025-10-09 11:36:43,585 - INFO - 🔍 Trying all submit selectors...
+2025-10-09 11:40:05,473 - ERROR - ❌ Could not find submit button
+2025-10-09 11:40:05,536 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251009_114005.png
+2025-10-09 11:40:52,120 - WARNING - No apply method found
+2025-10-09 11:40:52,121 - WARNING - ❌ Application failed
+2025-10-09 11:40:52,128 - INFO - 
+============================================================
+2025-10-09 11:40:52,128 - INFO - Job 54/55
+2025-10-09 11:41:38,399 - INFO - 📋 Unknown at Unknown
+2025-10-09 11:41:38,431 - INFO - ✅ Found Easy Apply button
+2025-10-09 11:41:39,606 - INFO - 💬 Chatbot detected
+2025-10-09 11:41:54,619 - INFO - 🔍 Looking for submit button...
+2025-10-09 11:43:27,919 - INFO - 🔍 Trying all submit selectors...
+2025-10-09 11:46:49,915 - ERROR - ❌ Could not find submit button
+2025-10-09 11:46:50,048 - INFO - 📸 Screenshot saved: debug_submit_not_found_20251009_114649.png
+2025-10-09 11:46:50,073 - INFO - ↗️ Found external apply link
+2025-10-09 11:46:51,126 - WARNING - No apply method found
+2025-10-09 11:46:51,127 - WARNING - ❌ Application failed
+2025-10-09 11:46:54,214 - INFO - 
+============================================================
+2025-10-09 11:46:54,214 - INFO - Job 55/55
+2025-10-09 11:47:39,989 - INFO - 📋 Unknown at Unknown
+2025-10-09 11:48:42,444 - INFO - ↗️ Found external apply link
+2025-10-09 11:48:45,775 - INFO - 🌐 External tab opened (total: 7)
+2025-10-09 11:48:45,775 - INFO - 📌 Tab will remain open for manual filling
+2025-10-09 11:48:45,820 - INFO - ⬅️ Returned to main tab
+2025-10-09 11:48:45,830 - WARNING - ❌ Application failed
+2025-10-09 11:48:45,835 - INFO - ⏸️ Rate limit pause: 10s
+2025-10-09 11:48:55,842 - INFO - 📊 Session report saved: naukri_session_20251009_114855.json
+2025-10-09 11:48:55,870 - INFO - 
+============================================================
+2025-10-09 11:48:55,873 - INFO - 📌 7 external tabs remain open
+2025-10-09 11:48:55,876 - INFO - 💡 You can now manually fill these applications
+2025-10-09 11:48:55,879 - INFO - ============================================================
+
+2025-10-09 11:48:55,882 - INFO - Database closed
+2025-10-09 17:29:32,695 - INFO - Browser closed (all tabs)
+2025-10-09 18:12:49,546 - INFO - ✅ Configuration loaded successfully
+2025-10-09 18:12:49,555 - INFO - ✅ Loaded selector cache with 2 cached selectors
+2025-10-09 18:12:49,563 - INFO - ✅ Job database initialized
+2025-10-09 18:12:49,563 - INFO - ℹ️ Gemini AI not configured (optional)
+2025-10-09 18:12:49,564 - INFO - ✅ Bot initialized successfully
+2025-10-09 18:12:49,564 - INFO - 🚀 Setting up browser...
+2025-10-09 18:12:53,499 - INFO - ✅ Driver setup successful (manual path)
+2025-10-09 18:12:53,667 - INFO - ✅ WebDriver ready
+2025-10-09 18:12:53,676 - INFO - 🔐 Login attempt 1/3
+2025-10-09 18:13:04,315 - INFO - ✅ Email entered
+2025-10-09 18:13:05,656 - INFO - ✅ Password entered
+2025-10-09 18:13:06,345 - INFO - ✅ Found login button
+2025-10-09 18:13:06,575 - WARNING - ❌ Login attempt 1 failed
+2025-10-09 18:13:11,931 - INFO - 🔐 Login attempt 2/3
+2025-10-09 18:13:13,511 - WARNING - Element became stale during typing, retrying...
+2025-10-09 18:13:13,758 - ERROR - Failed to find email field: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=141.0.3537.57); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff6b5103ec5+18309]
+	(No symbol) [0x0x7ff6b5071570]
+	GetHandleVerifier [0x0x7ff6b52f8efc+2070460]
+	(No symbol) [0x0x7ff6b4e84806]
+	(No symbol) [0x0x7ff6b4e8344d]
+	(No symbol) [0x0x7ff6b4e84c1f]
+	(No symbol) [0x0x7ff6b4e783d8]
+	(No symbol) [0x0x7ff6b4e7681c]
+	(No symbol) [0x0x7ff6b4e7a1ff]
+	(No symbol) [0x0x7ff6b4e7a2bf]
+	(No symbol) [0x0x7ff6b4ebf18a]
+	(No symbol) [0x0x7ff6b4ebf08c]
+	(No symbol) [0x0x7ff6b4ebf238]
+	(No symbol) [0x0x7ff6b4eb76f2]
+	(No symbol) [0x0x7ff6b4edfc7a]
+	(No symbol) [0x0x7ff6b4eb443b]
+	(No symbol) [0x0x7ff6b4eb42ed]
+	(No symbol) [0x0x7ff6b4edff30]
+	(No symbol) [0x0x7ff6b4eb443b]
+	(No symbol) [0x0x7ff6b4efd082]
+	(No symbol) [0x0x7ff6b4edf943]
+	(No symbol) [0x0x7ff6b4eb38e6]
+	(No symbol) [0x0x7ff6b4eb2b52]
+	(No symbol) [0x0x7ff6b4eb3723]
+	(No symbol) [0x0x7ff6b4fa2f75]
+	(No symbol) [0x0x7ff6b4fae74d]
+	GetHandleVerifier [0x0x7ff6b51995b3+630387]
+	GetHandleVerifier [0x0x7ff6b51a1151+662033]
+	(No symbol) [0x0x7ff6b507d659]
+	(No symbol) [0x0x7ff6b5076ff4]
+	(No symbol) [0x0x7ff6b5077143]
+	(No symbol) [0x0x7ff6b506afc6]
+	BaseThreadInitThunk [0x0x7ffe0c3ce8d7+23]
+	RtlUserThreadStart [0x0x7ffe0cc68d9c+44]
+
+2025-10-09 18:13:13,765 - INFO - 🔐 Login attempt 3/3
+2025-10-09 18:13:15,429 - WARNING - Element became stale during typing, retrying...
+2025-10-09 18:13:15,544 - ERROR - Failed to find email field: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=141.0.3537.57); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff6b5103ec5+18309]
+	(No symbol) [0x0x7ff6b5071570]
+	GetHandleVerifier [0x0x7ff6b52f8efc+2070460]
+	(No symbol) [0x0x7ff6b4e84806]
+	(No symbol) [0x0x7ff6b4e8344d]
+	(No symbol) [0x0x7ff6b4e84c1f]
+	(No symbol) [0x0x7ff6b4e783d8]
+	(No symbol) [0x0x7ff6b4e7681c]
+	(No symbol) [0x0x7ff6b4e7a1ff]
+	(No symbol) [0x0x7ff6b4e7a2bf]
+	(No symbol) [0x0x7ff6b4ebf18a]
+	(No symbol) [0x0x7ff6b4ebf08c]
+	(No symbol) [0x0x7ff6b4ebf238]
+	(No symbol) [0x0x7ff6b4eb76f2]
+	(No symbol) [0x0x7ff6b4edfc7a]
+	(No symbol) [0x0x7ff6b4eb443b]
+	(No symbol) [0x0x7ff6b4eb42ed]
+	(No symbol) [0x0x7ff6b4edff30]
+	(No symbol) [0x0x7ff6b4eb443b]
+	(No symbol) [0x0x7ff6b4efd082]
+	(No symbol) [0x0x7ff6b4edf943]
+	(No symbol) [0x0x7ff6b4eb38e6]
+	(No symbol) [0x0x7ff6b4eb2b52]
+	(No symbol) [0x0x7ff6b4eb3723]
+	(No symbol) [0x0x7ff6b4fa2f75]
+	(No symbol) [0x0x7ff6b4fae74d]
+	GetHandleVerifier [0x0x7ff6b51995b3+630387]
+	GetHandleVerifier [0x0x7ff6b51a1151+662033]
+	(No symbol) [0x0x7ff6b507d659]
+	(No symbol) [0x0x7ff6b5076ff4]
+	(No symbol) [0x0x7ff6b5077143]
+	(No symbol) [0x0x7ff6b506afc6]
+	BaseThreadInitThunk [0x0x7ffe0c3ce8d7+23]
+	RtlUserThreadStart [0x0x7ffe0cc68d9c+44]
+
+2025-10-09 18:13:15,548 - ERROR - ❌ All login attempts failed
+2025-10-09 18:13:15,554 - INFO - 📊 Session report saved: naukri_session_20251009_181315.json
+2025-10-09 18:13:15,578 - INFO - Database closed
+2025-10-10 12:19:56,994 - naukri_bot.core.naukri_bot - INFO - 🤖 Initializing Naukri Bot (Modular Edition)...
+2025-10-10 12:19:57,009 - naukri_bot.utils.config_manager - INFO - ✅ Configuration loaded from config.json
+2025-10-10 12:19:57,022 - naukri_bot.utils.database - INFO - ✅ Database initialized: naukri_jobs.db
+2025-10-10 12:19:57,024 - naukri_bot.core.webdriver_manager - INFO - 🌐 Initializing Edge WebDriver...
+2025-10-10 12:19:57,974 - WDM - INFO - ====== WebDriver manager ======
+2025-10-10 12:19:59,590 - WDM - INFO - Get LATEST edgedriver version for Edge 141.0.3537
+2025-10-10 12:20:01,141 - naukri_bot.core.webdriver_manager - INFO - ✅ WebDriver initialized (manual path)
+2025-10-10 12:20:01,195 - naukri_bot.chatbot.qa_dictionary - INFO - ✅ Loaded 68 Q&A pairs
+2025-10-10 12:20:01,248 - naukri_bot.chatbot.answer_provider - INFO - No Gemini API key, skipping Gemini initialization
+2025-10-10 12:20:01,330 - naukri_bot.core.naukri_bot - INFO - ✅ Bot initialized successfully
+2025-10-10 12:20:01,355 - naukri_bot.utils.session_manager - INFO - 📝 Session started: sessions\naukri_session_20251010_122001.json
+2025-10-10 12:20:01,365 - naukri_bot.modules.auth - INFO - 🔐 Logging in to Naukri.com...
+2025-10-10 12:21:23,988 - naukri_bot.modules.auth - INFO - ✅ Email entered
+2025-10-10 12:21:25,794 - naukri_bot.modules.auth - INFO - ✅ Password entered
+2025-10-10 12:21:26,567 - naukri_bot.modules.auth - INFO - ✅ Login button clicked
+2025-10-10 12:21:46,332 - naukri_bot.modules.auth - INFO - ✅ Login successful
+2025-10-10 12:21:46,334 - naukri_bot.modules.job_search - INFO - 🔍 Starting job search...
+2025-10-10 12:21:46,334 - naukri_bot.modules.job_search - INFO - 
+============================================================
+2025-10-10 12:21:46,334 - naukri_bot.modules.job_search - INFO - Searching: 'Data Engineer' in bengaluru
+2025-10-10 12:21:46,334 - naukri_bot.modules.job_search - INFO - ============================================================
+2025-10-10 12:21:46,335 - naukri_bot.modules.job_search - INFO - 🌐 Navigating to: https://www.naukri.com/Data-Engineer-jobs-in-bengaluru
+2025-10-10 12:21:51,394 - naukri_bot.modules.job_search - INFO - 📄 Scraping page 1/2...
+2025-10-10 12:24:52,513 - naukri_bot.modules.job_search - INFO - Found 5 jobs on page 1
+2025-10-10 12:25:52,605 - naukri_bot.modules.job_search - INFO - No more pages available
+2025-10-10 12:25:52,605 - naukri_bot.modules.job_search - INFO - ✅ Collected 5 jobs for 'Data Engineer'
+2025-10-10 12:25:54,847 - naukri_bot.modules.job_search - INFO - 
+============================================================
+2025-10-10 12:25:54,847 - naukri_bot.modules.job_search - INFO - Searching: 'Big Data Engineer' in bengaluru
+2025-10-10 12:25:54,849 - naukri_bot.modules.job_search - INFO - ============================================================
+2025-10-10 12:25:54,849 - naukri_bot.modules.job_search - INFO - 🌐 Navigating to: https://www.naukri.com/Big-Data-Engineer-jobs-in-bengaluru
+2025-10-10 12:25:59,353 - naukri_bot.modules.job_search - INFO - 📄 Scraping page 1/2...
+2025-10-10 12:29:15,790 - naukri_bot.modules.job_search - INFO - Found 0 jobs on page 1
+2025-10-10 12:30:15,974 - naukri_bot.modules.job_search - INFO - No more pages available
+2025-10-10 12:30:15,980 - naukri_bot.modules.job_search - INFO - ✅ Collected 0 jobs for 'Big Data Engineer'
+2025-10-10 12:30:18,881 - naukri_bot.modules.job_search - INFO - 
+============================================================
+2025-10-10 12:30:18,881 - naukri_bot.modules.job_search - INFO - Searching: 'ETL Developer' in bengaluru
+2025-10-10 12:30:18,881 - naukri_bot.modules.job_search - INFO - ============================================================
+2025-10-10 12:30:18,882 - naukri_bot.modules.job_search - INFO - 🌐 Navigating to: https://www.naukri.com/ETL-Developer-jobs-in-bengaluru
+2025-10-10 12:30:27,294 - naukri_bot.modules.job_search - INFO - 📄 Scraping page 1/2...
+2025-10-10 12:33:28,462 - naukri_bot.modules.job_search - INFO - Found 4 jobs on page 1
+2025-10-10 12:34:28,665 - naukri_bot.modules.job_search - INFO - No more pages available
+2025-10-10 12:34:28,667 - naukri_bot.modules.job_search - INFO - ✅ Collected 4 jobs for 'ETL Developer'
+2025-10-10 12:34:31,275 - naukri_bot.modules.job_search - INFO - 
+============================================================
+2025-10-10 12:34:31,276 - naukri_bot.modules.job_search - INFO - Searching: 'SQL Developer' in bengaluru
+2025-10-10 12:34:31,277 - naukri_bot.modules.job_search - INFO - ============================================================
+2025-10-10 12:34:31,278 - naukri_bot.modules.job_search - INFO - 🌐 Navigating to: https://www.naukri.com/SQL-Developer-jobs-in-bengaluru
+2025-10-10 12:34:35,836 - naukri_bot.modules.job_search - INFO - 📄 Scraping page 1/2...
+2025-10-10 12:37:36,903 - naukri_bot.modules.job_search - INFO - Found 1 jobs on page 1
+2025-10-10 12:38:37,103 - naukri_bot.modules.job_search - INFO - No more pages available
+2025-10-10 12:38:37,104 - naukri_bot.modules.job_search - INFO - ✅ Collected 1 jobs for 'SQL Developer'
+2025-10-10 12:38:39,820 - naukri_bot.modules.job_search - INFO - 
+✅ Found 6 jobs to apply
+2025-10-10 12:38:39,821 - naukri_bot.core.naukri_bot - INFO - 
+🎯 Starting applications to 6 jobs...
+2025-10-10 12:38:39,821 - naukri_bot.core.naukri_bot - INFO - 
+============================================================
+2025-10-10 12:38:39,822 - naukri_bot.core.naukri_bot - INFO - Job 1/6
+2025-10-10 12:38:39,822 - naukri_bot.core.naukri_bot - INFO - ============================================================
+2025-10-10 12:38:39,823 - naukri_bot.modules.application - INFO - 🌐 Opening job: https://www.naukri.com/job-listings-data-engineer-accenture-solutions-pvt-ltd-bengaluru-2-to-4-years-091025913858
+2025-10-10 12:39:00,263 - naukri_bot.modules.application - INFO - ✅ Easy Apply button clicked
+2025-10-10 12:39:16,989 - naukri_bot.chatbot.chatbot_handler - INFO - No chatbot detected
+2025-10-10 12:41:06,234 - naukri_bot.modules.application - ERROR - ❌ Application submission failed
+2025-10-10 12:41:06,483 - naukri_bot.modules.application - INFO - 📸 Debug screenshot saved: debug_screenshots\failed_data-engineer-accenture-solutions-pvt-ltd-bengaluru-2-to-4-years-091025913858_20251010_124106.png
+2025-10-10 12:41:06,487 - naukri_bot.core.naukri_bot - INFO - 
+============================================================
+2025-10-10 12:41:06,490 - naukri_bot.core.naukri_bot - INFO - Job 2/6
+2025-10-10 12:41:06,493 - naukri_bot.core.naukri_bot - INFO - ============================================================
+2025-10-10 12:41:06,495 - naukri_bot.modules.application - INFO - 🌐 Opening job: https://www.naukri.com/job-listings-data-engineer-accenture-solutions-pvt-ltd-bengaluru-5-to-10-years-091025914095
+2025-10-10 12:41:25,834 - naukri_bot.modules.application - INFO - ✅ Easy Apply button clicked
+2025-10-10 12:41:43,468 - naukri_bot.chatbot.chatbot_handler - INFO - No chatbot detected
+2025-10-10 12:43:32,295 - naukri_bot.modules.application - ERROR - ❌ Application submission failed
+2025-10-10 12:43:32,604 - naukri_bot.modules.application - INFO - 📸 Debug screenshot saved: debug_screenshots\failed_data-engineer-accenture-solutions-pvt-ltd-bengaluru-5-to-10-years-091025914095_20251010_124332.png
+2025-10-10 12:43:32,608 - naukri_bot.core.naukri_bot - INFO - 
+============================================================
+2025-10-10 12:43:32,609 - naukri_bot.core.naukri_bot - INFO - Job 3/6
+2025-10-10 12:43:32,609 - naukri_bot.core.naukri_bot - INFO - ============================================================
+2025-10-10 12:43:32,610 - naukri_bot.modules.application - INFO - 🌐 Opening job: https://www.naukri.com/job-listings-data-engineer-accenture-solutions-pvt-ltd-bengaluru-3-to-8-years-150925925448
+2025-10-10 12:45:06,774 - naukri_bot.modules.application - WARNING - ❌ Easy Apply button not found
+2025-10-10 12:45:06,774 - naukri_bot.core.naukri_bot - INFO - 
+============================================================
+2025-10-10 12:45:06,774 - naukri_bot.core.naukri_bot - INFO - Job 4/6
+2025-10-10 12:45:06,774 - naukri_bot.core.naukri_bot - INFO - ============================================================
+2025-10-10 12:45:06,781 - naukri_bot.modules.application - INFO - 🌐 Opening job: https://www.naukri.com/job-listings-sql-developer-mssql-healthasyst-bengaluru-5-to-8-years-071025018309
+2025-10-10 12:45:25,888 - naukri_bot.modules.application - INFO - ✅ Easy Apply button clicked
+2025-10-10 12:45:27,857 - naukri_bot.chatbot.chatbot_handler - INFO - 💬 Chatbot/Modal detected
+2025-10-10 12:45:27,923 - naukri_bot.chatbot.question_detector - INFO - ❓ Question detected: 'Applicants:...'
+2025-10-10 12:45:27,933 - naukri_bot.chatbot.chatbot_handler - INFO - ❓ Q1: 'Applicants:...'
+2025-10-10 12:45:27,934 - naukri_bot.chatbot.answer_provider - WARNING - ⚠️ No answer found for: 'Applicants:'
+2025-10-10 12:45:27,935 - naukri_bot.chatbot.chatbot_handler - INFO - 💡 Answer: 'Yes'
+2025-10-10 12:46:43,177 - naukri_bot.chatbot.chatbot_handler - WARNING - ⚠️ Could not submit answer
+2025-10-10 12:46:43,179 - naukri_bot.chatbot.chatbot_handler - INFO - ✅ Chatbot session ended - 0 questions answered
+2025-10-10 12:46:43,179 - naukri_bot.modules.application - INFO - 💬 Chatbot handled - 0 questions answered
+2025-10-10 12:48:03,012 - naukri_bot.modules.application - ERROR - ❌ Application submission failed
+2025-10-10 12:48:03,118 - naukri_bot.modules.application - INFO - 📸 Debug screenshot saved: debug_screenshots\failed_sql-developer-mssql-healthasyst-bengaluru-5-to-8-years-071025018309_20251010_124803.png
+2025-10-10 12:48:03,120 - naukri_bot.core.naukri_bot - INFO - 
+============================================================
+2025-10-10 12:48:03,120 - naukri_bot.core.naukri_bot - INFO - Job 5/6
+2025-10-10 12:48:03,121 - naukri_bot.core.naukri_bot - INFO - ============================================================
+2025-10-10 12:48:03,121 - naukri_bot.modules.application - INFO - 🌐 Opening job: https://www.naukri.com/job-listings-data-engineer-accenture-solutions-pvt-ltd-bengaluru-3-to-8-years-290925906687
+2025-10-10 12:48:22,656 - naukri_bot.modules.application - INFO - ✅ Easy Apply button clicked
+2025-10-10 12:48:39,568 - naukri_bot.chatbot.chatbot_handler - INFO - No chatbot detected
+2025-10-10 12:50:28,244 - naukri_bot.modules.application - ERROR - ❌ Application submission failed
+2025-10-10 12:50:28,485 - naukri_bot.modules.application - INFO - 📸 Debug screenshot saved: debug_screenshots\failed_data-engineer-accenture-solutions-pvt-ltd-bengaluru-3-to-8-years-290925906687_20251010_125028.png
+2025-10-10 12:50:28,486 - naukri_bot.core.naukri_bot - INFO - 
+============================================================
+2025-10-10 12:50:28,487 - naukri_bot.core.naukri_bot - INFO - Job 6/6
+2025-10-10 12:50:28,487 - naukri_bot.core.naukri_bot - INFO - ============================================================
+2025-10-10 12:50:28,488 - naukri_bot.modules.application - INFO - 🌐 Opening job: https://www.naukri.com/job-listings-data-engineer-accenture-solutions-pvt-ltd-bengaluru-3-to-8-years-150925919652
+2025-10-10 12:52:02,458 - naukri_bot.modules.application - WARNING - ❌ Easy Apply button not found
+2025-10-10 12:52:02,472 - naukri_bot.utils.session_manager - INFO - 💾 Session saved: sessions\naukri_session_20251010_122001.json
+2025-10-10 12:52:02,475 - naukri_bot.utils.database - INFO - Database connection closed
+2025-10-10 13:09:10,314 - naukri_bot.core.webdriver_manager - INFO - Browser closed
+2025-10-10 13:09:46,825 - INFO - ✅ Configuration loaded successfully
+2025-10-10 13:09:46,826 - INFO - ✅ Loaded selector cache with 2 cached selectors
+2025-10-10 13:09:46,827 - INFO - ✅ Job database initialized
+2025-10-10 13:09:46,828 - INFO - ℹ️ Gemini AI not configured (optional)
+2025-10-10 13:09:46,828 - INFO - ✅ Bot initialized successfully
+2025-10-10 13:09:46,829 - INFO - 🚀 Setting up browser...
+2025-10-10 13:09:50,160 - INFO - ✅ Driver setup successful (manual path)
+2025-10-10 13:09:50,435 - INFO - ✅ WebDriver ready
+2025-10-10 13:09:50,436 - INFO - 🔐 Login attempt 1/3
+2025-10-10 13:09:55,227 - INFO - ✅ Email entered
+2025-10-10 13:09:56,736 - INFO - ✅ Password entered
+2025-10-10 13:09:57,322 - INFO - ✅ Found login button
+2025-10-10 13:10:02,100 - INFO - ✅ Login verified
+2025-10-10 13:10:02,102 - INFO - ✅ Login successful!
+2025-10-10 13:10:02,102 - INFO - 🔍 Starting job search...
+2025-10-10 13:10:02,104 - INFO - 🔎 Searching for: Data Engineer
+2025-10-10 13:10:02,105 - INFO - 📄 Page 1

@@ -6,8 +6,40 @@ import time
 import random
 import logging
 import re
+from functools import wraps
+
+# selenium exception for decorator
+from selenium.common.exceptions import StaleElementReferenceException
 
 logger = logging.getLogger(__name__)
+
+
+def retry_on_stale(max_retries=3, base_delay=0.2):
+    """Decorator to retry functions that raise StaleElementReferenceException.
+
+    Usage:
+        @retry_on_stale(max_retries=4, base_delay=0.1)
+        def get_text(elem):
+            return elem.text
+    """
+    def decorator(fn):
+        @wraps(fn)
+        def wrapped(*args, **kwargs):
+            attempt = 0
+            while True:
+                try:
+                    return fn(*args, **kwargs)
+                except StaleElementReferenceException:
+                    attempt += 1
+                    if attempt > max_retries:
+                        raise
+                    delay = base_delay * (2 ** (attempt - 1))
+                    # jitter
+                    delay = delay * (0.8 + random.random() * 0.4)
+                    logger.debug(f"retry_on_stale: retry {attempt} after {delay:.2f}s")
+                    time.sleep(delay)
+        return wrapped
+    return decorator
 
 
 def smart_delay(min_delay=0.5, max_delay=1.0):

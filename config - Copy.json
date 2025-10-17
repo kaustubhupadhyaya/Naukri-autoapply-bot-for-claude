@@ -1,0 +1,55 @@
+{
+    "credentials": {
+        "email": "kaustubh.upadhyaya@gmail.com",
+        "password": "9880380081@kK"
+    },
+    "naukri_credentials": {
+        "username": "kaustubh.upadhyaya@gmail.com",
+        "password": "9880380081@kK"
+    },
+    "personal_info": {
+        "firstname": "Kaustubh",
+        "lastname": "Upadhyaya",
+        "phone": "8431988388",
+        "current_ctc": "12 LPA",
+        "expected_ctc": "18 LPA",
+        "notice_period": "15 days"
+    },
+    "user_profile": {
+        "name": "Your Name",
+        "experience_years": "2",
+        "current_role": "Software Engineer",
+        "core_skills": [
+            "Python",
+            "SQL",
+            "Data Engineering"
+        ]
+    },
+    "job_search": {
+        "keywords": [
+            "Data Engineer"
+        ],
+        "location": "Bangalore",
+        "experience": "2",
+        "max_applications_per_session": 100,
+        "pages_per_keyword": 5,
+        "job_age_days": 7,
+        "preferred_companies": [],
+        "avoid_companies": []
+    },
+    "webdriver": {
+        "edge_driver_path": "C:\\WebDrivers\\msedgedriver.exe",
+        "implicit_wait": 5,
+        "page_load_timeout": 45,
+        "headless": false,
+        "user_data_dir": ""
+    },
+    "bot_behavior": {
+        "min_delay": 0.2,
+        "max_delay": 0.8,
+        "typing_delay": 0.03,
+        "scroll_pause": 0.5,
+        "rate_limit_delay": 5
+    },
+    "gemini_api_key": ""
+}

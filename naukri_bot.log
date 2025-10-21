@@ -5564,3 +5564,62 @@ Stacktrace:
 2025-10-13 19:47:41,568 - INFO - 📊 Session report saved: naukri_session_20251013_194741.json
 2025-10-13 19:47:41,570 - INFO - Database closed
 2025-10-13 19:50:52,551 - INFO - Browser closed (all tabs)
+2025-10-17 19:05:00,176 - INFO - ✅ Configuration loaded successfully
+2025-10-17 19:05:00,195 - INFO - ✅ Loaded selector cache with 2 cached selectors
+2025-10-17 19:05:00,233 - INFO - ✅ Job database initialized
+2025-10-17 19:05:00,246 - INFO - ℹ️ Gemini AI not configured (optional)
+2025-10-17 19:05:00,264 - INFO - ✅ Bot initialized successfully
+2025-10-17 19:05:00,265 - INFO - 🚀 Setting up browser...
+2025-10-17 19:05:09,566 - INFO - ✅ Driver setup successful (manual path)
+2025-10-17 19:05:09,658 - INFO - ✅ WebDriver ready
+2025-10-17 19:05:09,659 - INFO - 🔐 Login attempt 1/3
+2025-10-17 19:05:14,379 - INFO - ✅ Email entered
+2025-10-17 19:05:15,077 - INFO - ✅ Password entered
+2025-10-17 19:05:15,995 - INFO - ✅ Found login button
+2025-10-17 19:05:16,110 - WARNING - ❌ Login attempt 1 failed
+2025-10-17 19:05:25,804 - INFO - 🔐 Login attempt 2/3
+2025-10-17 19:05:30,726 - WARNING - Element became stale during typing, retrying...
+2025-10-17 19:05:30,968 - ERROR - Failed to find email field: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=141.0.3537.71); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff741453ec5+18309]
+	(No symbol) [0x0x7ff7413c1570]
+	GetHandleVerifier [0x0x7ff741648efc+2070460]
+	(No symbol) [0x0x7ff7411d4806]
+	(No symbol) [0x0x7ff7411d344d]
+	(No symbol) [0x0x7ff7411d4c1f]
+	(No symbol) [0x0x7ff7411c83d8]
+	(No symbol) [0x0x7ff7411c681c]
+	(No symbol) [0x0x7ff7411ca1ff]
+	(No symbol) [0x0x7ff7411ca2bf]
+	(No symbol) [0x0x7ff74120f18a]
+	(No symbol) [0x0x7ff74120f08c]
+	(No symbol) [0x0x7ff74120f238]
+	(No symbol) [0x0x7ff7412076f2]
+	(No symbol) [0x0x7ff74122fc7a]
+	(No symbol) [0x0x7ff74120443b]
+	(No symbol) [0x0x7ff7412042ed]
+	(No symbol) [0x0x7ff74122ff30]
+	(No symbol) [0x0x7ff74120443b]
+	(No symbol) [0x0x7ff74124d082]
+	(No symbol) [0x0x7ff74122f943]
+	(No symbol) [0x0x7ff7412038e6]
+	(No symbol) [0x0x7ff741202b52]
+	(No symbol) [0x0x7ff741203723]
+	(No symbol) [0x0x7ff7412f2f75]
+	(No symbol) [0x0x7ff7412fe74d]
+	GetHandleVerifier [0x0x7ff7414e95b3+630387]
+	GetHandleVerifier [0x0x7ff7414f1151+662033]
+	(No symbol) [0x0x7ff7413cd659]
+	(No symbol) [0x0x7ff7413c6ff4]
+	(No symbol) [0x0x7ff7413c7143]
+	(No symbol) [0x0x7ff7413bafc6]
+	BaseThreadInitThunk [0x0x7ffa52c2e8d7+23]
+	RtlUserThreadStart [0x0x7ffa54cec53c+44]
+
+2025-10-17 19:05:30,985 - INFO - 🔐 Login attempt 3/3
+2025-10-17 19:07:24,674 - ERROR - Failed to find email field: Message: Could not find element with any selector for login_email; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+
+2025-10-17 19:07:24,675 - ERROR - ❌ All login attempts failed
+2025-10-17 19:07:24,678 - INFO - 📊 Session report saved: naukri_session_20251017_190724.json
+2025-10-17 19:07:24,686 - INFO - Database closed

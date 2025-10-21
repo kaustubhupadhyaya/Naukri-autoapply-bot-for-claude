@@ -1,0 +1,38 @@
+{
+    "timestamp": "20251017_190724",
+    "date": "2025-10-17T19:07:24.677769",
+    "statistics": {
+        "total_jobs_found": 0,
+        "applications_sent": 0,
+        "applications_failed": 0,
+        "jobs_skipped": 0,
+        "external_tabs_opened": 0,
+        "success_rate": 0.0,
+        "submit_button_success_rate": 0.0
+    },
+    "applications": {
+        "successful": [],
+        "failed": []
+    },
+    "config_used": {
+        "keywords": [
+            "Data Engineer",
+            "Big Data Engineer",
+            "ETL Developer",
+            "SQL Developer"
+        ],
+        "location": "bengaluru"
+    },
+    "performance": {
+        "avg_job_scrape_time": 0,
+        "avg_apply_time": 0,
+        "total_jobs_processed": 0,
+        "cache_hits": 3,
+        "cache_misses": 1,
+        "submit_button_success": 0,
+        "submit_button_failures": 0
+    },
+    "cached_selectors": {
+        "login_password": "#passwordField"
+    }
+}

@@ -780,10 +780,6 @@ class NaukriBot:
         except:
             return True
 
-    def apply_to_jobs(self):
-        """Apply to jobs (now accepts an explicit list via parameter)."""
-        logger.warning("apply_to_jobs() without arguments is deprecated. Use apply_to_jobs(job_urls) instead.")
-        return
 
     def _apply_to_single_job(self, job_url):
         """Apply to single job - keeps external tabs OPEN"""

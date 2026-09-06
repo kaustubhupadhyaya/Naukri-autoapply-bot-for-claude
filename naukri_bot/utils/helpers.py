@@ -1,101 +1,77 @@
-"""
-Helper Functions - Common utilities
-"""
+"""Shared helpers: delays, typing, Gemini init.
 
+Restructured from Naukri_Edge.py (2025-10-12 "IMPROVED VERSION").
+Methods are moved verbatim from the original class; behavior is unchanged.
+"""
+import os
+import sys
+import json
 import time
 import random
+import sqlite3
 import logging
-import re
-from functools import wraps
+import platform
+from datetime import datetime
+from pathlib import Path
 
-# selenium exception for decorator
-from selenium.common.exceptions import StaleElementReferenceException
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.edge.service import Service as EdgeService
+from selenium.common.exceptions import (
+    TimeoutException,
+    NoSuchElementException,
+    WebDriverException,
+    StaleElementReferenceException,
+    ElementClickInterceptedException,
+    InvalidSessionIdException,
+    ElementNotInteractableException,
+)
 
 logger = logging.getLogger(__name__)
 
 
-def retry_on_stale(max_retries=3, base_delay=0.2):
-    """Decorator to retry functions that raise StaleElementReferenceException.
+class HelpersMixin:
 
-    Usage:
-        @retry_on_stale(max_retries=4, base_delay=0.1)
-        def get_text(elem):
-            return elem.text
-    """
-    def decorator(fn):
-        @wraps(fn)
-        def wrapped(*args, **kwargs):
-            attempt = 0
-            while True:
-                try:
-                    return fn(*args, **kwargs)
-                except StaleElementReferenceException:
-                    attempt += 1
-                    if attempt > max_retries:
-                        raise
-                    delay = base_delay * (2 ** (attempt - 1))
-                    # jitter
-                    delay = delay * (0.8 + random.random() * 0.4)
-                    logger.debug(f"retry_on_stale: retry {attempt} after {delay:.2f}s")
-                    time.sleep(delay)
-        return wrapped
-    return decorator
+    def _init_gemini_if_configured(self):
+        """Initialize Gemini AI if API key is present"""
+        try:
+            if 'gemini_api_key' in self.config and self.config['gemini_api_key']:
+                import google.generativeai as genai
+                genai.configure(api_key=self.config['gemini_api_key'])
+                self.gemini_model = genai.GenerativeModel('gemini-1.5-flash')
+                logger.info("✅ Gemini AI initialized")
+            else:
+                self.gemini_model = None
+                logger.info("ℹ️ Gemini AI not configured (optional)")
+        except Exception as e:
+            self.gemini_model = None
+            logger.warning(f"⚠️ Gemini AI initialization failed: {e}")
 
+    def smart_delay(self, min_seconds=None, max_seconds=None, probability=0.3):
+        """Ultra-minimal delays"""
+        if min_seconds is None:
+            min_seconds = self.config['bot_behavior']['min_delay']
+        if max_seconds is None:
+            max_seconds = self.config['bot_behavior']['max_delay']
 
-def smart_delay(min_delay=0.5, max_delay=1.0):
-    """Human-like random delay"""
-    delay = random.uniform(min_delay, max_delay)
-    time.sleep(delay)
+        if random.random() < probability:
+            delay = random.uniform(min_seconds, max_seconds)
+            time.sleep(delay)
 
+    def human_type(self, element, text, typing_delay=None):
+        """Type text like a human"""
+        try:
+            if typing_delay is None:
+                typing_delay = self.config['bot_behavior']['typing_delay']
 
-def human_type(element, text, typing_delay=0.05):
-    """Type text with human-like delays"""
-    for char in text:
-        element.send_keys(char)
-        time.sleep(random.uniform(typing_delay * 0.5, typing_delay * 1.5))
+            element.clear()
+            for char in text:
+                element.send_keys(char)
+                if random.random() < 0.1:
+                    time.sleep(random.uniform(0.01, typing_delay))
 
-
-def extract_job_id(url):
-    """Extract job ID from URL"""
-    try:
-        match = re.search(r'jobId[=\-](\d+)', url)
-        if match:
-            return match.group(1)
-        
-        # Alternative patterns
-        match = re.search(r'/job-listings-([^/?]+)', url)
-        if match:
-            return match.group(1)
-        
-        # Last resort: hash the URL
-        import hashlib
-        return hashlib.md5(url.encode()).hexdigest()[:16]
-        
-    except Exception as e:
-        logger.debug(f"Could not extract job ID: {e}")
-        return None
-
-
-def sanitize_filename(filename, max_length=100):
-    """Sanitize filename for saving"""
-    # Remove invalid characters
-    filename = re.sub(r'[<>:"/\\|?*]', '_', filename)
-    
-    # Limit length
-    if len(filename) > max_length:
-        filename = filename[:max_length]
-    
-    return filename
-
-
-def is_external_url(url):
-    """Check if URL is external (not Naukri)"""
-    external_domains = [
-        'linkedin.com',
-        'indeed.com',
-        'naukrigulf.com',
-        'monster.com',
-        'shine.com'
-    ]
-    
-    return any(domain in url.lower() for domain in external_domains)
+        except StaleElementReferenceException:
+            logger.warning("Element became stale during typing, retrying...")
+            element.send_keys(text)

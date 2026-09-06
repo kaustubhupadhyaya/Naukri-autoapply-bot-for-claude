@@ -1,251 +1,546 @@
-"""
-Application Module - Handles job application submission
-"""
+"""Application flow + robust submit pipeline.
 
+Restructured from Naukri_Edge.py (2025-10-12 "IMPROVED VERSION").
+Methods are moved verbatim from the original class; behavior is unchanged.
+"""
+import os
+import sys
+import json
 import time
+import random
+import sqlite3
 import logging
+import platform
 from datetime import datetime
+from pathlib import Path
+
+from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import TimeoutException
-
-from naukri_bot.utils.helpers import smart_delay, extract_job_id, sanitize_filename
-from naukri_bot.chatbot.chatbot_handler import ChatbotHandler
+from selenium.webdriver.edge.service import Service as EdgeService
+from selenium.common.exceptions import (
+    TimeoutException,
+    NoSuchElementException,
+    WebDriverException,
+    StaleElementReferenceException,
+    ElementClickInterceptedException,
+    InvalidSessionIdException,
+    ElementNotInteractableException,
+)
 
 logger = logging.getLogger(__name__)
 
 
-class ApplicationModule:
-    """Handles job application process"""
+class ApplicationMixin:
 
-    def __init__(self, driver, config, database):
-        self.driver = driver
-        self.config = config
-        self.database = database
-        self.chatbot_handler = ChatbotHandler(driver, config)
+    def apply_to_jobs(self, job_urls):
+        """Apply to a list of jobs"""
+        if not job_urls:
+            logger.warning("No jobs to apply to in the current batch.")
+            return
 
-        # Statistics
-        self.applied = 0
-        self.failed = 0
-        self.skipped = 0
+        logger.info(f"🎯 Starting applications for {len(job_urls)} jobs...")
+        max_applications = self.config['job_search'].get('max_applications_per_session', 100)
 
-    def apply_to_job(self, job_url):
-        """
-        Apply to a single job
-        Returns: True if successful, False otherwise
-        """
-        try:
-            job_id = extract_job_id(job_url)
+        for index, job_url in enumerate(job_urls):
+            if self.applied >= max_applications:
+                logger.info(f"✋ Reached application limit ({max_applications})")
+                break
 
-            # Check if already applied
-            if self.database.is_job_applied(job_id):
-                logger.info("↩ Already applied, skipping")
-                self.skipped += 1
-                return False
+            if not self.ensure_valid_session():
+                logger.error("Could not recover session. Ending application process.")
+                break
 
-            # Navigate to job
-            logger.info(f"🌐 Opening job: {job_url}")
-            self.driver.get(job_url)
-            smart_delay(2, 3)
-
-            # Check if external redirect
-            if self._is_external_redirect():
-                logger.info("🔗 External job posting, skipping")
-                self.skipped += 1
-                return False
-
-            # Click Easy Apply button
-            if not self._click_easy_apply():
-                logger.warning("❌ Easy Apply button not found")
-                self.failed += 1
-                return False
-
-            smart_delay(1, 2)
-
-            # Handle chatbot if present
-            chatbot_handled = self.chatbot_handler.handle_chatbot(timeout=3)
-
-            if chatbot_handled:
-                logger.info(f"💬 Chatbot handled - {self.chatbot_handler.questions_answered} questions answered")
-
-            # Submit application
-            if self._submit_application():
-                logger.info("✅ Application submitted successfully")
-
-                # Save to database
-                self.database.add_applied_job(
-                    job_id=job_id,
-                    job_url=job_url,
-                    status='applied'
-                )
-
-                self.applied += 1
-                return True
-            else:
-                logger.error("❌ Application submission failed")
-                self._take_debug_screenshot(job_id)
-                self.failed += 1
-                return False
-
-        except Exception as e:
-            logger.error(f"Application error: {e}")
-            self._take_debug_screenshot(extract_job_id(job_url))
-            self.failed += 1
-            return False
-
-    def _is_external_redirect(self):
-        """Check if job redirects to external site"""
-        current_url = self.driver.current_url.lower()
-
-        external_domains = [
-            'linkedin.com',
-            'indeed.com',
-            'monster.com',
-            'shine.com',
-            'naukrigulf.com'
-        ]
-
-        return any(domain in current_url for domain in external_domains)
-
-    def _click_easy_apply(self):
-        """Click Easy Apply button"""
-        easy_apply_selectors = [
-            "button.btn-primary",
-            "button:contains('Apply')",
-            "a:contains('Apply')",
-            "button[class*='apply']",
-            "//button[contains(text(), 'Apply')]",
-            "//span[contains(text(), 'Apply')]/.."
-        ]
-
-        for selector in easy_apply_selectors:
             try:
-                if selector.startswith('//'):
-                    button = self.driver.find_element(By.XPATH, selector)
-                elif ':contains' in selector:
-                    text = 'Apply'
-                    button = self.driver.find_element(
-                        By.XPATH,
-                        f"//{selector.split(':')[0]}[contains(text(), '{text}')]"
-                    )
+                logger.info(f"\n{'='*60}")
+                logger.info(f"Job {self.applied + self.failed + 1}/{len(self.joblinks)}")
+
+                job_id = self._extract_job_id(job_url)
+                if self.is_job_already_applied(job_id):
+                    logger.info("⏩ Already applied, skipping")
+                    self.skipped += 1
+                    continue
+
+                if self._apply_to_single_job(job_url):
+                    self.applied += 1
+                    self.applied_list['passed'].append(job_url)
+                    logger.info(f"✅ Application {self.applied} successful!")
                 else:
-                    button = self.driver.find_element(By.CSS_SELECTOR, selector)
+                    self.failed += 1
+                    self.applied_list['failed'].append(job_url)
+                    logger.warning("❌ Application failed")
 
-                if button.is_displayed() and button.is_enabled():
-                    button.click()
-                    logger.info("✅ Easy Apply button clicked")
-                    return True
+                if (self.applied + self.failed) % 5 == 0:
+                    rate_delay = self.config['bot_behavior'].get('rate_limit_delay', 5)
+                    logger.info(f"⏸️ Rate limit pause: {rate_delay}s")
+                    time.sleep(rate_delay)
+                else:
+                    self.smart_delay(1, 3, probability=0.5)
 
-            except:
+            except KeyboardInterrupt:
+                logger.info("User interrupted.")
+                break
+            except Exception as e:
+                logger.error(f"An unexpected error occurred with job {job_url}: {e}")
+                self.failed += 1
                 continue
 
-        return False
+    def _apply_to_single_job(self, job_url):
+        """Apply to single job - keeps external tabs OPEN"""
+        original_tab = None
 
-    def _submit_application(self):
-        """Submit the application"""
-        submit_button_selectors = [
-            "button[type='submit']",
-            "button:contains('Submit')",
-            "button:contains('Apply')",
-            "button.btn-primary",
-            "//button[contains(text(), 'Submit')]",
-            "//button[contains(text(), 'Apply')]",
-            "input[type='submit']"
-        ]
+        try:
+            original_tab = self.driver.current_window_handle
 
-        for selector in submit_button_selectors:
+            self.driver.get(job_url)
+
             try:
-                if selector.startswith('//'):
-                    button = WebDriverWait(self.driver, 5).until(
-                        EC.element_to_be_clickable((By.XPATH, selector))
-                    )
-                elif ':contains' in selector:
-                    tag = selector.split(':')[0]
-                    text = selector.split("'")[1]
-                    button = WebDriverWait(self.driver, 5).until(
-                        EC.element_to_be_clickable((
-                            By.XPATH,
-                            f"//{tag}[contains(text(), '{text}')]"
-                        ))
-                    )
-                else:
-                    button = WebDriverWait(self.driver, 5).until(
-                        EC.element_to_be_clickable((By.CSS_SELECTOR, selector))
-                    )
+                WebDriverWait(self.driver, 6).until(
+                    EC.presence_of_element_located((By.CSS_SELECTOR, 'body'))
+                )
+            except TimeoutException:
+                logger.warning("Job page load timeout")
+                return False
 
-                if button.is_displayed() and button.is_enabled():
-                    button.click()
-                    logger.info("✅ Submit button clicked")
-                    smart_delay(2, 3)
+            # Check if already applied
+            try:
+                already_applied = self.driver.find_elements(By.CSS_SELECTOR, ".already-applied-layer")
+                if already_applied and any(el.is_displayed() for el in already_applied):
+                    logger.info("⏩ Page shows already applied")
+                    return False
+            except:
+                pass
 
-                    # Verify submission
-                    if self._verify_submission():
+            # Extract job details
+            job_title = "Unknown"
+            company = "Unknown"
+
+            try:
+                job_title = self.driver.find_element(By.CSS_SELECTOR, '.jd-header-title').text
+            except:
+                pass
+
+            try:
+                company = self.driver.find_element(By.CSS_SELECTOR, '.jd-header-comp-name').text
+            except:
+                pass
+
+            logger.info(f"📋 {job_title} at {company}")
+
+            # PRIORITY 1: Easy Apply
+            try:
+                easy_apply_selectors = [
+                    "button.apply-button",
+                    "button[class*='apply-button']",
+                    "button[id*='apply']",
+                    ".job-apply-button"
+                ]
+
+                easy_apply_button = None
+                for selector in easy_apply_selectors:
+                    try:
+                        easy_apply_button = WebDriverWait(self.driver, 3).until(
+                            EC.element_to_be_clickable((By.CSS_SELECTOR, selector))
+                        )
+                        if easy_apply_button.is_displayed():
+                            break
+                    except:
+                        continue
+
+                if easy_apply_button:
+                    logger.info("✅ Found Easy Apply button")
+
+                    self.driver.execute_script(
+                        "arguments[0].scrollIntoView({block: 'center'});",
+                        easy_apply_button
+                    )
+                    time.sleep(0.5)
+
+                    try:
+                        easy_apply_button.click()
+                    except:
+                        self.driver.execute_script("arguments[0].click();", easy_apply_button)
+
+                    self._handle_chatbot(timeout=5)
+
+                    if self._handle_easy_apply_submission_improved():
+                        self._save_job_application(
+                            self._extract_job_id(job_url),
+                            job_url,
+                            "Applied (Easy Apply)",
+                            f"{job_title} at {company}"
+                        )
                         return True
 
             except TimeoutException:
-                continue
+                logger.info("No Easy Apply button")
             except Exception as e:
-                logger.debug(f"Submit attempt failed: {e}")
-                continue
+                logger.error(f"Easy Apply error: {e}")
 
-        return False
-
-    def _verify_submission(self):
-        """Verify application was submitted successfully"""
-        success_indicators = [
-            "div:contains('Application sent')",
-            "div:contains('Successfully applied')",
-            "div:contains('Application submitted')",
-            "//div[contains(text(), 'successfully')]",
-            "//div[contains(text(), 'applied')]",
-            "span.success"
-        ]
-
-        for selector in success_indicators:
+            # PRIORITY 2: External Apply - DON'T CLOSE TAB
             try:
-                if selector.startswith('//'):
-                    element = self.driver.find_element(By.XPATH, selector)
-                elif ':contains' in selector:
-                    text = selector.split("'")[1]
-                    element = self.driver.find_element(
-                        By.XPATH,
-                        f"//div[contains(text(), '{text}')]"
-                    )
-                else:
-                    element = self.driver.find_element(By.CSS_SELECTOR, selector)
+                external_apply_selectors = [
+                    "//button[contains(translate(text(), 'A', 'a'), 'apply')]",
+                    "//a[contains(translate(text(), 'A', 'a'), 'apply')]",
+                    "//button[contains(@class, 'apply')]"
+                ]
 
-                if element.is_displayed():
-                    return True
+                for selector in external_apply_selectors:
+                    try:
+                        external_button = WebDriverWait(self.driver, 2).until(
+                            EC.element_to_be_clickable((By.XPATH, selector))
+                        )
 
-            except:
-                continue
+                        logger.info("↗️ Found external apply link")
 
-        return False
+                        href = external_button.get_attribute('href')
+                        if href:
+                            logger.info(f"🌐 Opening external tab: {href[:50]}...")
+                            self.driver.execute_script(f"window.open('{href}', '_blank');")
+                        else:
+                            external_button.click()
 
-    def _take_debug_screenshot(self, job_id):
-        """Take screenshot for debugging"""
-        try:
-            from pathlib import Path
+                        self.smart_delay(1, 2, probability=0.5)
 
-            screenshot_dir = Path('debug_screenshots')
-            screenshot_dir.mkdir(exist_ok=True)
+                        # Switch to new tab but DON'T CLOSE IT
+                        if len(self.driver.window_handles) > 1:
+                            new_tab = self.driver.window_handles[-1]
+                            self.external_tabs_opened.append(new_tab)
 
-            timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-            filename = f"failed_{job_id}_{timestamp}.png"
+                            logger.info(f"🌐 External tab opened (total: {len(self.external_tabs_opened)})")
+                            logger.info("📌 Tab will remain open for manual filling")
 
-            filepath = screenshot_dir / filename
-            self.driver.save_screenshot(str(filepath))
+                            # Switch back to original tab
+                            self.driver.switch_to.window(original_tab)
 
-            logger.info(f"📸 Debug screenshot saved: {filepath}")
+                        logger.info("⬅️ Returned to main tab")
+
+                        # Mark as external (not counted as successful auto-apply)
+                        self._save_job_application(
+                            self._extract_job_id(job_url),
+                            job_url,
+                            "External (Manual Required)",
+                            f"{job_title} at {company}"
+                        )
+
+                        self.skipped += 1
+                        return False  # External applications require manual work
+
+                    except TimeoutException:
+                        continue
+            except Exception as e:
+                logger.debug(f"External apply check error: {e}")
+
+            logger.warning("No apply method found")
+            return False
 
         except Exception as e:
-            logger.debug(f"Could not save screenshot: {e}")
+            logger.error(f"Error in _apply_to_single_job: {e}")
+            return False
+        finally:
+            # Ensure we're back on original tab
+            try:
+                if original_tab and self.driver.current_window_handle != original_tab:
+                    self.driver.switch_to.window(original_tab)
+            except:
+                pass
 
-    def get_statistics(self):
-        """Get application statistics"""
-        return {
-            'applied': self.applied,
-            'failed': self.failed,
-            'skipped': self.skipped
-        }
+    def _handle_easy_apply_submission_improved(self):
+        """
+        IMPROVED: Submit with better handling of overlays, iframes, and visual confirmation
+        """
+        try:
+            logger.info("🔍 Looking for submit button...")
+
+            # STEP 1: Close any overlays/iframes that might be blocking
+            self._close_blocking_elements()
+
+            # STEP 2: Wait for skeleton loaders to disappear
+            self._wait_for_skeleton_loaders()
+
+            # STEP 3: Comprehensive submit button search with REDUCED timeout
+            submit_selectors = [
+                # Type-based (most reliable)
+                "button[type='submit']:not([disabled])",
+                "input[type='submit']:not([disabled])",
+
+                # Class-based
+                "button.submitButton:not([disabled])",
+                "button[class*='submit']:not([disabled])",
+                "button[class*='Submit']:not([disabled])",
+                ".btn-primary[type='submit']:not([disabled])",
+
+                # Text-based XPath (case-insensitive)
+                "//button[contains(translate(text(), 'SUBMIT', 'submit'), 'submit') and not(@disabled)]",
+                "//button[contains(translate(@value, 'SUBMIT', 'submit'), 'submit') and not(@disabled)]",
+                "//input[contains(translate(@value, 'SUBMIT', 'submit'), 'submit') and not(@disabled)]",
+
+                # ID-based
+                "button#submitButton:not([disabled])",
+                "#submitButton:not([disabled])",
+
+                # Aria-label based
+                "button[aria-label*='submit']:not([disabled])",
+                "button[aria-label*='Submit']:not([disabled])",
+            ]
+
+            submit_button = None
+            successful_selector = None
+
+            # REDUCED TIMEOUT: 10 seconds instead of 20
+            submit_wait = WebDriverWait(self.driver, 10)
+
+            # Try cached selector first (if exists)
+            if self.selector_cache.get('submit_button'):
+                try:
+                    cached_selector = self.selector_cache['submit_button']
+                    logger.info(f"🔍 Trying cached submit selector")
+
+                    by_type = By.XPATH if cached_selector.startswith('//') else By.CSS_SELECTOR
+
+                    submit_button = submit_wait.until(
+                        EC.element_to_be_clickable((by_type, cached_selector))
+                    )
+
+                    if submit_button and submit_button.is_displayed() and submit_button.is_enabled():
+                        successful_selector = cached_selector
+                        self.performance_stats['cache_hits'] += 1
+                        logger.info(f"✨ Cache HIT for submit_button")
+                    else:
+                        raise Exception("Cached button not usable")
+
+                except Exception as e:
+                    logger.debug(f"Cache MISS: {str(e)[:50]}")
+                    self.selector_cache['submit_button'] = None
+                    self.performance_stats['cache_misses'] += 1
+                    submit_button = None
+
+            # Try all selectors if cached failed
+            if not submit_button:
+                logger.info("🔍 Trying all submit selectors...")
+                for selector in submit_selectors:
+                    try:
+                        by_type = By.XPATH if selector.startswith('//') else By.CSS_SELECTOR
+
+                        # Shorter timeout per selector
+                        element = WebDriverWait(self.driver, 2).until(
+                            EC.element_to_be_clickable((by_type, selector))
+                        )
+
+                        # Verify it's actually visible and enabled
+                        if element.is_displayed() and element.is_enabled():
+                            submit_button = element
+                            successful_selector = selector
+
+                            # Cache this selector
+                            self.selector_cache['submit_button'] = selector
+                            self.save_selector_cache()
+                            logger.info(f"✅ Found and cached submit button")
+                            break
+
+                    except TimeoutException:
+                        continue
+                    except Exception as e:
+                        logger.debug(f"Selector failed: {str(e)[:50]}")
+                        continue
+
+            if not submit_button:
+                logger.error("❌ Could not find submit button")
+                self._take_debug_screenshot("submit_not_found")
+                self.performance_stats['submit_button_failures'] += 1
+                return False
+
+            # STEP 4: Scroll button into view
+            try:
+                self.driver.execute_script(
+                    "arguments[0].scrollIntoView({block: 'center', behavior: 'smooth'});",
+                    submit_button
+                )
+                time.sleep(0.5)
+            except:
+                pass
+
+            # STEP 5: Click the button (with multiple strategies)
+            clicked = False
+
+            # Strategy 1: Regular click
+            try:
+                submit_button.click()
+                clicked = True
+                logger.info("✅ Submit clicked (regular)")
+            except ElementClickInterceptedException:
+                logger.debug("Regular click intercepted, trying JS")
+            except ElementNotInteractableException:
+                logger.debug("Element not interactable, trying JS")
+            except Exception as e:
+                logger.debug(f"Regular click failed: {e}")
+
+            # Strategy 2: JavaScript click
+            if not clicked:
+                try:
+                    self.driver.execute_script("arguments[0].click();", submit_button)
+                    clicked = True
+                    logger.info("✅ Submit clicked (JavaScript)")
+                except Exception as e:
+                    logger.debug(f"JS click failed: {e}")
+
+            # Strategy 3: Actions click
+            if not clicked:
+                try:
+                    from selenium.webdriver.common.action_chains import ActionChains
+                    actions = ActionChains(self.driver)
+                    actions.move_to_element(submit_button).click().perform()
+                    clicked = True
+                    logger.info("✅ Submit clicked (Actions)")
+                except Exception as e:
+                    logger.debug(f"Actions click failed: {e}")
+
+            if not clicked:
+                logger.error("❌ All click strategies failed")
+                self._take_debug_screenshot("click_failed")
+                self.performance_stats['submit_button_failures'] += 1
+                return False
+
+            # STEP 6: Visual confirmation of submission
+            time.sleep(2)  # Wait for response
+
+            if self._verify_application_submitted():
+                logger.info("✅ Application submission CONFIRMED")
+                self.performance_stats['submit_button_success'] += 1
+                return True
+            else:
+                logger.warning("⚠️ Submission verification unclear")
+                self._take_debug_screenshot("submission_unclear")
+                # Still return True since we clicked the button
+                self.performance_stats['submit_button_success'] += 1
+                return True
+
+        except Exception as e:
+            logger.error(f"Error in submission: {e}")
+            self._take_debug_screenshot("submission_error")
+            self.performance_stats['submit_button_failures'] += 1
+            return False
+
+    def _close_blocking_elements(self):
+        """Close overlays, modals, and iframes that might be blocking"""
+        try:
+            # Close overlays
+            overlay_selectors = [
+                ".overlay",
+                "[class*='overlay']",
+                "[class*='modal']",
+                ".modal-backdrop"
+            ]
+
+            for selector in overlay_selectors:
+                try:
+                    overlays = self.driver.find_elements(By.CSS_SELECTOR, selector)
+                    for overlay in overlays:
+                        if overlay.is_displayed():
+                            # Try to find close button in overlay
+                            try:
+                                close_btn = overlay.find_element(By.CSS_SELECTOR,
+                                    "button.close, [aria-label='Close'], .close-button")
+                                close_btn.click()
+                                time.sleep(0.5)
+                            except:
+                                # If no close button, try to hide overlay with JS
+                                self.driver.execute_script(
+                                    "arguments[0].style.display = 'none';", overlay
+                                )
+                except:
+                    continue
+
+        except Exception as e:
+            logger.debug(f"Overlay handling: {e}")
+
+    def _wait_for_skeleton_loaders(self):
+        """Wait for skeleton loaders to disappear"""
+        try:
+            loader_selectors = [
+                "[class*='skeleton']",
+                "[class*='loader']",
+                "[class*='loading']"
+            ]
+
+            for selector in loader_selectors:
+                try:
+                    # Wait up to 3 seconds for loaders to disappear
+                    WebDriverWait(self.driver, 3).until_not(
+                        EC.presence_of_element_located((By.CSS_SELECTOR, selector))
+                    )
+                except TimeoutException:
+                    # Loader still present or never existed
+                    pass
+                except:
+                    continue
+
+        except Exception as e:
+            logger.debug(f"Skeleton loader handling: {e}")
+
+    def _verify_application_submitted(self):
+        """Verify that application was actually submitted"""
+        try:
+            # Check for success indicators
+            success_indicators = [
+                # Success messages
+                "//div[contains(text(), 'applied')]",
+                "//div[contains(text(), 'Application sent')]",
+                "//div[contains(text(), 'Successfully applied')]",
+                "//div[contains(text(), 'Your application')]",
+
+                # Success classes
+                ".success-message",
+                "[class*='success']",
+                ".confirmation",
+
+                # URL change (redirected to success page)
+                # Will check separately
+            ]
+
+            # Check URL first
+            current_url = self.driver.current_url.lower()
+            if 'success' in current_url or 'thank' in current_url or 'applied' in current_url:
+                logger.info("✅ Success page detected")
+                return True
+
+            # Check for success messages
+            for indicator in success_indicators:
+                try:
+                    if indicator.startswith('//'):
+                        elements = self.driver.find_elements(By.XPATH, indicator)
+                    else:
+                        elements = self.driver.find_elements(By.CSS_SELECTOR, indicator)
+
+                    if elements and any(el.is_displayed() for el in elements):
+                        logger.info(f"✅ Success indicator found")
+                        return True
+                except:
+                    continue
+
+            # Check if submit button disappeared (form closed)
+            try:
+                self.driver.find_element(By.CSS_SELECTOR, "button[type='submit']")
+                # Button still there, might not have submitted
+                return False
+            except NoSuchElementException:
+                # Button gone, likely submitted
+                logger.info("✅ Submit form closed")
+                return True
+
+            return False
+
+        except Exception as e:
+            logger.debug(f"Verification check: {e}")
+            return False
+
+    def _take_debug_screenshot(self, reason="debug"):
+        """Take screenshot for debugging"""
+        try:
+            timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+            screenshot_path = f"debug_{reason}_{timestamp}.png"
+            self.driver.save_screenshot(screenshot_path)
+            logger.info(f"📸 Screenshot saved: {screenshot_path}")
+        except Exception as e:
+            logger.debug(f"Screenshot failed: {e}")

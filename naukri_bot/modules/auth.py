@@ -1,213 +1,211 @@
-"""
-Authentication Module - Handles login and session management
-"""
+"""Login / auth + popup handling.
 
+Restructured from Naukri_Edge.py (2025-10-12 "IMPROVED VERSION").
+Methods are moved verbatim from the original class; behavior is unchanged.
+"""
+import os
+import sys
+import json
 import time
+import random
+import sqlite3
 import logging
+import platform
+from datetime import datetime
+from pathlib import Path
+
+from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import TimeoutException, NoSuchElementException
-
-from naukri_bot.utils.helpers import smart_delay, human_type
+from selenium.webdriver.edge.service import Service as EdgeService
+from selenium.common.exceptions import (
+    TimeoutException,
+    NoSuchElementException,
+    WebDriverException,
+    StaleElementReferenceException,
+    ElementClickInterceptedException,
+    InvalidSessionIdException,
+    ElementNotInteractableException,
+)
 
 logger = logging.getLogger(__name__)
 
 
-class AuthModule:
-    """Handles authentication and login"""
-
-    def __init__(self, driver, config):
-        self.driver = driver
-        self.config = config
+class AuthMixin:
 
     def login(self):
-        """
-        Login to Naukri.com
-        Returns: True if successful, False otherwise
-        """
-        try:
-            logger.info("🔐 Logging in to Naukri.com...")
+        """Enhanced login with adaptive selector caching"""
+        max_retries = 3
 
-            # Navigate to login page
-            self.driver.get("https://www.naukri.com/nlogin/login")
-            smart_delay(2, 3)
-
-            # Get credentials
-            email = self.config['credentials']['email']
-            password = self.config['credentials']['password']
-
-            # Check if already logged in
-            if self._is_logged_in():
-                logger.info("✅ Already logged in")
-                return True
-
-            # Find and fill email field
-            if not self._enter_email(email):
-                logger.error("Failed to enter email")
-                return False
-
-            smart_delay(0.5, 1)
-
-            # Find and fill password field
-            if not self._enter_password(password):
-                logger.error("Failed to enter password")
-                return False
-
-            smart_delay(0.5, 1)
-
-            # Click login button
-            if not self._click_login_button():
-                logger.error("Failed to click login button")
-                return False
-
-            # Wait for login to complete
-            smart_delay(3, 5)
-
-            # Verify login success
-            if self._is_logged_in():
-                logger.info("✅ Login successful")
-                return True
-            else:
-                logger.error("❌ Login failed - not logged in after attempt")
-                return False
-
-        except Exception as e:
-            logger.error(f"Login error: {e}")
-            return False
-
-    def _is_logged_in(self):
-        """Check if user is already logged in"""
-        logged_in_indicators = [
-            "a[title='My Naukri']",
-            "div.nI-gNb-drawer__icon",
-            "a.nI-gNb-drawer__icon",
-            "div[class*='user-name']",
-            "div[class*='logout']"
-        ]
-
-        for selector in logged_in_indicators:
+        for attempt in range(max_retries):
             try:
-                element = self.driver.find_element(By.CSS_SELECTOR, selector)
-                if element.is_displayed():
-                    return True
-            except:
-                continue
+                logger.info(f"🔐 Login attempt {attempt + 1}/{max_retries}")
 
-        return False
+                self.driver.get('https://www.naukri.com/nlogin/login')
+                self.smart_delay(1, 2, probability=0.5)
 
-    def _enter_email(self, email):
-        """Enter email in login form"""
-        email_selectors = [
-            '#usernameField',
-            "input[placeholder*='Email']",
-            "input[placeholder*='email']",
-            "input[type='email']",
-            "input[name='email']",
-            "input[id*='email']"
-        ]
+                self.wait.until(EC.presence_of_element_located((By.TAG_NAME, 'body')))
 
-        for selector in email_selectors:
-            try:
-                email_field = WebDriverWait(self.driver, 5).until(
-                    EC.presence_of_element_located((By.CSS_SELECTOR, selector))
-                )
+                # Email field
+                email_selectors = [
+                    '#usernameField',
+                    '#emailTxt',
+                    '#username',
+                    "input[placeholder*='Email']",
+                    "input[name='email']",
+                    "input[type='email']"
+                ]
 
-                if email_field.is_displayed() and email_field.is_enabled():
-                    email_field.clear()
-                    human_type(email_field, email)
+                try:
+                    email_field = self.find_element_adaptive(email_selectors, 'login_email', timeout=5)
+                    email = self.config.get('naukri_credentials', {}).get('username') or \
+                            self.config.get('credentials', {}).get('email')
+                    self.human_type(email_field, email)
                     logger.info("✅ Email entered")
-                    return True
+                except Exception as e:
+                    logger.error(f"Failed to find email field: {e}")
+                    continue
 
-            except:
-                continue
+                self.smart_delay(0.3, 0.7, probability=0.5)
 
-        return False
+                # Password field
+                password_selectors = [
+                    '#passwordField',
+                    '#password',
+                    '#pwdTxt',
+                    "input[placeholder*='Password']",
+                    "input[name='password']",
+                    "input[type='password']"
+                ]
 
-    def _enter_password(self, password):
-        """Enter password in login form"""
-        password_selectors = [
-            '#passwordField',
-            "input[placeholder*='Password']",
-            "input[placeholder*='password']",
-            "input[type='password']",
-            "input[name='password']",
-            "input[id*='password']"
-        ]
-
-        for selector in password_selectors:
-            try:
-                password_field = WebDriverWait(self.driver, 5).until(
-                    EC.presence_of_element_located((By.CSS_SELECTOR, selector))
-                )
-
-                if password_field.is_displayed() and password_field.is_enabled():
-                    password_field.clear()
-                    human_type(password_field, password)
+                try:
+                    password_field = self.find_element_adaptive(password_selectors, 'login_password', timeout=5)
+                    password = self.config.get('naukri_credentials', {}).get('password') or \
+                               self.config.get('credentials', {}).get('password')
+                    self.human_type(password_field, password)
                     logger.info("✅ Password entered")
+                except Exception as e:
+                    logger.error(f"Failed to find password field: {e}")
+                    continue
+
+                self.smart_delay(0.3, 0.7, probability=0.5)
+
+                # Login button
+                login_button_selectors = [
+                    "button[type='submit']",
+                    ".loginButton",
+                    "button.btn-primary",
+                    "//button[contains(text(), 'Login')]"
+                ]
+
+                login_button = None
+                for selector in login_button_selectors:
+                    try:
+                        if selector.startswith('//'):
+                            login_button = WebDriverWait(self.driver, 3).until(
+                                EC.element_to_be_clickable((By.XPATH, selector))
+                            )
+                        else:
+                            login_button = WebDriverWait(self.driver, 3).until(
+                                EC.element_to_be_clickable((By.CSS_SELECTOR, selector))
+                            )
+
+                        if login_button and login_button.is_displayed():
+                            logger.info(f"✅ Found login button")
+                            break
+                    except:
+                        continue
+
+                if not login_button:
+                    logger.error("❌ Could not find login button")
+                    continue
+
+                try:
+                    login_button.click()
+                except ElementClickInterceptedException:
+                    self.driver.execute_script("arguments[0].click();", login_button)
+
+                self.smart_delay(3, 5, probability=0.8)
+
+                if self._verify_login_success():
+                    logger.info("✅ Login successful!")
                     return True
-
-            except:
-                continue
-
-        return False
-
-    def _click_login_button(self):
-        """Click login/submit button"""
-        login_button_selectors = [
-            "button[type='submit']",
-            "button.btn-primary",
-            "button[class*='login']",
-            "//button[contains(text(), 'Login')]",
-            "//button[contains(text(), 'Sign in')]"
-        ]
-
-        for selector in login_button_selectors:
-            try:
-                if selector.startswith('//'):
-                    button = self.driver.find_element(By.XPATH, selector)
                 else:
-                    button = self.driver.find_element(By.CSS_SELECTOR, selector)
+                    logger.warning(f"❌ Login attempt {attempt + 1} failed")
+                    if attempt < max_retries - 1:
+                        self.smart_delay(5, 10, probability=1.0)
+                        continue
 
-                if button.is_displayed() and button.is_enabled():
-                    button.click()
-                    logger.info("✅ Login button clicked")
-                    return True
+            except Exception as e:
+                logger.error(f"Login attempt {attempt + 1} error: {e}")
+                if attempt < max_retries - 1:
+                    self.smart_delay(5, 10, probability=1.0)
+                    continue
 
-            except:
-                continue
-        
+        logger.error("❌ All login attempts failed")
         return False
 
-    def logout(self):
-        """Logout from Naukri"""
+    def _verify_login_success(self):
+        """Enhanced login verification"""
         try:
-            logger.info("Logging out...")
+            current_url = self.driver.current_url.lower()
+            if 'nlogin' in current_url or '/login' in current_url:
+                return False
 
-            # Find logout link
-            logout_selectors = [
-                "a[href*='logout']",
-                "a[title='Logout']",
-                "//a[contains(text(), 'Logout')]"
+            profile_indicators = [
+                '.nI-gNb-drawer__icon',
+                '.view-profile-wrapper',
+                '[data-automation="profileDropdown"]',
+                '.user-name',
+                '.profile-img'
             ]
 
-            for selector in logout_selectors:
+            for indicator in profile_indicators:
                 try:
-                    if selector.startswith('//'):
-                        logout_link = self.driver.find_element(By.XPATH, selector)
-                    else:
-                        logout_link = self.driver.find_element(By.CSS_SELECTOR, selector)     
-
-                    if logout_link.is_displayed():
-                        logout_link.click()
-                        logger.info("✅ Logged out successfully")
+                    elements = self.driver.find_elements(By.CSS_SELECTOR, indicator)
+                    if elements and any(el.is_displayed() for el in elements):
+                        logger.info(f"✅ Login verified")
                         return True
-
                 except:
                     continue
 
             return False
 
         except Exception as e:
-            logger.error(f"Logout error: {e}")
+            logger.error(f"Error verifying login: {e}")
             return False
+
+    def _handle_popups(self):
+        """Handle common popups"""
+        try:
+            short_wait = WebDriverWait(self.driver, 3)
+
+            close_button_selectors = [
+                "span.close-popup",
+                "button.close",
+                "div.cross-icon",
+                "[aria-label='Close']",
+                ".crossIcon",
+                "button[title='Close']"
+            ]
+
+            for selector in close_button_selectors:
+                try:
+                    close_button = short_wait.until(
+                        EC.element_to_be_clickable((By.CSS_SELECTOR, selector))
+                    )
+
+                    try:
+                        close_button.click()
+                    except:
+                        self.driver.execute_script("arguments[0].click();", close_button)
+
+                    self.smart_delay(0.5, 1.0, probability=0.5)
+                    break
+
+                except TimeoutException:
+                    continue
+
+        except Exception as e:
+            logger.debug(f"Popup handling: {e}")

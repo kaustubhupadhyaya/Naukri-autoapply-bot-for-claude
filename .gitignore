@@ -1,0 +1,43 @@
+# ─── Python ───────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+tempCodeRunnerFile.py
+
+# ─── Logs & runtime state ─────────────────────────────────
+*.log
+last_strategy.txt
+
+# ─── Debug artifacts ──────────────────────────────────────
+debug_submit_not_found_*.png
+debug_screenshots/
+
+# ─── Sessions & caches (regenerated at runtime) ───────────
+naukri_session_*.json
+sessions/
+selector_cache.json
+
+# ─── Local databases (dedup state — not for VCS) ──────────
+*.db
+
+# ─── Backups & editor copies ──────────────────────────────
+*.bak
+*- Copy*
+* - Copy*
+
+# ─── Editor / tooling ─────────────────────────────────────
+.vscode/
+.idea/
+.claude/
+
+# ─── Secrets / local config ───────────────────────────────
+# NOTE: these are ALSO already committed in git history (public repo).
+# Full remediation (git rm --cached + history scrub + rotate) is the
+# deferred "secret remediation" task. Listed here to stop FUTURE commits.
+config.json
+config - Copy.json
+enhanced_config.json
+.github/test_config.json

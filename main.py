@@ -1,67 +1,35 @@
-"""Main Entry Point for Naukri Bot"""
-
+"""Entry point for the Naukri auto-apply bot."""
 import sys
 import logging
-from pathlib import Path
-
-# Add project root to path
-sys.path.insert(0, str(Path(__file__).parent))
-
-# Configure logging
 from logging.handlers import RotatingFileHandler
 
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-    handlers=[
-        RotatingFileHandler(
-            'naukri_bot.log',
-            maxBytes=10*1024*1024,  # 10MB
-            backupCount=5,
-            encoding='utf-8'
-        ),
-        logging.StreamHandler()
-    ]
-)
+# Windows console UTF-8 fix (matches original Naukri_Edge behavior)
+if sys.platform == "win32":
+    import codecs
+    sys.stdout = codecs.getwriter("utf-8")(sys.stdout.buffer, "strict")
+    sys.stderr = codecs.getwriter("utf-8")(sys.stderr.buffer, "strict")
+
+# Root logging: rotating file (10MB x5) + console, same format as before
+_root = logging.getLogger()
+_root.setLevel(logging.INFO)
+if not _root.handlers:
+    _fmt = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
+    _fh = RotatingFileHandler("naukri_bot.log", maxBytes=10 * 1024 * 1024, backupCount=5, encoding="utf-8")
+    _ch = logging.StreamHandler()
+    _fh.setFormatter(_fmt)
+    _ch.setFormatter(_fmt)
+    _root.addHandler(_fh)
+    _root.addHandler(_ch)
 
 from naukri_bot.core.naukri_bot import NaukriBot
 
 
 def main():
-    """Main entry point"""
-    print("""
-    ╔══════════════════════════════════════════════════════╗
-    ║         NAUKRI AUTO-APPLY BOT (Modular Edition)      ║
-    ║                                                      ║
-    ║  Features:                                           ║
-    ║  ✅ Smart Chatbot Handling (Tier 1 Complete)        ║
-    ║  ✅ Q&A Dictionary Learning                         ║
-    ║  ✅ Multiple Question Detection Strategies          ║
-    ║  ✅ Radio Button & Dropdown Support                 ║
-    ║  ✅ Gemini AI Integration                           ║
-    ║  ✅ Modular Architecture                            ║
-    ║                                                      ║
-    ║  Author: Your Name                                   ║
-    ║  Version: 2.0 (Modular)                             ║
-    ╚══════════════════════════════════════════════════════╝
-    """)
-    
     try:
         bot = NaukriBot()
-        success = bot.run()
-        
-        if success:
-            print("\n✅ Bot completed successfully!")
-            return 0
-        else:
-            print("\n❌ Bot encountered errors")
-            return 1
-            
-    except KeyboardInterrupt:
-        print("\n⚠️ Bot stopped by user")
-        return 0
+        return 0 if bot.run() else 1
     except Exception as e:
-        print(f"\n❌ Fatal error: {e}")
+        logging.getLogger(__name__).error(f"Fatal error: {e}")
         return 1
 
 

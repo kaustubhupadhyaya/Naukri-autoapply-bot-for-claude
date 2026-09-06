@@ -1,87 +1,110 @@
-"""
-Database Manager - SQLite operations for job tracking
-"""
+"""SQLite applied-jobs dedup store.
 
+Restructured from Naukri_Edge.py (2025-10-12 "IMPROVED VERSION").
+Methods are moved verbatim from the original class; behavior is unchanged.
+"""
+import os
+import sys
+import json
+import time
+import random
 import sqlite3
 import logging
+import platform
 from datetime import datetime
+from pathlib import Path
+
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.edge.service import Service as EdgeService
+from selenium.common.exceptions import (
+    TimeoutException,
+    NoSuchElementException,
+    WebDriverException,
+    StaleElementReferenceException,
+    ElementClickInterceptedException,
+    InvalidSessionIdException,
+    ElementNotInteractableException,
+)
 
 logger = logging.getLogger(__name__)
 
 
-class DatabaseManager:
-    """Manages SQLite database for job tracking"""
-    
-    def __init__(self, db_file='naukri_jobs.db'):
-        self.db_file = db_file
-        self.conn = None
-        self._init_database()
-    
-    def _init_database(self):
-        """Initialize database and create tables"""
+class DatabaseMixin:
+
+    def init_job_database(self):
+        """Initialize SQLite database"""
         try:
-            self.conn = sqlite3.connect(self.db_file)
-            cursor = self.conn.cursor()
-            
+            self.db_conn = sqlite3.connect('naukri_jobs.db', check_same_thread=False)
+            cursor = self.db_conn.cursor()
+
             cursor.execute('''
                 CREATE TABLE IF NOT EXISTS applied_jobs (
                     job_id TEXT PRIMARY KEY,
-                    job_url TEXT,
-                    company TEXT,
-                    title TEXT,
-                    applied_date TEXT,
-                    status TEXT
+                    job_url TEXT NOT NULL,
+                    job_title TEXT,
+                    company_name TEXT,
+                    application_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                    status TEXT,
+                    notes TEXT
                 )
             ''')
-            
-            self.conn.commit()
-            logger.info(f"✅ Database initialized: {self.db_file}")
-            
-        except Exception as e:
-            logger.error(f"Database initialization failed: {e}")
-    
-    def is_job_applied(self, job_id):
-        """Check if job already applied"""
-        try:
-            cursor = self.conn.cursor()
-            cursor.execute('SELECT job_id FROM applied_jobs WHERE job_id = ?', (job_id,))
-            return cursor.fetchone() is not None
-        except:
-            return False
-    
-    def add_applied_job(self, job_id, job_url='', company='', title='', status='applied'):
-        """Add job to applied list"""
-        try:
-            cursor = self.conn.cursor()
+
             cursor.execute('''
-                INSERT OR REPLACE INTO applied_jobs 
-                (job_id, job_url, company, title, applied_date, status)
-                VALUES (?, ?, ?, ?, ?, ?)
-            ''', (job_id, job_url, company, title, datetime.now().isoformat(), status))
-            
-            self.conn.commit()
-            logger.debug(f"Added job to database: {job_id}")
-            return True
-            
-        except Exception as e:
-            logger.error(f"Failed to add job: {e}")
-            return False
-    
-    def get_applied_count(self):
-        """Get total applied jobs count"""
+                CREATE INDEX IF NOT EXISTS idx_job_id ON applied_jobs(job_id)
+            ''')
+
+            self.db_conn.commit()
+            logger.info("✅ Job database initialized")
+
+        except sqlite3.Error as e:
+            logger.error(f"Database initialization failed: {e}")
+            self.db_conn = None
+
+    def _extract_job_id(self, job_url):
+        """Extract job ID"""
         try:
-            cursor = self.conn.cursor()
-            cursor.execute('SELECT COUNT(*) FROM applied_jobs')
-            count = cursor.fetchone()[0]
-            return count
+            parts = job_url.split('-')
+            if parts[-1].isdigit() and len(parts[-1]) > 8:
+                return parts[-1]
+            return str(abs(hash(job_url)))[-12:]
         except:
-            return 0
-    
-    def close(self):
-        """Close database connection"""
-        if self.conn:
-            try:
-                self.conn.close()
-                logger.info("Database connection closed")
-            except:
-                pass
+            return str(abs(hash(job_url)))[-12:]
+
+    def is_job_already_applied(self, job_id):
+        """Check if already applied"""
+        if not self.db_conn:
+            return False
+
+        try:
+            cursor = self.db_conn.cursor()
+            cursor.execute(
+                "SELECT COUNT(*) FROM applied_jobs WHERE job_id = ?",
+                (job_id,)
+            )
+            count = cursor.fetchone()[0]
+            return count > 0
+        except sqlite3.Error as e:
+            logger.error(f"Database query error: {e}")
+            return False
+
+    def _save_job_application(self, job_id, job_url, status, notes=''):
+        """Save application to database"""
+        if not self.db_conn:
+            return
+
+        try:
+            job_title = job_url.split('/')[-1].replace('-', ' ')[:100]
+
+            cursor = self.db_conn.cursor()
+            cursor.execute("""
+                INSERT OR REPLACE INTO applied_jobs 
+                (job_id, job_url, job_title, status, notes)
+                VALUES (?, ?, ?, ?, ?)
+            """, (job_id, job_url, job_title, status, notes))
+
+            self.db_conn.commit()
+        except sqlite3.Error as e:
+            logger.error(f"Database save error: {e}")

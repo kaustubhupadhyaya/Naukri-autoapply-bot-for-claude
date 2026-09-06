@@ -1,43 +1,16 @@
-# Naukri Auto-Apply Bot - Complete Dependencies
-# Install with: pip install -r requirements.txt
-
-# Core Selenium for browser automation
+# Naukri Auto-Apply Bot — dependencies
+# Core runtime:
 selenium==4.15.0
-webdriver-manager==4.0.1
-
-# AI and ML libraries
-google-generativeai==0.3.2
-
-# Data processing and analysis
+webdriver-manager==4.0.1        # optional: auto-downloads msedgedriver
+google-generativeai==0.3.2      # optional: chatbot answers + job scoring (naukri_bot/scoring)
+# Used by helper / analysis scripts:
 pandas==2.1.4
 numpy==1.24.3
-
-# Web scraping and parsing
 beautifulsoup4==4.12.2
 lxml==4.9.3
 requests==2.31.0
-
-# Configuration and environment
 python-dotenv==1.0.0
-
-# Logging and utilities
 colorama==0.4.6
-
-# Database support
-sqlite3
-
-# Time and date handling (built-in, but listed for reference)
-# datetime
-# time
-# json
-# logging
-# random
-# os
-# sys
-# platform
-# re
-# typing
-
-# Optional: For advanced features
-# openpyxl==3.1.2  # Excel file support
-# psutil==5.9.6     # System monitoring
+# Optional extras (uncomment to install)
+# openpyxl==3.1.2
+# psutil==5.9.6

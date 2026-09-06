@@ -16,8 +16,8 @@
       "SQL Developer"
     ],
     "location": "bengaluru",
-    "max_applications_per_session": 10,
-    "pages_per_keyword": 2,
+    "max_applications_per_session": 30,
+    "pages_per_keyword": 4,
     "preferred_companies": [
       "Microsoft",
       "Google",

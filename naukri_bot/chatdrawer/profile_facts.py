@@ -101,17 +101,24 @@ def get_profile_facts(driver, timeout=20.0, force=False):
     try:
         driver.get(PROFILE_URL)
         deadline = time.time() + timeout
-        raw = None
+        raw = None       # last successful read, never clobbered by a later failed attempt
+        last_exc = None  # so a total failure says WHY, instead of just "nothing found"
+        attempts = 0
         while time.time() < deadline:
+            attempts += 1
             try:
-                raw = driver.execute_script("return " + _PROBE_JS)
-            except Exception:
-                raw = None
-            if raw:
-                data = json.loads(raw)
-                if data.get("ready") == "complete" and (data.get("salary") or data.get("notice")):
-                    break
+                r = driver.execute_script("return " + _PROBE_JS)
+                if r:
+                    raw = r
+                    data = json.loads(raw)
+                    if data.get("ready") == "complete" and (data.get("salary") or data.get("notice")):
+                        break
+            except Exception as e:
+                last_exc = f"{type(e).__name__}: {str(e)[:150]}"
             time.sleep(0.5)
+        if raw is None and last_exc:
+            logger.info(f"👤 Naukri profile facts: execute_script failed on all {attempts} attempts "
+                       f"({last_exc})")
         if raw:
             data = json.loads(raw)
             if data.get("salary"):

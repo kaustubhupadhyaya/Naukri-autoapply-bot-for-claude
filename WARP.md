@@ -2,6 +2,16 @@
 
 This file provides guidance to WARP (warp.dev) when working with code in this repository.
 
+## Never apply yourself — mandatory, no exceptions
+
+Only the supervised bot (`NaukriKeepalive` scheduled task → `naukri_keepalive.ps1 -AllDay` →
+`run_naukri_unattended.py --all-day`) may click Apply, click Save on a chat-drawer question, or submit
+a job application — by any method, ever, including "just to test." Read/edit code and restart the
+*supervised* bot freely; drive its Edge session read-only for diagnosis if needed; but never click
+Apply/Save/submit yourself and never run a second ad-hoc bot instance. To check whether something
+works, restart the bot and watch it with `watch.cmd live` / `watch.cmd postmortem --since 6h`
+(`naukri_watch/`) — that is what it is for. Full rule: this repo's `AGENTS.md`.
+
 ## Development Commands
 
 ### Setup and Testing

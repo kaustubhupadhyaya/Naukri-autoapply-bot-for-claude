@@ -158,14 +158,27 @@ def _match_option(options, needles):
     return None
 
 
+# Short tokens need word boundaries: the bare substring "fir" (First Information Report) matched
+# "confirm"/"first" and discarded every "I confirm ..." consent question (v2 canary 2026-09-15).
+_DISCARD_RX = [(t, re.compile(r"\b" + re.escape(t) + r"\b") if len(t) <= 4 else None) for t in DISCARD_SUBSTR]
+
+
+def _discard_hit(q):
+    for token, rx in _DISCARD_RX:
+        if (rx.search(q) if rx else token in q):
+            return token
+    return None
+
+
 def classify_radio(question, options, location_variants):
     """Pure function: ('select', option_substr) | ('gemini', None) | ('discard', reason)."""
     q = (question or "").lower()
     opts = [o for o in (options or []) if o and str(o).strip()]
     if not opts:
         return ("discard", "no options parsed")
-    if any(d in q for d in DISCARD_SUBSTR):
-        return ("discard", "sensitive/employer-specific/PII")
+    hit = _discard_hit(q)
+    if hit:
+        return ("discard", f"sensitive/employer-specific/PII ('{hit}')")
     if q:
         loc_hit = _match_option(opts, [v.lower() for v in location_variants])
         if loc_hit and any(w in q for w in LOCATION_WORDS):
@@ -2612,6 +2625,13 @@ def _unattended_apply_one(self, job_url):
         # and only this cleanup runs there. Log its duration so the watcher can confirm the
         # cause before anyone "fixes" it blind.
         _t_fin = time.time()
+        # Measured 40-53s here on every job path (watcher SLOW_TAB_CLEANUP): each window call
+        # waits on the still-loading page up to the 15s page-load timeout. Cap that wait for
+        # the cleanup only; the next job's driver.get() navigates away regardless.
+        try:
+            driver.set_page_load_timeout(3)
+        except Exception:
+            pass
         try:
             _enforce_single_tab(driver)
             if original_tab and driver.current_window_handle != original_tab:
@@ -2620,6 +2640,10 @@ def _unattended_apply_one(self, job_url):
             pass
         try:
             _enforce_single_tab(driver)
+        except Exception:
+            pass
+        try:
+            driver.set_page_load_timeout(15)
         except Exception:
             pass
         _fin = time.time() - _t_fin

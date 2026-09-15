@@ -210,7 +210,11 @@ class Tracker:
             if not any(e.kind in ("app_failed", "app_success", "cooldown") for e in last[-2:]):
                 self.emit("BOT_RESTARTED", "medium", "bot relaunched with no clean exit line (silent death)",
                           attempt=None, ts=ev.ts, last_lines=[e.line() for e in last])
-        if k == "cooldown":
+        if k in ("cooldown", "quota_blocked", "quota_paused"):
+            # quota_paused can legitimately last hours (until the daily quota resets) — without
+            # this, BOT_SILENT would fire every 5 minutes for the whole pause, which is exactly
+            # the false alarm a 2026-09-15 22:xx monitoring session would otherwise have to sit
+            # through all night.
             self.in_cooldown = True
         elif k in ("cycle_start", "search_keyword", "job_start"):
             self.in_cooldown = False

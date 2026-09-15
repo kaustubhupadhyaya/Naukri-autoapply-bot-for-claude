@@ -46,13 +46,14 @@ class SearchMixin:
         keywords = self.config['job_search']['keywords']
         location = self.config['job_search']['location']
         pages_per_keyword = self.config['job_search']['pages_per_keyword']
-        max_applications = self.config['job_search'].get('max_applications_per_session', 100)
+        # 0 / null / absent = unlimited
+        max_applications = self.config['job_search'].get('max_applications_per_session') or 0
 
         for keyword in keywords:
             logger.info(f"🔎 Searching for: {keyword}")
 
             for page in range(1, pages_per_keyword + 1):
-                if self.applied >= max_applications:
+                if max_applications and self.applied >= max_applications:
                     logger.info(f"✋ Reached application limit ({max_applications})")
                     return
 

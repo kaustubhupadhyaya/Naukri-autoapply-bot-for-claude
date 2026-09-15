@@ -3316,7 +3316,8 @@ try:
         location = self.config['job_search']['location']
         pages_per_keyword = self.config['job_search']['pages_per_keyword']
         is_all_day = getattr(self, "_is_all_day", False)
-        session_cap = self.config['job_search'].get('max_applications_per_session', 20)
+        # 0 / null / absent = unlimited
+        session_cap = self.config['job_search'].get('max_applications_per_session') or 0
 
         apply_timestamps = []
         hourly_limit = int(os.environ.get("NAUKRI_HOURLY_CAP", "80"))
@@ -3355,14 +3356,14 @@ try:
                 logger.info("🔍 Starting page-by-page job search and application (session-guarded)...")
 
             for keyword in keywords:
-                if not is_all_day and self.applied >= session_cap:
+                if not is_all_day and session_cap and self.applied >= session_cap:
                     logger.info(f"✋ Reached application limit ({session_cap})")
                     return
 
                 logger.info(f"🔎 Searching for: {keyword}")
 
                 for page in range(1, pages_per_keyword + 1):
-                    if not is_all_day and self.applied >= session_cap:
+                    if not is_all_day and session_cap and self.applied >= session_cap:
                         logger.info(f"✋ Reached application limit ({session_cap})")
                         return
 
@@ -3670,7 +3671,8 @@ def self_test():
           == (os.environ.get("NAUKRI_SKIP_EXTERNAL", "1") != "0"))
     check("session recovery patched", _WDMixin.recover_session is _robust_recover_session)
     check("search resilient", _SearchMixin.search_and_apply_page_by_page is _unattended_search_and_apply)
-    check("cap==20", bot.config.get("job_search", {}).get("max_applications_per_session") == 20)
+    check("cap unlimited (0/null/absent)",
+          not bot.config.get("job_search", {}).get("max_applications_per_session"))
     check("all-day flag wired", hasattr(bot, "_is_all_day"))
 
     # Profile path isolation check

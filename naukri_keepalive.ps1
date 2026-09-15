@@ -18,7 +18,8 @@
     Run a single evaluation cycle and exit immediately. Default is continuous loop.
 
 .PARAMETER DailyCap
-    Daily maximum applications limit (default 20, matching config.local.json).
+    Daily maximum applications limit. 0 = unlimited (default; matches config.local.json's
+    max_applications_per_session = 0). Only consulted when -AllDay is NOT set.
 
 .PARAMETER CheckIntervalSeconds
     Frequency of liveness checks in continuous loop mode (default 60s).
@@ -30,7 +31,7 @@
 [CmdletBinding()]
 param(
     [switch]$SinglePass,
-    [int]$DailyCap = 20,
+    [int]$DailyCap = 0,
     [int]$CheckIntervalSeconds = 60,
     [switch]$Status,
     [string]$Profile = "default",
@@ -323,9 +324,9 @@ function Invoke-KeepalivePass {
         } else {
             Write-Host "Process State    : STOPPED / DEAD" -ForegroundColor Yellow
         }
-        $modeText = if ($AllDay) { "ALL-DAY 24/7 Continuous (Uncapped, Hourly Paced)" } else { "Session-Capped ($DailyCap/day)" }
+        $modeText = if ($AllDay -or $DailyCap -le 0) { "ALL-DAY 24/7 Continuous (Uncapped, Hourly Paced)" } else { "Session-Capped ($DailyCap/day)" }
         Write-Host "Execution Mode   : $modeText" -ForegroundColor Magenta
-        Write-Host "Today Applied  : $todayCount / $(if ($AllDay) { "inf" } else { $DailyCap })" -ForegroundColor White
+        Write-Host "Today Applied  : $todayCount / $(if ($AllDay -or $DailyCap -le 0) { "inf" } else { $DailyCap })" -ForegroundColor White
         Write-Host "Crash Count      : $($state.ConsecutiveCrashes)" -ForegroundColor White
         Write-Host "Last Launch Time : $($state.LastLaunchTime)" -ForegroundColor White
         Write-Host "=================================================================" -ForegroundColor Cyan
@@ -366,13 +367,13 @@ function Invoke-KeepalivePass {
             $state.ConsecutiveCrashes = 0
             Save-KeepaliveState $state
         }
-        $capDisplay = if ($AllDay) { "All-Day 24/7 continuous" } else { "$todayCount / $DailyCap" }
+        $capDisplay = if ($AllDay -or $DailyCap -le 0) { "All-Day 24/7 continuous" } else { "$todayCount / $DailyCap" }
         Write-KeepaliveLog "Bot alive (PID $($activeProc.ProcessId), uptime $([math]::Round($uptimeSec/60, 1))m). Mode: $capDisplay." "OK"
         return
     }
 
     # 3. Process is DEAD - Check Daily Cap (only in session-capped mode)
-    if (-not $AllDay -and $todayCount -ge $DailyCap) {
+    if (-not $AllDay -and $DailyCap -gt 0 -and $todayCount -ge $DailyCap) {
         Write-KeepaliveLog "Daily cap satisfied: $todayCount / $DailyCap applied today. Bot is peacefully resting until tomorrow." "OK"
         $state.LastDailyCapDate = $now.ToString("yyyy-MM-dd")
         $state.ConsecutiveCrashes = 0

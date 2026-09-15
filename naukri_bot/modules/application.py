@@ -41,10 +41,11 @@ class ApplicationMixin:
             return
 
         logger.info(f"🎯 Starting applications for {len(job_urls)} jobs...")
-        max_applications = self.config['job_search'].get('max_applications_per_session', 100)
+        # 0 / null / absent = unlimited (cap removed 2026-09-16 at user's request)
+        max_applications = self.config['job_search'].get('max_applications_per_session') or 0
 
         for index, job_url in enumerate(job_urls):
-            if self.applied >= max_applications:
+            if max_applications and self.applied >= max_applications:
                 logger.info(f"✋ Reached application limit ({max_applications})")
                 break
 

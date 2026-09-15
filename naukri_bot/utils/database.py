@@ -74,14 +74,24 @@ class DatabaseMixin:
             return str(abs(hash(job_url)))[-12:]
 
     def is_job_already_applied(self, job_id):
-        """Check if already applied"""
+        """Check if this job is blocked from being attempted again.
+
+        A row alone is NOT proof we applied. Rows whose own status says the bot
+        never completed an application must stay retryable, or they blacklist a
+        live job forever. 2026-09-16: 'Unverified%' rows are exactly that case --
+        they were relabelled by hand after being confirmed against Naukri as
+        never-applied (the page-wide-Save false-confirm bug), so they must not
+        block. External/Skipped rows are left blocking for now: they genuinely
+        have no Easy Apply button, and re-probing them costs a page load each.
+        """
         if not self.db_conn:
             return False
 
         try:
             cursor = self.db_conn.cursor()
             cursor.execute(
-                "SELECT COUNT(*) FROM applied_jobs WHERE job_id = ?",
+                "SELECT COUNT(*) FROM applied_jobs "
+                "WHERE job_id = ? AND status NOT LIKE 'Unverified%'",
                 (job_id,)
             )
             count = cursor.fetchone()[0]

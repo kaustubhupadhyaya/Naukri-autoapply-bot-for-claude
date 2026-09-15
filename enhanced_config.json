@@ -3,15 +3,14 @@
     "email": "kaustubh.upadhyaya1@gmail.com",
     "password": "9880380081@kK"
   },
-  "gemini_api_key": "AIzaSyBGXNcTgcjYjY34fvXaAnmulRbiCIAvvXI",
+  "gemini_api_key": "AIzaSyAxlMd6WI10AufnEpn0diDLWoi0On0X1r8",
   "personal_info": {
     "firstname": "Kaustubh",
     "lastname": "Upadhyaya",
     "phone": "9880380081",
     "current_ctc": "13 LPA",
     "expected_ctc": "18 LPA",
-    "notice_period": "15 Days"
-    ,
+    "notice_period": "15 Days",
     "chatbot_answers": {
       "Employment Type": "FTE",
       "Notice period": "15 Days",
@@ -70,8 +69,8 @@
       "Remote",
       "Hybrid"
     ],
-  "resume_text": "Kaustubh Upadhyaya - Data Engineer | Big Data Engineer. Bengaluru, KA. +91 84319 88388; kaustubh.upadhyaya1@gmail.com. Professional summary: 2.3 years of data engineering experience in Python, SQL, and AWS building scalable ETL pipelines with Airflow and Apache Spark. Expertise in Kafka, Databricks, dbt and PostgreSQL. Specialized in pharmaceutical data systems and regulatory compliance workflows, with experience in complex database migrations and multi-system integrations. Work experience highlights: Nov 2024 - Present: Data Engineer-I at Eli Lilly and Company — developed and refactored production ETL pipelines, reduced DAG parsing time by 30%, implemented monitoring and secrets management; Jul 2023 – Nov 2024: Analyst – Software Configuration and Development — automated ETL validation, implemented data quality checks for 10M+ daily records, designed data pipelines and orchestration. Technical skills: Python, PySpark, SQL, Airflow, Kafka, Databricks, Snowflake, AWS (S3, EC2, Lambda, Glue), PostgreSQL, MySQL, Oracle, dbt, Jenkins, Kubernetes, Unit testing, Monitoring. Certifications: PySpark, AWS Lambda, Databricks Fundamentals. Education: Bachelor of Engineering, Information Science & Engineering — BMS College of Engineering, Bengaluru.\n\n",
-  "target_company_types": [
+    "resume_text": "Kaustubh Upadhyaya - Data Engineer | Big Data Engineer. Bengaluru, KA. +91 84319 88388; kaustubh.upadhyaya1@gmail.com. Professional summary: 2.3 years of data engineering experience in Python, SQL, and AWS building scalable ETL pipelines with Airflow and Apache Spark. Expertise in Kafka, Databricks, dbt and PostgreSQL. Specialized in pharmaceutical data systems and regulatory compliance workflows, with experience in complex database migrations and multi-system integrations. Work experience highlights: Nov 2024 - Present: Data Engineer-I at Eli Lilly and Company \u2014 developed and refactored production ETL pipelines, reduced DAG parsing time by 30%, implemented monitoring and secrets management; Jul 2023 \u2013 Nov 2024: Analyst \u2013 Software Configuration and Development \u2014 automated ETL validation, implemented data quality checks for 10M+ daily records, designed data pipelines and orchestration. Technical skills: Python, PySpark, SQL, Airflow, Kafka, Databricks, Snowflake, AWS (S3, EC2, Lambda, Glue), PostgreSQL, MySQL, Oracle, dbt, Jenkins, Kubernetes, Unit testing, Monitoring. Certifications: PySpark, AWS Lambda, Databricks Fundamentals. Education: Bachelor of Engineering, Information Science & Engineering \u2014 BMS College of Engineering, Bengaluru.\n\n",
+    "target_company_types": [
       "Product",
       "Startup",
       "Mid-size",
@@ -94,7 +93,7 @@
       "Analytics Engineer"
     ],
     "location": "bengaluru",
-    "max_applications_per_session": 15,
+    "max_applications_per_session": 0,
     "min_job_score": 60,
     "pages_per_keyword": 2
   },
@@ -113,7 +112,7 @@
     "random_scrolling": true
   },
   "gemini_settings": {
-    "model": "gemini-1.5-flash",
+    "model": "gemini-2.5-flash",
     "temperature": 0.1,
     "max_tokens": 1000,
     "rate_limit_delay": 15

@@ -87,7 +87,7 @@ class ConfigMixin:
                 "keywords": ["Python Developer", "Data Engineer"],
                 "location": "Bangalore",
                 "experience": "2",
-                "max_applications_per_session": 100,
+                "max_applications_per_session": 0,
                 "pages_per_keyword": 5,
                 "job_age_days": 7,
                 "preferred_companies": [],

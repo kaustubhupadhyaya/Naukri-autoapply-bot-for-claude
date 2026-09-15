@@ -1,5 +1,5 @@
 """Untracked runner: same as main.py but points NaukriBot at config.local.json
-(max_applications_per_session capped at 20). Created for a supervised production run."""
+(max_applications_per_session = 0 => unlimited). Created for a supervised production run."""
 import sys
 
 import main  # noqa: F401  -- side effect only: root logging + win32 UTF-8 wrap; main() is __main__-guarded

@@ -2425,6 +2425,37 @@ EASY_APPLY_SELECTORS = [
 ]
 
 
+# Naukri's apply-workflow POST answers 403 {"customErrorCode": 403009, "message": "Daily quota of jobs
+# exceeded"} once the account's daily apply quota is used (caught by the watcher 2026-09-15). No drawer
+# opens, so without this the bot logged "Application failed" and kept cycling all day. The status is
+# read from the page's own Resource Timing entry (same-origin, so responseStatus is exposed); the
+# buffer is cleared just before the Apply click so the entry can't be dropped by a full buffer.
+_APPLY_API_JS = (
+    "var es = performance.getEntriesByType('resource').filter(function (e) {"
+    "  return e.name.indexOf('apply-workflow/v1/apply') >= 0; });"
+    "if (!es.length) return null;"
+    "var e = es[es.length - 1];"
+    "return (typeof e.responseStatus === 'number') ? e.responseStatus : -1;")
+
+
+def _apply_api_status(driver, wait_s=4.0):
+    deadline = time.time() + wait_s
+    while True:
+        try:
+            st = driver.execute_script(_APPLY_API_JS)
+        except Exception:
+            st = None
+        if st is not None or time.time() >= deadline:
+            return st
+        time.sleep(0.5)
+
+
+def _quota_reset_ts():
+    import datetime as _dt
+    tomorrow = _dt.datetime.combine(_dt.date.today() + _dt.timedelta(days=1), _dt.time(0, 5))
+    return max(time.time() + 3600, tomorrow.timestamp())
+
+
 def _poll_easy_apply_button(driver, timeout=8.0):
     """Poll for the job-page Apply button (eager-load hydration race: the button often
     renders seconds after <body> exists). Zero implicit wait, 0.5s poll interval."""
@@ -2509,6 +2540,8 @@ def _unattended_apply_one(self, job_url):
     original_tab = None
     driver = self.driver
     _t_entry = time.time()
+    if getattr(self, "_apply_blocked_until", 0) > time.time():
+        return False  # daily quota already refused today; don't burn ~50s per job finding out again
     try:
         _enforce_single_tab(driver)
         original_tab = driver.current_window_handle
@@ -2522,6 +2555,10 @@ def _unattended_apply_one(self, job_url):
         job_title, company = _fresh_title_company(driver, job_url)
         logger.info(f"📋 {job_title} at {company}")
 
+        try:
+            driver.execute_script("try { performance.clearResourceTimings(); } catch (e) {}")
+        except Exception:
+            pass
         # Polled probe for Easy Apply buttons (hydration race) + JS text fallback
         easy_apply_button = _poll_easy_apply_button(driver, timeout=8.0)
         js_clicked = False
@@ -2549,6 +2586,13 @@ def _unattended_apply_one(self, job_url):
 
             # 1-click apply: Easy Apply may complete instantly with no drawer — check first
             time.sleep(1.5)
+            _api = _apply_api_status(driver)
+            if _api == 403:
+                self._apply_blocked_until = _quota_reset_ts()
+                logger.warning(
+                    "⛔ Naukri daily apply quota exceeded (apply API 403) — pausing applications until "
+                    f"{datetime.fromtimestamp(self._apply_blocked_until).strftime('%Y-%m-%d %H:%M')}")
+                return False
             try:
                 if _is_applied_on_page(driver):
                     logger.info("✅ Easy Apply completed instantly (no questions asked)")
@@ -2624,31 +2668,30 @@ def _unattended_apply_one(self, job_url):
         # Measured, not yet changed (2026-09-15): ~40s of bot-log silence follows every verdict
         # and only this cleanup runs there. Log its duration so the watcher can confirm the
         # cause before anyone "fixes" it blind.
+        # Measured 40-53s here on every job path (watcher SLOW_TAB_CLEANUP). Capping the page-load
+        # timeout did not change it (still 40.1s), so that guess was reverted; time each call to
+        # find which one actually blocks before changing anything else.
         _t_fin = time.time()
-        # Measured 40-53s here on every job path (watcher SLOW_TAB_CLEANUP): each window call
-        # waits on the still-loading page up to the 15s page-load timeout. Cap that wait for
-        # the cleanup only; the next job's driver.get() navigates away regardless.
-        try:
-            driver.set_page_load_timeout(3)
-        except Exception:
-            pass
-        try:
-            _enforce_single_tab(driver)
-            if original_tab and driver.current_window_handle != original_tab:
-                driver.switch_to.window(original_tab)
-        except Exception:
-            pass
-        try:
-            _enforce_single_tab(driver)
-        except Exception:
-            pass
-        try:
-            driver.set_page_load_timeout(15)
-        except Exception:
-            pass
+        _steps = []
+
+        def _timed(name, fn):
+            t = time.time()
+            try:
+                return fn()
+            except Exception as e:
+                _steps.append(f"{name}:ERR({type(e).__name__})")
+                return None
+            finally:
+                _steps.append(f"{name}={time.time() - t:.1f}s")
+
+        _timed("enforce1", lambda: _enforce_single_tab(driver))
+        _cur = _timed("current_handle", lambda: driver.current_window_handle)
+        if original_tab and _cur and _cur != original_tab:
+            _timed("switch_back", lambda: driver.switch_to.window(original_tab))
+        _timed("enforce2", lambda: _enforce_single_tab(driver))
         _fin = time.time() - _t_fin
         if _fin > 1.0:
-            logger.info(f"⏱️ tab cleanup took {_fin:.1f}s")
+            logger.info(f"⏱️ tab cleanup took {_fin:.1f}s ({', '.join(_steps)})")
 
 
 # ---------------------------------------- N7 official tally + Excel tracker
@@ -3236,6 +3279,20 @@ try:
                     if not is_all_day and self.applied >= session_cap:
                         logger.info(f"✋ Reached application limit ({session_cap})")
                         return
+
+                    # Daily quota refused by Naukri (see _apply_api_status): sleep until it resets
+                    # instead of loading pages and opening jobs that cannot be applied to.
+                    _blocked = getattr(self, "_apply_blocked_until", 0)
+                    if _blocked > time.time():
+                        logger.info(
+                            "⛔ Applications paused: Naukri daily quota exceeded. Resuming at "
+                            f"{datetime.fromtimestamp(_blocked).strftime('%Y-%m-%d %H:%M')}")
+                        while time.time() < _blocked:
+                            time.sleep(min(60, max(1, _blocked - time.time())))
+                        if not self.ensure_valid_session():
+                            if not self.recover_session():
+                                logger.error("❌ Could not recover session after quota pause. Ending process.")
+                                return
 
                     # Hourly rate check in all-day mode
                     if is_all_day:

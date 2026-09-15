@@ -151,6 +151,7 @@ class Tracker:
         self.formats_seen = set()
         self.want_html = False
         self.pending_requests = {}
+        self.quota_flagged = False
         self.t0 = time.time()
 
     # ------------------------------------------------------------------ output
@@ -274,6 +275,12 @@ class Tracker:
                                        "EXTERNAL": "bot_external_skip", "NAUKRI_ERROR": "bot_unconfirmed",
                                        "UNKNOWN": "bot_unconfirmed"}.get(outcome, "bot_discarded"))
                 a.mark("verdict", ev.ts)
+        elif k == "quota_blocked":
+            a.flags.add("quota_exceeded")
+            if not self.quota_flagged:
+                self.quota_flagged = True
+                self.emit("NAUKRI_QUOTA_EXCEEDED", "high",
+                          "bot detected Naukri's daily apply quota (apply API 403) and paused", ts=ev.ts, line=ev.line())
         elif k == "tab_cleanup":
             took = float(g[0]) if g else 0.0
             if took > 5:
@@ -393,7 +400,18 @@ class Tracker:
         self.network_record(rec)
         a = self.cur
         st = rec.get("status") or 0
-        if rec.get("failed") or st >= 400:
+        body = rec.get("body") or ""
+        if st == 403 and ("quota" in body.lower() or "403009" in body):
+            # Seen live 2026-09-15 on the apply-workflow POST: the bot never sees this (no drawer
+            # opens, it just logs "Application failed") and keeps cycling all day.
+            if a is not None and a.ended is None:
+                a.flags.add("quota_exceeded")
+            if not self.quota_flagged:
+                self.quota_flagged = True
+                self.emit("NAUKRI_QUOTA_EXCEEDED", "high",
+                          "Naukri refused the apply: 'Daily quota of jobs exceeded' (403009). No application can "
+                          "succeed until the quota resets; every further attempt is wasted", ts=now, body=body[:400])
+        elif rec.get("failed") or st >= 400:
             self.emit("NAUKRI_HTTP_ERROR", "medium", f"{rec.get('method')} {rec.get('path')} -> {st or rec.get('failed')}",
                       ts=now, body=(rec.get("body") or "")[:600])
         if a is not None and a.ended is None and re.search(r"upload|resume", rec.get("path", ""), re.I) \
@@ -644,7 +662,10 @@ class Tracker:
                       unfilled=unfilled, flags=sorted(a.flags))
 
         # 5. Apply clicked but no outcome at all
-        if "apply_click" in a.marks and not bv and not a.server and reason != "watch ended":
+        if "quota_exceeded" in a.flags:
+            self.emit("APPLY_BLOCKED_BY_QUOTA", "medium", "Apply clicked but Naukri's daily quota was already used up",
+                      a, ts=now, bot_verdict=bv)
+        elif "apply_click" in a.marks and not bv and not a.server and reason != "watch ended":
             self.emit("NO_VERDICT", "medium", "Apply was clicked but neither the bot nor Naukri produced a verdict", a,
                       ts=now, last_lines=[e.line() for e in list(a.log)[-5:]])
 

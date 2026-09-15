@@ -97,7 +97,7 @@
 
   // ---- verdict banners: short visible blocks only (never whole-body substring matching)
   var REJECT = /oops|not accepted|incomplete information|answer all mandatory/i;
-  var ERROR = /there was an error|something went wrong|try again later|could not be (?:submitted|processed)|unable to process|limit (?:reached|exceeded)/i;
+  var ERROR = /there was an error|something went wrong|try again later|could not be (?:submitted|processed)|unable to process|limit (?:reached|exceeded)|quota/i;
   var REDIRECT = /redirected to the company website/i;
   var SUCCESS = /\bapplied to\b|successfully applied|application (?:sent|submitted)|applied successfully|already applied/i;
   var seenBanner = {};

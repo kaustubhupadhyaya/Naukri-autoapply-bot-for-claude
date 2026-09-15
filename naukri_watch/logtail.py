@@ -23,6 +23,8 @@ MARKERS = [
     ("v2_discard", r"^\[chat-v2\] discard: (\S+) - (.*)$"),
     ("v2_recap", r"^\[chat-v2\] q#\d+ "),
     ("tab_cleanup", r"tab cleanup took ([\d.]+)s"),
+    ("quota_blocked", r"daily apply quota exceeded"),
+    ("quota_paused", r"Applications paused: Naukri daily quota exceeded"),
     ("run_start", r"Setting up high-speed browser"),
     ("cycle_start", r"ALL-DAY SEARCH CYCLE #(\d+)"),
     ("cooldown", r"Entering all-day cooldown|Next search cycle starts at|Rate limit pause"),

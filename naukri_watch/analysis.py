@@ -514,9 +514,12 @@ class Tracker:
                       ts=now, trusted=ev.get("trusted"))
 
     def _unfilled(self, d):
+        # "file" excluded to match _check_save: a resume input's filled state is unreliable
+        # (files.length is often 0 even on a successful attach), so it's never cited as the
+        # cause of a rejection — only a control we can actually verify empty is.
         return [{"kind": w["kind"], "q": (w.get("q") or "")[:120], "value": w.get("value", "")}
                 for w in (d or {}).get("widgets", [])
-                if w["kind"] not in ("chips",) and w.get("filled") is False]
+                if w["kind"] not in ("chips", "file") and w.get("filled") is False]
 
     def _db_status(self, job_id):
         if not job_id or not os.path.exists(DB_PATH):

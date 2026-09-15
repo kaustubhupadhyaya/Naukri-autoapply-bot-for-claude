@@ -27,8 +27,11 @@ What this wrapper monkeypatches (reversible by deleting this file):
         answers + picking among radio options
       - DISCARD (job skipped, no lies): employer-specific ("employed by X",
         "currently employed", company traps), legal/health/conviction,
-        visa/citizenship, PII traps (PAN/Aadhaar/bank), DOB/date fields,
+        visa/citizenship, PII traps (PAN/Aadhaar/bank),
         anything unmapped with no AI available.
+      - DOB: answered from personal_info.date_of_birth (config.local.json, "DD/MM/YYYY") when
+        present — a single free-text "DD/MM/YYYY" field only; a 3-way split day/month/year
+        drawer needs the chatdrawer v2 engine (naukri_bot/chatdrawer/), not this v1 path.
  N6 Trailing input() ("Press Enter to close...") neutralised for headless runs.
 
 Runtime config overlay (in memory only, files never written):
@@ -64,7 +67,18 @@ import sqlite3
 import subprocess
 import requests
 import random
+import urllib.parse
+import faulthandler
 from datetime import datetime
+
+# H5 (2026-09-15): 68 launches/24h left no trace of *why* — stderr is overwritten on every
+# relaunch (naukri_keepalive.ps1) and there was no crash dump for native/interpreter deaths.
+# This alone can't fix the overwrite, but it turns a silent segfault/hang into a traceback in
+# whatever stderr file this launch does get.
+try:
+    faulthandler.enable()
+except Exception:
+    pass
 
 REPO = os.path.dirname(os.path.abspath(__file__))
 os.chdir(REPO)
@@ -121,6 +135,10 @@ LOCATION_WORDS = (
     "preferred", "current location", "live in", "resid", "job location",
 )
 YES_LIKE = ("yes", "agree", "i do", "i have", "willing", "sure", "ok", "confirm")
+
+# Shared with naukri_bot/chatdrawer (v2 engine) via the Hooks injected in the install() call
+# near the bottom of this file — one constant instead of two copies drifting apart.
+RESUME_PDF = r"C:\Users\Admin\Downloads\Kaustubh_upadhyaya_data_engineer.pdf"
 
 SAVE_XPATH = (
     "//button[contains(translate(normalize-space(.),"
@@ -934,6 +952,31 @@ def _unattended_handle_chatbot(self, timeout=12):
         if not _drawer_alive:
             drawer = _find_chat_drawer(driver)
             if drawer is None:
+                # H4 (2026-09-15): the drawer disappearing after at least one answer was
+                # sent is not necessarily a failure — Naukri auto-submits after the last
+                # answer and navigates to /myapply/... (confirmed live: 3+ real successes
+                # were discarded this way, e.g. 'Applied to "Informatica Etl Tester"' in the
+                # discard dump). Check Naukri's own verdict before giving up.
+                if getattr(self, "_chatbot_answered_qs", None):
+                    ev = None
+                    for _ in range(5):
+                        ev = _applied_evidence(driver)
+                        if ev:
+                            break
+                        time.sleep(2.0)
+                    if ev == "applied":
+                        logger.info("✅ Drawer closed after answering — Naukri shows Applied (confirmed)")
+                        self._chatbot_ok = True
+                        _log_telemetry("save_submission", "chatbot_drawer", "applied_after_drawer_close", True)
+                        return True
+                    if ev == "external":
+                        logger.info("↗️ Drawer closed — Naukri redirected to the company site, not applied")
+                        self._chatbot_ok = False
+                        return False
+                    if ev == "rejected":
+                        logger.warning("⚠️ Drawer closed — Naukri shows the incomplete-information rejection")
+                        self._chatbot_ok = False
+                        return False
                 break
             progressed = True
 
@@ -1014,7 +1057,7 @@ def _unattended_handle_chatbot(self, timeout=12):
                     pass
                 valid_chips.append((ch, txt))
 
-            resume_path = r"C:\Users\Admin\Downloads\Kaustubh_upadhyaya_data_engineer.pdf"
+            resume_path = RESUME_PDF
             q_recent = (qtexts[-1] if qtexts else "").lower()
 
             # Dedicated Resume Upload & Existing Resume Attachment (hidden input aware, never types filename)
@@ -1883,14 +1926,14 @@ def _unattended_handle_chatbot(self, timeout=12):
                         break
                 except Exception:
                     pass
+                # H3 (2026-09-15): the old fallback here matched 'apply confirmation' /
+                # 'applied' anywhere in the URL or body — sampled live, that title/text
+                # appears on BOTH a real 200 success AND a 202 "redirected to the company
+                # website" page, so it could confirm an application that never happened.
+                # `_applied_evidence` reads Naukri's own verdict (multiApplyResp code /
+                # 'Applied to "') instead of guessing from ambiguous text.
                 try:
-                    if driver.execute_script(
-                            "var u = (location.href || '').toLowerCase();"
-                            "if (u.indexOf('applied') >= 0 || u.indexOf('confirmation') >= 0 || u.indexOf('success') >= 0) return true;"
-                            "var t = (document.body ? document.body.innerText : '').toLowerCase();"
-                            "return t.indexOf('successfully applied') >= 0 || t.indexOf('application sent') >= 0 "
-                            "|| t.indexOf('apply confirmation') >= 0 || t.indexOf('has been applied') >= 0 "
-                            "|| t.indexOf('applied successfully') >= 0;"):
+                    if _applied_evidence(driver) == "applied":
                         confirmed = True
                         break
                 except Exception:
@@ -1946,6 +1989,13 @@ def _unattended_text_answer(self, question):
         return None
     ql = q.lower()
 
+    # Date of birth (2026-09-15): single free-text "DD/MM/YYYY" field. A 3-way split
+    # day/month/year drawer is not a text box at all and is handled by chatdrawer v2 instead.
+    if "date of birth" in ql or re.search(r'\bdob\b', ql):
+        dob = str((self.config.get("personal_info", {}) or {}).get("date_of_birth", "")).strip()
+        if dob:
+            return dob
+
     # Boolean Yes/No questions should NEVER be answered as "3 years"
     if any(ql.startswith(p) for p in ("do you", "are you", "have you", "will you", "can you", "would you", "is there", "is your", "should")):
         if any(neg in ql for neg in ("criminal", "convicted", "fired", "terminated", "felony", "visa sponsorship")):
@@ -1989,8 +2039,59 @@ ChatbotMixin._handle_chatbot = _unattended_handle_chatbot
 ChatbotMixin._unattended_text_answer = _unattended_text_answer
 ChatbotMixin._unattended_gemini_pick = _unattended_gemini_pick
 
+# ------------------------------------------------- chatdrawer v2 (dedicated chat-window module)
+# Wraps the v1 handler just installed above rather than replacing it: v2 only runs when a bot
+# instance is opted in (config.bot_behavior.chat_engine == "v2" or env NAUKRI_CHAT_ENGINE=v2),
+# so it can be canary-tested against real applications before becoming the default. See
+# naukri_bot/chatdrawer/__init__.py for the contract both paths honor.
+try:
+    from naukri_bot.chatdrawer import install as _install_chatdrawer_v2, Hooks as _ChatV2Hooks
+
+    _install_chatdrawer_v2(ChatbotMixin, _ChatV2Hooks(
+        classify_radio=classify_radio,
+        llm_answer=_llm_answer_question,
+        text_answer=_unattended_text_answer,
+        location_variants=_location_variants,
+        q_opts_mismatch=_q_opts_mismatch,
+        resume_path=RESUME_PDF,
+    ))
+except Exception as e:
+    logger.warning(f"chatdrawer v2 install skipped ({e!r}) — v1 chat handler remains active")
+
 # -------------------------------------------- N2 Save-aware submit + N3 titles
 _orig_submit_improved = ApplicationMixin._handle_easy_apply_submission_improved
+
+
+# H2 (2026-09-15): a visible modal/dialog containing form controls, or None. Used to scope
+# _find_save_button — it must NEVER be called with the whole driver/page (its own docstring
+# already said so): page-wide it matched job-card bookmark "Save" buttons on the search-results
+# page behind the job, and every one of those got clicked and counted as an applied submission
+# (13 in an 18-minute window; 202 external-redirects and Naukri error pages included). This is
+# the confirmed root cause of the "Applied (Easy Apply)" false-confirm rows.
+def _find_modal_form(driver):
+    try:
+        driver.implicitly_wait(0)
+        modals = driver.find_elements(
+            By.CSS_SELECTOR,
+            "div[class*='modal' i], div[class*='Modal'], div[class*='dialog' i], [role='dialog'], [aria-modal='true']")
+        for m in modals:
+            try:
+                if not m.is_displayed():
+                    continue
+                if m.find_elements(By.CSS_SELECTOR, "input, select, textarea, button"):
+                    return m
+            except StaleElementReferenceException:
+                continue
+            except Exception:
+                continue
+    except Exception:
+        pass
+    finally:
+        try:
+            driver.implicitly_wait(1)
+        except Exception:
+            pass
+    return None
 
 
 def _save_aware_submit(self):
@@ -2006,7 +2107,8 @@ def _save_aware_submit(self):
             return True
     except Exception:
         pass
-    save = _find_save_button(driver)
+    modal = _find_modal_form(driver)
+    save = _find_save_button(modal) if modal is not None else None
     if save is not None:
         try:
             logger.info("🔍 Found Save button — waiting for enabled state...")
@@ -2054,24 +2156,36 @@ def _save_aware_submit(self):
                 _close_chatbot_drawer(driver)
                 return False
 
+            # H3 (2026-09-15): _verify_application_submitted() (application.py) returns True
+            # whenever no button[type=submit] is on the page — true for almost any page, which
+            # is how a job-card bookmark "Save" click got counted as a submitted application.
+            # Naukri's own verdict (multiApplyResp / 'Applied to "') is the only thing trusted.
             try:
-                if self._verify_application_submitted():
-                    logger.info("✅ Save submission CONFIRMED")
+                ev = None
+                for _attempt in range(2):
+                    ev = _applied_evidence(driver)
+                    if ev:
+                        break
+                    time.sleep(2.0)
+                if ev == "applied":
+                    logger.info("✅ Save submission CONFIRMED (Naukri shows Applied)")
                     return True
                 rej = _check_rejection_messages(driver)
-                if rej:
-                    logger.error(f"❌ Application rejected due to incomplete information: '{rej}'")
+                if rej or ev == "rejected":
+                    logger.error(f"❌ Application rejected due to incomplete information: '{rej or ev}'")
                     try:
                         driver.save_screenshot("debug_incomplete_app.png")
                         logger.info("📸 Saved screenshot to debug_incomplete_app.png")
                     except Exception:
                         pass
-                    _close_chatbot_drawer(driver)
                     return False
-                logger.warning("⚠️ Save clicked, verification unclear — counting as applied")
-                return True
+                if ev == "external":
+                    logger.info("↗️ Save led to a company-site redirect — not an Easy Apply submission")
+                    return False
+                logger.warning("⚠️ Save clicked, no Naukri verdict found — will NOT count as applied")
+                return False
             except Exception:
-                return True
+                return False
         except TimeoutException:
             logger.info("Save stayed disabled (questions pending) — will not submit")
             _close_chatbot_drawer(driver)
@@ -2111,6 +2225,15 @@ def _save_aware_submit(self):
             except Exception:
                 pass
             _close_chatbot_drawer(driver)
+            return False
+        # H3: the legacy path's own _verify_application_submitted() (application.py) also uses
+        # the "no submit button on page = success" heuristic. Downgrade its True to a Naukri
+        # verdict when one is available; keep it only when there is truly nothing to check.
+        ev = _applied_evidence(driver)
+        if ev == "applied":
+            logger.info("✅ Legacy submit CONFIRMED (Naukri shows Applied)")
+        elif ev in ("external", "rejected"):
+            logger.warning(f"⚠️ Legacy submit reported success, but Naukri verdict is '{ev}' — not counting as applied")
             return False
     return result
 
@@ -2183,12 +2306,59 @@ def _is_applied_on_page(driver):
                     continue
         except Exception:
             pass
+        if _applied_evidence(driver) == "applied":
+            return True
     finally:
         try:
             driver.implicitly_wait(1)
         except Exception:
             pass
     return False
+
+
+# H3 (2026-09-15): Naukri's own verdict, read off the result page it navigates to after a
+# chatbot Save or a legacy submit — /myapply/... with multiApplyResp={"<jobId>":<code>} in the
+# URL (200 = applied, 202 = "redirected to the company website" = NOT applied) and/or the page
+# text 'Applied to "<title>"'. Every prior success check (URL contains 'applied'/'confirmation'/
+# 'success', or body contains 'apply confirmation') fires for BOTH codes — sampled live, the
+# title "Apply Confirmation" appears on 202 pages too — which is how page-wide-Save clicks on a
+# job-card bookmark button, and 202 external-redirects, both got written to the DB as
+# "Applied (Easy Apply)". This is the only success oracle that should be trusted.
+def _applied_evidence(driver):
+    """Returns 'applied' | 'external' | 'rejected' | None from Naukri's own result page."""
+    try:
+        driver.implicitly_wait(0)
+        url = driver.current_url or ""
+        if "/myapply/" not in url.lower():
+            return None
+        try:
+            decoded = urllib.parse.unquote(url)
+            m = re.search(r"multiApplyResp=(\{[^}]*\})", decoded, re.IGNORECASE)
+            if m:
+                resp = json.loads(m.group(1))
+                code = next(iter(resp.values())) if resp else None
+                if code in (200, "200"):
+                    return "applied"
+                if code in (202, "202"):
+                    return "external"
+        except Exception as e:
+            logger.debug(f"multiApplyResp parse: {e}")
+        try:
+            body = (driver.execute_script("return document.body ? document.body.innerText : ''") or "").lower()
+        except Exception:
+            body = ""
+        if 'applied to "' in body:
+            return "applied"
+        if "redirected to the company website" in body:
+            return "external"
+        if any(p in body for p in ("oops!", "not accepted due to", "incomplete information")):
+            return "rejected"
+        return None
+    finally:
+        try:
+            driver.implicitly_wait(1)
+        except Exception:
+            pass
 
 
 def _get_page_with_retry(driver, url, max_retries=2, timeout=5):
@@ -2230,8 +2400,13 @@ EASY_APPLY_SELECTORS = [
     "a.apply-button",
     "button[data-automation*='apply' i]",
     "button[aria-label*='apply' i]",
-    "//button[contains(translate(normalize-space(.),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),'apply') and not(contains(translate(normalize-space(.),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),'applied')) and not(contains(translate(normalize-space(.),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),'save job'))]",
-    "//a[contains(translate(normalize-space(.),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),'apply') and not(contains(translate(normalize-space(.),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),'applied'))]",
+    # H1 (2026-09-15): both XPaths below match on button TEXT and used to accept "Apply on
+    # company site" (contains 'apply', not 'applied') -> the bot clicked through to the
+    # employer's own site and Naukri counted it as External (202), while the false-confirm
+    # bug (H2/H3) then wrote it to the DB as "Applied (Easy Apply)". Excluding "company site"
+    # here is the actual fix; H2/H3 make a repeat impossible even if this slips.
+    "//button[contains(translate(normalize-space(.),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),'apply') and not(contains(translate(normalize-space(.),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),'applied')) and not(contains(translate(normalize-space(.),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),'save job')) and not(contains(translate(normalize-space(.),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),'company site'))]",
+    "//a[contains(translate(normalize-space(.),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),'apply') and not(contains(translate(normalize-space(.),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),'applied')) and not(contains(translate(normalize-space(.),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),'company site'))]",
 ]
 
 
@@ -2250,7 +2425,9 @@ def _poll_easy_apply_button(driver, timeout=8.0):
                         try:
                             if c.is_displayed() and c.is_enabled():
                                 txt = (c.text or "").strip().lower()
-                                if "applied" in txt or "save job" in txt:
+                                cid = (c.get_attribute("id") or "").lower()
+                                if "applied" in txt or "save job" in txt or "company site" in txt \
+                                        or "company-site" in cid:
                                     continue
                                 return c
                         except StaleElementReferenceException:
@@ -2273,8 +2450,12 @@ def _js_click_apply_fallback(driver):
             var els = document.querySelectorAll('button, a, div[role=button], span[role=button]');
             for (var el of els) {
                 var t = ((el.innerText || '') + ' ' + (el.getAttribute('aria-label') || '')).trim().toLowerCase();
+                var id = (el.id || '').toLowerCase();
                 if (!t || t.indexOf('applied') >= 0 || t.indexOf('save job') >= 0) continue;
-                if (t === 'apply' || t.indexOf('apply now') >= 0 || t.indexOf('easy apply') >= 0 || t.indexOf('apply on') >= 0) {
+                if (t.indexOf('company site') >= 0 || id.indexOf('company-site') >= 0) continue;
+                // H1 (2026-09-15): 'apply on' used to also match "Apply on company site",
+                // sending the bot to the employer's own site instead of Naukri's Easy Apply.
+                if (t === 'apply' || t.indexOf('apply now') >= 0 || t.indexOf('easy apply') >= 0) {
                     var r = el.getBoundingClientRect();
                     if (r.width > 0 && r.height > 0) { el.click(); return t.slice(0, 40); }
                 }

@@ -216,6 +216,14 @@ function Start-BotDetached {
     $env:PYTHONUNBUFFERED = "1"
     $env:NAUKRI_SKIP_EXTERNAL = "1"
 
+    # H5 (2026-09-15): Start-Process truncates -RedirectStandardError/-Output on every launch,
+    # so 68 relaunches/24h left zero trace of why the previous one died. Keep one prior copy.
+    foreach ($p in @($StdoutPath, $StderrPath)) {
+        if (Test-Path $p) {
+            Copy-Item $p "$p.previous" -Force -ErrorAction SilentlyContinue
+        }
+    }
+
     $proc = Start-Process -FilePath $PythonExe `
         -ArgumentList $ScriptArgs `
         -WorkingDirectory $RepoDir `

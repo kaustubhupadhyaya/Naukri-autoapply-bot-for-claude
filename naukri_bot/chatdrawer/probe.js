@@ -330,14 +330,30 @@
         })});
     }
 
-    // file inputs (usually hidden behind an "Upload" chip)
+    // file inputs (usually hidden behind an "Upload" chip). Naukri leaves this <input> mounted
+    // in the DOM (hidden) for the rest of the conversation once a resume question has ever
+    // rendered, so it must NOT be surfaced as a widget on every later, unrelated question —
+    // sampled live, that misattributed a resume-upload requirement onto "are you an EX LTM?"
+    // and other questions entirely, which is exactly the kind of stale-question pairing this
+    // probe exists to prevent. Only report it while the CURRENT question is actually about a
+    // resume/CV (checked against the most recent bot message, not the whole drawer).
     var files = d.querySelectorAll('input[type=file]');
-    var fileShown = /\.(pdf|docx?|rtf)\b/i.test(txt(d));
-    for (var fli = 0; fli < files.length; fli++) {
-      var fe = files[fli];
-      dm.widgets.push({kind: 'file', el: fe, ref: ref(fe), accept: fe.accept || '',
-        files: fe.files ? fe.files.length : -1, filled: (fe.files && fe.files.length > 0) || fileShown,
-        value: fe.files && fe.files.length ? fe.files[0].name : '', required: fe.required || null});
+    if (files.length) {
+      var _lastBotLi = null, _bLis = d.querySelectorAll('li.botItem');
+      for (var _bi = _bLis.length - 1; _bi >= 0; _bi--) {
+        if (!/ (loader|botLogo) /.test(' ' + cls(_bLis[_bi]) + ' ') && vis(_bLis[_bi])) { _lastBotLi = _bLis[_bi]; break; }
+      }
+      var _resumeCtx = /resume|upload|attach|\bcv\b|biodata/i;
+      var isResumeAsk = _lastBotLi ? _resumeCtx.test(txt(_lastBotLi)) : _resumeCtx.test(txt(d));
+      var fileShown = /\.(pdf|docx?|rtf)\b/i.test(txt(d));
+      if (isResumeAsk || fileShown) {
+        for (var fli = 0; fli < files.length; fli++) {
+          var fe = files[fli];
+          dm.widgets.push({kind: 'file', el: fe, ref: ref(fe), accept: fe.accept || '',
+            files: fe.files ? fe.files.length : -1, filled: (fe.files && fe.files.length > 0) || fileShown,
+            value: fe.files && fe.files.length ? fe.files[0].name : '', required: fe.required || null});
+        }
+      }
     }
 
     // chips / quick replies (Naukri keeps them in the footer): leaf-most clickable short texts

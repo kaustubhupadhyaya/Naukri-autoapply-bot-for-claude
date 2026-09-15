@@ -50,3 +50,4 @@ watch_runs/
 *.lock
 *state.json
 naukri_heartbeat.txt
+*.previous

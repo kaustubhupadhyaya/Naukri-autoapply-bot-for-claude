@@ -91,14 +91,25 @@ def _set_text(driver, el, value, is_input):
 
 
 def fill_radio_or_checkbox(driver, snap, widget, answer):
-    target = next((o for o in widget.get("options", [])
-                   if (o.get("text") or "").strip().lower() == answer.value.strip().lower()), None)
-    if target is None:  # loose fallback
+    wanted = answer.values if (widget.get("kind") == "checkbox" and answer.values) else [answer.value]
+    results = []
+    for val in wanted:
         target = next((o for o in widget.get("options", [])
-                       if answer.value.strip().lower() in (o.get("text") or "").strip().lower()), None)
-    if target is None:
-        return FillResult(False, "", f"option '{answer.value}' not found among {[o.get('text') for o in widget.get('options', [])]}")
-    return _click_ladder(driver, [snap.el(target.get("ref")), snap.el(target.get("inputRef"))])
+                       if (o.get("text") or "").strip().lower() == val.strip().lower()), None)
+        if target is None:  # loose fallback
+            target = next((o for o in widget.get("options", [])
+                           if val.strip().lower() in (o.get("text") or "").strip().lower()), None)
+        if target is None:
+            results.append(FillResult(False, "", f"option '{val}' not found among "
+                                                 f"{[o.get('text') for o in widget.get('options', [])]}"))
+            continue
+        if target.get("checked"):  # a retry after a partial multi-select: keep what already registered
+            results.append(FillResult(True, "already"))
+            continue
+        results.append(_click_ladder(driver, [snap.el(target.get("ref")), snap.el(target.get("inputRef"))]))
+    ok = bool(results) and all(r.ok for r in results)
+    return FillResult(ok, "/".join(r.channel for r in results if r.channel),
+                      "; ".join(r.note for r in results if r.note))
 
 
 def fill_select(driver, snap, widget, answer):

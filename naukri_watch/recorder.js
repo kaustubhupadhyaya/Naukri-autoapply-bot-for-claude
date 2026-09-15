@@ -26,9 +26,34 @@
     };
   }
 
+  // Drawer state at the instant Save is clicked (capture phase runs before Naukri's handler),
+  // so "Save pressed with an empty field" is judged on exact pre-click truth.
+  function preSave(el) {
+    var d = el.closest && el.closest('[class*="chatbot"]');
+    if (!d) return null;
+    while (d.parentElement && d.parentElement.closest && d.parentElement.closest('[class*="chatbot"]')) d = d.parentElement.closest('[class*="chatbot"]');
+    var out = {emptyChoice: [], emptyText: []};
+    d.querySelectorAll('.singleselect-radiobutton-container, [class*="multiselect" i], [class*="checkbox-container" i]').forEach(function (c) {
+      if (c.offsetParent === null) return;
+      if (!c.querySelector('input:checked')) {
+        out.emptyChoice.push('choice[' + String(c.innerText || '').replace(/\s+/g, ' ').trim().slice(0, 50) + ']');
+      }
+    });
+    d.querySelectorAll('[contenteditable="true"], input[type=text], textarea').forEach(function (e) {
+      if (e.offsetParent === null) return;
+      var v = (e.tagName === 'INPUT' || e.tagName === 'TEXTAREA') ? e.value : (e.innerText || '');
+      if (!String(v).trim()) out.emptyText.push(e.tagName.toLowerCase());
+    });
+    return out;
+  }
+
   ['click', 'submit'].forEach(function (t) {
     document.addEventListener(t, function (e) {
-      send({t: t, trusted: e.isTrusted, el: desc(e.target), ts: Date.now()});
+      var o = {t: t, trusted: e.isTrusted, el: desc(e.target), ts: Date.now()};
+      if (t === 'click' && o.el && o.el.inDrawer && /^(save|submit|save & apply|send|next|done)$/i.test(o.el.text)) {
+        try { o.pre = preSave(e.target); } catch (err) {}
+      }
+      send(o);
     }, true);
   });
 

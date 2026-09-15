@@ -34,6 +34,7 @@ DEFAULT_BUDGETS = {
     "save_advance_s": 8,
     "verdict_wait_s": 12,
     "max_stuck": 3,
+    "idle_s": 20,
 }
 
 
@@ -181,7 +182,7 @@ def run(bot, hooks, budgets=None):
     loc_variants = hooks.location_variants(config)
     job_id = snap.job_id
     deadline = t0 + b["drawer_total_s"]
-    last_qsig, stuck = None, 0
+    acted, idle_since = {}, None  # qsig -> times v2 answered it; start of a do-nothing stretch
 
     while time.time() < deadline:
         snap = p.wait_until(lambda s: s.phase == "result" or not s.drawer or
@@ -203,27 +204,67 @@ def run(bot, hooks, budgets=None):
             return Result(f"ABORTED_CHATBOT_ERROR", "drawer shows a 'Try again' error chip", qa, elapsed(), job_id)
 
         qsig = d.get("qsig", "")
-        if qsig and qsig == last_qsig:
-            stuck += 1
-            if stuck >= b["max_stuck"]:
-                return Result("ABORTED_STUCK", f"same question {stuck} rounds with no progress", qa, elapsed(), job_id)
-        else:
-            stuck = 0
-        last_qsig = qsig
+        # "Stuck" only counts rounds where v2 actually answered this question and the drawer
+        # did not move on. Idle re-probes are bounded by idle_s instead (the first canary
+        # aborted a consent question in 4s by counting three idle passes as "stuck").
+        if acted.get(qsig, 0) >= b["max_stuck"]:
+            return Result("ABORTED_STUCK", f"answered '{(d.get('activeQuestion') or '')[:60]}' {acted[qsig]}x "
+                          "and the drawer never moved on", qa, elapsed(), job_id)
 
         snap, did_resume = _handle_resume(driver, p, snap, hooks, b, qa)
         if did_resume:
+            acted[qsig] = acted.get(qsig, 0) + 1
+            idle_since = None
             continue
         d = snap.drawer
 
         widget = _pick_widget(d)
+        chips = next((w for w in d.get("widgets", []) if w.get("kind") == "chips"), None)
+        if widget is None and chips is not None and d.get("activeQuestion"):
+            # Quick-reply question (live example: consent -> a lone [Yes] chip, Save hidden and
+            # disabled). The chip click itself sends the answer; success = the transcript moves.
+            chips = dict(chips, q=d.get("activeQuestion"))
+            t_a = time.time()
+            ans = decide(bot, chips, hooks, config, loc_variants)
+            if isinstance(ans, Discard):
+                qa.append({"q": chips["q"][:160], "kind": "chips", "answer": None, "source": ans.code,
+                           "verify_ok": False, "ms": (time.time() - t_a) * 1000, "note": ans.detail})
+                logger.warning(f"[chat-v2] discard: {ans.code} - {ans.detail[:120]}")
+                return Result(f"ABORTED_{ans.code}", ans.detail, qa, elapsed(), job_id)
+            before_mut, before_msgs = d.get("mutN", 0), d.get("msgCount", 0)
+            fr = fillers.fill(driver, snap, chips, ans)
+            moved = p.wait_until(
+                lambda s: s.phase == "result" or not s.drawer or
+                (s.drawer.get("mutN", 0) > before_mut and
+                 (s.drawer.get("msgCount", 0) > before_msgs or s.drawer.get("qsig") != qsig)),
+                b["save_advance_s"], poll=0.2)
+            ok = bool(fr.ok and moved is not None and (
+                moved.phase == "result" or not moved.drawer or moved.drawer.get("msgCount", 0) > before_msgs
+                or moved.drawer.get("qsig") != qsig))
+            ms = (time.time() - t_a) * 1000
+            qa.append({"q": chips["q"][:160], "kind": "chips", "answer": ans.value, "source": ans.source,
+                       "verify_ok": ok, "ms": ms, "channel": fr.channel})
+            logger.info(f"[chat-v2] q kind=chips src={ans.source} verify={'ok' if ok else 'FAIL'} ch={fr.channel} "
+                        f"ms={ms:.0f} q='{chips['q'][:70]}' a='{str(ans.value)[:60]}'")
+            acted[qsig] = acted.get(qsig, 0) + 1
+            idle_since = None
+            continue
         if widget is None:
             if d.get("save") and d["save"].get("enabled"):
                 pass  # nothing left to fill, fall through to Save
             else:
+                idle_since = idle_since or time.time()
+                if time.time() - idle_since > b["idle_s"]:
+                    kinds = [w.get("kind") for w in d.get("widgets", [])]
+                    return Result("ABORTED_IDLE",
+                                  f"nothing answerable for {b['idle_s']}s: widgets={kinds} "
+                                  f"active='{(d.get('activeQuestion') or '')[:60]}' "
+                                  f"save_enabled={bool(d.get('save') and d['save'].get('enabled'))}",
+                                  qa, elapsed(), job_id)
                 time.sleep(0.5)
                 continue
         else:
+            idle_since = None
             t_a = time.time()
             ans = decide(bot, widget, hooks, config, loc_variants)
             if isinstance(ans, Discard):
@@ -267,6 +308,8 @@ def run(bot, hooks, budgets=None):
                                            snap.el(save.get("containerRef"))])
         if not r.ok:
             return Result("ABORTED_SAVE_CLICK_FAILED", r.note, qa, elapsed(), job_id)
+        acted[qsig] = acted.get(qsig, 0) + 1
+        idle_since = None
         snap = p.wait_until(
             lambda s: s.phase == "result" or not s.drawer or
             (s.drawer.get("mutN", 0) > before_mut and (s.drawer.get("msgCount", 0) > before_msgs or

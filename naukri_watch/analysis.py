@@ -253,6 +253,31 @@ class Tracker:
             a.marks["last_answer"] = ev.ts
             if self.mode == "live":
                 a.pending_checks.append((ev.ts + FILL_CHECK_DELAY, rec))
+        elif k == "v2_answer":
+            wkind, src, verify, q, ans = (g + ("",) * 5)[:5]
+            a.flags.add("chat_v2")
+            a.mark("drawer_open", ev.ts)
+            a.answers.append({"ts": ev.ts, "q": q, "a": ans, "via": f"v2:{wkind}/{src}"})
+            a.mark("first_answer", ev.ts)
+            a.marks["last_answer"] = ev.ts
+            if verify != "ok":
+                self.emit("V2_VERIFY_FAILED", "high", f"v2 could not verify its {wkind} answer registered",
+                          ts=ev.ts, question=q[:160], answer=ans[:60])
+        elif k == "v2_discard":
+            code, detail = (g + ("", ""))[:2]
+            self.emit("V2_ABORTED", "medium", f"{code}: {detail[:140]}", ts=ev.ts)
+        elif k == "v2_outcome":
+            outcome = g[0] if g else "UNKNOWN"
+            a.flags.add("chat_v2")
+            if outcome != "NO_DRAWER":
+                a.bot_verdicts.append({"APPLIED": "bot_confirmed", "REJECTED_INCOMPLETE": "bot_saw_oops",
+                                       "EXTERNAL": "bot_external_skip", "NAUKRI_ERROR": "bot_unconfirmed",
+                                       "UNKNOWN": "bot_unconfirmed"}.get(outcome, "bot_discarded"))
+                a.mark("verdict", ev.ts)
+        elif k == "tab_cleanup":
+            took = float(g[0]) if g else 0.0
+            if took > 5:
+                self.emit("SLOW_TAB_CLEANUP", "medium", f"post-verdict tab cleanup blocked {took:.1f}s", ts=ev.ts)
         elif k in ("save_click", "save_page_wide"):
             a.mark("save_click", ev.ts)
             if k == "save_page_wide":
@@ -504,6 +529,17 @@ class Tracker:
                               ts=now, question=ans["q"][:160])
 
     def _check_save(self, a, now, ev):
+        # Prefer the drawer state recorder.js captured synchronously at click time (capture
+        # phase, before Naukri reacts): the 1 Hz snapshot lags a fast filler (v2 fills and
+        # presses Save within ~1s), which made filled controls look empty.
+        pre = ev.get("pre")
+        if isinstance(pre, dict):
+            empties = list(pre.get("emptyChoice") or []) + list(pre.get("emptyText") or [])
+            if empties:
+                self.emit("SAVE_WITH_EMPTY_FIELDS", "high",
+                          f"Save clicked while {len(empties)} control(s) were empty at click time: "
+                          + "; ".join(empties[:3]), ts=now, trusted=ev.get("trusted"))
+            return
         d = a.last_drawer or {}
         open_ws = [w for w in d.get("widgets", [])
                    if w["kind"] not in ("chips", "file") and w.get("filled") is False

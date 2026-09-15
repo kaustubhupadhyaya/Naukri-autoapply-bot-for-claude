@@ -8,8 +8,9 @@ DOB (a single "DD/MM/YYYY" field, patched into v1 alongside this module). Date c
 aren't a single text field (day/month/year selects or inputs) are answered here directly from
 config, because v1 has no equivalent — this is new coverage, not reused.
 """
+import re
 from dataclasses import dataclass
-from typing import Optional
+from typing import List, Optional
 
 DOB_CODE = "DOB_MISSING"
 POLICY_CODE = "POLICY"
@@ -23,6 +24,7 @@ class Answer:
     value: str                 # for radio/checkbox/select/chips: the exact option text to pick
     source: str                 # "policy" | "llm" | "config" | "rules"
     parts: Optional[dict] = None  # date_split only: {"day": "06", "month": "06", "year": "2001"}
+    values: Optional[List[str]] = None  # checkbox only: every option to tick (value = first of them)
 
 
 @dataclass
@@ -113,6 +115,25 @@ def decide(bot, widget, hooks, config, loc_variants):
             return Discard(NO_ANSWER_CODE, "no options parsed")
         if hooks.q_opts_mismatch(q, options):
             return Discard(STALE_PAIR_CODE, f"question/options look mismatched: {options[:4]}")
+        if kind == "checkbox":
+            # Multi-select. Personal facts come from config first (canary 2026-09-15: a single
+            # LLM pick answered "What are the languages you know?" with only 'Kannada').
+            lower = {o.strip().lower(): o for o in options}
+            if "language" in q.lower():
+                langs = [str(x).strip().lower() for x in
+                         ((config.get("personal_info", {}) or {}).get("languages") or []) if str(x).strip()]
+                picks = [lower[l] for l in langs if l in lower]
+                if picks:
+                    return Answer(value=picks[0], source="config", values=picks)
+            raw = hooks.llm_answer(f"{q} (Select ALL options that apply. Options: {' | '.join(options)}. "
+                                   f"Reply with the exact option texts separated by ' | '.)", options=None, config=config)
+            picks = []
+            for part in re.split(r"\s*[|;,]\s*", raw or ""):
+                o = lower.get(part.strip().strip('"\'').lower())
+                if o and o not in picks:
+                    picks.append(o)
+            if picks:
+                return Answer(value=picks[0], source="llm", values=picks)
         if _is_dob_question(q):
             dob = _dob_parts(config)
             if dob:

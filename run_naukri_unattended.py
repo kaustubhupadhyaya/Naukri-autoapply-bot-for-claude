@@ -2608,6 +2608,10 @@ def _unattended_apply_one(self, job_url):
         logger.error(f"Error in _unattended_apply_one: {e}")
         return False
     finally:
+        # Measured, not yet changed (2026-09-15): ~40s of bot-log silence follows every verdict
+        # and only this cleanup runs there. Log its duration so the watcher can confirm the
+        # cause before anyone "fixes" it blind.
+        _t_fin = time.time()
         try:
             _enforce_single_tab(driver)
             if original_tab and driver.current_window_handle != original_tab:
@@ -2618,6 +2622,9 @@ def _unattended_apply_one(self, job_url):
             _enforce_single_tab(driver)
         except Exception:
             pass
+        _fin = time.time() - _t_fin
+        if _fin > 1.0:
+            logger.info(f"⏱️ tab cleanup took {_fin:.1f}s")
 
 
 # ---------------------------------------- N7 official tally + Excel tracker

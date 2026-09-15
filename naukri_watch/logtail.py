@@ -15,6 +15,14 @@ LINE_RE = re.compile(r"^(\d{4}-\d\d-\d\d \d\d:\d\d:\d\d),(\d{3}) - ([A-Z]+) - (.
 # (kind, pattern): first match wins. Patterns key on the words after an emoji, because some
 # emoji carry an invisible U+FE0F variation selector.
 MARKERS = [
+    # chatdrawer v2 (naukri_bot/chatdrawer/__init__.py + engine.py); the "q#N" lines are an
+    # end-of-drawer recap of the live "q kind=" lines and are ignored.
+    ("v2_installed", r"chatdrawer v2 installed"),
+    ("v2_outcome", r"^\[chat-v2\] outcome=(\w+) job=(\S+) reason='(.*)' answered=(\d+)"),
+    ("v2_answer", r"^\[chat-v2\] q kind=(\w+) src=(\S+) verify=(\w+) ch=\S* ms=\d+ q='(.*)' a='(.*)'$"),
+    ("v2_discard", r"^\[chat-v2\] discard: (\S+) - (.*)$"),
+    ("v2_recap", r"^\[chat-v2\] q#\d+ "),
+    ("tab_cleanup", r"tab cleanup took ([\d.]+)s"),
     ("run_start", r"Setting up high-speed browser"),
     ("cycle_start", r"ALL-DAY SEARCH CYCLE #(\d+)"),
     ("cooldown", r"Entering all-day cooldown|Next search cycle starts at|Rate limit pause"),

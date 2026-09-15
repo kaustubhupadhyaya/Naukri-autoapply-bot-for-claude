@@ -2554,9 +2554,27 @@ def _enforce_single_tab(driver, tag=""):
             _t1 = time.time()
             main = driver.current_window_handle
             _sub.append(f"main_handle={time.time() - _t1:.1f}s")
-            for h in list(handles):
+            # Bug found 2026-09-15 (post-mortem on a dead browser, ~1h after the fix below
+            # first ran live): this loop assumed `main` always matches one entry in `handles`.
+            # When it doesn't (stale current_window_handle, a race with an in-flight
+            # navigation/popup), `h != main` was true for EVERY handle, and the CDP close below
+            # closed all of them — the whole browser exits when its last window closes. Guard 1:
+            # never trust a `main` absent from the fresh handle list. Guard 2 (belt-and-suspenders
+            # against any other way this same shape of bug could recur): track how many handles
+            # are left as we go and refuse to close the last one, regardless of what `main` said.
+            if main not in handles:
+                logger.warning(f"⚠️ current_window_handle ('{main}') isn't in window_handles "
+                               f"({len(handles)} handles) — keeping the first handle instead of "
+                               f"trusting a stale reference (this is what closed the whole "
+                               f"browser earlier tonight)")
+                main = handles[0]
+            remaining = len(handles)
+            for h in handles:
                 if h == main:
                     continue
+                if remaining <= 1:
+                    logger.warning("⚠️ refusing to close the last remaining tab/window")
+                    break
                 # 5a fix (2026-09-15), evidence-based: switch_to.window()+close() on an extra
                 # tab blocked ~20s before raising WebDriverException (seen live, twice per job
                 # cleanup = the exact ~40s stall). Root cause: that path waits on the target
@@ -2568,12 +2586,14 @@ def _enforce_single_tab(driver, tag=""):
                 try:
                     driver.execute_cdp_cmd("Target.closeTarget", {"targetId": h})
                     _sub.append(f"cdp_close={time.time() - _t2:.1f}s")
+                    remaining -= 1
                 except Exception as e:
                     _sub.append(f"cdp_close:ERR({type(e).__name__})={time.time() - _t2:.1f}s")
                     _t2b = time.time()
                     try:
                         driver.switch_to.window(h)
                         driver.close()
+                        remaining -= 1
                     except Exception as e2:
                         _sub.append(f"switch_close:ERR({type(e2).__name__})")
                     finally:

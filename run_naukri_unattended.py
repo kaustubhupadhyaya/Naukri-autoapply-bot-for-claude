@@ -2555,15 +2555,29 @@ def _enforce_single_tab(driver, tag=""):
             main = driver.current_window_handle
             _sub.append(f"main_handle={time.time() - _t1:.1f}s")
             for h in list(handles):
-                if h != main:
-                    _t2 = time.time()
+                if h == main:
+                    continue
+                # 5a fix (2026-09-15), evidence-based: switch_to.window()+close() on an extra
+                # tab blocked ~20s before raising WebDriverException (seen live, twice per job
+                # cleanup = the exact ~40s stall). Root cause: that path waits on the target
+                # tab's own renderer to respond, and this tab doesn't. Closing it at the CDP
+                # level (Chromium's window handle IS its CDP targetId) doesn't need the tab to
+                # cooperate — the browser process just kills the target. Falls back to the old
+                # (slow but previously-only) path only if the CDP call itself fails.
+                _t2 = time.time()
+                try:
+                    driver.execute_cdp_cmd("Target.closeTarget", {"targetId": h})
+                    _sub.append(f"cdp_close={time.time() - _t2:.1f}s")
+                except Exception as e:
+                    _sub.append(f"cdp_close:ERR({type(e).__name__})={time.time() - _t2:.1f}s")
+                    _t2b = time.time()
                     try:
                         driver.switch_to.window(h)
                         driver.close()
-                    except Exception as e:
-                        _sub.append(f"switch_close:ERR({type(e).__name__})")
+                    except Exception as e2:
+                        _sub.append(f"switch_close:ERR({type(e2).__name__})")
                     finally:
-                        _sub.append(f"switch_close={time.time() - _t2:.1f}s")
+                        _sub.append(f"switch_close={time.time() - _t2b:.1f}s")
             _t3 = time.time()
             driver.switch_to.window(main)
             _sub.append(f"switch_main={time.time() - _t3:.1f}s")

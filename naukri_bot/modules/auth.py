@@ -47,6 +47,20 @@ class AuthMixin:
 
                 self.wait.until(EC.presence_of_element_located((By.TAG_NAME, 'body')))
 
+                # Persistent Edge profile: already logged in -> nlogin redirects to
+                # homepage (no email field). Detect and skip credential entry.
+                try:
+                    _u = (self.driver.current_url or "").lower()
+                    if 'nlogin' not in _u and '/login' not in _u:
+                        try:
+                            if self._verify_login_success():
+                                logger.info("✅ Already logged in via saved profile — skipping credential entry")
+                                return True
+                        except Exception:
+                            pass
+                except Exception:
+                    pass
+
                 # Email field
                 email_selectors = [
                     '#usernameField',

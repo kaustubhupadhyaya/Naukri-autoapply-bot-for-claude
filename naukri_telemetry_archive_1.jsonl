@@ -1,0 +1,30 @@
+{"timestamp": "2026-09-14 03:41:41", "format": "text_input", "question": "How many years of experience do you have in SCALA?", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-14 03:42:37", "format": "save_submission", "question": "chatbot_drawer", "answer": "save_enabled", "success": true, "extra": {}}
+{"timestamp": "2026-09-14 04:07:21", "format": "text_input", "question": "How many years of experience do you have in Big Data?", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-14 04:08:14", "format": "save_submission", "question": "chatbot_drawer", "answer": "save_enabled", "success": true, "extra": {}}
+{"timestamp": "2026-09-14 04:23:03", "format": "text_input", "question": "Do you have experience in GCP", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-14 04:37:40", "format": "save_submission", "question": "chatbot_drawer", "answer": "save_enabled", "success": true, "extra": {}}
+{"timestamp": "2026-09-14 04:45:01", "format": "text_input", "question": "Do you have experience in GCP", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-14 04:56:05", "format": "text_input", "question": "Do you have experience in Air Flow, Kafka, CI/CD,SQL/ NOSQL, Shell Scripting", "answer": "Yes", "success": true, "extra": {}}
+{"timestamp": "2026-09-14 05:13:24", "format": "text_input", "question": "Hi kaustubh upadhyaya, thank you for showing interest. Kindly answer all the recruiter's questions to successfully apply for the job.", "answer": "Yes", "success": true, "extra": {}}
+{"timestamp": "2026-09-14 05:35:09", "format": "quick_reply_chip", "question": "Hi! kaustubh, The recruiter needs some profile information also. Your profile will be updated with the details that you provide.", "answer": "Upload Resume", "success": true, "extra": {}}
+{"timestamp": "2026-09-14 05:40:27", "format": "text_input", "question": "How many years of experience do you have in Informatica?", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-14 05:47:49", "format": "text_input", "question": "How many years of experience do you have in Azure Cloud?", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-14 05:48:13", "format": "quick_reply_chip", "question": "Hi kaustubh upadhyaya, thank you for showing interest. Kindly answer all the recruiter's questions to successfully apply for the job.", "answer": "Featured staffing consultancy", "success": true, "extra": {}}
+{"timestamp": "2026-09-14 05:54:58", "format": "save_submission", "question": "chatbot_drawer", "answer": "save_confirmed", "success": true, "extra": {}}
+{"timestamp": "2026-09-14 05:55:29", "format": "quick_reply_chip", "question": "Hi kaustubh upadhyaya, thank you for showing interest. Kindly answer all the recruiter's questions to successfully apply for the job.", "answer": "Featured staffing consultancy", "success": true, "extra": {}}
+{"timestamp": "2026-09-14 06:07:04", "format": "text_input", "question": "Are you available immediate or 1 week to join?", "answer": "Yes", "success": true, "extra": {}}
+{"timestamp": "2026-09-14 06:14:48", "format": "text_input", "question": "How many years of experience do you have in Django?", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-14 06:21:51", "format": "text_input", "question": "Hi kaustubh upadhyaya, thank you for showing interest. Kindly answer all the recruiter's questions to successfully apply for the job.", "answer": "Yes", "success": true, "extra": {}}
+{"timestamp": "2026-09-14 06:50:30", "format": "save_submission", "question": "chatbot_drawer", "answer": "save_confirmed", "success": true, "extra": {}}
+{"timestamp": "2026-09-14 07:02:24", "format": "text_input", "question": "Hi kaustubh upadhyaya, thank you for showing interest. Kindly answer all the recruiter's questions to successfully apply for the job.", "answer": "Yes, ready to proceed.", "success": true, "extra": {}}
+{"timestamp": "2026-09-14 07:24:35", "format": "save_submission", "question": "chatbot_drawer", "answer": "save_confirmed", "success": true, "extra": {}}
+{"timestamp": "2026-09-14 10:56:13", "format": "save_submission", "question": "chatbot_drawer", "answer": "save_confirmed", "success": true, "extra": {}}
+{"timestamp": "2026-09-14 10:57:18", "format": "text_input", "question": "Hi kaustubh upadhyaya, thank you for showing interest. Kindly answer all the recruiter's questions to successfully apply for the job.", "answer": "Yes", "success": true, "extra": {}}
+{"timestamp": "2026-09-14 11:06:31", "format": "text_input", "question": "Hi kaustubh upadhyaya, thank you for showing interest. Kindly answer all the recruiter's questions to successfully apply for the job.", "answer": "Yes", "success": true, "extra": {}}
+{"timestamp": "2026-09-14 11:10:44", "format": "save_submission", "question": "chatbot_drawer", "answer": "save_confirmed", "success": true, "extra": {}}
+{"timestamp": "2026-09-14 11:10:55", "format": "save_submission", "question": "chatbot_drawer", "answer": "save_confirmed", "success": true, "extra": {}}
+{"timestamp": "2026-09-14 12:24:34", "format": "quick_reply_chip", "question": "Hi kaustubh upadhyaya, thank you for showing interest. Kindly answer all the recruiter's questions to successfully apply for the job.", "answer": "Featured staffing consultancy", "success": true, "extra": {}}
+{"timestamp": "2026-09-14 13:14:58", "format": "text_input", "question": "How many years of experience do you have in Hive?", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-14 14:18:11", "format": "text_input", "question": "What is your notice period?", "answer": "30 days", "success": true, "extra": {}}
+{"timestamp": "2026-09-14 15:34:34", "format": "quick_reply_chip", "question": "Hi! kaustubh, The recruiter needs some profile information also. Your profile will be updated with the details that you provide.", "answer": "Featured staffing consultancy", "success": true, "extra": {}}

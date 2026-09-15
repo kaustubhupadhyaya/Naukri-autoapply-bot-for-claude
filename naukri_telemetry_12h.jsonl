@@ -1,0 +1,184 @@
+{"timestamp": "2026-09-14 22:22:54", "format": "text_input", "question": "How many years of experience do you have in Azure Cloud?", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-14 22:23:08", "format": "rejection", "question": "chatbot_no_save", "answer": "discarded_no_confirmed_save", "success": false, "extra": {}}
+{"timestamp": "2026-09-14 23:39:16", "format": "rejection", "question": "chatbot_no_save", "answer": "discarded_no_confirmed_save", "success": false, "extra": {}}
+{"timestamp": "2026-09-14 23:44:22", "format": "rejection", "question": "chatbot_no_save", "answer": "discarded_no_confirmed_save", "success": false, "extra": {}}
+{"timestamp": "2026-09-14 23:52:45", "format": "rejection", "question": "chatbot_no_save", "answer": "discarded_no_confirmed_save", "success": false, "extra": {}}
+{"timestamp": "2026-09-14 23:59:20", "format": "radio_button", "question": "What is your notice period?", "answer": "15 Days or less", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 00:00:41", "format": "rejection", "question": "chatbot_no_save", "answer": "discarded_no_confirmed_save", "success": false, "extra": {}}
+{"timestamp": "2026-09-15 00:02:15", "format": "text_input", "question": "How many years of experience do you have in Automation Testing?", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 00:02:35", "format": "radio_button", "question": "How many years of experience do you have in Automation Testing?", "answer": "Skip this question", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 00:05:00", "format": "text_input", "question": "Are you comfortable with a 2-year contractual position?", "answer": "Yes", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 00:05:21", "format": "text_input", "question": "We are looking for immediate joiners.", "answer": "Yes, immediate to 15-30 days", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 00:05:26", "format": "text_input", "question": "How many years of hands-on experience do you have working on Google Cloud Platform (GCP)", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 00:05:31", "format": "text_input", "question": "How many years of experience do you have with BigQuery?", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 00:05:36", "format": "text_input", "question": "Have you built ETL/ELT data pipelines using Dataflow (Apache Beam)?", "answer": "Yes", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 00:05:40", "format": "text_input", "question": "What is your experience with Cloud Composer (Apache Airflow)?", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 00:05:46", "format": "text_input", "question": "How many years of experience do you have in Python and SQL for data engineering projects?", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 00:05:51", "format": "text_input", "question": "Have you worked with real-time data ingestion tools such as Pub/Sub, Kafka, or Streaming Dataflow pipelines?", "answer": "Yes", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 00:05:56", "format": "text_input", "question": "Do you have hands-on experience in Data Modeling and Data Warehouse development (Star Schema, Fact & Dimension Modeling)?", "answer": "Yes", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 00:06:01", "format": "text_input", "question": "Have you worked on a GCP-based Data Lake using Cloud Storage (GCS) and BigQuery?", "answer": "Yes", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 00:06:03", "format": "rejection", "question": "chatbot_no_save", "answer": "discarded_no_confirmed_save", "success": false, "extra": {}}
+{"timestamp": "2026-09-15 00:07:52", "format": "text_input", "question": "How many years of experience do you have in Azure Cloud?", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 00:08:10", "format": "radio_button", "question": "How many years of experience do you have in Azure Cloud?", "answer": "15 Days or less", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 00:09:31", "format": "rejection", "question": "chatbot_no_save", "answer": "discarded_no_confirmed_save", "success": false, "extra": {}}
+{"timestamp": "2026-09-15 00:10:57", "format": "text_input", "question": "How many years of experience do you have in Automation Testing?", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 00:11:18", "format": "radio_button", "question": "How many years of experience do you have in Automation Testing?", "answer": "Skip this question", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 00:15:16", "format": "radio_button", "question": "What is your notice period?", "answer": "15 Days or less", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 00:16:42", "format": "rejection", "question": "chatbot_no_save", "answer": "discarded_no_confirmed_save", "success": false, "extra": {}}
+{"timestamp": "2026-09-15 00:18:38", "format": "radio_button", "question": "What is your notice period?", "answer": "15 Days or less", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 00:27:02", "format": "radio_button", "question": "What is your notice period?", "answer": "15 Days or less", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 00:34:56", "format": "radio_button", "question": "What is your notice period?", "answer": "15 Days or less", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 00:36:14", "format": "rejection", "question": "chatbot_no_save", "answer": "discarded_no_confirmed_save", "success": false, "extra": {}}
+{"timestamp": "2026-09-15 00:58:29", "format": "radio_button", "question": "What is your notice period?", "answer": "15 Days or less", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 00:59:49", "format": "rejection", "question": "chatbot_no_save", "answer": "discarded_no_confirmed_save", "success": false, "extra": {}}
+{"timestamp": "2026-09-15 01:07:01", "format": "radio_button", "question": "What is your notice period?", "answer": "15 Days or less", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 01:07:07", "format": "save_submission", "question": "chatbot_drawer", "answer": "save_confirmed", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 01:08:36", "format": "save_submission", "question": "chatbot_drawer", "answer": "save_confirmed", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 01:21:25", "format": "radio_button", "question": "What is your notice period?", "answer": "1 Month", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 01:21:28", "format": "rejection", "question": "save_unconfirmed", "answer": "no_applied_state", "success": false, "extra": {}}
+{"timestamp": "2026-09-15 01:23:43", "format": "text_input", "question": "How many years of experience do you have in Agentic Ai?", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 01:24:03", "format": "radio_button", "question": "How many years of experience do you have in Agentic Ai?", "answer": "No", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 01:24:08", "format": "rejection", "question": "save_unconfirmed", "answer": "no_applied_state", "success": false, "extra": {}}
+{"timestamp": "2026-09-15 02:05:33", "format": "text_input", "question": "How many years of experience do you have in .Net?", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 02:05:40", "format": "rejection", "question": "save_unconfirmed", "answer": "no_applied_state", "success": false, "extra": {}}
+{"timestamp": "2026-09-15 02:06:12", "format": "text_input", "question": "How many years of experience do you have in Python?", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 02:06:22", "format": "text_input", "question": "How many years of experience do you have in Prompt Engineering?", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 02:07:12", "format": "radio_button", "question": "What is your notice period?", "answer": "15 Days or less", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 02:07:19", "format": "rejection", "question": "save_unconfirmed", "answer": "no_applied_state", "success": false, "extra": {}}
+{"timestamp": "2026-09-15 02:09:58", "format": "rejection", "question": "save_unconfirmed", "answer": "no_applied_state", "success": false, "extra": {}}
+{"timestamp": "2026-09-15 02:16:04", "format": "text_input", "question": "How many years of experience do you have in .Net?", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 02:16:11", "format": "text_input", "question": "How many years of experience do you have in .Net Core?", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 02:16:18", "format": "text_input", "question": "How many years of experience do you have in Asp.Net Core?", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 02:16:28", "format": "text_input", "question": "How many years of experience do you have in React.Js?", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 02:16:53", "format": "text_input", "question": "This role demans someone who are still hands on, When was was the last time you have full-fleged codded?", "answer": "I am currently hands-on daily developing and maintaining scalable ETL pipelines, writing PySpark job", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 02:16:57", "format": "rejection", "question": "save_unconfirmed", "answer": "no_applied_state", "success": false, "extra": {}}
+{"timestamp": "2026-09-15 02:20:17", "format": "rejection", "question": "save_unconfirmed", "answer": "no_applied_state", "success": false, "extra": {}}
+{"timestamp": "2026-09-15 02:22:02", "format": "text_input", "question": "How many years of experience do you have in OIC Developer?", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 02:22:08", "format": "text_input", "question": "Are you open to discussing Contract Opportunity ?", "answer": "Yes", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 02:24:15", "format": "rejection", "question": "save_unconfirmed", "answer": "no_applied_state", "success": false, "extra": {}}
+{"timestamp": "2026-09-15 02:25:01", "format": "text_input", "question": "How many years of experience do you have in Database Development?", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 02:25:08", "format": "text_input", "question": "How many years of experience do you have in Linux?", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 02:25:21", "format": "rejection", "question": "save_unconfirmed", "answer": "no_applied_state", "success": false, "extra": {}}
+{"timestamp": "2026-09-15 02:27:44", "format": "rejection", "question": "save_unconfirmed", "answer": "no_applied_state", "success": false, "extra": {}}
+{"timestamp": "2026-09-15 02:36:46", "format": "text_input", "question": "How many years of experience do you have in .Net?", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 02:36:51", "format": "text_input", "question": "How many years of experience do you have in .Net Core?", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 02:36:57", "format": "text_input", "question": "How many years of experience do you have in Asp.Net Core?", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 02:37:02", "format": "text_input", "question": "How many years of experience do you have in React.Js?", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 02:37:12", "format": "text_input", "question": "This role demans someone who are still hands on, When was was the last time you have full-fleged codded?", "answer": "I wrote full-fledged PySpark, SQL, and Python code for ETL pipelines and Airflow DAGs just last week", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 02:37:17", "format": "rejection", "question": "save_unconfirmed", "answer": "no_applied_state", "success": false, "extra": {}}
+{"timestamp": "2026-09-15 02:38:01", "format": "rejection", "question": "save_unconfirmed", "answer": "no_applied_state", "success": false, "extra": {}}
+{"timestamp": "2026-09-15 02:38:28", "format": "text_input", "question": "How many years of experience do you have in Aep?", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 02:38:33", "format": "text_input", "question": "How many years of experience do you have in RTCDP?", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 02:38:39", "format": "radio_button", "question": "How many years of experience do you have in RTCDP?", "answer": "NO", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 02:38:42", "format": "rejection", "question": "save_unconfirmed", "answer": "no_applied_state", "success": false, "extra": {}}
+{"timestamp": "2026-09-15 02:42:36", "format": "text_input", "question": "How many years of experience do you have in .Net?", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 02:42:42", "format": "text_input", "question": "How many years of experience do you have in .Net Core?", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 02:42:47", "format": "text_input", "question": "How many years of experience do you have in Asp.Net Core?", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 02:42:52", "format": "text_input", "question": "How many years of experience do you have in React.Js?", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 02:43:00", "format": "text_input", "question": "This role demans someone who are still hands on, When was was the last time you have full-fleged codded?", "answer": "Recently while building scalable ETL pipelines and writing Python, PySpark, and SQL code daily in my", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 02:43:07", "format": "text_input", "question": "State your total team handling experience (in years) and the team size managed (number of members).", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 02:43:12", "format": "text_input", "question": "Are you currently residing in Bengaluru or willing to relocate to Bengaluru?", "answer": "Yes", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 02:43:15", "format": "rejection", "question": "chatbot_no_save", "answer": "discarded_no_confirmed_save", "success": false, "extra": {}}
+{"timestamp": "2026-09-15 02:44:28", "format": "quick_reply_chip", "question": "I confirm that I have reviewed all job-related information and hereby provide my consent. I further confirm that my job seeker profile has been update", "answer": "Yes", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 02:44:34", "format": "quick_reply_chip", "question": "I confirm that I have reviewed all job-related information and hereby provide my consent. I further confirm that my job seeker profile has been update", "answer": "Yes", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 02:44:39", "format": "quick_reply_chip", "question": "I confirm that I have reviewed all job-related information and hereby provide my consent. I further confirm that my job seeker profile has been update", "answer": "Yes", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 02:44:43", "format": "quick_reply_chip", "question": "I confirm that I have reviewed all job-related information and hereby provide my consent. I further confirm that my job seeker profile has been update", "answer": "Yes", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 02:44:46", "format": "quick_reply_chip", "question": "I confirm that I have reviewed all job-related information and hereby provide my consent. I further confirm that my job seeker profile has been update", "answer": "Yes", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 02:44:55", "format": "quick_reply_chip", "question": "I confirm that I have reviewed all job-related information and hereby provide my consent. I further confirm that my job seeker profile has been update", "answer": "Yes", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 02:45:00", "format": "quick_reply_chip", "question": "I confirm that I have reviewed all job-related information and hereby provide my consent. I further confirm that my job seeker profile has been update", "answer": "Yes", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 02:45:04", "format": "quick_reply_chip", "question": "I confirm that I have reviewed all job-related information and hereby provide my consent. I further confirm that my job seeker profile has been update", "answer": "Yes", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 02:45:07", "format": "quick_reply_chip", "question": "I confirm that I have reviewed all job-related information and hereby provide my consent. I further confirm that my job seeker profile has been update", "answer": "Yes", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 02:45:11", "format": "quick_reply_chip", "question": "I confirm that I have reviewed all job-related information and hereby provide my consent. I further confirm that my job seeker profile has been update", "answer": "Yes", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 02:45:15", "format": "quick_reply_chip", "question": "I confirm that I have reviewed all job-related information and hereby provide my consent. I further confirm that my job seeker profile has been update", "answer": "Yes", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 02:45:19", "format": "quick_reply_chip", "question": "I confirm that I have reviewed all job-related information and hereby provide my consent. I further confirm that my job seeker profile has been update", "answer": "Yes", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 02:45:26", "format": "quick_reply_chip", "question": "I confirm that I have reviewed all job-related information and hereby provide my consent. I further confirm that my job seeker profile has been update", "answer": "Yes", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 02:45:30", "format": "quick_reply_chip", "question": "I confirm that I have reviewed all job-related information and hereby provide my consent. I further confirm that my job seeker profile has been update", "answer": "Yes", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 02:50:11", "format": "text_input", "question": "How many years of experience do you have in .Net?", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 02:50:16", "format": "text_input", "question": "How many years of experience do you have in .Net Core?", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 02:50:21", "format": "text_input", "question": "How many years of experience do you have in Asp.Net Core?", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 02:50:27", "format": "text_input", "question": "How many years of experience do you have in React.Js?", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 02:50:36", "format": "text_input", "question": "This role demans someone who are still hands on, When was was the last time you have full-fleged codded?", "answer": "I actively code daily in my current Data Engineering role building and maintaining PySpark pipelines", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 02:50:45", "format": "rejection", "question": "save_unconfirmed", "answer": "no_applied_state", "success": false, "extra": {}}
+{"timestamp": "2026-09-15 02:52:11", "format": "radio_button", "question": "Title", "answer": "Mr.", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 02:52:24", "format": "rejection", "question": "save_unconfirmed", "answer": "no_applied_state", "success": false, "extra": {}}
+{"timestamp": "2026-09-15 02:57:55", "format": "text_input", "question": "State your total team handling experience (in years) and the team size managed (number of members).", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 02:58:05", "format": "quick_reply_chip", "question": "Are you currently residing in Bengaluru or willing to relocate to Bengaluru?", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 02:58:08", "format": "text_input", "question": "Are you currently residing in Bengaluru or willing to relocate to Bengaluru?", "answer": "Yes", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 02:58:40", "format": "rejection", "question": "chatbot_no_save", "answer": "discarded_no_confirmed_save", "success": false, "extra": {}}
+{"timestamp": "2026-09-15 03:00:12", "format": "quick_reply_chip", "question": "I confirm that I have reviewed all job-related information and hereby provide my consent. I further confirm that my job seeker profile has been update", "answer": "Consent", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 03:00:17", "format": "quick_reply_chip", "question": "I confirm that I have reviewed all job-related information and hereby provide my consent. I further confirm that my job seeker profile has been update", "answer": "Consent", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 03:00:23", "format": "quick_reply_chip", "question": "I confirm that I have reviewed all job-related information and hereby provide my consent. I further confirm that my job seeker profile has been update", "answer": "Consent", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 03:00:27", "format": "quick_reply_chip", "question": "I confirm that I have reviewed all job-related information and hereby provide my consent. I further confirm that my job seeker profile has been update", "answer": "Consent", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 03:00:32", "format": "quick_reply_chip", "question": "I confirm that I have reviewed all job-related information and hereby provide my consent. I further confirm that my job seeker profile has been update", "answer": "Consent", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 03:00:36", "format": "quick_reply_chip", "question": "I confirm that I have reviewed all job-related information and hereby provide my consent. I further confirm that my job seeker profile has been update", "answer": "Consent", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 03:00:42", "format": "quick_reply_chip", "question": "I confirm that I have reviewed all job-related information and hereby provide my consent. I further confirm that my job seeker profile has been update", "answer": "Consent", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 03:00:46", "format": "quick_reply_chip", "question": "I confirm that I have reviewed all job-related information and hereby provide my consent. I further confirm that my job seeker profile has been update", "answer": "Consent", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 03:00:50", "format": "quick_reply_chip", "question": "I confirm that I have reviewed all job-related information and hereby provide my consent. I further confirm that my job seeker profile has been update", "answer": "Consent", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 03:00:55", "format": "quick_reply_chip", "question": "I confirm that I have reviewed all job-related information and hereby provide my consent. I further confirm that my job seeker profile has been update", "answer": "Consent", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 03:00:59", "format": "quick_reply_chip", "question": "I confirm that I have reviewed all job-related information and hereby provide my consent. I further confirm that my job seeker profile has been update", "answer": "Consent", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 03:01:05", "format": "quick_reply_chip", "question": "I confirm that I have reviewed all job-related information and hereby provide my consent. I further confirm that my job seeker profile has been update", "answer": "Consent", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 03:01:09", "format": "quick_reply_chip", "question": "I confirm that I have reviewed all job-related information and hereby provide my consent. I further confirm that my job seeker profile has been update", "answer": "Consent", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 03:01:14", "format": "quick_reply_chip", "question": "I confirm that I have reviewed all job-related information and hereby provide my consent. I further confirm that my job seeker profile has been update", "answer": "Consent", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 03:01:18", "format": "quick_reply_chip", "question": "I confirm that I have reviewed all job-related information and hereby provide my consent. I further confirm that my job seeker profile has been update", "answer": "Consent", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 03:04:51", "format": "text_input", "question": "How many years of experience do you have in .Net?", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 03:04:56", "format": "text_input", "question": "How many years of experience do you have in .Net Core?", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 03:05:02", "format": "text_input", "question": "How many years of experience do you have in Asp.Net Core?", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 03:05:08", "format": "text_input", "question": "How many years of experience do you have in React.Js?", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 03:05:17", "format": "text_input", "question": "This role demans someone who are still hands on, When was was the last time you have full-fleged codded?", "answer": "I actively code daily in my current Data Engineer role building and maintaining PySpark and Python E", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 03:05:25", "format": "rejection", "question": "save_unconfirmed", "answer": "no_applied_state", "success": false, "extra": {}}
+{"timestamp": "2026-09-15 03:06:45", "format": "quick_reply_chip", "question": "I confirm that I have reviewed all job-related information and hereby provide my consent. I further confirm that my job seeker profile has been update", "answer": "Consent", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 03:06:57", "format": "rejection", "question": "chatbot_no_save", "answer": "discarded_no_confirmed_save", "success": false, "extra": {}}
+{"timestamp": "2026-09-15 03:11:42", "format": "text_input", "question": "State your total team handling experience (in years) and the team size managed (number of members).", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 03:11:48", "format": "text_input", "question": "Are you currently residing in Bengaluru or willing to relocate to Bengaluru?", "answer": "Yes", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 03:11:51", "format": "rejection", "question": "chatbot_no_save", "answer": "discarded_no_confirmed_save", "success": false, "extra": {}}
+{"timestamp": "2026-09-15 03:13:07", "format": "quick_reply_chip", "question": "I confirm that I have reviewed all job-related information and hereby provide my consent. I further confirm that my job seeker profile has been update", "answer": "Consent", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 03:13:18", "format": "rejection", "question": "chatbot_no_save", "answer": "discarded_no_confirmed_save", "success": false, "extra": {}}
+{"timestamp": "2026-09-15 03:24:24", "format": "text_input", "question": "How many years of experience do you have in Ms Sql Development?", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 03:24:33", "format": "text_input", "question": "How many years of experience do you have in US Healthcare Domain?", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 03:25:00", "format": "rejection", "question": "save_unconfirmed", "answer": "no_applied_state", "success": false, "extra": {}}
+{"timestamp": "2026-09-15 12:06:47", "format": "quick_reply_chip", "question": "Whats your Career level?", "answer": "Whats your Career level?", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 12:06:51", "format": "radio_button", "question": "Whats your Career level?", "answer": "Experienced", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 12:07:00", "format": "rejection", "question": "save_unconfirmed", "answer": "no_applied_state", "success": false, "extra": {}}
+{"timestamp": "2026-09-15 12:08:15", "format": "text_input", "question": "How many years of experience do you have in .Net?", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 12:08:19", "format": "text_input", "question": "How many years of experience do you have in .Net Core?", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 12:08:23", "format": "text_input", "question": "How many years of experience do you have in Asp.Net Core?", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 12:08:27", "format": "text_input", "question": "How many years of experience do you have in React.Js?", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 12:08:34", "format": "text_input", "question": "This role demans someone who are still hands on, When was was the last time you have full-fleged codded?", "answer": "Yesterday", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 12:08:38", "format": "text_input", "question": "State your total team handling experience (in years) and the team size managed (number of members).", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 12:08:42", "format": "text_input", "question": "Are you currently residing in Bengaluru or willing to relocate to Bengaluru?", "answer": "Yes", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 12:08:45", "format": "rejection", "question": "chatbot_no_save", "answer": "discarded_no_confirmed_save", "success": false, "extra": {}}
+{"timestamp": "2026-09-15 12:09:57", "format": "quick_reply_chip", "question": "I confirm that I have reviewed all job-related information and hereby provide my consent. I further confirm that my job seeker profile has been update", "answer": "Consent", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 12:10:10", "format": "rejection", "question": "chatbot_no_save", "answer": "discarded_no_confirmed_save", "success": false, "extra": {}}
+{"timestamp": "2026-09-15 12:11:22", "format": "text_input", "question": "How many years of experience do you have in .Net Core?", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 12:11:26", "format": "text_input", "question": "How many years of experience do you have in C#?", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 12:11:46", "format": "rejection", "question": "save_unconfirmed", "answer": "no_applied_state", "success": false, "extra": {}}
+{"timestamp": "2026-09-15 12:25:28", "format": "text_input", "question": "How many years of experience do you have in Ms Sql Development?", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 12:25:32", "format": "text_input", "question": "How many years of experience do you have in US Healthcare Domain?", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 12:25:52", "format": "rejection", "question": "save_unconfirmed", "answer": "no_applied_state", "success": false, "extra": {}}
+{"timestamp": "2026-09-15 12:33:00", "format": "radio_button", "question": "Are you willing to travel to 5th Phase JP Nagar, Bengaluru?", "answer": "Yes", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 12:33:18", "format": "rejection", "question": "save_unconfirmed", "answer": "no_applied_state", "success": false, "extra": {}}
+{"timestamp": "2026-09-15 13:48:48", "format": "text_input", "question": "How many years of experience do you have in Informatica?", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 13:48:52", "format": "text_input", "question": "How many years of experience do you have in ETL Design and Development?", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 13:48:57", "format": "text_input", "question": "How many years of experience do you have in SQL & PLSQL?", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 13:49:01", "format": "text_input", "question": "How many years of experience do you have in SSIS?", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 13:49:05", "format": "text_input", "question": "Do you have hands on experience in Banking or Financial-Services Domain?", "answer": "Yes", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 13:49:10", "format": "text_input", "question": "How many years of experience do you have in Performance Optimization?", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 13:49:14", "format": "text_input", "question": "How many years of experience do you have in Deployment and Production Support?", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 13:49:16", "format": "rejection", "question": "chatbot_no_save", "answer": "discarded_no_confirmed_save", "success": false, "extra": {}}
+{"timestamp": "2026-09-15 15:03:10", "format": "radio_button", "question": "Which shift are you comfortable working in?", "answer": "2PM to 11PM IST", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 15:03:22", "format": "rejection", "question": "save_unconfirmed", "answer": "no_applied_state", "success": false, "extra": {}}
+{"timestamp": "2026-09-15 15:10:24", "format": "text_input", "question": "How many years of experience do you have in Data analyst?", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 15:10:29", "format": "text_input", "question": "How many years of experience do you have in data engineer?", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 15:10:33", "format": "text_input", "question": "How many years of experience do you have in Data Mapping?", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 15:10:37", "format": "text_input", "question": "How many years of experience do you have in Data Transformation?", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 15:10:44", "format": "radio_button", "question": "How many years of experience do you have in Data Transformation?", "answer": "Skip this question", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 15:10:53", "format": "rejection", "question": "save_unconfirmed", "answer": "no_applied_state", "success": false, "extra": {}}
+{"timestamp": "2026-09-15 15:50:14", "format": "quick_reply_chip", "question": "Current and expected CTC", "answer": "Current and expected CTC", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 15:50:16", "format": "text_input", "question": "Current and expected CTC", "answer": "12 LPA", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 15:50:22", "format": "quick_reply_chip", "question": "years of Experience in Pyspark and ETL", "answer": "years of Experience in Pyspark and ETL", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 15:50:24", "format": "text_input", "question": "years of Experience in Pyspark and ETL", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 15:50:30", "format": "quick_reply_chip", "question": "Preferred location and Current location", "answer": "Preferred location and Current location", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 15:50:32", "format": "text_input", "question": "Preferred location and Current location", "answer": "bengaluru", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 15:50:35", "format": "rejection", "question": "chatbot_no_save", "answer": "discarded_no_confirmed_save", "success": false, "extra": {}}
+{"timestamp": "2026-09-15 16:04:11", "format": "radio_button", "question": "are you available for F2F discussion on 19 Sep 26", "answer": "yes", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 16:04:32", "format": "rejection", "question": "save_unconfirmed", "answer": "no_applied_state", "success": false, "extra": {}}

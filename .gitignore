@@ -34,10 +34,19 @@ selector_cache.json
 .claude/
 
 # ─── Secrets / local config ───────────────────────────────
-# NOTE: these are ALSO already committed in git history (public repo).
-# Full remediation (git rm --cached + history scrub + rotate) is the
-# deferred "secret remediation" task. Listed here to stop FUTURE commits.
+# NOTE: config.json / enhanced_config.json are ALSO already committed in git
+# history (public repo). Full remediation (git rm --cached + history scrub +
+# rotate) is the deferred "secret remediation" task (user-only). Listed here
+# to stop FUTURE commits of those, and to keep the newer local/runtime files
+# (never committed so far) from ever being added by accident.
 config.json
 config - Copy.json
 enhanced_config.json
 .github/test_config.json
+config.local.json
+browser_profile/
+profiles/
+watch_runs/
+*.lock
+*state.json
+naukri_heartbeat.txt

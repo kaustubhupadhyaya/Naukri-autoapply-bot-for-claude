@@ -182,3 +182,22 @@
 {"timestamp": "2026-09-15 15:50:35", "format": "rejection", "question": "chatbot_no_save", "answer": "discarded_no_confirmed_save", "success": false, "extra": {}}
 {"timestamp": "2026-09-15 16:04:11", "format": "radio_button", "question": "are you available for F2F discussion on 19 Sep 26", "answer": "yes", "success": true, "extra": {}}
 {"timestamp": "2026-09-15 16:04:32", "format": "rejection", "question": "save_unconfirmed", "answer": "no_applied_state", "success": false, "extra": {}}
+{"timestamp": "2026-09-15 16:26:34", "format": "quick_reply_chip", "question": "Total IT experience", "answer": "Total IT experience", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 16:26:36", "format": "text_input", "question": "Total IT experience", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 16:26:41", "format": "text_input", "question": "How many years of experience do you have in Bigdata developer?", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 16:26:45", "format": "text_input", "question": "How many years of experience do you have in Scala?", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 16:26:51", "format": "quick_reply_chip", "question": "DOB", "answer": "DOB", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 16:26:53", "format": "text_input", "question": "DOB", "answer": "06/06/2001", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 16:26:58", "format": "quick_reply_chip", "question": "Pan card details", "answer": "Pan card details", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 16:27:03", "format": "text_input", "question": "Pan card details", "answer": "Not mentioned in the profile", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 16:27:13", "format": "rejection", "question": "save_unconfirmed", "answer": "no_applied_state", "success": false, "extra": {}}
+{"timestamp": "2026-09-15 16:28:43", "format": "radio_button", "question": "Which shift are you comfortable working in?", "answer": "2PM to 11PM IST", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 16:28:58", "format": "rejection", "question": "save_unconfirmed", "answer": "no_applied_state", "success": false, "extra": {}}
+{"timestamp": "2026-09-15 16:30:13", "format": "quick_reply_chip", "question": "Whats your Career level?", "answer": "Whats your Career level?", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 16:30:17", "format": "radio_button", "question": "Whats your Career level?", "answer": "Experienced", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 16:30:29", "format": "rejection", "question": "save_unconfirmed", "answer": "no_applied_state", "success": false, "extra": {}}
+{"timestamp": "2026-09-15 16:31:45", "format": "radio_button", "question": "Are you willing to travel to 5th Phase JP Nagar, Bengaluru?", "answer": "Yes", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 16:32:02", "format": "rejection", "question": "save_unconfirmed", "answer": "no_applied_state", "success": false, "extra": {}}
+{"timestamp": "2026-09-15 16:33:36", "format": "text_input", "question": "How many years of experience do you have in Ms Sql Development?", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 16:33:40", "format": "text_input", "question": "How many years of experience do you have in US Healthcare Domain?", "answer": "3 years", "success": true, "extra": {}}
+{"timestamp": "2026-09-15 16:34:00", "format": "rejection", "question": "save_unconfirmed", "answer": "no_applied_state", "success": false, "extra": {}}

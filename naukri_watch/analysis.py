@@ -70,7 +70,7 @@ def server_verdict(snap):
     banners = snap.get("banners") or []
     pick = lambda k: next((b["text"] for b in banners if b["kind"] == k), "")
     rej, red, ok = pick("reject"), pick("redirect"), pick("success")
-    if rej:
+    if rej or code == 406:  # 406 = "Oops! ... incomplete information" (seen live 2026-09-15)
         kind = "rejected"
     elif red or code == 202:
         kind = "external_redirect"
@@ -330,6 +330,7 @@ class Tracker:
                     (v["kind"] == "rejected" and a.server["kind"] != "rejected"):
                 a.server = v
             a.mark("verdict", now)
+            a.mark("server_verdict", now)
         elif phase in ("search", "other") and a.ended is None and ("job_loaded" in a.marks or a.server):
             self.end_attempt(now, "left job page")
         self._run_fill_checks(a, now)
@@ -590,7 +591,11 @@ class Tracker:
         # 4. Rejection ("Oops! ... incomplete information")
         if sv == "rejected" or bv == "bot_saw_oops" or "dump_oops" in a.flags:
             unfilled = self._unfilled(a.pre_save_drawer or a.last_drawer)
-            closed_first = "drawer_close" in a.marks and a.marks["drawer_close"] <= a.marks.get("verdict", now)
+            # Compare against Naukri's result page, not the bot's own log verdict: v1 logs
+            # "no evidence" BEFORE it closes the drawer, and the close is what makes Naukri
+            # submit the half-answered questionnaire (406). Live 2026-09-15: 3/3 rejections.
+            closed_first = "drawer_close" in a.marks and \
+                a.marks["drawer_close"] <= a.marks.get("server_verdict", a.marks.get("verdict", now))
             if closed_first:
                 cause = "bot closed the chat drawer before Naukri's verdict (abandoned questionnaire)"
             elif unfilled:

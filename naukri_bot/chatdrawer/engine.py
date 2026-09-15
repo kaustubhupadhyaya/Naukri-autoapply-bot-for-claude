@@ -64,7 +64,7 @@ def _verdict_from_snap(snap):
             code = int(code)
         except (TypeError, ValueError):
             pass
-    if snap.banner("reject"):
+    if snap.banner("reject") or code == 406:
         return REJECTED_INCOMPLETE
     if snap.banner("error"):
         return NAUKRI_ERROR

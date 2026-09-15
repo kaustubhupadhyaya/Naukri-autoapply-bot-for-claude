@@ -2341,6 +2341,8 @@ def _applied_evidence(driver):
                     return "applied"
                 if code in (202, "202"):
                     return "external"
+                if code in (406, "406"):  # "Oops! ... incomplete information" page
+                    return "rejected"
         except Exception as e:
             logger.debug(f"multiApplyResp parse: {e}")
         try:

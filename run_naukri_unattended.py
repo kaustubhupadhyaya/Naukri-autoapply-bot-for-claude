@@ -247,15 +247,28 @@ def _get_resume_digest(config=None):
 
     exp_ctc = "20 LPA"
     cur_ctc = "15 LPA"
+    facts = (config or {}).get("_profile_facts") or {}
     if config:
         cb = config.get("chatbot_answers", {})
         pi = config.get("personal_info", {})
         exp_ctc = str(cb.get("expected_ctc") or pi.get("expected_ctc") or exp_ctc)
         if not any(u in exp_ctc.lower() for u in ("lpa", "lakh", "lac")):
             exp_ctc = f"{exp_ctc} LPA"
-        cur_ctc = str(cb.get("current_ctc") or pi.get("current_ctc") or cur_ctc)
-        if not any(u in cur_ctc.lower() for u in ("lpa", "lakh", "lac")):
-            cur_ctc = f"{cur_ctc} LPA"
+        # Live Naukri profile wins for CURRENT ctc/notice/experience (what recruiters already see
+        # about this candidate) — checked live 2026-09-15, config's values for these three did NOT
+        # match the actual profile. Expected CTC/target roles have no Naukri-profile equivalent to
+        # check against, so config keeps precedence there.
+        if facts.get("current_ctc_lpa"):
+            cur_ctc = f"{facts['current_ctc_lpa']:g} LPA"
+        else:
+            cur_ctc = str(cb.get("current_ctc") or pi.get("current_ctc") or cur_ctc)
+            if not any(u in cur_ctc.lower() for u in ("lpa", "lakh", "lac")):
+                cur_ctc = f"{cur_ctc} LPA"
+
+    notice_line = facts.get("notice_period_text") or "Immediate / 15-30 days"
+    experience_line = (f"{facts['experience_years']:g} years" if facts.get("experience_years")
+                       else "3-5 years") + " (Data Engineering / Big Data / Cloud)"
+    location_line = facts.get("location") or "Bengaluru, India"
 
     skills_list = ["Python", "PySpark", "SQL", "AWS", "Airflow", "Snowflake", "ETL"]
     for s in enh_skills:
@@ -266,7 +279,7 @@ def _get_resume_digest(config=None):
         "Candidate Profile:",
         "Name: Kaustubh Upadhyaya",
         "Target Roles: Data Engineer / Big Data / Cloud Engineer",
-        "Total Experience: 3-5 years (Data Engineering / Big Data / Cloud)",
+        f"Total Experience: {experience_line}",
         "PySpark Experience: 3-5 years",
         "Python Experience: 3-5 years",
         "SQL Experience: 3-5 years",
@@ -275,9 +288,9 @@ def _get_resume_digest(config=None):
         "Snowflake Experience: 3-5 years",
         "ETL Experience: 3-5 years",
         f"Key Skills: {', '.join(skills_list)}",
-        "Current Location: Bengaluru, India",
+        f"Current Location: {location_line}",
         "Preferred Location: Bengaluru location (open to Hybrid / On-site / Relocation)",
-        "Notice Period: Immediate / 15-30 days",
+        f"Notice Period: {notice_line}",
         f"Current CTC: {cur_ctc}",
         f"Expected CTC: {exp_ctc}",
         "Relocation & Availability: Yes, willing to relocate to Bengaluru, open to background checks and immediate joining."
@@ -290,6 +303,15 @@ def _get_resume_digest(config=None):
     _CACHED_PROFILE_DIGEST = "\n".join(lines)
     logger.info(f"📄 Resume profile digest cached ({len(_CACHED_PROFILE_DIGEST)} chars)")
     return _CACHED_PROFILE_DIGEST
+
+
+def _refresh_profile_digest(config):
+    """Force-rebuild the cached digest — used once live Naukri-profile facts become available
+    (they can't be read until the driver exists, which is after the digest's first, driver-less
+    build in build_bot()). See naukri_bot/chatdrawer/profile_facts.py."""
+    global _CACHED_PROFILE_DIGEST
+    _CACHED_PROFILE_DIGEST = None
+    return _get_resume_digest(config)
 
 
 _LAST_LLM_MODEL = "unknown"
@@ -2516,23 +2538,41 @@ def _js_click_apply_fallback(driver):
     return False
 
 
-def _enforce_single_tab(driver):
-    """Close any extra tabs/windows so the bot always reuses ONE Edge window (no new window per job)."""
+def _enforce_single_tab(driver, tag=""):
+    """Close any extra tabs/windows so the bot always reuses ONE Edge window (no new window per job).
+
+    5a (2026-09-15): the outer finally-block timing (below) can only say WHICH of its 4 calls to
+    this function was slow, not what inside it blocked. Sub-step timing added here so the next
+    real ~40s sample is conclusive without another restart-and-wait cycle.
+    """
+    _t0 = time.time()
+    _sub = []
     try:
         handles = driver.window_handles
+        _sub.append(f"handles({len(handles)})={time.time() - _t0:.1f}s")
         if len(handles) > 1:
+            _t1 = time.time()
             main = driver.current_window_handle
+            _sub.append(f"main_handle={time.time() - _t1:.1f}s")
             for h in list(handles):
                 if h != main:
+                    _t2 = time.time()
                     try:
                         driver.switch_to.window(h)
                         driver.close()
-                    except Exception:
-                        pass
+                    except Exception as e:
+                        _sub.append(f"switch_close:ERR({type(e).__name__})")
+                    finally:
+                        _sub.append(f"switch_close={time.time() - _t2:.1f}s")
+            _t3 = time.time()
             driver.switch_to.window(main)
+            _sub.append(f"switch_main={time.time() - _t3:.1f}s")
             logger.debug(f"🧹 Closed extra tabs, single-tab enforced ({len(handles)}→1)")
-    except Exception:
-        pass
+    except Exception as e:
+        _sub.append(f"outer:ERR({type(e).__name__})")
+    _total = time.time() - _t0
+    if _total > 1.0:
+        logger.info(f"⏱️ _enforce_single_tab[{tag}] took {_total:.1f}s ({', '.join(_sub)})")
 
 
 def _unattended_apply_one(self, job_url):
@@ -2543,7 +2583,7 @@ def _unattended_apply_one(self, job_url):
     if getattr(self, "_apply_blocked_until", 0) > time.time():
         return False  # daily quota already refused today; don't burn ~50s per job finding out again
     try:
-        _enforce_single_tab(driver)
+        _enforce_single_tab(driver, tag="entry")
         original_tab = driver.current_window_handle
         if not _get_page_with_retry(driver, job_url, max_retries=2, timeout=5):
             return False
@@ -2684,11 +2724,11 @@ def _unattended_apply_one(self, job_url):
             finally:
                 _steps.append(f"{name}={time.time() - t:.1f}s")
 
-        _timed("enforce1", lambda: _enforce_single_tab(driver))
+        _timed("enforce1", lambda: _enforce_single_tab(driver, tag="enforce1"))
         _cur = _timed("current_handle", lambda: driver.current_window_handle)
         if original_tab and _cur and _cur != original_tab:
             _timed("switch_back", lambda: driver.switch_to.window(original_tab))
-        _timed("enforce2", lambda: _enforce_single_tab(driver))
+        _timed("enforce2", lambda: _enforce_single_tab(driver, tag="enforce2"))
         _fin = time.time() - _t_fin
         if _fin > 1.0:
             logger.info(f"⏱️ tab cleanup took {_fin:.1f}s ({', '.join(_steps)})")
@@ -3247,6 +3287,18 @@ try:
         apply_timestamps = []
         hourly_limit = int(os.environ.get("NAUKRI_HOURLY_CAP", "80"))
         cycle_delay_min = int(os.environ.get("NAUKRI_CYCLE_DELAY_MIN", "2"))
+
+        # One-time live Naukri-profile read (2026-09-15): the driver only exists once we get
+        # here, so this couldn't happen at the digest's first build in build_bot(). Never blocks
+        # the run on failure — see naukri_bot/chatdrawer/profile_facts.py.
+        try:
+            from naukri_bot.chatdrawer.profile_facts import get_profile_facts, apply_facts_to_config
+            _facts = get_profile_facts(self.driver)
+            if _facts:
+                apply_facts_to_config(self.config, _facts)
+                _refresh_profile_digest(self.config)
+        except Exception as e:
+            logger.debug(f"Profile facts step skipped: {e}")
 
         def _is_card_easy_apply_fast(card):
             try:

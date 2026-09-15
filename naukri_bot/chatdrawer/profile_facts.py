@@ -33,7 +33,7 @@ JSON.stringify((function () {
     return (t && t.trim()) ? t.trim() : (sib.innerText || '').trim();
   }
   return {
-    ready: document.readyState,
+    url: location.href, ready: document.readyState, bodyLen: (document.body.innerText || '').length,
     salary: valueFor('Salary'),
     experience: valueFor('Experience'),
     location: valueFor('Location'),
@@ -87,7 +87,7 @@ def _parse_notice_days(text):
     return int(m.group(1)) if m else None
 
 
-def get_profile_facts(driver, timeout=10.0, force=False):
+def get_profile_facts(driver, timeout=20.0, force=False):
     """One-time (cached) read of the user's own Naukri profile page. Returns {} on any failure —
     never raises, never blocks the bot's own flow on a scrape it doesn't strictly need."""
     global _CACHED_FACTS
@@ -134,7 +134,9 @@ def get_profile_facts(driver, timeout=10.0, force=False):
         if facts:
             logger.info(f"👤 Naukri profile facts read: {list(facts.keys())}")
         else:
-            logger.info("👤 Naukri profile facts: none found (page may not have loaded, or the fields are empty)")
+            diag = json.loads(raw) if raw else {}
+            logger.info(f"👤 Naukri profile facts: none found "
+                       f"(url={diag.get('url', '?')[:70]!r} ready={diag.get('ready')} bodyLen={diag.get('bodyLen')})")
     except Exception as e:
         logger.debug(f"Profile facts scrape failed (non-fatal): {e}")
     finally:

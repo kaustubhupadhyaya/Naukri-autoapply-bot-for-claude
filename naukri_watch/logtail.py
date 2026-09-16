@@ -72,6 +72,9 @@ MARKERS = [
     ("submit_not_found", r"Could not find submit button"),
     ("app_failed", r"Application failed$"),
     ("app_success", r"Application (\d+) successful"),
+    # 2026-09-16: a correct external-skip or quota-pause no longer logs "Application failed" (it
+    # used to, indistinguishable from a real failure -- 11 of 15 "failures" on one day were this).
+    ("app_skipped", r"Not a failure \((\w+)\) — not counted as one"),
     ("login", r"Login attempt|Already logged in|All login attempts failed|Failed to find email field"),
     ("driver_error", r"invalid session id|no such window|session not created|Renderer|web view not found"
                      r"|High-speed driver setup error|error managing MicrosoftEdge"),

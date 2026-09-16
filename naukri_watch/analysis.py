@@ -34,7 +34,22 @@ FLOW = [
 MARK_ORDER = [f for f, _, _, _ in FLOW] + ["end"]
 ANSWER_GAP = 30          # seconds between two consecutive answers
 BOT_SILENT_S = 300       # no bot log line outside cooldowns
+PROGRESS_STALL_S = 300   # log lines keep appearing, but nothing below actually advances
 FILL_CHECK_DELAY = 4.0   # after the bot logs an answer, check the DOM registered it
+
+# 2026-09-15: BOT_SILENT alone measures LIVENESS (a log line appeared), not PROGRESS (the bot
+# advanced through work). The failure this caught: the bot sat on one job page for 2+ hours while
+# periodic ticks kept the log non-empty, so BOT_SILENT never fired and the watcher reported
+# "healthy" on every poll. These kinds are the ones that mean the bot actually moved forward --
+# started/loaded/clicked into a job, answered a question, reached a verdict, finished an attempt
+# (including a correct skip), or advanced the search itself.
+PROGRESS_KINDS = frozenset({
+    "job_start", "job_loaded", "apply_found", "apply_js", "instant_apply", "external_skip",
+    "drawer_found", "v2_answer", "v2_outcome", "answer_text", "answer_radio", "answer_chip",
+    "answer_select", "save_click", "save_page_wide", "confirmed_drawer", "confirmed_nodrawer",
+    "applied_despite", "rejected", "app_failed", "app_success", "app_skipped",
+    "cycle_start", "search_keyword", "search_page", "candidates",
+})
 SPECIAL_KINDS = {        # widget formats the v1 bot has no (or known-broken) handling for
     "date_split": "high", "date": "high", "date_text": "high", "checkbox": "medium",
     "file": "medium", "unknown": "high", "select": "info",
@@ -145,8 +160,10 @@ class Tracker:
         self.cur = None
         self.recent = deque(maxlen=40)
         self.last_log_ts = None
+        self.last_progress_ts = None
         self.in_cooldown = False
         self.silent_flagged = False
+        self.progress_stall_flagged = False
         self.pending_job_start = None
         self.formats_seen = set()
         self.want_html = False
@@ -205,9 +222,14 @@ class Tracker:
         if self.silent_flagged:
             self.silent_flagged = False
         k, g = ev.kind, ev.groups
+        if k in PROGRESS_KINDS:
+            # Deliberately NOT reset by every log line (that would just be BOT_SILENT again) --
+            # only by a kind that means the bot actually moved forward. See PROGRESS_KINDS.
+            self.last_progress_ts = ev.ts
+            self.progress_stall_flagged = False
         if k == "run_start" and prev_ts is not None and self.mode == "postmortem":
             last = [e for e in list(self.recent)[:-1]][-4:]
-            if not any(e.kind in ("app_failed", "app_success", "cooldown") for e in last[-2:]):
+            if not any(e.kind in ("app_failed", "app_success", "app_skipped", "cooldown") for e in last[-2:]):
                 self.emit("BOT_RESTARTED", "medium", "bot relaunched with no clean exit line (silent death)",
                           attempt=None, ts=ev.ts, last_lines=[e.line() for e in last])
         if k in ("cooldown", "quota_blocked", "quota_paused"):
@@ -322,7 +344,7 @@ class Tracker:
         if k in VERDICT_KINDS:
             a.bot_verdicts.append(VERDICT_KINDS[k])
             a.mark("verdict", ev.ts)
-        if k in ("app_failed", "app_success"):
+        if k in ("app_failed", "app_success", "app_skipped"):
             a.marks["end"] = ev.ts
             if self.mode == "postmortem":
                 self.end_attempt(ev.ts, "bot finished job")
@@ -439,6 +461,18 @@ class Tracker:
                 and now - self.last_log_ts > BOT_SILENT_S:
             self.silent_flagged = True
             self.emit("BOT_SILENT", "high", f"no bot log line for {int(now - self.last_log_ts)}s outside a cooldown",
+                      attempt=None, ts=now, last_lines=[e.line() for e in list(self.recent)[-5:]])
+        # 2026-09-15: measures PROGRESS, not liveness -- a process can be alive and logging
+        # (keepalive ticks, periodic status lines) while genuinely stuck on one page. This is the
+        # check that would have caught the bot sitting on one job page for 2+ hours while
+        # BOT_SILENT stayed quiet the whole time. See PROGRESS_KINDS.
+        if self.last_progress_ts and not self.in_cooldown and not self.progress_stall_flagged \
+                and now - self.last_progress_ts > PROGRESS_STALL_S:
+            self.progress_stall_flagged = True
+            self.emit("BOT_STUCK_NO_PROGRESS", "high",
+                      f"bot is logging but has not advanced (no new job/page/answer/verdict) for "
+                      f"{int(now - self.last_progress_ts)}s outside a cooldown — intervene now, "
+                      "don't keep polling",
                       attempt=None, ts=now, last_lines=[e.line() for e in list(self.recent)[-5:]])
         a = self.cur
         if a is None or a.ended is not None:

@@ -51,3 +51,4 @@ watch_runs/
 *state.json
 naukri_heartbeat.txt
 *.previous
+naukri_jobs.db.bak-*

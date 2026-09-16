@@ -158,7 +158,12 @@ def decide(bot, widget, hooks, config, loc_variants):
         except Exception as e:
             return Discard(NO_ANSWER_CODE, f"text_answer raised: {e}")
         if ans:
-            return Answer(value=str(ans), source="rules")
+            # 2026-09-16: hooks.text_answer (_unattended_text_answer) stamps
+            # bot._last_text_answer_source before returning so a fabrication-risk LLM answer
+            # logs as src=llm, not src=rules -- previously every free-text answer, including
+            # LLM output, was logged identically and indistinguishable in the watcher.
+            src = getattr(bot, "_last_text_answer_source", None) or "rules"
+            return Answer(value=str(ans), source=src)
         return Discard(NO_ANSWER_CODE, "no rule, QA-dictionary or LLM answer")
 
     return Discard(UNSUPPORTED_CODE, f"unhandled widget kind '{kind}'")

@@ -101,16 +101,36 @@ class DatabaseMixin:
             return False
 
     def _save_job_application(self, job_id, job_url, status, notes=''):
-        """Save application to database"""
+        """Save application to database.
+
+        2026-09-16: run_naukri_unattended.py normally shadows this with a class-patched version
+        (_dated_save_job_application) that also writes application_date/company_name and carries
+        the same guard below -- this copy only runs if that patch import ever fails, so it stays
+        defensively consistent rather than silently regressing INSERT OR REPLACE's ability to
+        downgrade an "Applied*" status to a weaker one for the same job_id.
+        """
         if not self.db_conn:
             return
 
         try:
+            cursor = self.db_conn.cursor()
+            try:
+                cursor.execute("SELECT status FROM applied_jobs WHERE job_id = ?", (job_id,))
+                row = cursor.fetchone()
+                existing_status = (row[0] or "") if row else ""
+            except sqlite3.Error:
+                existing_status = ""
+            if existing_status.strip().lower().startswith("applied") \
+                    and not status.strip().lower().startswith("applied"):
+                logger.warning(
+                    f"Refusing to downgrade job {job_id} from '{existing_status}' to '{status}' "
+                    "-- existing applied status kept")
+                return
+
             job_title = job_url.split('/')[-1].replace('-', ' ')[:100]
 
-            cursor = self.db_conn.cursor()
             cursor.execute("""
-                INSERT OR REPLACE INTO applied_jobs 
+                INSERT OR REPLACE INTO applied_jobs
                 (job_id, job_url, job_title, status, notes)
                 VALUES (?, ?, ?, ?, ?)
             """, (job_id, job_url, job_title, status, notes))

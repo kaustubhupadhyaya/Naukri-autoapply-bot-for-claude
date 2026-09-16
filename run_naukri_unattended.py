@@ -296,9 +296,13 @@ def _get_resume_digest(config=None):
         "Relocation & Availability: Yes, willing to relocate to Bengaluru, open to background checks and immediate joining."
     ]
     if enh_resume:
-        lines.append(f"Profile Summary: {enh_resume.strip()[:350]}")
+        # 2026-09-16: was [:350], which cut mid-phrase ("...Specialized in pharmaceutical") and
+        # dropped every real fact (employer, project, metrics) -- the LLM then fabricated a
+        # plausible-sounding completion when asked a narrative question. 4000 is a defensive
+        # ceiling, not a truncation of the current (1259-char) resume.
+        lines.append(f"Profile Summary: {enh_resume.strip()[:4000]}")
     elif pdf_text:
-        lines.append(f"Resume Excerpt: {pdf_text.strip()[:350]}")
+        lines.append(f"Resume Excerpt: {pdf_text.strip()[:4000]}")
 
     _CACHED_PROFILE_DIGEST = "\n".join(lines)
     logger.info(f"📄 Resume profile digest cached ({len(_CACHED_PROFILE_DIGEST)} chars)")
@@ -316,6 +320,20 @@ def _refresh_profile_digest(config):
 
 _LAST_LLM_MODEL = "unknown"
 
+# 2026-09-16: no channel here previously carried any anti-fabrication instruction, and the
+# free-text prompt gave the model no way to decline -- confirmed root cause of a fabricated
+# answer ("PostgreSQL pharmaceutical sales and inventory tables") to a real employer. Sent as a
+# real `system` field where the backend supports one (local proxy, Gemini); embedded into the
+# prompt text itself for every backend, since OpenCode Zen's CLI has no separate system channel.
+SYSTEM_NO_FABRICATION = (
+    "You are answering job-application screening questions on a real candidate's behalf, to be "
+    "sent to a real employer. Never invent a specific fact (an employer, project, table, tool, "
+    "dashboard, KPI or number) that is not present in the candidate profile you are given. If a "
+    "question asks for a specific detail the profile does not contain, say so exactly as the user "
+    "message instructs instead of fabricating a plausible-sounding one."
+)
+
+
 def _call_local_proxy(prompt):
     """Call local Antigravity proxy with adequate token budget for reasoning models."""
     global _LAST_LLM_MODEL
@@ -332,6 +350,7 @@ def _call_local_proxy(prompt):
         payload = {
             "model": model_name,
             "max_tokens": _budget,
+            "system": SYSTEM_NO_FABRICATION,
             "messages": [{"role": "user", "content": prompt}],
         }
         try:
@@ -388,7 +407,7 @@ def _call_gemini_fallback(prompt, config=None):
     try:
         import google.generativeai as genai
         genai.configure(api_key=key)
-        model = genai.GenerativeModel("gemini-2.5-flash")
+        model = genai.GenerativeModel("gemini-2.5-flash", system_instruction=SYSTEM_NO_FABRICATION)
         resp = model.generate_content(
             prompt,
             generation_config={"max_output_tokens": 30, "temperature": 0.1}
@@ -460,8 +479,15 @@ def _llm_answer_question(question_text, options=None, config=None):
         prompt = (
             f"{digest}\n\n"
             f'Question: "{q}"\n\n'
-            "Instruction: Answer the question concisely in 1 line (e.g. a number for years/CTC/notice, or a brief phrase) "
-            "strictly based on the candidate profile. Output ONLY the concise answer, no explanations or punctuation prefix."
+            "Instruction: Answer the question concisely in 1-3 sentences, using ONLY facts stated in the "
+            "candidate profile above (the named employers, projects, tools, metrics and dates in the "
+            "Resume Excerpt/Profile Summary, and the structured fields above it). If the structured fields "
+            "(e.g. an 'X Experience' line) disagree with the resume text, the structured fields are "
+            "authoritative. NEVER invent a specific employer, project, table, dataset, dashboard, KPI, tool "
+            "or number that is not written above -- if the question asks for a specific detail (e.g. 'which "
+            "tables', 'what KPIs', 'describe a project you built') that the profile genuinely does not "
+            "contain, reply with EXACTLY the single word INSUFFICIENT_DATA instead of guessing. Output ONLY "
+            "the answer (or INSUFFICIENT_DATA), no explanations, no preamble."
         )
 
     raw_answer = _call_local_proxy(prompt)
@@ -476,6 +502,30 @@ def _llm_answer_question(question_text, options=None, config=None):
         logger.warning(f"⚠️ [AI Answering Failed]: No model was able to answer question: '{q[:80]}'")
         return None
 
+    # 2026-09-16: the free-text prompt can decline with INSUFFICIENT_DATA rather than fabricate.
+    # Re-ask once, explicitly grounded to the listed skills only, instead of discarding the whole
+    # application (a discard in chatdrawer v2 aborts the job entirely -- user's call: no
+    # applications lost to this). The memo is deliberately NOT written for either the sentinel or
+    # the retried answer below, so a possibly-imperfect retry is never replayed verbatim to every
+    # later employer asking the same question -- only a first-try, fully-grounded answer is cached.
+    is_retry = False
+    if not opts_clean and raw_answer.strip().strip('"\'').strip().upper().replace(" ", "_") == "INSUFFICIENT_DATA":
+        logger.info(f"🤖 [{model_used}] declined (INSUFFICIENT_DATA) for Q='{q[:70]}' — re-asking for a general answer")
+        retry_prompt = (
+            f"{digest}\n\n"
+            f'Question: "{q}"\n\n'
+            "Instruction: The specific detail asked for is not in the candidate profile above. Answer "
+            "honestly and generally using ONLY the skills, experience and roles actually listed above -- "
+            "do NOT invent a specific employer, project, table, dashboard, tool or number that isn't "
+            "listed. Output ONLY the concise answer, no explanations."
+        )
+        raw_answer = _call_local_proxy(retry_prompt) or _call_opencode_zen(retry_prompt) \
+            or _call_gemini_fallback(retry_prompt, config)
+        is_retry = True
+        if not raw_answer:
+            logger.warning(f"⚠️ [AI Answering Failed]: retry also produced nothing for '{q[:80]}'")
+            return None
+
     if opts_clean:
         chosen = _match_llm_option(raw_answer, opts_clean)
         logger.info(f"🤖 [{model_used}]: Q='{q[:70]}' -> Chosen Option='{chosen}' (Raw: '{raw_answer.strip()[:40]}')")
@@ -488,9 +538,9 @@ def _llm_answer_question(question_text, options=None, config=None):
     else:
         line = raw_answer.splitlines()[0].strip().strip('"\'`')
         line = re.sub(r'^(Answer|A):\s*', '', line, flags=re.IGNORECASE).strip()
-        logger.info(f"🤖 [{model_used}]: Q='{q[:70]}' -> Answer='{line}'")
+        logger.info(f"🤖 [{model_used}]: Q='{q[:70]}' -> Answer='{line}'" + (" [retry]" if is_retry else ""))
         try:
-            if _mkey is not None and line:
+            if _mkey is not None and line and not is_retry:
                 _LLM_MEMO[_mkey] = line
         except Exception:
             pass
@@ -2017,8 +2067,23 @@ def _unattended_handle_chatbot(self, timeout=12):
     return False
 
 
+# 2026-09-16: a bare prefix test ("can you", "have you"...) used to answer EVERY question
+# starting that way with "Yes", including ones that continue into an open-ended ask --
+# "Can you describe a Tableau dashboard you built from scratch?" was answered "Yes". These
+# markers mean the sentence keeps going past yes/no into a request for specifics.
+_OPEN_ENDED_MARKERS = ("describe", "tell me", "explain", "elaborat", "walk me", "walk us",
+                       "share", "list ", "what ", "which ", "how ", "why ")
+
+
 def _unattended_text_answer(self, question):
-    """Safe-defaults-first text answering. Returns answer string or None."""
+    """Safe-defaults-first text answering. Returns answer string or None.
+
+    Also stamps self._last_text_answer_source ("config"|"rules"|"llm") so chatdrawer v2's
+    answers.py can log which source actually answered a composer/text question -- previously
+    every non-empty return here was logged as src=rules even when the LLM (and its fabrication
+    risk) produced the text, making a fabricated answer indistinguishable from a safe rule hit.
+    """
+    self._last_text_answer_source = "rules"
     q = (question or "").strip()
     if not q:
         return None
@@ -2029,10 +2094,14 @@ def _unattended_text_answer(self, question):
     if "date of birth" in ql or re.search(r'\bdob\b', ql):
         dob = str((self.config.get("personal_info", {}) or {}).get("date_of_birth", "")).strip()
         if dob:
+            self._last_text_answer_source = "config"
             return dob
 
-    # Boolean Yes/No questions should NEVER be answered as "3 years"
-    if any(ql.startswith(p) for p in ("do you", "are you", "have you", "will you", "can you", "would you", "is there", "is your", "should")):
+    # Boolean Yes/No questions should NEVER be answered as "3 years" -- but only when the
+    # question really is yes/no; an open-ended continuation must fall through to the (grounded)
+    # LLM instead of collapsing to "Yes".
+    if any(ql.startswith(p) for p in ("do you", "are you", "have you", "will you", "can you", "would you", "is there", "is your", "should")) \
+            and not any(m in ql for m in _OPEN_ENDED_MARKERS):
         if any(neg in ql for neg in ("criminal", "convicted", "fired", "terminated", "felony", "visa sponsorship")):
             return "No"
         return "Yes"
@@ -2053,6 +2122,7 @@ def _unattended_text_answer(self, question):
     try:
         ans = _llm_answer_question(q, options=None, config=getattr(self, "config", None))
         if ans:
+            self._last_text_answer_source = "llm"
             return ans
     except Exception as e:
         logger.debug(f"LLM text answer error: {e}")
@@ -2319,15 +2389,60 @@ def _fresh_title_company(driver, job_url):
     return title, company
 
 
+def _has_live_apply_button(driver):
+    """Zero-wait snapshot: is a real, clickable Apply control currently visible? Reuses
+    EASY_APPLY_SELECTORS (defined below; module-level names resolve at call time, so the forward
+    reference is fine) rather than a new guessed selector, so a genuinely already-applied page
+    (which hides/disables its own Apply button) does not trigger a false override here."""
+    try:
+        driver.implicitly_wait(0)
+        for selector in EASY_APPLY_SELECTORS:
+            try:
+                by = By.XPATH if selector.startswith("//") else By.CSS_SELECTOR
+                for c in driver.find_elements(by, selector):
+                    try:
+                        if c.is_displayed() and c.is_enabled():
+                            txt = (c.text or "").strip().lower()
+                            cid = (c.get_attribute("id") or "").lower()
+                            if "applied" in txt or "save job" in txt or "company site" in txt \
+                                    or "company-site" in cid:
+                                continue
+                            return True
+                    except StaleElementReferenceException:
+                        continue
+            except Exception:
+                continue
+    except Exception:
+        pass
+    finally:
+        try:
+            driver.implicitly_wait(1)
+        except Exception:
+            pass
+    return False
+
+
 def _is_applied_on_page(driver):
-    """Broad already-applied check — zero delay."""
+    """Broad already-applied check — zero delay.
+
+    2026-09-16: the loose page-wide "already applied" text scan below is unscoped and cost a
+    real job -- at 10:40:29 it fired and the bot skipped a Big Data Engineer posting that had a
+    visible, enabled Apply button and no DB row (watcher incident APPLY_NOT_PRESSED, high; see
+    docs/STRUCTURAL_FAULTS.md). Rather than guess a new scoping selector without a live DOM
+    sample of what it actually matched, corroborate it against EASY_APPLY_SELECTORS -- a
+    selector list this codebase already trusts. A currently-visible, enabled Apply control is
+    strong evidence the text match found something else on the page (a similar-jobs rail, a nav
+    widget); a genuinely already-applied job hides or disables its own Apply button, so this
+    override does not fire there.
+    """
     try:
         driver.implicitly_wait(0)
         try:
             for el in _displayed(driver.find_elements(By.CSS_SELECTOR, ".already-applied-layer")):
-                return True
+                return True  # a dedicated already-applied overlay class -- trust this alone
         except Exception:
             pass
+        matched_loose_text = False
         try:
             els = driver.find_elements(
                 By.XPATH,
@@ -2336,11 +2451,19 @@ def _is_applied_on_page(driver):
             for el in els[:6]:
                 try:
                     if el.is_displayed():
-                        return True
+                        matched_loose_text = True
+                        break
                 except Exception:
                     continue
         except Exception:
             pass
+        if matched_loose_text:
+            if _has_live_apply_button(driver):
+                logger.info(
+                    "⚠️ 'already applied' text matched but a live Apply button is also visible "
+                    "-- treating page as NOT applied (unscoped text match overridden)")
+            else:
+                return True
         if _applied_evidence(driver) == "applied":
             return True
     finally:
@@ -2610,11 +2733,19 @@ def _enforce_single_tab(driver, tag=""):
 
 
 def _unattended_apply_one(self, job_url):
-    """High-speed skip-external apply path with zero-wait probing & 2-attempt reload. Single-tab only."""
+    """High-speed skip-external apply path with zero-wait probing & 2-attempt reload. Single-tab only.
+
+    Stamps self._last_apply_outcome before most `return False`s so the caller
+    (naukri_bot/modules/application.py) can tell a correct skip (quota paused, no Easy Apply
+    button) from a real failure -- 2026-09-16: 11 of 15 "❌ Application failed" lines on one day
+    were external skips working exactly as designed, logged identically to genuine failures.
+    """
     original_tab = None
     driver = self.driver
     _t_entry = time.time()
+    self._last_apply_outcome = None
     if getattr(self, "_apply_blocked_until", 0) > time.time():
+        self._last_apply_outcome = "quota_blocked"
         return False  # daily quota already refused today; don't burn ~50s per job finding out again
     try:
         _enforce_single_tab(driver, tag="entry")
@@ -2658,18 +2789,24 @@ def _unattended_apply_one(self, job_url):
                         logger.error(f"Easy Apply click failed: {e}")
                         return False
 
-            # 1-click apply: Easy Apply may complete instantly with no drawer — check first
+            # 1-click apply: Easy Apply may complete instantly with no drawer — check first.
+            # 2026-09-16: prefer Naukri's own verdict (_applied_evidence) when it's available --
+            # it hard-gates on the /myapply/ redirect URL, so page text can't fool it. At 1.5s the
+            # redirect often hasn't landed yet, so fall back to the now button-corroborated
+            # _is_applied_on_page rather than trust a text match alone at this DB-writing site.
             time.sleep(1.5)
             _api = _apply_api_status(driver)
             if _api == 403:
                 self._apply_blocked_until = _quota_reset_ts()
+                self._last_apply_outcome = "quota_blocked"
                 logger.warning(
                     "⛔ Naukri daily apply quota exceeded (apply API 403) — pausing applications until "
                     f"{datetime.fromtimestamp(self._apply_blocked_until).strftime('%Y-%m-%d %H:%M')}")
                 return False
             try:
-                if _is_applied_on_page(driver):
-                    logger.info("✅ Easy Apply completed instantly (no questions asked)")
+                _ev = _applied_evidence(driver)
+                if _ev == "applied" or (_ev is None and _is_applied_on_page(driver)):
+                    logger.info(f"✅ Easy Apply completed instantly (no questions asked, evidence={_ev or 'page-scan'})")
                     try:
                         self._save_job_application(
                             self._extract_job_id(job_url), job_url,
@@ -2677,6 +2814,8 @@ def _unattended_apply_one(self, job_url):
                     except Exception as e:
                         logger.debug(f"db save: {e}")
                     return True
+                elif _ev in ("external", "rejected"):
+                    logger.info(f"↗️ Easy Apply click navigated but Naukri verdict is '{_ev}' — not counting as applied")
             except Exception:
                 pass
 
@@ -2726,6 +2865,7 @@ def _unattended_apply_one(self, job_url):
 
         logger.info(f"↗️ No Easy Apply — external skipped instantly (page+probe took {time.time() - _t_entry:.1f}s)")
         self.skipped += 1
+        self._last_apply_outcome = "external_skip"
         try:
             _t0 = time.time()
             self._save_job_application(
@@ -3035,11 +3175,30 @@ try:
         if not self.db_conn:
             return
         try:
+            cursor = self.db_conn.cursor()
+            # 2026-09-16: this used INSERT OR REPLACE on the job_id primary key, which
+            # unconditionally overwrites every column -- so a later transient verdict (e.g.
+            # "External (Manual Required)" when the Apply button just fails to hydrate within
+            # 8s) could silently downgrade a job already recorded as genuinely applied, losing
+            # both the true status and its real application_date. Refuse any write that would
+            # replace an "Applied*" status with a non-"Applied*" one for the same job_id.
+            try:
+                cursor.execute("SELECT status FROM applied_jobs WHERE job_id = ?", (job_id,))
+                row = cursor.fetchone()
+                existing_status = (row[0] or "") if row else ""
+            except sqlite3.Error:
+                existing_status = ""
+            if existing_status.strip().lower().startswith("applied") \
+                    and not status.strip().lower().startswith("applied"):
+                logger.warning(
+                    f"⛔ Refusing to downgrade job {job_id} from '{existing_status}' to '{status}' "
+                    "— existing applied status kept")
+                return
+
             job_title = job_url.split('/')[-1].replace('-', ' ')[:100]
             company = ""
             if notes and " at " in notes:
                 company = notes.rsplit(" at ", 1)[-1].strip()[:80]
-            cursor = self.db_conn.cursor()
             cursor.execute(
                 "INSERT OR REPLACE INTO applied_jobs "
                 "(job_id, job_url, job_title, company_name, application_date, status, notes) "
@@ -3348,6 +3507,9 @@ try:
         while True:
             cycle_count += 1
             cycle_applies_start = self.applied
+            # 2026-09-16: within-cycle dedupe now lives here, reset every cycle, instead of in
+            # self.joblinks (which is never reset for the life of the process -- see below).
+            self._cycle_seen_urls = set()
 
             if is_all_day:
                 logger.info(f"🔄 ================= ALL-DAY SEARCH CYCLE #{cycle_count} =================")
@@ -3435,16 +3597,28 @@ try:
                             break
 
                         page_job_links = []
+                        _cycle_seen = self._cycle_seen_urls
+                        _n_not_easy = _n_seen = _n_blocked = _n_irrelevant = 0
                         for card in job_cards:
                             try:
                                 if not _is_card_easy_apply_fast(card):
+                                    _n_not_easy += 1
                                     continue
                                 job_url = self._extract_job_url_fast(card)
-                                if job_url and job_url not in self.joblinks:
-                                    job_id = self._extract_job_id(job_url)
-                                    if not self.is_job_already_applied(job_id) and self._is_job_relevant_fast(card):
-                                        page_job_links.append(job_url)
-                                        self.joblinks.append(job_url)
+                                if not job_url:
+                                    continue
+                                if job_url in _cycle_seen:
+                                    _n_seen += 1
+                                    continue
+                                job_id = self._extract_job_id(job_url)
+                                if self.is_job_already_applied(job_id):
+                                    _n_blocked += 1
+                                    continue
+                                if not self._is_job_relevant_fast(card):
+                                    _n_irrelevant += 1
+                                    continue
+                                page_job_links.append(job_url)
+                                _cycle_seen.add(job_url)
                             except Exception as e:
                                 logger.debug(f"Error extracting job: {e}")
 
@@ -3453,6 +3627,15 @@ try:
                             prev_applied = self.applied
                             self.apply_to_jobs(page_job_links)
                             new_apps = self.applied - prev_applied
+                            # 2026-09-16: extend joblinks with what was ATTEMPTED, not merely
+                            # discovered. It used to be appended during discovery, before the apply
+                            # attempt, and is never reset for the life of the process -- so a job
+                            # that failed transiently (quota 403, an aborted chat drawer, a stale
+                            # already-applied page, a Save with no verdict; none of these write a
+                            # DB row) was blacklisted in memory forever with no way back. Within-
+                            # cycle dedupe is now _cycle_seen_urls above, reset every cycle, so a
+                            # transient failure is retried on the bot's very next pass.
+                            self.joblinks.extend(page_job_links)
                             if new_apps > 0:
                                 for _ in range(new_apps):
                                     apply_timestamps.append(time.time())
@@ -3461,7 +3644,14 @@ try:
                                     logger.error("❌ Session died during apply and could not be recovered. Stopping.")
                                     return
                         else:
-                            logger.info("No new jobs on this page to apply for.")
+                            # 2026-09-16: this used to be a bare constant, logged 16 times in a row
+                            # with zero attribution during the drought investigation -- it could not
+                            # distinguish "0 cards on the page" from "20 cards, all rejected", nor
+                            # which of 4 gates rejected them.
+                            logger.info(
+                                f"No new jobs on this page to apply for. (cards={len(job_cards)} "
+                                f"notEasyApply={_n_not_easy} seenThisCycle={_n_seen} "
+                                f"alreadyInDB={_n_blocked} notRelevant={_n_irrelevant})")
                     except (InvalidSessionIdException, WebDriverException) as we:
                         logger.warning(f"⚠️ Session error on page {page}: {we!r}")
                         if not self.recover_session():

@@ -68,9 +68,20 @@ class ApplicationMixin:
                     self.applied_list['passed'].append(job_url)
                     logger.info(f"✅ Application {self.applied} successful!")
                 else:
-                    self.failed += 1
-                    self.applied_list['failed'].append(job_url)
-                    logger.warning("❌ Application failed")
+                    # 2026-09-16: _apply_to_single_job (when it's _unattended_apply_one) stamps
+                    # self._last_apply_outcome before returning False, so a correct external-skip
+                    # or quota-pause is not logged/counted identically to a real failure -- 11 of
+                    # 15 "❌ Application failed" lines on one day were external skips working
+                    # exactly as designed.
+                    _outcome = getattr(self, "_last_apply_outcome", None)
+                    if _outcome in ("external_skip", "quota_blocked"):
+                        self.skipped += 1
+                        self.applied_list.setdefault('skipped', []).append(job_url)
+                        logger.info(f"↪️ Not a failure ({_outcome}) — not counted as one")
+                    else:
+                        self.failed += 1
+                        self.applied_list['failed'].append(job_url)
+                        logger.warning("❌ Application failed")
 
                 if (self.applied + self.failed) % 5 == 0:
                     rate_delay = self.config['bot_behavior'].get('rate_limit_delay', 5)

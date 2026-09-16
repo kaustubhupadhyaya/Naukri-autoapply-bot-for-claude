@@ -3,6 +3,7 @@
 Restructured from Naukri_Edge.py (2025-10-12 "IMPROVED VERSION").
 Methods are moved verbatim from the original class; behavior is unchanged.
 """
+import re
 import os
 import sys
 import json
@@ -138,10 +139,28 @@ class SearchMixin:
             if any(company in text for company in avoid_companies):
                 return False
 
-            keywords = [k.lower() for k in self.config['job_search']['keywords']]
-            if any(keyword in text for keyword in keywords):
-                return True
+            # 2026-09-16: this used to fall through to an unconditional `return True`,
+            # which made the keyword check dead code -- every Easy-Apply card passed and
+            # Naukri's ~26/day server-side quota got spent on clerical/e-commerce roles
+            # (12 of 20 slots on 09-15, 2 of 5 on 09-16). The match is now authoritative.
+            #
+            # It matches `relevance_keywords` (role tokens), NOT `keywords` (search-URL
+            # phrases). Measured against 237 real cards: matching the search phrases
+            # literally rejected 'ETL Lead', 'ETL Pentaho Developer', 'Airflow developer'
+            # and 'Informatica developer' -- target roles that simply do not contain the
+            # two-word phrase 'ETL Developer'. Falls back to `keywords` if unset.
+            js = self.config['job_search']
+            tokens = [k.lower() for k in (js.get('relevance_keywords') or js['keywords'])]
 
-            return True
-        except:
+            # Word-ish boundaries, not bare substrings: a bare 'etl'/'dbt' would match
+            # inside unrelated words, which is exactly how the 'fir' token once matched
+            # 'confirm' and discarded every consent question.
+            return any(
+                re.search(r'(?<![a-z0-9])' + re.escape(tok) + r'(?![a-z0-9])', text)
+                for tok in tokens
+            )
+        except Exception:
+            # A card we cannot read is not evidence of relevance -- but it is also not
+            # evidence against it, and dropping it silently loses real jobs. Keep the
+            # permissive behaviour only for this genuinely-unknown case.
             return True
